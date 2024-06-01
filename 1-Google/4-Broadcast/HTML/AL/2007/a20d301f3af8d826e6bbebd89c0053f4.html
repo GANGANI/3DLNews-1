@@ -1,0 +1,1506 @@
+<html>
+
+<head>
+<style type="text/css">.replbq{width:100%}</style>
+<style type="text/css">.replbq{width:100%}.heading                     {font-family:verdana,arial,sans-serif;
+                             font-size:1em;
+                             color:#626262;
+						     
+                             font-weight:bold;
+						     
+						     
+						     
+                             }
+							 
+.content                     {font-family:arial,sans-serif;
+                             font-size:.8em;
+                             color:#000000}
+a                            {color:#0f37ae}
+a.content                    {color:#0f37ae}
+.page                        {font-family:times new roman,serif;
+                             font-size:1.5em;
+                             color:#626262;
+						     
+						     font-weight:bold;
+						     
+						     
+						     
+                             }
+						
+</style>
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>June 2007 Obituaries</title>
+<base target="_self">
+</head>
+
+<body background="../../Obit%20Pictures/RelBg1.jpg" style="background-attachment: fixed">
+
+<p align="center"><b><font size="6" face="Times New Roman"><a name="Obituaries">
+<span style="text-transform: uppercase">Obituaries</span></a></font></b></p>
+<p align="center"><font face="Times New Roman">
+<font size="6"><b>June 
+-</b></font><b><font size="6"> 200</font></b></font><b><font face="Times New Roman" size="6">7</font></b></p>
+<p align="center"><i>email comments or listings to:&nbsp; </i><b><i>
+<a href="mailto:jmays@49countynews.net">jmays@49countynews.net</a> </i></b></p>
+<p align="center"><i><font size="4"><b><a href="../../obituaries.html">Back To 
+Obituaries Page</a></b></font></i></p>
+<p align="center">&nbsp;<script>
+<!-- Hide from old browsers
+
+/******************************************
+* Find In Page Script -- Submitted/revised by Alan Koontz (alankoontz@REMOVETHISyahoo.com)
+* Visit Dynamic Drive (http://www.dynamicdrive.com/) for full source code
+* This notice must stay intact for use
+******************************************/
+
+//  revised by Alan Koontz -- May 2003
+
+var TRange = null;
+var dupeRange = null;
+var TestRange = null;
+var win = null;
+
+
+//  SELECTED BROWSER SNIFFER COMPONENTS DOCUMENTED AT
+//  http://www.mozilla.org/docs/web-developer/sniffer/browser_type.html
+
+var nom = navigator.appName.toLowerCase();
+var agt = navigator.userAgent.toLowerCase();
+var is_major   = parseInt(navigator.appVersion);
+var is_minor   = parseFloat(navigator.appVersion);
+var is_ie      = (agt.indexOf("msie") != -1);
+var is_ie4up   = (is_ie && (is_major >= 4));
+var is_not_moz = (agt.indexOf('netscape')!=-1)
+var is_nav     = (nom.indexOf('netscape')!=-1);
+var is_nav4    = (is_nav && (is_major == 4));
+var is_mac     = (agt.indexOf("mac")!=-1);
+var is_gecko   = (agt.indexOf('gecko') != -1);
+var is_opera   = (agt.indexOf("opera") != -1);
+
+
+//  GECKO REVISION
+
+var is_rev=0
+if (is_gecko) {
+temp = agt.split("rv:")
+is_rev = parseFloat(temp[1])
+}
+
+
+//  USE THE FOLLOWING VARIABLE TO CONFIGURE FRAMES TO SEARCH
+//  (SELF OR CHILD FRAME)
+
+//  If you want to search another frame, change from "self" to
+//  the name of the target frame:
+//  e.g., var frametosearch = 'main'
+
+//var frametosearch = 'main';
+var frametosearch = self;
+
+
+function search(whichform, whichframe) {
+
+//  TEST FOR IE5 FOR MAC (NO DOCUMENTATION)
+
+if (is_ie4up && is_mac) return;
+
+//  TEST FOR NAV 6 (NO DOCUMENTATION)
+
+if (is_gecko && (is_rev <1)) return;
+
+//  TEST FOR Opera (NO DOCUMENTATION)
+
+if (is_opera) return;
+
+//  INITIALIZATIONS FOR FIND-IN-PAGE SEARCHES
+
+if(whichform.findthis.value!=null && whichform.findthis.value!='') {
+
+       str = whichform.findthis.value;
+       win = whichframe;
+       var frameval=false;
+       if(win!=self)
+{
+
+       frameval=true;  // this will enable Nav7 to search child frame
+       win = parent.frames[whichframe];
+
+}
+
+    
+}
+
+else return;  //  i.e., no search string was entered
+
+var strFound;
+
+//  NAVIGATOR 4 SPECIFIC CODE
+
+if(is_nav4 && (is_minor < 5)) {
+   
+  strFound=win.find(str); // case insensitive, forward search by default
+
+//  There are 3 arguments available:
+//  searchString: type string and it's the item to be searched
+//  caseSensitive: boolean -- is search case sensitive?
+//  backwards: boolean --should we also search backwards?
+//  strFound=win.find(str, false, false) is the explicit
+//  version of the above
+//  The Mac version of Nav4 has wrapAround, but
+//  cannot be specified in JS
+
+ 
+        }
+
+//  NAVIGATOR 7 and Mozilla rev 1+ SPECIFIC CODE (WILL NOT WORK WITH NAVIGATOR 6)
+
+if (is_gecko && (is_rev >= 1)) {
+   
+    if(frameval!=false) win.focus(); // force search in specified child frame
+    strFound=win.find(str, false, false, true, false, frameval, false);
+
+//  The following statement enables reversion of focus 
+//  back to the search box after each search event 
+//  allowing the user to press the ENTER key instead
+//  of clicking the search button to continue search.
+//  Note: tends to be buggy in Mozilla as of 1.3.1
+//  (see www.mozilla.org) so is excluded from users 
+//  of that browser.
+
+    if (is_not_moz)  whichform.findthis.focus();
+
+//  There are 7 arguments available:
+//  searchString: type string and it's the item to be searched
+//  caseSensitive: boolean -- is search case sensitive?
+//  backwards: boolean --should we also search backwards?
+//  wrapAround: boolean -- should we wrap the search?
+//  wholeWord: boolean: should we search only for whole words
+//  searchInFrames: boolean -- should we search in frames?
+//  showDialog: boolean -- should we show the Find Dialog?
+
+
+}
+
+ if (is_ie4up) {
+
+  // EXPLORER-SPECIFIC CODE revised 5/21/03
+
+  if (TRange!=null) {
+	  
+   TestRange=win.document.body.createTextRange();
+ 
+	  
+
+   if (dupeRange.inRange(TestRange)) {
+
+   TRange.collapse(false);
+   strFound=TRange.findText(str);
+    if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = win.document.body.scrollTop + TRange.offsetTop;
+        TRange.select();
+        }
+
+
+   }
+   
+   else {
+
+     TRange=win.document.body.createTextRange();
+     TRange.collapse(false);
+     strFound=TRange.findText(str);
+     if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+
+
+
+   }
+  }
+  
+   if (TRange==null || strFound==0) {
+   TRange=win.document.body.createTextRange();
+   dupeRange = TRange.duplicate();
+   strFound=TRange.findText(str);
+    if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+
+   
+   }
+
+ }
+
+  if (!strFound) alert ("String '"+str+"' not found!") // string not found
+
+        
+}
+// -->
+</script>
+
+<!--  EXAMPLE FORM OF FIND-IN-PAGE SEARCH USING SUBMIT (ALLOWING 'ENTER/RETURN' KEY PRESS EVENT) -->
+<form name="form1" onSubmit="search(document.form1, frametosearch); return false">
+  <p align="center">
+  <input type="text" name="findthis" size="33" title="Press 'ALT s' after clicking submit to repeatedly search page"> 
+  <input type="submit" value="Search Page" ACCESSKEY="s"></p>
+</form></p>
+<p align="center">&nbsp;</p>
+<p align="left"><font size="4"><b>
+<a href="#Burnett,_M._C._-_Age_82_-_Hackleburg,_AL">Burnett, M. C. - Age 82 - 
+Hackleburg, AL</a>&nbsp;&nbsp; 6/11/07</b></font></p>
+<p align="left"><b><font size="4"><a href="#Brown,_Anne_-_Age_70_-_Guin,_AL">
+Brown, Anne - Age 70 - Guin, AL</a>&nbsp;&nbsp; 6/3/07</font></b></p>
+<p align="left"><font size="4">
+<a href="#Cofield,_Travis_W._-_Age_72_-_Russellville,_AL_(Formerly_of_Logansport,_IN)">
+<b>Cofield, Travis W. - Age 72 - Russellville, AL </b><i>(Formerly of 
+Logansport, IN)</i></a><b>&nbsp;&nbsp; 6/28/07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#Crews,_Louise_Miles_-_Age_81_-_Guin,_AL">Crews, Louise Miles - Age 81 
+- Guin, AL</a>&nbsp; 6/11/07</font></b></p>
+<p align="left"><font size="4">
+<a href="#Farris,_Willis_Alvin_-_Age_83_-_Brilliant,_AL">
+<b>
+Farris, Willis Alvin - 
+Age 83 - Brilliant, AL </b><i>(White House Community)</i></a><b>
+&nbsp;&nbsp; 6/4/07&nbsp;&nbsp; </b><i>(Updated 6/16)</i></font></p>
+<p align="left"><font size="4"><b>
+<a href="#Graham,_Ruth_Bell_-_Age_87_-_Montreat,_NC">Graham, Ruth Bell - Age 87 
+- Montreat, NC</a>&nbsp;&nbsp; 6/14/07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#Guin,_Jennie_Lee_Shirey_-_Age_91_-_Winfield,_AL">Guin, Jennie Lee 
+Shirey - Age 91 - Winfield, AL</a>&nbsp;&nbsp; 6/29/07</font></b></p>
+<p align="left"><b><font size="4">
+<a href="#Hamm_Jr.,_Raymond_-_Age_55_-_Fayette,_AL___6/26/07">Hamm Jr., Raymond 
+- Age 55 - Fayette, AL</a>&nbsp;&nbsp; 6/26/07</font></b></p>
+<p align="left"><b><font size="4">
+<a href="#Hargett,_Oscar_Cotton_-_Age_68_-_Russellville,_AL__">Hargett, Oscar 
+Cotton - Age 68 - Russellville, AL</a>&nbsp;&nbsp; 6/13/07</font></b></p>
+<p align="left"><span class="heading"><strong>
+<font face="Times New Roman" size="4">
+<a href="#Hendrix,_Arnie_Mae_-_Age_94_-_Russellville,_AL">Hendrix, Arnie Mae - 
+Age 94 - Russellville, AL</a>&nbsp;&nbsp; 6/9/07</font></strong></span></p>
+<p align="left"><font size="4">
+<b>
+<a href="#Herston,_Rev._Dr._Jerry_-_Age_56_-_Ft._Payne,_AL_(Formerly_of_Guin,_AL)">
+Herston, Rev. Dr. Jerry - Age 56 - Ft. Payne, AL </a></b>
+<a href="#Herston,_Rev._Dr._Jerry_-_Age_56_-_Ft._Payne,_AL_(Formerly_of_Guin,_AL)">
+<i>(Formerly of Guin, AL)</i></a><b>&nbsp; 
+6/4/07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#Ingram,_Geva_Wayne_-_Age_74_-_Winfield,_AL">Ingram, Geva Wayne - Age 
+74 - Winfield, AL</a>&nbsp;&nbsp; 6/12/07</font></b></p>
+<p align="left"><b><font size="4">
+<a href="#Irvin,_Jean_Knight_-_Age_78_-_Detroit,_AL">Irvin, Jean Knight - Age 78 
+- Detroit, AL</a>&nbsp;&nbsp; 6/9/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a href="#Ledbetter_-_Hand,_Arvenia_Marie_Marie_-_82_-_Hamilton,_AL">Ledbetter 
+Hand, Arvenia Marie &quot;Marie&quot; - 82 - Hamilton, AL</a>&nbsp;&nbsp; 6/15/07</b></font></p>
+<p align="left"><span class="heading"><strong>
+<font face="Times New Roman" size="4">
+<a href="#McCarley,_Pearl_Sarah_-_Age_87_-_Russellville,_AL">McCarley, Pearl 
+Sarah - Age 87 - Russellville, AL</a>&nbsp;&nbsp; 6/12/07</font></strong></span><b><span class="content" style="COLOR: #626262"><font face="Times New Roman" size="4">
+</font></span></b></p>
+<p align="left"><font size="4"><b>
+<a href="#Mayfield,_Ruben_Monroe_-_Age_86_-_Winfield,_AL">Mayfield, Ruben Monroe - Age 86 - Winfield, AL</a>&nbsp;&nbsp; 
+6/19/07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#Mitchum,_Robbie_Perry_-_Age_91_-_Winfield,_AL">Mitchum, Robbie Perry - 
+Age 91 - Winfield, AL</a>&nbsp;&nbsp; 6/17/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a href="#Palmer,_Gay_Miles_-_Age_85_-_Hamilton,_AL">Palmer, Gay Miles - Age 85 
+- Hamilton, AL</a>&nbsp;&nbsp; 6/25/07&nbsp;&nbsp; </b><i>(Updated 7/2/07)</i></font></p>
+<p align="left"><font size="4"><b>
+<a href="#Palmer,_Peggy_-_Age_73_-_Hodges,_AL">Palmer, Peggy - Age 73 - Hodges, 
+AL</a>&nbsp;&nbsp; 6/2/07&nbsp;&nbsp; </b><i>(Updated 6/6)</i></font></p>
+<p align="left"><font size="4"><b>
+<a href="#Pearce,_Letha_Lois_-_Age_97_-_Hamilton,_AL">Pearce, Letha &quot;Lois&quot; - Age 
+97 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 6/17/07</b></font></p>
+<p align="left"><font size="4">
+<a href="#Pierce,_(Jerry)_Miles_-_Age_74_-_Randle,_WA."><b>Pierce, (Jerry) Miles 
+- Age 74 - Randle, WA. (</b>Husband of Jimmie Nell Lawler formerly of Hodges, AL<b>)</b></a><b>&nbsp; 
+5/12/07</b></font></p>
+<p align="left"><font size="4">
+<b>
+<a href="#Roberts,_Marjorie_-_83_-_Florence,_AL_(Formerly_of_Hamilton,_AL)">
+Roberts, Marjorie - 83 - Florence, AL </a></b>
+<a href="#Roberts,_Marjorie_-_83_-_Florence,_AL_(Formerly_of_Hamilton,_AL)">
+<i>(Formerly of Hamilton, AL)</i></a><b>&nbsp;&nbsp; 
+6/30/07</b></font></p>
+<p align="left"><span class="heading"><strong>
+<font face="Times New Roman" size="4">
+<a href="#Seal,_Frances_Martin_-_Age_88_-_Russellville,_AL">Seal, Frances Martin 
+- Age 88 - Russellville, AL</a>&nbsp;&nbsp; 6/7/07</font></strong></span></p>
+<p align="left"><b><font size="4">
+<a href="#Smith,_Edra_Faye_-_Age_84_-_Winfield,_AL">Smith, Edra Faye - Age 84 - 
+Winfield, AL</a>&nbsp; 6/2/07</font></b> </p>
+<p align="left"><font size="4">
+<a href="#Spann,_Jr.,_Benny_Frank_Franky_-_Age_33_-_Houston,_TX_(Formerly_of_Winfield,_AL)">
+<b>
+Spann, Jr., Benny Frank Franky - Age 33 - Houston, TX </b><i>(Formerly of Winfield, 
+AL)</i></a>&nbsp; <b>6/8/07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#Sprinkle,_Mildred_-_Age_88_-_Glen_Allen,_AL">Sprinkle, Mildred - Age 
+88 - Glen Allen, AL</a>&nbsp;&nbsp; 6/1/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a href="#Sullins,_Gerlene_-_Age_81_-_Hamilton,_AL">Sullins, Gerlene Clark - Age 81 - Hamilton, AL</a>&nbsp;&nbsp; 
+6/5/07&nbsp;&nbsp; </b><i>(Updated 6/11)</i></font></p>
+<p align="left"><b><font size="4">
+<a href="#Taylor,_Bobby_Bob_-_Age_76_-_Russellville,_AL">Taylor, Bobby &quot;Bob&quot; - 
+Age 76 - Russellville, AL</a>&nbsp;&nbsp; 6/20/07</font></b></p>
+<p align="left"><b><font size="4">
+<a href="#Yarbrough,_Flora_Moore_-_Age_86_-_Ft._Pierce,_FL_(Formerly_of_Lamar_County,_AL)">
+Yarbrough, Flora Moore - Age 86 - Ft. Pierce, FL (Formerly of Lamar County, AL)</a>&nbsp;&nbsp;&nbsp; 
+5/2007</font></b></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Sprinkle,_Mildred_-_Age_88_-_Glen_Allen,_AL">Sprinkle, Mildred - Age 88 
+- Glen Allen, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mildred Sprinkle, age 88 of 
+Glen Allen, passed away Friday, June 1, 2007 in the Consult America Nursing Home 
+at Carbon Hill. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Ms. Sprinkle was born on May 
+3, 1919 in Fayette Co. a daughter of Christopher Columbus Sprinkle and Bessie 
+Mae Howton Sprinkle; lifelong resident of Glen Allen area; retired from Reltoc 
+Mfg. at Winfield as a Supervisor with 32 years experience; and a member of Berea 
+Church of Christ. <br>
+<br>
+In addition to her parents, she was preceded in death by one brother, Basil 
+Sprinkle; and four sisters, Polly Johnson Hunt, Kate Nichols, Lois Henderson and 
+Lynette Davenport.<br>
+<br>
+Survivors include three sisters, Myrl Smith of Fultondale, AL, Virgie Key of 
+Carbon Hill and Robbie Vaughn of Bham; nieces, nephews and other relatives.<br>
+<br>
+Funeral Services were held Sunday, June 3, 2007 at 2:00 PM from the Berea Church 
+of Christ. John Robertson was the officiating minister. Burial followed in the 
+Berea Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Miles Funeral Home of Winfield directing.</i></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p><hr>
+<p align="left"><font size="5"><b><a name="Palmer,_Peggy_-_Age_73_-_Hodges,_AL">
+Palmer, Peggy Lawler - Age 73 - Hodges, AL</a></b></font></p>
+<p align="left"><b>Mrs. Peggy Palmer, age 73, of Hodges, Alabama, passed away 
+Saturday, June 2, 2007 at her residence.</b></p>
+<p align="left"><b>Funeral service, Tuesday, June 5, 2007, 11:00 a.m. at Hodges 
+Missionary Baptist Church.&nbsp; Bro. Marty Giddy and Bro. Danny Carter 
+officiating.&nbsp; The body will lie-in-state at the Church from 
+10:00 - 11:00 a.m. just prior to the service.&nbsp; Visitation, 6:00 - 8:00 
+p.m., Monday night, June 4, 2007 at the Hamilton Funeral Home Chapel in 
+Hamilton, AL.&nbsp; Burial in Old Line Cemetery.</b></p>
+<p align="left"><b>Peggy Lawler Palmer was born November 23, 1933, in Marion 
+County, Alabama, to Clint and Carrie Bailey Lawler.&nbsp; Peggy was a Homemaker 
+and retired from Munsingwear, Inc., in Hamilton, AL.</b></p>
+<p align="left"><b>Survivors include 10 sisters, F. E. Brumley, Ophelia Skinner, 
+Georgia (Duran) McCleskey, Martella (Van) Penton, Leatrice Ramsey, Marley 
+Vickery, Fay (Jerrel) Brumley, Maron (Eugene) Frederick, Wanda (Larry) Yancey, 
+and Judy Barksdale; children whom she loved and helped raise, Shelia Hyre, Pat 
+Shenoski, Jenny Watts, Billy Vaughn, and Scotty Vaughn; brother-in-laws &amp; 
+sister-in-laws, J. C. &amp; Mae Palmer, Olen &amp; Essie Fay Palmer, Riley &amp; Virginia 
+Palmer, and Jerry &amp; Carolyn Palmer.</b></p>
+<p align="left"><b>She was preceded in death by her husband, Clyde N. Palmer; 
+her parents, Clint &amp; Carrie Bailey Lawler; 1 brother, Millard (Pete) Lawler; 1 
+sister, Emma Jean Jones; brother-in-laws, Casey Jones, Freeman Brumley, Colen 
+Skinner, Oscar Vickery, and Robert Barksdale.</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a> </font></i></p>
+<hr>
+<p align="left"><b><font size="5"><a name="Brown,_Anne_-_Age_70_-_Guin,_AL">
+Brown, Anne - Age 70 - Guin, AL</a></font> <br>
+<br>
+Anne Brown age 70 of Guin, AL died Sunday, June 3, 2007 in the North Mississippi 
+Medical Center in Hamilton, AL. <br>
+<br>
+Born in Montgomery County, Alabama. She is the Daughter of the late Bird Fuller 
+Dailey Watson and the late James Marvin Dailey II. She was a graduate of 
+Escambia County High School in Atmore, AL and attended Huntingdon College in 
+Montgomery, AL. She fought for Civil Defense Monitors in schools, worked for 
+Earthquake Consortium in Memphis. She was a member of the First United Methodist 
+Church, and was a Certified United Methodist Lay Speaker. <br>
+<br>
+She is survived by her Husband, Joel Earl Brown of Guin, AL, Three Daughters, 
+Anne Corinne Hale Broxson (Eugene Jr.) of Merryville, LA, Alison Leigh Hale 
+Nadeau (Dana) of Kilauea, HI, Kelly Elaine Hale Morse (Bill) of Ballwin, MO, 
+Four Sons, Curtis &quot;Clark&quot; Hale Jr. (Melanie) of Round Rock, TX William Michael 
+Brown (Donna), Matthew Allen Brown and Stephen Andrew Brown all of Meridian, MS. 
+13 Grandchildren, Preston Eugene Broxson, Sarah Grace Broxson, Jordan Keith 
+Hale, Katherine Brooke Hale, Cody Clark Hale, Emily Catherine Morse, James 
+Arthur Morse, Margaret Anne Morse, Molly Joy Crane, Michelle Rene Nadeau, Jacob 
+Michael Brown, Allison Claire Brown and Michael Patrick Wayne Brown, A Great 
+Grandson Wyatt Tyler Crane, 2 Sisters, Carolyn Watson Liley (Joey) Pensacola, 
+FL, and Laura Joe Hataway (Wilton) of Belleville, IL, A Sister In Law, Sue 
+Richards Dailey of Fairhope, AL, other survivors, Clark and Dianne Hale of 
+McComb, MS. <br>
+<br>
+She was preceded in death by her parents, Birdie Fuller Dailey Watson and James 
+Marvin Dailey and Stepfather, James Robert Watson, and a Brother James Marvin 
+Dailey III. <br>
+<br>
+Memorial Services held Wednesday June 6, 2007 at 4:00 PM from the Guin First 
+United Methodist Church with Bro. Art Rowe officiating. <br>
+<br>
+In lieu of flowers memorials may be made to the Guin First United Methodist 
+Church Scholarship Fund. <br>
+<br>
+</b><i>Norwood Funeral Homes, Inc. of Guin, AL directing.</i><b><font size="5"><br>
+</font></b><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p align="left"><font size="5">
+<b>
+<a name="Herston,_Rev._Dr._Jerry_-_Age_56_-_Ft._Payne,_AL_(Formerly_of_Guin,_AL)">
+Herston, Rev. Dr. Jerry - Age 56 - Ft. Payne, AL </a></b>
+<a name="Herston,_Rev._Dr._Jerry_-_Age_56_-_Ft._Payne,_AL_(Formerly_of_Guin,_AL)">
+<i>(Formerly of Guin, AL)</i></a></font>
+<br>
+<br>
+<b>
+<img border="0" src="../../Obit%20Pictures/masonic.symbol.cc16.jpg" width="25" height="30">Rev. Dr. Jerry Thomas Herston age 56 of Ft. Payne, Alabama formerly of Guin, 
+died Monday, June 4, 2007 in Huntsville, AL. <br>
+<br>
+He was born May 18, 1951 at Elgin Crossroads, Lauderdale County, AL. He is the 
+son of the late Thomas Bud and Ruby Pearl Springer Herston. He attended Sweet 
+Gum Elementary School and graduated from Lexington High School, Class of 1969. 
+He married Martha Clark on May 28, 1976. He had worked at National Floors in 
+Florence, AL for four years as well as the 3M Company in Decatur, AL. He felt 
+the call for the ministry and entered pastoral ministry in the United Methodist 
+Church in 1975. He graduated from the University of North Alabama in 1979, and 
+Asbury Theological Seminary with a Master of Divinity in 1982 and Received his 
+Doctor of Ministry Degree from Memphis Theological Seminary in 1996. Dr. Herston 
+was ordained as a Deacon in the United Methodist Church in 1981 and Ordained 
+Elder in 1985. He celebrated 32 years in pastoral ministry while serving Asbury 
+United Methodist Church in Fort Payne, AL. He was a member of the North Alabama 
+Conference of the United Methodist Church, a Volunteer Chaplin at DeKalb Baptist 
+Hospital, a member of Fort Payne Ministerial Association, served on the Gadsden 
+District Board of Ordained Ministry, a member of the Board of Directors for 
+Dekalb Faith Free Medical Clinic and a member of the Masonic Lodge # 437 of Fort 
+Payne. His hobbies were fishing, making cushions and his favorite, spending time 
+with grandchildren. <br>
+<br>
+Survivors are his wife of 31 years, Martha Clark Herston of Fort Payne, AL, a 
+daughter, Mary Herston of Florence, AL, a Son, Jonathan (Katie) Herston of 
+Tuscaloosa, AL, a sister, Jane (Charlie) Quigley of Rogersville, AL, a twin 
+brother, Rev. Terry (Vickie) Herston of Rogersville, AL, two grandchildren, Cari 
+Abigail and Samuel Joshua Herston, Nieces and Nephews, Dana (George) Crummie, 
+Kristi (Scott) Nix, Jeremy (Shelly), Matthew and Jenni Herston. Several Aunts, 
+Uncles, Brothers and Sisters-In-Law, Cousins and a host of friends and church 
+family. <br>
+<br>
+Services were held Thursday, June 7, 2007 at 6:00 p.m. from the Guin First United 
+Methodist Church with burial in the Mt. Olive Cemetery in Tremont, MS.&nbsp; Rev. 
+Jonathan Herston, Rev. Terry Herston, Bro. Jacob Wilkerson and Bro. Brad 
+Linville officiating.<br>
+<br>
+Visitation Thursday 3 - 6 pm at the church<br>
+<br>
+A memorial service will be held on Sunday, June 11, 2007 at 2:00 pm from the 
+Asbury United Methodist Church in Fort Payne, AL.<br>
+<br>
+In lieu of flowers memorials may be made to <br>
+<br>
+Mount Olive United Methodist Church <br>
+4781 Cotton Gin Road<br>
+Tremont, MS 38876<br>
+</b><br>
+<i>Norwood Funeral Homes, Inc. of Guin, AL directing.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p align="left"><font size="5"><b>
+<a name="Sullins,_Gerlene_-_Age_81_-_Hamilton,_AL">Sullins, Gerlene Clark - Age 81 - Hamilton, AL</a></b></font></p>
+<p align="left"><b>Mrs. Gerlene Sullins, age 81, of Hamilton, Alabama, passed 
+away Tuesday, June 5, 2007 at Marion Regional Nursing Home in Hamilton, AL.</b></p>
+<p align="left"><b>Funeral service, 11:00 a.m., Saturday, June 9, 2007, at the 
+Hamilton Funeral Home Chapel.&nbsp; Bro. Bobby Duncan and Bro. Widdie Atkins 
+officiating.&nbsp; Visitation, 6:00 - 8:00 p.m., Friday night, 
+June 8, 2007 at the Funeral Home Chapel.&nbsp; Burial in Pleasant Ridge 
+Cemetery, north of Hamilton.</b></p>
+<p align="left"><b>Gerlene Clark&nbsp; Sullins was born July 11, 1925 in 
+Mississippi, to William Marion and Alpha Ginn Clark.&nbsp; She was a Homemaker.</b></p>
+<p align="left"><b>She is survived by her husband, Brady Sullins; 2 daughters, 
+Janice (Jim) Piotter, and Sandy (Charlie) Karlein; 5 grandchildren; 5 great 
+grandchildren; 4 sisters, Eva Dale Stutzman, Ernesteen Ligon, Veiler Peterson, 
+and Ida Fay Clark Overton; 1 brother, Marvin Clark.</b></p>
+<p align="left"><b>She was preceded in death by her parents, and a brother, Ray 
+Clark.</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b><font size="5">
+<a name="Farris,_Willis_Alvin_-_Age_83_-_Brilliant,_AL">Farris, Willis Alvin - 
+Age 83 - Brilliant, AL</a></font></b><font size="5"> <i>(Whitehouse Community)</i></font><b><font size="5">
+</font></b><br>
+<br>
+<b>Mr. Willis Alvin Farris, age 83 of Brilliant in the Whitehouse Community, 
+passed away Monday, June 4, 2007 in the Lakeland Community Hospital in 
+Haleyville. </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Mr. Farris was born on February 17, 1924 in Winston Co. a son of Ed 
+and Nora Jane Collins Farris; resident of the Whitehouse Community most of his 
+life; resident of Indiana from 1967  1975; worked as a Farmer and Truck Drive 
+and dealt in scrap metal; member of Whitehouse Church of Christ; he loved to talk, garden and animals; and he was an avid fisherman. <br>
+<br>
+In addition to his parents, he was preceded in death by a wife, Edna Faye 
+Burleson Farris; three brothers, Calvin, Louis and Jimmy Farris; and five 
+sisters, Eardine Farris, Myrtie Dickinson, Lela Tittle, Etta Keaton and Ethel 
+Miles.<br>
+<br>
+Survivors include one son, Ricky Farris of Halls, TN; four daughters, Betty 
+(Jimmy) Cook and Pam (Bud) Wilson of Haleyville, Peggy (Terri) Mann of Bear 
+Creek and Doris (Bobby) Sanderson of Winfield; 13 grandchildren, Michael Cook, 
+Analisa James, Melissa Roberts, Jefferey Roberts, Donna Smith, Brandy Weeks, 
+Brooke Spann, Heath Alan Smith, Adam Farris, Kristy Crihfield, Nichole Annette 
+Farris, Jake Wilson and Riley Wilson; 13 great-grandchildren, Anadashia Cook, 
+Jonathan Roberts, Cherie Smith, Skyler Bowen, Joshua Johnson, Kyle Roberts, 
+Dakota Smith, Kaitlyn Weeks, Haley Spann, Taylor Spann, Kennedy Crihfield, Grant 
+Crihfield and Miranda Farris; one sister, Willowdean Justus of Forestdale; 
+nieces, nephews and other relatives.<br>
+<br>
+Funeral Services were held Wednesday, June 6, 2007 at 11:00 AM from the McGraw 
+Memorial Chapel of the Miles Funeral Home. Bryan Longcrier was the officiating 
+minister. Burial followed in the Whitehouse Cemetery. Active Pallbearers were 
+Mike James, Adam Farris, Jeff Roberts, Timmy Weeks and Jamie Colburn.<br>
+<br>
+Miles Funeral Home of Winfield directing the service. </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i>Miles Funeral Home of 
+Winfield directing.</i><b>&nbsp;</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Irvin,_Jean_Knight_-_Age_78_-_Detroit,_AL">Irvin, Jean Knight - Age 78 
+- Detroit, AL</a> <br>
+<br>
+</font>Jean Irvin, age 78, of Detroit, AL passed away Saturday June 9, 2007 at 
+the Care Center in Vernon, AL after an extended illness. <br>
+<br>
+She was born in Detroit, AL. to the late Horace Burton and Allie Mae Stephenson 
+Knight and was the wife of the late James Verlon Irvin. She had lived in the 
+Detroit, AL area most of her life and was a member of the Detroit Baptist 
+Church. She was retired from the McCoy Manufacturing Plant as a Seamstress and 
+she loved Quilting and spending time with her family. <br>
+<br>
+Survived by Three Daughters: Cheryl (Steve) Wilson of Sulligent, AL, Carolyn 
+(Jerry) Hall and Connie (Phil) Frye both of the Splunge Community. Two Sons: 
+John (Debbie) Otts and Jim Otts both of Sulligent, AL, Three Sisters: June King 
+and Frankie Channell both of Detroit, AL, and Ann Gosa of Sulligent, AL, One 
+Brother: Bobby Joe Knight of Detroit, AL, Seven Grandchildren: Lisa (Tim) Clark 
+of Sulligent, AL, Jennifer Otts of Moline, IL, Holly (Tyrone) Stewart of Guin, 
+AL, Chrissy Otts of Moline, IL, Jaime (Damon) Coleman of Sulligent, AL, 
+Christopher (Kristen) Hall of Smithville, MS, and Brandon Hall of the Splunge 
+Community. 17 Great-Grandchildren. <br>
+<br>
+Preceded in death by one Brother L.B. Knight, two infant Brothers James and 
+Billy Knight, one Sister Eleanor Frederick and two infant Sisters Jewell and 
+Verleen Knight. <br>
+<br>
+Services held Tuesday June 12, 2007 at 4: 00 P.M. from the Norwood Funeral Home 
+Chapel with burial in the Wesley Chapel Cemetery. Bro. Danny Stanford, Bro. Tim 
+Markham and Bro. Kelvin Price officiating.<br>
+<br>
+Visitation Monday from 6:00 to 9:00 P.M. at the Funeral Home.<br>
+<br>
+Pallbearers: Christopher Hall, Brandon Hall, Tim Clark, Damon Coleman, Tyrone 
+Stewart and Thomas Lucas.<br>
+<br>
+Honorary Pallbearers: Dr. W.C. Box, Dr. William Davis, John Seals, J.C. Carter, 
+Randy Rye and Dewayne Oliver. <br>
+<br>
+</b><i>Norwood Funeral Homes, Inc. of Sulligent Alabama directing. </i><b>
+<font size="5"><br>
+</font></b><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Graham,_Ruth_Bell_-_Age_87_-_Montreat,_NC">Graham, Ruth Bell - Age 87 - 
+Montreat, NC</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Ruth Bell Graham Dies<br>
+Wife of Billy Graham Succumbs to Lingering Illness, Surrounded by Loved Ones at 
+Her Deathbed <br>
+<br>
+MONTREAT, N.C., JUNE 14Mrs. Ruth Bell Graham, beloved wife of world-renowned 
+evangelist Billy Graham, died at 5:05 p.m. today, at her home at Little Piney 
+Cove in Montreat, N.C., surrounded by her husband and all five children. She was 
+87. A public funeral service to honor Mrs. Graham has been scheduled for 2 p.m. 
+on Saturday, June 16 in Anderson Auditorium at the Montreat Conference Center in 
+Montreat, N.C. Details for this service will be released when available.<br>
+<br>
+Ruth was my life partner, and we were called by God as a team, Mr. Graham said 
+of his life-long marriage and ministry partner. No one else could have borne 
+the load that she carried. She was a vital and integral part of our ministry, 
+and my work through the years would have been impossible without her 
+encouragement and support.<br>
+<br>
+I am so grateful to the Lord that He gave me Ruth, and especially for these 
+last few years weve had in the mountains together, Mr. Graham continued. 
+Weve rekindled the romance of our youth, and my love for her continued to grow 
+deeper every day. I will miss her terribly, and look forward even more to the 
+day I can join her in Heaven.<br>
+<br>
+Mr. Graham confirmed today that his wifes final resting place will be at the 
+foot of a cross-shaped walkway in the Prayer Garden on the grounds of the 
+recently dedicated Library bearing his name adjacent to his ministry 
+headquarters in Charlotte. Earlier this year the Grahams agreed together that 
+they would be buried side-by-side at the Library, a decision made by the two of 
+them alone.<br>
+<br>
+Ruth Bell was born June 10, 1920, in Qingjiang, Kiangsu, China, the daughter of 
+medical missionaries L. Nelson and Virginia Leftwich Bell. She attended high 
+school in Pyongyang, (now North) Korea. She first came to the United States at 
+the age of 7, while her parents were on furlough. She returned to the U.S. at 
+the age of 17 to attend Wheaton College in Wheaton, Ill. Shortly after his 
+arrival on campus, she was introduced to Preacher, the nickname other students 
+gave the strapping Billy Graham from Charlotte, North Carolina. They were 
+married in August, 1943, following their graduating together that June.<br>
+<br>
+Between 1945 and 1958, Mrs. Graham gave birth to five children, whom she 
+raisedsometimes single-handedlywhile her husband was away on extended national 
+and international evangelistic crusades. The three daughters and two sons who 
+survive her are all actively involved in ministry, including eldest son 
+Franklin, who heads the Billy Graham Evangelistic Association (BGEA) founded by 
+his father.<br>
+<br>
+My father would not have been what he is today if it wasnt for my mother, 
+Franklin said. She stood strong for what was biblically correct and accurate. 
+She would help my father prepare his messages, listening with an attentive ear, 
+and if she saw something that wasnt right or heard something that she felt 
+wasnt as strong as it could be, she was a voice to strengthen this or eliminate 
+that. Every person needs that kind of input in their life and she was that to my 
+father.<br>
+<br>
+In 1959, Mrs. Graham published her first book, Our Christmas Story, an 
+illustrated volume for children. She went on to write or co-author 13 other 
+books, many of them works of poetry she wrote as an emotional release while her 
+husband was so often on the road through the years.<br>
+<br>
+I dont believe Mother has adequately been recognized and honored for what she 
+had done; because, without her, Daddys ministry would not have been possible, 
+said Ruth Graham, youngest daughterand namesakeregarding her mothers 
+influence and partnership in her fathers ministry.<br>
+<br>
+How does one live with one of the worlds most famous men? daughter Ruth 
+continued. God began training my mother for this position years ago in China. 
+Her parents exercised a profound effect upon the development of her character, 
+and laid the foundations for who she was. What she witnessed in her family home, 
+she practiced for herselfdependence on God in every circumstance, love for His 
+Word, concern for others above self, and an indomitable spirit displayed with a 
+smile.<br>
+<br>
+Her happiness and fulfillment did not depend on her circumstances, the younger 
+Ruth concluded. She was a lovely, beautiful and wise woman, because early in 
+life she made Christ her home, her purpose, her center, her confidant, and her 
+vision.<br>
+<br>
+Mrs. Grahams significant role in Mr. Grahams ministry was recognized in 1996, 
+when they were jointly awarded the Congressional Gold Medal in a special 
+ceremony in the Capital Rotunda in Washington, which reflected a consensus of 
+love and support from all branches of government in attendance.<br>
+<br>
+Ruth Graham was always a vital part of Mr. Grahams evangelistic career, and he 
+turned to her for advice and input about many ministry decisions. One of the 
+early uses of media by the BGEA was the Hour of Decision radio program begun 
+in 1950, which she named. After her upbringing in China and high school 
+experience in Korea, she continued to have a burden for the people of Asia. She 
+encouraged her husband to visit and later accompanied him during his historic 
+visits to the Peoples Republic of China.<br>
+<br>
+Ruth Graham has been in frail health since suffering spinal meningitis in 1995. 
+That was exacerbated by a degenerative back condition that began with a fall out 
+of a tree while helping a grandchild fix a swing in 1974 that resulted in 
+chronic back pain for many years. Bedridden or wheelchair-bound since the late 
+1990s, Mrs. Graham wasnt able to accompany her husband during his last few 
+years of ministry, but was always a continued source of inspiration and support 
+for him through her prayers and wise biblical counsel.<br>
+<br>
+Mrs. Graham is survived by her husband Billy; daughters Virginia, Anne Morrow, 
+and Ruth Bell; sons William Franklin, III, and Nelson Edman; 19 grandchildren; 
+and numerous great-grandchildren. <font size="5"><br>
+<br>
+</font></b><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Burnett,_M._C._-_Age_82_-_Hackleburg,_AL">Burnett, M. C. - Age 82 - 
+Hackleburg, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. M. C. Burnett, age 82, 
+of Hackleburg, Alabama passed away Monday, June 11, 2007 at North Mississippi 
+Medical Center in Hamilton, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services, 11:00 
+a.m., Wednesday, June 13, 2007 at the Hackleburg Church of Christ.&nbsp; Bro. 
+Mike Lane officiating.&nbsp; Visitation, 6:00 - 8:00 p.m., Tuesday, June 12, 
+2007 at the Hackleburg Church of Christ.&nbsp; Burial in Cedar Tree Cemetery in 
+Hackleburg, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Burnett was born March 
+27, 1925 in Marion County, AL., to Thomas and Maudie Williams Burnett.&nbsp; He 
+was a Painting Contractor.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Willadean Marquiss Burnett; children, Danny (Brenda) Burnett, Morris, AL., Tommy 
+(Jackie) Sullins, Haleyville, AL., and Sherrel (Bobby) Barnwell, Hackleburg, 
+AL.; grandchildren, Kevin Barnwell, Phil Campbell, AL., Bridgett Barnwell, 
+Hackleburg, AL., and Kim (James) Gann, Hamilton, AL.; great grandchildren, Tesha&nbsp; 
+Vickery, Haleyville, AL.; 1 brother, Ottis (Vauline) Burnett, Hackleburg, AL.; 
+and a host of nieces, nephews &amp; other relatives.</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><font size="5"><b>
+<a name="Ledbetter_-_Hand,_Arvenia_Marie_Marie_-_82_-_Hamilton,_AL">Ledbetter - 
+Hand, Arvenia Marie &quot;Marie&quot; - 82 - Hamilton, AL</a></b></font></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Arvenia Marie Ledbetter 
+Hand, better known as Marie Ledbetter, age 82, of Hamilton, Alabama, passed away 
+Friday, June 15, 2007 in Sunset Manor in Guin, Alabama.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Marie was born August 3, 
+1924, in Marion County, Alabama, to the late Joseph Sewell and Lillie Rosetta 
+Loveless Wylie.&nbsp; She was retired from Musingwear and then worked at 
+McDonald's for 11 years baking biscuits.&nbsp; She was a Baptist.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Funeral service, 1:00 p.m. 
+Monday, June 15, 2007 at Hamilton First Baptist Church in Hamilton, Alabama.&nbsp; 
+Bro. Eddie Davidson officiating.&nbsp; Same day visitation will be at the 
+Church, 12:00 - 1:00 p.m. until time of service.&nbsp; Burial in Cedar Tree 
+Cemetery in Hackleburg, AL.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>She is survived by her 
+daughter, Jolene Ledbetter (Jimmy) Clement; 2 grandchildren, Amanda Clement and 
+Ashley Clement Williams; 2 great -grandchildren, Peyton Christopher Williams and 
+Hudson Obryan Williams; and 1 sister, Pauline (Murry C.) Gregg.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>She was preceded in death by 
+her husband, Billy Eugene &quot;Bill&quot; Ledbetter; a grandson, Jonathan Christopher 
+Clement; her parents, Sewell and Lillie Wylie; 1 brother; and 1 sister.</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i><b> </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Pierce,_(Jerry)_Miles_-_Age_74_-_Randle,_WA.">Pierce, &quot;Jerry&quot; Miles - 
+Age 74 - Randle, WA.</a></font><font size="4"> </font></b><i><font size="4"> (Husband 
+of Jimmie Nell Lawler formerly of Hodges, AL)</font></i></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">&quot;Jerry&quot; Miles Pierce passed 
+away Tuesday, June 12, 2007, from complications related to a recent surgery to 
+remove a malignant brain tumor.&nbsp; Born on April 5, 1934.&nbsp; Miles was 
+originally from Citronelle, Alabama and married Jimmie Nell Lawler from Hodges, 
+Alabama, his wife of 56 years.&nbsp; He joined the Army-Air Force in 1948, and 
+served honorably for 24 years in the Air Force and Army before retiring in 
+Anchorage, Alaska, where he worked as a carpenter and builder for over 35 years.&nbsp; 
+He and Jimmie recently moved from Alaska to Randle, Washington, a place he loved 
+immediately.&nbsp; He spent his last few months building decks to his new home 
+and making plans for a garage/shop, hanging out drinking coffee in the local 
+cafe, taking care of his yard, enjoying his cats, and making many new, caring 
+friends.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Within the past few weeks.&nbsp; 
+Miles had many family and friends from around the country visit him and Jimmie 
+in their new home.&nbsp; He had been making steady progress with improved 
+speech, strength, appetite, and attitude, convinced that he could beat this...On 
+Sunday, he ate very well, laughed a lot, joked with everyone, enjoyed the 
+company of his beloved cats, and resolved himself to the radiation therapy that 
+was to begin that coming week.&nbsp; He checked into the Seattle, VA Hospital on 
+Monday, June 11, and Jimmy received the call that his progress deteriorated 
+without warning at 11:30 p.m. that evening.&nbsp; Family hastily traveled to 
+Seattle to be by his side.&nbsp; Miles was surrounded by his wife and immediate 
+family members during his passing approximately 5:55 a.m. on Tuesday.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>During his military service, 
+he served in a number of duty stations around the worked including two tours of 
+combat in Vietnam with the 101st Airborne Division and the 173rd Airborne 
+Brigade.&nbsp; He was awarded a number of medals including the:&nbsp; Vietnam 
+Service Medal, Vietnam Campaign Medal w/device.&nbsp; Two Overseas Service Bars, 
+Senior Parachutist Badge, Air Medal, and two Bronze Star Medals for valor in 
+combat.&nbsp; He will be buried with military honors.&nbsp; In lieu of flowers, 
+contributions in his name can be sent to the:</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Veterans of Foreign Wars 
+National Home for Children<br>
+3573 S. Waverly Road<br>
+Eaton Rapids, MI 48827<br>
+800-424-8360<br>
+<a href="mailto:mail@vfwnationalhome.org">mail@vfwnationalhome.org</a></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles was a true patriot who 
+loved this country.&nbsp; His hero was Nathan Hale, whose famous words, &quot;I 
+regret that I only have one life to serve my country.&quot; was his motto.&nbsp; He 
+served as former Post Commander of VFW Post 9785, Eagle River, Alaska, as well 
+as, the State Commander and the Americanism Chairman for the VFW, Department of 
+Alaska.&nbsp; He was well-known and loved for his integrity, sense of humor, and 
+gentlemanly manner.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He will lay at rest in Mr. 
+Olive Cemetery, Alabama, near his family members who have passed before him.&nbsp; 
+Visitation is at 12 noon on Monday, June 18, at Hamilton Funeral Home; the 
+graveside ceremony will be at 2 p.m. at Mt. Olive Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles is survived by his 
+wife Jimmie Nell, sons and their families:&nbsp; Larry, Brenda and Daysha Pierce 
+of Washington State; Cecil, Delia and Michael Pierce of Washington State; 
+grandchildren:&nbsp; Jena Pierce and Michelle Miller and several 
+great-grandchildren of Colorado; and sisters Jeroline Martin, Betty Shadrack and 
+Bobbi Pierce of Shreveport, Louisiana, and Carolyn Walker of Tyler, Texas.&nbsp; 
+He was preceded in death by an infant daughter, Catherine Elizabeth, and by his 
+second-born son, Donald Ray.&nbsp; He is with them in Heaven, along with his 
+sisters, Joyce and Katie, his beloved mother, Mamie (Gartmen) Pierce and father, 
+Jerry Pierce, and parents-in-law, Akillis Moorman Lawler and Eula (Partain) 
+Lawler.&nbsp; He was loved by many and will be greatly missed.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>For additional information 
+regarding his funeral services, well-wishers can contact:</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hamilton Funeral Home, Inc.<br>
+150 Falcon Circle<br>
+Hamilton, Alabama 35570<br>
+Phone: (205) 921-3197</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i><b><br>
+</b><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><font size="5"><b>
+<a name="Mayfield,_Ruben_Monroe_-_Age_86_-_Winfield,_AL">Mayfield, Ruben Monroe 
+- Age 86 - Winfield, AL</a></b></font></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Ruben Monroe Mayfield, age 
+86, of Winfield, Alabama passed away Tuesday, June 19, 2007.&nbsp; </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Services, 3:00 p.m. Friday, 
+June 22, 2007 at Marion County Funeral Home, Hwy. 278 East, Hamilton, AL.&nbsp; 
+Same day visitation at the funeral home from 2:00 - 3:00 p.m. time of service.&nbsp; 
+Burial will take place in Marion County Memorial Gardens.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i>Marion County Funeral Home 
+in charge of services.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i>This announcement provided 
+by Marion County Funeral Home, Hamilton, AL.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i>(This obituary will be 
+updated as soon as information is received by 49 County News.Net)</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Palmer,_Gay_Miles_-_Age_85_-_Hamilton,_AL">Palmer, Gay Miles - Age 85 - 
+Hamilton, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Gay Miles Palmer, age 
+85, of Hamilton, Alabama, passed away Monday, June 25, 2007 at Shepard's Cove 
+Hospice House.&nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services, 11:00 
+a.m., Wednesday, June 27, 2007 at the Hamilton Funeral Home Chapel in Hamilton, 
+Alabama, Bro. Mac Buttram&nbsp; and Bro. W. G. Henry officiating.&nbsp; Visitation, 6:00 - 8:00 p.m., Tuesday, June 24, 2007 at the 
+Funeral Home Chapel.&nbsp; Burial in Marion County Memorial Gardens, Hamilton, 
+AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Gay Miles Palmer was born 
+May 21, 1922 in Lamar County, Alabama to the late Olin and Ellis Weeks Miles.&nbsp; 
+She owned and operated Gay's Flower Shop in Hamilton for many years.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by 2 sons, 
+Billy Douglas (Jenny) Palmer of Albertville, AL., and Bob (Linda) Palmer of 
+Hamilton, AL.; 3 grandchildren, James Douglas Palmer of Albertville, AL., Paige 
+Palmer Lightsey of Albertville, AL., and Anna Palmer Gilmore of Dothan, AL.; 3 
+great grandchildren; 1 brother, Billy Miles of Hamilton, AL.; and a 
+sister-in-law, Rethie Ballard.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She was preceded in death by 
+her parents, Olin and Ellis Weeks Miles and her husband, Howard Palmer.</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><font size="5">
+<b>
+<a name="Roberts,_Marjorie_-_83_-_Florence,_AL_(Formerly_of_Hamilton,_AL)">
+Roberts, Marjorie - 83 - Florence, AL </a></b>
+<a name="Roberts,_Marjorie_-_83_-_Florence,_AL_(Formerly_of_Hamilton,_AL)">
+<i>(Formerly of Hamilton, AL)</i></a></font></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Marjorie Roberts, age 83, of 
+Florence, Alabama, formerly of Hamilton, Alabama, passed away Saturday, June 30, 
+2007 in Florence, Alabama.&nbsp; </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Viewing, 1:00 p.m., Monday, 
+July 2, 2007 at the Hamilton Funeral Home Chapel.&nbsp; The funeral services 
+will be held, 2:00 p.m., Monday, July 2, 2007 at the Hamilton Funeral Home 
+Chapel with Bro. Elvis Cochran officiating.&nbsp; Burial will be Ridge Cemetery 
+in Red Bay, AL.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>She was the daughter of the 
+late William and Rosa Lee Parks Roberts.&nbsp; In addition to her parents, she 
+was preceded in death by her sisters, Lillian Roberts Grissom and Margurette 
+Roberts Holliman; brothers, Edward, Eddie, Marion, Joe, Howard and Noel Ray 
+Roberts.</b></p>
+<p align="left"><i>Hamilton Funeral Home in charge of arrangements.&nbsp; 
+205-921-3197</i></p>
+<p align="left"><i>This announcement supplied by Hamilton Funeral Home, 
+Hamilton, AL.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify">&nbsp;</p>
+<p class="MsoNormal" style="TEXT-ALIGN: center"><font size="4"><b>Marjorie 
+Roberts</b></font></p>
+<p class="MsoNormal" style="TEXT-ALIGN: center"><font size="4"><b>83 Years Old</b></font></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>&quot;Marge&quot;, as she was so 
+lovingly called, lived a very simple life.&nbsp; Her thoughts and accomplished 
+were not of this world.&nbsp; She may not have achieved a lot of fame and 
+fortune in her life here on this earth but throughout her 83 years,&nbsp; she 
+understood this world was not eternal.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Marge made friends wherever 
+she went.&nbsp; She spent almost a year in a nursing facility that showed her 
+love and care and she returned that love and respect to her caregivers.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>She had a great love for her 
+family.&nbsp; Her mom and dad were rewarded with not only love and loyalty but 
+countless hours of tenderness and devotion as a caregiver.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>A special great-niece that 
+she spoke of so often was Melinda Roberts.&nbsp; Although, a young lady, she was 
+still a little girl to Marge.&nbsp; </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>She will be greatly missed 
+by her family and friends.&nbsp; While they tried to give HER care and strength, 
+They were the ones that received the joy and honor and blessings from knowing 
+her.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i>Hamilton Funeral Home, 
+Hamilton, AL., supplied this obituary.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5">
+<a name="Spann,_Jr.,_Benny_Frank_Franky_-_Age_33_-_Houston,_TX_(Formerly_of_Winfield,_AL)">
+<b>Spann, Jr., Benny Frank Franky - Age 33 - Houston, TX</b> <i>(Formerly of Winfield, 
+AL)</i></a></font><br>
+<br>
+<b>Benny Frank Franky Spann Jr., age 33 of Houston, TX , formerly of Winfield, 
+passed away Friday, June 8, 2007 at his residence in Texas. <br>
+<br>
+Franky was born on May 30, 1974 in Marion Co. a son of Benny Frank Spann Sr. and 
+Barbara Ann Bobbie McConnell Spann; resident of Winfield most of his life; 
+attended Winfield High School and also attained his GED; resident of Houston, TX 
+past nine years; currently employed with Union Pacific Railroad in Houston, TX; 
+formerly employed with Quality Housing at Winfield and Hamilton; and his church 
+affiliation was Baptist. <br>
+<br>
+He was preceded in death by his grandparents, W. O. Mack and Marie McConnell 
+and Roston and Myrtie Belle Webster Spann.<br>
+<br>
+Survivors include his mother, Bobbie McConnell Spann of Winfield; father, Benny 
+Frank Spann Sr. of Winfield; fiancée, Denise Buchanan of Houston, TX; host of 
+aunts, uncles, cousins and other relatives.<br>
+<br>
+Funeral Services were held Thursday, June 14, 2007 at 11:00 AM from the McGraw 
+Memorial Chapel of Miles Funeral Home. Venlon Bradford was the officiating 
+minister. Burial followed in the McConnell Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Miles Funeral Home of 
+Winfield directing the service.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Ingram,_Geva_Wayne_-_Age_74_-_Winfield,_AL">Ingram, Geva Wayne - Age 74 
+- Winfield, AL</a>&nbsp; </font></b><br>
+<br>
+<b>Mr. Geva Wayne Ingram, age 74, of Winfield, AL, passed away Tuesday, June 12, 
+2007 in the Care Center at Vernon. <br>
+<br>
+Mr. Ingram was born on January 24, 1933 in Marion Co. a son of W.E. and Icy 
+Eldona Baccus Ingram; resident of Winfield most of his life; previously employed 
+as a Welder for Drummond Coal Co.; and a member of Philadelphia Deliverance 
+Tabernacle in Lynn. <br>
+<br>
+In addition to his parents, he was preceded in death by a son, Jimmy Ingram; a 
+daughter, Lynn Ingram Mather; one brother, Edward Ingram; and three sisters, 
+Charlene Barnes, Irene Davis and Elva Chambers.<br>
+<br>
+Survivors include his wife, Mrs. Pauline Davis Ingram of Winfield; one son, 
+Stanley (Shirley) Ingram of Winfield; two step-sons, Hughey and Carlton King; 
+three daughters, Jennifer Dona (Reuben) Baccus of Eldridge, Belinda (David) May 
+of Sulligent and Tammy Hitt of Winfield; host of grand and great-grandchildren; 
+three step-grandsons; nieces, nephews and other relatives.<br>
+<br>
+Funeral services were held Thursday, June 14, 2007 at 4:00 PM from the McGraw 
+Memorial Chapel of Miles Funeral Home. Gerald Gann and John Autry were the 
+officiating ministers. Burial followed in the Union Chapel Cemetery.<br>
+<br>
+</b><i>Miles Funeral Home of Winfield directing the service.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Crews,_Louise_Miles_-_Age_81_-_Guin,_AL">Crews, Louise Miles - Age 81 - 
+Guin, AL</a> </font><font size="4">&nbsp;</font></b><br>
+<br>
+<b>Louise Miles Crews, age 81 of Guin, passed away Monday, June 11, 2007 in the 
+Physicians Medical Center at Bham. <br>
+<br>
+Mrs. Crews was born on November 26, 1925 in Fayette Co. a daughter of Clarence 
+and Lola Anna Mobley Miles; resident of Marion Co. most of her life; she was a 
+member of Piney Grove Free Will Baptist Church; and loved her flowers, gospel 
+music, redbirds, humming birds and animals. <br>
+<br>
+In addition to her parents, she was preceded in death by husband, Garvin H. May; 
+two sisters, Betty Mae Ripley and Clarie Laun; and three brothers, Oveat, Will 
+and J. W. Miles.<br>
+<br>
+Survivors include 1 daughter, Margaret (William) Spiller of Guin; 2 
+grandchildren, Todd (Consuelo) Spiller of Guin and Karen Spiller of Guin; four
+<br>
+great-grandchildren, Lauren, David, Jay and Anna Grace Spiller; 1 sister, 
+Tootsie Gann of Guin; 2 brothers, Ed Miles of Winfield and Ray Miles of 
+Clarksville, TN; nieces, nephews and other relatives.<br>
+<br>
+Funeral Services were held Wednesday, June 13, 2007 at 11:00 AM from the McGraw 
+Memorial Chapel of Miles Funeral Home. Randy Wright was the officiating 
+minister. Burial followed in the Winfield City Cemetery. </b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Miles Funeral Home of 
+Winfield directing the service.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b>
+<font size="5">
+<a name="Mitchum,_Robbie_Perry_-_Age_91_-_Winfield,_AL">Mitchum, 
+Robbie Perry - Age 91 - Winfield, AL</a> </font><font size="4">&nbsp; </font>
+</b></p>
+<p class="MsoNormal" style="text-align: justify"><br>
+<b>Mrs. Robbie Perry Mitchum, age 91, of Winfield, AL., passed away Sunday, June 
+17, 2007 at her residence. <br>
+<br>
+Mrs. Mitchum was born on August 31, 1915 in Fayette Co. a daughter of Vess and 
+Emma Pate Perry; resident of Winfield most of her life; widow of R. B. Mitchum; 
+and a faithful member for over 75 years of the Harmony Grove Baptist Church. <br>
+<br>
+In addition to her husband and parents, she was preceded in death by a grandson, 
+William Burt Mitchum; three brothers, Guston, Preston and Nelson Perry; and 
+three sisters, Lucy Trimm, Beular Estes and Willie Mae Perry.<br>
+<br>
+Survivors include two sons, Jerry (Robbie Ann Perry) Mitchum of Texas and Robert 
+Howard (Lois) Mitchum of South Carolina; eight grandchildren, Mark (Kim) Mithcum, 
+Melodee Richards, Tana Fuller, Melissa Horn, Michelle Vasquez, Terra Mitchum, 
+Kristen (Adam) Scribner and Kathy (Jim) Esterby; 11 great-grandchildren; one 
+sister, Annie Lee Perry of Winfield; host of nieces, nephews and other 
+relatives. <br>
+<br>
+Funeral Services were held Tuesday, June 19, 2007 at 11:00 AM from the McGraw 
+Memorial Chapel of Miles Funeral Home. Tim Meherg and C. W. Box were the 
+officiating ministers. Burial followed in Fayette Memorial Gardens.<br>
+<br>
+</b><i>Miles Funeral Home of Winfield directing the service.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Hamm_Jr.,_Raymond_-_Age_55_-_Fayette,_AL___6/26/07">Hamm Jr., Raymond - 
+Age 55 - Fayette, AL</a></font><br>
+<br>
+<br>
+HAMM, RAYMOND JR., age 55, of Fayette, died June 26, 2007. <br>
+<br>
+Raymond is survived by two special nephews, Jessie Lee (Debra) Chaniey, Jr. and 
+Jerry &quot;Pete&quot; Hamm. Uncles, Aunts, and a host of nieces, nephews, cousins, and
+very special friends. <br>
+<br>
+Funeral services will be held, Tuesday, July 3, 2007 at 2:00 p.m. from the 
+chapel of Miles Funeral Home. Burial will follow at West Highland Church of 
+Christ Cemetery in Fayette. The family will receive friends at the funeral home 
+from 12:00 PM until service time.</b> <br>
+<br>
+<i>Miles Funeral Home of Winfield, directing.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Pearce,_Letha_Lois_-_Age_97_-_Hamilton,_AL">Pearce, Letha &quot;Lois&quot; - Age 
+97 - Hamilton, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Letha &quot;Lois&quot; Pearce, age 97, 
+of Hamilton, AL., passed away Sunday, June 17, 2007</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She was the daughter of the 
+late John William Henry and Callie Idella Lewis Brown.&nbsp; She was a loving 
+mother, grandmother, and friend and will be missed by all who knew her.&nbsp; 
+She always made sure everyone was taken care of before herself.&nbsp; Precious 
+memories will live on forever.&nbsp; Some of our memories are her saying for 
+everyone was that they were a little angel, and tea times were so special to us 
+and will never be forgotten.&nbsp; Jim's granddaughter, Kelsey, having the 
+opportunity to feed her last meal.&nbsp; We will never forget Mom's hat blowing 
+off coming home from church during a thunderstorm.&nbsp; She was a member of 
+Pleasant Ridge Free Will Baptist Church.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to her parents, 
+she was preceded in death by her husband Callie Pearce.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services were held 
+on Tuesday, June 19, 2007, at 2 p.m. from Pleasant Ridge Free Will Baptist 
+Church in Hamilton with burial in the adjoining cemetery.&nbsp; Bro. Bobby 
+Duncan was the officiating minister.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include her 
+daughters, Lee Felicio, California and Shirley Faye (Lloyd) Ponds, Hamilton, 
+AL.; sons, James Gorden &quot;Jim&quot; (Dodie) Pearce, Chicago, IL., Henry Marion 
+(Lucille) Pearce, Hamilton, AL., and Herbert Calvin (Debbie) Pearce, Hamilton, 
+AL.; sister, Exine Lindsey; 16 grandchildren; 20 great-grandchildren; 6 
+great-great-grandchildren; and a host of nieces and nephews.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were 
+grandsons Timmy and Thomas Pearce and great-grandsons, Jesse Brown III, Parker 
+Chastain, Christian Stults, and Dereck Heath.&nbsp; Honorary pallbearers were 
+Harry Williams, Dewey Crowe, Herschel Rye, Jimmy Peterson, Dr. Stephen Chastain, 
+and Mike Shotts.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Marion County Funeral Home 
+directed the services.</i><b> </b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Guin,_Jennie_Lee_Shirey_-_Age_91_-_Winfield,_AL">Guin, Jennie Lee 
+Shirey - Age 91 - Winfield, AL</a></font></b><br>
+<br>
+<b>Mrs. Jennie Lee Shirey Guin age 91,of Winfield died Friday, June 29, 2007 at the 
+Northwest Medical Center in Winfield. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Guin was born November 23, 1915 in 
+Marion Co. a daughter of
+Martin Floyd and Eva Pearl Henderson Shirey. She is the widow of Hal Guin. She 
+made her home in Fayette Co. the past several years with her daughter Linda 
+Benton. Jennie retired from the Winfield Cotton Mill with 45 years of service. 
+She was a member of the Gu-win Baptist church. <br>
+<br>
+She was preceded in death by her parents; her husband ; three brothers, Paul, 
+Gilbert, and John Clifton Shirey; three sisters, Jessie Norris, Jimmie Starr and 
+Nell Bailey; also a son-in-law, Billy Roy Benton. <br>
+<br>
+Mrs. Guin is survived by her daughter Linda Benton of Winfield; her brother 
+Billy (Sue) Shirey of Athens, Ga.; special companions Snowball and Zulu and a 
+host of nieces nephews and other relatives.<br>
+<br>
+Funeral services were held Monday, July 2, 2007 from the McGraw Memorial Chapel 
+of the Miles Funeral Home. Rev. Hardy Robinson was the officiating minister. 
+Burial followed in the West <br>
+Alabama Memorial Garden at Gu-win.</b> <br>
+<br>
+<i>Miles Funeral Home of Winfield directed.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Cofield,_Travis_W._-_Age_72_-_Russellville,_AL_(Formerly_of_Logansport,_IN)">
+Cofield, Travis W. - Age 72 - Russellville, AL (Formerly of Logansport, IN)</a>
+<br>
+(February 21, 1935 - June 28, 2007)</font> <br>
+<br>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">Travis 
+W. Cofield, age 72, Russellville passed away Thursday, June 28, 2007. <br>
+<br>
+Mr. Cofield was formerly of Logansport, Indiana. He was born on February 21, 
+1935 to Buren Cofield and Willie West Cofield.<br>
+<br>
+A memorial service will be announced by the family at a later date. <br>
+<br>
+He was preceded in death by his parents. <br>
+<br>
+He is survived by a son, Jerremy Cofield, Logansport, In; sisters, Bobbie Boyles 
+of Russellville, Al and Jeanell Disel of Owensburg, Ky; several nieces and 
+nephews; friend, Steve Raper of Russellville, Al.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Spry Funeral Home of 
+Russellville in charge of arrangements.</i><br>
+<i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Taylor,_Bobby_Bob_-_Age_76_-_Russellville,_AL">Taylor, Bobby &quot;Bob&quot; - 
+Age 76 - Russellville, AL</a><br>
+(November 30, 1930 - June 20, 2007)</font></b></p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;<img border="0" src="../../Obit%20Pictures/Bobby%20Taylor.jpg" width="150" height="168"><br>
+<br>
+<b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">Bobby 
+&quot;Bob&quot; Taylor, age 76, Russellville passed away Wednesday, June 20, 2007.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>The visitation will be 6-8 
+pm at Spry Memorial Chapel on Friday, June 22, 2007 from. The 2:00 pm funeral 
+service will be held in the funeral home chapel on Saturday, June 23, 2007. Bro. 
+Philip Farris will officiate. Interment will be in Mt. Home Presbyterian 
+Cemetery. <br>
+<br>
+Pallbearers will be nephews and friends. <br>
+<br>
+He was preceded in death by first wife, Lora Crawford Taylor; parents, Eugene 
+and Mattie Devaney Taylor; sister, Martha Baird; brothers, Elmer, Earl, Jim, 
+Bill and Lil' Archie Taylor . <br>
+<br>
+He is survived by wife, Mattie Ross Malone Taylor; sons, Steven B. Taylor of 
+Sheffield, Jerry Pace &amp; wife, Bonita of Russellville, Steve Pace &amp; wife, Pat of 
+Russellville; sister, Ruth Durrett of Russellville; brothers, Willard Taylor &amp; 
+wife, Gladys of Spruce Pine, Alf Taylor &amp; wife, Delores of West Brooklyn, 
+Illinois; granddaughters, Sheree Holt &amp; husband, Paul, Christa Martin &amp; husband, 
+Michael; great grandsons that was his pride and joy, Vance Martin, Chance &amp; Pace 
+Holt; a host of nieces &amp; nephews. <br>
+<br>
+He was a member of Mt. Home Presbyterian Church, member of Love's Park Masonic 
+Lodge, Rockford, Ill, VFW and Isbell Water Board Authority. He was a veteran of 
+the Korean War having served with the US Army 40th Infantry Division. He retired 
+from Woodard Governor Company, Rockford, Illinois after 39 years of service 
+where he help build fuel controls for jet aircraft. In lieu of flowers, 
+memorials may be made to the Mt. Home Cemetery Fund. We want to extend our 
+appreciation and thanks to Hospice of the Shoals for their wonderful care and 
+support during Bob's illness.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Spry Funeral Home of 
+Russellville in charge of arrangements.</i><b> </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Hargett,_Oscar_Cotton_-_Age_68_-_Russellville,_AL__">Hargett, Oscar 
+Cotton - Age 68 - Russellville, AL </a><br>
+(October 28, 1933 - June 13, 2007) </font></b><br>
+<br>
+<b>Oscar Clay Hargett (Cotton), age 68, Russellville passed away Wednesday, June 
+13, 2007.<br>
+<br>
+The visitation will be held on Friday, June 15, 2007 from 6 pm - 9 pm at Spry 
+Memorial Chapel. The funeral service will be 2 pm Saturday, June 16, 2007 at 
+Spry Memorial Chapel with Bro. Stanley Hargett officiating. Interment will be in 
+Franklin Memory Gardens. <br>
+<br>
+He was preceded in death by his parents, Archie and Estelle Green Hargett; 
+sister, Mae Wilson; brother, Junior Hargett. <br>
+<br>
+He is survived by wife, JoAnn Pierce Hargett; sons, Roger Hargett, Jeff Hargett, 
+Scott Hargett and wife, Angela, Kevin Hargett and wife, Kim; daughters, Tereisa 
+Burcham and husband, William, and Cindy Scott; sister, Joy Puckett; brothers, 
+Stanley Hargett and wife, Carol and Johnny Hargett and wife, Jane; stepchildren, 
+Deborah Woodard, John Cook, Stephen Cook, Jason Brown, and Lisa Beckerstaff. <br>
+<br>
+The family expresses their thanks and appreciation to Good Samaritan Hospice 
+especially Lori Pace, Karen Garcia and Holly, Dr. Keith Morrow, Spry Memorial 
+Chapel and staff and residence of Village Square Apartments.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Spry Funeral Home of 
+Russellville in charge of arrangements.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<table cellSpacing="0" cellPadding="0" border="0">
+	<tr>
+		<td vAlign="top" width="420">&nbsp;<table cellSpacing="0" cellPadding="0" width="985" border="0">
+			<tr>
+				<td style="BACKGROUND-POSITION: 50% 75%; BACKGROUND-REPEAT: no-repeat" background="../../Obit%20Pictures/8.gif">
+				<span class="heading"><strong>
+				<font face="Times New Roman" size="5">
+				<a name="McCarley,_Pearl_Sarah_-_Age_87_-_Russellville,_AL">
+				McCarley, Pearl Sarah - Age 87 - Russellville, AL</a> </font>
+				</strong></span><b><font face="Times New Roman" size="5">&nbsp;<br>
+				</font><span class="content" style="COLOR: #626262">
+				<font face="Times New Roman" size="5">(October 14, 1919 - June 
+				12, 2007) </font></span></b><br>
+&nbsp;<div class="content">
+					<font face="Times New Roman" size="3"><b>Pearl Sarah 
+					McCarley, age 87, Russellville passed away Tuesday, June 12, 
+					2007. </b></font>
+					<p><font face="Times New Roman" size="3"><b>The visitation 
+					will be held on Thursday, June 14, 2007 from 11am-1pm at 
+					Spry Memorial Chapel. The 1 pm funeral service will follow 
+					in the funeral home chapel with Bro. Wayne Black 
+					officiating. Interment will be in Edgars Chapel Cemetery.
+					</b></font></p>
+					<p><font face="Times New Roman" size="3"><b>She was preceded 
+					in death by her husband, Price McCarley; parents, Thomas 
+					Jefferson Kelley and Martha Nix Kelley; brothers, John and 
+					Anice Kelley; sister, Dena Cochran. </b></font></p>
+					<p><font face="Times New Roman" size="3"><b>She is survived 
+					by daughter, Faye Pipkins; sons, Ray McCarley and Johnny 
+					McCarley; sisters, Tresie Duncan and Mary Pounders; 11 
+					grandchildren; several great grandchildren; a host of nieces 
+					and nephews. </b></font></p>
+					<p><font face="Times New Roman" size="3"><b>The family 
+					expresses their thanks and appreciation to the staff at 
+					Terrance Manor Nursing Home for the loving care given to 
+					their mother.</b></font></div>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<p class="MsoNormal" style="text-align: justify"><i>Spry Funeral Home of 
+Russellville in charge of arrangements.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<table cellSpacing="0" cellPadding="0" border="0">
+	<tr>
+		<td vAlign="top" width="420">&nbsp;<table cellSpacing="0" cellPadding="0" width="987" border="0">
+			<tr>
+				<td style="BACKGROUND-POSITION: 50% 75%; BACKGROUND-REPEAT: no-repeat" background="../../Obit%20Pictures/7.gif">
+				<span class="heading"><strong>
+				<font face="Times New Roman" size="5">
+				<a name="Hendrix,_Arnie_Mae_-_Age_94_-_Russellville,_AL">
+				Hendrix, Arnie Mae - Age 
+				94 - Russellville, AL</a> </font></strong></span>
+				<font face="Times New Roman" size="5">&nbsp;<br>
+				</font>
+				<span class="content" style="color: #626262; font-weight: 700">
+				<font face="Times New Roman" size="5">(September 17, 1912 - June 
+				9, 2007)</font></span><div class="content">
+&nbsp;<p><b><font face="Times New Roman" size="3">Arnie Mae Hendrix, age 94, 
+					Russellville passed away Saturday, June 09, 2007.</font></b></p>
+					<p><b><font face="Times New Roman" size="3">The 4:00 p.m. 
+					graveside funeral service will be held at Franklin Memory 
+					Gardens on Monday, June 11, 2007 with Bro. Dan C. Hindman 
+					officiating. </font></b></p>
+					<p><b><font face="Times New Roman" size="3">She was preceded 
+					in death by husband, William Dewey Hendrix; daughter, Ruth 
+					Poss Hester; parents, Joseph and Flora Pace Willis. </font>
+					</b></p>
+					<p><b><font face="Times New Roman" size="3">She is survived 
+					by grandson, Randy E. Hester and wife, Sharon; 
+					granddaughter, Felechia Clingan; great granddaughter, 
+					Nichole Clingan; son-in-law, Horace M. Hester; several 
+					nieces and nephews. </font></b></p>
+					<p><b><font face="Times New Roman" size="3">The family 
+					wishes to express their appreciation to the employees of 
+					Russellville Health Care for the love and care of their 
+					grandmother since October 04, 2002.</font></b></div>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<p class="MsoNormal" style="text-align: justify"><i>Spry Funeral Home of 
+Russellville, AL in charge of arrangements.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<table cellSpacing="0" cellPadding="0" border="0">
+	<tr>
+		<td width="15">&nbsp;</td>
+		<td vAlign="top" width="420">
+		<img height="1" alt="" src="../../Obit%20Pictures/spacer.gif" width="420" border="0"><table cellSpacing="0" cellPadding="0" width="968" border="0">
+			<tr>
+				<td style="BACKGROUND-POSITION: 50% 75%; BACKGROUND-REPEAT: no-repeat" background="../../Obit%20Pictures/46.gif">
+				<span class="heading"><strong>
+				<font face="Times New Roman" size="5">
+				<a name="Seal,_Frances_Martin_-_Age_88_-_Russellville,_AL">Seal, 
+				Frances Martin - Age 88 - Russellville, AL</a></font></strong></span><b><font face="Times New Roman" size="5">
+				<br>
+				</font><span class="content" style="COLOR: #626262">
+				<font face="Times New Roman" size="5">(January 8, 1919 - June 7, 
+				2007)</font></span></b><p>
+				<span class="content" style="COLOR: #626262">&nbsp;</span><br>
+				<img height="5" alt="" src="../../Obit%20Pictures/spacer.gif" width="1" border="0"></p>
+				<div class="content">
+					<img alt="Frances Martin Seal" hspace="10" src="../../Obit%20Pictures/120170.jpg" width="150" align="right" border="0"><b><font face="Times New Roman" size="3">Frances 
+					Martin Grissom Seal, age 88, Russellville passed away 
+					Thursday, June 07, 2007. </font></b>
+					<p><b><font face="Times New Roman" size="3">The visitation 
+					will be held at Spry Memorial Chapel on Saturday, June 09, 
+					2007 from 1-3 pm. The 3:00 pm funeral service will follow in 
+					the funeral home chapel with Rev. Coye Marbutt officiating. 
+					Interment will be in Robison Cemetery. </font></b></p>
+					<p><b><font face="Times New Roman" size="3">Pallbearers will 
+					be Johnny Willis, Billy Willis, Donny Willis, Kenneth 
+					Clement, Kevin Clement and Burt Reynolds. </font></b></p>
+					<p><b><font face="Times New Roman" size="3">She was preceded 
+					in death by husbands, Emmitt Seal and Roy Seal; sons, Wayne 
+					and Larry Seal; an infant daughter; parents, William Allan 
+					Grissom and Lou Edna Martin Grissom; brothers, Luther, 
+					Allan, Jr. and h Grissom; sisters, Mary Lee Willis and 
+					Lucille Frederick. </font></b></p>
+					<p><b><font face="Times New Roman" size="3">She is survived 
+					by grandson, Allan Kitterman and wife, Vicki; 3 great 
+					grandsons, Tyler, Austin and Houston Kitterman; brother, 
+					Charles Grissom; sister, Martha Woods; several nieces and 
+					nephews. </font></b></p>
+					<p><b><font face="Times New Roman" size="3">She was a member 
+					of Siloam Missionary Baptist Church and Mt. Star Homemakers' 
+					Club.</font></b></p>
+					<p><i><font size="3" face="Times New Roman">Spry Funeral 
+					Home of Russellville in charge of arrangements.</font></i></div>
+				</td>
+			</tr>
+		</table>
+&nbsp;</P></td>
+	</tr>
+</table>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Smith,_Edra_Faye_-_Age_84_-_Winfield,_AL">Smith, Edra Faye - Age 84 - 
+Winfield, AL</a></font></b> 6/2/07 <br>
+<br>
+<b>Smith, Edra Faye, age 84 of Winfield, passed away Saturday, June 2, 2007. <br>
+<br>
+Survivors include daughter, Brenda (Dennis) Moore, Winfield; grandson, Randy 
+(Tracie) Moore, Winfield; great-grandchildren, Colton and Nikki Moore; brother, 
+James Lowell Fowler, Chesterfield, MO; nieces, nephews and other relatives. <br>
+<br>
+Chapel service will be Tuesday, June 5, 2007, 2:00 pm with burial in Old Union 
+Cemetery. Visitation will be Monday, June 4, 2007, 6:00 - 8:00 pm. <br>
+</b><br>
+<i>Miles Funeral Home of Winfield directing.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Yarbrough,_Flora_Moore_-_Age_86_-_Ft._Pierce,_FL_(Formerly_of_Lamar_County,_AL)">
+Yarbrough, Flora Moore - Age 86 - Ft. Pierce, FL (Formerly of Lamar County, AL)</a></font></b>
+<br>
+<br>
+<b>Yarbrough, Flora Moore, 86, of Ft. Pierce, FL, formerly of Lamar County, AL., 
+passed away. <br>
+<br>
+Funeral service, Friday, June 1, 2007, at 11:00 AM at Otts Funeral Home Chapel 
+with burial in Furnace Hill Cemetery. </b><br>
+<br>
+<i>Otts Funeral Home, Sulligent, AL directing.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: center"><i><font size="6"><b><a href="../../obituaries.html">Back To 
+Obituaries Page</a></b></font></i></p>
+
+</body>
+
+</html>

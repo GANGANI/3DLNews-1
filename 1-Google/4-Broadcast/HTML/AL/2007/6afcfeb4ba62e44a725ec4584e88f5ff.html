@@ -1,0 +1,2214 @@
+<html>
+
+<head>
+<style type="text/css">.replbq{width:100%}</style>
+<style type="text/css">.replbq{width:100%}</style>
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>November 2007 Obituaries</title>
+<base target="_self">
+</head>
+
+<body background="../../Background_pics/backn21.jpg" style="background-attachment: fixed">
+
+<p align="center"><b><font size="6" face="Times New Roman">
+<span style="text-transform: uppercase"><a name="Obituaries">Obituaries</a></span></font></b></p>
+<p align="center"><font face="Times New Roman"><font size="6"><b> 
+November 
+-</b></font><b><font size="6"> 2007</font></b></font></p>
+<p align="center"><i>email comments or listings to:&nbsp; </i><b><i>
+<a href="mailto:jmays@49countynews.net">jmays@49countynews.net</a> </i></b></p>
+<p align="center"><i><font size="4"><b><a href="../../obituaries.html">Back To 
+Obituaries Page</a></b></font></i></p>
+<p align="center">&nbsp;<script>
+<!-- Hide from old browsers
+
+/******************************************
+* Find In Page Script -- Submitted/revised by Alan Koontz (alankoontz@REMOVETHISyahoo.com)
+* Visit Dynamic Drive (http://www.dynamicdrive.com/) for full source code
+* This notice must stay intact for use
+******************************************/
+
+//  revised by Alan Koontz -- May 2003
+
+var TRange = null;
+var dupeRange = null;
+var TestRange = null;
+var win = null;
+
+
+//  SELECTED BROWSER SNIFFER COMPONENTS DOCUMENTED AT
+//  http://www.mozilla.org/docs/web-developer/sniffer/browser_type.html
+
+var nom = navigator.appName.toLowerCase();
+var agt = navigator.userAgent.toLowerCase();
+var is_major   = parseInt(navigator.appVersion);
+var is_minor   = parseFloat(navigator.appVersion);
+var is_ie      = (agt.indexOf("msie") != -1);
+var is_ie4up   = (is_ie && (is_major >= 4));
+var is_not_moz = (agt.indexOf('netscape')!=-1)
+var is_nav     = (nom.indexOf('netscape')!=-1);
+var is_nav4    = (is_nav && (is_major == 4));
+var is_mac     = (agt.indexOf("mac")!=-1);
+var is_gecko   = (agt.indexOf('gecko') != -1);
+var is_opera   = (agt.indexOf("opera") != -1);
+
+
+//  GECKO REVISION
+
+var is_rev=0
+if (is_gecko) {
+temp = agt.split("rv:")
+is_rev = parseFloat(temp[1])
+}
+
+
+//  USE THE FOLLOWING VARIABLE TO CONFIGURE FRAMES TO SEARCH
+//  (SELF OR CHILD FRAME)
+
+//  If you want to search another frame, change from "self" to
+//  the name of the target frame:
+//  e.g., var frametosearch = 'main'
+
+//var frametosearch = 'main';
+var frametosearch = self;
+
+
+function search(whichform, whichframe) {
+
+//  TEST FOR IE5 FOR MAC (NO DOCUMENTATION)
+
+if (is_ie4up && is_mac) return;
+
+//  TEST FOR NAV 6 (NO DOCUMENTATION)
+
+if (is_gecko && (is_rev <1)) return;
+
+//  TEST FOR Opera (NO DOCUMENTATION)
+
+if (is_opera) return;
+
+//  INITIALIZATIONS FOR FIND-IN-PAGE SEARCHES
+
+if(whichform.findthis.value!=null && whichform.findthis.value!='') {
+
+       str = whichform.findthis.value;
+       win = whichframe;
+       var frameval=false;
+       if(win!=self)
+{
+
+       frameval=true;  // this will enable Nav7 to search child frame
+       win = parent.frames[whichframe];
+
+}
+
+    
+}
+
+else return;  //  i.e., no search string was entered
+
+var strFound;
+
+//  NAVIGATOR 4 SPECIFIC CODE
+
+if(is_nav4 && (is_minor < 5)) {
+   
+  strFound=win.find(str); // case insensitive, forward search by default
+
+//  There are 3 arguments available:
+//  searchString: type string and it's the item to be searched
+//  caseSensitive: boolean -- is search case sensitive?
+//  backwards: boolean --should we also search backwards?
+//  strFound=win.find(str, false, false) is the explicit
+//  version of the above
+//  The Mac version of Nav4 has wrapAround, but
+//  cannot be specified in JS
+
+ 
+        }
+
+//  NAVIGATOR 7 and Mozilla rev 1+ SPECIFIC CODE (WILL NOT WORK WITH NAVIGATOR 6)
+
+if (is_gecko && (is_rev >= 1)) {
+   
+    if(frameval!=false) win.focus(); // force search in specified child frame
+    strFound=win.find(str, false, false, true, false, frameval, false);
+
+//  The following statement enables reversion of focus 
+//  back to the search box after each search event 
+//  allowing the user to press the ENTER key instead
+//  of clicking the search button to continue search.
+//  Note: tends to be buggy in Mozilla as of 1.3.1
+//  (see www.mozilla.org) so is excluded from users 
+//  of that browser.
+
+    if (is_not_moz)  whichform.findthis.focus();
+
+//  There are 7 arguments available:
+//  searchString: type string and it's the item to be searched
+//  caseSensitive: boolean -- is search case sensitive?
+//  backwards: boolean --should we also search backwards?
+//  wrapAround: boolean -- should we wrap the search?
+//  wholeWord: boolean: should we search only for whole words
+//  searchInFrames: boolean -- should we search in frames?
+//  showDialog: boolean -- should we show the Find Dialog?
+
+
+}
+
+ if (is_ie4up) {
+
+  // EXPLORER-SPECIFIC CODE revised 5/21/03
+
+  if (TRange!=null) {
+	  
+   TestRange=win.document.body.createTextRange();
+ 
+	  
+
+   if (dupeRange.inRange(TestRange)) {
+
+   TRange.collapse(false);
+   strFound=TRange.findText(str);
+    if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = win.document.body.scrollTop + TRange.offsetTop;
+        TRange.select();
+        }
+
+
+   }
+   
+   else {
+
+     TRange=win.document.body.createTextRange();
+     TRange.collapse(false);
+     strFound=TRange.findText(str);
+     if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+
+
+
+   }
+  }
+  
+   if (TRange==null || strFound==0) {
+   TRange=win.document.body.createTextRange();
+   dupeRange = TRange.duplicate();
+   strFound=TRange.findText(str);
+    if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+
+   
+   }
+
+ }
+
+  if (!strFound) alert ("String '"+str+"' not found!") // string not found
+
+        
+}
+// -->
+</script>
+
+<!--  EXAMPLE FORM OF FIND-IN-PAGE SEARCH USING SUBMIT (ALLOWING 'ENTER/RETURN' KEY PRESS EVENT) -->
+<form name="form1" onSubmit="search(document.form1, frametosearch); return false">
+  <p align="center">
+  <input type="text" name="findthis" size="33" title="Press 'ALT s' after clicking submit to repeatedly search page"> 
+  <input type="submit" value="Search Page" ACCESSKEY="s"></p>
+</form></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Barnett,_Christine_Orton_-_Age_65_-_Navoo,_AL">Barnett, 
+Christine Orton - Age 65 - Navoo, AL</a>&nbsp;&nbsp;&nbsp; 11/30/07</font></b></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b><font size="4"><a target="_self" href="#Bell,_Roy_Edsel_-_Age_76_-_Greenville,_SC__(Formerly_of_Winston_County,_AL)">Bell, 
+Roy Edsel - Age 76 - Greenville, SC&nbsp; <i>(Formerly of Winston County, AL)</i></a>&nbsp;&nbsp;&nbsp; 
+11/18/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Benton,_Linda_Guin_-_Age_59_-_Winfield,_AL_">Benton, 
+Linda Guin - Age 59 - Winfield, AL</a>&nbsp;&nbsp; 11/15/07</font></b></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b><font size="4"><a target="_self" href="#Brown,_Billy_Madison_-_Age_81_-_Vinemont,_AL">Brown, 
+Billy Madison - Age 81 - Vinemont, AL</a>&nbsp;&nbsp; 11/13/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Chaffin,_Edith_Nell_-_Age_76_-_Coker,_AL__(Formerly_of_Guin,_AL)">
+Chaffin, Edith Nell - Age 76 - Coker, AL&nbsp; <i>(Formerly of Guin, AL)</i></a>&nbsp;&nbsp;&nbsp; 
+11/30/07</b></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Cook,_Betty_Jean_-_Age_71_-_McCalla,_AL">Cook, Betty 
+Jean - Age 71 - McCalla, AL</a>&nbsp;&nbsp;&nbsp; 11/16/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Crane,_Patricia_(aka_Sigrid_Valdis)_-_Age_72_-_Anaheim,_CA__(Actress_-_Widow_of_Actor_Bob_Crane_of_Hogans_Heroes)">
+Crane, Patricia (aka Sigrid Valdis) - Age 72 - Anaheim, CA&nbsp; <i>(Actress - 
+Widow of Actor Bob Crane of &quot;Hogans Heroes&quot;)</i></a></font></b></p>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="4">
+<a href="#Eddy,_James_Berlin_-_Age_74_-_Brilliant,_AL_">Eddy, James Berlin - Age 
+74 - Brilliant, AL</a>&nbsp;&nbsp; 11/1/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Friday,_Richard_Lamont_-_Age_61_-_Florence,_AL_(Formerly_of_Hamilton,_AL)">
+Friday, Richard Lamont - Age 61 - Florence, AL <i>(Formerly of Hamilton, AL)</i></a><i>
+</i>&nbsp; 11/28/07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#Farris,_Kenneth_Curry_-_Age_65_-_Eldridge,_AL">Farris, Kenneth Curry - 
+Age 65 - Eldridge, AL</a>&nbsp;&nbsp; 11/9/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Gilliam,_Joy_McGriff_-_Age_56_-_Winfield,_AL_">Gilliam, 
+Joy A. McGriff - Age 58 - Winfield, AL</a>&nbsp;&nbsp; 11/22/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Godsey,_Mrs._Zella_-_Age_86_-_Hamilton,_AL">Godsey, Miss Zella - Age 86 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 
+10/31/07</b></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Green,_Jimmy_E._-_Age_68_-_Hanceville,_AL_(Formerly_of_Double_Springs,_AL)_">
+Green, Jimmy E. - Age 68 - Hanceville, AL <i>(Formerly of Double Springs, AL)</i></a>&nbsp;&nbsp;&nbsp; 
+11/08/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Hamby,_Mallory_Seymour_-_Age_24_-_Double_Springs,_AL_">
+Hamby, Mallory Seymour - Age 24 - Double Springs, AL</a>&nbsp;&nbsp; 11/20/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Hand,_Julie_-_Age_44_-_Hamilton,_AL">Hand, Julie Nell - Age 
+44 - Hamilton, AL</a>&nbsp;&nbsp; 11/14/ 07</b></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Holland,_Herbert_Dolan_-_Age_59_-_Haleyville,_AL_">
+Holland, Herbert Dolan - Age 59 - Haleyville, AL</a>&nbsp;&nbsp; 11/30/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Howell,_Lillie_Mae_-_Age__-_Hamilton,_AL">Howell, 
+Lillie Mae (Mrs. Ralph Howell) - Age&nbsp;94 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 
+11/28/07</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Howell,_Willie_Estelle_-_Age_92_-_Moody,_AL_(Formerly_of_Hamilton,_AL)">
+Howell, Willie Estelle - Age 92 - Moody, AL <i>(Formerly of Hamilton, AL)</i></a>&nbsp;&nbsp; 
+11/10/07</b></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Hudson,_Randy_Lee_-_Age_57_-_Hackleburg,_AL">Hudson, 
+Randy Lee - Age 57 - Hackleburg, AL</a>&nbsp;&nbsp;&nbsp; 11/11/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Humphres,_Lecil_-_Age_73_-_Amory,_MS__(Formerly_of_Hamilton,_AL)">
+Humphres, Lecil - Age 73 - Amory, MS&nbsp; <i>(Formerly of Hamilton, AL)</i></a><i>&nbsp;&nbsp;
+</i>11/20/07&nbsp;&nbsp; </b><i>(Updated 11/28)</i></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Jackson,_Barbara_Nell_-_Age_60_-_Addison,_AL_">Jackson, 
+Barbara Nell - Age 60 - Addison, AL</a>&nbsp;&nbsp; 11/13/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Jones,_Virginia_Webster_-_Age_80_-_Vernon,_AL">Jones, 
+Virginia Webster - Age 80 - Vernon, AL</a>&nbsp;&nbsp; 11/3/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Kennedy,_Evelyn_Crews_-_Age_86_-_Guin,_AL">Kennedy, Evelyn Crews - Age 86 - Guin, AL</a>&nbsp;&nbsp;&nbsp; 
+11/1/07</b></font></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="4"><b><a target="_self" href="#Kerr,_Earnie_-_Age_86_-_Hamilton,_AL">Kerr, Earnie - 
+Age 86 - Hamilton, AL</a>&nbsp;&nbsp; 11/16/07</b></font></p>
+<p align="left">
+<b><font size="4">
+<a href="#Key,_Mrs._Anna_Lois_Birchfield_-_Age_75_-_Brilliant,_AL">Key, Mrs. 
+Anna Lois Birchfield - Age 75 - Brilliant, AL</a>&nbsp;&nbsp; 11/9/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#King,_Bobbie_-_Age_79_-_Hackleburg,_AL">King, Bobbie - 
+Age 79 - Hackleburg, AL</a>&nbsp;&nbsp; 11/6/07</b></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Leonelli,_Ron_-_Age_74_-_Hamilton,_AL">Leonelli, Ronald 
+&quot;Ron&quot; Earnest - 
+Age 74 - Hamilton, AL</a>&nbsp;&nbsp; 11/10/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Lockhart,_Shelby_-_Age_41_-_Sulligent,_AL_">Lockhart, 
+Shelby - Age 41 - Sulligent, AL</a>&nbsp;&nbsp; 11/22/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Markham,_Logan_Dotson_-_Age_70_-_Haleyville,_AL">
+Markham, Logan Dotson - Age 70 - Haleyville, AL</a>&nbsp;&nbsp;&nbsp; 11/15/07</font></b></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="4"><b><a target="_self" href="#Mayfield,_Leelon_-_Age_85_-_Hamilton,_AL">Mayfield, 
+Leelon - Age 85 - Hamilton, AL </a>&nbsp;&nbsp; 11/16/07</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#McCarley,_Mrs._Willie_-_Age_84_-_Hamilton,_AL">
+McCarley, Mrs. Willie - Age 84 - Hamilton, AL</a>&nbsp;&nbsp; 11/16/07</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#McCullar,_Kristy_-_Age_32_-_Hamilton,_AL">McCullar, 
+Kristy - Age 32 - Hamilton, AL </a>&nbsp; 11/14/ 07</b></font></p>
+<p align="left"><b><font size="4">
+<a href="#McNeal_,_Rev._Collis_Gerald_C.G._-_Age_79_-_Guin,_AL">McNeal , Rev. 
+Collis Gerald C.G. - Age 79 - Guin, AL</a>&nbsp;&nbsp; 11/3/07</font></b></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b><font size="4"><a target="_self" href="#Millican,_Loman_C._-_Age_78_-_Detroit,_AL">Millican, 
+Loman C. - Age 78 - Detroit, AL</a>&nbsp;&nbsp; 11/17/07</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mitchell,_James_Odis_-_Age_79_-_Hackleburg,_AL">
+Mitchell, James Odis - Age 79 - Hackleburg, AL</a>&nbsp;&nbsp; 11/6/07</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Nethery,_Daisy_M._-_Age_57_-_Sulligent,_AL">Nethery, 
+Daisy M. - Age 57 - Sulligent, AL</a>&nbsp;&nbsp;&nbsp; 11/21/07</b></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Nelson,_Isaac_Junior_-_Age_60_-_Guin,_AL">Nelson, Isaac 
+Junior - Age 60 - Guin, AL</a>&nbsp;&nbsp;&nbsp; 11/16/07</font></b></p>
+<p align="left"><font size="4">
+<b>
+<a target="_self" href="#Nelson,_Nash_Sewell_-_Age_91_-_Glen_Allen,_AL">Nelson, 
+Nash Sewell - Age 91 - Glen Allen, AL</a>&nbsp;&nbsp;&nbsp; 11/12/07&nbsp;&nbsp; </b>
+<i>(Updated 12/9)</i></font></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="4"><b><a target="_self" href="#Nichols,_Clyde_-_Age_79_-_Hackleburg,_AL">Nichols, 
+Clyde - Age 79 - Hackleburg, AL</a>&nbsp;&nbsp;&nbsp; 11/19/07</b><i>&nbsp; 
+(Updated 11/28) </i></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Nichols,_Sula_E._Lindsey_-_Age_88_-_Hamilton,_AL">
+Nichols, Sula E. Lindsey - Age 88 - Hamilton, AL</a>&nbsp;&nbsp; 11/17/07</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Nix,_Flora_-_Age_86_-_Detroit,_AL">Nix, Flora - Age 86 - Detroit, AL</a>&nbsp;&nbsp; 
+11/2/07&nbsp;&nbsp; </b><i>(Updated 11/8)</i></font></p>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="4">
+<a target="_self" href="#Pearson,_Sherry_Ledena_-_Age_38_-_Hueytown,_AL">
+Pearson, Sherry Ledena - Age 38 - Hueytown, AL</a>&nbsp;&nbsp;&nbsp; 11/14/07</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b><font size="4">
+<a target="_self" href="#Ramsey,_Helen_-_Age_77_-_Haleyville,_AL">Ramsey, Julia 
+Helen Miller Hamby - Age 77 - Haleyville, AL</a>&nbsp;&nbsp; 11/13/07</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b><font size="4">
+<a href="#Reese,_James_Arthur_-_Age_53_-_Winfield,_AL_">Reese, James Arthur - 
+Age 53 - Winfield, AL</a>&nbsp;&nbsp; 11/27/07</font></b></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="4"><span style="font-family: Times New Roman; font-weight: 700"><a target="_self" href="#Schiavoni,_Mike_-_Age_-_Hamilton,_AL">Schiavoni, Mike - Age 57 - Hamilton, AL</a>&nbsp;&nbsp; 11/10/07&nbsp;&nbsp; </span>
+<span style="font-family: Times New Roman; ">
+<i>(Updated 11/12)</i></span></font></p>
+<p align="left"><font size="4">
+<b>
+<a target="_self" href="#Stewart,_Bertha_-_Age_68_-_Hamilton,_AL">Stewart, 
+Bertha Mae &quot;Dorothy&quot; - Age 68 - Hamilton, AL</a>&nbsp;&nbsp; 11/10/07&nbsp;&nbsp;&nbsp; </b>
+<i>(Updated 12/9)</i></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Taylor,_Johnny_Wayne_-_Age_51_-_Winfield,_AL">Taylor, 
+Johnny Wayne - Age 51 - Winfield, AL</a>&nbsp;&nbsp; 11/17/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Threadgill,_Avis_-_Age_65_-_Gattman,_MS.">Threadgill, 
+Avis - Age 65 - Gattman, MS.</a>&nbsp;&nbsp;&nbsp; 11/15/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Tucker,__Shannon_-_Age_85_-_Hubbertville,_AL">Tucker,&nbsp; 
+Shannon - Age 85 - Hubbertville, AL</a>&nbsp;&nbsp;&nbsp; 11/16/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Turner,_Christine_-_Age_83_-_Double_Springs,_AL">
+Turner, Christine - Age 83 - Double Springs, AL</a>&nbsp; 11/2/07</font></b></p>
+<p align="left"><b><font size="4">
+<a href="#Tyra,_Eva_Mae_Files_-_Age_93_-_Winfield,_AL">Tyra, Eva Mae Files - Age 
+93 - Winfield, AL</a>&nbsp;&nbsp; 11/8/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Vann,_Opal_Blackmon_-_Age_90_-_Tupelo,_MS">Vann, Opal 
+Blackmon - Age 90 - Tupelo, MS</a>&nbsp;&nbsp;&nbsp; 11/17/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Warren,_Mamie_Ruth_Meharg_-_Age_84_-_Winfield,_AL">
+Warren, Mamie Ruth Meharg - Age 84 - Winfield, AL</a>&nbsp;&nbsp;&nbsp; 11/18/07</font></b></p>
+<p align="left">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="4"><b><a href="#Watkins,_Donald_-_Age_70_-_Winfield,_AL">Watkins, 
+Donald - Age 70 - Winfield, AL</a>&nbsp;&nbsp;&nbsp; 11/14/07</b></font></p>
+<p align="left"><b><font size="4">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><a href="#Webb,_William_Esdell_-_Age_85_-_Winfield,_AL">Webb, 
+William Esdell - Age 85 - Winfield, AL</a>&nbsp;&nbsp;&nbsp; 11/18/07</font></b></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#West,_Donda_-_Age_58_-_Los_Angeles,_CA__(Mother_of_Rapper,_Kanye_West)">
+West, Donda - Age 58 - Los Angeles, CA&nbsp;<i> (Mother of Rapper, Kanye West)</i></a></font></b></p>
+<p align="left"><b><font face="Times New Roman" size="4">
+<a href="#Whisenant,_Sally_Jo_McKay_-_Age_72_-_Chattanooga,_TN__(Formerly_of_Guin,_AL)">
+Whisenant, Sally Jo McKay - Age 72 - Chattanooga, TN&nbsp; <i>(Formerly of Guin, 
+AL)</i></a>&nbsp;&nbsp; 11/14/07</font></b></p>
+<p align="left"><font size="4">
+<span style="font-family: Times New Roman; font-weight: 700">
+<a target="_self" href="#Williams,_Carol_Pat_-_Age_56_-_Hackleburg,_AL">
+Williams, Carol &quot;Pat&quot; Nana- Age 56 - Hackleburg, AL</a>&nbsp;&nbsp; 11/28/07&nbsp;&nbsp; </span>
+<i>
+<span style="font-family: Times New Roman; ">
+(Updated 12/5)</span></i></font></p>
+<p align="left"><font size="4">
+<span style="font-family: Times New Roman; font-weight: 700">
+<a target="_self" href="#Wilson,_Bruce_-_Age_79_-_Hamilton,_AL">Wilson, Bruce - 
+Age 79 - Hamilton, AL</a>&nbsp;&nbsp; 11/10/07&nbsp;&nbsp; </span><i>
+<span style="font-family: Times New Roman; ">
+(Updated 11/14)</span></i></font></p>
+<p align="left"><b><font size="4">
+<a target="_self" href="#Wilson,_Dick_-_Age_91_-_Los_Angeles,_CA_(Actor_-_Comedian)">
+Wilson, Dick - Age 91 - Los Angeles, CA<i> </i>(Actor - Comedian)</a><i>&nbsp;&nbsp; 
+11/19/07</i></font></b></p>
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b><font size="4"><a target="_self" href="#Wise,_Harold_-_Age_80_-_Gattman,_MS_">Wise, Harold - 
+Age 80 - Gattman, MS</a>&nbsp;&nbsp;&nbsp; 11/17/07</font></b></p>
+<p align="left">&nbsp;</p>
+<p align="left"><b><font size="5"><i><a target="_self" href="#Obituaries">Top of Page</a></i></font></b></p><hr>
+<p align="left"><font size="5"><b>
+<a name="Kennedy,_Evelyn_Crews_-_Age_86_-_Guin,_AL">Kennedy, Evelyn Crews - Age 
+86 - Guin, AL</a></b></font></p>
+<p align="left"><b>Evelyn Kennedy, age 86, of Guin, AL, died Thursday, November 
+1, 2007 in the Northwest Medical Center in Winfield, AL.</b></p>
+<p align="left"><b>Born in Fayette County, AL.&nbsp; She is the daughter of the 
+late George Ed and Carrie Marinda Roberts Crews and was the Wife of the late 
+Obern Kennedy.&nbsp; She had lived in Guin most of her life and was of the 
+Baptist Faith.</b></p>
+<p align="left"><b>She is survived by Several Nieces and Nephews.</b></p>
+<p align="left"><b>She was preceded in death by her Husband, Obern Kennedy, Two 
+Sons, John Everett Kennedy and an infant son, Five Sisters, Ethel Markham, Edith 
+Black, Ellen Gilmore, Jewel Crews and Maxine Robertson, and Two Brothers, Emil 
+Crews and George Crews.</b></p>
+<p align="left"><b>Services held Sunday, November 4, 2007 at 2:00 p.m. from the 
+Norwood Funeral Home Chapel with Burial in the Mt. Willing Cemetery.&nbsp; Bro. 
+Mark Maddox officiating.</b></p>
+<p align="left"><b>Norwood Funeral Homes, Inc. of Guin, AL directing 7195 U. S. 
+Hwy. 43, Guin, AL 205-468-3323&nbsp; Information:&nbsp; 205-487-8585.</b>&nbsp; </p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p><hr>
+<p align="left"><font size="5"><b>
+<a name="Godsey,_Mrs._Zella_-_Age_86_-_Hamilton,_AL">Godsey, Miss Zella G - Age 
+86 - Hamilton, AL</a></b></font></p>
+<p align="left"><b>Miss Zella Godsey, age 86, of Hamilton, Alabama, passed away 
+Wednesday night, October 31, 2007 at North Mississippi Medical Center Nursing 
+Home at Hamilton, AL.</b></p>
+<p align="left"><b>Funeral Service, 3:00 p.m., Friday, November 3, 2007 at 
+Shiloh Missionary Baptist Church, Northwest of Hamilton, AL.&nbsp; Visitation, 
+1:00 - 3:00 p.m. (Time of Service) Friday, November 3, 2007 at the Church.&nbsp; 
+Bro. Robert Huffman and Bro. Dewayne Satterwhite officiating.&nbsp; Burial will 
+be in Shiloh Cemetery.</b></p>
+<p align="left"><b>Miss Godsey was born in Marion County, AL., July 30, 1921, to 
+Silas M. and Dora Ellen Palmer Godsey.&nbsp; She was single and a Caregiver.</b></p>
+<p align="left"><b>She is survived by 2 sisters, Betty Godsey and Gaynell (Hugh 
+Don) Lee, and a host of nieces and nephews.</b></p>
+<p align="left"><b>Hamilton Funeral Home of 
+Hamilton, AL. directing, 150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</b></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+<p align="left"><font size="5"><b>
+<a name="King,_Bobbie_-_Age_79_-_Hackleburg,_AL">King, Bobbie - Age 79 - 
+Hackleburg, AL</a></b></font></p>
+<p align="left"><b>Bobbie King, age 79, Hackleburg, Alabama, passed away 
+Tuesday, November 6, 2007.&nbsp;&nbsp; </b></p>
+<p align="left"><b>Visitation, Thursday, November 8, 2007, 6:00 - 8:00 p.m., at 
+Marion County Funeral Home in Hamilton, AL.&nbsp; Funeral service, Friday, 
+November 9, 2007, 2:00 p.m., at Marion County Funeral Home.&nbsp; Burial in 
+Rocky Top Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Marion County Funeral Home, 
+Hamilton, AL. directed the services, 3325 Bexar Ave E., Hamilton, AL 35570&nbsp; 
+205-921-5777. </b></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+<p align="left"><b><font size="5"><a name="Nix,_Flora_-_Age_86_-_Detroit,_AL">
+Nix, Flora Mae - Age 86 - Detroit, AL</a></font></b></p>
+<p align="left"><b>Mrs. Flora Nix, age 86, Detroit, Alabama, passed away Friday, 
+November 2, 2007 at the North Mississippi Medical Center in Hamilton, AL.&nbsp;&nbsp;
+</b></p>
+<p align="left"><b>Visitation, Sunday, November 4, 2007, 1:00 - 2:00 p.m., at 
+Hamilton Funeral Home in Hamilton, AL.&nbsp; Funeral service to follow 
+visitation at 2:00 p.m., at Hamilton Funeral Home.&nbsp; Bro. Eddie Davidson 
+officiating.&nbsp; Burial in Smyrna 
+Cemetery.</b></p>
+<p align="left"><b>Mrs. Nix was born January 5, 1921, in Mississippi, to Earl 
+and Adel Cunningham McKay.&nbsp; She was married to Henry Don Nix.&nbsp; She was 
+a Supervisor at Detroit Slacks for 17 years and also had worked for the Marion 
+County Board of Education in the Lunch Room.</b></p>
+<p align="left"><b>She is survived by her husband, Henry Don Nix; sons, Louie 
+Burl (Elizabeth) Nix, and Larry Don (Jennifer) Nix; grandchildren, Steve (Lisa) 
+Nix, Rena (Rodney) Watson, Kim (Conley) Alldredge, Amy (Lee) Mobley, and Nikki 
+Nix, Patrick Nix, and Conner Nix; great-grandchildren, Danielle and Ashley 
+Watson, Hayden Mobley, Sarah Elizabeth Nix, Tanner and Katie Evans; brothers, 
+Bobby Joe (Elizabeth) McKay, George Gaylon (Bernice) McKay, Earnest Earl (Willa 
+Dean) McKay, and Leo McKay; sister, Opal (Leon) Scott; and a host of nieces and 
+nephews.</b></p>
+<p align="left"><b>She was preceded in death by her parents, Earl and Adel 
+McKay; sisters, Wilma Dee Johnson and Clemmie Davis; and granddaughter, Adena 
+Lynn Nix.</b></p>
+<p align="left"><b>Hamilton Funeral Home of 
+Hamilton, AL. directing, 150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Mitchell,_James_Odis_-_Age_79_-_Hackleburg,_AL">Mitchell, James Odis - 
+Age 79 - Hackleburg, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>James Odis Mitchell, age 79, 
+of Hackleburg, Alabama, passed away Tuesday, November 6, 2007 at Russellville 
+Health Care.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, Wednesday, 
+November 7, 2007, 10:00 - 12:00 Noon, at Hackleburg Church of Christ with 
+funeral service to begin at 12:00 Noon at the church with Bro. Mike Lane 
+officiating.&nbsp; Burial in Union Hill Cemetery, Hackleburg, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Mitchell was born, July 
+3, 1928 in Marion County, AL., to Leslie and Virgie Burleson Mitchell.&nbsp; He 
+was married to Elena Mitchell and was a Logger.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Elena Mitchell; daughter, Gelene (Hugh Don) Whisenant; sons, Jerry (Robbie) 
+Mitchell, James (Nancy) Mitchell, and Junior (Melinda) Mitchell; 11 
+grandchildren; 15 great-grandchildren; a brother, Reece Mitchell; and sisters, 
+Ann Loveless, Sue Lawler, and Virginia Mitchell.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hamilton Funeral Home of 
+Hamilton, AL. directing, 150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</b>&nbsp; </p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700"><font size="5">
+<a name="Schiavoni,_Mike_-_Age_-_Hamilton,_AL">Schiavoni, Mike - Age 57 - Hamilton, 
+AL</a></font></span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">Marco, better known 
+as Mike Schiavoni, 
+of Hamilton, Alabama, passed away, Saturday, November 10th, 2007 in the North 
+Mississippi Medical Center in Tupelo, MS.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Visitation will be 
+Tuesday, November 13th, 12:00 Noon - 2:00 p.m. at the Hamilton Funeral Home 
+Chapel with funeral services, to follow visitation, at 2:00 
+p.m. at the Hamilton Funeral Home Chapel in Hamilton, AL.&nbsp; Bro. Preston 
+Headrick officiating.&nbsp; Burial in 
+Hamilton Memory Gardens, Hamilton, AL. , (Weston)</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Marco &quot;Mike&quot; 
+Schiavoni was born August 23, 1950 in Memphis, Tennessee to Marco Anthony and 
+Dorothy Silas Schiavoni.&nbsp; He was a Veteran and served in the U. S. Army in 
+Viet Nam.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Mike is survived by 
+his Fiance, Carolyn Ferguson Alexander and a host of cousins, aunts, and 
+friends.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">He was preceded in 
+death by his parents, Marco Anthony and Dorothy Silas Schiavoni.</span></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Leonelli,_Ron_-_Age_74_-_Hamilton,_AL">Leonelli, Ronald &quot;Ron&quot; Earnest - Age 74 - 
+Hamilton, AL</a></font></b><br>
+<b>(June 24, 1933 - November 16, 2007)</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Ronald Earnest &quot;Ron&quot; Leonelli, age 74, of 
+Hamilton, Alabama, passed away Saturday night, November 10, 2007 in the North 
+Mississippi Medical Center in Tupelo, MS.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, Monday night, 
+November 12, 2007, 6:00 - 7:00 p.m. at the Holy Spirit Catholic Church in 
+Winfield, Alabama.&nbsp; Short wake service to follow.&nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service Tuesday, November 13, 2007 at 11:00 a.m. at 
+the church with procession and burial to follow in the Hamilton City Cemetery.&nbsp; The Holy Spirit Catholic 
+Church is located at 2710, US Hwy. 43, Winfield, AL., 205-487-3616.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, Sonja Leonelli, 
+his sister, Carol Leonelli (Bob) Dunneback; and aunt, Caroline 
+Stefani; daughters, Lisa (Donald) Knight, and Anne Leonelli (Jay) Lawler; sons, 
+John (Cindy) Leonelli, Paul (Ruth) Leonelli, Michael (Terry) Leonelli, and Tom (Donna) 
+Leonelli; grandchildren,&nbsp; Jennifer (Jamie) Gann, Joseph Leonelli, Taylor 
+(Brant) Hulsey, Morgan Lawler, Ethan Lawler, Annie Leonelli, Lauren Leonelli, Sara Leonelli, 
+and Cameron Knight.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><b>In lieu&nbsp; of flowers, 
+please support the American Heart Association and the Hamilton Christian Center 
+of Concern.</b></i></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<div id="wrapper">
+  <div class="results" id="canvas">
+    <div id="content" style="POSITION: static">
+      <div class="promo-column-bg" id="bottom">
+        <div id="mid-column">
+          <ul class="listings">
+            <li class="listing">
+            <div class="options">
+              <form onsubmit="log_omniture_click(this, '', '2', '');log_tool_click(this, 'iid=4ca1bc95-e9f3-41e8-a740-a99010077cb5;tol=2;lt=33');return falseIfPopup(this, 'false', '/my-yellowpages/save_business_listing', '/my-yellowpages/sign_in?back_to=%2Fname%2FWinfield-AL%2FCatholic-church%3Ft%3Dcatholic%2Bchurch');" method="get" action="http://www.yellowpages.com/listings/listing_tools">
+                <input id="back_to" type="hidden" value="/name/Winfield-AL/Catholic-church?t=catholic+church" name="back_to">
+                <input id="listing_id" type="hidden" value="1011175670" name="listing_id">
+                <input id="source_id" type="hidden" value="LMS63315191" name="source_id">
+                <input id="listing_name" type="hidden" value="Holy Spirit Catholic Church" name="listing_name">
+                <input id="search_url" type="hidden" name="search_url">
+              </form>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5">
+<span style="font-family: Times New Roman; font-weight: 700">
+<a name="Wilson,_Bruce_-_Age_79_-_Hamilton,_AL">Wilson, Bruce - Age 79 - 
+Hamilton, AL</a></span></font></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Mr. Bruce Wilson, 
+age 79, of Hamilton, Alabama, passed away Friday, November 9, 2007 at his 
+residence.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Visitation, was 
+held Monday, 
+November 12, 2007, 12:00 Noon - 2:00 p.m. at the Hamilton Funeral Home Chapel.&nbsp; 
+Funeral services were held on Monday, November 12, 2007, at 2:00 p.m. from the 
+Hamilton Funeral Home Chapel with burial in Bexar Cemetery</span><b><font face="Times New Roman">.&nbsp; 
+Officiating at the service was Rev. Paul Plumb and Hubert McCullar.</font></b></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Born on March 21, 
+1928, in Franklin County, Alabama, he was the son of the late Sumpter Wilson and 
+Bertha Davis Wilson.&nbsp; He was employed by Munsingwear of Hamilton until his 
+retirement.&nbsp; He was a member of the Bexar United Methodist Church.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">In addition to his 
+parents, he was preceded in death by five brothers and one sister.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Survivors include 
+his wife, Kitty Akers Wilson, and two sisters, Ruth Palmer of Hamilton and Susie 
+Davis of Wadsworth, IL.&nbsp; Other survivors include sister-in-law, Inez Wilson 
+of Blacksburg, VA. and special brother-in-law Wayde Akers of Wildwood, IL. and 
+special nephew, J.L. Davis of Hamilton, along with other nieces and nephews and 
+a host of friends.</span></p>
+<p class="MsoNormal" style="text-align: justify">
+<span style="font-family: Times New Roman; font-weight: 700">Active Pallbearers 
+were Wayde Akers, J.L. Davis, John Wilson, Don Wilson, Robert Lewis, and Michael 
+Lewis.</span></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Stewart,_Bertha_-_Age_68_-_Hamilton,_AL">Stewart, Bertha - Age 68 - 
+Hamilton, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obit%20Pictures/Bertha%20Stewart.jpg" width="100" height="152"></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Bertha Mae &quot;Dorothy&quot; Stewart, age 68, 
+of Hamilton, Alabama, passed away Saturday, November 10, 2007, at her residence.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation will be Saturday, 
+November 17, 2007, 12 Noon - 1:00 p.m. at Rocky Grove C.M.E. Church in the Bexar 
+Community west of Hamilton, AL. Funeral Service will begin at 1:00 p.m. at the 
+church.&nbsp; Burial in Rocky Grove C.M.E. Church Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services were held 
+on Sunday, Nov. 18, 2007, at 1 p.m. from the Rocky Grove Church in Hamilton with 
+burial in the adjoining cemetery. Rev. Harrison Walker, Rev. Theodis Kimbrough, 
+Rev. Tony Crump and Rev. Roger Lockridge were the officiating ministers.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born on June 13, 1939, in 
+Hamilton, she was the daughter of William Meaders and the late Velma P. 
+Lockridge Meaders.&nbsp; She was a cook at KFC. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to her father, 
+William Meaders, survivors include daughters - Carolyn Meadows and Jennifer 
+Stewart, both of Hamilton; granddaughter - Rosilyn (Bryant) Meadows, Hamilton; 
+great-granddaughters - Kimbrionna Coker and Kalyn and Kionna Stowe, all of 
+Hamilton; great-grandson - Jer tavis Stowe, Hamilton; aunts - Ellen H. 
+Lockridge, Jamaica, N.Y., Sarah L. Walton, Detroit, Mich., Mattie Lockridge, 
+Grand Rapids, Mich., and Sara Lockridge, New York, N.Y.; and host of relatives 
+and friends. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mayfield,_Leelon_-_Age_85_-_Hamilton,_AL">Mayfield, Leelon - Age 85 - 
+Hamilton, AL</a></font><font size="4">&nbsp; </font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Leelon Mayfield, age 85, 
+of Hamilton, Alabama, passed away Friday, November 16, 2007 at Trace Regional 
+Hospital at Houston, Mississippi.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, Sunday, 
+2:00 p.m., November 18, 2007 from the Hamilton Funeral Home Chapel, Bro. Truitt 
+Allison and Bro. Teddy Burleson officiating.&nbsp; Visitation 1:00 - 2:00 p.m., Sunday at the Funeral Home until time of service.&nbsp; 
+Burial in Hamilton Memory Gardens Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Mayfield was born March 
+24, 1922 in Jefferson County, AL. to Chelsea and Callie Tittle Mayfield.&nbsp; 
+He was married to Delora Wiley Mayfield, was a Service Man in the U.S. Navy for 
+22 years.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Delora Wiley Mayfield; Daughter, Joan Loden (Ron) Lewis; Granddaughters:&nbsp; 
+Terry Lewis and Andrea (Donny) Beck; Sisters, Louise Lester, Myrtie Davis, and 
+Beatrice Slocum.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hamilton Funeral Home 
+directing,
+<font face="Times New Roman">150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p align="left"><b><font size="5">
+<a name="McCarley,_Mrs._Willie_-_Age_84_-_Hamilton,_AL">McCarley, Mrs. Willie - 
+Age 84 - Hamilton, AL</a></font><font size="4"> </font></b></p>
+
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Willie McCarley, age 
+84, of Hamilton, Alabama passed away Friday, November 16, 2007 at North 
+Mississippi Medical Center in Tupelo, MS.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, 2:00 p.m. 
+Sunday, November 18, 2007 at the Hamilton United Methodist Church, Bro. Mack 
+Buttram officiating, with 
+visitation 1:00 - 2:00 p.m., Sunday at the church until time of service.&nbsp; Burial in Hamilton Memory Gardens Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. McCarley was born 
+November 14, 1922 in Marion County, AL. to Ida Roberts.&nbsp; She was retired as 
+the Owner and Operator of the City Cleaners of Hamilton, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. McCarley is survived by 
+her daughter, Loretta (Ronnie) Clark; Grandson, Brock (Christy) Palmer; 
+Granddaughter, Jennifer Clark; Great Grandchildren, Taylor Madison and Ashlyn 
+Madison.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hamilton Funeral Home 
+directing,
+<font face="Times New Roman">150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Kerr,_Earnie_-_Age_86_-_Hamilton,_AL">Kerr, Earnie - Age 86 - Hamilton, 
+AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b>Earnie Kerr, age 86, of 
+Hamilton, Alabama, passed away Friday, November 16, 2007 at Meadows Nursing Home 
+in Fulton, Mississippi.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, 11:00 a.m. 
+Monday, November 19, 2007 at Popular Log Church, east of Hamilton with Bro. 
+Jason Hammontree, Bro. Tim Harris and Bro. Ted Burleson officiating.&nbsp; Visitation 6:00 - 8:00 p.m. Sunday, November 18, 2007 at Popular Log Church with 
+burial in the Popular Log Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include six sons, 
+Terry Kerr and wife, Carolyn, Frankie Kerr and wife, Ellen, Tim Kerr and wife, 
+Angie, Chris Kerr and wife, Jennifer, all of Hamilton, Ala., Steve Kerr and 
+wife, Yolanda of Ripley and Barry Kerr and wife, Amy, of Henderson, Tenn.; five 
+daughters, Patricia Bozeman of Dallas, Texas, Shelia Miller and husband, Mickey, 
+of Hatley, Debra Alexander and husband, Donnie , of Union City, Tenn., Sharron 
+Marquis and husband, Jerry, of Louisville, Texas and Pam Peal of Carrollton, 
+Texas; 21 grandchildren; 10 great-grandchildren; three sisters, Cynthia Harris, 
+Cleo Hudson and Anna Belle Chandler; and many nieces, nephews and friends.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In lieu of flowers, please 
+make donations to Hamilton's Toys For Tots. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Marion County Funeral Home, 
+Hamilton, AL. directed the services, 3325 Bexar Ave E., Hamilton, AL 35570&nbsp; 
+205-921-5777.&nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="McCullar,_Kristy_-_Age_32_-_Hamilton,_AL">McCullar, Kristy Lynn Taylor - Age 32 - 
+Hamilton, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Kristy Lynn Taylor McCullar, age 32, of 
+Hamilton, Alabama passed away Wednesday, November 14, 2007, at North Mississippi 
+Medical Center in Tupelo, Mississippi.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, 11:00 a.m. 
+Friday, November 16, 2007 at Mt. Zion Church, Hwy. 25, Hamilton, Bro. Mark 
+Emerson officiating.&nbsp; Visitation 
+6:00 - 9:00 p.m. Thursday night, November 15, 2007 at the church.&nbsp; Burial 
+in New Hope Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Kristy was born December 12, 
+1974, in Amory, MS to Carl Taylor and Angelene Tice Taylor.&nbsp; She was 
+married to Scottie McCullar and mother to Cody.&nbsp; She was a Housewife.</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>She is survived by Husband:&nbsp; Scottie McCullar</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Son:&nbsp; Cody McCullar</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Mother:&nbsp; Angelene Shotts - Step-Father:&nbsp; James Shotts</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Father:&nbsp; Earl Taylor - Step-Mother:&nbsp; Pam Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Sister:&nbsp; Shannon (David) Sims</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Nephews:&nbsp; Kyle, Kade &amp; Drake Sims</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Brother:&nbsp; Jason (Stephanie) Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Niece:&nbsp; Allyson Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Nephews:&nbsp; Brady &amp; Brodie Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Brother:&nbsp; Landon Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Sister:&nbsp; Micah Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Step Brothers:&nbsp; Jamie &amp; John Shotts</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Step Sister:&nbsp; Christie Shotts</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Grandparents:&nbsp; Arnold &amp; Sue Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>Grandparents:&nbsp; Hansal &amp; Lenona Taylor</b></p>
+<p class="MsoNormal" style="text-align: justify; word-spacing:1px; margin-top:1px; margin-bottom:1px">
+<b>A host of aunts, uncles &amp; cousins.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hamilton Funeral Home 
+directing,
+<font face="Times New Roman">150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Hand,_Julie_-_Age_44_-_Hamilton,_AL">Hand, Julie - Age 44 - Hamilton, 
+AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Julie Hand, age 44, of 
+Hamilton, Alabama passed away Wednesday, November 14, 2007, at home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, 2:00 p.m. 
+Friday, November 16, 2007 at New Hope Church, Hamilton, AL.&nbsp; Bro. Elvis 
+Cochran and Bro. Dale Jacks were the officiating ministers.&nbsp; Visitation 6:00 - 9:00 p.m. Thursday night, November 
+15, 2007 at the church.&nbsp; Burial in New Hope Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Julie Hand was born November 
+20, 1962 in Illinois to Sadie Mae Glenn Hand and the late James Marlin Hand.&nbsp; 
+She was a nurses aid at the nursing home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by her 
+mother, Sadie Mae Glenn Hand; special friend, Louis Glenn; aunt, Ruth Ann (Fred) 
+Finch; cousin, Vickie Cooney; uncle, Robert (Sue) Hand; and a host of friends 
+and family.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hamilton Funeral Home 
+directing,
+<font face="Times New Roman">150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Nichols,_Sula_E._Lindsey_-_Age_88_-_Hamilton,_AL">Nichols, Sula E. 
+Lindsey - Age 88 - Hamilton, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Sula E. Lindsey Nichols, age 
+88, of Hamilton, Alabama, passed away, Saturday, November 17, 2007 at Marion 
+Regional Nursing Home in Hamilton, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, 2:00 p.m. 
+Monday, November 19, 2007 at the Hamilton Funeral Home Chapel, Bro. Edgar Lee 
+Childers officiating.&nbsp; Visitation, 1:00 - 2:00 p.m. prior to service at the 
+Funeral Home Chapel.&nbsp; Burial in Bethlehem Cemetery, Hamilton.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Nichols was born 
+December 5, 1918 in Marion County, AL., to the late Hiter and Dolly Nix Lindsey.&nbsp; 
+She was married to the late Douglas Nichols and was a Housewife.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by 2 sons, 
+Ronnie (Phyllis) Nichols, and Jerry Wayne (Joan) Nichols; 4 grandchildren; 1 
+great-grandson; and 1 sister, Jessie Holley.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Nichols was preceded in 
+death by her husband, Douglas Nichols; father, Hiter Lindsey; mother, Dolly Nix 
+Lindsey; Brother Jack Lindsey; and sister, Asalee Triplett.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>&nbsp;Hamilton Funeral Home 
+directing,
+<font face="Times New Roman">150 Falcon Dr., Hamilton, AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Millican,_Loman_C._-_Age_78_-_Detroit,_AL">Millican, Loman C. - Age 78 
+- Detroit, AL</a></font> <br>
+<br>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">MILLICAN, MR. LOMAN C., age 78, of Detroit, AL., died Saturday, November 17, 
+2007.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Loman C. Millican, age 78, 
+of Detroit, Alabama, passed away on Saturday, November 17, 2007, at the North 
+Mississippi Medical Center in Hamilton, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was born March 14, 1929, 
+in Marion County, Alabama, to the late Arvil and Velma Sanderson Millican. He 
+was a United States Army Korean War veteran, where he served as a medic. He was 
+a member of Pleasant Site Free Will Baptist Church. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to his parents, 
+he was preceded in death by a sister, Jane Millican, and an infant brother. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services were held 
+on Tuesday, November 20, 2007, at 11 a.m. from the Otts Funeral Home Chapel in 
+Sulligent with burial in the Pleasant Site Cemetery. Bro. Charles Flippo was the 
+officiating minister. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include his wife - 
+Shirley Millican; son - Danny (Sarah) Millican, Detroit; granddaughter - Crysatl 
+(Eric) Cantrell, Detroit; great-grandchild - Riley Cantrell; and sister - Robbie 
+Irvin, Sulligent.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Otts Funeral Home of 
+Sulligent directed the services.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Taylor,_Johnny_Wayne_-_Age_51_-_Winfield,_AL">Taylor, Johnny Wayne - 
+Age 51 - Winfield, AL</a></font><br>
+<br>
+TAYLOR, JOHNNY WAYNE, age 51, of Winfield, died Nov. 17. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Service will be Mon., Nov. 
+19 at 2p.m. at the Beaverton Church of God. The Body will lie-in-state from 1 
+until service. Visitation is Sun., from 6 - 8pm. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Otts Funeral Home directing.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Wise,_Harold_-_Age_80_-_Gattman,_MS_">Wise, Harold - Age 80 - Gattman, 
+MS</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b><br>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">GATTMAN 
+ James Harold Wise, 80, died Saturday, Nov. 17, 2007, at Baptist 
+Hospital-East in Memphis. <br>
+<br>
+He was born Dec. 27, 1926, in Monroe County to the late Lloyd and Lillie 
+Williams Wise. He was a member of the Gattman Baptist Church. He was a U.S. Army 
+veteran of World War II and was a member of the American Legion in Amory. He 
+worked for several years at Marathon and he enjoyed fishing.<br>
+<br>
+Services will be at 2 p.m. Tuesday at the Otts Funeral Home Chapel in Sulligent, 
+Ala., with Bro. Jackie Pate officiating. Burial will be in the Lockhart Cemetery 
+in Gattman.<br>
+<br>
+Survivors include his wife, Johnnie Mae Wise of Gattman, one son, Glenn Wise of 
+Sulligent, Ala.; two grandchildren, Dustin Wise and Tiffany Wise; one brother, 
+Gene Wise of Gattman; and two sisters, Virginia Webb of Gattman and Dorothy 
+Whitaker of Hamilton.<br>
+<br>
+He was preceded in death by his parents, Lloyd and Lillie Williams Wise; one 
+son, Donald Wise; and two brothers, Thurston Wise and Leo Wise.<br>
+<br>
+Visitation will be from 6 to 9 p.m. today at the funeral home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Otts Funeral Home Chapel in 
+Sulligent, Ala.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Vann,_Opal_Blackmon_-_Age_90_-_Tupelo,_MS">Vann, Opal Blackmon - Age 90 
+- Tupelo, MS</a> </font><br>
+<br>
+VANN, OPAL BLACKMON MRS., age 90, of Tupelo, MS, passed away Saturday, November 
+17, 2007.<br>
+<br>
+Mrs. Vann was born on May 19, 1917 to Alfred and Mary Blackmon. Mrs. Vann lived 
+most of her adult life in Attalla, Alabama, and was a member of the First United 
+Methodist Church. In earlier years she owned Opal's Beauty Shop and, along with 
+her husband, started Vann Express. She was active in many garden and civic 
+activities. She was preceded in death by her parents, her husband of seventy 
+years, Garner Vann, and six siblings. <br>
+<br>
+She is survived by her daughter, Susan Sims (Bob); granddaughter, Emily 
+Westbrook (Wes); great-grandchildren, Cameron Westbrook and Amanda Westbrook, 
+Tupelo, MS; brother, Emory Blackmon (Mae), Pickerington, Ohio; sister, Frances 
+Moore, Gadsden, AL; and many long time friends. <br>
+<br>
+Graveside memorial will be held at Forrest Cemetery, Gadsden on Tuesday, 
+November 20, 2007 at 3pm. The family will receive friends for visitation on 
+Tuesday from 1 - 2:30 p.m. at Morgan Funeral Chapel. <br>
+<br>
+Memorials may be made to the First United Methodist Church, 601 4th St. NW, 
+Attalla, AL 35954 or to your favorite charity. <br>
+<br>
+Morgan Funeral Chapel &amp; Crematory directing.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Warren,_Mamie_Ruth_Meharg_-_Age_84_-_Winfield,_AL">Warren, Mamie Ruth 
+Meharg - Age 84 - Winfield, AL</a></font> <br>
+<br>
+Maimie Ruth Meharg Warren, age 84, of Winfield, AL., passed away Sunday, 
+November 18, 2007 at Sunset Nursing Home in Guin, AL. <br>
+<br>
+Born on Oct. 24, 1923, in Walker County, she was the daughter of the late George 
+Allen and Mamie Bell Lazenby Mann. She was a life-long resident of Winfield and 
+she was a previous resident of Brilliant. She was previously employed at Reltoc 
+Mfg. in Winfield. She was a member of the Friends of the Library and Booklovers 
+Club and the Winfield First United Methodist Church.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by a son, William Allen &quot;Spot&quot; Meharg; daughters, Melba (Homer) 
+Willougby and Frances (W.H.) Box, all of Winfield; grandchildren, Angie Meharg 
+McCaleb, Tracy Meharg Loveless, Lisa Box Tesney, Curtis Willougby and Scott 
+Willougby; sister, Gladys Webster of Albertville; nine great-grandchildren and a 
+host of nieces, nephews and other relatives. </b> </p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to her parents, 
+she was preceded in death by her husbands, William Curtis Meharg and Durrell 
+Warren; grandson, Gregory Allen Meharg; 11 brothers and sisters; and a 
+daughter-in-law, Jane May Meharg. <br>
+<br>
+Funeral services will be held Tuesday, November 20, 2007 at 11 a.m. from the 
+Miles Funeral Home with burial to follow in the Winfield City Cemetery. 
+Visitation will be from 6 to 8 p.m. Monday at the funeral home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were Greg 
+Tesney, Daryl McCaleb, Scott and Curtis Willoughby, Brady Mann and William 
+Curtis Williams.<br>
+<br>
+Miles Funeral Home of Winfield directing.</b> </p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Day,_Douglas_A._-_Age_46_-_Tishomingo,_MS">Day, Douglas A. - Age 46 - 
+Tishomingo, MS</a></font> </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>TISHOMINGO - Douglas A. Day, 
+46, died Friday, Nov. 16, 2007. <br>
+<br>
+Services will be at 11 a.m. Monday at the Ludlam Funeral Home Chapel in Iuka. 
+Burial will be in the Bethlehem Cemetery.<br>
+<br>
+Survivors include his wife, Stacy Mansell Day of Red Bay, Ala.; his parents, 
+Jerry C. and Peggy Day of Tishomingo; his grandparents, Hubert and Berna Day of 
+Golden; three sons, James T. Day and wife, Sandy, of Plantersville, Michael J. 
+Day of Tishomingo and Douglas Errin Day of Red Bay; one daughter, Carrie Day 
+Seahorn and husband, Chris, of Red Bay; one brother, David L. Day and wife, 
+Gwen, of Tishomingo; one sister, LInda Day Thoren and husband, Craig, of 
+Mountain Home, Ark.; two grandchildren, Dallas Ashlyn Day and Alice Elizabeth 
+Seahorn; special nephews Scotty Young and wife, Rachel, of Tishomingo, Jeremiah 
+Partee and wife, Rachel, and Casey Thoren, all of Mountain Home, Ark., Chase 
+Partee, Lance Mansell and Patrick Mansell; special nieces, Ashley Mansell and 
+Shara Allison; and a special cousin, Thomas E. Day Jr.<br>
+<br>
+He was preceded in death by his maternal grandparents, Mr. and Mrs. H.S. Monroe.<br>
+<br>
+Visitation will begin at 6 p.m. today at the funeral home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Ludlam Funeral Home Chapel 
+in Iuka.<br>
+<br>
+In lieu of flowers, memorials may be made to St. Jude Children's Research 
+Hospital in Memphis.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Cook,_Betty_Jean_Hester_-_Age_71_-_McCalla,_AL">Cook, Betty Jean Hester 
+- Age 71 - McCalla, AL</a></font><br>
+<br>
+<br>
+COOK, BETTY JEAN, of McCalla, AL, age 71, died Friday, November 16, 2007 after a 
+lengthy illness. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>A native of the Unity 
+Community east of Saltillo and longtime resident of Mooreville, MS, she was born 
+July 24, 1936 to the late Leeman L. and Madie Lee Young Hester. Her husband of 
+42 years, Hoyle Cook, preceded her in death July 8, 2006. She was a member of 
+Mantachie Church of Christ. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Services will be 2 p.m. 
+Sunday, November 18, 2007 at The Jefferson Street Chapel of W. E. Pegues in 
+Tupelo, Mississippi with Bro. Danny Rushing officiating. Burial will be in Oak 
+Grove Cemetery. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include one 
+daughter, Rhonda Aust and her husband, Randy, of Birmingham; one sister, Sybil 
+Hester Erwin of the Macedonia Community; three grandchildren, Catherine, Daniel, 
+and Thomas Aust all of Birmingham. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>The Jefferson Street Chapel 
+of W. E. Pegues in Tupelo, Mississippi.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Benton,_Linda_Guin_-_Age_59_-_Winfield,_AL_">Benton, Linda Guin - Age 
+59 - Winfield, AL </a></font><br>
+<br>
+BENTON, LINDA GUIN, age 59, of Winfield, AL. passed away Thursday, November 15, 
+2007 in the Northwest Medical Center in Winfield. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born on Feb. 9, 1948, in 
+Marion County, she was the daughter of the late Hal and Jennie Lee Shirey Guin. 
+She was a life-long resident of Winfield; she raised bird dogs and quail and 
+loved animals.&nbsp;
+In addition to her parents, she was preceded in death by her husband, Billy Roy 
+Benton.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include aunt, 
+Stella Vaughn, Guin; uncles, Junior Guin of Guin and Billy Shirey of Athens, GA; 
+nieces, Kerry (Mark) Grissom, Nashville, TN, Myra (Darren) Hollis, Becky Benton 
+and Michelle (Jason) Hollingsworth, Guin; nephews, David (Ann) Benton, TX, Scott 
+(Linda) Benton, Doug Swindle, Allen (Rose) Swindle and Joseph Benton, Guin; 
+her babies, Snowball, J.J. and WeeJee; and a host of cousins and other relatives. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Chapel service will be 
+Saturday, 11 AM, Nov. 17, 2007 with burial in West Alabama Memorial Gardens, 
+Gu-Win.&nbsp; Hardy Robinson officiating.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of 
+Winfield directing.</b>&nbsp; </p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Threadgill,_Avis_-_Age_65_-_Gattman,_MS.">Threadgill, Avis - Age 65 - 
+Gattman, MS.</a></font><br>
+<br>
+THREADGILL, MRS. AVIS, age 65, of Gattman, MS, passed away Thursday, November 
+15, 2007. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service will be 
+Sunday, November 18, 2007 at 2 pm at the Cornerstone Fellowship Church in 
+Sulligent. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Otts Funeral Home directing.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Nelson,_Nash_Sewell_-_Age_91_-_Glen_Allen,_AL">Nelson, Nash Sewell - 
+Age 91 - Glen Allen, AL</a></font> <br>
+<br>
+Nash Sewell Nelson, age 91, of Glen Allen, AL passed away Monday, November 12, 
+2007,&nbsp; in the Northwest Medical Center in Winfield, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Chapel service will be 
+Thursday, Nov. 15, 2007 2:00 p.m. with burial in Glen Allen Cemetery. Visitation will 
+be Wednesday 6:00 -&nbsp; 8:00 p.m. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born May 29, 1916, in Lamar 
+County, he was the son of the late Lenard T. and Dovie Arminda King Nelson. He 
+attended the Byrd - Detroit Elementary School. He was a graduate of Hamilton 
+High School. He received a bachelor of science degree from Mississippi State 
+University and a master s degree from Auburn University. He taught Vocational 
+Agribusiness for two years at Berry and then retired from Hubbertville with 38 
+years of service. He was the Mayor of Glen Allen for two terms and was 
+instrumental in the Incorporation of the town and establishing the water system 
+to serve the community. He was a member 
+of the Kiwanis Club in Winfield, Retired Teacher s Association of Fayette 
+County, and a member of the Glen Allen Free Will Baptist Church. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include daughter, 
+Jane Cahela, Valrico, FL; grandsons, Brandon and Ryan Cahela, Valrico, FL; 
+special friend and caregiver, Gail Bircheat, Glen Allen; and a host of nieces, nephews and 
+other relatives.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to his parents, 
+he was preceded in death by a wife, Bealon Smith Nelson who died Dec. 21, 1980; sister, Gloe Young; and 
+brothers, G.L., Clyde, Bryce and Clarence Nelson. Funeral services were held on 
+Thursday, Nov. 15, 2007, at 2 p.m. from the McGraw Memorial Chapel of Miles 
+Funeral Home with burial in the Glen Allen Cemetery. Bro. Joseph Boyles and Bro. 
+Dennis Trimm were the officiating ministers. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were Bob 
+Mullins, Wayne Berryhill, and Joe, Henry, Jeremy, and Jerry Don Stewart. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of 
+Winfield directing.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Nelson,_Isaac_Junior_-_Age_60_-_Guin,_AL">Nelson, Isaac Junior - Age 60 
+- Guin, AL</a></font> <br>
+<br>
+NELSON, ISAAC JUNIOR, age 60, of Guin, AL died Friday, November 16, 2007. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Services will be Thursday, 
+November 15, 2007 at 2 p.m. from the Chapel with burial in Beaver Creek 
+Cemetery. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Norwood Funeral Home 
+directing.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;<b><font size="5"><a name="Wilson,_Dick_-_Age_91_-_Los_Angeles,_CA_(Actor_-_Comedian)">Wilson, 
+Dick - Age 91 - Los Angeles, CA (Actor - Comedian)</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>LOS ANGELES, CA  Dick 
+Wilson, the character actor and pitchman who for 21 years played an uptight 
+grocer begging customers ''Please, don't squeeze the Charmin,'' died Monday, 
+Nov. 19, 2007.&nbsp; He was 91. <br>
+<br>
+The man famous as TV's ''Mr. Whipple'' died of natural causes at the Motion 
+Picture &amp; Television Fund Hospital in Woodland Hills, said his daughter Melanie 
+Wilson, who is known for her role as a flight attendant on the ABC sitcom 
+''Perfect Strangers.'' <br>
+<br>
+Wilson made more than 500 commercials as Mr. George Whipple, a man consumed with 
+keeping bubbly housewives from fondling toilet paper. The punch line of most 
+spots was that Whipple himself was a closeted Charmin-squeezer. <br>
+<br>
+The first commercial aired in 1964 and by the time the campaign ended in 1985 
+the tag line and Wilson, a former Canadian airman and vaudeville veteran, were 
+pop culture touchstones. <br>
+<br>
+He also played a drunk on several episodes of ''Bewitched,'' as appeared as 
+various characters on ''Hogan's Heroes,'' ''The Bob Newhart Show,'' and Walt 
+Disney productions.</b><br>
+<i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Crane,_Patricia_(aka_Sigrid_Valdis)_-_Age_72_-_Anaheim,_CA__(Actress_-_Widow_of_Actor_Bob_Crane_of_Hogans_Heroes)">
+Crane, Patricia (aka Sigrid Valdis) - Age 72 - Anaheim, CA&nbsp; (Actress - 
+Widow of Actor Bob Crane of &quot;Hogans Heroes&quot;)</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>ANAHEIM, CA - Patricia 
+Crane, widow of the actor Bob Crane of Hogan's Heroes&quot; and the actress who 
+played Col. Klink's sexy blond secretary Hilda on &quot;Hogan's Heroes&quot; has died. She 
+was 72.<br>
+<br>
+Patricia Crane died of lung cancer on Oct. 14, 2007, a spokeswoman for the 
+Orange County coroner's office confirmed Monday. On stage, Crane was known as 
+Sigrid Valdis.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="West,_Donda_-_Age_58_-_Los_Angeles,_CA__(Mother_of_Rapper,_Kanye_West)">
+West, Donda - Age 58 - Los Angeles, CA&nbsp; (Mother of Rapper, Kanye West)</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>LOS ANGELES - Donda West, 
+mother of Kanye West and former chairwoman of Chicago State University's English 
+department, has died, a spokesman for the rapper said. She was 58.<br>
+<br>
+Donda West died Saturday night in Los Angeles, said the spokesman.</b><br>
+<br>
+<i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Nichols,_Clyde_-_Age_79_-_Hackleburg,_AL">Nichols, Clyde - Age 79 - 
+Hackleburg, AL</a></b></font><br>
+<br>
+<b>Mr. Clyde Nichols, age 79, 
+of Hackleburg, Alabama, passed away Monday, November 19, 2007, at home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation 12:00 - 2:00 
+p.m., Wednesday, 
+November 21, 2007, at Hodges Church of Christ, Hodges, AL. Funeral Service to 
+follow visitation and will begin at 2:00 p.m. at the church.&nbsp; Bro. Steve 
+Gober officiating.&nbsp; Burial in Old 
+Mt. Carmel Church Cemetery, Hodges, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Nichols was born July 
+12th, 1928 in Franklin County, Alabama to the late Marle and Martha Ellen Ables 
+Nichols.&nbsp; He was widowed, a Veteran of the US Army and WWII, and was a 
+retired Foreman with TVA.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his 
+daughter, Kathy Wiginton; grandchildren, Joseph Wiginton, Derrick Nichols, and 
+Ashley Hunderman; great-grandchildren, Abagail Hunderman and Anna Nichols; 
+sisters, Villa Cantrell, Wilma Yielding, and Jenell Keller; and a host of nieces 
+and nephews.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+his parents, Marle &amp; Martha Ellen Ables Nichols; 1 son, Clyde Keith Nichols; 2 
+brothers, Lynard &amp; Junior Nichols.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Humphres,_Lecil_-_Age_73_-_Amory,_MS__(Formerly_of_Hamilton,_AL)">
+Humphres, Lecil - Age 73 - Amory, MS&nbsp; <i>(Formerly of Hamilton, AL)</i></a></b></font><br>
+&nbsp;</p>
+
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Lecil Humphres, age 73, 
+of Amory, MS., formerly of Hamilton, Alabama, passed away Tuesday night, November 
+20, 2007, at Gilmore Memorial Hospital at Amory, MS.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation 1:00 - 3:00 p.m., 
+Friday, 
+November 23, 2007, at Hamilton Funeral Home. Bro. Preston Headrick officiating.&nbsp; Funeral Service to follow 
+visitation and will begin at 3:00 p.m. at the Funeral Home Chapel.&nbsp; Burial 
+in Bethlehem Church Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Humphres was born March 
+2, 1934 in Alabama to the late Arlie and Etma Holley Humphres.&nbsp; He was 
+widowed and was a retired Painter at American Motors.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his 
+children, Roger Dale Humphres, Jerry Wayne Humphres, and Karen Sue Humphres 
+Luras; 4 grandchildren; 3 great-grandchildren; sisters &amp; brothers, Quinnie Sue 
+Tice, Johnnie Mae Askin, Raburn Humphres, Alton Humphres.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+his parents, Arlie and Etma Holley Humphres.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Green,_Jimmy_E._-_Age_68_-_Hanceville,_AL_(Formerly_of_Double_Springs,_AL)_">
+Green, Jimmy E. - Age 68 - Hanceville, AL (Formerly of Double Springs, AL) </a>
+</font><br>
+(February 15, 1939 - November 8, 2007) <br>
+<br>
+Jimmy E. Green, age 68 of Hanceville AL, formerly of Double Springs passed away 
+on Thursday, November 8, 2007.<br>
+<br>
+Visitation will be Monday, November 12, 2007 from 6-9PM at Nichols Funeral Home 
+Double Springs. Service will be Tuesday November 13, 2007 at 2:00PM at Nichols 
+Funeral Home Double Springs. Burial will be at Pine Tuckey cemetery in Black 
+Pond. Reverend Melvin Williams will be officiating. Survived by: <br>
+<br>
+Wife- Barbara Green <br>
+<br>
+Sons- Bill Hardeman, Chris, Kerry, and Corey Green <br>
+<br>
+Daughter- Tina Hodges <br>
+<br>
+Brother- R L Green <br>
+<br>
+Sister- Mary Jo Cofield <br>
+<br>
+Also seven Grandchildren <br>
+<br>
+Preceded in death by: <br>
+<br>
+Parents  William and Lurlie (Shewbert) Green <br>
+<br>
+Brother- Billy Green <br>
+<br>
+Nichols Funeral Homes</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Cook,_Betty_Jean_-_Age_71_-_McCalla,_AL">Cook, Betty Jean - Age 71 - 
+McCalla, AL</a></font><br>
+<br>
+Betty Jean Cook, of McCalla, AL, age 71, died Friday, November 16, 2007 after a 
+lengthy illness. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>A native of the Unity 
+Community east of Saltillo and longtime resident of Mooreville, MS, she was born 
+July 24, 1936 to the late Leeman L. and Madie Lee Young Hester. Her husband of 
+42 years, Hoyle Cook, preceded her in death July 8, 2006. She was a member of 
+Mantachie Church of Christ. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Services will be 2 p.m. 
+Sunday, November 18, 2007 at The Jefferson Street Chapel of W. E. Pegues in 
+Tupelo, Mississippi with Bro. Danny Rushing officiating. Burial will be in Oak 
+Grove Cemetery. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include one 
+daughter, Rhonda Aust and her husband, Randy, of Birmingham; one sister, Sybil 
+Hester Erwin of the Macedonia Community; three grandchildren, Catherine, Daniel, 
+and Thomas Aust all of Birmingham, AL. <br>
+<br>
+W. E. Pegues in Tupelo, Mississippi.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Nethery,_Daisy_M._-_Age_57_-_Sulligent,_AL">Nethery, Daisy M. - Age 57 
+- Sulligent, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Daisy M. Nethery, , age 
+57, of Sulligent, AL died November 21, 2007. Funeral services will be November 
+24, 2007 at 2:00 p.m. at Otts Funeral Home with burial in Love Joy Cemetery. 
+Visitation will be at the funeral home Friday 6-9 pm.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Otts Funeral Home directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Lockhart,_Shelby_-_Age_41_-_Sulligent,_AL_">Lockhart, Shelby - Age 41 - 
+Sulligent, AL </a></font></b><br>
+<br>
+<b>Mrs. Shelby Lockhart, age 41, of Sulligent, AL., passed away Thursday, 
+November 22, 2007. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services will be 
+Saturday, November 24, 2007 at 11:00 am from the Otts Funeral Home Chapel with 
+burial in Henson Springs Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Otts Funeral Home directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Gilliam,_Joy_McGriff_-_Age_56_-_Winfield,_AL_">Gilliam, Joy A. McGriff - 
+Age 58 - Winfield, AL </a></font></b><br>
+<br>
+<b>Mrs. Joy A. McGriff Gilliam, age 58 of Winfield, passed away Thursday, 
+November 22, 2007 at her residence. Mrs. Gilliam was born on August 19, 1949 in 
+South Bend, Indiana a daughter of Rolland and Tina Melton McGriff; resident of 
+Winfield past 20 years; received a Nursing degree from Bevill; worked with the 
+Humane Society, but gave up her career to care for her husband, James W. Gilliam 
+Sr. who passed in 1993. In addition to her husband, she was preceded in death by 
+her parents. Survivors include two sons, Tony Gilliam of Winfield and James W. 
+Gilliam of Long Beach, CA; two grandchildren; one sister, Jean Ann Stout of 
+Michigan; nieces, nephews and other relatives. Funeral Services were held 
+Tuesday, November 27, 2007 at 11:00 AM from the McGraw Memorial Chapel of Miles 
+Funeral Home. Tim Pfander was the officiating minister. Burial followed in the 
+Old Union Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of Winfield directing. the service.
+</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Howell,_Lillie_Mae_-_Age__-_Hamilton,_AL">Howell, Lillie Mae (Mrs. 
+Ralph) - Age&nbsp; - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/28/07</b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Lillie Mae (Mrs. Ralph) 
+Howell, age , of Hamilton, Alabama, passed away Wednesday, November 28th, 2007.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, Thursday, 
+November 29, 2007, 12:00 Noon - 2:00 p.m. at the Marion County Funeral Home 
+Chapel with funeral service to begin at 2:00 p.m. at the Funeral Home Chapel.&nbsp; 
+Burial in the Hamilton City Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Howell was the mother 
+of Hamilton Attorney, R. Wyatt Howell (Cindy) and the widow of the late Ralph 
+Howell of Hamilton.&nbsp; She was a teacher in Hamilton for many years.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Marion County Funeral Home, 
+Hamilton, AL. directed the services, 3325 Bexar Ave E., Hamilton, AL 35570&nbsp; 
+205-921-5777.&nbsp; &nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Friday,_Richard_Lamont_-_Age_61_-_Florence,_AL_(Formerly_of_Hamilton,_AL)">
+Friday, Richard Lamont - Age 61 - Florence, AL <i>(Formerly of Hamilton, AL)</i></a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Richard Lamont Friday, 
+age 61, of Florence, Alabama, formerly of Hamilton, Alabama, passed away 
+Wednesday, November 28, 2007 at home.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Graveside Service, Saturday, 
+December 1, 2007 at 11:00 a.m. at the Hamilton City Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Williams,_Carol_Pat_-_Age_56_-_Hackleburg,_AL">Williams, Carol &quot;Pat&quot; 
+Nana - 
+Age 56 - Hackleburg, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Carol &quot;Pat&quot; Williams, 
+age 56, of Hackleburg, Alabama passed away Wednesday night, November 28, 2007 at 
+Marion Regional Medical Center in Hamilton, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service Friday, 
+November 30, 2007, 1:00 p.m. at Hackleburg First Baptist Church.&nbsp; 
+Bro. Steve Lawrence and Bro. James Baccus officiating.&nbsp; Visitation, 12:00 Noon - 1:00 p.m. at the Church until time of service.&nbsp; 
+Burial at Cedar Tree Cemetery in Hackleburg.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Pat Herman Williams was born 
+in Chicago, Illinois, May 29, 1951, to Charles and Florene Harden Herman.&nbsp; 
+She is survived by 1 son, Mike (Christi) Kelly, Hackleburg, AL.; 1 daughter, Amy 
+Jo (Doug) Weeks, Hamilton, AL.; grandchildren, Blain Kelly, Anna Catherine Kelly 
+and Edge Weeks; her mother, Florene Herman; 5 sisters, Ethel Roberts, Penny 
+(Donald) Gardner, Carol (David) Isom, Brenda (Gober) Wiggins, and Kathleen (Rob) 
+Kendrick.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She was preceded in death by 
+her father, Charles Herman.&nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Hackleburg Funeral Home, 
+Hackleburg, AL., directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Chaffin,_Edith_Nell_-_Age_76_-_Coker,_AL__(Formerly_of_Guin,_AL)">
+Chaffin, Edith Nell - Age 76 - Coker, AL&nbsp; (Formerly of Guin, AL)</a></b></font></p>
+<p class="MsoNormal" style="text-align: left"><b>Edith Nell Chaffin, age 76, of 
+Coker, formerly of Guin, AL, died Friday, Nov. 30, 2007, at Hospice of West 
+Alabama.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Mrs. Chaffin was born in 
+Alexandria City, Ala. and moved to Andrews, Texas at a young age.&nbsp; She 
+attended Andrews High School and later met the love of her life, &quot;Jim&quot;, in 
+Shreveport, LA.&nbsp; They raised three sons, and, to Mrs. Nell, there was 
+nothing too good for her three boys.&nbsp; She worked with children's ministries 
+throughout her life in several churches.&nbsp; The love of children and her 
+family were her great strengths.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Survivors include her husband 
+of over 56 years, James &quot;Jim&quot; Chaffin; her sons, Carl W. Chaffin (Becky) of 
+Bessemer, Jerry W. Chaffin (Helen) of Cottondale, and Tommy Chaffin (Christine) 
+of Yorktown, VA.; her sisters, Betty Ann Jacks of Shreveport, LA. and Estelle 
+Bradford of El Paso, Texas; seven grandchildren; and three great-grandchildren.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>She was preceded in death by 
+her parents, Isaac Newton Baker and Annie Suzanne Baker; her son, Bobby Glen 
+Baker; her brother, Michael Baker; and her sister, Shirley Sue Trigg.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Services will be 11 a.m. Monday 
+at Magnolia Chapel Funeral Home North with Rev. Troy Dixon and Rev. Brannon 
+Pinion officiating.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Graveside services will follow 
+at 2 p.m. in Piney Grove Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Pallbearers will be Paul 
+Chaffin, Jack Mixon, Tony Chaffin, Roy Kelley, Bank Chaffin, Danny Atkinson, and 
+Willie &quot;Bill&quot; Smelley.&nbsp; Honorary pallbearers are members and friends of Mt. 
+Olive Baptist Church, friends and neighbors of Coker Community, AMR Ambulance 
+ICU 2nd Floor and 7th Floor West, nurses and staff of Hospice of West Alabama, 
+and Rev. Billy and Sister Teresa Lollar.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>In lieu of flowers, the family 
+requests that donations be made to Hospice of West Alabama, 3851 Loop Road, 
+Tuscaloosa, AL&nbsp; 35404.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Magnolia Chapel Funeral Home 
+North directing.</b></p>
+<p class="MsoNormal" style="text-align: left"><b>Norwood Funeral Homes, Inc. of 
+Guin in charge of local arrangements.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Hudson,_Randy_Lee_-_Age_57_-_Hackleburg,_AL">Hudson, Randy Lee - Age 57 
+- Hackleburg, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Randy Lee Hudson, age 57, 
+Hackleburg, Alabama, passed away Sunday, November 11, 2007, at the North 
+Mississippi Medical Center in Hamilton, AL. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Randy was born on October 9, 
+1950, in Marion County, Alabama.&nbsp; He was the son of the late Rollie Bee and 
+R.Z. Carter Hudson. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+his parents, Rollie Bee and R.Z. Carter Hudson, and a brother, Billy Hugh 
+Hudson. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services, Wednesday, 
+November 14, 2007, 11:00 a.m. from the Hamilton Funeral Home Chapel with burial 
+in the Union Hill Cemetery in Hackleburg. Bro. Randall Tice, officiating 
+minister. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include his 
+daughters, Amee Lee and Angel Kay Hudson; brothers, Rex Hudson and Ray (Kathy) 
+Hudson; sisters, Debbie Hughes and Kathy (Kenny) Pilkington; granddaughter, 
+Alyssia Hudson Graver; and a host of nieces, nephews, friends and other 
+relatives.</b> </p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Hamilton Funeral Home directing, 150 Falcon Dr., Hamilton, 
+AL.&nbsp; 205-921-3197.</font></b> </p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Jones,_Virginia_Webster_-_Age_80_-_Vernon,_AL">Jones, Virginia Webster 
+- Age 80 - Vernon, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Virginia Webster Jones, age 
+80, Vernon, Alabama, passed away Saturday, November 3, 2007, at the Hospice of 
+West Alabama in Tuscaloosa.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born on May 12, 1927, in 
+Fayette County, she was the daughter of the late Van and Theoda Webster. She 
+lived most of her life in Winfield. She was a graduate of Winfield City High 
+School. She was also a graduate of Mt. Berry College in Rome, GA., and later 
+received her masters degree in education from Mississippi College for Women in 
+Columbus, MS.&nbsp; She taught school in Lamar County for 32 years. After 
+retirement, she taught adults to read classes for several years. She also 
+taught Sunday School and Girls in Action classes for many years at the First 
+Baptist Church in Vernon, where she was a member. She was a member of Delta 
+Kappa Gamma, United Daughters of the Confederacy and Retired Teachers 
+Association. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She was preceded in death by 
+her parents; her husband, Roy Neil Jones; brothers, Van Webster, Jr., Sherman, 
+Texas and Max Webster, St. Charles, MO.; and sister, Marie Webster Cook, 
+Winfield. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services were held 
+on Saturday, Nov. 4, 2007, at 3 p.m. from the Chandler Funeral Home Chapel in 
+Vernon. Rev. Glenn Bowan was the officiating minister. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include her son - 
+Terry (Yvette) Jones, Gulf Shores; daughter - Sherrineil (Phillip) Carroll, 
+Kennedy; sister - Gay (Marshall) Watkins, Winfield; grandchildren - Josh (Ellen) 
+Carroll, Ashford, Brandi Carroll, Birmingham, and Yvette Marie Jones and 
+Virginia Taylor Jones, both of Gulf Shores; and great-granddaughter - Kadence 
+Faith Carroll, Ashford. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were Bob 
+Hawkins, Mike Watkins, Wesley McNeill, Clark Miles, Henry Allen, Lynn Conner, 
+Roy Locke and Phillip Glasgow. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of 
+Winfield directed the services.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Tucker,__Shannon_-_Age_85_-_Hubbertville,_AL">Tucker,&nbsp; Shannon - 
+Age 85 - Hubbertville, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Shannon Tucker, age 85, 
+Hubbertville, AL., passed away on Friday, Nov. 16, 2007, in the Fayette Medical 
+Center. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born on June 7, 1922, in 
+Fayette County, he was the son of the late John D. and Mandy Elizabeth Gilland 
+Tucker. He was a member of the White s Chapel Church of Christ. He served as an 
+elder for many years. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to his parents, 
+he was preceded in death by three brothers, six sisters, great-grandson Clinton 
+McDonald, and son-in-law Harold McDonald. <br>
+Funeral services were held on Sunday, Nov. 18, 2007, at 4 p.m. from the Whites 
+Chapel Church of Christ in Fayette with burial in the adjoining cemetery. Bro. 
+John Brown and Dr. Jon Sanford were the officiating ministers. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include his wife - 
+Mintie Belle Tucker; daughter - Frances McDonald (Truman) Herren, Eldridge; 
+grandchildren - Keith (Lisa) McDonald, Stanley (Tina) McDonald, Windy Tucker, 
+and Amanda (Kenny) Tranum; great-grandchildren - Shae and Molley Tucker, Ginny, 
+Daniel and Peyton McDonald and Keela and Tre Tranum; sister - Exie Angle, 
+Jasper; step-children - Michael (Carol) Herren, Jason (Lisa) Herren, and Alison 
+(Heath) Townsend; and step-grandchildren - Andy, Jacob, and Luke Herren and 
+Hunter and Joshua Townsend. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were 
+elders and deacons of the Whites Chapel Church of Christ, Phillip Jones, Dennis 
+Fisher, Dennis McCollum, Thomas Dunavant, Clayton Tittle, Tommy Turner, and 
+Ronnie Sprinkle. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Lawrence Funeral Home of 
+Winfield directed the services.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Watkins,_Donald_-_Age_70_-_Winfield,_AL">Watkins, Donald - Age 70 - 
+Winfield, AL</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">Donald 
+Watkins, age 70, Winfield, Alabama, passed away on Wednesday, November 14, 2007, 
+at his residence. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born on Aug. 22, 1937, he 
+was the son of the late W.A. Tommy and Ona Watkins. He was a 1957 graduate of 
+Fayette County High School. He was a United States Air Force veteran. He retired 
+from 3M with 32 years of service, where he received the 3M Ambassador Award. He 
+was a life-long member of the Church of Christ. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to his parents, 
+he was preceded in death by grandparents Crockette and Mattie Watkins and John 
+Monroe and Effie Meadows. <br>
+Funeral services were held on Saturday, Nov. 17, 2007, at 2 p.m. from the Nelson 
+Funeral Home Chapel with burial in the Camp Comfort Cemetery. Dr. Jon Sanford 
+and Steven Rogers were the officiating ministers. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include his wife - 
+Helen Watkins; son - David Watkins, Winfield; daughters - Shelia (Stacy) Markham 
+and Tammy Watkins, both of Winfield; grandsons - Ty, Noah, and Dakota Markham, 
+all of Winfield; brother - Dale (Mary) Watkins, Winfield; sisters - June Mealer, 
+Fayette, Marie (Jamie) Sims and Patsy (Richard) Baird, both of Winfield; and a 
+host of nephews and nieces. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were Ray, 
+William and Scott Hill, Allen Baird, Chris Sims and Greg Dennis. Honorary 
+pallbearers were Ty, Noah and Dakota Markham, Fred Fulton, Ray Hill, Jr., Dr. 
+Jon Sanford, The Hospice of Fayette Medical Center, and Nathan Mobley. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Nelson Funeral Home of 
+Fayette directed the services.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Webb,_William_Esdell_-_Age_85_-_Winfield,_AL">Webb, William Esdell - 
+Age 85 - Winfield, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32">William 
+Esdell Webb, age 85, of Winfield, Alabama, passed away Sunday, November 18, 
+2007, in the V.A. Medical Center in Tuscaloosa. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Born on June 25, 1922, in 
+Marion County, he was the son of the late James Henry and Sarah Dickinson Webb. 
+He was a life-long resident of Winfield in the Brookside Community. He was a 
+graduate of Brilliant High School. He was a United States World War II Army 
+veteran. He was retired as a coal miner at North River in Berry with 40 years of 
+service. He was a member of American Legion Post 100 in Winfield and UMWA Local 
+20. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>In addition to his parents, 
+he was preceded in death by a son, Randy L. Webb; sisters - Oma Mullinix, Lois 
+Jackson, Ethel Hines and Gladys Franks and brothers, Ola, Vada, Vander and Vince 
+Webb. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral services were held 
+on Monday, Nov. 19, 2007, at 7 p.m. from the McGraw Memorial Chapel of Miles 
+Funeral Home with burial on Tuesday, Nov. 20 in the Winfield City Cemetery. Bart 
+Box, Ronnie Elmore, and H.B. Nelson were the officiating ministers. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Survivors include his wife, 
+Eunice Spiller Webb; daughter - Charolette (Larry) Box, Winfield; grandchildren 
+- Trista Webb Stewart and Michael, Jared, Jason, and Bart Box; eight 
+great-grandchildren; brothers - Calvin Leroy Webb, Florida, and Curtis Ulysses 
+Webb, Winfield, AL.; and a host of nieces, nephews and other relatives. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Active pallbearers were 
+Michael, Jared, Jason, and Bart Box, H.B. Nelson, James W. Webb, and Tommy 
+Spiller. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of 
+Winfield directed the services. </b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman" size="5">
+<a name="Whisenant,_Sally_Jo_McKay_-_Age_72_-_Chattanooga,_TN__(Formerly_of_Guin,_AL)">
+Whisenant, Sally Jo McKay - Age 72 - Chattanooga, TN&nbsp; <i>(Formerly of Guin, 
+AL)</i></a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Sally Jo McKay Whisenant, age 72, passed away on 
+Wednesday, November 14, 2007. </font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">She was the daughter of the late Roy and Myrtie 
+McKay. She was an active member of the Tyner United Methodist Church, the 
+Margaret Pennington Sunday School Class, Care Bears, TOTS, and the United 
+Methodist Women. </font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Survivors include a daughter - Nan W. House; son - 
+Bobby J. Whisenant; grandchildren - Hayden and McKay House; sisters - Perrilyn 
+Franks and Francis Harden; and brother - Tom Hugh McKay.</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">In addition to her parents, she was preceded in 
+death by her husband, W.C. Whisenant, and sisters, Virginia Estill, Mary Lee 
+Franks, and Robbie Wright. </font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Funeral services were held on Sunday, Nov. 18, 
+2007, at 1 p.m. from the Chattanooga Funeral Home with graveside services on 
+Monday, Nov. 19, 2007, at 4 p.m. at the Guin City Cemetery. </font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>
+<font face="Times New Roman">Norwood Funeral Home, Inc. of Guin directed the 
+services. <br>
+&nbsp;</font></b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Reese,_James_Arthur_-_Age_53_-_Winfield,_AL_">Reese, James Arthur - Age 
+53 - Winfield, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>James Arthur Reese, age 53 
+of Winfield, passed away Tuesday, November 27, 2007 in the Northwest Medical 
+Center at Winfield. James was born on May 9, 1954 in Marion Co. a son of John 
+Albert and Earlis Osborn Reese; resident of Winfield most of his life; graduate 
+of Winfield High School; previously employed at Pate Chevrolet as a Mechanic and 
+as an Over The Road Truck Driver; he moved back to the Wayside area in 1991; he 
+was currently self- employed as a Coal Hauler for Mann Steel. In addition to his 
+parents, he was preceded in death by a brother-in-law, Gaylon Smith. Survivors 
+include his wife, Wanda Brown Reese of Winfield; two brothers, Albert Earl 
+Sonny (Jerri) Reese of Odenville and Larry (Marion) Reese of Winfield; five 
+sisters, Barbara Jean Duckworth of Bham, Virginia Smith of Winfield, Carolyn 
+(Wallace) Hubbert of Hubbertville, Marilyn Scarbrough of Cairo, GA and Malinda 
+(Ken) Sims of Winfield; host of nieces, nephews and other relatives. Funeral 
+Services were held Friday, November 30, 2007 at 11:00 AM from the Winfield First 
+Free Will Baptist Church. Bro. Danny Williams and Bill Overton were the 
+speakers. Burial followed in the Winfield City Cemetery.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home 
+of Winfield directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Eddy,_James_Berlin_-_Age_74_-_Brilliant,_AL_">Eddy, James Berlin - Age 
+74 - Brilliant, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>James Berlin Eddy, age 74 of 
+Brilliant, died Thursday, November 1, 2007 at Northwest Medical Center in 
+Winfield. Berlin was born December 5, 1932 in Marion County to William Dowell 
+Eddy and Donnie Alice Hudson Eddy. He was a resident of Brilliant most of his 
+life; where he attended Brilliant High School and Brilliant Free Will Baptist 
+Church. He retired from Mutual Savings Life Insurance as a Sales Representative. 
+He had also worked with American General and Interstate Life. Berlin was also a 
+past member of the Brilliant Lions Club. In addition to his parents, he was 
+preceded in death by four brothers, Eugene, Junior, Ellie Hugh, and Carl Raymond 
+Eddy; and a sister, Janice Eddy. He is survived by his wife, Mary Frances Eddy; 
+three sons, Mac Eddy of Pinson, AL, Mark (Linda) Eddy of Remlap, AL, and Joey 
+(Kim) Eddy of Haleyville; one daughter, Kathy (Richard) Coyne of Trussville; 
+five grandchildren, Patrick Coyne, Allison Coyne (Drew) Hammond, Ashley Eddy, 
+Whitney Eddy, and Courtney Eddy; three brothers, Erskine Eddy of Brilliant, Dale 
+Eddy of Guin, and Gerald Ray Eddy of Rockford, IL; two sisters, Irene Dees of 
+Rockford and Lorraine Foss of Viroqua, WI; and a host of nieces, nephews, and 
+other relatives. Funeral services were held Saturday, November 3, 2007 at 11:00 
+AM from the McGraw Memorial Chapel of Miles Funeral Home. Burial followed in 
+Brilliant Memorial Gardens with David Sexton and Bill Duncan officiating. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles 
+Funeral Home of Winfield, directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="McNeal_,_Rev._Collis_Gerald_C.G._-_Age_79_-_Guin,_AL">McNeal , Rev. 
+Collis Gerald C.G. - Age 79 - Guin, AL</a></font></b><br>
+<br>
+<b>Rev. C.G. McNeal age 79 of Guin, passed away Saturday, November 3, 2007 at 
+his residence. He was born June 3, 1928 in Tallassee, Al. a son of F.J. and 
+Annie Wheeler McNeal. He was a Church of God minister for 50 years before his 
+retirement at Brilliant Church of God. As well as a minister he was a carpenter. 
+He built new churches and parsonages at every church he served. He was preceded 
+in death by his parents and two sons, Gerald and Danny McNeal, a brother, Tom 
+McNeal and a sister, Dorie Beck. <br>
+<br>
+He is survived by his wife, Opal Norris McNeal of Guin; a son, Noel McNeal of 
+Guin; a daughter, Rachel E. (David) Self of Brilliant; three grandchildren, 
+Dylan W. Self, Lauren A. Self and Kimberly Cheyanne McNeal; and three sisters, 
+Margie Carter of Prattville, Omelia Baker and Geraldine Cole of Tallassee, Al; 
+and a host of nieces, nephews, and other relatives. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Services were held Tuesday, 
+November 6, 2007 at 2 p.m. from the Winfield Church of God. Burial followed in 
+the West Alabama Memorial Gardens with Stan Holder and Eddie Williamson 
+officiating. Miles Funeral Home of Winfield directing. Serving as pallbearers 
+were: Bendel Mobley, Gene Mobley, Todd Anderson, Bobby Harrison, Kenneth Cooper, 
+and Mike Pridmore. Honorary Pallbearers were: Harl Skipper, Mark Dean, Charles 
+Gilbert, Raymond Fowler, Billy Ray Adams, Frederick Rizzo, Ken Stroup, Willie 
+Joe Hollis, Rick Baily, Rick Coates, Tom George, Kip Box, Henry Williams, and 
+Samuel Parker.</b><br>
+<br>
+<b>Miles Funeral Home of Winfield, directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Tyra,_Eva_Mae_Files_-_Age_93_-_Winfield,_AL">Tyra, Eva Mae Files - Age 
+93 - Winfield, AL</a></font></b><br>
+<br>
+<b>Eva Mae Files Tyra, age 93 of Winfield, died Thursday, November 8, 2007 at 
+Golden Living Center in Winfield. Eva was born October 26, 1914 in Fayette Co. 
+to Jack and Alfia Blanchard Files. She was a resident of Fayette Co. most of her 
+life and was a member of Piney Grove Church of Christ. In addition to her 
+parents, she was preceded in death by her husband, William Tyra, Sr.; a son, 
+Larry Gale Tyra; a daughter, Betty Joyce Tyra; a brother, James Harvey Files; 
+and two sisters, Belle Rozell and Mandy McKee. Eva is survived by two sons, 
+William (Katherine) Tyra, Jr. and James Thomas (Janie) Tyra both of Winfield; 
+two daughters, Julia Mae Patton of Brewton, AL and Shelvy Jean Coprich of 
+Compton, CA.; eleven grandchildren, several great grandchildren, and a host of 
+nieces, nephews, and other relatives. Funeral services were held Monday, 
+November 12, at 1:00 PM at Piney Grove Church of Christ. Burial followed in the 
+church cemetery with Floyd Rodgers officiating. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of Winfield, 
+directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Key,_Mrs._Anna_Lois_Birchfield_-_Age_75_-_Brilliant,_AL">Key, Mrs. Anna 
+Lois Birchfield - Age 75 - Brilliant, AL</a></font><br>
+<br>
+Mrs. Anna Lois Birchfield Key, age 75 of Brilliant, passed away Friday, November 
+9, 2007 in the DCH Regional Medical Center at Tuscaloosa. Mrs. Key was born on 
+June 25, 1932 in Marion Co. a daughter of Girdley and Delmar Willcutt Birchfield; 
+lifelong resident of Brilliant; widow of Lynu Key; retired from Brilliant Mfg; 
+and a member of the Church of Christ. In addition to her husband and parents, 
+she was preceded in death by one sister, Lorene Fuller. Survivors include three 
+sons, Lannie (Glenda) Key and Dannie (Linda) Key, both of Brilliant and 
+Christopher (Sonya) Key of Winfield; seven grandchildren, Angie Smith, Sandy 
+Markham, Wesley Key, Michael Key, Danielle Hood, Kyle Key and Cassie Voss; host 
+of great-grandchildren; four sisters, Girlene Hawkins of Winfield, Dell Ann 
+Nichols, Teresa Birchfield and Gail McKissick, all of Tuscaloosa; nieces, 
+nephews and other relatives. Funeral Services were held Sunday, November 11, 
+2007 at 3:00 PM from the McGraw Memorial Chapel of Miles Funeral Home. Thermon 
+Hubbert was the officiating minister. Burial followed in Brilliant Memorial 
+Gardens.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home of Winfield directing the service.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Farris,_Kenneth_Curry_-_Age_65_-_Eldridge,_AL">Farris, Kenneth Curry - 
+Age 65 - Eldridge, AL</a></font><br>
+<br>
+Kenneth Curry Farris, age 65 of Eldridge, died Friday, November 9, 2007 at his 
+residence. Mr. Farris was born May 15, 1942 in Walker Co. to George Franklin 
+Farris and Emma Jane Norris Farris. He was a lifelong resident of Eldridge where 
+he was a member of Eldridge Church of Christ. He was a graduate of Hubbertville 
+High School and retired from Drummond Coal Co. in Jasper. In addition to his 
+parents he was preceded in death by a brother, Jim Farris; and a brother in-law, 
+Kelly Doyle. He is survived by his wife, Sharon Nerren Farris; a daughter, 
+Connie (Dave) Colbert of Smyrna, TN; three sons, Ken Farris of Cordova, Nick 
+(Wendy) Wood of Helena, and Perry (Cheryl) Wood of Opelika; three brothers, 
+Frank Farris, Jr. of Eldridge, Bud (Oveta) Farris of Eldridge, and Landon 
+(Barbara) Farris; three sisters, Dot Doyle of Henderson, TN, Mary Hyche of 
+Winfield, and Nella (Ed) McGraw of Cullman; seven grandchildren, Emily and 
+Daniel Colbert, Morgan, Mason, and Carson Wood, and Zachary and Emma Wood; and a 
+host of nieces, nephews, and other relatives. Funeral services were held Monday, 
+November 12, at 11:00 AM from the Eldridge Church of Christ. Burial followed in 
+Kelley Cemetery with Gilbert Behel and Mike King officiating. </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Miles Funeral Home 
+of Winfield, directing.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Howell,_Willie_Estelle_-_Age_92_-_Moody,_AL_(Formerly_of_Hamilton,_AL)">
+Howell, Willie Estelle - Age 92 - Moody, AL (Formerly of Hamilton, AL)</a></font><br>
+<br>
+(October 3, 1915 - November 10, 2007) <br>
+<br>
+Willie Estelle Howell, 92 of Moody, Alabama, formerly of Hamilton, Alabama, died 
+on November 10, 2007 in Birmingham. She was born on October 3, 1915 in Hamilton, 
+Alabama, to Willie and Etta Wigginton Self. <br>
+<br>
+Visitation will be held on Monday from 12-2 PM at Nichols Funeral Home in 
+Haleyville. <br>
+<br>
+Funeral services will be held on Monday at 2 PM at Nichols Funeral Home. <br>
+<br>
+Burial will be at Sullins School House Church Cemetery in Marion County. <br>
+<br>
+Survived by: Son, Jimmy (Wanda) Howell of Moody, AL.; Brother, Edsel Self; 
+Sister, Bobbie Frederick; 6 Grandchildren; 10 Great Grandchildren; 1 Great Great 
+Grandchild.<br>
+<br>
+Preceded in death by: Husband, Clefus O. Howell; Daughter, Agnes Carolyn Blount; 
+9 Brothers and Sisters.<i> <br>
+<br>
+</i></b><i>Nichols Funeral Homes</i></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Turner,_Christine_-_Age_83_-_Double_Springs,_AL">Turner, Christine - 
+Age 83 - Double Springs, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>(July 11, 1924 - November 2, 
+2007) <br>
+<br>
+Barbara Christine Turner, age 83, of Double Springs passed away on November 2, 
+2007 at her residence with family by her side. <br>
+<br>
+Visitation will be November 2, 2007 at Nichols Funeral Home Double Springs from 
+7-9PM. Services will be Saturday November 3, 2007 at Pleasant Hill #2 Baptist 
+Church at 10:00AM. Burial will be in the adjoining cemetery. Randy Taylor will 
+be officiating. <br>
+<br>
+Survived by: Daughter- Freda (Donald) Robertson; Son in Law- Jimmy Vickery; 
+Sisters- Ann (Lloyd) Oakes; Grandchildren- Vicky Jackson, Donnie Robertson, 
+Ricky Vickery, and Jason Robertson; Great Grandchildren- Christina Williams, 
+Josh Robertson, Dusty Ewards, Deandra and Derrick Vickery, Justin Robertson, 
+Anna Kathryn and Amanda Grace Robertson. <br>
+<br>
+Preceded in death by: Husband- James Milton Turner; Parents, Ace and Ethel 
+Godsey; Daughter, Judy Gail Vickery; Brother, Edward Godsey <br>
+<br>
+Friends may sign the guestbook online at NicholsFuneralHome.com</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Ramsey,_Helen_-_Age_77_-_Haleyville,_AL">Ramsey, Helen - Age 77 - 
+Haleyville, AL</a></font></b><br>
+<br>
+<b>(March 8, 1930 - November 13, 2007) <br>
+<br>
+Julia Helen Miller Hamby Ramsey, age 77 of Haleyville, AL passed away on 
+November 13, 2007 at her residence.<br>
+<br>
+Visitation will be Wednesday November 14, 2007 at Nichols Funeral Home from 
+6-9PM. Service will be Thursday November 15, 2007 at Nichols Funeral Home 
+Haleyville at 2:00PM. Burial will be at Winston Memorial Cemetery. Reverend 
+Luther Rye will be officiating.<br>
+<br>
+She is survived by: Husband- Charles Thomas Ramsey; Son- Johnny L. Hamby; 
+Daughters- Julia Hamby Milligan and Charlotte Elaine Ramsey; Also Eight 
+Grandchildren and Four Great Grandchildren<br>
+<br>
+Preceded in death by: Parents- John Dennis and Ruby May Miller; Sister- Marion 
+(Poly) Watts; Brother- John D. Miller</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Jackson,_Barbara_Nell_-_Age_60_-_Addison,_AL_">Jackson, Barbara Nell - 
+Age 60 - Addison, AL </a></font>&nbsp; <br>
+<br>
+(July 26, 1947 - November 13, 2007) <br>
+<br>
+Barbara Nell Jackson, 60 of Addison passed away at her home on November 13, 
+2007. She was born on July 26, 1947 in Cullman, AL to Clarence Barbee and Willie 
+I Lawrence Barbee. <br>
+<br>
+Visitation will be Saturday from 6-9Pm at Nichols Funeral Home in Addison <br>
+<br>
+Funeral Services will be Sunday at 2PM at Nichols Funeral Home. Burial will be 
+at Mt Zion Cemetery <br>
+<br>
+Survived by: Husband, George Jackson; Son, David L. Denton; Daughters, Belinda 
+G. (James) Miller, Kim (James) Hollis, Tabitha (Larry) McDaniel and Christi 
+Jackson; Brothers, Ray, Don and Stanley Barbee; Sisters, Shirley Coiro, Thelma 
+Cook, Faye Thornton, Janice Wilson and Mary Mayfield; Grandchildren, Chase Dean, 
+Brian Hollis, Michael Denton, Trent Hollis and Jarrett Miller; Great 
+Grandchildren, Nate Jackson and Aaliyah Jackson <br>
+<br>
+Preceded in death by: Parents, Clarence Barbee and Willie I Lawrence Barbee; 
+Brother, James Barbee; Sisters, Evelyn Robinson and Ruth Miller and Brenda Sue 
+Meigs</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b><font size="5"><a name="Brown,_Billy_Madison_-_Age_81_-_Vinemont,_AL">Brown, 
+Billy Madison - Age 81 - Vinemont, AL</a></font><font size="4"> </font><br>
+<br>
+(September 25, 1926 - November 13, 2007) <br>
+<br>
+Billy Madison Brown, 81, of Vinemont passed away on November 13, 2007 in 
+Cullman. He was born on September 25, 1926 in Cullman to Carl and Lois Tidwell 
+Brown. He served in World War II and Korea in the United States Navy. <br>
+<br>
+Visitation will be held on Wednesday from 6-8 at Nichols Funeral Home in Addison
+<br>
+<br>
+Funeral Services will be held on Thursday at 11AM at Nichols Funeral home <br>
+<br>
+Burial will be at Arley Congregational Cemetery in Arley. Reverend Robert 
+Partridge and Reverend Delwin Kilgo will officiate. Military honors will be 
+provided by the United States Navy Honor Guard. <br>
+<br>
+Survived by: Son, David (Tanya) Brown; Daughter, Phyllis (Darrell) Ford; 
+Brother, Junior Brown; Sisters, Kathy Watts and Margene Brown; Grandchildren, 
+Justin and Tony Brown and Haley (Chris) Freeman; Great Grandchildren, Lindsie, 
+Nic and Stone Freeman, and Skarlet and Kali Brown <br>
+<br>
+Preceded in death by: Parents, Carl Brown and Lois Tidwell Brown; Wife, Oladeen 
+Brown; Brother, Boots Brown; Sister, Chris Reynolds; Infant Daughter - Jill <br>
+<br>
+Friends may sign the guestbook online at www.nicholsfuneralhomes.com Funeral 
+Services are being handled by Nichols Funeral Home in Addison.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Pearson,_Sherry_Ledena_-_Age_38_-_Hueytown,_AL">Pearson, Sherry Ledena 
+- Age 38 - Hueytown, AL</a></font><br>
+<br>
+(March 1, 1969 - November 14, 2007)<br>
+<br>
+Sherry Ledena Pearson, age 38, of Hueytown passed away on November 14, 2007 at 
+her home.<br>
+<br>
+She was born on March 1, 1969 in Addison. <br>
+<br>
+Visitation will be held on Friday from 6-9PM at Nichols Funeral Home in Addison.
+<br>
+<br>
+Funeral Services will be held on Saturday at 2PM at Nichols Funeral Home in 
+Addison. Brother John Loper will officiate. Burial will be at Addison Church of 
+God Cemetery. <br>
+<br>
+Survived by:&nbsp; Mother, Gloria Avery; Father, Terry (Toni) Pearson; Son, 
+Terence Gurganus; Daughter, Alison James; Brother, Devin Pearson; Sisters, 
+Kynlie and Kloie Pearson; Grandmother - Ruth Burney <br>
+<br>
+Preceded in death by:&nbsp; Brother, Anthony Pearson; Grandfathers, Otis Cook, 
+Gene Burney, Artis Pearson; Grandmothers, Etoil Pearson; Step Grandfather, Jimmy 
+Avery; Aunt, Nelarie Osborn.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Markham,_Logan_Dotson_-_Age_70_-_Haleyville,_AL">Markham, Logan Dotson 
+- Age 70 - Haleyville, AL</a></font> </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>(July 5, 1937 - November 15, 
+2007)<br>
+<br>
+Logan D. Markham, age 70 of Haleyville passed away on November 15, 2007 at his 
+residence. <br>
+<br>
+Visitation will be Friday November 16, 2007 at Nichols Funeral Home from 6-9PM. 
+Service will be Saturday November 17, 2007 at Nichols Funeral Home Haleyville at 
+3:00PM. Burial will be at Bethel #2 Cemetery at Delmar. Reverend Bobby Aderholt 
+will be officiating. <br>
+<br>
+He is survived by: Wife- Charlotte Markham; Sons- James, Wayne, Keith, and Roger 
+Markham; Daughters- Teresa Flannigan, Tonya Sutherland, Detweda Whitten, Carrie 
+Atkins, and Crystal Dickinson; Brothers- Malcolm and Thomas Markham; Sister- Eva 
+Brown; Also thirty-one Grandchildren and fourteen Great Grandchildren.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Preceded in death by: 
+Parents- Elihue and Eula Markham; Sister- Hazel Bamburger and Margie Wright; 
+Brother- Robert Markham</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><b><font size="5"><a name="Bell,_Roy_Edsel_-_Age_76_-_Greenville,_SC__(Formerly_of_Winston_County,_AL)">Bell, 
+Roy Edsel - Age 76 - Greenville, SC&nbsp; (Formerly of Winston County, AL)</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>(October 29, 1931 - November 
+18, 2007)&nbsp; <br>
+<br>
+Mr. Roy Edsel Bell passed away November 18, 2007 in Greenville, South Carolina. 
+He was born on October 29, 1931, in Winston County and served his country in the 
+United States Army. <br>
+<br>
+Funeral Services will be on Saturday 1:00PM at Liberty Baptist Church. He will 
+lie in state from 12-1PM. Burial will follow in the adjoining cemetery. Reverend 
+DeJuan Reese will be officiating. <br>
+<br>
+Survived by:&nbsp; Wife- Mary J. Bell; Daughter  Debra Bell Sargent; Son- Steve 
+Bell; Also Five Grandchildren and One Great Grandchild</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Preceded in death by: 
+Parents- Roy Clifton and Alta (Wilson) Bell; Brother- Clarence Eugene Bell</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Hamby,_Mallory_Seymour_-_Age_24_-_Double_Springs,_AL_">Hamby, Mallory 
+Seymour - Age 24 - Double Springs, AL </a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>(August 9, 1983 - November 
+20, 2007) <br>
+<br>
+Mallory Seymour Hamby, age 24 of Double Springs passed away on November 20, 2007 
+in Birmingham. Mallory made the choice long ago to offer the gift of life as a 
+donor and because of that selfless gift multiple lives were changed. Visitation 
+will be Thursday at First Baptist Church Double Springs from 4-9PM. Services 
+will be on Friday November 23, 2007 at 2:00PM. Burial will be in New Hope 
+Cemetery in Double Springs. <br>
+<br>
+Survived by: Husband - Brandon Ray Hamby; Father - Bart Seymour; Mother - Debra 
+Ann Seymour; Brothers - Chris Comeens and Levi Overton; Grandparents - Betty &amp; 
+Sonny Ayers and Kathleen Ward<br>
+<br>
+Preceded in death by: Grandfathers - Corbin Seymour &amp; Rex Ward<br>
+<br>
+Nichols Funeral Homes</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Holland,_Herbert_Dolan_-_Age_59_-_Haleyville,_AL_">Holland, Herbert 
+Dolan - Age 59 - Haleyville, AL </a></font>&nbsp;&nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>(August 19, 1948 - November 
+30, 2007) <br>
+<br>
+Mr. Holland, age 59, of Haleyville, passed away in Muscle Shoals, Alabama late 
+Friday evening, November 30, 2007. A memorial service will be held at Nichols 
+Funeral Home Chapel in Haleyville on Tuesday December 4, 2007 at 5:00PM. <br>
+<br>
+He is survived by: Mother- Myrtle Maxine Holland; Sons- Herbert Glenn (Chasity) 
+Holland and Anthony James Holland; Daughter-Ann Renee (Chris) Gray; Brothers- 
+Kenneth, Johnny, and Elbert Holland; Grandchildren- Dustin Glenn Ray Holland and 
+Seth Lee Holland<br>
+&nbsp;</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Preceded in death by: 
+Father- James Copeland Holland; Brother- Conerd Holland <br>
+<br>
+The family has established a memorial fund at Traders &amp; Farmers Bank in Herb's 
+memory called The Bear Hug. Donations will be used to fund participation in 
+Dixie Youth Baseball for underprivileged children.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Barnett,_Christine_Orton_-_Age_65_-_Navoo,_AL">Barnett, Christine Orton 
+- Age 65 - Navoo, AL</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>(January 12, 1942 - November 
+30, 2007) <br>
+<br>
+Christine Granny Orton Barnett, age 65 of Nauvoo passed away at her residence 
+on November 30, 2007. <br>
+<br>
+Visitation will be Sunday December 2, 2007 at Nichols Funeral Home from 6-9PM. 
+Service will be Monday December 3, 2007 at Nichols Funeral Home Double Springs 
+at 11:00AM. Burial will follow at Fairview Cemetery in Double Springs. Reverend 
+Delmer Duboise will be officiating. <br>
+<br>
+She is survived by: Sons- James (Brenda) Orton Jr. and Robert (Deborah) Orton; 
+Daughter- Debra (Darrell) Guttery, Chris (James) Bell, Rose (Robert) Hill and 
+Doris (David) Curtis <br>
+<br>
+Brothers- Jimmy Hester and Byron Hester; Sisters- June Druhot, Patricia Girodano, 
+and Mary Meeker; Also Nineteen Grandchildren and Thirty Great Grandchildren<br>
+<br>
+Preceded in death by: Parents- Albert F. Hester and Mary Louise Singletary 
+Hester; Husband- James Orton; Son- Daniel Orton; Daughter- Patricia Orton; Great 
+Granddaughter- Hannah Orton; Brother- Fred Hester<br>
+<br>
+Nichols Funeral Homes</b><br>
+<i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify">&nbsp;</p>
+<p class="MsoNormal" style="text-align: center"><i><font size="6"><b><a href="../../obituaries.html">Back To 
+Obituaries Page</a></b></font></i></p>
+
+</body>
+
+</html>

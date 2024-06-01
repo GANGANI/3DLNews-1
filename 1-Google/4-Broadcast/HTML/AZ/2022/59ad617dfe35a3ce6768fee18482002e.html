@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>Bonneville Tuner - Streaming Internet Radio</title>
+  <head>
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="description" content="Listen to Streaming Radio with the Bonneville Tuner, a simple Internet Radio with all of our Radio Stations and Podcasts." />
+    <meta name="keywords" content="Streaming Radio, Internet Radio, Radio Station, Podcast, Bonneville, Tuner" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/lib/style.css">
+    <link id="favicon" rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVRIx+3NQQEAQAQAMC6FLCoqfSX4bQWW1ROXXhwTCAQCgUAgEAgEWz4GRwEdoXXm3gAAAABJRU5ErkJggg==">
+    <link rel="apple-touch-icon" href="/etc/icons/icon-180x180.png">
+    <link rel="manifest" href="/tuner.webmanifest">
+    <script>
+      document.documentElement.dataset.theme = localStorage.theme;
+
+      const params  = new URLSearchParams(window.location.search);
+      const station = (params.get('s') || window.location.search.substring(1) || localStorage.station || 'KSL-AM').split(/\?|\&/)[0];
+
+      localStorage.station = station;
+      window.dataLayer = [{ station }];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZGRZ7W');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body id="body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZGRZ7W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="Header" class="HBox" aria-label="Navigation">
+      <div class="Pad">
+	<a id="brand_link" href="#" target="_blank" aria-label="Open Station Website">
+	  <img id="brand_logo" alt="Station Logo">
+	</a>
+      </div>
+      <div class="Grow">
+	<button id="Settings" class="Hover" title="User Settings" data-trap-click="theme">
+	  <svg style="display: var(--theme-light);" width="32" height="32" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#cccccc">
+	    <title>Switch To Dark Mode</title>
+	    <rect fill="none" height="24" width="24"/>
+	    <path d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/>
+	  </svg>
+	  <svg style="display: var(--theme-dark);" width="32" height="32" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#888888">
+	    <title>Switch To Light Mode</title>
+	    <rect fill="none" height="24" width="24"/>
+	    <path d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/>
+	  </svg>
+	</button>
+      </div>
+    </header>
+
+    <main id="Main" class="Center" aria-label="Player">
+      <section id="Overlay" class="Center Fade Hidden" aria-hidden="true">
+	<div class="HBox Pad Container">
+	  <div class="Left Relative" data-trap-click="toggle">
+	    <div id="overlay_image">
+	    </div>
+	    <div id="overlay_controls" class="Overlay">
+	      <div id="overlay_play">
+		<svg class="Control" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+		  <title>Play</title>
+		  <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm384 823q32-18 32-55t-32-55l-544-320q-31-19-64-1-32 19-32 56v640q0 37 32 56 16 8 32 8 17 0 32-9z"/>
+		</svg>
+	      </div>
+	      <div id="overlay_stop" hidden>
+		<svg class="Control" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+		  <title>Stop</title>
+		  <path d="M1216 1184v-576q0-14-9-23t-23-9h-576q-14 0-23 9t-9 23v576q0 14 9 23t23 9h576q14 0 23-9t9-23zm448-288q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/>
+		</svg>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="Grow Center LineClamp">
+	    <h3 class="LogItem" id="overlay_title"></h3>
+	    <p class="LogItem" id="overlay_desc"></p>
+	  </div>
+	</div>
+      </section>
+      
+      <div id="Container" class="VBox Pad Container">
+	<div id="Info" class="Grow HBox Center">
+	  <a id="player_link" target="_blank">
+	    <div id="player_image"></div>
+	  </a>
+	  
+	  <div id="player_display" class="Pad Grow">
+	    <h4 id="player_info">&nbsp;</h4>
+	    
+	    <hr class="divider">
+	    
+	    <h1 id="player_title" class="LineClamp">Loading</h1>
+	    <div id="player_desc" class="LineClamp"></div>
+	  </div>
+	</div>
+
+	<nav id="List" class="Stain Grow VBox" aria-label="Station Menu" hidden>
+	  <div id="Favorites" style="padding-bottom: 0%">Please wait, fetching station list...</div>
+	</nav>
+	
+	<div class="Full" aria-hidden="true">
+	  <div id="player_progress">
+	    <div id="player_progress_bar" style="width: 0%;">&nbsp;</div>
+	    <div id="player_progress_wait" style="width: 0%;">&nbsp;</div>
+	  </div>
+	</div>
+	
+	<aside id="Timers" class="HBox Smaller Theme" aria-label="Timers">
+	  <div>
+	    <span title="Remaining Track Time" id="player_timer">00:00</span>
+	  </div>
+	  <div class="Grow Right">
+	    <span title="Total Listening Time" id="player_clock">00:00</span>
+	    <span>
+	      <svg width="11" height="11" aria-hidden="true" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1024 544v448q0 14-9 23t-23 9h-320q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224v-352q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/>
+	      </svg>
+	    </span>
+	  </div>
+	</aside>
+	
+	<div class="HBox Theme">
+	  <div class="HBox Left Third Hover Pointer">
+	    <div class="UnNarrow">
+	      <svg width="24" height="24" aria-hidden="true" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1088 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45zm384 544q0 76-42.5 141.5t-112.5 93.5q-10 5-25 5-26 0-45-18.5t-19-45.5q0-21 12-35.5t29-25 34-23 29-36 12-56.5-12-56.5-29-36-34-23-29-25-12-35.5q0-27 19-45.5t45-18.5q15 0 25 5 70 27 112.5 93t42.5 142z"/>
+	      </svg>
+	    </div>
+	    <div class="NoNarrow Lift">
+	      <input label="volume" aria-label="Set Volume" id="player_volume" class="Slider" type="range" min="0" max="100" value="100" data-trap-input="volume">
+	    </div>
+	  </div>
+	  
+	  <div class="Center Grow">
+	    <button id="player_play" class="Hover Control Loadable" title="Start Playing" data-trap-click="play">
+	      <svg class="Control" aria-hidden="true" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+		<title>Play</title>
+		<path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm384 823q32-18 32-55t-32-55l-544-320q-31-19-64-1-32 19-32 56v640q0 37 32 56 16 8 32 8 17 0 32-9z"/>
+	      </svg>
+	    </button>
+	    
+	    <button id="player_stop" class="Hover Control Loadable" title="Stop Playing" data-trap-click="stop" hidden>
+	      <svg class="Control" aria-hidden="true" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+		<title>Stop</title>
+		<path d="M1216 1184v-576q0-14-9-23t-23-9h-576q-14 0-23 9t-9 23v576q0 14 9 23t23 9h576q14 0 23-9t9-23zm448-288q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/>
+	      </svg>
+	    </button>
+	  </div>
+	  
+	  <div class="Right Third">
+	    <button id="Menu" class="Hover Pointer" aria-label="Change Station" data-trap-click="menu">
+	      <div class="HBox HReverse">
+		<div class="UnNarrow">
+		  <svg aria-hidden="true" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 458 458">
+		    <path d="M36.09,5.948c-18.803,0-34.052,15.248-34.052,34.051c0,18.803,15.249,34.052,34.052,34.052c18.803,0,34.052-15.25,34.052-34.052C70.142,21.196,54.893,5.948,36.09,5.948z"/>
+		    <path d="M147.537,80h268.604c22.092,0,40-17.908,40-40s-17.908-40-40-40H147.537c-22.092,0-40,17.908-40,40S125.445,80,147.537,80z"/>
+		    <path d="M36.09,132.008c-18.803,0-34.052,15.248-34.052,34.051s15.249,34.052,34.052,34.052c18.803,0,34.052-15.249,34.052-34.052S54.893,132.008,36.09,132.008z"/>
+		    <path d="M416.142,126.06H147.537c-22.092,0-40,17.908-40,40s17.908,40,40,40h268.604c22.092,0,40-17.908,40-40S438.233,126.06,416.142,126.06z"/>
+		    <path d="M36.09,258.068c-18.803,0-34.052,15.248-34.052,34.051c0,18.803,15.249,34.052,34.052,34.052c18.803,0,34.052-15.249,34.052-34.052C70.142,273.316,54.893,258.068,36.09,258.068z"/>
+		    <path d="M416.142,252.119H147.537c-22.092,0-40,17.908-40,40s17.908,40,40,40h268.604c22.092,0,40-17.908,40-40S438.233,252.119,416.142,252.119z"/>
+		    <path d="M36.09,384.128c-18.803,0-34.052,15.248-34.052,34.051s15.249,34.053,34.052,34.053c18.803,0,34.052-15.25,34.052-34.053S54.893,384.128,36.09,384.128z"/>
+		    <path d="M416.142,378.18H147.537c-22.092,0-40,17.908-40,40s17.908,40,40,40h268.604c22.092,0,40-17.908,40-40S438.233,378.18,416.142,378.18z"/>
+		  </svg>
+		</div>
+		
+		<div class="NoNarrow">
+		  Change Station&nbsp;
+		</div>
+	      </div>
+	    </button>
+	  </div>
+	</div>
+      </div>
+
+      <footer id="Status" class="Reader" role="region" aria-live="polite" aria-atomic="true" aria-label="Tuner Status">
+      </footer>
+    </main>
+
+    <div id="Leaderboard" class="ODA" aria-label="Advertisement" role="marquee">
+    </div>
+
+    <div class="Modal Stain" id="PrerollModal" hidden>
+      <div role="marquee" aria-label="Video Advertisement" id="Preroll">
+      </div>
+    </div>
+
+    <div id="Log" class="HGrid Evenly ODB">
+      <div class="Start">
+	<article id="Articles" class="Log" hidden></article>
+	<article id="History" class="Log" hidden></article>
+	<article id="Schedule" class="Log" hidden></article>
+	<article id="Brand" class="Log"></article>
+      </div>
+      <div id="Rail" class="Grow Sticky ODB" style="top: 90px;">
+	<div id="MPU" class="ODB" aria-label="Advertisement" role="marquee">
+	</div>
+      </div>
+    </div>
+		
+    <footer id="Footer" class="Smaller Center" aria-label="Site Information">
+      &copy; Bonneville International
+    </footer>
+
+    <template id="list_template">
+      <div class="HGrid Between" data-tmpl-name="market">
+	<div class="LogTitle">
+	  <h2 data-tmpl-name="market.name"></h2>
+	</div>
+      
+	<a data-tmpl-name="market.station" data-trap-click="station">
+	  <div class="LogItem HBox" data-tmpl-name="market.station.item">
+	    <div>
+	      <img class="LogItem" data-tmpl-name="market.station.image" />
+	    </div>
+	    <div class="VBox Grow LineClamp">
+	      <h3 class="LogItem" data-tmpl-name="market.station.name"></h3>
+	      <p class="LogItem">
+		<span data-tmpl-name="market.station.desc"></span>
+		<button class="LogItem Favorite" data-tmpl-name="market.station.favorite" data-trap-click="favorite">
+		  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+		    <title>Favorite</title>
+		    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+		  </svg>
+		</button>
+	      </p>
+	    </div>
+	  </div>
+	</a>
+      </div>
+    </template>
+
+    <template id="schedule_template">
+      <h2 class="Log" data-tmpl-name="title"></h2>
+      
+      <article class="LogItem TextClamp" data-tmpl-name="article">
+	<div class="HBox">
+	  <div>
+	    <img class="LogItem" data-tmpl-name="article.image" aria-hidden="true" />
+	  </div>
+	  <div class="VBox Grow">
+	    <h3 class="LogItem" data-tmpl-name="article.title"></h3>
+	    <p class="LogItem">
+	      <time data-tmpl-name="article.times">
+		<time data-tmpl-name="article.times.begin"></time> -
+		<time data-tmpl-name="article.times.end"></time>
+	      </time>
+	      <button class="LogItem OnAir" data-tmpl-name="article.onair" data-trap-click="play">On Air</button>
+	    </p>
+	  </div>
+	</div>
+      </article>
+    </template>
+
+    <template id="news_template">
+      <h2 class="Log" data-tmpl-name="title"></h2>
+      
+      <article class="LogItem TextClamp" data-tmpl-name="article">
+	<a data-tmpl-name="article.link" target="_blank">
+	  <div class="HBox">
+	    <div>
+	      <img class="LogItem" data-tmpl-name="article.image" aria-hidden="true" />
+	    </div>
+	    <div class="VBox Grow LineClamp">
+	      <h3 class="LogItem NewsTitle" data-tmpl-name="article.title"></h3>
+	      <p class="LogItem NewsTime">
+		<time data-tmpl-name="article.times"></time>
+	      </p>
+	    </div>
+	  </div>
+	</a>
+      </article>
+    </template>
+
+    <template id="station_template">
+      <h2 class="Log" data-tmpl-name="title"></h2>
+      
+      <article class="LogItem">
+	<h3 class="LogItem" data-tmpl-name="name"></h3>
+	<p class="LogItem">
+	  <span data-tmpl-name="slogan"></span>
+	</p>
+	<p class="LogItem Icons">
+	  <a class="LogItem" data-tmpl-name="link" target="_blank"></a>
+	</p>
+      </article>
+    </template>
+
+    <template id="icons">
+      <svg data-tmpl-name="Facebook" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
+      <svg data-tmpl-name="Instagram" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.233 5.488c-.843-.038-1.097-.046-3.233-.046s-2.389.008-3.232.046c-2.17.099-3.181 1.127-3.279 3.279-.039.844-.048 1.097-.048 3.233s.009 2.389.047 3.233c.099 2.148 1.106 3.18 3.279 3.279.843.038 1.097.047 3.233.047 2.137 0 2.39-.008 3.233-.046 2.17-.099 3.18-1.129 3.279-3.279.038-.844.046-1.097.046-3.233s-.008-2.389-.046-3.232c-.099-2.153-1.111-3.182-3.279-3.281zm-3.233 10.62c-2.269 0-4.108-1.839-4.108-4.108 0-2.269 1.84-4.108 4.108-4.108s4.108 1.839 4.108 4.108c0 2.269-1.839 4.108-4.108 4.108zm4.271-7.418c-.53 0-.96-.43-.96-.96s.43-.96.96-.96.96.43.96.96-.43.96-.96.96zm-1.604 3.31c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zm4.333-12h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.952 15.298c-.132 2.909-1.751 4.521-4.653 4.654-.854.039-1.126.048-3.299.048s-2.444-.009-3.298-.048c-2.908-.133-4.52-1.748-4.654-4.654-.039-.853-.048-1.125-.048-3.298 0-2.172.009-2.445.048-3.298.134-2.908 1.748-4.521 4.654-4.653.854-.04 1.125-.049 3.298-.049s2.445.009 3.299.048c2.908.133 4.523 1.751 4.653 4.653.039.854.048 1.127.048 3.299 0 2.173-.009 2.445-.048 3.298z"/></svg>
+      <svg data-tmpl-name="Threads" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105 0h302c57.75 0 105 47.25 105 105v302c0 57.75-47.25 105-105 105H105C47.25 512 0 464.75 0 407V105C0 47.25 47.25 0 105 0z M337.36 243.58c-1.46-.7-2.95-1.38-4.46-2.02-2.62-48.36-29.04-76.05-73.41-76.33-25.6-.17-48.52 10.27-62.8 31.94l24.4 16.74c10.15-15.4 26.08-18.68 37.81-18.68h.4c14.61.09 25.64 4.34 32.77 12.62 5.19 6.04 8.67 14.37 10.39 24.89-12.96-2.2-26.96-2.88-41.94-2.02-42.18 2.43-69.3 27.03-67.48 61.21.92 17.35 9.56 32.26 24.32 42.01 12.48 8.24 28.56 12.27 45.26 11.35 22.07-1.2 39.37-9.62 51.45-25.01 9.17-11.69 14.97-26.84 17.53-45.92 10.51 6.34 18.3 14.69 22.61 24.73 7.31 17.06 7.74 45.1-15.14 67.96-20.04 20.03-44.14 28.69-80.55 28.96-40.4-.3-70.95-13.26-90.81-38.51-18.6-23.64-28.21-57.79-28.57-101.5.36-43.71 9.97-77.86 28.57-101.5 19.86-25.25 50.41-38.21 90.81-38.51 40.68.3 71.76 13.32 92.39 38.69 10.11 12.44 17.73 28.09 22.76 46.33l28.59-7.63c-6.09-22.45-15.67-41.8-28.72-57.85-26.44-32.53-65.1-49.19-114.92-49.54h-.2c-49.72.35-87.96 17.08-113.64 49.73-22.86 29.05-34.65 69.48-35.04 120.16v.24c.39 50.68 12.18 91.11 35.04 120.16 25.68 32.65 63.92 49.39 113.64 49.73h.2c44.2-.31 75.36-11.88 101.03-37.53 33.58-33.55 32.57-75.6 21.5-101.42-7.94-18.51-23.08-33.55-43.79-43.48zm-76.32 71.76c-18.48 1.04-37.69-7.26-38.64-25.03-.7-13.18 9.38-27.89 39.78-29.64 3.48-.2 6.9-.3 10.25-.3 11.04 0 21.37 1.07 30.76 3.13-3.5 43.74-24.04 50.84-42.15 51.84z"/></svg>
+      <svg data-tmpl-name="Newsletter" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
+      <svg data-tmpl-name="Phone" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
+      <svg data-tmpl-name="SMS" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32C114.6 32 .0137 125.1 .0137 240c0 49.59 21.39 95 56.99 130.7c-12.5 50.39-54.31 95.3-54.81 95.8C0 468.8-.5938 472.2 .6875 475.2C1.1 478.2 4.813 480 8 480c66.31 0 116-31.8 140.6-51.41C181.3 440.9 217.6 448 256 448C397.4 448 512 354.9 512 240S397.4 32 256 32zM167.3 271.9C163.9 291.1 146.3 304 121.1 304c-4.031 0-8.25-.3125-12.59-1C101.1 301.8 92.81 298.8 85.5 296.1c-8.312-3-14.06-12.66-11.09-20.97S85 261.1 93.38 264.9c6.979 2.498 14.53 5.449 20.88 6.438C125.7 273.1 135 271 135.8 266.4c1.053-5.912-10.84-8.396-24.56-12.34c-12.12-3.531-44.28-12.97-38.63-46c4.062-23.38 27.31-35.91 58-31.09c5.906 .9062 12.44 2.844 18.59 4.969c8.344 2.875 12.78 12 9.906 20.34C156.3 210.7 147.2 215.1 138.8 212.2c-4.344-1.5-8.938-2.938-13.09-3.594c-11.22-1.656-20.72 .4062-21.5 4.906C103.2 219.2 113.6 221.5 124.4 224.6C141.4 229.5 173.1 238.5 167.3 271.9zM320 288c0 8.844-7.156 16-16 16S288 296.8 288 288V240l-19.19 25.59c-6.062 8.062-19.55 8.062-25.62 0L224 240V288c0 8.844-7.156 16-16 16S192 296.8 192 288V192c0-6.875 4.406-12.1 10.94-15.18c6.5-2.094 13.71 .0586 17.87 5.59L256 229.3l35.19-46.93c4.156-5.531 11.4-7.652 17.87-5.59C315.6 179 320 185.1 320 192V288zM439.3 271.9C435.9 291.1 418.3 304 393.1 304c-4.031 0-8.25-.3125-12.59-1c-8.25-1.25-16.56-4.25-23.88-6.906c-8.312-3-14.06-12.66-11.09-20.97s10.59-13.16 18.97-10.19c6.979 2.498 14.53 5.449 20.88 6.438c11.44 1.719 20.78-.375 21.56-4.938c1.053-5.912-10.84-8.396-24.56-12.34c-12.12-3.531-44.28-12.97-38.63-46c4.031-23.38 27.25-35.91 58-31.09c5.906 .9062 12.44 2.844 18.59 4.969c8.344 2.875 12.78 12 9.906 20.34c-2.875 8.344-11.94 12.81-20.34 9.906c-4.344-1.5-8.938-2.938-13.09-3.594c-11.19-1.656-20.72 .4062-21.5 4.906C375.2 219.2 385.6 221.5 396.4 224.6C413.4 229.5 445.1 238.5 439.3 271.9z"/></svg>
+      <svg data-tmpl-name="Snapchat" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-1.141 17.115c-.065.087-.117.457-.203.749-.098.337-.407.299-.75.232-.499-.097-.945-.125-1.464-.039-.898.149-1.83 1.477-3.393 1.477-1.682 0-2.557-1.321-3.49-1.477-.951-.158-1.497.096-1.826.096-.252 0-.35-.154-.388-.282-.084-.287-.138-.664-.204-.754-.646-.1-2.103-.354-2.141-1.005-.009-.169.11-.318.277-.346 2.139-.352 3.501-2.765 3.279-3.287-.158-.372-.84-.505-1.127-.619-.74-.293-.843-.63-.799-.86.061-.32.451-.535.778-.535.314 0 .869.42 1.301.181-.065-1.123-.223-2.728.177-3.624.763-1.71 2.434-2.555 4.105-2.555 1.683 0 3.366.858 4.123 2.554.399.895.242 2.493.178 3.625.408.225.913-.191 1.265-.191.345 0 .814.233.822.623.006.305-.266.568-.809.782-.292.115-.969.248-1.127.619-.227.535 1.177 2.941 3.279 3.287.167.027.287.176.277.346-.036.65-1.5.903-2.14 1.003z"/></svg>
+      <svg data-tmpl-name="TikTok" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3333 3333"><path d="M3021 0H313C141 0 0 141 0 312v2708c0 172 141 312 313 312h2708c172 0 313-141 313-312V312c0-172-141-312-313-312zm-946 623c35 296 200 473 487 492v333c-167 16-313-38-483-141v623c0 792-863 1040-1210 472-223-365-87-1006 629-1032v352c-54 9-113 23-166 40-159 54-249 155-224 332 48 341 674 441 621-225V622h345z"/></svg>
+      <svg data-tmpl-name="Twitch" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.97 18.492l2.03-2.03h3.821l2.388-2.388v-7.641h-11.463v10.03h3.224v2.029zm4.418-9.313h1.433v4.175h-1.433v-4.175zm-3.821 0h1.433v4.175h-1.433v-4.175zm8.433-9.179h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.642 14.791l-4.179 4.179h-3.104l-2.031 2.03h-2.149v-2.03h-3.821v-11.224l1.075-2.746h14.209v9.791z"/></svg>
+      <svg data-tmpl-name="Twitter" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><g transform="translate(1.4 1.4) scale(2.8 2.8)"><polygon points="24.89,23.01 57.79,66.99 65.24,66.99 32.34,23.01" /><path d="M 72.349 0 H 17.651 C 7.902 0 0 7.902 0 17.651 v 54.699 C 0 82.098 7.902 90 17.651 90 h 54.699 C 82.098 90 90 82.098 90 72.349 V 17.651 C 90 7.902 82.098 0 72.349 0 z M 56.032 70.504 L 41.054 50.477 L 22.516 70.504 h -4.765 L 38.925 47.63 L 17.884 19.496 h 16.217 L 47.895 37.94 l 17.072 -18.444 h 4.765 L 50.024 40.788 l 22.225 29.716 H 56.032 z" /></g></svg>
+      <svg data-tmpl-name="X" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><g transform="translate(1.4 1.4) scale(2.8 2.8)"><polygon points="24.89,23.01 57.79,66.99 65.24,66.99 32.34,23.01" /><path d="M 72.349 0 H 17.651 C 7.902 0 0 7.902 0 17.651 v 54.699 C 0 82.098 7.902 90 17.651 90 h 54.699 C 82.098 90 90 82.098 90 72.349 V 17.651 C 90 7.902 82.098 0 72.349 0 z M 56.032 70.504 L 41.054 50.477 L 22.516 70.504 h -4.765 L 38.925 47.63 L 17.884 19.496 h 16.217 L 47.895 37.94 l 17.072 -18.444 h 4.765 L 50.024 40.788 l 22.225 29.716 H 56.032 z" /></g></svg>
+      <svg data-tmpl-name="Website" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 256C352 278.2 350.8 299.6 348.7 320H163.3C161.2 299.6 159.1 278.2 159.1 256C159.1 233.8 161.2 212.4 163.3 192H348.7C350.8 212.4 352 233.8 352 256zM503.9 192C509.2 212.5 512 233.9 512 256C512 278.1 509.2 299.5 503.9 320H380.8C382.9 299.4 384 277.1 384 256C384 234 382.9 212.6 380.8 192H503.9zM493.4 160H376.7C366.7 96.14 346.9 42.62 321.4 8.442C399.8 29.09 463.4 85.94 493.4 160zM344.3 160H167.7C173.8 123.6 183.2 91.38 194.7 65.35C205.2 41.74 216.9 24.61 228.2 13.81C239.4 3.178 248.7 0 256 0C263.3 0 272.6 3.178 283.8 13.81C295.1 24.61 306.8 41.74 317.3 65.35C328.8 91.38 338.2 123.6 344.3 160H344.3zM18.61 160C48.59 85.94 112.2 29.09 190.6 8.442C165.1 42.62 145.3 96.14 135.3 160H18.61zM131.2 192C129.1 212.6 127.1 234 127.1 256C127.1 277.1 129.1 299.4 131.2 320H8.065C2.8 299.5 0 278.1 0 256C0 233.9 2.8 212.5 8.065 192H131.2zM194.7 446.6C183.2 420.6 173.8 388.4 167.7 352H344.3C338.2 388.4 328.8 420.6 317.3 446.6C306.8 470.3 295.1 487.4 283.8 498.2C272.6 508.8 263.3 512 255.1 512C248.7 512 239.4 508.8 228.2 498.2C216.9 487.4 205.2 470.3 194.7 446.6H194.7zM190.6 503.6C112.2 482.9 48.59 426.1 18.61 352H135.3C145.3 415.9 165.1 469.4 190.6 503.6V503.6zM321.4 503.6C346.9 469.4 366.7 415.9 376.7 352H493.4C463.4 426.1 399.8 482.9 321.4 503.6V503.6z"/></svg>
+      <svg data-tmpl-name="WhatsApp" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.036 5.339c-3.635 0-6.591 2.956-6.593 6.589-.001 1.483.434 2.594 1.164 3.756l-.666 2.432 2.494-.654c1.117.663 2.184 1.061 3.595 1.061 3.632 0 6.591-2.956 6.592-6.59.003-3.641-2.942-6.593-6.586-6.594zm3.876 9.423c-.165.463-.957.885-1.337.942-.341.051-.773.072-1.248-.078-.288-.091-.657-.213-1.129-.417-1.987-.858-3.285-2.859-3.384-2.991-.099-.132-.809-1.074-.809-2.049 0-.975.512-1.454.693-1.653.182-.2.396-.25.528-.25l.38.007c.122.006.285-.046.446.34.165.397.561 1.372.611 1.471.049.099.083.215.016.347-.066.132-.099.215-.198.33l-.297.347c-.099.099-.202.206-.087.404.116.198.513.847 1.102 1.372.757.675 1.395.884 1.593.983.198.099.314.083.429-.05.116-.132.495-.578.627-.777s.264-.165.446-.099 1.156.545 1.354.645c.198.099.33.149.38.231.049.085.049.482-.116.945zm3.088-14.762h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-6.967 19.862c-1.327 0-2.634-.333-3.792-.965l-4.203 1.103 1.125-4.108c-.694-1.202-1.059-2.566-1.058-3.964.002-4.372 3.558-7.928 7.928-7.928 2.121.001 4.112.827 5.609 2.325s2.321 3.491 2.32 5.609c-.002 4.372-3.559 7.928-7.929 7.928z"/></svg>
+      <svg data-tmpl-name="Youtube" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.279 13.52h-.939v5.027h-.908v-5.027h-.94v-.854h2.788v.854zm5.395 1.721v2.406c0 .537-.2.954-.736.954-.296 0-.541-.108-.767-.388v.333h-.813v-5.88h.813v1.893c.183-.222.429-.405.718-.405.59 0 .785.499.785 1.087zm-.83.049c0-.146-.027-.257-.086-.333-.098-.129-.279-.143-.42-.071l-.167.132v2.703l.19.153c.132.066.324.071.413-.045.046-.061.069-.161.069-.299v-2.24zm-2.347-5.859c.229 0 .354-.183.354-.431v-2.119c0-.255-.111-.434-.371-.434-.237 0-.353.185-.353.434v2.119c.001.24.137.431.37.431zm-.733 8.07c-.099.123-.317.325-.475.325-.172 0-.215-.118-.215-.292v-3.325h-.805v3.626c0 .88.597.885 1.031.636.16-.092.315-.227.464-.403v.479h.807v-4.338h-.807v3.292zm13.236-12.501v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-10.566 4.427c0 .45.137.813.592.813.256 0 .611-.133.979-.569v.503h.847v-4.554h-.847v3.457c-.104.129-.333.341-.498.341-.182 0-.226-.124-.226-.307v-3.491h-.847v3.807zm-3.177-2.621v2.233c0 .803.419 1.22 1.24 1.22.682 0 1.218-.456 1.218-1.22v-2.233c0-.713-.531-1.224-1.218-1.224-.745 0-1.24.493-1.24 1.224zm-3.155-2.806l1.135 3.67v2.504h.953v-2.504l1.11-3.67h-.969l-.611 2.468-.658-2.468h-.96zm11.564 11.667c-.014-2.978-.232-4.116-2.111-4.245-1.734-.118-7.377-.118-9.109 0-1.876.128-2.098 1.262-2.111 4.245.014 2.978.233 4.117 2.111 4.245 1.732.118 7.375.118 9.109 0 1.877-.129 2.097-1.262 2.111-4.245zm-1.011-.292v1.104h-1.542v.818c0 .325.027.607.352.607.34 0 .36-.229.36-.607v-.301h.83v.326c0 .836-.358 1.342-1.208 1.342-.771 0-1.164-.561-1.164-1.342v-1.947c0-.753.497-1.275 1.225-1.275.773-.001 1.147.491 1.147 1.275zm-.83-.008c0-.293-.062-.508-.353-.508-.299 0-.359.21-.359.508v.439h.712v-.439z"/></svg>
+    </template>
+
+    <script src="/lib/tuner.js"></script>
+
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    
+    <script src="/lib/index.js"></script>
+    
+  </body>
+</html>

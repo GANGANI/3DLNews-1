@@ -1,0 +1,884 @@
+<html>
+
+<head>
+<style type="text/css">.replbq{width:100%}</style>
+<style type="text/css">.replbq{width:100%}</style>
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>November 2009 Obituaries</title>
+<base target="_self">
+</head>
+
+<body background="../../Background_pics/backn21.jpg" style="background-attachment: fixed">
+
+<p align="center"><b><font size="6" face="Times New Roman"><a name="Obituaries">
+<span style="text-transform: uppercase">Obituaries</span></a></font></b></p>
+<p align="center"><font face="Times New Roman">
+<font size="6"><b>November 
+-</b></font><b><font size="6"> 2009</font></b></font></p>
+<p align="center"><i>email comments or listings to:&nbsp; </i><b><i>
+<a href="mailto:jmays@49countynews.net">jmays@49countynews.net</a> </i></b></p>
+<p align="center"><i><a target="_blank" href="../../disclaimer.html">Disclaimer:</a>&nbsp; I am Attempting to give links to Cemeteries and Churches. 
+These links are merely suggestions and may not be correct. These links lead to 
+other sites over which 49 County News.Net has no control.&nbsp; Thank you for your 
+patience. Please send corrections and links to
+<a href="mailto:jmays@49countynews.net">jmays@49countynews.net</a> .</i></p>
+<p align="center"><i><font size="4"><b><a href="../../obituaries.html">Back To 
+Obituaries Page</a></b></font></i></p>
+<p align="center"><font size="4"><b><i>
+<a target="_self" href="http://www.49countynews.net/">Back To 49 County News.Net</a></i></b></font><script>
+<!-- Hide from old browsers
+
+/******************************************
+* Find In Page Script -- Submitted/revised by Alan Koontz (alankoontz@REMOVETHISyahoo.com)
+* Visit Dynamic Drive (http://www.dynamicdrive.com/) for full source code
+* This notice must stay intact for use
+******************************************/
+
+//  revised by Alan Koontz -- May 2003
+
+var TRange = null;
+var dupeRange = null;
+var TestRange = null;
+var win = null;
+
+
+//  SELECTED BROWSER SNIFFER COMPONENTS DOCUMENTED AT
+//  http://www.mozilla.org/docs/web-developer/sniffer/browser_type.html
+
+var nom = navigator.appName.toLowerCase();
+var agt = navigator.userAgent.toLowerCase();
+var is_major   = parseInt(navigator.appVersion);
+var is_minor   = parseFloat(navigator.appVersion);
+var is_ie      = (agt.indexOf("msie") != -1);
+var is_ie4up   = (is_ie && (is_major >= 4));
+var is_not_moz = (agt.indexOf('netscape')!=-1)
+var is_nav     = (nom.indexOf('netscape')!=-1);
+var is_nav4    = (is_nav && (is_major == 4));
+var is_mac     = (agt.indexOf("mac")!=-1);
+var is_gecko   = (agt.indexOf('gecko') != -1);
+var is_opera   = (agt.indexOf("opera") != -1);
+
+
+//  GECKO REVISION
+
+var is_rev=0
+if (is_gecko) {
+temp = agt.split("rv:")
+is_rev = parseFloat(temp[1])
+}
+
+
+//  USE THE FOLLOWING VARIABLE TO CONFIGURE FRAMES TO SEARCH
+//  (SELF OR CHILD FRAME)
+
+//  If you want to search another frame, change from "self" to
+//  the name of the target frame:
+//  e.g., var frametosearch = 'main'
+
+//var frametosearch = 'main';
+var frametosearch = self;
+
+
+function search(whichform, whichframe) {
+
+//  TEST FOR IE5 FOR MAC (NO DOCUMENTATION)
+
+if (is_ie4up && is_mac) return;
+
+//  TEST FOR NAV 6 (NO DOCUMENTATION)
+
+if (is_gecko && (is_rev <1)) return;
+
+//  TEST FOR Opera (NO DOCUMENTATION)
+
+if (is_opera) return;
+
+//  INITIALIZATIONS FOR FIND-IN-PAGE SEARCHES
+
+if(whichform.findthis.value!=null && whichform.findthis.value!='') {
+
+       str = whichform.findthis.value;
+       win = whichframe;
+       var frameval=false;
+       if(win!=self)
+{
+
+       frameval=true;  // this will enable Nav7 to search child frame
+       win = parent.frames[whichframe];
+
+}
+
+    
+}
+
+else return;  //  i.e., no search string was entered
+
+var strFound;
+
+//  NAVIGATOR 4 SPECIFIC CODE
+
+if(is_nav4 && (is_minor < 5)) {
+   
+  strFound=win.find(str); // case insensitive, forward search by default
+
+//  There are 3 arguments available:
+//  searchString: type string and it's the item to be searched
+//  caseSensitive: boolean -- is search case sensitive?
+//  backwards: boolean --should we also search backwards?
+//  strFound=win.find(str, false, false) is the explicit
+//  version of the above
+//  The Mac version of Nav4 has wrapAround, but
+//  cannot be specified in JS
+
+ 
+        }
+
+//  NAVIGATOR 7 and Mozilla rev 1+ SPECIFIC CODE (WILL NOT WORK WITH NAVIGATOR 6)
+
+if (is_gecko && (is_rev >= 1)) {
+   
+    if(frameval!=false) win.focus(); // force search in specified child frame
+    strFound=win.find(str, false, false, true, false, frameval, false);
+
+//  The following statement enables reversion of focus 
+//  back to the search box after each search event 
+//  allowing the user to press the ENTER key instead
+//  of clicking the search button to continue search.
+//  Note: tends to be buggy in Mozilla as of 1.3.1
+//  (see www.mozilla.org) so is excluded from users 
+//  of that browser.
+
+    if (is_not_moz)  whichform.findthis.focus();
+
+//  There are 7 arguments available:
+//  searchString: type string and it's the item to be searched
+//  caseSensitive: boolean -- is search case sensitive?
+//  backwards: boolean --should we also search backwards?
+//  wrapAround: boolean -- should we wrap the search?
+//  wholeWord: boolean: should we search only for whole words
+//  searchInFrames: boolean -- should we search in frames?
+//  showDialog: boolean -- should we show the Find Dialog?
+
+
+}
+
+ if (is_ie4up) {
+
+  // EXPLORER-SPECIFIC CODE revised 5/21/03
+
+  if (TRange!=null) {
+	  
+   TestRange=win.document.body.createTextRange();
+ 
+	  
+
+   if (dupeRange.inRange(TestRange)) {
+
+   TRange.collapse(false);
+   strFound=TRange.findText(str);
+    if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = win.document.body.scrollTop + TRange.offsetTop;
+        TRange.select();
+        }
+
+
+   }
+   
+   else {
+
+     TRange=win.document.body.createTextRange();
+     TRange.collapse(false);
+     strFound=TRange.findText(str);
+     if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+
+
+
+   }
+  }
+  
+   if (TRange==null || strFound==0) {
+   TRange=win.document.body.createTextRange();
+   dupeRange = TRange.duplicate();
+   strFound=TRange.findText(str);
+    if (strFound) {
+        //the following line added by Mike and Susan Keenan, 7 June 2003
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+
+   
+   }
+
+ }
+
+  if (!strFound) alert ("String '"+str+"' not found!") // string not found
+
+        
+}
+// -->
+</script>
+
+<!--  EXAMPLE FORM OF FIND-IN-PAGE SEARCH USING SUBMIT (ALLOWING 'ENTER/RETURN' KEY PRESS EVENT) -->
+</p>
+<form name="form1" onSubmit="search(document.form1, frametosearch); return false">
+  <p align="center">
+  <input type="text" name="findthis" size="33" title="Press 'ALT s' after clicking submit to repeatedly search page"> 
+  <input type="submit" value="Search Page" ACCESSKEY="s"></p>
+</form></p>
+<p align="left"><font size="4"><b><a target="_self" href="#Mr._Randy_Avery">
+Avery, Mr. Randy - Age 50 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/29/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mrs._Bernice_Britnell">Britnell, Mrs. Bernice Baggett - 
+Age 81 - Bear Creek, AL</a>&nbsp;&nbsp;&nbsp; 11/15/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mr._Albert_Sidney_Carter">Carter, Mr. Albert Sidney - 
+Age 82 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/12/09</b></font></p>
+<p align="left"><font size="4"><b><a target="_self" href="#Mr._R.C._Childers">
+Childers, Mr. R.C. - Age 64 - Vina, AL</a>&nbsp;&nbsp;&nbsp; 11/13/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mr._Kenneth_Allen_Colburn,_Jr.">Colburn, Jr., Mr. 
+Kenneth Allen - Age 23 - Adrian, MI</a>&nbsp;&nbsp;&nbsp;&nbsp; 11/7/09</b></font></p>
+<p align="left"><font size="4"><b><a target="_self" href="#Mr._Jefferson_Davis">
+Davis, Mr. Jefferson - Age 82 - Horn Lake, MS (formerly of Hamilton, AL)</a>&nbsp;&nbsp;&nbsp; 
+11/30/09</b></font></p>
+<p align="left"><b><font size="4"><a target="_self" href="#Odell_Frederick">
+Frederick, Mr. Odell Frederick - Age 81 - Hackleburg, AL</a>&nbsp;&nbsp;&nbsp; 
+11/5/09</font></b></p>
+<p align="left"><font size="4"><b><a target="_self" href="#Mr._James_Gann">Gann, 
+Mr. James Edward - Age 62 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/9/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Ms._Patricia_A._George">George, Ms. Patricia A. - Age 
+50 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/30/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mr._James_Dewey_Glenn">Glenn, Mr. James Dewey - Age 68 
+- Hackleburg, AL</a>&nbsp;&nbsp;&nbsp; 11/7/09</b></font></p>
+<p align="left"><b><font size="4"><a href="#Mr._George_Gibbs">Gibbs, Mr. George - 
+Age 89 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/1/09</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mrs._Shirley_Sunshine_Haney">Haney, Miss Shirley 
+Sunshine - Age 71 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/8/09</b></font></p>
+<p align="left"><b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"></b><font size="4"><b><a target="_self" href="#Mr._Leonard_Herdzik">Herdzik, 
+Mr. Leonard - Age 88 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/30/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mr._John_Hillard_Holloway">Holloway, Mr. John Hillard - 
+Age 64 - Detroit, AL</a>&nbsp;&nbsp;&nbsp; 11/16/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mr._James_Monroe_Jordan">Jordan, Mr. James Monroe - Age 60 - Sulligent, 
+AL</a>&nbsp;&nbsp; </b></font><b><font size="4">11/12/09</font></b></p>
+<p align="left"><font size="4"><b><a target="_self" href="#Mr._Dayton_Lawler">
+Lawler, Mr. Dayton - Age 96 - Hodges, AL</a>&nbsp;&nbsp;&nbsp; 11/28/09</b></font></p>
+<p align="left"><font size="4"><b><a target="_self" href="#Mrs._Lomar_McCarley">
+McCarley, Mrs. Lomar Ethel - Age 79 - Hackleburg, AL</a>&nbsp;&nbsp;&nbsp; 11/8/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mr._C.B._Bernard_Shackelford">Shackelford, Mr. C.B. 
+&quot;Bernard&quot; - Age 75 - Hackleburg, AL</a>&nbsp;&nbsp;&nbsp; 11/12/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mrs._Lena_Mae_Wiley_Spearman">Spearman, Mrs. Lena Mae 
+Wiley - Age 63 - Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/12/09</b></font></p>
+<p align="left"><b><font size="4">
+<a href="obitsoctober2009.html#Ms._Annie_M._Stone">Stone, Ms. Annie M. - Age 92 
+- Detroit, AL</a>&nbsp;&nbsp; 10/31/09</font></b></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mrs._Mattie_G._Stone">Stone, Mrs. Mattie G. - Age 82 - 
+Hamilton, AL</a>&nbsp;&nbsp;&nbsp; 11/9/09</b></font></p>
+<p align="left"><font size="4"><b>
+<a target="_self" href="#Mrs._Ollie_Vee_Stidham_Thomas">Thomas, Mrs. Ollie Vee 
+Stidham - Age 77 - Huntsville, AL&nbsp; (Formerly of Hackleburg, AL)</a>&nbsp;&nbsp;&nbsp; 
+11/13/09</b></font></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p><hr>
+<p align="left"><b><font size="5"><a name="Mr._George_Gibbs">Mr. George Gibbs</a></font></b></p>
+<p align="left"><b>George Gibbs, age 89, of Hamilton, Alabama passed away 
+Sunday, November 1, 2009 at Hendrix Health Care and Rehabilitation Center in 
+Double Springs, Alabama.</b></p>
+<p align="left"><b>Visitation, 2:00 - 3:00 p.m., Monday, November 2, 2009 at the 
+Hamilton Funeral Home Chapel.&nbsp; Funeral service, 3:00 p.m., Monday, November 
+2, 2009 at the Hamilton Funeral Home Chapel.&nbsp; Burial in 
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=2223623&CScn=Hamilton&CScntry=4&CSst=3&CScnty=72&">Hamilton Memory 
+Gardens</a>.</b></p>
+<p align="left">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p align="left">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Gibbs_George.html">
+PRINT OBITUARY</a></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+<p align="left"><b><font size="5">Mr. <a name="Odell_Frederick">Odell Frederick</a></font></b></p>
+<p align="left"><b>Odell Frederick, age 81, of Hackleburg, Alabama, passed away 
+Thursday, November 5, 2009 at home.</b></p>
+<p align="left"><b>Visitation, 6:00 - 8:00 p.m., Friday, November 6, 2009 at the 
+Hamilton Funeral Home.&nbsp; Funeral service, 2:00 p.m., Saturday, November 7, 
+2009 at the Hamilton Funeral Home Chapel.&nbsp; Burial in 
+<a target="_blank" href="http://maps.google.com/?sll=34.27694,-87.9075&spn=0.05,0.05">Rocky Top Cemetery</a>.</b></p>
+<p align="left">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p align="left">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Frederick_Odell.html">
+PRINT OBITUARY</a></p>
+<p align="left"><i><font size="5"><a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b><font size="5">
+<a name="Mr._James_Gann">Mr. James Edward Gann</a></font></b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>James Edward Gann, age 62 of 
+Hamilton, Alabama, passed away Monday night, November 9, 2009, at his residence.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Visitation, 6:00 - 8:00 
+p.m., Wednesday night, November 11, 2009 at the Hamilton Funeral Home Chapel.&nbsp; 
+Funeral service, 2:00 p.m., Thursday, November 12, 2009 at the Hamilton Funeral 
+Home Chapel.&nbsp; Kenneth Baker and Elvis Cochran officiating.&nbsp; Burial in
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=25266&CScn=Palmer+&CScntry=4&CSst=3&CScnty=72&">
+Palmer Cemetery</a>.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>Mr. Gann was born May 4, 
+1947, in Marion County, Alabama, to the late James Earling and Dorothy Mae 
+Palmer Gann.&nbsp; He was disabled.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>He is survived by 3 sisters 
+and 1 brother, Diane (Jerry) Abbott, Stevie (Brenda) Gann, Patricia (Paul) 
+Mansell, and Sharon (David) Lewis; and a host of nieces, nephews, and friends.</b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><b>He was preceded in death by 
+his wife, Irene Gann, parents, Earling and Dorothy Gann; 3 brothers, 1 sister; 
+and 1 nephew.&nbsp;&nbsp; </b></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Gann_James_Edward.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mrs._Lomar_McCarley">Mrs. Lomar Ethel McIber McCarley</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Lomar Ethel McIber McCarley, age 79 of 
+Hackleburg, Alabama, passed away Sunday night, November 8, 2009, at Marion 
+Regional Medical Center.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation,&nbsp;6:00 - 9:00 
+p.m., Tuesday, November 10, 2009 at Hackleburg First Baptist Church.&nbsp; 
+Funeral service, 2:00 p.m., Wednesday, November 11, 2009 at the Hackleburg First 
+Baptist Church.&nbsp; Steve Lawrence and Wade Wallace officiating.&nbsp; Burial 
+in 
+<a target="_blank" href="http://www.epodunk.com/cgi-bin/genInfo.php?locIndex=69329">Cedar Tree Cemetery</a>, 
+Hackleburg, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. McCarley was born 
+September 27, 1930, in Florida, to the late Perry and Mattie (Unknown) McIber.&nbsp; 
+Mrs. McCarley was a Retired Town Clerk.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by 2 
+daughters, Gwen (Randall) Frederick, and Rita Youngblood (Barry); her 
+son-in-law, Alan Nix; 5 grandchildren, Brandi Frederick, Leah Frederick, 
+Jonathan Nix, Sara Nix, and Maghan Youngblood.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She was preceded in death by 
+her husband, Huey A. McCarley, and daughter, Debbie Nix.&nbsp;&nbsp;&nbsp;&nbsp;
+</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/McCarley_Lomar_Ethel.html">PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mrs._Shirley_Sunshine_Haney">Miss Shirley Sunshine Haney</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Shirley Sunshine Haney, age 
+71, of Hamilton, Alabama, passed away Sunday night, November 8, 2009, at her 
+residence.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 10:00 - 11:00 
+a.m., Wednesday morning, November 11, 2009 at the Hamilton Funeral Home Chapel.&nbsp; 
+Funeral service, 11:00 a.m., Wednesday morning, November 11, 2009 at the Hamilton Funeral 
+Home Chapel.&nbsp; Elvis Cochran officiating.&nbsp; Burial in Flint, Michigan.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Shirley Sunshine Haney was 
+born February 17, 1938, in Atlas, Michigan, to Kenneth James Haney and Violet 
+Hannah &quot;Hannar&quot; Moore.&nbsp; She never worked.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by her 
+mother, Violet Baldwin; 1 sister, Norma Stuart, Texas; 4 half brothers, William 
+Baldwin and John Baldwin, Haleyville, AL., Brice Baldwin, Missouri, and Gary Baldwin Alcorn, 
+Michigan; 2 
+step-brothers, Charles Baldwin and Tony Baldwin; 1 step-sister, Kathryn Baldwin 
+Atkins; an aunt, Maude L. Daniels, Michigan; a 
+host of nieces and nephews, and caretaker, Jean Bailey.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Haney_Shirley_Sunshine.html">PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><font size="5"><b>
+<a name="Mrs._Mattie_G._Stone">Mrs. Mattie G. Stone</a></b></font></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mattie G. Stone, age 82, of 
+Hamilton, Alabama, passed away Monday 9, 2009 at Daniel Health Care Center.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation,&nbsp;5:00 - 8:00 
+p.m., Tuesday, November 10, 2009 at New Mt. Carmel Baptist Church, Hodges, AL.&nbsp; 
+Funeral service, 11:00 a.m., Wednesday, November 11, 2009 at the New Mt. Carmel 
+Baptist Church, Hodges, AL.&nbsp; Tony Woods officiating.&nbsp; Burial in
+<a target="_blank" href="http://www.epodunk.com/cgi-bin/genInfo.php?locIndex=71961">
+New Mt. Carmel Cemetery</a>.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mattie G. Stone was born May 
+17, 1927, in Alabama, to George Oliver and his wife whose maiden name was Taylor 
+(mother's first name not listed).&nbsp; Mrs. Stone was married to James Stone 
+and prior to retirement, she worked in a factory.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by her 
+husband, James Stone; 1 son, Wade Stone; 1 daughter-in-law, Alberta Stone; 
+granddaughter, Lisa Masengale; 2 great-grandchildren, Kelsie Murphy, and Kyle 
+Murphy.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She was preceded in death by 
+1 son, Jessie Stone.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Stone_Mattie_G.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._James_Dewey_Glenn">Mr. James Dewey Glenn</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>James Dewey Glenn, age 68, 
+of Hackleburg, Alabama, passed away Saturday, November 7, 2009 at his residence.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 6:00 - 9:00 
+p.m., Monday, November 9, 2009, at New Hope Church, Hamilton, AL.&nbsp; Funeral 
+service, 2:00 p.m., Tuesday, November 10, 2009, at New Hope Church.&nbsp; Elvis 
+Cochran and Walter Jaggers officiating.&nbsp; Burial in
+<a target="_blank" href="http://www.epodunk.com/cgi-bin/localList.php?local=12065&locTGroup=Cemeteries&direction=down&sec=0&qty=171&stateAbbv=&stateName=">
+New Hope Cemetery</a>.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Glenn was born August 8, 
+1941 to the late Dewey and Ethel Anderson Glenn.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by 7 sisters 
+and 3 brothers, Rosa Whisenant, Jimmy Glenn, Jerry Glenn, Roy Glenn, Barbara 
+Gann, Dorothy Anglin, Lillie Whitsell, Mary McCarley, Mae Terry, &amp; Carolyn 
+Prestage; and a host of nieces and nephews.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Glenn_James_Dewey.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obituaries%20Text_Oct_Nov_Dec_2009/vet_fffffflag.gif" width="32" height="32"><b><font size="5"><a name="Mr._James_Monroe_Jordan">Mr. 
+James Monroe Jordan</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>James Monroe Jordan, age 60, 
+of Sulligent, Alabama, passed away Thursday, November 12, 2009 in the North 
+Mississippi Medical Center in Tupelo,, MS.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 6:00 - 9:00 
+p.m., Saturday, November 14, 2009, at Chandler Funeral Home, Vernon, AL.&nbsp; 
+Funeral service, 1:30 p.m., Sunday, November 15, 2009, at Chandler Funeral Home, 
+Vernon, AL.&nbsp; Charles Bellew and Carlos Dean officiating. Burial in 
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=22915&CScn=Friendship+South&CScntry=4&CSst=3&CScnty=63&">Friendship South Cemetery</a>, 
+between Sulligent and Vernon, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>James was born January 16, 
+1949 in Lamar County, AL. to Audine Morrow Jordan and the late Harold Bernard 
+Jordan. He was a Heavy Equipment Operator.&nbsp; He was a Veteran of the U.S. 
+Army and served in Viet Nam.&nbsp; James enjoyed hunting and fishing.&nbsp; He 
+was a lifetime member of Friendship South Baptist Church and a member of the 
+American Legion.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his 
+mother, Audine Morrow Jordan, Sulligent, AL.; 1 brother, Harold (Donna) Jordan, 
+Sulligent, AL.; 1 son, Michael Jordan, Villa Rica, GA.; 1 daughter, Ashley 
+Guthrie, Villa Rica, GA.; 2 grandchildren, Jordan, Villa Rica, GA., and Camden 
+Guthrie, Villa Rica, GA.; and many other friends and relatives.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+his father, Harold Bernard Jordan.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i><b>Personal Note:&nbsp; 
+Thanks to Chandler Funeral Home of Vernon, AL. for sending this obituary.&nbsp; 
+James Jordan was my second cousin but he and his brother have been more like 
+first cousins due to the closeness of our ages. (Judy Webb Mays)</b></i></p>
+<p class="MsoNormal" style="text-align: justify"><b><i>Chandler Funeral Home, 
+P.O. Box 310, Hwy. 18 W., Vernon, AL. 35592 - 205-695-7628 / Fax 205- 695-1803.</i></b></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_self" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Jordan_James_Munroe.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify">
+<img border="0" src="../../Obituaries%20Text_Oct_Nov_Dec_2009/vet_fffffflag.gif" width="32" height="32"><b><font size="5"><a name="Mr._C.B._Bernard_Shackelford">Mr. 
+C.B. &quot;Bernard&quot; Shackelford</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>C.B. &quot;Bernard&quot; Shackelford, 
+age 75, of Hackleburg, Alabama, passed away Thursday, November 12, 2009 at St. 
+Vincent's Hospital in Birmingham, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 6:00 - 9:00 
+p.m., Saturday, November 14, 2009 at the Hackleburg Church of Christ.&nbsp; 
+Funeral service 2:00 p.m., Sunday, November 15, 2009 at the Hackleburg Church of 
+Christ.&nbsp; W. T. Allison and Mike Lane officiating.&nbsp; Burial in 
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=22039&CScn=Cedar+Tree&CScntry=4&CSst=3&">Cedar 
+Tree Cemetery</a> in Hackleburg.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Shackelford was born 
+November 2, 1934 in Marion County, Alabama, to the late A.T. and Geneva Garner 
+Shackelford.&nbsp; He was a Veteran of the U.S. Armed Forces and a Retired 
+Electrician.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Betty Jackson Shackelford; daughter, Pam (Rodger) Burleson; granddaughter, Ame 
+(Kenneth) Johnsey; grandson, Bart (Beth) Burleson; son, Barney (Teresa) 
+Shackelford; grandson, Brian (Natasha) Shackelford, Alyssa, Trenton and Caden; 
+granddaughter, Kristie (Eric) Baker, Kaleb and Madison; daughter, Che' (Joel) 
+Abbott; brother, Ed (Sue) Shackelford, Leory (Melanie) Raffel, Amber, Levi &amp; 
+Chance; sister, Shirley (Michael) Watson; sister-in-law, Haskell (Bob) 
+Shackelford, Tony (Jane) Shackelford, Jas' and Colby; brother-in-law, David 
+(Ann) Smith, Tami Frost, Adriana and Bryton.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Shackelford_C.B.html">
+PRINT OBITUARY</a> </p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="5"><a name="Mr._Albert_Sidney_Carter">Mr. 
+Albert Sidney Carter</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Albert Sidney Carter, age 
+82, of Hamilton, Alabama, passed away Thursday, November 12, 2009 at Marion 
+Regional Nursing Home in Hamilton, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 6:00 - 9:00 
+p.m., Fairview Freewill Baptist Church, Saturday, November 14, 2009.&nbsp; 
+Funeral service, 2:00 p.m., Sunday, November 15, 2009, at Fairview FWB Church.&nbsp; 
+Lie-in-state, 1:00 - 2:00 p.m. prior to service at the church.&nbsp; Jack Harder 
+and Van Dale Hudson officiating.&nbsp; burial in 
+<a target="_blank" href="http://www.epodunk.com/cgi-bin/genInfo.php?locIndex=70070">Fairview Cemetery</a>.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Carter was born August 
+3, 1927, in Franklin County, AL. to the late John and Myrtle King Carter.&nbsp; 
+He was a Retired Barber and was a Veteran of WWII.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Flossie Bishop Carter; 1 son, Wayne Carter; and a host of cousins.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Carter_Albert_Sidney.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mrs._Lena_Mae_Wiley_Spearman">Mrs. Lena Mae Wiley Spearman</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Lena Mae Wiley Spearman, age 
+63 of Hamilton, Alabama, passed away Thursday, November 12, 2009 at North MS 
+Medical Center.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Funeral service, 1:00 p.m., 
+Saturday, November 14, 2009 at the Hamilton Funeral Home Chapel.&nbsp; Burial in 
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=25866&CScn=Rocky+Grove&CScntry=4&CSst=3&CScnty=72&">Rocky Grove Cemetery</a>.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b><i>Reflections:</i></b></p>
+<p class="MsoNormal" style="text-align: justify"><b><i>Lena Mae Wiley, the 
+youngest of three children, was born to Fred and Legessie Wiley on September 7, 
+1946, in Fulton, Itawamba County, Mississippi.&nbsp; Lena accepted Christ at an 
+early age and united with St. Matthew's Missionary Baptist Church.&nbsp; She was 
+a 1964 graduate of East Highland High School in Fulton, MS.</i></b></p>
+<p class="MsoNormal" style="text-align: justify"><b><i>Lena and her life 
+partner, Nolan Spearman, were joined in Holy Matrimony on October 31, 1964.&nbsp; 
+Later she attended North West Community College in Hamilton, Alabama where she 
+received a degree as a Licensed Practical Nurse.&nbsp; After obtaining her 
+degree, she worked as an LPN for 26 years.</i></b></p>
+<p class="MsoNormal" style="text-align: justify"><b><i>Lena leaves to cherish 
+her memory, her daughters, Renee Ladonna Spearman of Eau Clare, Wisconsin and 
+Sherron Norita of Hamilton, Alabama; three granddaughters, Tamara Spearman, 
+Tiffany Spearman, Markisha Spearman and one great-granddaughter, Aniyah 
+Spearman, all of Hamilton, Alabama.&nbsp; A host of nieces, nephews, cousins, 
+and other relatives and friends.</i></b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i> </p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Spearman_Lena_Mae_Wiley.html">
+PRINT OBITUARY</a> </p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._R.C._Childers">Mr. R.C. Childers</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>R.C. Childers, age 64 of 
+Vina, Alabama, passed away Friday, November 13, 2009 at his residence.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, after 6:00 p.m., 
+Saturday, November 13, 2009, at Liberty Baptist Church.&nbsp; Funeral service, 
+1:00 p.m., Sunday, November 15, 2009 at Liberty Baptist Church.&nbsp; Edgar Lee 
+Childers and Marshall Emerson officiating.&nbsp; Burial in Liberty Baptist 
+Church Cemetery, Vina, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Childers was born 
+October 21, 1945 in Marion County, AL. to the late Robinette and Lillian Oliver 
+Childers.&nbsp; He was a Sewing Machine Machinist at Lance Garment.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Lena Zudy Childers; 1 son, Rusty Childers; and 1 granddaughter, Laken Childers.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+a daughter, Linda Childers; his parents, Robinette &amp; Lillian Childers; and a 
+sister, Lillian Barrett.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Childers_R_C.html">
+PRINT OBITUARY</a> </p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mrs._Ollie_Vee_Stidham_Thomas">Mrs. Ollie Vee Stidham Thomas</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Ollie Vee Stidham Thomas, 
+age 77, of Huntsville, Alabama, formerly of Hackleburg, Alabama, passed away 
+Friday, November 13, 2009 at Decatur General Hospital.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 11:00 a.m. - 
+2:00 p.m. until time of funeral service, 2:00 p.m., Monday, November 16, 2009 at 
+the Hackleburg Church of Christ.&nbsp; David Hall officiating.&nbsp; Burial in 
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=csr&CScn=Cedar+Tree&CScntry=4&CSst=3">Cedar Tree Cemetery</a> in Hackleburg, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Thomas was born 
+December 5, 1931 in Marion County, AL. to the late Lynn and Mary Evans Stidham.&nbsp; 
+She was a Homemaker.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by 1 
+daughter, Sandra Taylor; 1 son, Paul Thomas; 2 grandchildren, Stephanie Perez 
+and Noah Taylor; 1 sister, Amy Putman; and a host of nieces and nephews.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Thomas_Ollie_Vee_Stidham.html">
+PRINT&nbsp; OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._John_Hillard_Holloway">Mr. John Hillard Holloway</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>John Hillard Holloway, age 
+64, of Detroit, Alabama (formerly of Hamilton, AL), passed away Monday, November 
+16, 2009 at Marion Regional Medical Center in Hamilton, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 6:00 - 9:00 
+p.m., Thursday, November 19, 2009 at the Hamilton Funeral Home.&nbsp; Funeral 
+service, 2:00 p.m. Friday, November 20, 2009, Pleasant Site Freewill Baptist 
+Church.&nbsp; Richie Redmon, Ritchie Dubielak, and Barry Cook officiating.&nbsp; 
+Burial in
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=22266&CScn=Cooper&CScntry=4&CSst=3&CScnty=72&">Cooper Cemetery</a>.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>John Holloway was born May 
+20, 2009 in Marion County, AL. to the late Woodrow and Inez Parker Holloway.&nbsp; 
+He worked with NTN Bower as a Machine Operator.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He is survived by his wife, 
+Mary Alice Sanderson Holloway; children, Donna (Wade) Nichols, Shawn (Stephanie) 
+Holloway, and Johnny (Frances) Grant; 9 grandchildren; and 2 
+great-grandchildren.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+his parents, Woodrow and Inez Parker Holloway; 1 sister, Frances Elizabeth 
+Tucker; infant sister and grandson.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Holloway_John_Hillard.html">
+PRINT OBITUARY</a> </p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mrs._Bernice_Britnell">Mrs. Bernice Baggett Britnell</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Bernice Baggett Britnell of 
+Bear Creek, Alabama, passed away Sunday, November 15, 2009, at Lakeland 
+Community Hospital.&nbsp; </b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 6:00 - 9:00 
+p.m., Tuesday, November 17, 2009 at the Hamilton Funeral Home.&nbsp; Funeral 
+service, 2:00 p.m., Wednesday, November 18, 2009 at the Hamilton Funeral Home 
+Chapel.&nbsp; Ricky White officiating.&nbsp; Burial in Mt. Home Cemetery, Bear 
+Creek, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mrs. Britnell was born 
+November 26, 1927 in Franklin County, AL. to the late John Yance and Leona 
+McKenney Baggett.&nbsp; She was a Homemaker.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>She is survived by children, 
+J.C. Britnell, and Hollis Britnell; 9 grandchildren; 4 great-grandchildren; and 
+brother, Eugene Baggett.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, 
+AL. 205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Britnell_Bernice_Baggett.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._Randy_Avery">Mr. Randy Avery</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Randy Avery, age 50, of 
+Hamilton, Alabama, passed away Sunday, November 29, 2009 at North Mississippi 
+Medical Center in Tupelo, MS.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>A memorial service will be 
+held at 5:00 p.m., Wednesday, December 2, 2009 at the Marion County Funeral Home 
+Chapel, Hamilton, AL.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Marion County Funeral Home, 
+Hamilton, AL., assisting the family.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Avery_Randy.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._Jefferson_Davis">Mr. Jefferson Davis</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Jefferson Davis, age 82, of 
+Horn Lake, Mississippi (formerly of Hamilton, AL.), passed away Monday, November 
+30, 2009.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 12:00 - 1:00 
+p.m., Wednesday, December 2, 2009 at the Marion County Funeral Home, Hamilton, 
+AL.&nbsp; No funeral service is planned.&nbsp; Burial in
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=27057&CScn=White+House&CScntry=4&CSst=3&">
+White House Cemetery</a>.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Marion County Funeral Home, 
+Hamilton, AL., assisting the family.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Davis_Jefferson.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Ms._Patricia_A._George">Ms. Patricia A. George</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Patricia A. George, age 50, 
+of Hamilton, Alabama, passed away Monday, November 30, 2009 at Riverview 
+Regional Medical Center, Gadsden, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Arrangements will be 
+announced at a later date.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Marion County Funeral Home, 
+Hamilton, AL., assisting the family.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/George_Patricia_A.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b>
+<img border="0" src="../../Obit%20Pictures/vet_fffffflag.gif" width="32" height="32"><font size="5"><a name="Mr._Leonard_Herdzik">Mr. 
+Leonard Herdzik</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Leonard Herdzik, age 88, of 
+Hamilton, Alabama, passed away Monday, November 30, 2009 at Marion Regional 
+Medical Center in Hamilton, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 12:00 - 2:00 
+p.m., Wednesday, December 2, 2009 at the Marion County Funeral Home in Hamilton, 
+Alabama.&nbsp; Funeral service, 2:00 p.m., Wednesday, December 2, 2009 at the 
+Marion County Funeral Home Chapel in Hamilton, Alabama, following visitation.&nbsp; 
+Burial, with Military Honors, in
+<a target="_blank" href="http://www.findagrave.com/cgi-bin/fg.cgi?page=cr&CRid=2223623">
+Hamilton Memory Gardens</a> in Hamilton, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><i>Marion County Funeral Home, 
+Hamilton, AL., assisting the family.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Herdzik_Leonard.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._Dayton_Lawler">Mr. Dayton Lawler</a></font></b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Dayton Lawler, age 96, of 
+Hodges, Alabama, passed away Saturday, November 28, 2009 at Marion Regional 
+Nursing Home in Hamilton, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Visitation, 5:00 - 8:00 
+p.m., Sunday, November 29, 2009 at the Hamilton Funeral Home.&nbsp; Funeral 
+service, 2:00 p.m., Monday, November 30, 2009 at the Hodges Church of Christ.&nbsp; 
+Steve Gober officiating.&nbsp; Burial in
+<a target="_blank" href="http://www.epodunk.com/cgi-bin/genInfo.php?locIndex=72067">
+Mt. Olive Cemetery</a>, Hodges, Alabama.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Lawler was born July 17, 
+1913 in Marion County, Alabama to the late Steve N. and Alma Taylor Lawler.&nbsp; 
+He was a Retired Farmer.&nbsp; Dayton was a farmer and lived most of his life in 
+Hodges, Alabama, where he was a shining example of Christian Faith and loved all 
+who knew him.&nbsp; He was a member of Hodges Church of Christ.&nbsp; Dayton was 
+baptized into Christ at an early age.&nbsp; He was always ready to lend a 
+helping hand with a smile on his face.&nbsp; After his wife Maude's death, he 
+continued to work her flower gardens and gave away flowers to all who wanted 
+them.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>Mr. Lawler is survived by 1 
+sister-in-law, Ava Lawler; 3 nieces, Clara Ann Rogers, Suzanne Smith, and Sara 
+Dee McIlvane; and a host of nieces, nephews, friends, and his special Church 
+family.</b></p>
+<p class="MsoNormal" style="text-align: justify"><b>He was preceded in death by 
+his parents, Steve N. and Alma Taylor Lawler; his wife, Maude Glen Lawler; 3 
+brothers, Walker Lawler, Guy Lawler, and Toy Lawler.</b></p>
+<p class="MsoNormal" style="text-align: justify">
+<i>Hamilton Funeral Home directing, 150 Falcon Circle., P.O. Box 274, Hamilton, AL. 
+205-921-3197 - Fax: 205-921-3790. Hackleburg Funeral Home - P.O. Box 169, 
+Hackleburg, AL. 35564 - 205-935-3854 - Fax: 205-921-3790.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Lawler_Dayton.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: justify"><b><font size="5">
+<a name="Mr._Kenneth_Allen_Colburn,_Jr.">Mr. Kenneth Allen Colburn, Jr.</a></font></b><br>
+<br>
+<b>Kenneth Allen Colburn, Jr., age 23, of Adrian, Michigan, passed away, 
+November 7, 2009, in Mississippi as a result of an automobile accident.<br>
+<br>
+Visitation, 2:00 - 4:00 p.m. and 6:00 - 8:00 p.m., Friday, November 13, 2009 and 
+also on Saturday, November 14, 2009 from 9:00 a.m. until the time of service at 
+J. Gilbert Purse Funeral Home, Adrian, Michigan. Funeral service, 12:00 p.m., 
+Saturday, November 14, 2009, at J. Gilbert Purse Funeral Home, Adrian, Michigan. 
+Rev. Lloyd Jewett officiating. Burial in Oakwood Cemetery. <br>
+<br>
+He was born August 6, 1986, in Amory, Mississippi, the son of Kenneth Colburn 
+Sr. &amp; Brenda Hunt. On May 12, 2009, he married Sierra Rojo, she survives. In 
+addition to his wife Sierra, he is survived by his children, Kenneth Allen 
+Colburn III, Ava Jade Rojo-Colburn and Gabriella Lanai Colburn; his parents 
+Kenneth (Lisa) Colburn, Sr. and Brenda Hunt; 1 sister, Christina (Anthony Perez) 
+Colburn; 1 brother, Maurice Tyler Colburn; and several aunts, uncles, cousins 
+and friends. <br>
+<br>
+He was preceded in death by his grandmother, Quilla Colburn-Wigginton and his 
+grandfather, Maurice Colburn.</b><br>
+<br>
+<i>J. Gilbert Purse Funeral Home, Adrian, Michigan directing.</i></p>
+<p class="MsoNormal" style="text-align: justify">
+<a target="_blank" href="../../Obituaries%20Text_Oct_Nov_Dec_2009/Colburn_Jr_Kenneth_Allen.html">
+PRINT OBITUARY</a></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify"><i><font size="5">
+<a href="#Obituaries">Top of Page</a></font></i></p>
+<hr>
+
+<p class="MsoNormal" style="text-align: center"><i><font size="6"><b><a href="../../obituaries.html">Back To 
+Obituaries Page</a></b></font></i></p>
+
+<p align="center"><i>Copyright:&nbsp; <a href="http://www.49countynews.net">
+www.49countynews.net</a> 2009</i></p>
+
+</body>
+
+</html>

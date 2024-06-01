@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<META HTTP-EQUIV="Last-Modified"  CONTENT="Sunday, 10-Jan-1999 11:11:11 GMT">
+<META HTTP-EQUIV="Expires"  CONTENT="Sunday, 10-Jan-1999 11:11:11 GMT">
+<!-- ®RM500¯®PL100¯®TS3,6,9,12,13,15¯ -->
+<html><head><title>The Journalist's Creed</title>
+<SCRIPT language="JavaScript" src="INDEX.js"></SCRIPT>
+<link href="index.css" rel=stylesheet type="text/css"></link>
+<head><body 
+	onload="setup();"
+	onbeforeunload="kill_kids();">
+
+<div 100% border id="help_head" class="pop_head" >
+	<nobr><center>
+	<font id="top_title">Journalist's Creed Translations from 
+	<a href="https://mdn.org/" style="color:#ddf" >MDN.ORG</a>
+	</font>
+
+</div>
+
+<center><h2>The Journalist's Creed</h2>
+
+<b>Languages:&nbsp;</b><select id="s_lang" onchange="set_language();">
+	<option value="ENG">English</option>
+	<option value="CAT">Catalan</option>
+	<option value="CEB">Cebuano</option>
+	<option value="CHN">Chinese</option>
+	<option value="CRO">Croatian</option>
+	<option value="FRC">French</option>
+	<option value="HIN">Hindi</option>
+	<option value="IDN">Indonesian</option>
+	<option value="ITL">Italian</option>
+	<option value="LIT">Lithuanian</option>
+	<option value="POL">Polish</option>
+	<option value="ROM">Romanian</option>
+	<option value="SLV">Slovak</option>
+	<option value="SWA">Swahili</option>
+	<option value="ESP">Spanish</option>
+	</select>
+&nbsp;&nbsp;&nbsp;
+<b>Format:&nbsp;</b><select id="s_format" onchange="set_format();">
+	<option value="S">Printable Scroll</option>
+	<option value="H">HTML</option>
+	</select>
+&nbsp;&nbsp;&nbsp;
+<span id="plaque_format_span">See Print Controls <a href="#controls">Below</a></span>
+&nbsp;&nbsp;&nbsp;
+<button onclick="load_help();">Notes & Help</button>
+<p>
+<iframe 	id="bio_iframe" name="bio_iframe" src="eng-b.htm"
+	onload="setTimeout('get_by()',10);"
+	frameBorder="0" allowTransparency="true"></iframe>
+
+<div Xstyle="clear:both;">
+<iframe 	id="plaque_iframe" name="plaque_iframe" src="eng-s.htm"
+	onload="setTimeout('format_iframe()',10);"
+	XframeBorder="0" allowTransparency="true"></iframe>
+</div>
+
+<div id="div_byline"></div>
+
+<center id="plaque_format_div"><a name="controls"></a>
+<div id="plaque_format_head">Printing Format Controls - Number or * for Default</div>
+<div class="spacer">
+<button id="plaque_print_button" onclick="do_creed_print();">Print It</button>
+<button id="page_button" onclick="show_page();">Show Print Area</button>
+<button onclick="use_default();">Use Default Settings</button>
+<button onclick="use_options();">Use Your Entered Settings</button>
+<button onclick="load_help();">Notes & Help</button>
+</div>
+<div class="spacer">
+<input type=checkbox id="check_up" onclick="do_case(true);">Uppercase
+&nbsp;&nbsp;&nbsp;
+<input type=checkbox id="justify_it" onclick="do_justify(true);">Justify
+&nbsp;&nbsp;&nbsp;
+<input type=checkbox id="color_it" onclick="do_color();">Color
+&nbsp;&nbsp;&nbsp;
+<input type=checkbox id="add_byline" onclick="add_translator();">Add translator
+</div>
+
+<table style="margin:0; padding:0" >
+<tr align=right>
+<th align=right><b>Font Sizes (pixels) - </b>
+	<td>Left top: <input class="i_size" id="f_size1">
+	<td>Left middle: <input class="i_size" id="f_size2">
+	<td>Left bottom: <input class="i_size" id="f_size3">
+	<td>Right: <input class="i_size" id="f_size4">
+
+<tr align=right>
+	<th align=right><b>Character Spacing (pixels) - </b>
+	<td>Left top: <input class="i_size" id="f_size5">
+	<td>Left middle: <input class="i_size" id="f_size6">
+	<td>Left bottom: <input class="i_size" id="f_size7">
+	<td>Right: <input class="i_size" id="f_size8">
+<tr align=right>
+<th><th colspan=3><hr><th>
+
+<tr align=right>
+<th align=right><b>Left Column Vertical Location (pixels) - </b>
+	<td colspan=2>Left top and middle: 
+		<select id="v_loc" Xonchange="do_left_vloc();"><option>Bottom</option><option>Middle</option><option>Top</option></select>&nbsp;&nbsp;
+	<td>Left bottom:&nbsp;<input class="i_size" id="f_size9">
+	<td>
+
+<tr align=right>
+<th><th colspan=3><hr><th>
+
+<tr align=right>
+
+<th align=right><b>Line Height (pixels) - </b>
+	<td>
+	<td>Left middle: <input class="i_size" id="f_size10">
+	<td>
+	<td>Right: <input class="i_size" id="f_size11">
+
+<tr align=right>
+<th align=right><b>Column Widths (inches) - </b>
+	<td colspan=2>Left: <input class="i_size" id="f_size12">
+	<td colspan=2>Right: <input class="i_size" id="f_size13">
+
+<tr align=right>
+<th align=right><b>Column Height Adjustments (pixels) - </b>
+	<td colspan=2>Left: <input class="i_size"  id="f_size14" Xvalue="-99">
+	<td colspan=2>Right: <input class="i_size" id="f_size15" Xvalue="-99">
+
+<tr align=right>
+<th><th colspan=3><hr><th>
+	
+
+<tr align=right>
+<th align=right><b>Print Area (inches) - </b>
+	<td colspan=2>Top padding: <input class="i_size" id="f_size16">
+	<td>Width: <input class="i_size" id="f_size17">
+	<td>Height: <input class="i_size" id="f_size18">
+</table>
+
+<div style="display:none">
+<input id="f_size19"><input id="f_size20">	
+<input id="f_size21"><input id="f_size22">	
+
+</div>
+
+<p>
+
+</center></div>
+
+<!-- #include virtual="/ADDINS/BOT0.HTM"-->
+
+
+
+</body ></html>
+
+
