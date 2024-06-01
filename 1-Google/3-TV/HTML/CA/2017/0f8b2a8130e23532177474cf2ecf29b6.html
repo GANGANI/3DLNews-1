@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Editorials</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #000000;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	color: #000;
+	text-align: center;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+	text-align: center;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #42413C;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	text-align: left;
+	font-weight: normal;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 990px;
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #0000FF;
+	text-align: center;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: right;
+	width: 180px;
+	background: #FFFFFF;
+	padding-bottom: 10px;
+}
+.content {
+
+	padding: 10px 0;
+	width: 780px;
+	float: right;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #FFFFFF;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #0000FF;
+	color: #FFF; 
+/*	background: #FFFFFF;
+	color: #000; */
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background: #0000FF;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.container .content table tr td {
+	text-align: center;
+}
+.container .header table tr th {
+	color: #FFF;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 100%;
+	text-align: center;
+}
+.container .header table {
+	text-align: center;
+}
+.container .sidebar1 .nav li table tr th {
+	text-align: left;
+}
+-->
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+    <table width="991" border="0">
+      <tr>
+        <th width="1004" height="217" scope="col"><table width="983" border="5">
+          <tr>
+            <td width="300"><a href="http://kzgn.net"><img src="images/KZGN 1.jpg" alt="Home" width="300" height="200" /></a></td>
+            <td width="369"><img src="images/flag2.jpg" width="350" height="200" /></td>
+            <td width="300"><a href="http://www.guns4us.com" target="_new"><img src="images/Blank Business Card.JPG" width="300" height="200" alt="GUNS4US Inc" longdesc="http://www.guns4us.com" /></a></td>
+          </tr>
+        </table></th>
+      </tr>
+    </table>
+    <table width="981" border="0">
+      <tr>
+        <th width="200" scope="col">&nbsp;</th>
+        <th width="552" scope="col"><marquee behavior="scroll" direction="left"> </marquee></th>
+        <th width="200" scope="col">&nbsp;</th>
+      </tr>
+    </table>
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+<li><a href="index.html">Home</a></li>
+<li><a href="http://kzgn.net/about.html">About Us</a></li>
+<li><a href="http://kzgn.net/news.html">News</a></li>
+<li><a href="http://www.kzgn.net/sports.html">Sports</a></li>
+<li><a href="http://kzgn.net/schedule.html">Schedule</a></li>
+      <li><a href="http://kzgn.net/contact.html">Contact</a>      </li>
+      <li><a href="http://kzgn.net/submit.html">Submit A News Tip/Photo</a></li>
+</ul>
+    <p><a href="http://iwvtvbooster.org/" target="_new"><img src="images/booster_bird.jpg" alt="Facebook" width="30" height="30" /></a><a href="https://www.facebook.com/pages/KZGN-Television-Ridgecrest-CA-93555/1380988968844711" target="_new"><img src="images/Facebook.png" alt="Facebook" width="30" height="30" /></a><a href="https://twitter.com/KZGNTV21" target="_new"><img src="images/Twitter.png" width="30" height="30" /></a><a href="https://plus.google.com/104012621864987610659" rel="publisher"><img src="images/Social_Media_Socialmedia_network_share_socialnetwork_network-16-512.png" width="30" height="30" /></a><a href="https://www.youtube.com/channel/UCaVYhQYvWC1rl3MEsOF5Kxg/videos"><img src="images/youtube_logo.jpg" width="30" height="30" /></a></p>
+  <!-- end .header --></div>
+  <div class="sidebar1">
+  <p></p>
+    <ul class="nav">
+    <li><a href="http://www.kzgn.net/stream.html"><img src="images/stream.png" width="150" height="40" /></li><li><a href="https://www.facebook.com/groups/1555927857956283/">KZGN News Discussion</a></li><li><a href="http://www.kzgn.net/weather.html" title="Weather Cam" target="_new">Weather Cam</a> </li>
+      <li><a href="http://ridgecrest-ca.gov/police-department/police-logs" title="Police Logs" target="_new">Police Logs</a></li>
+      <li><a href="http://www.petfinder.com/shelters/ridgecrest.html" title="Ridgecrest Animal Shelter" target="_new">Pet Adoption</a></li>
+      <li><a href="http://business.ridgecrestchamber.com/events" target="_new">Community</a></li>
+      <li><a href="http://kzgn.net/photos.html">KZGN Photos</a></li>
+      <li><a href="http://kzgn.net/jobs.html">KZGN Jobs</a></li>
+    </ul>
+    
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1><!-- end .content --></h1>
+    <table width="700" border="0">
+      <tr>
+      <td width="100">
+      </td>
+      <td><p><strong>Editorials</strong></p>
+        <p>(All editorials are saved by date in STUDIO TRANSCRIPT FORMAT        microsoft word .docx file format)</p>
+        <p>&nbsp;</p></td>
+      <td>&nbsp;</td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-14-16 WEB VERSION KZGN EDITORIAL.docx">6-14-2016</a> TERROR, WHO OR WHAT IS TO BLAME?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-9-16 WEB VERSION KZGN EDITORIAL.docx">6-9-2016</a> THERE ARE STILL SOME SELF PROCLAIMED RULERS OF THE REPUBLICAN PARTY TRYING TO BLOCK TRUMPS NOMINATION?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-7-16 WEB VERSION KZGN EDITORIAL.docx">6-7-2016</a> WHO IS BEHIND THE VOTER FRAUD PROBLEMS MANY STATES, INCLUDING CALIFORNIA, EXPERIENCE ON ELECTION DAYS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-2-16 WEB VERSION KZGN EDITORIAL.docx">6-2-2016</a> I DONâT UNDERSTAND WHY PEOPLE COME AND MAKE COMMENTS AT COUNCIL MEETINGS, THEN LEAVE BEFORE THEY GET THEIR QUESTIONS ANSWERED?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-26-16 WEB VERSION KZGN EDITORIAL.docx">5-26-2016</a> SHOULD TRUMP DEBATE BERNIE SANDERS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-24-16 WEB VERSION KZGN EDITORIAL.docx">5-24-2016</a> SACRAMENTO IS REALLY ATTACKING THE GUN OWNERS IN CALIFORNIA?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-19-16 WEB VERSION KZGN EDITORIAL.docx">5-19-2016</a> CASINO OPPONENTS CALL FOR OTHER NEW BUSINESS TO COME IN. I WONDER WHAT THEY ARE DOING TO HELP?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-17-16 WEB VERSION KZGN EDITORIAL.docx">5-17-2016</a> CLINTON DECLARES SHEâLL ONLY DISCUSS THE ISSUES, AND NOT GO INTO THE GUTTER. DO YOU BELIEVE THAT?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-12-16 WEB VERSION KZGN EDITORIAL.docx">5-12-2016</a> DOES THE CONSTITUTION COME INTO PLAY IN THE CASINO DECISION?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-10-16 WEB VERSION KZGN EDITORIAL.docx">5-10-2016</a> NO ONE IS DOING ANYTHING TO STOP THE SHERIFF FROM CLOSING THE JAIL IN RIDGECREST, PUTTING ALL OF OUR LIVES AT RISK!</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-5-16 WEB VERSION KZGN EDITORIAL.docx">5-5-2016</a> WHAT SHOULD THE ANTI TRUMP PEOPLE DO NOW THAT TRUMP WILL BE THE NOMINEE?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-3-16 WEB VERSION KZGN EDITORIAL.docx">5-3-2016</a> IS ANYONE DOING ANYTHING TO STOP THE LOCAL JAIL FROM CLOSURE?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-28-16 WEB VERSION KZGN EDITORIAL.docx">4-28-2016</a> WHAT WAS YOUR THOUGHTS ON WEDNESDAY NIGHTS COUNCIL TOWN HALL MEETING?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-26-16 WEB VERSION KZGN EDITORIAL.docx">4-26-2016</a> WHAT DOES EMPLOYMENT DIVERSITY IN RIDGECREST MEAN TO YOU?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-19-16 WEB VERSION KZGN EDITORIAL.docx">4-19-2016</a> SHOULD THE CITY APPROVE THE AGREEMENT FOR A NEW INDIAN CASINO IN RIDGECREST?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-14-16 WEB VERSION KZGN EDITORIAL.docx">4-14-2016</a> AS WE HEAR ABOUT DELEGATE BATTLES, IS IT TIME TO GET RID OF THE DELEGATE AND ELECTORAL COLLEGE SYSTEM OF ELECTIONS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-12-16 WEB VERSION KZGN EDITORIAL.docx">4-12-2016</a> CAN WE USE RAIN WATER TO RECHARGE THE AQUIFIER?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-7-2016 WEB VERSION KZGN EDITORIAL.docx">4-7-2016</a> DID THE CITY COUNCIL VOTE TO KEEP THE WATER FOUNTAIN ON, THE RIGHT VOTE?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-5-2016 WEB VERSION KZGN EDITORIAL.docx">4-5-2016</a> DID YOU SEE THE DISRESPECT TOWARDS OUR STATE SENATOR JEAN FULLER?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-29-2016 WEB VERSION KZGN EDITORIAL.docx">3-29-2016</a> ARE YOU HAVING A GOOD DAY, OR ASK YOURSELF, IS YOUR NEIGHBOR HAVING A GOOD DAY?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-24-2016 WEB VERSION KZGN EDITORIAL.docx">3-24-2016</a> WILL THE REPUBLICAN ESTABLISHMENT GO TO FAR TO CIRCUMVENT THE WILL OF THE PEOPLE?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-17-2016 WEB VERSION KZGN EDITORIAL.docx">3-17-2016</a> DID YOU NOTICE MEXICAN FLAGS BEING WAVED IN THE CHICAGO PROTESTS LAST WEEK?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-15-2016 WEB VERSION KZGN EDITORIAL.docx">3-15-2016</a> IS TRUMP TO BLAME FOR THE VIOLENCE AT HIS RALLIES?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-10-2016 WEB VERSION KZGN EDITORIAL.docx">3-10-2016</a> DO YOU AGREE WITH THE DEMOCRAT STATEMENTS ABOUT THE BORDER CONTROL IN WEDNESDAYS DEBATE?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-8-2016 WEB VERSION KZGN EDITORIAL.docx">3-8-2016</a> DO LIBERALS UNDERSTAND THE ANGER FROM THE CONSERVATIVES?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-3-2016 WEB VERSION KZGN EDITORIAL.docx">3-3-2016</a> WARNING TO WASHINGTON ESTABLSHMENT PEOPLE.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-25-2016 WEB VERSION KZGN EDITORIAL.docx">2-25-2016</a> CLINTON RECEIVING POLITICAL FINANCIAL HELP FROM PEOPLE OUTSIDE OF THE U.S. SHOULD MONEY FROM OUTSIDE THE U.S. BE ALLOWED TO INFLUENCE OUR PRESIDENTIAL CAMPAIGNS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-23-2016 WEB VERSION KZGN EDITORIAL.docx">2-23-2016</a> What about Fox News? Why wonât the Democrat presidential candidates accept any debate offers from Fox News??</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-18-2016 WEB VERSION KZGN EDITORIAL.docx">2-18-2016</a> Will we get a new Supreme Court judge during the Obama administration?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-9-2016 WEB VERSION KZGN EDITORIAL.docx">2-9-2016</a> The city council questions the sheriffâs decision to close the Ridgecrest jail Wednesday evening at city hall. Is our safety at risk?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-4-2016 WEB VERSION KZGN EDITORIAL.docx">2-4-2016</a> THE CITY COUNCIL NEEDS TO GET ANGRY AND FIGHT THE SHERIFFâS DECISION TO CLOSE THE RIDGECREST JAIL. OUR SAFETY IS AT RISK?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-2-2016 WEB VERSION KZGN EDITORIAL.docx">2-2-2016</a> WHATâS THE DIFFERENCE BETWEEN CLINTON AND SANDERS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-28-2016 WEB VERSION KZGN EDITORIAL.docx">1-28-2016</a> WHAT EVER HAPPENED TO THE OLD ADAGE, IF YOU DO THE CRIME, THEN YOU HAVE TO DO THE TIME?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-26-2016 WEB VERSION KZGN EDITORIAL.docx">1-26-2016</a> What are the effects of raising the minimum wage?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-21-2016 WEB VERSION KZGN EDITORIAL.docx">1-21-2016</a> Should a private company have a voting seat on the new GSA?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-19-2016 WEB VERSION KZGN EDITORIAL.docx">1-19-2016</a> Can differing political positions be argued without people resorting to personal attacks?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-14-2016 WEB VERSION KZGN EDITORIAL.docx">1-14-2016</a> Obama blames âwe the peopleâ for Washington gridlock in his state of the union speech.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-12-16 WEB VERSION KZGN EDITORIAL.docx">1-12-2016</a> Is there still anyone out there that believes the refugees pose no threat to us?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-5-16 WEB VERSION KZGN EDITORIAL.docx">1-5-2016</a> Upcoming State of the Union & State of California speeches</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-31-2015 WEB VERSION KZGN EDITORIAL.docx">12-31-2015</a> Happy New Year! Any New Yearâs resolutions anyone?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-22-15 WEB VERSION KZGN EDITORIAL.docx">12-22-2015</a> We say Merry Christmas here, as well as other greetings.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-17-15 WEB VERSION KZGN EDITORIAL.docx">12-17-2015</a> Are drunk driving check points a good thing?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-15-15 WEB VERSION KZGN EDITORIAL.docx">12-15-2015</a> SHOULD A WHOLE SCHOOL SYSTEM BE SHUT DOWN DUE TO SOME THREAT?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-10-15 WEB VERSION KZGN EDITORIAL.docx">12-10-2015</a> Just think. What if just one person attending that party in San Bernardino, had been armed with a concealed weapon?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-8-15 WEB VERSION KZGN EDITORIAL.docx">100TH Editorial - 12-8-2015</a> IS IT NOW CLEAR THAT WOMEN CAN BE TERRORISTS TOO?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-1-15 WEB VERSION KZGN EDITORIAL.docx">12-1-2015</a> IS IT POSSIBLE TO DISCUSS NATIONAL SECURITY WHEN IT COMES TO KEEPING OUT PEOPLE THAT WANT TO KILL US, WITHOUT PERSONAL ATTACKS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/11-17-15 WEB VERSION KZGN EDITORIAL.docx">11-17-2015</a> Has President Obama lost touch with reality?</p></td>
+      <td></td>
+      </tr>
+       <tr>
+      <td></td>
+      <td><p><a href="docs/11-12-15 WEB VERSION KZGN EDITORIAL.docx">11-12-2015</a> Is political correctness more important than free speech?</p></td>
+      <td></td>
+      </tr>
+       <tr>
+      <td></td>
+      <td><p><a href="docs/11-10-15 WEB VERSION KZGN EDITORIAL.docx">11-10-2015</a> Obamaâs illegal executive order blocked by a U.S. federal court.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/11-5-15 WEB VERSION KZGN EDITORIAL.docx">11-5-2015</a> The city did the right thing approving their intent to participate in the new groundwater sustainability agency.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/11-3-15 WEB VERSION KZGN EDITORIAL.docx">11-3-2015</a> Important: the council will discuss the new state-mandated groundwater sustainability agency on Wednesday evening. Yes, you heard me right. The council is going to start discussing this GSA agency tomorrow evening.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-29-15 WEB VERSION KZGN EDITORIAL.docx">10-29-2015</a> Is anyone else upset with the lack of prosecutions from the Obama justice department?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-27-15 WEB VERSION KZGN EDITORIAL.docx">10-27-2015</a> Warning: you need to know what is going on with the new state mandated groundwater sustainability agency!</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-22-15 WEB VERSION KZGN EDITORIAL.docx">10-22-2015</a> Do you think we learned anything new from the Benghazi hearing?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-20-15 WEB VERSION KZGN EDITORIAL.docx">10-20-2015</a> What do you think is the biggest threat to America compared with our presidential candidatesâ stated fears?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-15-15 WEB VERSION KZGN EDITORIAL.docx">10-15-2015</a> More talk about Mental Illness associated with Guns.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-13-15 WEB VERSION KZGN EDITORIAL.docx">10-13-2015</a> Will this new California voter registration law at DMV create voter fraud?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-8-15 WEB VERSION KZGN EDITORIAL.docx">10-8-2015</a> What new gun laws could be written to stop the types of school shootings we have seen lately?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-6-15 WEB VERSION KZGN EDITORIAL.docx">10-6-2015</a> The chickens are coming, to your next door neighborâs yard soon!</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/10-1-15 WEB VERSION KZGN EDITORIAL.docx">10-1-2015</a> Are we headed to warâ¦â¦â¦.maybe even the prophesized 3rd world war?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-29-15 WEB VERSION KZGN EDITORIAL.docx">9-29-2015</a> Should Kevin McCarthy get the speaker position?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-24-15 WEB VERSION KZGN EDITORIAL.docx">9-24-2015</a> WHY ARE THE POLICE GUILTY OF OFFENSE, WHEN JUST ONE PERSON FEELS THEY ARE TREATED WRONG?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-22-15 WEB VERSION KZGN EDITORIAL.docx">9-22-2015</a> Do any of you believe that extremist terrorists may be in these waves of immigrants coming out of the Middle East into Europe?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-17-15 WEB VERSION KZGN EDITORIAL.docx">9-17-2015</a> What did you think about last nightâs republican presidential debate?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-15-15 WEB VERSION KZGN EDITORIAL.docx">9-15-2015</a> What do you expect to see from Wednesdayâs republican presidential debate and some thoughts on the upcoming democrat debate?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-10-15 WEB VERSION KZGN EDITORIAL.docx">9-10-2015</a> What does fair and balanced in news mean to you?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-8-15 WEB VERSION KZGN EDITORIAL.docx">9-8-2015</a> Why does this administration enforce some laws, and ignore others?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-3-15 WEB VERSION KZGN EDITORIAL.docx">9-3-2015</a> IS CNN CORRECT IN CHANGING THE CRITERIA FOR THE NEXT REPUBLICAN DEBATE?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/9-1-15 WEB VERSION KZGN EDITORIAL.docx">9-1-2015</a> My response to your comments on the last editorial titled: Was Trump out of line throwing out Univision reporter?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-27-15 WEB VERSION KZGN EDITORIAL.docx">8-27-2015</a> Was Trump out of line throwing out Univision reporter?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-25-15 WEB VERSION KZGN EDITORIAL.docx">8-25-2015</a> How about a group editorial?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-20-15 WEB VERSION KZGN EDITORIAL.docx">8-20-2015</a> Last night, Mayor Breeden asked for the people to not only let them know when they are doing something wrong, but please also let them know when they are doing something right.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-18-15 WEB VERSION KZGN EDITORIAL.docx">8-18-2015</a> Should the city council reduce the police force from 32 to 28 sworn officers?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-13-15 WEB VERSION KZGN EDITORIAL.docx">8-13-2015</a> Is the road ending for Hillary Clintonâs run for president because of email gate?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-11-15 WEB VERSION KZGN EDITORIAL.docx">8-11-2015</a> WHAT DID YOU THINK ABOUT CONGRESSMAN MCCARTHYâS VISIT LAST WEEK? AND WHERE WERE THE CITY COUNCIL MEMBERS?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-6-15 WEB VERSION KZGN EDITORIAL.docx">8-6-2015</a> Do you support the 25mph speed limit on China Lake Blvd. in the construction zones?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/8-4-15 WEB VERSION KZGN EDITORIAL.docx">8-4-2015</a> Should the city officially support tax increases the state wants to add to our gas and licenses fees?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-30-15 WEB VERSION KZGN EDITORIAL.docx">7-30-2015</a> What do you think about Fox NewsâBill OâReilly pushing Congress to approve 3 laws--passing Kateâs Law; stopping federal funding to sanctuary cities; and for Planned Parenthood?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-28-15 WEB VERSION KZGN EDITORIAL.docx">7-28-2015</a> Whatâs all the fuss over Trump?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-23-15 WEB VERSION KZGN EDITORIAL.docx">7-23-2015</a> Should active duty military people be armed at the job sites?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-21-15 WEB VERSION KZGN EDITORIAL.docx">7-21-2015</a> Should Kateâs Law be passed?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-16-15 WEB VERSION KZGN EDITORIAL.docx">7-16-2015</a> Are you ready to have chickens in your neighborâs yard?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-14-15 WEB VERSION KZGN EDITORIAL.docx">7-14-2015</a> Why is Donald Trump gaining ground in the Republican primary?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-9-15 WEB VERSION KZGN EDITORIAL.docx">7-9-2015</a> Whoâs to blame for another possible government shutdown over spending priorities?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/7-7-2015 WEB VERSION KZGN EDITORIAL.docx">7-7-2015</a> Should the city of Ridgecrest annex land along its southern border and along S. China Lake Blvd. out to route 395?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-30-15 WEB VERSION KZGN EDITORIAL.docx">6-30-2015</a> Should doctors ask patients about guns in their homes?</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-25-15 WEB VERSION KZGN EDITORIAL.docx">6-25-2015</a> Should the United States and other nations offer Iran high-tech reactors and other state-of-the-art equipment?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-23-15 WEB VERSION KZGN EDITORIAL.docx">6-23-2015</a> Should the confederate flag be removed from the South Carolina state capitol grounds?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-18-15 WEB VERSION KZGN EDITORIAL.docx">6-18-2015</a> Do you realize the city raised our sewer fees 50% last night?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-16-15 WEB VERSION KZGN EDITORIAL.docx">6-16-2015</a> Was the first city council town hall effective?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-11-15 WEB VERSION KZGN EDITORIAL.docx">6-11-2015</a> Should you have to wait to purchase a gun when you need it for self-defense?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-9-15 WEB VERSION KZGN EDITORIAL.docx">6-9-2015</a> Do we hear more about race now than we did just 7 years ago?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-4-15 WEB VERSION KZGN EDITORIAL.docx">6-4-2015</a> Should elected officials be forced to participate in internet social media sites?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/6-2-15 WEB VERSION KZGN EDITORIAL.docx">6-2-2015</a> Should low-income people pay lower fines for tickets and other violations, than the rest of the people?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-28-15 WEB VERSION KZGN EDITORIAL.docx">5-28-2015</a> Are decisions made at council meetings based on politics, solid engineering data, or both?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-26-15 WEB VERSION KZGN EDITORIAL.docx">5-26-2015</a> What are the potential issues concerning a new groundwater sustainability agency?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-21-15 WEB VERSION KZGN EDITORIAL.docx">5-21-2015</a> Should the city waive legal costs for the Dale Howard code enforcement case?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-19-15 WEB VERSION KZGN EDITORIAL.docx">5-19-2015</a> Should police departments be prohibited of accessing excess military equipment for their departments?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-15-15 WEB VERSION KZGN EDITORIAL.docx">5-15-2015</a> What did you think of the blame game in Washington yesterday?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-12-15 WEB VERSION KZGN EDITORIAL.docx">5-12-2015</a> How should the county vote on the land use management plan tomorrow?</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-7-15 WEB VERSION KZGN EDITORIAL.docx">5-7-2015</a> Does anyone think our state and federal executives are overstepping their authority?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/5-5-15 WEB VERSION KZGN EDITORIAL.docx">5-5-2015</a> Should the city fund private industry, only to get sued by one of those companies?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-28-15 WEB VERSION KZGN EDITORIAL.docx">4-28-2015</a> What is causing all these incidents with police departments?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-21-15 WEB VERSION KZGN EDITORIAL.docx">4-21-2015</a> Is it OK for parents to dictate to their children's friends' parents what gifts to bring for a birthday party?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-16-15 WEB VERSION KZGN EDITORIAL.docx">4-16-2015</a> Did the council do the right thing last night in not offering support for the Kern County Land Use Management Plan?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/4-2-15 WEB VERSION KZGN EDITORIAL.docx">4-2-2015</a> Can we trust information on the Internet?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-31-15 WEB VERSION KZGN EDITORIAL.docx">3-31-2015</a> Continued discussion of communications with the council.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-26-15 WEB VERSION KZGN EDITORIAL.docx">3-26-2015</a> Should we change the face on the $20 bill?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-19-15 WEB VERSION KZGN EDITORIAL.docx">3-19-2015</a> Do we need a certain criteria for the city to approve memorial plaques or naming of facilities for a person?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-17-15 WEB VERSION KZGN EDITORIAL.docx">3-17-2015</a> Is it Ok to do something wrong now, If someone earlier did it and got away with it?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-12-15 WEB VERSION KZGN EDITORIAL.docx">3-12-2015</a> Should a family that has a concealed carry weapons permit be prohibited from taking in foster children?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-10-15 WEB VERSION KZGN EDITORIAL.docx">3-10-2015</a> What does it take to get the media to cover a real hero?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-5-15 WEB VERSION KZGN EDITORIAL.docx">3-5-2015</a> Two different child raising theories: Open range and helicopter.</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/3-3-15 WEB VERSION KZGN EDITORIAL.docx">3-3-2015</a> Are we really now making stadium construction decisions with worries of terrorist attacks?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-24-15 WEB VERSION KZGN EDITORIAL.docx">2-24-2015</a> Should the county hold their public hearing for the county environmental impact report?</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-19-15 WEB VERSION KZGN EDITORIAL.docx">2-19-2015</a> "THE FACEBOOK DISCUSSION GROUPS ARE SATURATED WITH ISIS DISCUSSIONS"</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-17-15 WEB VERSION KZGN EDITORIAL.docx">2-17-2015</a> What do you think about median art on China Lake Blvd?</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-12-15 WEB VERSION KZGN EDITORIAL.docx">2-12-2015</a> Sheriff Says He Wants To Close The Ridgecrest Jail.</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-10-15 WEB VERSION KZGN EDITORIAL.docx">2-10-2015</a> New Ridgecrest Measure L Committee Starts Up</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-5-15 WEB VERSION KZGN EDITORIAL.docx">2-5-2015</a> What's up with this draft environmental impact report everyone is receiving?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/2-3-15 WEB VERSION KZGN EDITORIAL.docx">2-3-2015</a> Why does it matter whether we call terrorist groups "extremist terrorists" or "armed insurgents"?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-29-15 WEB VERSION KZGN EDITORIAL.docx">1-29-2015</a> City Council Meetings Decorum</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-27-15 WEB VERSION KZGN EDITORIAL.docx">1-27-2015</a> City Committee and Commission Appointments</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-22-15 WEB VERSION KZGN EDITORIAL.docx">1-22-2015</a> Continuing Concern About Councilmember Lori Acton's Employment</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-20-15 WEB VERSION KZGN EDITORIAL.docx">1-20-2015</a> Potential conflict of interest concerning council member Lori Acton?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-15-15 WEB VERSION KZGN EDITORIAL.docx">1-15-2015</a> Terrorist Attacks--What does Assimilation Have To Do With Them?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-8-15 WEB VERSION KZGN EDITORIAL.docx">1-8-2015</a> High speed rail breaks ground, California's bridge to nowhere?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/1-6-15 WEB VERSION KZGN EDITORIAL.docx">1-6-2015</a> Upcoming state of the union & state of California speeches</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-30-14 WEB VERSION KZGN EDITORIAL.docx">12-30-2014</a> SHOULD THE PEOPLE TAKE BACK OWNERSHIP OF THE DESERT EMPIRE FAIRGROUNDS ?</p></td>
+      <td></td>
+      <tr>
+      <td></td>
+      <td><a href="docs/12-23-14 KZGN EDITORIALWEB VERSION.docx">12-23-2014</a>        <p>Can  we say &lsquo;Merry Christmas&rsquo; and Happy Hanukkah&rsquo; without offending anyone?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-18-14 KZGN EDITORIAL WEB VERSION.docx">12-18-2014</a> Should We Reduce Council Meetings To 1 Per Month ?</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-16-14 WEB VERSION KZGN EDITORIAL.docx">12-16-2014</a> Council Town Hall and Committee Meetings</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td></td>
+      <td><p><a href="docs/12-11-14 WEB VERSION KZGN EDITORIAL.docx">12-11-2014</a> Volunteers in America and Ridgecrest</p></td>
+      <td></td>
+      </tr>
+      <tr>
+      <td>
+      </td>
+      <td><p><a href="docs/12-9-14 WEB VERSION KZGN EDITORIAL.docx">12-9-2014</a> Democracy in action</p></td>
+      <td>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      </td>
+      <td><p><a href="docs/12-2-14 WEB VERSION KZGN EDITORIAL.docx">12-2-2014</a> Getting to know the New City Council</p></td>
+      <td>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      </td>
+      <td><p><a href="docs/11-25-14 Web version  KZGN EDITORIAL.docx">11-25-2014</a> Transparency</p></td>
+      <td>
+      </td>
+      </tr>
+      <tr>
+      <td>
+      </td>
+      <td><p><a href="docs/11-20-14 web copy KZGN EDITORIAL.docx">11-20-2014</a> Property Rights</p></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><p><a href="docs/11-18-14 WEB NEW KZGN EDITORIAL SEGMENT.docx">11-18-2014</a> Introduction</p></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+</div>
+  <div class="footer">
+    <p>Wiknich Broadcasting Corporation &copy;2014, 2015, 2016, 2017</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='005d4bc3e8868df7';
+wm_page_name='editorial.html';
+wm_group_name='/services/webpages/k/z/kzgn.net/public';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+</html>

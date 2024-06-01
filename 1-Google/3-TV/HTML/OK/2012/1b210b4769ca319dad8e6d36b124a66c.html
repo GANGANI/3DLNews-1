@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+      <script src="https://cdn.blueconic.net/nexstar.js"></script>
+      <script src="https://segment.psg.nexstardigital.net/sailthru.js"></script>
+      <meta charset="utf-8">
+      <meta name="description" content="Sailthru Default Signup Page">
+      <meta name="keywords" content="Sailthru">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+  
+
+
+
+
+
+ 
+
+ 
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+
+
+<link rel="shortcut icon" type="image/png" href="https://email-media.s3.amazonaws.com/Sailthru/default/images/sailthru_icons_product_Full%20Control.png">
+<title>KFOR Signup</title>
+
+<style>
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color:#000000;
+  margin: 0;
+  background-color: #0d0d0d;
+}
+
+#wrapper {
+  font-family: 'Roboto', sans-serif;
+  padding: 0 20% 7%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+#logo {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  text-align: center;
+}
+
+.logo  {
+  width: 50%;
+  margin: 3%;
+  max-width: 311px;
+  background-color: transparent;
+  border: medium none transparent;
+}
+
+.include_footer .logo {
+  max-width: 120px;
+}
+
+#content {
+  font-family: 'Roboto', sans-serif;
+  margin: 1% auto;
+  text-align: center;
+}
+
+.checkboxes {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*fixes IE blue border issue*/
+a {
+  color: #4989F1;
+  text-decoration: none;
+  border: 0px
+}
+
+a img {
+  text-decoration: none;
+  border: 0px;
+  outline: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+  
+  
+  
+
+ul {
+  margin: 0% auto 3%;
+  max-width: 700px;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  padding: 1%;
+  margin-left: 3%;
+}
+
+input.checkbox {
+  margin-right: 17px;
+}
+
+.description {
+  color: #777777;
+  display: block;
+  margin: 1% 1% 2% 34px;
+  line-height: 1.8;
+}
+
+.newsletter_name {
+  font-weight: 900;
+  font-size: 110%;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 110%;
+  text-transform: uppercase;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form_error {
+  color: red;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 110%;
+  text-transform: uppercase;
+}
+
+p.note {
+  margin: 3% 0% 3% 0%;
+}
+
+p.form_error {
+  color: red;
+}
+
+.dropdown_list .newsletter_name {
+  margin: 1% 1% 2% 34px;
+}
+
+.dropdown_list .description {
+  margin: 1% 1% 0.5% 34px;
+}
+
+.dropdown_list #list_select {
+  margin: 0.5% 1% 2% 34px;
+  padding: 0 3%;
+}
+
+select {
+  font-size: 1em;
+  text-align: center;
+  background-color: #fff;
+  border: solid 1px #7c7c7c;
+}
+
+.date {
+  display: block;
+  font-size: 110%;
+  margin: 0 auto;
+  padding: 1%;
+  text-align: center;
+}
+
+#email {
+  display: none;
+}
+
+.input_em {
+  width: 50%;
+  height: 25px;
+  font-size: 105%;
+  margin: 1% auto;
+  text-align: center;
+  display: block;
+}
+
+.input_em_field::placeholder {
+  color: #bbb;
+  opacity: 1; /* Firefox */
+}
+
+.checkboxes_group .title {
+  margin: 1% 1% 2% 34px;
+}
+
+.checkboxes_group .description {
+  margin: 1% 1% 0.5% 34px;
+}
+
+.checkboxes_group label{
+  margin-left: 34px;
+}
+
+/* Button Styles */
+input.btn, a.btn {
+  border: none;
+  font-family:Helvetica-Bold, Helvetica, Arial, sans-serif;
+  font-size: 80%;
+  cursor: pointer;
+  padding: 3% 5%;
+  display: inline-block;
+  margin: 3%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  background: #000;
+  border: 2px solid #FFF;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-appearance: none;
+}
+
+input.btn:hover, a.btn:hover {
+  background: #FFF;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.privacy-consent-acknowledgement{
+  font-size: 12px;
+  text-align: center;
+  max-width: 613px;
+  margin: 0 auto 1em;
+}
+
+
+/* Media queries for smaller screens */
+
+@media screen and (max-width: 768px) {
+  #wrapper {
+    padding: 0 10% 7%;
+  }
+  #content {
+    width: 80%;
+  }
+  ul {
+    max-width: 100%;
+    margin: 0% 3%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #wrapper {
+    padding: 0 2% 7%;
+  }
+  #content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #content {
+    width: 100%;
+  }
+  ul {
+    margin: 1%;
+    padding: 1%;
+  }
+  li {
+   margin: 0%;
+  }
+  img.logo {
+    width: 200px;
+  }
+  .input_em {
+    width: 80%;
+    height: 25px;
+  }
+  .unsub {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #content {
+    width: 100%;
+  }
+  input.btn {
+    font-size: 50%;
+  }
+}
+
+.include_footer {
+  width: 100%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.include_footer a {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-decoration:none;
+  margin: 0 10px;
+}
+.inner_footer {
+  background-color: #0d0d0d;
+  padding-top: 20px;
+}
+@media only screen and (max-width:480px){
+  .include_footer {
+    font-size: 11px;
+  }
+  .include_footer a {
+    font-size: 11px;
+  }
+  .inner_footer {
+    padding-top: 30px;
+  }
+}
+
+</style>
+<script>function st_recaptcha_1(token) {
+    var form = document.querySelectorAll("form[data-st-form-num='1']")[0];
+    HTMLFormElement.prototype.submit.call(form);
+}</script></head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="header">
+        <div id="logo">
+          <a href="https://kfor.com"><img class="logo" src="https://kfor.com/wp-content/uploads/sites/3/2020/01/cropped-ON4-Logo-800x245-2.png" alt="KFOR.com"></a>
+        </div>
+    </div> <!-- end header -->
+
+  <div id="content">
+    <p class="note">Choose the newsletters that interest you and we will deliver them directly to your inbox.</p>
+
+   <form method="post" onsubmit="" data-st-form-num="1">
+    <input type="hidden" name="vars[last_sub_date]" value="2024-05-30">
+    <label><input name="email" type="text" id="email"></label> 
+    <label>Email Address: <input name="email" type="text" class="input_em input_em_field" placeholder="example@example.com" autofocus></label> 
+    
+    <p class="note form_error" id="form_suggestion"></p>
+
+
+
+
+
+  
+  <div class="checkboxes">
+        <span><h3>KFOR Newsletters</h3></span>
+          <p class="note"></p>
+           <ul>
+                   <li class="list"> <label class="checkbox_label">
+           <input type="checkbox" class="checkbox" name="lists[Daily News]" value="true">
+           <span class="newsletter_name">KFOR Morning Headlines</span>
+           
+               <span class="description">Make sure you are up-to-date with the latest top stories each weekday morning.<br><i>Delivered Monday through Friday.</i> </span>
+            
+            </label>
+           </li>
+                   <li class="list"> <label class="checkbox_label">
+           <input type="checkbox" class="checkbox" name="lists[Breaking News]" value="true">
+           <span class="newsletter_name">KFOR News Alerts</span>
+           
+               <span class="description">Don't miss out on the biggest stories of the day! KFOR News Alert emails provide you with a detailed story on breaking, developing, big stories, and special reports.<br><i>Delivered when big news breaks.</i> </span>
+            
+            </label>
+           </li>
+                  </ul>
+        </div> <!--END checkboxes-->
+
+        <!--END checkbox groups -->
+  
+
+  
+
+  
+
+  
+
+            <input type="hidden" name="brand" value="KFOR">
+            <input type="hidden" name="vars[source]" value="sailthru_signup_page">
+            <input type="hidden" name="vars[website_signup]" id="website_signup_field" value="">
+            <input type="hidden" name="vars[privacy_consent_acknowledged]" value="July 2023 Notice on Preference Center Page">
+            <input type="submit" name="submit" value="Sign Up" class="btn st-recaptcha" data-callback="st_recaptcha_1"><noscript>
+    <input type="hidden" name="st_no_js" value="1">
+</noscript>
+            <p class="privacy-consent-acknowledgement">
+              By signing up, I agree to the Terms of Use, have reviewed the Privacy Policy, and to receive personalized offers and communications via email, on-site notifications, and targeted advertising using my email address from KFOR, Nexstar Media Inc., and its affiliates.
+            </p>
+        <input type="hidden" name="profile_id" value=""><input type="hidden" name="st_form_num" value="0"></form>
+
+      </div>  <!--END content-->
+    </div> <!-- END wrapper -->
+
+<div class="include_footer">
+  <div class="inner_footer">
+    <div><a href="https://kfor.com"><img class="logo" src="https://kfor.com/wp-content/uploads/sites/3/2020/01/cropped-ON4-Logo-800x245-2.png" alt="KFOR.com"></a></div>
+    <div>
+      <div style="margin: 10px 0 20px; padding: 0 0 20px; border-bottom:1px solid rgba(255, 255, 255, 0.3); display: inline-block;">Copyright &copy; 2024 Nexstar Media Inc.</div>
+      <div style="padding: 0 0 40px;"><a target="_blank" href="https://www.nexstar.tv/privacy-policy/">Privacy Policy</a> | <a target="_blank" href="https://www.nexstar.tv/terms-of-use/">Terms of Use</a></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    var inputHidden = document.getElementById("email"); // hidden input for bots
+    var inputField = document.getElementsByClassName('input_em_field')[0];
+    var submitBtn = document.getElementsByClassName('btn')[0];
+    var errorMsg = document.getElementById('form_suggestion');
+    var checkboxes = document.getElementsByClassName('checkbox');
+    const listDropdown = document.getElementById('list_select');
+
+    updateWebsiteSignupSource();
+
+    submitBtn.addEventListener('click', function (event) {
+        var checkedOption = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+        var formError = false;
+
+        if (inputHidden.value != "" || null) { formError = true; } // bot
+        else if (!validateEmail(inputField.value)) { errorMsg.innerHTML = "Please enter a valid email"; formError = true; }
+        else { if (!checkedOption && !document.getElementById('list_select').value) { errorMsg.innerHTML = "Please select a newsletter"; formError = true; }}
+
+        if (formError) event.preventDefault();
+    });
+
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    // Update the vars[website_signup] input if the website_signup URL parameter is present.
+    function updateWebsiteSignupSource() {
+        const urlQuery = window.location.search;
+        if (urlQuery) {
+          const urlParams = new URLSearchParams(urlQuery);
+          const websiteSignupParam = urlParams.get("website_signup");
+          const websiteSignupField = document.getElementById('website_signup_field');
+          if (websiteSignupParam !== "") {
+            websiteSignupField.value = websiteSignupParam;
+          }
+        }
+    }
+
+    // Multi select dropdown menu
+    // Update hidden checkbox fields when dropdown menu changes
+    listDropdown.addEventListener('change', (event) => {
+      const listSelectItems = document.querySelectorAll('.list_select_hidden');
+      const options = event.target.options;
+      const len = options.length;
+
+      listSelectItems.forEach((listItem) => {
+        // Set all lists to unchecked (unsubscribe)
+        listItem.checked = false;
+      });
+      for (let i = 0; i < len; i++) {
+        // If select value is selected and is not 'None'
+        if (options[i].selected && options[i].value) {
+          // Set hidden checkbox field to checked (subscribe) for dropdown list selected
+          document.querySelector('.list_select_hidden[name="' + options[i].value + '"]').checked = true;
+        }
+      }
+    });
+  </script>
+
+</body>
+</html><script type="text/javascript">function st_recaptcha_onload() {
+    const submitButtons = window.self.document.querySelectorAll(".st-recaptcha");
+    for (var i = 0; i < submitButtons.length; i++) {
+        submitButtons[i].addEventListener('click', function (e) {
+            if (e.defaultPrevented) {
+                e.stopImmediatePropagation();
+            }
+        });
+        grecaptcha.render(submitButtons[i], {'sitekey': '6Lf8zqgoAAAAAFUUkcOQ6F63JUDRJdiz_4BCIDPj'});
+    }
+}</script><script src="https://www.google.com/recaptcha/api.js?onload=st_recaptcha_onload&amp;render=explicit" async="" defer></script>

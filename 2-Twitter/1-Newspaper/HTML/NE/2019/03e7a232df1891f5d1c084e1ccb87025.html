@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BetterBNC&reg;  :: Contestant Login</title>
+<!--<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">-->
+<meta http-equiv="Content-Type" content="text/html;charset=latin1">
+<link href="/favicon.ico" type="image/x-icon" rel="icon" /><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" /><script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script><script type="text/javascript" src="/js/jquery.timers-1.2.js"></script><script type="text/javascript" src="/js/jquery.form.js"></script><script type="text/javascript" src="/js/jquery.colorbox.js"></script><script>
+
+  var $j = jQuery.noConflict();
+  var $ = jQuery.noConflict();
+
+  function show_terms_use(user_type)
+  {
+       var url = '/open_contestants/showterms/';
+       //tb_show('Terms of use', url+user_type, '',false,user_type);
+       $.colorbox({title:'Terms of use',href:url+user_type,iframe:true, width:"80%", height:"80%"});
+  }
+
+  function show_notification()
+  {
+      var url = '/open_contestants/show_popup/';
+      //tb_show('New Contest Approval', url+'?width=600&height=500', '');
+      $.colorbox({title:'New Contest Approval',href:url,iframe:true, width:"80%", height:"80%"});
+  }
+  function show_social_media_popup()
+  {
+      var url = '/newspapers/show_social_media_popup/';
+     // tb_show('Social Media Contact Information', url+'?width=600&height=500', '');
+	   $.colorbox({title:'Social Media Contact Information',href:url,iframe:true, width:"50%", height:"50%"});
+  }
+  function show_naja_terms_popup()
+  {
+     var url = '/newspapers/show_naja_terms_popup/';
+     
+	 $.colorbox({title:'Terms',href:url,iframe:true, width:"50%", height:"50%"});
+  }
+	function naja_popup_action()
+	{
+		
+	 var url = '/newspapers/naja_popup_action/';
+
+	 $.post(url, {'status': status}, 
+						function (data) {
+
+							if (undefined != data) {
+									location.reload();
+							}}
+						);	
+	}
+function social_popup_action(status)
+{
+ 					var url = '/newspapers/social_popup_action/' + new Date().getTime();
+                        $.post(url, {'status': status}, 
+						function (data) {
+                          
+                            if (undefined != data) {
+								if(status==1)
+								{
+									
+																		window.location = "/newspapers/managerpage";
+																		}
+								else
+								{	
+										
+									$.colorbox.close();
+									}
+								
+								}
+                            }
+                        );	
+	}
+	
+  function show_cnpa_popup(logout)
+  {
+      var url = '/newspapers/show_cnpa_popup/'+logout;
+     // tb_show('Social Media Contact Information', url+'?width=600&height=500', '');
+	   $.colorbox({title:'Important Information',href:url,iframe:true, width:"50%", height:"50%"});
+  }
+  
+function cnpa_popup_action(status)
+{
+				var url = '/newspapers/cnpa_popup_action/' + new Date().getTime();
+                        $.post(url, {'status': status}, 
+						function (data) {
+                          
+                            if (undefined != data) {
+								
+							if(status==1)
+								{
+									window.location = "/newspapers/logout";
+									}
+							else if(status==2)
+								{
+									window.location = "https://betternewspapercontest.com/entry_fee_calculations/home";
+									}		
+								else
+								{
+									$.colorbox.close();
+									}
+									
+								}
+                            }
+                        );	
+	}
+</script>
+<script type="text/javascript" src="/js/bnc.js"></script><script type="text/javascript" src="/js/entriesNew.js"></script><link rel="stylesheet" type="text/css" href="/css/cake.generic.css" /><link rel="stylesheet" type="text/css" href="/css/main.css" /><link rel="stylesheet" type="text/css" href="/css/bootstrap.css" /><link rel="stylesheet" type="text/css" href="/css/fonts/Exo2.css" /><link rel="stylesheet" type="text/css" href="/css/responsive.css" /><link rel="stylesheet" type="text/css" href="/css/colorbox.css" /><script>
+var show_terms_use_var=0;
+</script>
+<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+<body>
+<div class="grayStrip">
+		<div class="container">
+				<div class="row">
+<div class="col-xs-12">
+								<ul class="grayStripIcon pull-left">
+										<li><a href="http://www.betterbncsupport.com" target="_blank"><span>Help &amp; Support</span></a></li>
+										
+								</ul>
+
+
+								<!--/*<ul class="socialIcon pull-right">
+			
+						<li class="facebook"><a href="https://www.facebook.com/pages/Betterbnc-Online-Contest-Platform/488924931253553?ref_type=bookmark"  target="_blank"></a></li>
+						<li class="twitter"><a href="https://twitter.com/contestplatform"  target="_blank"></a></li>
+								</ul>*/-->
+</div>
+				</div>
+		</div>
+</div>
+<div class="whiteStrip">
+	<div class="container">
+<div class="row">
+<div class="col-xs-12 text-center"><a href="#"> 
+ <img class="logo" src="/img/logo.png" /></a>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-wrapper">
+<div role="navigation" class="navbar navbar-inverse navbar-static-top">
+												<button type="button" class="navbar-toggle pull-right collapsed" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+												<div class="clearfix"></div>
+												<div class="navbar-collapse collapse NavpRight">
+														<ul class="nav navbar-nav">
+														    <li><a href="/" title="home">Home</a></li>
+                                 <!--User specific links start-->
+                                  
+                                                                      <li><a href="/login" title="contestant login">contestant login</a></li>
+                                 
+                                                                  <li><a href="/judges/login">Judges Login</a></li>
+                                
+                        		                                    <li> <a href="/open_contestants/login" title="Open Call Login">Open Call Login</a></li>
+                                  
+                                                                <li><a href="/contests/find_contest">Find Contests</a></li>
+     	        </ul>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="clearfix"></div>
+		</div>
+</div>
+<!-- start Content -->
+
+
+<!--Don't remove line bellow-->
+
+
+<div class="container innerPage" style="min-height:500px;">
+  
+
+
+<noscript><b>You do not have JavaScript enabled</b>. Please enable Javascript before continuing.</noscript>
+<script type="text/javascript">
+
+function onContest() {
+  var id = $j("#NewspaperContestId option:selected");
+
+  if(id.val()=='undefined' || id.val()==''){
+  var id=$j('#contest_id option:selected');
+  }
+
+
+  if(id.val() == '') {
+    return;
+  }
+  else if(id.val() == 278 || id.val()==279 || id.val()==280 || id.val()==289 || id.val()==290){
+  	window.location.href="http://betternewspapercontest.com/version3/login&?id="+id.val();
+  }
+  else if(id.val() == 681 || id.val()==682){
+      window.location.href="http://betternewspapercontest.com/version4.4/login&?id="+id.val();
+  }
+    var type=1;
+    //type=$j('#loginas1').val();
+    $j('#loginas').attr('value',type);
+
+
+    $j("#newsWrapper").hide();
+    $j("#newsWrapper").load('/newspapers/get_newspapers/' + id.val() +'/'+type);
+    $j("#newsWrapper").show();
+
+}
+
+function onContest_ent() {
+  var id = $j("#NewspaperEntNewspaperId option:selected");
+
+  if(id.val()=='undefined' || id.val()==''){
+  var id=$j('#e_contest_id option:selected');
+  }
+
+
+  if(id.val() == '') {
+    return;
+  }
+  else if(id.val() == 278 || id.val()==279 || id.val()==280 || id.val()==289 || id.val()==290){
+  	window.location.href="http://betternewspapercontest.com/version3/login&?id="+id.val();
+  }
+  else if(id.val() == 681 || id.val()==682){
+      window.location.href="http://betternewspapercontest.com/version4.4/login&?id="+id.val();
+  }
+    var type=2;
+    //type=$j('#loginas1').val();
+    $j('#loginas').attr('value',type);
+
+    $j("#newsWrapper_entrant").hide();
+    $j("#newsWrapper_entrant").load('/newspapers/get_newspapers/' + id.val() +'/'+type);
+    $j("#newsWrapper_entrant").show();
+}
+
+function forgot() {
+	$j('#NewspaperLogin').attr('action', '/newspapers/forgot');
+	$j('#NewspaperLogin').submit();
+
+	//$j('#NewspaperLogin').attr('action', '/newspapers/forgot');
+	//$j('#NewspaperLogin').submit();
+	return true;
+}
+function forgotAE() {
+	$j('#NewspaperLoginAE').attr('action', '/newspapers/forgotAE');
+	$j('#NewspaperLoginAE').submit();
+
+	//$j('#NewspaperLogin').attr('action', '/newspapers/forgot');
+	//$j('#NewspaperLogin').submit();
+	return true;
+}
+function selectType(type){
+  $j('#loginas1').attr('value',type);
+  if(type==1){
+    onContest();
+  }else{
+    onContest_ent();
+  }
+
+}
+
+</script> 
+<!--CODE BY Amit chandan -->
+<!--CODE BY Amit chandan END-->
+<div role="tabpanel">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+				<li  id='cm' role="presentation"  class="active" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab" onclick="selectType('1');">Contestant Manager</a></li>
+				<li  id='en' role="presentation" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" onclick="selectType('2');">Authorized Entrant</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+    <input type="hidden" id="loginas1" value="1" />
+				<div role="tabpanel" class="tab-pane paddingTopBottom20 active" id="home">
+          <form id="NewspaperLogin" method="post" action="/login"><fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>          <input type="hidden" name="data[Newspaper][type]" id="loginas_n" value="1" />
+						<div class="col-xs-6" id='NewspaperContestId'>
+								 <div class="input select"><label for="NewspaperContestId">Select a Contest</label><select name="data[Newspaper][contest_id]" size="15" style="width:450px"  onchange="onContest()" id="NewspaperContestId">
+<option value="">Choose</option>
+<option value="1605">2019 Demo Better Newspaper Contest</option>
+<option value="2276">2023 MAB Broadcast Excellence Awards</option>
+<option value="2390">2024 Canadian Community Newspaper Awards</option>
+<option value="2252">2024 CCPRO Awards</option>
+<option value="2392">2024 CMA Pinnacles</option>
+<option value="2378">2024 IBAcademics Student Silver Dome Awards</option>
+<option value="2377">2024 IBA Silver Dome Awards</option>
+<option value="2394">2024 IHSPA Fall Yearbook (Iowa)</option>
+<option value="2380">2024 IHSPA Harvey Awards</option>
+<option value="2311">2024 JACC NorCal Publications Contest</option>
+<option value="2312">2024 JACC SoCal Publications Contest</option>
+<option value="2381">2024 KAB Station Awards</option>
+<option value="2396">2024 Kentucky KBA Excellence in Broadcasting Awards</option>
+<option value="2335">2024 McCormick Foundation High School Media Awards</option>
+<option value="2361">2024 Oklahoma SPJ Contest</option>
+<option value="2328">2024 WNPA (WA) BNC</option>
+<option value="2385">FSPA Spring 2024 Convention Contests</option>
+<option value="2318">FSPA Spring 2024 Digital Contests</option>
+<option value="2388">NNPA FUND MESSENGER AWARDS 2024</option>
+<option value="2355">NSPA (High School) 2024 Individual Awards</option>
+</select></div>						</div>
+						<div class="col-xs-6">
+								<div class="form-group">
+									<div id="newsWrapper">
+                                        </div>
+								</div>
+								<div class="clearfix"></div>                <div class="input password required"><label for="NewspaperPwd">Password</label><input type="password" name="data[Newspaper][pwd]" class="form-control" style="width:60%" value="" id="NewspaperPwd" /></div>								<div class="clearfix"></div>
+								<div class="width60Per paddingTopBottom10"><a class="pull-left" onclick="forgot();" href="#">Forgot Password?</a> 
+                           &nbsp;    &nbsp;    &nbsp;    &nbsp;  &nbsp;    &nbsp;    &nbsp;    &nbsp;&nbsp;    &nbsp;    &nbsp;    &nbsp;   &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;     <a href="https://betternewspapercontest.com/open_contestants/login ">Open call login</a>                             
+                                  <div class="clearfix"></div></div>
+								<div class="clearfix"></div>
+                <input type="submit" value="Login" />						</div>
+						<div class="clearfix"></div>
+            </form>
+				</div>
+				<div role="tabpanel" class="tab-pane " id="profile">
+        <div>&nbsp;</div>
+         <form id="NewspaperLoginAE" method="post" action="/login"><fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>         <input type="hidden" name="data[Newspaper][type]" id="loginas_e" value="2" />
+						<div class="col-xs-6" id='EntarntContestId'>
+								 <div class="input select"><label for="e_contest_id">Select a Contest</label><select name="data[Newspaper][contest_id]" id="e_contest_id" size="15" style="width:450px"  onchange="onContest_ent()">
+<option value="">Choose</option>
+<option value="1605">2019 Demo Better Newspaper Contest</option>
+<option value="2276">2023 MAB Broadcast Excellence Awards</option>
+<option value="2390">2024 Canadian Community Newspaper Awards</option>
+<option value="2252">2024 CCPRO Awards</option>
+<option value="2392">2024 CMA Pinnacles</option>
+<option value="2378">2024 IBAcademics Student Silver Dome Awards</option>
+<option value="2377">2024 IBA Silver Dome Awards</option>
+<option value="2394">2024 IHSPA Fall Yearbook (Iowa)</option>
+<option value="2380">2024 IHSPA Harvey Awards</option>
+<option value="2311">2024 JACC NorCal Publications Contest</option>
+<option value="2312">2024 JACC SoCal Publications Contest</option>
+<option value="2381">2024 KAB Station Awards</option>
+<option value="2396">2024 Kentucky KBA Excellence in Broadcasting Awards</option>
+<option value="2335">2024 McCormick Foundation High School Media Awards</option>
+<option value="2361">2024 Oklahoma SPJ Contest</option>
+<option value="2328">2024 WNPA (WA) BNC</option>
+<option value="2385">FSPA Spring 2024 Convention Contests</option>
+<option value="2318">FSPA Spring 2024 Digital Contests</option>
+<option value="2388">NNPA FUND MESSENGER AWARDS 2024</option>
+<option value="2355">NSPA (High School) 2024 Individual Awards</option>
+</select></div>						</div>
+						<div class="col-xs-6">
+								<div class="form-group">
+										<div id="newsWrapper_entrant">
+                                        </div>
+								</div>
+								<div class="clearfix"></div>
+                <div class="input password required"><label for="NewspaperPwd">Password</label><input type="password" name="data[Newspaper][pwd]" class="form-control" style="width:60%" value="" id="NewspaperPwd" /></div>								<div class="clearfix"></div>
+								<div class="width60Per paddingTopBottom10"><a class="pull-left" onclick="forgotAE();" href="#">Forgot Password?</a> 
+                           &nbsp;    &nbsp;    &nbsp;    &nbsp;  &nbsp;    &nbsp;    &nbsp;    &nbsp;&nbsp;    &nbsp;    &nbsp;    &nbsp;   &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;    &nbsp;     <a href="https://betternewspapercontest.com/open_contestants/login ">Open call login</a><div class="clearfix"></div></div>
+								<div class="clearfix"></div>
+                <input type="submit" value="Login" div="" />						</div>
+						<div class="clearfix"></div>
+            </form>
+            <div>&nbsp;</div>
+        </div>
+		</div>
+</div>
+
+
+<script type="text/javascript">
+$j(document).ready(function(){
+    onContest();
+    onContest_ent();
+});
+</script></div>
+<div class="clearfix"></div>
+<!-- End Content -->
+	<div class="footerLink">
+	<div class="container ">
+
+		<div class="row">
+<ul>
+<li><a href="/about">About Us</a></li>
+<li><a href="http://03a5fa4.netsolhost.com/WordPress/advisory-group/" target="_blank">Advisors</a></li>
+<li><a href="/testimonials">Testimonials</a></li>
+<li><a href="http://betterbncblog.com" target="_blank">Blog</a></li>
+<li><a href="/contacts/contact_us">Contact Us</a></li>
+<li><a href="/admin/admin_users/login">Admin</a></li>
+				</ul>
+		</div>
+
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="copyRight">
+	<div class="container">
+	<div class="text-center">
+		<div class="row">
+			<div class="col-xs-12"> Copyright(C); 2007-<script type="text/javascript">var today = new Date();var year = today.getYear();if(year<1000) year+=1900;document.write(year);</script> SmallTownPapers, Inc. All Rights Reserved. BetterBNC&reg; version 5.7 .<a href="/open_contestants/terms" class="ajax cboxElement">Terms of Use</a>
+                           <!-- <a href="/open_contestants/terms" class="ajax">Terms of Use</a>--></div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<script type="text/javascript" src="/js/bootstrap.js"></script><script>
+	$('.carousel').carousel({
+		interval: 10000
+	})
+</script>
+
+<script type="text/javascript">
+ /* var gaJsHost = (("https:" == document.location.protocol) ?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  try {
+    var pageTracker = _gat._getTracker("UA-7834075");
+    pageTracker._trackPageview();
+  }catch(err) {} */
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7834075-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<script type="text/javascript">
+$j(".ajax").colorbox({title:'Terms of use',iframe:true, width:"80%", height:"80%"});
+</script>
+</body>
+</html>

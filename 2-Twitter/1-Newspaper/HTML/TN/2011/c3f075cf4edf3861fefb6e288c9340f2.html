@@ -1,0 +1,1080 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xmlns:og="https://opengraphprotocol.org/schema/"
+xmlns:fb="https://www.facebook.com/2008/fbml">
+<head><title>
+	Memphis Daily News - Name & Property Search - Business, Government, Politics, News, Public Records, Public Notices, Crime Report, Neighborhood Report, Marketing Lists, Research
+</title>
+        <link rel="stylesheet" type="text/css" href="/combres.axd/siteCss/-896010326/"/>
+    
+    <style type="text/css">
+        div#main
+        {
+            -moz-box-shadow: #d7d7d7 0px 0px 10px 5px;
+            -webkit-box-shadow: #d7d7d7 0px 0px 10px 5px;
+        }
+        #navsearch .textbox
+        {
+            width: 150px;
+        }
+    </style>
+    <link rel="shortcut icon" href="/favicon.ico" /><link rel="apple-touch-icon" href="/images/favicon-mobile.png" /><link href="../NewsFeed.aspx" type="application/rss+xml" rel="alternate" title="Memphis Daily News" /><meta http-equiv="content-script-type" content="text/javascript" /><meta property="fb:admins" content="613215397,587675848,503230858,1541682960,100000452984180,1380219258,1830462861,615652902" /><meta property="fb:app_id" content="437594366272577" />
+        <script type="text/javascript" src="/combres.axd/siteJs/942085671/"></script>
+    
+    <script type='text/javascript' src='https://partner.googleadservices.com/gampad/google_service.js'></script>
+    <script type="text/javascript">
+        function toggleLoginPopup() {
+            if (jQuery("#login-popup").is(":visible")) {
+                jQuery('#login-popup').slideUp('fast');
+            }
+            else {
+                jQuery('#login-popup').slideDown('fast', function () { jQuery('.login-focus').focus(); });
+            }
+        }
+        jQuery().ready(function ($) {
+            $("a#login-link").click(function (e) {
+                toggleLoginPopup();
+                return false;
+            });
+            $("a#close-login").click(function () {
+                toggleLoginPopup();
+            });
+        });
+    </script>
+    
+    <script type='text/javascript'>
+        GS_googleAddAdSenseService("ca-pub-5652580931778189");
+        GS_googleEnableAllServices();
+    </script>
+    <script type='text/javascript'>
+        GA_googleAddSlot("ca-pub-5652580931778189", "LeaderBoard");
+        GA_googleAddSlot("ca-pub-5652580931778189", "home-billboard");
+        GA_googleAddSlot("ca-pub-5652580931778189", "Right-Square-1");
+        GA_googleAddSlot("ca-pub-5652580931778189", "Right-Square-2");
+        GA_googleAddSlot("ca-pub-5652580931778189", "Right-Square-3");
+        GA_googleAddSlot("ca-pub-5652580931778189", "Right-Square-4");
+        GA_googleAddSlot("ca-pub-5652580931778189", "CR-PromoSpot");
+        GA_googleAddSlot("ca-pub-5652580931778189", "TDN//TMN-PromoSpot");
+    </script>
+    <script type='text/javascript'>
+        GA_googleFetchAds();
+    </script>
+    
+    
+    <meta name="robots" content="noindex" />
+    <script type="text/javascript">
+        jQuery().ready(function ($) {
+            $("[id$='_FromDateTextBox']").datepicker();
+            $("[id$='_ToDateTextBox']").datepicker();
+            $("[id$='_FromDateTextBox2']").datepicker();
+            $("[id$='_ToDateTextBox2']").datepicker();
+            $("#NameAddressForm").tabs();
+            $("#Results").tabs();
+
+            $("#aspnetForm").submit(function () {
+                $('input.submit').click(false);
+                $('input.submit').attr('value', 'Searching');
+            });
+        });
+    </script>
+    <style type="text/css">
+        .error
+        {
+            margin: 10px;
+            color: Red;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #NameForm, #AddressForm
+        {
+            font-size: 11px;
+        }
+        #teaser
+        {
+            background-image: url('/images/search-bg.jpg');
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            margin-top: -140px;
+            padding: 150px 300px 5px 5px;
+            min-height: 200px;
+        }
+        .silver-bg
+        {
+            background-image: url('/images/gradient.gif');
+            background-repeat: repeat-x;
+        }
+        #NameAddressForm
+        {
+            margin-right: 10px;
+            width: 99%;
+            min-height: 275px;
+        }
+        #NameAddressForm p
+        {
+            line-height: 150%;
+        }
+        #NameAddressForm .ui-widget-header
+        {
+            background: #CCC url('/images/gradient-red.gif');
+        }
+        #services-box
+        {
+            position: absolute;
+            right: 10px;
+            top: 50px;
+            border: solid 1px #777;
+            float: left;
+            background-color: White;
+            padding: 0;
+            width: 185px;
+        }
+        .search-button
+        {
+        }
+        #testimony
+        {
+            clear: both;
+            background-image: url('/images/laptop.jpg');
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            height: 250px;
+            padding: 30px 300px 0 15px;
+        }
+        #testimony h1
+        {
+            margin: 0.5em 0;
+        }
+        #testimony p
+        {
+            margin: 0.5em 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var initDateBox = function (dateBox) {
+            dateBox.datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                yearRange: '-10:+0'
+            });
+        }
+        jQuery().ready(function ($) {
+            //datepickers
+            initDateBox($("[id$='_GoToDateTextBox']"));
+            initDateBox($("[id$='_GoToDateRecordsTextBox']"));
+            initDateBox($("[id$='_GoToDateNoticesTextBox']"));
+
+            $("#nameToggleLink").click(function () {
+                $("#nameToggleLink").text($("#nameToggleLink").text() == "[-]" ? "[+]" : "[-]");
+                $("#namePanel").toggle();
+            });
+            $("#watchToggleLink").click(function () {
+                $("#watchToggleLink").text($("#watchToggleLink").text() == "[-]" ? "[+]" : "[-]");
+                $("#watchPanel").toggle();
+            });
+            $("#hoodToggleLink").click(function () {
+                $("#hoodToggleLink").text($("#hoodToggleLink").text() == "[-]" ? "[+]" : "[-]");
+                $("#hoodPanel").toggle();
+            });
+            $("#crimeToggleLink").click(function () {
+                $("#crimeToggleLink").text($("#crimeToggleLink").text() == "[-]" ? "[+]" : "[-]");
+                $("#crimePanel").toggle();
+            });
+        });
+    </script>
+    <style type="text/css">
+        .service .ui-tabs .ui-tabs-nav li a {
+            padding: 0.15em 0.6em !important;
+        }
+
+        .service .ui-tabs .ui-tabs-panel {
+            padding: 0.5em !important;
+        }
+
+        #ui-datepicker-div {
+            display: none;
+        }
+
+        #date-nav .textbox {
+            width: 100px;
+        }
+
+        .graph {
+            max-width: 190px;
+            max-height: 310px;
+            overflow: hidden;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2264545-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div id="fb-root">
+    </div>
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
+    <form name="aspnetForm" method="post" action="./Search.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_ctl00_ScriptManager1_HiddenField" id="ctl00_ctl00_ScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ1NDU3MTQ4NA9kFgJmD2QWAmYPZBYCAgMPZBYSAgQPFgIeBXN0eWxlBRNmb250LXdlaWdodDpub3JtYWw7ZAIFDxYCHwAFE2ZvbnQtd2VpZ2h0Om5vcm1hbDtkAgYPFgIfAAUTZm9udC13ZWlnaHQ6bm9ybWFsO2QCBw8WAh8ABRNmb250LXdlaWdodDpub3JtYWw7ZAIIDxYCHwAFE2ZvbnQtd2VpZ2h0Om5vcm1hbDtkAgkPFgIfAAUTZm9udC13ZWlnaHQ6bm9ybWFsO2QCCg8WAh8ABRNmb250LXdlaWdodDpub3JtYWw7ZAILDxYCHwAFE2ZvbnQtd2VpZ2h0Om5vcm1hbDtkAg4PZBYGAiMPZBYEZg88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgVkFgpmD2QWAmYPFQIcL3B1YmxpYy1yZWNvcmRzLzIwMjQvTWF5LzI5LxZXZWRuZXNkYXksIE1heSAyOSAyMDI0ZAIBD2QWAmYPFQIcL3B1YmxpYy1yZWNvcmRzLzIwMjQvTWF5LzI4LxRUdWVzZGF5LCBNYXkgMjggMjAyNGQCAg9kFgJmDxUCHC9wdWJsaWMtcmVjb3Jkcy8yMDI0L01heS8yNy8TTW9uZGF5LCBNYXkgMjcgMjAyNGQCAw9kFgJmDxUCHC9wdWJsaWMtcmVjb3Jkcy8yMDI0L01heS8yNi8TU3VuZGF5LCBNYXkgMjYgMjAyNGQCBA9kFgJmDxUCHC9wdWJsaWMtcmVjb3Jkcy8yMDI0L01heS8yNS8VU2F0dXJkYXksIE1heSAyNSAyMDI0ZAICDw8WAh4HRW5hYmxlZGhkZAIpD2QWBGYPPCsACQEADxYEHwEWAB8CAgVkFgpmD2QWAmYPFQIVL25vdGljZXMvMjAyNC9NYXkvMjkvFldlZG5lc2RheSwgTWF5IDI5IDIwMjRkAgEPZBYCZg8VAhUvbm90aWNlcy8yMDI0L01heS8yOC8UVHVlc2RheSwgTWF5IDI4IDIwMjRkAgIPZBYCZg8VAhUvbm90aWNlcy8yMDI0L01heS8yNy8TTW9uZGF5LCBNYXkgMjcgMjAyNGQCAw9kFgJmDxUCFS9ub3RpY2VzLzIwMjQvTWF5LzI2LxNTdW5kYXksIE1heSAyNiAyMDI0ZAIED2QWAmYPFQIVL25vdGljZXMvMjAyNC9NYXkvMjUvFVNhdHVyZGF5LCBNYXkgMjUgMjAyNGQCAg8PFgIfA2hkZAIxD2QWBAIDD2QWBAIBDw8WAh4EVGV4dAUCMTNkZAIFD2QWAgIHDxBkDxZjAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMAg0CDgIPAhACEQISAhMCFAIVAhYCFwIYAhkCGgIbAhwCHQIeAh8CIAIhAiICIwIkAiUCJgInAigCKQIqAisCLAItAi4CLwIwAjECMgIzAjQCNQI2AjcCOAI5AjoCOwI8Aj0CPgI/AkACQQJCAkMCRAJFAkYCRwJIAkkCSgJLAkwCTQJOAk8CUAJRAlICUwJUAlUCVgJXAlgCWQJaAlsCXAJdAl4CXwJgAmECYgJjFmMQBQhBbmRlcnNvbgUKVE5BbmRlcnNvbmcQBQdCZWRmb3JkBQlUTkJlZGZvcmRnEAUGQmVudG9uBQhUTkJlbnRvbmcQBQZCZW50b24FCFROQmVudG9uZxAFB0JsZWRzb2UFCVROQmxlZHNvZWcQBQZCbG91bnQFCFROQmxvdW50ZxAFB0JyYWRsZXkFCVROQnJhZGxleWcQBQhDYW1wYmVsbAUKVE5DYW1wYmVsbGcQBQZDYW5ub24FCFROQ2Fubm9uZxAFB0NhcnJvbGwFCVROQ2Fycm9sbGcQBQZDYXJ0ZXIFCFROQ2FydGVyZxAFCENoZWF0aGFtBQpUTkNoZWF0aGFtZxAFB0NoZXN0ZXIFCVROQ2hlc3RlcmcQBQlDbGFpYm9ybmUFC1ROQ2xhaWJvcm5lZxAFBENsYXkFBlROQ2xheWcQBQVDb2NrZQUHVE5Db2NrZWcQBQZDb2ZmZWUFCFROQ29mZmVlZxAFCENyb2NrZXR0BQpUTkNyb2NrZXR0ZxAFCkN1bWJlcmxhbmQFDFROQ3VtYmVybGFuZGcQBQhEYXZpZHNvbgUKVE5EYXZpZHNvbmcQBQdEZWNhdHVyBQlUTkRlY2F0dXJnEAUGRGVrYWxiBQhUTkRla2FsYmcQBQpEZXNvdG8sIE1TBQhNU0Rlc290b2cQBQdEaWNrc29uBQlUTkRpY2tzb25nEAUERHllcgUGVE5EeWVyZxAFB0ZheWV0dGUFCVRORmF5ZXR0ZWcQBQhGZW50cmVzcwUKVE5GZW50cmVzc2cQBQhGcmFua2xpbgUKVE5GcmFua2xpbmcQBQZHaWJzb24FCFROR2lic29uZxAFBUdpbGVzBQdUTkdpbGVzZxAFCEdyYWluZ2VyBQpUTkdyYWluZ2VyZxAFBkdyZWVuZQUIVE5HcmVlbmVnEAUGR3J1bmR5BQhUTkdydW5keWcQBQdIYW1ibGVuBQlUTkhhbWJsZW5nEAUISGFtaWx0b24FClROSGFtaWx0b25nEAUHSGFuY29jawUJVE5IYW5jb2NrZxAFCEhhcmRlbWFuBQpUTkhhcmRlbWFuZxAFBkhhcmRpbgUIVE5IYXJkaW5nEAUHSGF3a2lucwUJVE5IYXdraW5zZxAFB0hheXdvb2QFCVROSGF5d29vZGcQBQlIZW5kZXJzb24FC1ROSGVuZGVyc29uZxAFBUhlbnJ5BQdUTkhlbnJ5ZxAFBUhlbnJ5BQdUTkhlbnJ5ZxAFB0hpY2ttYW4FCVROSGlja21hbmcQBQdIb3VzdG9uBQlUTkhvdXN0b25nEAUJSHVtcGhyZXlzBQtUTkh1bXBocmV5c2cQBQdKYWNrc29uBQlUTkphY2tzb25nEAUJSmVmZmVyc29uBQtUTkplZmZlcnNvbmcQBQdKb2huc29uBQlUTkpvaG5zb25nEAUES25veAUGVE5Lbm94ZxAFBExha2UFBlROTGFrZWcQBQpMYXVkZXJkYWxlBQxUTkxhdWRlcmRhbGVnEAUITGF3cmVuY2UFClROTGF3cmVuY2VnEAUFTGV3aXMFB1ROTGV3aXNnEAUHTGluY29sbgUJVE5MaW5jb2xuZxAFBkxvdWRvbgUIVE5Mb3Vkb25nEAUFTWFjb24FB1ROTWFjb25nEAUHTWFkaXNvbgUJVE5NYWRpc29uZxAFBk1hcmlvbgUIVE5NYXJpb25nEAUGTWFyaW9uBQhUTk1hcmlvbmcQBQhNYXJzaGFsbAUKVE5NYXJzaGFsbGcQBQVNYXVyeQUHVE5NYXVyeWcQBQZNY01pbm4FCFROTWNNaW5uZxAFB01jTmFpcnkFCVROTWNOYWlyeWcQBQVNZWlncwUHVE5NZWlnc2cQBQZNb25yb2UFCFROTW9ucm9lZxAFCk1vbnRnb21lcnkFDFROTW9udGdvbWVyeWcQBQVNb29yZQUHVE5Nb29yZWcQBQZNb3JnYW4FCFROTW9yZ2FuZxAFBU9iaW9uBQdUTk9iaW9uZxAFB092ZXJ0b24FCVROT3ZlcnRvbmcQBQVQZXJyeQUHVE5QZXJyeWcQBQdQaWNrZXR0BQlUTlBpY2tldHRnEAUEUG9sawUGVE5Qb2xrZxAFBlB1dG5hbQUIVE5QdXRuYW1nEAUEUmhlYQUGVE5SaGVhZxAFBVJvYW5lBQdUTlJvYW5lZxAFCVJvYmVydHNvbgULVE5Sb2JlcnRzb25nEAUKUnV0aGVyZm9yZAUMVE5SdXRoZXJmb3JkZxAFBVNjb3R0BQdUTlNjb3R0ZxAFClNlcXVhdGNoaWUFDFROU2VxdWF0Y2hpZWcQBQZTZXZpZXIFCFROU2V2aWVyZxAFBlNoZWxieQUIVE5TaGVsYnlnEAUFU21pdGgFB1ROU21pdGhnEAUHU3Rld2FydAUJVE5TdGV3YXJ0ZxAFCFN1bGxpdmFuBQpUTlN1bGxpdmFuZxAFBlN1bW5lcgUIVE5TdW1uZXJnEAUGVGlwdG9uBQhUTlRpcHRvbmcQBQlUcm91c2RhbGUFC1ROVHJvdXNkYWxlZxAFBlVuaWNvaQUIVE5Vbmljb2lnEAUFVW5pb24FB1ROVW5pb25nEAUIVmFuQnVyZW4FClROVmFuQnVyZW5nEAUGV2FycmVuBQhUTldhcnJlbmcQBQpXYXNoaW5ndG9uBQxUTldhc2hpbmd0b25nEAUFV2F5bmUFB1ROV2F5bmVnEAUHV2Vha2xleQUJVE5XZWFrbGV5ZxAFBVdoaXRlBQdUTldoaXRlZxAFCldpbGxpYW1zb24FDFROV2lsbGlhbXNvbmcQBQZXaWxzb24FCFROV2lsc29uZ2RkAgUPZBYCAgkPZBYCAgIPDxYCHwQFAjEzZGQYBQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgYFHWN0bDAwJGN0bDAwJEtlZXBMb2dpbkNoZWNrQm94BSljdGwwMCRjdGwwMCRDb250ZW50UGFuZSRDb250ZW50UGFuZSRjdGwwNwUpY3RsMDAkY3RsMDAkQ29udGVudFBhbmUkQ29udGVudFBhbmUkY3RsMDgFNGN0bDAwJGN0bDAwJENvbnRlbnRQYW5lJENvbnRlbnRQYW5lJENoZWNrQm94V2VzdFRlbm4FNmN0bDAwJGN0bDAwJENvbnRlbnRQYW5lJENvbnRlbnRQYW5lJENoZWNrQm94TWlkZGxlVGVubgU0Y3RsMDAkY3RsMDAkQ29udGVudFBhbmUkQ29udGVudFBhbmUkQ2hlY2tCb3hFYXN0VGVubgUqY3RsMDAkY3RsMDAkQ29udGVudFBhbmUkQ29udGVudFBhbmUkZGdNaXNjD2dkBSljdGwwMCRjdGwwMCRDb250ZW50UGFuZSRDb250ZW50UGFuZSRkZ0JpZA9nZAUrY3RsMDAkY3RsMDAkQ29udGVudFBhbmUkQ29udGVudFBhbmUkZGdDb3VydA9nZAUxY3RsMDAkY3RsMDAkQ29udGVudFBhbmUkQ29udGVudFBhbmUkZGdGb3JlY2xvc3VyZQ9nZD1iWEAd+vuvbcNqlDFCOtX2jQmKU0eeL1qXaVcpTRU1" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=Rpr_X4y9NdvQQxpGh1_bTGDxGCG5g4_2e2_pVhAM-dXGzUh2X8Q2W2Q10wLk_OAcSKRzsH5577T36MXSkFSoWOj5XlzFmm3EVU4WCYQtLaE1&amp;t=637346592242505677" type="text/javascript"></script>
+
+<script type="text/javascript">function OpenChild(fk, xid, cty) {var WinSettings = "fullscreen=0,toolbar=0,status=0,menubar=0,scrollbars=1,resizable=0,directories=0,location=0,width=450,height=500";var MyArgs = window.open("/Search/Details/Details.aspx?fk=" + escape(fk) + "&xid=" + xid,"Details", WinSettings);MyArgs.focus();}</script><script type="text/javascript">function OpenChildFT(id) {var WinSettings = "fullscreen=0,toolbar=0,status=0,menubar=0,scrollbars=1,resizable=0,directories=0,location=0,width=450,height=500";var MyArgs = window.open("/Search/Details/ViewNotice.aspx?nid=" + escape(id),"Details", WinSettings);MyArgs.focus();}</script><script type="text/javascript">function OpenChildFT2(id, date) {var WinSettings = "fullscreen=0,toolbar=0,status=0,menubar=0,scrollbars=1,resizable=0,directories=0,location=0,width=450,height=500";var MyArgs = window.open("/Search/Details/ViewNotice.aspx?id=" + escape(id)+"&date=" + escape(date),"Details", WinSettings);MyArgs.focus();}</script><script type="text/javascript">function OpenChildStatewide(xid) {var WinSettings = "fullscreen=0,toolbar=0,status=0,menubar=0,scrollbars=1,resizable=0,directories=0,location=0,width=450,height=500";var MyArgs = window.open("/Search/Details/StatewideDetails.aspx?id=" + xid, "Details", WinSettings);MyArgs.focus();}</script>
+<script src="/ScriptResource.axd?d=SJpX1MQ0UiCMefKTlaXYdBWY8f1swL2XnzscleldSy2XAX_MxkWgrpVALYkj7BZwUgz7zdJf2Elbo0UZYNbLnFIKscdHA2zDD5B33WpePufq03Px_UWeb1PkwlU4gjXJXIinPBgjR0fqSNuGPcBUoK77W25TK1ECguU8upZYiJA1&amp;t=ffffffffc7af5c66" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=UqEsExoCyJMQLxkOqbwqrVl6i2WTyxsPhL7dnqzbtSf9b7Y-WNo47ImGF1TSUB13uQ2H-kPmN6kXbCkNcJOIQOWqNLFX2FSQwi0zGi6rBMkUCYZTWjr57zoTYStL1_3D0&amp;t=ffffffffec54f2d7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=3sH9aXQhBBLCypKoCqlhf-G3piQWBumE06mhH90dUZvYpGdyhQcdV3t14PfwpzA65O-_QFm2OMBx-hkM5GMUEslBe6om-3oQhL0Vx5RHyiQL1CN2jrHc89DW-YpHbfxufW3sKpCNKZOQqs5OUCLqFQ2&amp;t=ffffffffec54f2d7" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="56CCD8F3" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspnetForm', ['tctl00$ctl00$LoginUpdatePanel',''], ['ctl00$ctl00$LoginButton',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+    <div id="corp-navbar">
+        <div class="center">
+            <a href="https://www.memphisdailynews.com">
+                <img src="/images/navbar/corp_dailynews.png" alt="Memphis Daily News" /></a>
+            
+            <a href="http://www.chandlerreports.com">
+                <img src="/images/navbar/corp_chandler.png" alt="Chandler Reports" /></a>
+            <a href="http://www.nashvilleledger.com">
+                    <img src="/images/navbar/corp_ledger.png" alt="Nashville Ledger" /></a>
+        </div>
+    </div>
+    <div id="main">
+        <div id="subscribebar">
+            <div style="float: right">
+                <a href="../Subscribe.aspx" id="ctl00_ctl00_A1"><span class="arrows">»</span> Subscribe
+                    Today!</a></div>
+            <span>More of what you want to know.</span>
+            
+        </div>
+        <div id="titlebartop">
+            <div style="display: inline">
+                <a href="../" id="ctl00_ctl00_A2">
+                    <img src="/images/TDNLogo.gif" border="0" alt="The Daily News" />
+                </a>
+            </div>
+            <div id="titleadvert">
+                <!-- ca-pub-5652580931778189/ Horizontal-468x60 -->
+                <script type='text/javascript'>
+                    GA_googleFillSlot("LeaderBoard");
+                </script>
+            </div>
+        </div>
+        <div id="titlebar">
+            <div id="loginstatus">
+                
+            </div>
+        </div>
+        
+        <div id="navbar">
+            <div id="navleft">
+                <a href="Search.aspx" id="ctl00_ctl00_LinkHome" style="font-weight:normal;">Home</a> | 
+                <a href="../Editorial/Daily.aspx" id="ctl00_ctl00_LinkDaily" style="font-weight:normal;">News & Editorial</a> | 
+                <a href="../Editorial/WestTNNews.aspx" id="ctl00_ctl00_LinkWeekly" style="font-weight:normal;">West TN News</a> | 
+                <a href="../Notices.aspx" id="ctl00_ctl00_LinkNotices" style="font-weight:normal;">Public Notices</a> | 
+                <a href="../PublicRecords.aspx" id="ctl00_ctl00_LinkPublicRecords" style="font-weight:normal;">Public Records</a>
+            </div>
+            
+            <div id="navright">
+                <a href="../Help.aspx" id="ctl00_ctl00_LinkHelp" style="font-weight:normal;">Help</a> | 
+                <a href="../service/Service.aspx" id="ctl00_ctl00_LinkService" style="font-weight:normal;">Your Account</a> | 
+                <a href="../Contact.aspx#contact" id="ctl00_ctl00_LinkContact" style="font-weight:normal;">Contact Us</a> |
+                <a id='login-link' href="https://www.memphisdailynews.com/Login.aspx">Log In</a> | <a href="/Subscribe.aspx">Subscribe</a>
+            </div>
+        </div>
+        <div id="login-popup">
+            <div style="float: right; margin-top: -5px; font-weight: bold; font-size: 10px;">
+                <a id="close-login" style="cursor: pointer; color: Black; text-decoration: none">X</a>
+            </div>
+            <div id="ctl00_ctl00_LoginUpdatePanel">
+	
+                    <div id="ctl00_ctl00_LoginPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_LoginButton&#39;)">
+		
+                        <div style="height: 40px; display: block; vertical-align: bottom">
+                            <div style="float: left; margin-left: 10px; height: 40px; width: 140px;">
+                                <label>
+                                    User Name:</label>
+                                <input name="ctl00$ctl00$LoginUserTextBox" type="text" id="ctl00_ctl00_LoginUserTextBox" class="login-focus" style="width:120px;" /><span id="ctl00_ctl00_RequiredFieldValidator2" style="color:Red;display:none;">*</span>
+                            </div>
+                            <div style="width: 140px; height: 40px; float: left;">
+                                <label>
+                                    Password:</label>
+                                <input name="ctl00$ctl00$LoginPassTextBox" type="password" id="ctl00_ctl00_LoginPassTextBox" style="width:120px;" /><span id="ctl00_ctl00_RequiredFieldValidator1" style="color:Red;display:none;">*</span>
+                            </div>
+                            <div style="float: left; margin-top: 6px">
+                                <input type="submit" name="ctl00$ctl00$LoginButton" value="Log In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$LoginButton&quot;, &quot;&quot;, true, &quot;LoginPopup&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_LoginButton" class="button" />
+                            </div>
+                        </div>
+                        <div style="text-align: center; font-weight: bold; font-size: 12px; clear: both;
+                            margin-bottom: 10px">
+                            <div id="ctl00_ctl00_LoginProgress" style="display:none;">
+			
+                                    <img src="/images/spinner.gif" />
+                                
+		</div>
+                            <span id="ctl00_ctl00_loginValidator" style="color:Red;display:none;"></span>
+                        </div>
+                        <div style="height: 12px; clear: both">
+                            <hr style="margin: 5px 0" />
+                            <a style="font-size: 11px; float: right; margin-top: 3px" href="/service/Password.aspx"
+                                class="blue">Forgot your password?</a>
+                            <input id="ctl00_ctl00_KeepLoginCheckBox" type="checkbox" name="ctl00$ctl00$KeepLoginCheckBox" checked="checked" /><label for="ctl00_ctl00_KeepLoginCheckBox">Keep me logged in</label>
+                        </div>
+                        <div style="clear: both">
+                        </div>
+                    
+	</div>
+                
+</div>
+        </div>
+        <div id="middle">
+            
+    <div id="left-column">
+        <img src="../images/services.gif" id="ctl00_ctl00_ContentPane_Img1" alt="TDN Services" />
+        <div class="service">
+            <div class="header">
+                <a href="Search.aspx" id="ctl00_ctl00_ContentPane_A1">NAME &amp; PROPERTY SEARCH</a>
+                <span class="arrows">»</span>
+            </div>
+            <a href="Search.aspx" id="ctl00_ctl00_ContentPane_A2">Research millions of people and
+                properties</a> <a href="#" class="toggle" id="nameToggleLink">[+]</a>
+            <div id="namePanel" style="display: none; margin-top: 3px">
+                
+<div id="namePropertyWidget">
+    <ul>
+        <li><a href="#namePropertyWidget-1">Name</a></li>
+        <li><a href="#namePropertyWidget-2">Property</a></li>
+    </ul>
+    <div id="namePropertyWidget-1">
+        <div id="ctl00_ctl00_ContentPane_namePropertyWidget_Panel2" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_namePropertyWidget_NameSearchButton&#39;)">
+	
+            <span id="ctl00_ctl00_ContentPane_namePropertyWidget_NameErrorLabel" class="red"></span>
+            <p>
+                <input name="ctl00$ctl00$ContentPane$namePropertyWidget$NameSearchTextBox" type="text" id="ctl00_ctl00_ContentPane_namePropertyWidget_NameSearchTextBox" class="textbox" style="width:160px;" /></p>
+            <div style="text-align: right; margin-top: 5px">
+                <input type="submit" name="ctl00$ctl00$ContentPane$namePropertyWidget$NameSearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$namePropertyWidget$NameSearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_namePropertyWidget_NameSearchButton" class="button-red" /></div>
+        
+</div>
+    </div>
+    <div id="namePropertyWidget-2">
+        <div id="ctl00_ctl00_ContentPane_namePropertyWidget_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_namePropertyWidget_PropertySearchButton&#39;)">
+	
+            <span id="ctl00_ctl00_ContentPane_namePropertyWidget_PropertyErrorLabel" class="red"></span>
+            <p>
+                <input name="ctl00$ctl00$ContentPane$namePropertyWidget$PropertySearchAddressTextBox" type="text" id="ctl00_ctl00_ContentPane_namePropertyWidget_PropertySearchAddressTextBox" class="textbox" style="width:160px;" /></p>
+            <div style="margin-top: 5px; text-align: right">
+                <input type="submit" name="ctl00$ctl00$ContentPane$namePropertyWidget$PropertySearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$namePropertyWidget$PropertySearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_namePropertyWidget_PropertySearchButton" class="button-red" /></div>
+        
+</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(function() {
+        jQuery("#namePropertyWidget").tabs();
+    });
+</script>
+            </div>
+        </div>
+        <div class="service">
+            <div class="header">
+                <a href="../lists/ListBuilder.aspx" id="ctl00_ctl00_ContentPane_A3">CUSTOM LIST BUILDER</a>
+                <span class="arrows">»</span>
+            </div>
+            <a href="../lists/ListBuilder.aspx" id="ctl00_ctl00_ContentPane_A4">Build a downloadable list
+                of prospects that meet your criteria</a>
+        </div>
+        <div class="service">
+            <div class="header">
+                <a href="../WatchService.aspx" id="ctl00_ctl00_ContentPane_A5">WATCH SERVICE</a> <span class="arrows">»</span>
+            </div>
+            <a href="../WatchService.aspx" id="ctl00_ctl00_ContentPane_A6">Monitor any person, property or
+                company</a> <a href="#" class="toggle" id="watchToggleLink">[+]</a>
+            <div id="watchPanel" style="display: none; margin-top: 3px">
+                
+<div id="watchWidget">
+    <ul>
+        <li><a href="#watchWidget-1">Name</a></li>
+        <li><a href="#watchWidget-2">Property</a></li>
+    </ul>
+    <div id="watchWidget-1">
+        <div id="ctl00_ctl00_ContentPane_watchWidget_Panel2" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_watchWidget_Button1&#39;)">
+	
+            <p>
+                Name:<br />
+                <input name="ctl00$ctl00$ContentPane$watchWidget$WatchNameTextBox" type="text" id="ctl00_ctl00_ContentPane_watchWidget_WatchNameTextBox" class="textbox" style="width:160px;" />
+            </p>
+            <p>
+                Send Results to This Email:<br />
+                <input name="ctl00$ctl00$ContentPane$watchWidget$NameEmailTextBox" type="text" id="ctl00_ctl00_ContentPane_watchWidget_NameEmailTextBox" class="textbox" style="width:160px;" />
+            </p>
+            <div style="text-align: right; margin-top: 5px">
+                <input type="submit" name="ctl00$ctl00$ContentPane$watchWidget$Button1" value="Watch Now!" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$watchWidget$Button1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_watchWidget_Button1" class="button-red" /></div>
+        
+</div>
+    </div>
+    <div id="watchWidget-2">
+        <div id="ctl00_ctl00_ContentPane_watchWidget_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_watchWidget_Button2&#39;)">
+	
+            <p>
+                Street Address:<br />
+                <input name="ctl00$ctl00$ContentPane$watchWidget$WatchAddressTextBox" type="text" id="ctl00_ctl00_ContentPane_watchWidget_WatchAddressTextBox" class="textbox" style="width:160px;" /></p>
+            <p>
+                Send Results to This Email:<br />
+                <input name="ctl00$ctl00$ContentPane$watchWidget$AddressEmailTextBox" type="text" id="ctl00_ctl00_ContentPane_watchWidget_AddressEmailTextBox" class="textbox" style="width:160px;" />
+            </p>
+            <div style="margin-top: 5px; text-align: right">
+                <input type="submit" name="ctl00$ctl00$ContentPane$watchWidget$Button2" value="Watch Now!" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$watchWidget$Button2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_watchWidget_Button2" class="button-red" /></div>
+        
+</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(function() {
+        jQuery("#watchWidget").tabs();
+    });
+</script>
+
+            </div>
+        </div>
+        <div class="service">
+            <div class="header">
+                <a href="../DataDirect.aspx" id="ctl00_ctl00_ContentPane_A7">DATA DIRECT</a> <span class="arrows">»</span>
+            </div>
+            <a href="../DataDirect.aspx" id="ctl00_ctl00_ContentPane_A8">Get valuable lists emailed directly
+                to you</a>
+        </div>
+        <div class="service">
+            <div class="header">
+                <a href="../Neighborhood.aspx" id="ctl00_ctl00_ContentPane_A9">NEIGHBORHOOD REPORT</a> <span
+                    class="arrows">»</span>
+            </div>
+            <a href="../Neighborhood.aspx" id="ctl00_ctl00_ContentPane_A10">Keep an eye on trends and events
+                near you</a> <a href="#" class="toggle" id="hoodToggleLink">[+]</a>
+            <div id="hoodPanel" style="display: none">
+                <div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_neighborhoodWidget_PropertySearchButton&#39;)">
+	
+    <div style="width: 162px; margin-left: auto; margin-right: auto">
+        <p>
+            Street Address:<br />
+            <input name="ctl00$ctl00$ContentPane$neighborhoodWidget$AddressTextBox" type="text" id="ctl00_ctl00_ContentPane_neighborhoodWidget_AddressTextBox" class="textbox" style="width:160px;" /></p>
+        <div style="margin-top: 5px; text-align: right">
+            <input type="submit" name="ctl00$ctl00$ContentPane$neighborhoodWidget$PropertySearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$neighborhoodWidget$PropertySearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_neighborhoodWidget_PropertySearchButton" class="button-red" /></div>
+    </div>
+
+</div>
+
+            </div>
+        </div>
+        <div class="service">
+            <div class="header">
+                <a href="../CrimeReport.aspx" id="ctl00_ctl00_ContentPane_A11">CRIME REPORT</a> <span class="arrows">»</span>
+            </div>
+            <a href="../CrimeReport.aspx" id="ctl00_ctl00_ContentPane_A12">Up-to-date reports of crimes near
+                you</a> <a href="#" class="toggle" id="crimeToggleLink">[+]</a>
+            <div id="crimePanel" style="display: none">
+                <div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_crimeWidget_SearchButton&#39;)">
+	
+    <div style="width: 162px; margin-left: auto; margin-right: auto">
+        <p>
+            Street Address:<br />
+            <input name="ctl00$ctl00$ContentPane$crimeWidget$AddressTextBox" type="text" id="ctl00_ctl00_ContentPane_crimeWidget_AddressTextBox" class="textbox" style="width:160px;" /></p>
+        <div style="margin-top: 5px; text-align: right">
+            <input type="submit" name="ctl00$ctl00$ContentPane$crimeWidget$SearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$crimeWidget$SearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_crimeWidget_SearchButton" class="button-red" /></div>
+    </div>
+
+</div>
+
+            </div>
+        </div>
+        <div id="date-nav">
+
+            <div class="section">
+                <h1>Public Records</h1>
+                <table id="ctl00_ctl00_ContentPane_recordsDateNavControl_NavDateDataList" cellspacing="0" CausesValidation="false" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/public-records/2024/May/29/' class="news-date">Wednesday, May 29 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/public-records/2024/May/28/' class="news-date">Tuesday, May 28 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/public-records/2024/May/27/' class="news-date">Monday, May 27 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/public-records/2024/May/26/' class="news-date">Sunday, May 26 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/public-records/2024/May/25/' class="news-date">Saturday, May 25 2024</a>
+                </div>
+            </td>
+	</tr>
+</table>
+        <a id="ctl00_ctl00_ContentPane_recordsDateNavControl_LinkButtonPrev" disabled="disabled">Forward</a>
+            |
+        <a id="ctl00_ctl00_ContentPane_recordsDateNavControl_LinkButtonNext" href="javascript:__doPostBack(&#39;ctl00$ctl00$ContentPane$recordsDateNavControl$LinkButtonNext&#39;,&#39;&#39;)">Back</a>
+    
+
+
+
+                <h2>Go to date:</h2>
+                <div id="ctl00_ctl00_ContentPane_Panel2" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_GoToDateRecordsButton&#39;)">
+	
+                    <input name="ctl00$ctl00$ContentPane$GoToDateRecordsTextBox" type="text" id="ctl00_ctl00_ContentPane_GoToDateRecordsTextBox" class="textbox" />&nbsp;<input type="submit" name="ctl00$ctl00$ContentPane$GoToDateRecordsButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$GoToDateRecordsButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_GoToDateRecordsButton" class="button" />
+                
+</div>
+                <h2>Search Records:</h2>
+                <div id="ctl00_ctl00_ContentPane_Panel3" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_SearchRecordsButton&#39;)">
+	
+                    <input name="ctl00$ctl00$ContentPane$SearchRecordsTextBox" type="text" id="ctl00_ctl00_ContentPane_SearchRecordsTextBox" class="textbox" />&nbsp;<input type="submit" name="ctl00$ctl00$ContentPane$SearchRecordsButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$SearchRecordsButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_SearchRecordsButton" class="button" />
+                
+</div>
+            </div>
+            <div class="section">
+                <h1>Public Notices</h1>
+                <table id="ctl00_ctl00_ContentPane_noticesDateControl_NavDateDataList" cellspacing="0" CausesValidation="false" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/notices/2024/May/29/' class="news-date">Wednesday, May 29 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/notices/2024/May/28/' class="news-date">Tuesday, May 28 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/notices/2024/May/27/' class="news-date">Monday, May 27 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/notices/2024/May/26/' class="news-date">Sunday, May 26 2024</a>
+                </div>
+            </td>
+	</tr><tr>
+		<td>
+                <div style="width:100%;display:inline-flex;">
+                        <a href='/notices/2024/May/25/' class="news-date">Saturday, May 25 2024</a>
+                </div>
+            </td>
+	</tr>
+</table>
+        <a id="ctl00_ctl00_ContentPane_noticesDateControl_LinkButtonPrev" disabled="disabled">Forward</a>
+            |
+        <a id="ctl00_ctl00_ContentPane_noticesDateControl_LinkButtonNext" href="javascript:__doPostBack(&#39;ctl00$ctl00$ContentPane$noticesDateControl$LinkButtonNext&#39;,&#39;&#39;)">Back</a>
+    
+
+
+                <h2>Go to date:</h2>
+                <div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_GoToDateNoticesButton&#39;)">
+	
+                    <input name="ctl00$ctl00$ContentPane$GoToDateNoticesTextBox" type="text" id="ctl00_ctl00_ContentPane_GoToDateNoticesTextBox" class="textbox" />&nbsp;
+                    <input type="submit" name="ctl00$ctl00$ContentPane$GoToDateNoticesButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$GoToDateNoticesButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_GoToDateNoticesButton" class="button" />
+                
+</div>
+                <h2>Search Notices:</h2>
+                <div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_SearchNoticesButton&#39;)">
+	
+                    <input name="ctl00$ctl00$ContentPane$SearchNoticesTextBox" type="text" id="ctl00_ctl00_ContentPane_SearchNoticesTextBox" class="textbox" />&nbsp;<input type="submit" name="ctl00$ctl00$ContentPane$SearchNoticesButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$SearchNoticesButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_SearchNoticesButton" class="button" />
+                
+</div>
+            </div>
+            
+            <div class="section" style="text-align: center">
+                <!-- CR-PromoSpot -->
+                <script type='text/javascript'>
+                    GA_googleFillSlot("CR-PromoSpot");
+                </script>
+                <br />
+
+                <!-- TDN/TMN-PromoSpot -->
+                <script type='text/javascript'>
+                    GA_googleFillSlot("TDN//TMN-PromoSpot");
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <div class="content-wide">
+        <span id="ctl00_ctl00_ContentPane_siteMapPath" class="site-node"><a href="#ctl00_ctl00_ContentPane_siteMapPath_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=uhUE5HO-ga3SvDDZmw1pMBqK65aObuGdnPEbbJhYMwW69qbQxO-rySHKdzWDQ7LiTdbUSouh46sJJ6bIhDNLTUL0rSaY4c6QZBZrYkfSDas1&amp;t=637346592242505677" width="0" height="0" style="border-width:0px;" /></a><span><a class="blue" href="/" style="font-weight:bold;">Home</a></span><span> &gt; </span><span class="current-service" style="font-weight:normal;">Name &amp; Property Search</span><a id="ctl00_ctl00_ContentPane_siteMapPath_SkipLink"></a></span>
+        
+    <div class="service-header">
+        
+    </div>
+    <script type="text/javascript">
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_beginRequest(beginRequest);
+
+        function beginRequest() {
+            prm._scrollPosition = null;
+        }
+    </script>
+    <div id="ctl00_ctl00_ContentPane_ContentPane_SearchPanel">
+	
+        <div class="service-header">
+            <p>
+                <b>Search over
+                    <span id="ctl00_ctl00_ContentPane_ContentPane_RecordCountLabel">13</span>
+                    million names and addresses from all of Tennessee</b>, including Memphis, Nashville,
+                Knoxville, Chattanooga and everywhere in between. Use any combination of name, company
+                or address. Property sales, tax liens, bankruptcies, foreclosures, mortgages and
+                <a href="http://www.tndatasource.com/Search/AvailableData.pdf" id="ctl00_ctl00_ContentPane_ContentPane_A1">
+                    much more</a>.</p>
+        </div>
+        <div class="section" style="position: relative">
+            <div id="NameAddressForm" class="drop-shadow">
+                <ul>
+                    <li><a href="#NameForm"><strong>Name</strong></a></li>
+                    <li><a href="#AddressForm"><strong>Property</strong></a></li>
+                </ul>
+                <div id="NameForm">
+                    <div id="ctl00_ctl00_ContentPane_ContentPane_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_ContentPane_SearchButton&#39;)">
+		
+                        <p>
+                            <span id="ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator" style="color:Red;display:none;">CustomValidator</span>
+                            <b>Name:</b><br />
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$NameTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_NameTextBox" class="textbox" style="width:300px;" /><br />
+                            <b>Company:</b><br />
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$CompanyTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_CompanyTextBox" class="textbox" style="width:300px;" />
+                        </p>
+                        <p>
+                            <b>Search the whole state or a specific county:</b><br />
+                            <select name="ctl00$ctl00$ContentPane$ContentPane$CountyDropDown" id="ctl00_ctl00_ContentPane_ContentPane_CountyDropDown">
+			<option value="TNStatewide">All Counties</option>
+			<option value="TNAnderson">Anderson</option>
+			<option value="TNBedford">Bedford</option>
+			<option value="TNBenton">Benton</option>
+			<option value="TNBenton">Benton</option>
+			<option value="TNBledsoe">Bledsoe</option>
+			<option value="TNBlount">Blount</option>
+			<option value="TNBradley">Bradley</option>
+			<option value="TNCampbell">Campbell</option>
+			<option value="TNCannon">Cannon</option>
+			<option value="TNCarroll">Carroll</option>
+			<option value="TNCarter">Carter</option>
+			<option value="TNCheatham">Cheatham</option>
+			<option value="TNChester">Chester</option>
+			<option value="TNClaiborne">Claiborne</option>
+			<option value="TNClay">Clay</option>
+			<option value="TNCocke">Cocke</option>
+			<option value="TNCoffee">Coffee</option>
+			<option value="TNCrockett">Crockett</option>
+			<option value="TNCumberland">Cumberland</option>
+			<option value="TNDavidson">Davidson</option>
+			<option value="TNDecatur">Decatur</option>
+			<option value="TNDekalb">Dekalb</option>
+			<option value="MSDesoto">Desoto, MS</option>
+			<option value="TNDickson">Dickson</option>
+			<option value="TNDyer">Dyer</option>
+			<option value="TNFayette">Fayette</option>
+			<option value="TNFentress">Fentress</option>
+			<option value="TNFranklin">Franklin</option>
+			<option value="TNGibson">Gibson</option>
+			<option value="TNGiles">Giles</option>
+			<option value="TNGrainger">Grainger</option>
+			<option value="TNGreene">Greene</option>
+			<option value="TNGrundy">Grundy</option>
+			<option value="TNHamblen">Hamblen</option>
+			<option value="TNHamilton">Hamilton</option>
+			<option value="TNHancock">Hancock</option>
+			<option value="TNHardeman">Hardeman</option>
+			<option value="TNHardin">Hardin</option>
+			<option value="TNHawkins">Hawkins</option>
+			<option value="TNHaywood">Haywood</option>
+			<option value="TNHenderson">Henderson</option>
+			<option value="TNHenry">Henry</option>
+			<option value="TNHenry">Henry</option>
+			<option value="TNHickman">Hickman</option>
+			<option value="TNHouston">Houston</option>
+			<option value="TNHumphreys">Humphreys</option>
+			<option value="TNJackson">Jackson</option>
+			<option value="TNJefferson">Jefferson</option>
+			<option value="TNJohnson">Johnson</option>
+			<option value="TNKnox">Knox</option>
+			<option value="TNLake">Lake</option>
+			<option value="TNLauderdale">Lauderdale</option>
+			<option value="TNLawrence">Lawrence</option>
+			<option value="TNLewis">Lewis</option>
+			<option value="TNLincoln">Lincoln</option>
+			<option value="TNLoudon">Loudon</option>
+			<option value="TNMacon">Macon</option>
+			<option value="TNMadison">Madison</option>
+			<option value="TNMarion">Marion</option>
+			<option value="TNMarion">Marion</option>
+			<option value="TNMarshall">Marshall</option>
+			<option value="TNMaury">Maury</option>
+			<option value="TNMcMinn">McMinn</option>
+			<option value="TNMcNairy">McNairy</option>
+			<option value="TNMeigs">Meigs</option>
+			<option value="TNMonroe">Monroe</option>
+			<option value="TNMontgomery">Montgomery</option>
+			<option value="TNMoore">Moore</option>
+			<option value="TNMorgan">Morgan</option>
+			<option value="TNObion">Obion</option>
+			<option value="TNOverton">Overton</option>
+			<option value="TNPerry">Perry</option>
+			<option value="TNPickett">Pickett</option>
+			<option value="TNPolk">Polk</option>
+			<option value="TNPutnam">Putnam</option>
+			<option value="TNRhea">Rhea</option>
+			<option value="TNRoane">Roane</option>
+			<option value="TNRobertson">Robertson</option>
+			<option value="TNRutherford">Rutherford</option>
+			<option value="TNScott">Scott</option>
+			<option value="TNSequatchie">Sequatchie</option>
+			<option value="TNSevier">Sevier</option>
+			<option value="TNShelby">Shelby</option>
+			<option value="TNSmith">Smith</option>
+			<option value="TNStewart">Stewart</option>
+			<option value="TNSullivan">Sullivan</option>
+			<option value="TNSumner">Sumner</option>
+			<option value="TNTipton">Tipton</option>
+			<option value="TNTrousdale">Trousdale</option>
+			<option value="TNUnicoi">Unicoi</option>
+			<option value="TNUnion">Union</option>
+			<option value="TNVanBuren">VanBuren</option>
+			<option value="TNWarren">Warren</option>
+			<option value="TNWashington">Washington</option>
+			<option value="TNWayne">Wayne</option>
+			<option value="TNWeakley">Weakley</option>
+			<option value="TNWhite">White</option>
+			<option value="TNWilliamson">Williamson</option>
+			<option value="TNWilson">Wilson</option>
+
+		</select>
+                        </p>
+                        <p>
+                            <b>Date Range:</b><br />
+                            From:
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$FromDateTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_FromDateTextBox" class="textbox" style="width:70px;" />
+                            To:
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$ToDateTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_ToDateTextBox" class="textbox" style="width:70px;" />
+                        </p>
+                        <div class="search-button">
+                            <input type="submit" name="ctl00$ctl00$ContentPane$ContentPane$SearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$ContentPane$SearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_ContentPane_SearchButton" class="button-red submit" style="font-size:X-Large;" />
+                        </div>
+                    
+	</div>
+                </div>
+                <div id="AddressForm">
+                    <div id="ctl00_ctl00_ContentPane_ContentPane_Panel2" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_ContentPane_ContentPane_SearchButton2&#39;)">
+		
+                        <p>
+                            <span id="ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator" style="color:Red;display:none;">CustomValidator</span>
+                            <b>Street Address:</b><br />
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$AddressTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_AddressTextBox" class="textbox" style="width:300px;" />
+                        </p>
+                        <p>
+                            <div style="float: left; margin-right: 5px">
+                                <b>City:</b><br />
+                                <input name="ctl00$ctl00$ContentPane$ContentPane$CityTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_CityTextBox" class="textbox" style="width:200px;" />
+                            </div>
+                            <div style="float: left; margin-right: 5px">
+                                <b>State:</b><br />
+                                <input name="ctl00$ctl00$ContentPane$ContentPane$StateTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_StateTextBox" class="textbox" style="width:30px;" />
+                            </div>
+                            <div>
+                                <b>Zip:</b><br />
+                                <input name="ctl00$ctl00$ContentPane$ContentPane$ZipTextBox" type="text" id="ctl00_ctl00_ContentPane_ContentPane_ZipTextBox" class="textbox" style="width:50px;" />
+                            </div>
+                        </p>
+                        <p>
+                            <b>Date Range:</b><br />
+                            From:
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$FromDateTextBox2" type="text" id="ctl00_ctl00_ContentPane_ContentPane_FromDateTextBox2" class="textbox" style="width:70px;" />
+                            To:
+                            <input name="ctl00$ctl00$ContentPane$ContentPane$ToDateTextBox2" type="text" id="ctl00_ctl00_ContentPane_ContentPane_ToDateTextBox2" class="textbox" style="width:70px;" />
+                        </p>
+                        <div class="search-button">
+                            <input type="submit" name="ctl00$ctl00$ContentPane$ContentPane$SearchButton2" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$ContentPane$SearchButton2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_ContentPane_SearchButton2" class="button-red submit" style="font-size:X-Large;" />
+                        </div>
+                    
+	</div>
+                </div>
+            </div>
+            <div id="services-box" class="rounded">
+                <div class="silver-bg" style="padding: 10px; color: White; font-weight: bold; font-size: 14px;
+                    color: #666;">
+                    Your Services »</div>
+                <div style="padding: 10px 30px">
+                    <input id="ctl00_ctl00_ContentPane_ContentPane_ctl07" type="checkbox" name="ctl00$ctl00$ContentPane$ContentPane$ctl07" /><label for="ctl00_ctl00_ContentPane_ContentPane_ctl07">Desoto</label><br/><input id="ctl00_ctl00_ContentPane_ContentPane_ctl08" type="checkbox" name="ctl00$ctl00$ContentPane$ContentPane$ctl08" /><label for="ctl00_ctl00_ContentPane_ContentPane_ctl08">Shelby</label>
+                    <br />
+                    <input id="ctl00_ctl00_ContentPane_ContentPane_CheckBoxWestTenn" type="checkbox" name="ctl00$ctl00$ContentPane$ContentPane$CheckBoxWestTenn" /><label for="ctl00_ctl00_ContentPane_ContentPane_CheckBoxWestTenn">West Tennessee</label><br />
+                    <input id="ctl00_ctl00_ContentPane_ContentPane_CheckBoxMiddleTenn" type="checkbox" name="ctl00$ctl00$ContentPane$ContentPane$CheckBoxMiddleTenn" /><label for="ctl00_ctl00_ContentPane_ContentPane_CheckBoxMiddleTenn">Middle Tennessee</label><br />
+                    <input id="ctl00_ctl00_ContentPane_ContentPane_CheckBoxEastTenn" type="checkbox" name="ctl00$ctl00$ContentPane$ContentPane$CheckBoxEastTenn" /><label for="ctl00_ctl00_ContentPane_ContentPane_CheckBoxEastTenn">East Tennessee</label>
+                    <div style="padding: 3px 3px 5px 0">
+                        <div style="float: right;">
+                            <input type="submit" name="ctl00$ctl00$ContentPane$ContentPane$AddServiceButton" value="Add Service" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$ContentPane$ContentPane$AddServiceButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_ContentPane_ContentPane_AddServiceButton" class="button" />
+                        </div>
+                        <div style="clear: both">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="testimony">
+                <h1 style="font-style: italic;" class="blue">
+                    Why do subscribers use our service?</h1>
+                <h1>
+                    To search smarter.</h1>
+                <p>
+                    Search thousands of new public records and notices updated every business day<br />
+                    from one easy to use and reliable source. Plus, access an archive of 15 million
+                    historical records.</p>
+                <h1>
+                    To find new business opportunities.</h1>
+                <p>
+                    Find high value homeowners, new business owners, or area newcomers.<br />
+                    Get your information to the people you want to reach.</p>
+                <h1>
+                    To research potential customers.</h1>
+                <p>
+                    Research the person you will be doing business with.<br />
+                    Find their borrowing history, bankruptcies, tax liens, or garnishments.<br />
+                    Know who you are dealing with before you do business.</p>
+            </div>
+        </div>
+        <div style="clear: both">
+        </div>
+    
+</div>
+    
+
+    </div>
+
+        </div>
+        <div style="clear: both; border-top: solid 1px #5a5555">
+        </div>
+        <div id="footer-logo">
+            <img src="../images/footer-logo.gif" id="ctl00_ctl00_Img1" style="float: left" />
+        </div>
+        <div id="footer" class="rounded-bottom">
+            <div class="section">
+                <h1>
+                    Account Info</h1>
+                <ul>
+                    <li><a href="../Login.aspx" id="ctl00_ctl00_A3">Log In</a></li>
+                    <li><a href="../service/Service.aspx" id="ctl00_ctl00_A4">Your Account</a></li>
+                    <li><a href="../subscribe/Step1.aspx" id="ctl00_ctl00_A5">Create an Account</a></li>
+                </ul>
+                <h1>
+                    Subscribe</h1>
+                <ul>
+                    <li><a href="../subscribe/Step1.aspx" id="ctl00_ctl00_A28">Subscribe to The Daily
+                        News</a></li>
+                    <li><a href="../service/Service.aspx" id="ctl00_ctl00_A29">Upgrade Your Subscription</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h1>
+                    About</h1>
+                <ul>
+                    <li><a href="../About.aspx#about" id="ctl00_ctl00_A24">About Us</a></li>
+                    <li><a href="../About.aspx#contact" id="ctl00_ctl00_A31">Contact Us</a></li>
+                    <li><a href="/About.aspx#privacy" id="ctl00_ctl00_A32">Privacy Policy</a></li>
+                </ul>
+                <h1>
+                    Help</h1>
+                <ul>
+                    <li><a href="../Help.aspx" id="ctl00_ctl00_A30">Help</a></li>
+                    <li><a href="../About.aspx#contact" id="ctl00_ctl00_A25">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h1>
+                    MemphisDailyNews.com</h1>
+                <ul>
+                    <li><a href="../" id="ctl00_ctl00_A13">Home Page</a></li>
+                    <li><a href="https://m.memphisdailynews.com">Mobile Site</a></li>
+                    <li><a href="https://www.facebook.com/pages/Memphis-TN/Memphis-Daily-News/77067817854"
+                        title="Memphis Daily News&#039;s Facebook Page" target="_TOP">Facebook</a></li>
+                    <li><a href="https://twitter.com/memphisdaily" target="_blank">Twitter</a></li>
+                    <li><a href="https://feeds.feedburner.com/memphisdailynews/bbde" target="_blank">RSS
+                        Feed</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h1>
+                    Our Services</h1>
+                <ul>
+                    <li><a href="https://www.tnpublicnotice.com/" id="ctl00_ctl00_A6" target="_blank">All Statewide Public Notices</a></li>
+                    <li><a href="../Notices.aspx" id="ctl00_ctl00_A14">Public Notices</a></li>
+                    <li><a href="../PublicRecords.aspx" id="ctl00_ctl00_A15">Public Records</a></li>
+                    <li><a href="../NASearch.aspx" id="ctl00_ctl00_A16">Name &amp; Property Research</a></li>
+                    <li><a href="../DataDirect.aspx" id="ctl00_ctl00_A17">Data Direct</a></li>
+                    <li><a href="../WatchService.aspx" id="ctl00_ctl00_A18">Watch Service</a></li>
+                    <li><a href="../lists/ListBuilder.aspx" id="ctl00_ctl00_A19">Custom List Builder</a></li>
+                    <li><a href="../CrimeReport.aspx" id="ctl00_ctl00_A20">Crime Reports</a></li>
+                    <li><a href="../Neighborhood.aspx" id="ctl00_ctl00_A21">Neighborhood Reports</a></li>
+                </ul>
+            </div>
+            <div style="clear: both">
+            </div>
+            <p style="margin-top: 10px">
+                Copyright 1995 -
+                2024
+                by The Daily News Publishing Co. Inc. - All Rights Reserved
+            </p>
+        </div>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_RequiredFieldValidator2"), document.getElementById("ctl00_ctl00_RequiredFieldValidator1"), document.getElementById("ctl00_ctl00_loginValidator"), document.getElementById("ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator"), document.getElementById("ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_RequiredFieldValidator2 = document.all ? document.all["ctl00_ctl00_RequiredFieldValidator2"] : document.getElementById("ctl00_ctl00_RequiredFieldValidator2");
+ctl00_ctl00_RequiredFieldValidator2.controltovalidate = "ctl00_ctl00_LoginUserTextBox";
+ctl00_ctl00_RequiredFieldValidator2.errormessage = "*";
+ctl00_ctl00_RequiredFieldValidator2.display = "Dynamic";
+ctl00_ctl00_RequiredFieldValidator2.validationGroup = "LoginPopup";
+ctl00_ctl00_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_RequiredFieldValidator2.initialvalue = "";
+var ctl00_ctl00_RequiredFieldValidator1 = document.all ? document.all["ctl00_ctl00_RequiredFieldValidator1"] : document.getElementById("ctl00_ctl00_RequiredFieldValidator1");
+ctl00_ctl00_RequiredFieldValidator1.controltovalidate = "ctl00_ctl00_LoginPassTextBox";
+ctl00_ctl00_RequiredFieldValidator1.errormessage = "*";
+ctl00_ctl00_RequiredFieldValidator1.display = "Dynamic";
+ctl00_ctl00_RequiredFieldValidator1.validationGroup = "LoginPopup";
+ctl00_ctl00_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_RequiredFieldValidator1.initialvalue = "";
+var ctl00_ctl00_loginValidator = document.all ? document.all["ctl00_ctl00_loginValidator"] : document.getElementById("ctl00_ctl00_loginValidator");
+ctl00_ctl00_loginValidator.controltovalidate = "ctl00_ctl00_LoginPassTextBox";
+ctl00_ctl00_loginValidator.display = "Dynamic";
+ctl00_ctl00_loginValidator.validationGroup = "LoginPopup";
+ctl00_ctl00_loginValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+var ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator = document.all ? document.all["ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator"] : document.getElementById("ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator");
+ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator.errormessage = "CustomValidator";
+ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator.display = "Dynamic";
+ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+var ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator = document.all ? document.all["ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator"] : document.getElementById("ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator");
+ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator.errormessage = "CustomValidator";
+ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator.display = "Dynamic";
+ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_ctl00_ScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ctl00_ctl00_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_RequiredFieldValidator2'));
+}
+
+document.getElementById('ctl00_ctl00_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_RequiredFieldValidator1'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_ctl00_LoginUpdatePanel","displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_LoginProgress"));
+});
+
+document.getElementById('ctl00_ctl00_loginValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_loginValidator'));
+}
+
+document.getElementById('ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_ContentPane_ContentPane_NameSearchValidator'));
+}
+
+document.getElementById('ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_ContentPane_ContentPane_PropertySearchValidator'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>

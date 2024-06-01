@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="The Superior Express" />
+  <META NAME="description" CONTENT="May 30, 2024 edition of The Superior Express, a weekly newspaper." />
+  <META NAME="keywords" CONTENT="" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="1 days" />
+  
+  <META PROPERTY="og:title" CONTENT="The Superior Express Homepage">
+<META PROPERTY="og:description" CONTENT="The Superior Express">
+<META PROPERTY="og:url" CONTENT="https://www.superiorne.com">
+<META PROPERTY="og:site_name" CONTENT="The Superior Express">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.superiorne.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>The Superior Express Homepage</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28224/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1178x40962/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" href="https://www.superiorne.com/">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.superiorne.com/?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>    <link rel="stylesheet" type="text/css" href="/app/js/homepage_overlay_ad/facebox.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20328/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21100/XPATH/app/website_specifics/nonresponsive.js"></script>
+    <script src="https://www.superiorne.com/apps/clear/clear.js"></script>
+
+    <script>
+
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+
+     debug=false;
+
+
+     function expiredAJAX() {
+      // noop
+     }
+    </script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20810236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-20810236-2');
+</script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+<!-- Version 5.021 of ROAR -->
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="https://www.superiorne.com/classifieds" >Classifieds</a><a  href="https://www.superiorne.com/directory" >Directory</a><a  href="https://www.superiorne.com/photos" >Photos</a><a  href="https://www.superiorne.com/about" >About</a><a  href="https://www.superiorne.com/contact" >Contact</a><a  href="https://www.superiorne.com/advertise" >Advertise</a><a  href="https://www.superiorne.com/about#cc" >Country Connections</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="https://www.facebook.com/The-Superior-Express-329976593128/"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='21' alt='FaceBook'></a><a  href="https://www.superiorne.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="https://www.superiorne.com/trial" >Free Trial</a><a  href="https://www.superiorne.com/subscribe" >Subscribe</a><a  href="https://www.superiorne.com/login?r=%2F" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>The Superior Express - </h1>
+    <a href="https://www.superiorne.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:Uuos0i8qs9lgvwyzr2o%2D41x8uALP7e0GR5603--><a href="https://www.brodstonehospital.org/" target="blank"><img src="/IMG/uCLFWPcELEJhEHL6WzThIUdgZXTaa/XPATH/home/cms_data/dfault/web_ads/horiz_small/5749-brodstone_web_ad.jpgXEXT1588x37968is.jpeg" width="259" height="90" alt=""></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_1 leftone">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+    <div class="grid_1 rightone">
+     <p class="pub_date">
+      Week of May 30, 2024
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class=" active" href="https://www.superiorne.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/news">News</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/sports">Sports</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/columns">Columns</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/features">Features</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/history">History</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/agriculture">Agriculture</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.superiorne.com/section/calendar">Calendar</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="https://www.superiorne.com/section/calendar">All</a>
+    </li>
+    <li>
+     <a href="https://www.superiorne.com/section/calendar/church%5Fservices">Church Services</a>
+    </li>
+    <li>
+     <a href="https://www.superiorne.com/section/calendar/community%5Fevents%5Fcalendar">Community Events Calendar</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" action="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <div>
+          <div class="slideshow hidehead">
+  <script>
+   "undefined"==typeof addLoadEvent&&(addLoadEvent=function(o){var n=window.onload;"function"!=typeof window.onload?window.onload=o:window.onload=function(){n&&n(),o()}});
+   
+   home_top = {};
+   home_top.divs_to_fade = new Array('box_home_top_1', 'box_home_top_2', 'box_home_top_3', 'box_home_top_4');
+   home_top.iAd = 0;
+   home_top.iOl = 0;
+   
+   home_top.swapFade = function(i) {
+    home_top.iOl;
+    home_top.iOl = home_top.iAd;
+    home_top.iAd = home_top.iAd + i;
+    if (home_top.iAd == home_top.divs_to_fade.length){home_top.iAd = 0;}
+    if (home_top.iAd < 0){home_top.iAd = home_top.divs_to_fade.length-1;}
+    document.getElementById(home_top.divs_to_fade[home_top.iOl]).className='aslide fadeOutLeft home_top animated zbottom';
+    document.getElementById('dot_home_top_'+home_top.iOl).src=document.getElementById('dot_home_top_'+home_top.iOl).src.replace('doton','dotoff');
+    document.getElementById('dot_home_top_'+home_top.iAd).src=document.getElementById('dot_home_top_'+home_top.iAd).src.replace('dotoff','doton');
+    setTimeout(function(){
+     document.getElementById(home_top.divs_to_fade[home_top.iAd]).className='aslide fadeInLeft home_top animated ztop';
+    },200);
+   }
+   home_top.prev = function(){
+    
+    home_top.swapFade(-1);
+    
+   }
+   home_top.next = function(){
+    
+    home_top.swapFade(1);
+    
+   }
+   home_top.goto = function(x){
+    
+    var c='dot_home_top_'+home_top.iAd;
+    var n='dot_home_top_'+x;
+    document.getElementById(c).src=document.getElementById(c).src.replace('doton','dotoff');
+    document.getElementById(home_top.divs_to_fade[home_top.iAd]).className='aslide fadeOutLeft home_top animated zbottom';
+    document.getElementById(n).src=document.getElementById(n).src.replace('dotoff','doton');
+    document.getElementById(home_top.divs_to_fade[x]).className='aslide fadeInLeft home_top animated ztop';
+    home_top.iAd=x;
+    
+   }
+  </script>
+ 
+           <div class="slideshow_slides" id="slides_home_top">
+            <a href="https://www.superiorne.com/story/2024/05/30/news/memorial-day-24-honors-veterans/7818.html" aria-label="Top slideshow story: Memorial Day 24 Honors Veterans" id="box_home_top_4" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/f5s0GlK5sKzd0wknlv_WtQwo-HGA2/XPATH/home/cms_data/dfault/photos/stories/id/1/8/7818/s_topXEXT1427x32257is.jpg'); background-size: contain"><span>Memorial Day 24 Honors Veterans</span></a>
+<a href="https://www.superiorne.com/story/2024/05/30/sports/rhhs-track-at-state-meet-at-wichita/7833.html" aria-label="Top slideshow story: RHHS track at state meet at Wichita" id="box_home_top_3" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/b1x503Bx29l2vz1f9x2U4O-ZAY-Du/XPATH/home/cms_data/dfault/photos/stories/id/3/3/7833/s_topXEXT1427x32211is.jpg'); background-size: contain"><span>RHHS track at state meet at Wichita</span></a>
+<a href="https://www.superiorne.com/story/2024/05/30/news/decker-brown-guest-speaker-for-2024-memorial-day-services/7828.html" aria-label="Top slideshow story: Decker Brown - guest speaker for 2024 Memorial Day services" id="box_home_top_2" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/f5Z5_lRhdP0h0lxit56J6N0o9PUA0/XPATH/home/cms_data/dfault/photos/stories/id/2/8/7828/s_topXEXT1427x32287is.jpg'); background-size: contain"><span>Decker Brown - guest speaker for 2024 Memorial Day services</span></a>
+<a href="https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html" aria-label="Top slideshow story: Edgar Cemetery gate rebuilt" id="box_home_top_1" class="aslide home_top fadeInLeft animated zbottom" style="background-image: url('/IMG/g6o5CjO5fNfd50mqr-4JzUyq_JL9-/XPATH/home/cms_data/dfault/photos/stories/id/2/0/7820/s_topXEXT1427x32253is.jpg'); background-size: contain"><span>Edgar Cemetery gate rebuilt</span></a>
+
+           </div>
+           <div class="slideshow_dots" id="dots_home_top">
+            <div>
+             <a href="javascript:home_top.goto(0);" onmouseover="home_top.goto(0);"><img src="/cms/slideshow/images/doton.png" width="16" height="16" id="dot_home_top_0" alt=""></a><a href="javascript:home_top.goto(1);" onmouseover="home_top.goto(1);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_1" alt=""></a><a href="javascript:home_top.goto(2);" onmouseover="home_top.goto(2);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_2" alt=""></a><a href="javascript:home_top.goto(3);" onmouseover="home_top.goto(3);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_3" alt=""></a>
+            </div>
+           </div>
+
+           <div class="slideshow_prev" id="prev_home_top">
+            <div>
+             <a href="javascript:home_top.prev();" aria-label="Previous Item"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            </div>
+           </div>
+           <div class="slideshow_next" id="next_home_top">
+            <div>
+             <a href="javascript:home_top.next();" aria-label="Next Item"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+           </div>
+
+
+
+          </div>
+</div>
+  <div class='sections_display'>
+  <div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="https://www.superiorne.com/section/news">News</a></h2></div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/news/32nd-vestey-parade-highlights-superiors-annual-celebration/7819.html" aria-label="Story Thumbnail: 32nd Vestey Parade highlights Superior&apos;s annual celebration"><img src="/IMG/RlGTnY2bSeIXfVcMZlwemifom/XPATH/home/cms_data/dfault/photos/stories/id/1/9/7819/s_bottomXEXT1433x33359is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/news/32nd-vestey-parade-highlights-superiors-annual-celebration/7819.html"><h3>32nd Vestey Parade highlights Superior's annual celebration</h3></a><div class='blurb_byline'></div><p>The Lady Vestey Festival parade crowd gathered early for the 10:30 a.m. start Saturday morning in Superior. A gentle breeze, nearly cloudless sky, visiting and watching the children anticipate the...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/news/memorial-day-24-honors-veterans/7818.html" aria-label="Story Thumbnail: Memorial Day 24 Honors Veterans"><img src="/IMG/MgTbtMxgTZaIbXLOZSzxU3lfi/XPATH/home/cms_data/dfault/photos/stories/id/1/8/7818/s_topXEXT1427x32257is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/news/memorial-day-24-honors-veterans/7818.html"><h3>Memorial Day 24 Honors Veterans</h3></a><div class='blurb_byline'></div><p>In the foreground, the Superior VFW firing squad participate in Memorial Day service at Evergreen Cemetery. Members of the squad, Monday morning were (from left) Adolph Laluk, Darrell Jensen, Frank...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/news/licenses-not-needed-to-fish-this-weekend-in-kansas-waters/7823.html"><h3>Licenses not needed to fish this weekend in Kansas waters</h3></a><div class='blurb_byline'></div><p>Kansas Department of Wildlife and Parks is sponsoring its annual Free Fishing Weekend, the first weekend in June. Visitors can fish in Kansas without a fishing license on Saturday and Sunday, June 1 and 2. All length and creel limit regulations...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/news/two-new-hires-in-treasurers-office/7825.html"><h3>Two new hires in Treasurer's office</h3></a><div class='blurb_byline'></div><p>The Jewell County Commissioners met May 13. Commissioners Keith Roe, Ed Duskie and Brent Beck were present as was Carla Waugh, county clerk. Amanda Davis, register of deeds, discussed purchasing Fidlar Technologies’ imaging services which...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/news/veterans-receive-quilts-of-valor/7821.html" aria-label="Story Thumbnail: Veterans receive Quilts of Valor"><img src="/IMG/QkCcsZ1cEZfKeGJQuWyifznaj/XPATH/home/cms_data/dfault/photos/stories/id/2/1/7821/s_topXEXT1427x32254is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/news/veterans-receive-quilts-of-valor/7821.html"><h3>Veterans receive Quilts of Valor</h3></a><div class='blurb_byline'>By Deb Troudt</div><p>On Memorial Day, Monday afternoon the Nelson Community Center was filled with the friends and family of Ken Hamel, Darrell Jensen and Norman Reeve, as these veterans were presented with Quilts of...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/news/decker-brown-guest-speaker-for-2024-memorial-day-services/7828.html" aria-label="Story Thumbnail: Decker Brown - guest speaker for 2024 Memorial Day services"><img src="/IMG/MgAgmM4IEebMbMYJhcukh0pfh/XPATH/home/cms_data/dfault/photos/stories/id/2/8/7828/s_topXEXT1427x32287is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/news/decker-brown-guest-speaker-for-2024-memorial-day-services/7828.html"><h3>Decker Brown - guest speaker for 2024 Memorial Day services</h3></a><div class='blurb_byline'></div><p>Decker Brown, Lawrence-Nelson history teacher and basketball coach, was the guest speaker for the Memorial Day services held by the Nelson American Legion Post 187 on Monday. The Nelson American...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/news/american-legion-donation-builds-communitybuilding-fund/7829.html" aria-label="Story Thumbnail: American Legion donation builds Community Building Fund"><img src="/IMG/AUKjdb0STWWgbMe-prhiqwzjf/XPATH/home/cms_data/dfault/photos/stories/id/2/9/7829/s_topXEXT1309x32429is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/news/american-legion-donation-builds-communitybuilding-fund/7829.html"><h3>American Legion donation builds Community Building Fund</h3></a><div class='blurb_byline'></div><p>The Lawrence Community Building endeavor has been an 'on-going' effort for something like a dozen to 15 years. This Memorial Day the building fund took another jump forward. The dream of building a...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/news/lovewell-state-park-staff-will-host-kids-fishing-clinic-june-9/7824.html"><h3>Lovewell State Park staff will host kid's fishing clinic June 9</h3></a><div class='blurb_byline'></div><p>Lovewell State Park is hosting a Kids Fishing Clinic on Sunday, June 9. The Kids Fishing Clinic format will allow for an educational opportunity for kids interested in learning about fishing. The Kids Fishing Clinic will be limited to 30 kids, ages...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/news/be-kind-to-your-mind/7827.html"><h3>"Be Kind to Your Mind"</h3></a><div class='blurb_byline'></div><p>Since 1949, Pawnee Mental Health has observed Mental Health Awareness Month every May. It holds immense significance as it provides a platform for raising awareness, reducing stigma, and promoting mental health understanding. During this month-long...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/news/ute-still-needs-volunteers/7826.html"><h3>Ute still needs volunteers</h3></a><div class='blurb_byline'></div><p>The Jewell County Cinema, Inc. (JCCI) Board met May 20, 2024 at the Mankato Christian Church and was called to order by Thadd Hinkle. Members present were Thadd Hinkle, Phyllis Christie, Sarah Ortman, Janis McDill, Linda and Virgil Jones, Lisa...</p>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="https://www.superiorne.com/story/2024/05/30/news/elections-deadlines-coming-monday/7822.html"><h3>Elections deadlines coming Monday</h3></a>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="https://www.superiorne.com/section/sports">Sports</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/sports/kalynn-meyer-qualifies-for-ncaa-meet/7835.html"><h3>Kalynn Meyer qualifies for NCAA meet</h3></a><div class='blurb_byline'></div><p>Kalynn Meyer, a Superior High School graduate who competes for the University of Nebraska-Lincoln, qualified for the NCAA Track and Field championship meet being held from Wednesday, June 5, through Saturday, June 8, at Hayward Field on the...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/sports/nebraska-state-track-meet/7831.html" aria-label="Story Thumbnail: Nebraska State Track meet."><img src="/IMG/RlCjVK6dIbMXZOTKhjtmfyvok/XPATH/home/cms_data/dfault/photos/stories/id/3/1/7831/s_topXEXT1427x32312is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/sports/nebraska-state-track-meet/7831.html"><h3>Nebraska State Track meet.</h3></a><div class='blurb_byline'></div><p>Sydney Biltoft, a recent Lawrence-Nelson High graduate) competes in one of her three hurdles events at Nebraska State Track meet. She ran the 100 meter hurdles with a time of 16.76, the 300 meter...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/sports/shs-golfer-competes-at-state-tourney/7836.html"><h3>SHS golfer competes at state tourney</h3></a><div class='blurb_byline'></div><p>The 2024 state Class C boys golf championship was off to a rocky start Tuesday. The event was scheduled to be contested Tuesday and Wednesday over the Elks Country Club course at Columbus. Mother Nature intervened on Tuesday and washed out the...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/sports/rhhs-track-at-state-meet-at-wichita/7833.html" aria-label="Story Thumbnail: RHHS track at state meet at Wichita"><img src="/IMG/IcYgbeoYdMMhWacGxUqvf1zQk/XPATH/home/cms_data/dfault/photos/stories/id/3/3/7833/s_topXEXT1427x32211is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/sports/rhhs-track-at-state-meet-at-wichita/7833.html"><h3>RHHS track at state meet at Wichita</h3></a><div class='blurb_byline'></div><p>The Rock Hills High School boys and girls track and field teams competed at the Kansas 1A meet staged at Cessna Stadium located on the campus of Wichita State University at Wichita. The meet was held...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/sports/l-n-raiders-place-6th-at-state-golf-meet/7830.html"><h3>L-N Raiders place 6th at State Golf Meet</h3></a><div class='blurb_byline'></div><p>The Lawrence-Nelson High School golf team ended the 2024 season at the state meet last week. They earned a sixth place finish out of the 15 teams and 95 competitors taking part in the Class D meet. L-N was paced by senior Jacob Kathman who shot an...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="https://www.superiorne.com/section/columns">Columns</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/columns/editors-notebook/7813.html"><h3>Editor's Notebook</h3></a><div class='blurb_byline'>By Bill Blauvelt</div><p>May is an anniversary month for this editor for on May 21, 1970, it was announced I had succeeded Howard Crilly as editor of The Express. The day was also my 24th birthday. On my first Memorial Day as The Express editor. I had gone to Superior’s...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/columns/burlington-crossing-signs/7815.html"><h3>Burlington Crossing Signs</h3></a><div class='blurb_byline'>By Richard L. Schmeling</div><p>Editor Blauvelt recently ruminated about the Chicago, Burlington and Quincy Railroad which ran through Superior and mentioned the railroad, unlike most other railroads, used concrete crossing signs. The familiar “Crossbucks” (an “X” shape...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/columns/love-my-crazy-life/7817.html"><h3>Love my crazy life</h3></a><div class='blurb_byline'>By Teraesa Bruce</div><p>The lifeguards and I have worked at the pool almost daily this past week. The painting of the pool basin had me thrown off my game, but thankfully I recovered from the upset and could change direction without too much difficulty. I have a certain...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/columns/ask-a-pastor-column/7814.html"><h3>Ask a Pastor Column</h3></a><div class='blurb_byline'></div><p>Q: Matthew tells us that the wise men found Jesus in a house, Luke says they found him in a manger. Why are the accounts so different? Is one more right than the other? A: Our nativity scenes and Christmas pageants can often portray a condensed...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/columns/puffs/7816.html" aria-label="Story Thumbnail: Puffs"><img src="/IMG/IcYgbeoYdMMhWacGxUqwf1zQk/XPATH/home/cms_data/dfault/photos/stories/id/1/6/7816/s_topXEXT1309x32435is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/columns/puffs/7816.html"><h3>Puffs</h3></a><div class='blurb_byline'>By Allen Ostdiek</div><p>Memorial Days can just come and go . . . sort of like birthdays. Sometimes you don't like to think about them. However, just like birthdays they are important. Nobody is "glorifying" war as some...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="https://www.superiorne.com/section/features">Features</a></h2></div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html" aria-label="Story Thumbnail: Edgar Cemetery gate rebuilt"><img src="/IMG/NhPgpK1gGcGIgbNRfhska7nhj/XPATH/home/cms_data/dfault/photos/stories/id/2/0/7820/s_topXEXT1427x32253is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html"><h3>Edgar Cemetery gate rebuilt</h3></a><div class='blurb_byline'>By Karyn Christy</div><p>"The pearly gates are what some people believe that after they die, they go through them and enter heaven," said Chris Shuck, clerk-treasurer at the Edgar City Office. The pearly gate she speaks of...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="https://www.superiorne.com/section/obituaries">Obituaries</a></h2></div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/obituaries/roland-short-shambaugh/7837.html" aria-label="Story Thumbnail: Roland &quot;Short&quot; Shambaugh "><img src="/IMG/SmCjVK6dIZMXZOTShjtmfyvok/XPATH/home/cms_data/dfault/photos/stories/id/3/7/7837/s_topXEXT1309x32379is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/obituaries/roland-short-shambaugh/7837.html"><h3>Roland "Short" Shambaugh </h3></a><div class='blurb_byline'></div><p>Roland "Short" Lee Shambaugh, the son of James and Lynn (Bramwell) Shambaugh, was born on March 16, 1942, in Bostwick, Nebraska. He died on May 23, 2024, at his home in Superior, Nebraska at the age...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.superiorne.com/story/2024/05/30/obituaries/jerry-benjamin/7834.html"><h3>Jerry Benjamin</h3></a><div class='blurb_byline'></div><p>Jerry Lee Benjamin, 71, was born on July 8, 1952, to Urdia Roberts and Jack Benjamin in Colby, Kansas. He died May 23, 2024, at St. Elizabeth Hospital in Lincoln, Nebraska. He was raised in Selden, Dresden, Oakley and Burr Oak. He graduated from...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="https://www.superiorne.com/story/2024/05/30/obituaries/harold-brockman/7832.html" aria-label="Story Thumbnail: Harold Brockman"><img src="/IMG/AURffZyYcZMcOWi-frpwjw3Sg/XPATH/home/cms_data/dfault/photos/stories/id/3/2/7832/s_topXEXT1412x32487is.jpg" width="110" height="110" alt=""></a></div>
+<a href="https://www.superiorne.com/story/2024/05/30/obituaries/harold-brockman/7832.html"><h3>Harold Brockman</h3></a><div class='blurb_byline'></div><p>Harold "Harry" James Brockman, 93, died peacefully on May 11, 2024, at St. Peter's Hospital with his family by his side. He was born on Aug. 7, 1930, to the late Martin and Kathryn (Ostdiek) Brockman...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="https://www.superiorne.com/section/calendar">Calendar</a></h2></div>
+<div class='hmfunction_headlineonly'>
+<a href="https://www.superiorne.com/page/community-events-calendar/102.html"><h3>Community Events Calendar</h3></a>
+</div>
+<div class='more_stories_nosections'><div class='more_stories_toggle'>+ More Stories </div><div class='more_stories_list'><ul>
+<li><a href='https://www.superiorne.com/directory/category/church-services'  ONMOUSEDOWN="return offsiteLink(this,'103');">Church Services</a></li>
+</ul></div></div>
+</div></div> 
+  <div class='sections_display'>
+  </div><div style="clear: both;"></div><!-- Homepage, code 90 -->
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='https://www.superiorne.com/story/2024/05/30/news/32nd-vestey-parade-highlights-superiors-annual-celebration/7819.html' aria-label='Story Thumbnail: 32nd Vestey Parade hig...'><img src="/IMG/l_gtByQ1sMiJ4f3Km3K4NopCA/XPATH/home/cms_data/dfault/photos/stories/id/1/9/7819/s_bottomXEXT1433x33359is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='https://www.superiorne.com/story/2024/05/30/news/32nd-vestey-parade-highlights-superiors-annual-celebration/7819.html' aria-label='Story Thumbnail: 32nd Vestey Parade hig...'>32nd Vestey Parade hig...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='https://www.superiorne.com/story/2024/05/30/news/memorial-day-24-honors-veterans/7818.html' aria-label='Story Thumbnail: Memorial Day 24 Honors...'><img src="/IMG/g6t1HmL6tH060hmMmkNL79v58/XPATH/home/cms_data/dfault/photos/stories/id/1/8/7818/s_topXEXT1427x32257is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='https://www.superiorne.com/story/2024/05/30/news/memorial-day-24-honors-veterans/7818.html' aria-label='Story Thumbnail: Memorial Day 24 Honors...'>Memorial Day 24 Honors...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='https://www.superiorne.com/story/2024/05/30/news/licenses-not-needed-to-fish-this-weekend-in-kansas-waters/7823.html' aria-label='Story Thumbnail: Licenses not needed to...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='https://www.superiorne.com/story/2024/05/30/news/licenses-not-needed-to-fish-this-weekend-in-kansas-waters/7823.html' aria-label='Story Thumbnail: Licenses not needed to...'>Licenses not needed to...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='https://www.superiorne.com/story/2024/05/30/news/two-new-hires-in-treasurers-office/7825.html' aria-label='Story Thumbnail: Two new hires in Treas...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='https://www.superiorne.com/story/2024/05/30/news/two-new-hires-in-treasurers-office/7825.html' aria-label='Story Thumbnail: Two new hires in Treas...'>Two new hires in Treas...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html' aria-label='Story Thumbnail: Edgar Cemetery gate re...'><img src="/IMG/h7p6DkP6gKg65loPszG-BBx79/XPATH/home/cms_data/dfault/photos/stories/id/2/0/7820/s_topXEXT1427x32253is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html' aria-label='Story Thumbnail: Edgar Cemetery gate re...'>Edgar Cemetery gate re...<span class='mp_author'>Karyn Christy</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:i826CwK46Lzu9%2DAB5E2MGD%5FK8OMhFIG4SbYCF--><span class="ad_local_square"><a href="http://www.alexandermotorsinc.com" target="blank"><img src="/IMG/xkTmtd_PYnaciLhSTBTptIaWfqt50ykux/XPATH/home/cms_data/dfault/web_ads/square/5274-alexander_ad_30may2024.jpgXEXT1528x35909is.jpeg" width="300" height="292" alt=""></a></span></div><div class="side_separator"></div></div><div class='sidebar_split_ad'><div class='split_left'><a href='https://www.superiorne.com/subscribe' aria-label='Subscribe'><img src="/home/cms_data/dfault/images/.TEMP/cover_graphic_staticTEMP140x280-1145.png" width="140" height="175" alt=""></a></div><div class='split_right'><p class='sidebar_split_ad_title'><strong>Subscribe & receive:</strong></p>
+
+<p>
+- Full online access<br>
+- Comment on articles<br>
+- Access the archives<br>
+- And much more<br>
+</p><a href='https://www.superiorne.com/subscribe' aria-label='Subscribe'><img src="/home/cms_data/dfault/images/.TEMP/subscribelogoTEMP150x100-2619.png" width="150" height="40" alt=""></a></div></div><div class="side_separator"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:xztx5nBvxCql0134w7tD96DFz9DIAj5TJCCR%5FFcEF--><span class="ad_local_square"><img src="/IMG/2pYYsV3mPZeXhecVT6s4oIWYvdxxqzxh3/XPATH/home/cms_data/dfault/web_ads/square/6888-scroggins_vhs_8_mm.jpgXEXT1673x35688is.jpeg" width="300" height="218" alt=""></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:Nnhltb1jl2eZoprskvh3xu35n93A0XtH922FzFQ45--><span class="ad_local_square"><a href="https://www.bomgaars.com/weekly-flyer" target="blank"><img src="/IMG/kXUsiZ-VamVYdbmQXAZ5u5cXnvu_Cdrzt/XPATH/home/cms_data/dfault/web_ads/square/5857-bomgaars_web_logo.jpgXEXT1797x35755is.jpeg" width="300" height="88" alt=""></a></span></div><div class="side_separator"></div></div><div class="photo_gallery"><h4>Photo Gallery</h4><a href='https://www.superiorne.com/photos' aria-label='Thumbnail nr 1'><img src='/IMG/5NHTWVXKPoMV68cFUtBrlFcJT/XPATH/home/cms_data/dfault/photos/photos_feature/2024-05-30/1/70_year_legion_members_24.jpgXEXT1234x42515is.jpg' width='92' height='92' alt=""></a><a href='https://www.superiorne.com/photos' aria-label='Thumbnail nr 2'><img src='/IMG/8Q7KaFmNBoJPS8QbE9aZWbQXX/XPATH/home/cms_data/dfault/photos/photos_feature/2024-05-30/1/am_legion_009_gun_salute.jpgXEXT1702x42970is.jpg' width='92' height='92' alt=""></a><a href='https://www.superiorne.com/photos' aria-label='Thumbnail nr 3'><img src='/IMG/BV7RbHkLHxMFOvacEzUhkUQbG/XPATH/home/cms_data/dfault/photos/photos_feature/2024-05-30/1/bikes_7709g.jpgXEXT1593x37093is.jpg' width='92' height='92' alt=""></a><a href='https://www.superiorne.com/photos' aria-label='Thumbnail nr 4'><img src='/IMG/7PDYbDoBHy_FQ3eWMFDikQVYE/XPATH/home/cms_data/dfault/photos/photos_feature/2024-05-30/1/bike_race_heather_9234.jpgXEXT1647x41736is.jpg' width='92' height='92' alt=""></a><a href='https://www.superiorne.com/photos' aria-label='Thumbnail nr 5'><img src='/IMG/r_GYKTV7Pu9UA4cLI-JkjLRTU/XPATH/home/cms_data/dfault/photos/photos_feature/2024-05-30/1/bike_race_right_side_9239.jpgXEXT1210x42374is.jpg' width='92' height='92' alt=""></a><a href='https://www.superiorne.com/photos' aria-label='Thumbnail nr 6'><img src='/IMG/5NHTWVXKQoMV68cFUtBrlFZJT/XPATH/home/cms_data/dfault/photos/photos_feature/2024-05-30/1/black_chicken_girl_7703.jpgXEXT1703x42247is.jpg' width='92' height='92' alt=""></a></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:l%5F59FzN79O2xABDE8H5PJGPR%5FdPcMvFfVOOZLtoQR--><span class="ad_local_square"><a href="https://www.kansaspublicnotices.com/" target="blank"><img src="/IMG/2paWxV2jRdeReeYMh7r8bKcVyhhF4vvr2/XPATH/home/cms_data/dfault/web_ads/square/8868-kansas_press_association.pngXEXT1495x38872is.png" width="194" height="154" alt="Kansas Public Notices"></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:5NHLTBbJLcE%5FOPRSKVHdXUdfNzdua9TtjccnZD2ef--><span class="ad_local_square"><a href="https://superiorinet.net/" target="blank"><img src="/IMG/gTbSan8RhZafVVnFi-d4lDuYfwhBDhixs/XPATH/home/cms_data/dfault/web_ads/square/6303-logo_vector_remake_fawis.jpgXEXT1604x38633is.jpeg" width="300" height="168" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:l%5F59FzN79O2xABDE8H5PJGCN%5FZPIIfJ7iyOdLVoQR--><span class="ad_local_square"><a href="https://www.facebook.com/superiorne3000" target="blank"><img src="/IMG/uhVqtV8TZsRPiZiQfDV4rCpaZutzAbc1z/XPATH/home/cms_data/dfault/web_ads/square/2200-superio_3000_web_ad_28sept2023.jpgXEXT1599x38526is.jpeg" width="300" height="206" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:n2w08qEy0Fto3467z%2DwGA95E2QGH%5FaAyMVFACcSfYCFOV--><span class="ad_local_square"><img src="/IMG/gTUqpi8NcoNfNLmSV9Z4q7gWhsu75rs1x/XPATH/home/cms_data/dfault/web_ads/square/5584-tse_rate_card_01aug2022_sm.jpgXEXT1403x37117is.jpeg" width="300" height="179" alt=""></span></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   <div class="page_text_bottom widen_vertical_width skel"><div class="slickcarousel_white"> <div><div class="carouselimg"><a href="https://www.superiorne.com/story/2024/05/30/news/32nd-vestey-parade-highlights-superiors-annual-celebration/7819.html" aria-label="Story: 32nd Vestey Parade highlights Superior&apos;s annual celebration"><img src="/IMG/c2Xk4pHsjvZIwmtddy0z3vip67Lr1/XPATH/home/cms_data/dfault/photos/stories/id/1/9/7819/s_bottomXEXT1433x33359is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>NEWS</p></div><h4 class=""><a href='https://www.superiorne.com/story/2024/05/30/news/32nd-vestey-parade-highlights-superiors-annual-celebration/7819.html' aria-label='Story: 32nd Vestey Parade highlights Superior&apos;s annual celebration'>32nd Vestey Parade highlights Superior's annual celebration</a></h4><p></p></div><div><div class="carouselimg"><a href="https://www.superiorne.com/story/2024/05/30/news/decker-brown-guest-speaker-for-2024-memorial-day-services/7828.html" aria-label="Story: Decker Brown - guest speaker for 2024 Memorial Day services"><img src="/IMG/c2Xk4pHsjvZIwmtddy0z3vip67Lr1/XPATH/home/cms_data/dfault/photos/stories/id/2/8/7828/s_bottomXEXT1026x33220is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>NEWS</p></div><h4 class=""><a href='https://www.superiorne.com/story/2024/05/30/news/decker-brown-guest-speaker-for-2024-memorial-day-services/7828.html' aria-label='Story: Decker Brown - guest speaker for 2024 Memorial Day services'>Decker Brown - guest speaker for 2024 Memorial Day services</a></h4><p></p></div><div><div class="carouselimg"><a href="https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html" aria-label="Story: Edgar Cemetery gate rebuilt"><img src="/IMG/Rrpg1xCspXqObtaJ10jGn-2ZvK825/XPATH/home/cms_data/dfault/photos/stories/id/2/0/7820/s_bottomXEXT1026x33208is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>FEATURES</p></div><h4 class=""><a href='https://www.superiorne.com/story/2024/05/30/features/edgar-cemetery-gate-rebuilt/7820.html' aria-label='Story: Edgar Cemetery gate rebuilt'>Edgar Cemetery gate rebuilt</a></h4><p></p></div><div><div class="carouselimg"><a href="https://www.superiorne.com/story/2024/05/30/sports/nebraska-state-track-meet/7831.html" aria-label="Story: Nebraska State Track meet."><img src="/IMG/SskymuIbrXXRubtPszn703zkvGE1-/XPATH/home/cms_data/dfault/photos/stories/id/3/1/7831/s_bottomXEXT1433x33331is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>SPORTS</p></div><h4 class=""><a href='https://www.superiorne.com/story/2024/05/30/sports/nebraska-state-track-meet/7831.html' aria-label='Story: Nebraska State Track meet.'>Nebraska State Track meet.</a></h4><p></p></div><div><div class="carouselimg"><a href="https://www.superiorne.com/story/2024/05/30/sports/rhhs-track-at-state-meet-at-wichita/7833.html" aria-label="Story: RHHS track at state meet at Wichita"><img src="/IMG/JjgyulGhmqhIpnycjxlB61ojzLHz-/XPATH/home/cms_data/dfault/photos/stories/id/3/3/7833/s_bottomXEXT1433x33357is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>SPORTS</p></div><h4 class=""><a href='https://www.superiorne.com/story/2024/05/30/sports/rhhs-track-at-state-meet-at-wichita/7833.html' aria-label='Story: RHHS track at state meet at Wichita'>RHHS track at state meet at Wichita</a></h4><p></p></div></div><div class="bottom_banner_ad" aria-hidden="true"><div class="bottom_banner_advert_text" aria-hidden="true"><!--ad_init_ctr:7PJNVDdLNeGBQRTUMXJfZWSdPhfUYTZLlueZb1rAxbenu--><a href="https://flatwaterfreepress.org" target="blank"><img src="/IMG/7PtHXEgIvcJ5JR07MdM9J_FJVdfSK/XPATH/home/cms_data/dfault/web_ads/horiz/5140-flatwater_web_logo_state_v2.pngXEXT1523x39164is.png" width="440" height="90" alt=""></a></div></div></div>
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='https://www.superiorne.com/section/news' aria-label="Section link">News</a></li><li><a href='https://www.superiorne.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='https://www.superiorne.com/section/columns' aria-label="Section link">Columns</a></li><li><a href='https://www.superiorne.com/section/features' aria-label="Section link">Features</a></li><li><a href='https://www.superiorne.com/section/history' aria-label="Section link">History</a></li><li><a href='https://www.superiorne.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='https://www.superiorne.com/section/agriculture' aria-label="Section link">Agriculture</a></li><li><a href='https://www.superiorne.com/section/calendar' aria-label="Section link">Calendar</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="https://www.superiorne.com/contact" >Contact</a></li><li><a href="https://www.superiorne.com/subscribe" >Subscribe</a></li><li><a href="https://www.superiorne.com/about" >About</a></li><li><a href="https://www.superiorne.com/photos" >Photos</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="https://www.superiorne.com/terms" >Terms of Use</a></li><li><a href="https://www.superiorne.com/privacy" >Privacy Policy</a></li><li><a href="https://www.superiorne.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="https://www.superiorne.com/?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="https://www.superiorne.com/advertise" >Advertise</a></li><li><a href="https://www.superiorne.com/directory" >Business Directory</a></li><li><a href="https://www.superiorne.com/advertise/placead" >Place a Classified Ad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="https://www.superiorne.com/contact" >Submit Content</a></li><li><a href="https://www.superiorne.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="https://www.facebook.com/The-Superior-Express-329976593128/"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='30' alt='FaceBook'></a><a  href="https://www.superiorne.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>The Superior Express</h4>
+        <p>
+          P.O. Box 408<br />Superior, NE 68978<br />Ph: (402) 879-3291<br />
+       </p>
+        <p>
+          &copy; 2024 Superior Publishing Company, Inc.<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+   <div class="outer_other_companies outer">
+    <div class="other_companies widen_vertical_padding inner skel">
+
+      <h3>Our Family of Publications Includes:</h3>
+
+      <div class="slickcarousel_pubfamily">
+<div><a  href="https://www.superiorne.com" ><img class='footer_icon hover-img' src='/home/customer_files/images/publication_family/superior_express.png'  height='80' alt='Superior Express'></a></div><div><a  href="https://www.superiorne.com" ><img class='footer_icon hover-img' src='/home/customer_files/images/publication_family/nuckolls_county_locomotive_gazette.png'  height='80' alt='Nuckolls County Locomotive Gazette'></a></div><div><a  href="https://www.superiorne.com" ><img class='footer_icon hover-img' src='/home/customer_files/images/publication_family/jewell_county_record.png'  height='80' alt='Jewell County Record'></a></div>
+      </div>
+
+    </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+   <script>
+    function mycarousel_initCallback(carousel) {
+         jQuery('.jcarousel-control a').bind('click', function() {
+           carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+           return false;
+         });
+         jQuery('.jcarousel-scroll select').bind('change', function() {
+           carousel.options.scroll = jQuery.jcarousel.intval(this.options[this.selectedIndex].value);
+           return false;
+         });
+         jQuery('#mycarousel-white-next').bind('click', function() {
+           carousel.next();
+           return false;
+         });
+         jQuery('#mycarousel-white-prev').bind('click', function() {
+           carousel.prev();
+           return false;
+         });
+        };
+
+        // Ride the carousel...
+//        jQuery(document).ready(function() {
+//         jQuery("#mycarousel_white").jcarousel({
+//           scroll: 1,
+//           initCallback: mycarousel_initCallback,
+//           // This tells jCarousel NOT to autobuild prev/next buttons
+//           buttonNextHTML: null,
+//           buttonPrevHTML: null
+//         });
+//        });
+        jQuery(document).ready(function() {
+         jQuery(".more_stories_list").hide();
+         jQuery(".more_stories_toggle").click(function(){
+           jQuery(this).next(".more_stories_list").slideToggle(300);
+         });
+        });
+   </script>
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <small style="padding-top:10px;display:block;">Rendered 05/31/2024 01:03</small><!-- (DESKTOP|PAYWALLERROR|ERROR) (desktop|paywallerror|error) Cached by Usernum:001504 -->
+ </body>
+
+</html>

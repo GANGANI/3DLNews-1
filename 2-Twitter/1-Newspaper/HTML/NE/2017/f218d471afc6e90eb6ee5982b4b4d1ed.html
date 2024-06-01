@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Start A Fire</title>
+    <meta property="og:title" content="Start A Fire" />
+    <meta property="og:image" content="//startafireredirect.s3.amazonaws.com/images/ogimage.png" />
+    <meta property="og:url" content="http://startafire.com" />
+    <meta name="twitter:title" content="Start A Fire" />
+    <meta name="twitter:image" content="//startafireredirect.s3.amazonaws.com/images/ogimage.png" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="shortcut icon" href="//startafireredirect.s3.amazonaws.com/images/favicon2.ico" />
+	<link id="page_favicon" href="//startafireredirect.s3.amazonaws.com/images/favicon2.ico" rel="icon" type="image/x-icon" />
+</head>
+<body>
+    <script type="text/javascript">
+	(function(){
+		try{
+			endpoint = 'https://rdyd4a1hw2.execute-api.us-east-1.amazonaws.com/prod/?fireKey=';
+        	stfhash1 = getParameterByName('sf');
+        	stfhash2 = getHashFromShortner();
+		    if (stfhash1 != ""){
+		    	window.location.href = endpoint + stfhash1;	
+		    } else if (stfhash2 != ""){
+		    	window.location.href = endpoint + stfhash2;
+		    } else {
+		    	var domainArr = location.hostname.split('.');
+	        	var myDomain = domainArr[domainArr.length-2] + '.' + domainArr[domainArr.length-1];
+	        	window.location.href = 'http://' + myDomain + '/404.html';	
+		    }
+        } catch(e){
+        	var domainArr = location.hostname.split('.');
+	        var myDomain = domainArr[domainArr.length-2] + '.' + domainArr[domainArr.length-1];
+	        window.location.href = 'http://' + myDomain + '/404.html';	
+        }
+	})();
+
+	function getHashFromShortner(){
+		try{
+			if (location.hostname.split('.').length == 2 &&
+				location.search == "" &&
+				(location.pathname.split('/').length == 2 || location.pathname.split('/').length == 3) 
+				){
+					var param = location.pathname.split('/')[1];
+					if (isHash(param)) {
+						return param;
+					}
+				}
+		} catch(e){}
+		return "";
+	}
+
+	function isHash(stfhash){
+		var myRe = new RegExp('^[a-z0-9]{5,}$');
+		return (myRe.exec(stfhash) != null);
+	}
+
+    function getParameterByName(param) {
+		name = param.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+    </script>
+</body>
+</html>
