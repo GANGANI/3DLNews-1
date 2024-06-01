@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Join Ananda Leeke for a Conversation on Meditation on WHUR FM on May 17 @7PM ET &#8211; Ananda Leeke</title>
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=8751'
+					+ '&is_singular=1';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9hbmFuZGFsZWVrZS5jb20%3D"
+		+ "&wpcomid=6427613"
+		+ "&time=1717075726";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//widgets.wp.com' />
+<link rel='dns-prefetch' href='//fonts-api.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Ananda Leeke &raquo; Feed" href="https://anandaleeke.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ananda Leeke &raquo; Comments Feed" href="https://anandaleeke.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ananda Leeke &raquo; Join Ananda Leeke for a Conversation on Meditation on WHUR FM on May 17 @7PM&nbsp;ET Comments Feed" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1710334132i&ver=6.6-alpha-58218"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJzTLy/QTc7PK0nNK9HPLdUtyClNz8wr1s9KLSlITM6G8vVz8/NBREppTmqxflFqTmJJaopuQX5xCRpPL7m4WEcfu5E5mdmpCIPBPJBy+1xbQ3MDUxNjcwNzyywAYHY02w==&cssminify=yes' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/wp-content/plugins/gutenberg-core/v18.4.1/build/block-library/style.css?m=1716578158i&cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.wp-block-cover__image-background.has-parallax {
+	background-size: cover;
+}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s2.wp.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpoZmFkYGRuZGmQBAHPvL0Y=&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-6-1' href='https://s1.wp.com/_static/??-eJyVzDEOgCAMQNELiQU1Jg7Gs2AlDYpAaInx9ro5O/7hfbiywhTFRYEcKvnIQPXN1RVSa0h4MOxOssVDBXunKoqK34DlDq5F5gb+LIoVH4k/vpyzGYe+03oyw/4AcmU1KQ==&cssminify=yes' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='https://s1.wp.com/_static/??/wp-content/mu-plugins/core-compat/wp-mediaelement.css,/wp-content/mu-plugins/wpcom-bbpress-premium-themes.css?m=1432920480j&cssminify=yes' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 0.889rem;--wp--preset--font-size--huge: 2.027rem;--wp--preset--font-size--enormous: 2.281rem;--wp--preset--font-size--gigantic: 3.247rem;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-10-1' href='https://s0.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/verbum-comments.css?m=1709200696i&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='verbum-gutenberg-css-css' href='https://widgets.wp.com/verbum-block-editor/block-editor.css?ver=1717067639' media='all' />
+<link rel='stylesheet' id='fortune-fonts-css' href='https://fonts-api.wp.com/css?family=Open+Sans%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext&#038;display=swap' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-14-1' href='https://s0.wp.com/wp-content/themes/premium/fortune/style.css?m=1630507115i&cssminify=yes' type='text/css' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='print-css-15-1' href='https://s1.wp.com/wp-content/themes/premium/fortune/assets/css/print-style.css?m=1569255233i&cssminify=yes' type='text/css' media='print' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-16-1' href='https://s1.wp.com/_static/??-eJydjcEOwjAMQ3+IEjZN44T4lhJlpaNpqiYVv0+3C0JIHLjZjl8Mz+JQslE2sDsxKZRKHBvDItVaJvCqZAqo/eRDL6Aw974ee3SAPx6sZMXj44vn5kpqIWaFQOKSoLco+cO4JflYf6GVbklCl2GffNsNuvJlmMfTfJ7GYVpfZ8VfIA==&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-18-1' href='https://s2.wp.com/_static/??-eJyNjcEKwjAQRH/IuA1aehI/ReImJKmb3eAmFP9eW3oRL16GeTC8gaUaFG6BG5RuKvWYWWEOrTp87AxFZA3fKShocs/gnfevrWaOR1Q9wP+mW2YEFcyODEkU/YIfW0uhfH7TGSLJ3dE6uJaLneww2mkYT/MbUOlJHA==&cssminify=yes' type='text/css' media='all' />
+<script type="text/javascript" id="jetpack_related-posts-js-extra">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="media-video-jwt-bridge-js-extra">
+/* <![CDATA[ */
+var videopressAjax = {"ajaxUrl":"https:\/\/authoranandaleeke.wordpress.com\/wp-admin\/admin-ajax.php","bridgeUrl":"\/wp-content\/mu-plugins\/jetpack-plugin\/moon\/jetpack_vendor\/automattic\/jetpack-videopress\/build\/lib\/token-bridge.js","post_id":"8751"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpcom-actionbar-placeholder-js-extra">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"6427613","postID":"8751","siteURL":"https:\/\/anandaleeke.com","xhrURL":"https:\/\/anandaleeke.com\/wp-admin\/admin-ajax.php","nonce":"4cffece303","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","shortlink":"https:\/\/wp.me\/pqY7b-2h9","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/_static/??-eJyFT0FOAzEM/BCptwdU9YB4SpXdmJXTxA62U+jvSaUFFQTiZM14POOBtxYWYUd2yAZVZioYuqHGdXCB+EV22R7gTld7aKWvxAYZvcXlvOFxLgwn4gXmTiWBYomOKTQxt+9oV4l/Go8HtHhoKu/Xz90wKz2h3Zb5taNet3Fv8KcoVFp1hP6W9k+NjTtdkJMoxO5SozstX+oLJZSmaLbVLTSDyxk5zEppxZH4XJ/2h2maDvvH45Q/AEsiiTU='></script>
+<script type="text/javascript" id="rlt-proxy-js-after">
+/* <![CDATA[ */
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+/* ]]> */
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://authoranandaleeke.wordpress.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/" />
+<link rel='shortlink' href='https://wp.me/pqY7b-2h9' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fanandaleeke.com%2F2018%2F05%2F17%2Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fanandaleeke.com%2F2018%2F05%2F17%2Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Join Ananda Leeke for a Conversation on Meditation on WHUR FM on May 17 @7PM ET" />
+<meta property="og:url" content="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/" />
+<meta property="og:description" content="Meditation is the practice of resting your mind and focusing your awareness on what’s happening inside of yourself – what’s happening in your spirit, heart, mind, and body. In meditation, you can u…" />
+<meta property="article:published_time" content="2018-05-17T21:04:13+00:00" />
+<meta property="article:modified_time" content="2018-05-20T13:21:52+00:00" />
+<meta property="og:site_name" content="Ananda Leeke" />
+<meta property="og:image" content="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="512" />
+<meta property="og:image:alt" content="WHUR-MeditationInterview-51718-FINALUSE" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<meta name="twitter:creator" content="@anandaleeke" />
+<meta name="twitter:text:title" content="Join Ananda Leeke for a Conversation on Meditation on WHUR FM on May 17 @7PM&nbsp;ET" />
+<meta name="twitter:image" content="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=640" />
+<meta name="twitter:image:alt" content="WHUR-MeditationInterview-51718-FINALUSE" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel='openid.server' href='https://anandaleeke.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://anandaleeke.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://anandaleeke.com/osd.xml" title="Ananda Leeke" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<link rel="pingback" href="https://anandaleeke.com/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Ananda Leeke" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Thriving Mindfully as the Real You!" /><meta name="description" content="Meditation is the practice of resting your mind and focusing your awareness on what’s happening inside of yourself – what’s happening in your spirit, heart, mind, and body. In meditation, you can use your breath to help focus your attention and cultivate stillness by observing and coming back to it when your mind is distracted&hellip;" />
+<style type="text/css" id="custom-colors-css">
+	.sticky.hentry .entry-secondary-meta .comments-link,
+	.hentry .entry-secondary-meta .comments-link {
+		opacity: 0.5;
+	}
+
+.hentry .entry-secondary-meta .comments-link a { color: #fff;}
+.sticky.hentry .entry-secondary-meta .comments-link a { color: #fff;}
+body:not(.search) #page .jetpack-testimonial.hentry .entry-content,
+		.jetpack-testimonial-shortcode .testimonial-entry-content { color: #fff;}
+.sticky.hentry .entry-content a { color: #fff;}
+.sticky.hentry .entry-content a { border-bottom-color: #fff;}
+body { background-color: #ffffff;}
+a,
+			.navigation.paging-navigation a.previous-link,
+			.navigation.paging-navigation a.next-link,
+			#site-navigation li:hover > a,
+			.homepage-widgets .widget .widget-title { color: #BB480A;}
+#site-navigation ul ul,
+			#site-navigation .current_page_item > a,
+			#site-navigation .current-menu-item > a,
+			#site-navigation .current_page_ancestor > a,
+			#site-navigation .current_page_item > a:hover,
+			#site-navigation .current-menu-item > a:hover,
+			#site-navigation .current_page_ancestor > a:hover,
+			#site-navigation ul:not(.sub-menu) > .menu-item-has-children:hover > a:hover,
+			#site-navigation ul:not(.sub-menu) > .menu-item-has-children:hover > a { background: #BB480A;}
+.widget_tag_cloud a,
+			.hentry .entry-secondary-meta .post-date,
+			.blog .hentry.format-link .hentry-inner,
+			.archive .hentry.format-link .hentry-inner,
+			body:not(.search) #page .jetpack-testimonial.hentry .entry-content,
+			.jetpack-testimonial-shortcode .testimonial-entry-content,
+			.widget_tag_cloud a,
+			.wp_widget_tag_cloud a { background: #BB480A;}
+input[type="submit"],
+			#masthead .header-searchform button.submit { background: #BB480A;}
+blockquote { border-color: #BB480A;}
+#comments .comment-list .bypostauthor article { border-left-color: #BB480A;}
+.site-footer .gotop { background: #BB480A;}
+#colophon { border-color: #BB480A;}
+.hentry .entry-secondary-meta .comments-link { background: #F38346;}
+a:hover { color: #C44C0C;}
+.hentry .entry-content a,
+			.hentry .more-link-container a.more-link { border-bottom-color: #F06114;}
+.sticky.hentry .entry-secondary-meta .post-date { background: #D22262;}
+.sticky.hentry .entry-secondary-meta .comments-link { background: #D22262;}
+</style>
+<link rel="icon" href="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=180" />
+<meta name="msapplication-TileImage" content="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=270" />
+			<link rel="stylesheet" id="custom-css-css" type="text/css" href="https://s0.wp.com/?custom-css=1&#038;csblog=qY7b&#038;cscache=6&#038;csrev=26" />
+			<!-- Your Google Analytics Plugin is missing the tracking ID -->
+</head>
+
+<body class="post-template-default single single-post postid-8751 single-format-standard wp-embed-responsive customizer-styles-applied has-sidebar jetpack-reblog-enabled custom-colors">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header th-text-primary-base th-links-inherit th-bg-white">
+				<div class="top-bar th-text-2xs th-pb-xs th-text-secondary-base th-links-inherit">
+			<div class="container th-flex th-items-center th-stack-full--xs">
+								<nav class="header-social social-list md:th-ml-auto th-text-center md:th-text-right md:th-w-auto th-w-full" aria-label="Header social links menu">
+					<ul id="menu-social-links" class="menu-items list-unstyled th-flex th-flex-wrap md:th-justify-end th-justify-center th-m-0 th-leading-none"><li id="menu-item-6745" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6745"><a href="http://www.amazon.com/Ananda-Kiamsha-Madelyn-Leeke/e/B002BRGONC/ref=ntt_athr_dp_pel_pop_1"><span class="screen-reader-text social-meta">Amazon</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726-1.53.406-3.045.61-4.516.61-2.265 0-4.41-.396-6.435-1.187-2.02-.794-3.82-1.91-5.43-3.35-.1-.074-.15-.15-.15-.22 0-.047.02-.09.05-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045-.195-.166-.375-.332-.526-.496l-.31-.347c-.06-.074-.166-.21-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5.55-.133 1.09-.222 1.612-.24.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.09.228.09.39v.15c0 .51-.14 1.11-.415 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></svg></a></li>
+<li id="menu-item-6749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6749"><a href="http://instagram.com/anandaleeke"><span class="screen-reader-text social-meta">Instagram</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a></li>
+<li id="menu-item-13637" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13637"><a href="https://open.spotify.com/show/4XCnPXjxAPVgfh8lHwu6eJ"><span class="screen-reader-text social-meta">Spotify</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></li>
+<li id="menu-item-6750" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6750"><a href="http://www.linkedin.com/in/anandaleeke"><span class="screen-reader-text social-meta">LinkedIn</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+<li id="menu-item-13638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13638"><a href="https://www.youtube.com/user/anandaleeke"><span class="screen-reader-text social-meta">YouTube</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a></li>
+<li id="menu-item-13639" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13639"><a href="https://www.tiktok.com/@anandaleeke"><span class="screen-reader-text social-meta">TikTok</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
+</ul>				</nav><!-- .social-list -->
+							</div><!-- .container -->
+		</div><!-- .top-bar -->
+		
+		<div id="header-inner">
+			<div class="container site-header-inner th-flex th-flex-wrap th-py-md">
+				<div class="site-branding th-stack--sm th-w-full md:th-text-left th-text-center">
+											<p class="site-title th-text-xl th-leading-none th-mb-0"><a class="th-font-bold" href="https://anandaleeke.com/">Ananda Leeke</a></p>
+											<p class="site-description th-mt-xs th-mb-0 th-hidden th-text-secondary-base">Thriving Mindfully as the Real You!</p>
+									</div><!-- .site-branding -->
+
+				<div class="main-header-links th-font-bold th-text-2xs th-uppercase th-flex md:th-justify-end th-justify-center th-items-center md:th-mt-0 th-mt-base th-w-full">
+										<nav id="site-navigation" class="main-navigation menu-navigation lg:th-block th-hidden" aria-label="Primary menu">
+						<ul id="menu-primary-menu" class="nav-bar"><li id="menu-item-6720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6720"><a href="https://anandaleeke.com/about/">About</a><span class="arrow-icon" aria-hidden="true"><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+<ul class="sub-menu">
+	<li id="menu-item-9599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9599"><a href="https://anandaleeke.com/about/professional-bio-and-photos/">Professional Bio and Photos</a></li>
+	<li id="menu-item-11137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11137"><a href="https://anandaleeke.com/digitalcomm/">Digital Communications Bio</a></li>
+	<li id="menu-item-11861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11861"><a href="https://anandaleeke.com/supportwork/">Support Ananda’s Work</a></li>
+</ul>
+</li>
+<li id="menu-item-12734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12734"><a href="https://anandaleeke.com/academy/">Thriving Mindfully Academy</a></li>
+<li id="menu-item-15103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15103"><a href="https://anandaleeke.com/humandesign/">Human Design</a></li>
+<li id="menu-item-6722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6722"><a href="https://anandaleeke.com/books/">Books</a><span class="arrow-icon" aria-hidden="true"><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+<ul class="sub-menu">
+	<li id="menu-item-6725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6725"><a href="https://anandaleeke.com/books/loves-troubadours-karma-book-one/">Love’s Troubadours – Karma: Book One</a></li>
+	<li id="menu-item-6726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6726"><a href="https://anandaleeke.com/books/that-which-awakens-me-a-creative-womans-poetic-memoir-of-self-discovery/">That Which Awakens Me: A Creative Woman’s Poetic Memoir of Self-Discovery</a></li>
+	<li id="menu-item-6723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6723"><a href="https://anandaleeke.com/books/digital-sisterhood-a-memoir-of-fierce-living-online/">Digital Sisterhood: A Memoir of Fierce Living Online</a></li>
+</ul>
+</li>
+<li id="menu-item-6736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6736"><a href="https://anandaleeke.com/services/">Hire Me</a><span class="arrow-icon" aria-hidden="true"><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+<ul class="sub-menu">
+	<li id="menu-item-15092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15092"><a href="https://anandaleeke.com/thriving-mindfully-academy/">Thriving Mindfully Academy</a></li>
+	<li id="menu-item-13398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13398"><a href="https://anandaleeke.com/humandesign/">Human Design</a></li>
+	<li id="menu-item-6741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6741"><a href="https://anandaleeke.com/services/mindfulliving/">Mindfulness, Self-Care &amp; Wellness</a></li>
+	<li id="menu-item-6739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6739"><a href="https://anandaleeke.com/services/mindfulcreativity/">Mindful Creativity</a></li>
+	<li id="menu-item-6738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6738"><a href="https://anandaleeke.com/services/mindfultechnology/">Mindful Technology: Digital Wellness &amp; Tech-Life Balance</a></li>
+	<li id="menu-item-15093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15093"><a href="https://anandaleeke.com/digitalwellness/">Digital Wellness</a></li>
+	<li id="menu-item-6740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6740"><a href="https://anandaleeke.com/services/speaking-workshops/">Speaking, Trainings &amp;Workshops</a></li>
+</ul>
+</li>
+<li id="menu-item-14668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14668"><a href="https://anandaleeke.com/events/">Events</a></li>
+<li id="menu-item-6732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6732"><a href="https://anandaleeke.com/resources/">Contact</a></li>
+<li id="menu-item-13228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13228"><a href="https://anchor.fm/anandaleeke">Podcast</a></li>
+<li id="menu-item-11718" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-11718"><a href="https://anandaleeke.com/blog/">Blog</a></li>
+<li id="menu-item-6727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6727"><a href="#">Art</a><span class="arrow-icon" aria-hidden="true"><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+<ul class="sub-menu">
+	<li id="menu-item-6731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6731"><a href="https://anandaleeke.com/art/">Art</a></li>
+</ul>
+</li>
+<li id="menu-item-14577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14577"><a href="https://anandaleeke.com/theresa/">Theresa B. Gartin Leeke’s Life &amp; Legacy</a></li>
+</ul>					</nav><!-- #site-navigation -->
+					
+					<button id="toggle-mobile-menu" class="toggle-mobile-menu clean-button has-border-radius" type="button" aria-expanded="false">
+						<svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Menu                    </button><!-- .toggle-mobile-menu -->
+
+					
+					<div class="header-search-container has-border-radius">
+                        <button id="header-search-button" class="header-search-button clean-button th-flex th-w-full th-h-full" type="button" aria-expanded="false">
+							<svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>							<span class="open-label screen-reader-text">Open a search box</span>
+							<svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>							<span class="close-label screen-reader-text">Close a search box</span>
+						</button>
+
+						<form id="header-searchform" class="header-searchform has-border-radius th-bg-white"  method="get" action="https://anandaleeke.com/" role="search">
+							<label for="header-search-input" class="th-w-full th-mb-0">
+								<span class="screen-reader-text">Search for:</span>
+								<input type="text" id="header-search-input" class="field th-text-secondary-base th-w-full" placeholder="Search..." name="s" value="" />
+							</label>
+							<button type="submit" class="submit has-border-radius clean-button th-flex th-ml-2xs">
+								<svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>								<span class="screen-reader-text">Search</span>
+							</button>
+						</form><!-- .header-searchform -->
+					</div><!-- .header-search-container -->
+				</div><!-- .main-header-links -->
+			</div><!-- .container -->
+		</div><!-- #header-inner -->
+
+		<nav id="mobile-navigation" class="mobile-navigation th-uppercase th-py-md th-bg-secondary-lightest th-text-2xs" aria-label="Mobile menu" aria-hidden="true">
+            <div class="container"></div>
+        </nav><!-- .mobile-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+<header id="primary-header" class="page-header entry-header primary-hentry th-text-secondary-base th-py-lg th-bg-secondary-lightest th-border-b th-border-secondary-lighter">
+	
+	<div class="container th-stack--sm">
+		<h1 class="entry-title th-text-3xl th-my-0">Join Ananda Leeke for a Conversation on Meditation on WHUR FM on May 17 @7PM&nbsp;ET</h1>			<div class="entry-meta th-uppercase th-links-inherit hover:th-links-primary-base th-text-2xs">
+				<span class="posted-on"><span class="screen-reader-text">on </span> <time class="entry-date published" datetime="2018-05-17T21:04:13-04:00">May 17, 2018</time><time class="updated" datetime="2018-05-20T13:21:52-04:00">May 20, 2018</time></span><span class="byline">by <a href="https://anandaleeke.com/author/anandaleeke/" rel="author">Ananda Leeke</a></span><span class="comments-link"><a href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/#respond">Leave a comment</a></span><!-- .comments-link -->			</div><!-- .entry-meta -->
+				</div><!-- .container -->
+</header><!-- .entry-header -->
+
+
+	<div class="container th-flex th-flex-wrap">
+		<main id="main" class="site-main th-stack--xl th-w-full th-py-xl">
+
+		
+<article id="post-8751" class="th-stack--xl post-8751 post type-post status-publish format-standard hentry category-meditation category-national-meditation-month category-uncategorized tag-thrivingmindfully tag-meditate tag-meditation-2 tag-mindfulness tag-national-meditation-month tag-self-care-2 tag-self-development tag-well-being tag-wellness">
+	
+	<div class="entry-content th-content">
+		<p><img data-attachment-id="8752" data-permalink="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/whur-meditationinterview-51718-finaluse/" data-orig-file="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png" data-orig-size="1024,512" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="WHUR-MeditationInterview-51718-FINALUSE" data-image-description="" data-image-caption="" data-medium-file="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=300" data-large-file="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=720" class="alignnone size-full wp-image-8752" src="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=720" alt="WHUR-MeditationInterview-51718-FINALUSE"   srcset="https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png 1024w, https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=150&amp;h=75 150w, https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=300&amp;h=150 300w, https://anandaleeke.com/wp-content/uploads/2018/05/whur-meditationinterview-51718-finaluse.png?w=768&amp;h=384 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Meditation is the practice of resting your mind and focusing your awareness on what’s happening inside of yourself – what’s happening in your spirit, heart, mind, and body. In meditation, you can use your breath to help focus your attention and cultivate stillness by observing and coming back to it when your mind is distracted by thoughts.</p>
+<p>Meditation can help you become friends with your mind when you offer yourself compassion and nonjudgment. It can also help you increase your self-awareness, relax, improve concentration, reduce stress, strengthen your emotional and physical well-being, and encourage a healthy lifestyle.</p>
+<p>Join me on May 17th at 7 p.m. ET on WHUR 96.3 FM for a conversation about meditation on <a href="http://whur.com/shows/the-daily-drum/">The Daily Drum with Harold Fisher</a>, my Morgan State University classmate, and <a href="https://sherrellmooretucker.com/">Sherrell Moore-Tucker</a> of Faith &amp; Flow Yoga. You can listen online <a href="http://www.whur.com">here</a>.</p>
+<h2>UPDATE: <a href="http://whur.com/podcasts/daily-drum-insight-segment/learning-the-path-to-meditation-and-inner-peace/">LISTEN</a> TO SHOW&#8217;S AUDIO RECORDING.</h2>
+<p><img data-attachment-id="8575" data-permalink="https://anandaleeke.com/2018/02/08/thrivingmindfully-with-email-social-media-technology/alwebsite-needmore-final/" data-orig-file="https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png" data-orig-size="560,315" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ALWebsite-NeedMore-FINAL" data-image-description="" data-image-caption="" data-medium-file="https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png?w=300" data-large-file="https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png?w=560" class=" size-full wp-image-8575 aligncenter" src="https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png?w=720" alt="ALWebsite-NeedMore-FINAL"   srcset="https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png 560w, https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png?w=150&amp;h=84 150w, https://anandaleeke.com/wp-content/uploads/2018/02/alwebsite-needmore-final.png?w=300&amp;h=169 300w" sizes="(max-width: 560px) 100vw, 560px" /></p>
+<p><strong>Check out the #ThrivingMindfully 31-Day Challenge, events, and books below.</strong></p>
+<p><img data-attachment-id="8741" data-permalink="https://anandaleeke.com/2018/04/30/celebrate-national-meditation-month-join-thrivingmindfully-31-day-challenge-may-1-31/tm-31daymeditationchallenge-facebookpost/" data-orig-file="https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png" data-orig-size="940,788" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="TM-31DayMeditationChallenge-FacebookPost" data-image-description="" data-image-caption="" data-medium-file="https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png?w=300" data-large-file="https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png?w=720" class=" size-medium wp-image-8741 alignleft" src="https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png?w=300&#038;h=251" alt="TM-31DayMeditationChallenge-FacebookPost" width="300" height="251" srcset="https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png?w=600 600w, https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png?w=300 300w, https://anandaleeke.com/wp-content/uploads/2018/04/tm-31daymeditationchallenge-facebookpost.png?w=150 150w" sizes="(max-width: 300px) 100vw, 300px" />If you want to create more mindful moments in your life, join the #ThrivingMindfully 31-Day Challenge. It is a self-directed challenge. That means you do it at your own pace. Here’s how the #ThrivingMindfully 31-Day Challenge works. There at 31 #ThrivingMindfully podcast episodes that include guided meditations, breathing exercises, short talks, tips, and resources. They are divided into three sections: mindful living, creativity, and technology. Follow the steps below to access the podcasts. You can follow them in numerical order or pick and choose the ones that resonate the most with you. Use what works and leave the rest behind. <strong><a href="https://anandaleeke.com/2018/04/30/celebrate-national-meditation-month-join-thrivingmindfully-31-day-challenge-may-1-31/">Read</a> my blog for more details and links to the challenge</strong>. Enjoy your #ThrivingMindfully 31-Day journey!</p>
+<p><strong>EVENTS</strong></p>
+<p><strong>Join me for “Breathe &amp; Meditate,” a free Facebook Live series, on May 20th and 27th from 7 a.m. to 7:30 a.m. EST: <a href="http://www.facebook.com/anandaleeke64" rel="nofollow">http://www.facebook.com/anandaleeke64</a></strong>. Each morning I will guide you through three short meditations and offer tips on how to create mindful living moments in your daily life.</p>
+<p><strong>If you live or visit the DC area in May, consider joining me for two #ThrivingMindfully Meetup Group meditation events on May 19 and May 21.</strong> Go <a href="https://www.meetup.com/Thriving-Mindfully-Meetup/">here</a> for more details.</p>
+<p><strong>BOOKS</strong></p>
+<p>Looking for mindfulness-inspired books to read? <strong>Click <a href="https://www.amazon.com/Ananda-Kiamsha-Madelyn-Leeke/e/B002BRGONC">here</a> to learn about and buy my three books on Amazon: yoga-inspired novel <em>Love’s Troubadour</em>s, mindful creativity memoir <em>That Which Awakens Me</em>, and mindful technology memoir <em>Digital Sisterhood</em>.</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled"><div class="sd-block sd-rating"><h3 class="sd-title">Rate this:</h3><div class="cs-rating pd-rating" id="pd_rating_holder_243576_post_8751"></div></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/#print" target="_blank" title="Click to print" ><span>Print</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-8751" class="share-facebook sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=facebook" target="_blank" title="Click to share on Facebook" ><span>Facebook</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-8751" class="share-twitter sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=twitter" target="_blank" title="Click to share on Twitter" ><span>Twitter</span></a></li><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=reddit" target="_blank" title="Click to share on Reddit" ><span>Reddit</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="mailto:?subject=%5BShared%20Post%5D%20Join%20Ananda%20Leeke%20for%20a%20Conversation%20on%20Meditation%20on%20WHUR%20FM%20on%20May%2017%20%407PM%20ET&body=https%3A%2F%2Fanandaleeke.com%2F2018%2F05%2F17%2Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%2F&share=email" target="_blank" title="Click to email a link to a friend" data-email-share-error-title="Do you have email set up?" data-email-share-error-text="If you&#039;re having problems sharing via email, you might not have email set up for your browser. You may need to create a new email yourself." data-email-share-nonce="103ca18e01" data-email-share-track-url="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=email"><span>Email</span></a></li><li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-8751" class="share-pinterest sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=pinterest" target="_blank" title="Click to share on Pinterest" ><span>Pinterest</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-8751" class="share-linkedin sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=linkedin" target="_blank" title="Click to share on LinkedIn" ><span>LinkedIn</span></a></li><li class="share-tumblr"><a rel="nofollow noopener noreferrer" data-shared="" class="share-tumblr sd-button share-icon" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/?share=tumblr" target="_blank" title="Click to share on Tumblr" ><span>Tumblr</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-6427613-8751-66587f0ec0b39' data-src='//widgets.wp.com/likes/index.html?ver=20240530#blog_id=6427613&amp;post_id=8751&amp;origin=authoranandaleeke.wordpress.com&amp;obj_id=6427613-8751-66587f0ec0b39&amp;domain=anandaleeke.com' data-name='like-post-frame-6427613-8751-66587f0ec0b39' data-title='Like or Reblog'><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class='loading'>Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div></div>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer th-flex th-flex-wrap th-stack-full--xl th-border-t th-border-secondary-lighter">
+		
+		<div class="footer-meta th-stack--lg">
+			<div class="cat-links th-text-2xs md:th-pr-sm th-badge-links"><span class="links-title th-font-bold th-uppercase th-flex th-items-center th-text-secondary-base th-tracking-wider th-mb-xs"><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"/></svg>Posted in: </span> <a href="https://anandaleeke.com/category/meditation/" rel="category tag">Meditation</a> <a href="https://anandaleeke.com/tag/national-meditation-month/" rel="category tag">National Meditation Month</a> <a href="https://anandaleeke.com/category/uncategorized/" rel="category tag">Uncategorized</a></div><div class="tags-links th-text-2xs md:th-pr-sm th-badge-links"><span class="links-title th-font-bold th-uppercase th-flex th-items-center th-text-secondary-base th-tracking-wider th-mb-xs"><svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>Tagged:</span> <a href="https://anandaleeke.com/tag/thrivingmindfully/" rel="tag">#ThrivingMindfully</a> <a href="https://anandaleeke.com/tag/meditate/" rel="tag">meditate</a> <a href="https://anandaleeke.com/tag/meditation-2/" rel="tag">meditation</a> <a href="https://anandaleeke.com/tag/mindfulness/" rel="tag">Mindfulness</a> <a href="https://anandaleeke.com/tag/national-meditation-month/" rel="tag">National Meditation Month</a> <a href="https://anandaleeke.com/tag/self-care-2/" rel="tag">self-care</a> <a href="https://anandaleeke.com/tag/self-development/" rel="tag">self-development</a> <a href="https://anandaleeke.com/tag/well-being/" rel="tag">well-being</a> <a href="https://anandaleeke.com/tag/wellness/" rel="tag">wellness</a></div>		</div><!-- .footer-meta -->
+
+		
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://anandaleeke.com/2018/05/04/national-meditation-month-thrivingmindfully-31-day-challenge-part-1-mindful-living-podcasts-day-1-day-15/" rel="prev"><span class="meta-nav th-uppercase th-block th-text-secondary-base th-text-2xs th-tracking-wider th-font-bold th-mb-xs">Previous Entry:</span> <span class="post-title">National Meditation Month &#8211; #ThrivingMindfully 31-Day Challenge: Part 1 &#8211; Mindful Living Podcasts Day #1-Day&nbsp;#15</span></a></div><div class="nav-next"><a href="https://anandaleeke.com/2018/08/26/ananda-leekes-september-meditation-classes-mindfulness-workshops/" rel="next"><span class="meta-nav th-uppercase th-block th-text-secondary-base th-text-2xs th-tracking-wider th-font-bold th-mb-xs">Next Entry:</span> <span class="post-title">Ananda Leeke&#8217;s September Meditation Classes &amp; Mindfulness&nbsp;Workshops</span></a></div></div>
+	</nav><div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>	</footer><!-- .entry-footer -->
+</article><!-- .hentry -->
+
+<div id="comments" class="comments-area th-stack--xl th-pt-xl th-border-t th-border-secondary-lighter">
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://anandaleeke.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+
+
+<div id="comment-form__verbum" class="transparent"></div><div class="verbum-form-meta"><input type='hidden' name='comment_post_ID' value='8751' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+			<input type="hidden" name="highlander_comment_nonce" id="highlander_comment_nonce" value="85f5e8c29e" />
+			<input type="hidden" name="verbum_show_subscription_modal" value="" /></div><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="633e6b1572" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="109"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	</div><!-- #comments -->
+
+		</main><!-- #main -->
+
+		
+<aside id="secondary" class="widget-area sidebar-section th-w-full th-stack--xl th-py-xl">
+	<section id="media_image-3" class="widget widget_media_image"><style>.widget.widget_media_image { overflow: hidden; }.widget.widget_media_image img { height: auto; max-width: 100%; }</style><img width="720" height="720" src="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg" class="image wp-image-8350 alignnone attachment-full size-full" alt="" decoding="async" loading="lazy" style="max-width: 100%; height: auto;" data-attachment-id="8350" data-permalink="https://anandaleeke.com/allogobyjem-orange-111917/" data-orig-file="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg" data-orig-size="8000,8000" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ALLogobyJEM-orange-111917" data-image-description="" data-image-caption="" data-medium-file="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=300" data-large-file="https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=720" /></section><section id="widget_contact_info-2" class="widget widget_contact_info"><h2 class="widget-title th-text-2xs th-text-secondary-base th-uppercase th-tracking-wider th-mt-0 th-mb-base">Contact Me</h2><div itemscope itemtype="http://schema.org/LocalBusiness"><div class="confit-address" itemscope itemtype="http://schema.org/PostalAddress" itemprop="address"><a href="https://maps.google.com/maps?z=16&#038;q=ananda%40anandaleeke.com" target="_blank" rel="noopener noreferrer">ananda@anandaleeke.com</a></div><div class="confit-phone"><span itemprop="telephone">202.607.3509</span></div></div></section><section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title th-text-2xs th-text-secondary-base th-uppercase th-tracking-wider th-mt-0 th-mb-base">Recent Comments</h2>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tr><td title="Ananda Leeke" class="recentcommentsavatartop" style="height:16px; width:16px;"><a href="http://www.anandaleeke.com" rel="nofollow"><img alt='' src='https://0.gravatar.com/avatar/9028d863e10788ae3fef76fb94b1b6cf8099a9af6b8589410dc763b1a1f88552?s=16&#038;d=identicon&#038;r=G' srcset='https://0.gravatar.com/avatar/9028d863e10788ae3fef76fb94b1b6cf8099a9af6b8589410dc763b1a1f88552?s=16&#038;d=identicon&#038;r=G 1x, https://0.gravatar.com/avatar/9028d863e10788ae3fef76fb94b1b6cf8099a9af6b8589410dc763b1a1f88552?s=24&#038;d=identicon&#038;r=G 1.5x, https://0.gravatar.com/avatar/9028d863e10788ae3fef76fb94b1b6cf8099a9af6b8589410dc763b1a1f88552?s=32&#038;d=identicon&#038;r=G 2x, https://0.gravatar.com/avatar/9028d863e10788ae3fef76fb94b1b6cf8099a9af6b8589410dc763b1a1f88552?s=48&#038;d=identicon&#038;r=G 3x, https://0.gravatar.com/avatar/9028d863e10788ae3fef76fb94b1b6cf8099a9af6b8589410dc763b1a1f88552?s=64&#038;d=identicon&#038;r=G 4x' class='avatar avatar-16' height='16' width='16' loading='lazy' decoding='async' /></a></td><td class="recentcommentstexttop" style=""><a href="http://www.anandaleeke.com" rel="nofollow">Ananda Leeke</a> on <a href="https://anandaleeke.com/2023/08/30/celebrating-my-mom-theresa-b-gartin-leekes-life-and-legacy-1939-2023/#comment-37551">Celebrating My Mom, Theresa B.&hellip;</a></td></tr><tr><td title="Melanie Few" class="recentcommentsavatarend" style="height:16px; width:16px;"><img alt='' src='https://1.gravatar.com/avatar/de7910e6f5b34cfa444837329ecff580f334b0970cefda23be180afb656d9d86?s=16&#038;d=identicon&#038;r=G' srcset='https://1.gravatar.com/avatar/de7910e6f5b34cfa444837329ecff580f334b0970cefda23be180afb656d9d86?s=16&#038;d=identicon&#038;r=G 1x, https://1.gravatar.com/avatar/de7910e6f5b34cfa444837329ecff580f334b0970cefda23be180afb656d9d86?s=24&#038;d=identicon&#038;r=G 1.5x, https://1.gravatar.com/avatar/de7910e6f5b34cfa444837329ecff580f334b0970cefda23be180afb656d9d86?s=32&#038;d=identicon&#038;r=G 2x, https://1.gravatar.com/avatar/de7910e6f5b34cfa444837329ecff580f334b0970cefda23be180afb656d9d86?s=48&#038;d=identicon&#038;r=G 3x, https://1.gravatar.com/avatar/de7910e6f5b34cfa444837329ecff580f334b0970cefda23be180afb656d9d86?s=64&#038;d=identicon&#038;r=G 4x' class='avatar avatar-16' height='16' width='16' loading='lazy' decoding='async' /></td><td class="recentcommentstextend" style="">Melanie Few on <a href="https://anandaleeke.com/2023/08/30/celebrating-my-mom-theresa-b-gartin-leekes-life-and-legacy-1939-2023/#comment-37463">Celebrating My Mom, Theresa B.&hellip;</a></td></tr><tr><td title="Chaoyue Zhao" class="recentcommentsavatarend" style="height:16px; width:16px;"><a href="https://medium.com/@chaoyue_zhao" rel="nofollow"><img alt='' src='https://1.gravatar.com/avatar/4710ae7bb1b2361554eaf8ce017ab55cded939f057654f523ca00aefc90a5010?s=16&#038;d=identicon&#038;r=G' srcset='https://1.gravatar.com/avatar/4710ae7bb1b2361554eaf8ce017ab55cded939f057654f523ca00aefc90a5010?s=16&#038;d=identicon&#038;r=G 1x, https://1.gravatar.com/avatar/4710ae7bb1b2361554eaf8ce017ab55cded939f057654f523ca00aefc90a5010?s=24&#038;d=identicon&#038;r=G 1.5x, https://1.gravatar.com/avatar/4710ae7bb1b2361554eaf8ce017ab55cded939f057654f523ca00aefc90a5010?s=32&#038;d=identicon&#038;r=G 2x, https://1.gravatar.com/avatar/4710ae7bb1b2361554eaf8ce017ab55cded939f057654f523ca00aefc90a5010?s=48&#038;d=identicon&#038;r=G 3x, https://1.gravatar.com/avatar/4710ae7bb1b2361554eaf8ce017ab55cded939f057654f523ca00aefc90a5010?s=64&#038;d=identicon&#038;r=G 4x' class='avatar avatar-16' height='16' width='16' loading='lazy' decoding='async' /></a></td><td class="recentcommentstextend" style=""><a href="https://medium.com/@chaoyue_zhao" rel="nofollow">Chaoyue Zhao</a> on <a href="https://anandaleeke.com/2021/03/15/make-yourself-a-priority-sign-up-for-spring-virtual-retreat-on-march-21st-or-march-27th/#comment-36529">Make Yourself A Priority &amp;&hellip;</a></td></tr>				</table>
+				</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title th-text-2xs th-text-secondary-base th-uppercase th-tracking-wider th-mt-0 th-mb-base">Archives</h2>
+			<ul>
+					<li><a href='https://anandaleeke.com/2024/05/'>May 2024</a></li>
+	<li><a href='https://anandaleeke.com/2024/04/'>April 2024</a></li>
+	<li><a href='https://anandaleeke.com/2024/03/'>March 2024</a></li>
+	<li><a href='https://anandaleeke.com/2024/02/'>February 2024</a></li>
+	<li><a href='https://anandaleeke.com/2023/12/'>December 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/11/'>November 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/10/'>October 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/09/'>September 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/08/'>August 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/04/'>April 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/03/'>March 2023</a></li>
+	<li><a href='https://anandaleeke.com/2023/01/'>January 2023</a></li>
+	<li><a href='https://anandaleeke.com/2022/12/'>December 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/09/'>September 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/08/'>August 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/07/'>July 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/06/'>June 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/05/'>May 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/04/'>April 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/03/'>March 2022</a></li>
+	<li><a href='https://anandaleeke.com/2022/01/'>January 2022</a></li>
+	<li><a href='https://anandaleeke.com/2021/10/'>October 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/09/'>September 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/08/'>August 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/07/'>July 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/06/'>June 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/05/'>May 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/04/'>April 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/03/'>March 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/02/'>February 2021</a></li>
+	<li><a href='https://anandaleeke.com/2021/01/'>January 2021</a></li>
+	<li><a href='https://anandaleeke.com/2020/12/'>December 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/11/'>November 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/06/'>June 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/05/'>May 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/04/'>April 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/03/'>March 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/02/'>February 2020</a></li>
+	<li><a href='https://anandaleeke.com/2020/01/'>January 2020</a></li>
+	<li><a href='https://anandaleeke.com/2019/12/'>December 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/11/'>November 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/10/'>October 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/08/'>August 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/07/'>July 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/06/'>June 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/05/'>May 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/04/'>April 2019</a></li>
+	<li><a href='https://anandaleeke.com/2019/03/'>March 2019</a></li>
+	<li><a href='https://anandaleeke.com/2018/11/'>November 2018</a></li>
+	<li><a href='https://anandaleeke.com/2018/08/'>August 2018</a></li>
+	<li><a href='https://anandaleeke.com/2018/05/'>May 2018</a></li>
+	<li><a href='https://anandaleeke.com/2018/04/'>April 2018</a></li>
+	<li><a href='https://anandaleeke.com/2018/03/'>March 2018</a></li>
+	<li><a href='https://anandaleeke.com/2018/02/'>February 2018</a></li>
+	<li><a href='https://anandaleeke.com/2018/01/'>January 2018</a></li>
+	<li><a href='https://anandaleeke.com/2017/12/'>December 2017</a></li>
+	<li><a href='https://anandaleeke.com/2016/11/'>November 2016</a></li>
+	<li><a href='https://anandaleeke.com/2016/10/'>October 2016</a></li>
+	<li><a href='https://anandaleeke.com/2016/01/'>January 2016</a></li>
+	<li><a href='https://anandaleeke.com/2015/08/'>August 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/07/'>July 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/06/'>June 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/05/'>May 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/04/'>April 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/03/'>March 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/02/'>February 2015</a></li>
+	<li><a href='https://anandaleeke.com/2015/01/'>January 2015</a></li>
+	<li><a href='https://anandaleeke.com/2014/12/'>December 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/11/'>November 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/09/'>September 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/07/'>July 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/06/'>June 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/05/'>May 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/04/'>April 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/03/'>March 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/02/'>February 2014</a></li>
+	<li><a href='https://anandaleeke.com/2014/01/'>January 2014</a></li>
+	<li><a href='https://anandaleeke.com/2013/12/'>December 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/11/'>November 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/10/'>October 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/09/'>September 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/08/'>August 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/07/'>July 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/06/'>June 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/05/'>May 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/04/'>April 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/03/'>March 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/02/'>February 2013</a></li>
+	<li><a href='https://anandaleeke.com/2013/01/'>January 2013</a></li>
+	<li><a href='https://anandaleeke.com/2012/12/'>December 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/11/'>November 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/10/'>October 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/09/'>September 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/08/'>August 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/06/'>June 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/05/'>May 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/04/'>April 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/03/'>March 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/02/'>February 2012</a></li>
+	<li><a href='https://anandaleeke.com/2012/01/'>January 2012</a></li>
+	<li><a href='https://anandaleeke.com/2011/10/'>October 2011</a></li>
+	<li><a href='https://anandaleeke.com/2011/04/'>April 2011</a></li>
+	<li><a href='https://anandaleeke.com/2011/03/'>March 2011</a></li>
+	<li><a href='https://anandaleeke.com/2011/02/'>February 2011</a></li>
+	<li><a href='https://anandaleeke.com/2011/01/'>January 2011</a></li>
+	<li><a href='https://anandaleeke.com/2010/12/'>December 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/11/'>November 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/10/'>October 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/09/'>September 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/08/'>August 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/07/'>July 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/06/'>June 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/05/'>May 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/04/'>April 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/03/'>March 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/02/'>February 2010</a></li>
+	<li><a href='https://anandaleeke.com/2010/01/'>January 2010</a></li>
+	<li><a href='https://anandaleeke.com/2009/12/'>December 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/11/'>November 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/10/'>October 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/09/'>September 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/08/'>August 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/07/'>July 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/06/'>June 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/05/'>May 2009</a></li>
+	<li><a href='https://anandaleeke.com/2009/02/'>February 2009</a></li>
+			</ul>
+
+			</section><section id="blog-stats-2" class="widget widget_blog-stats"><h2 class="widget-title th-text-2xs th-text-secondary-base th-uppercase th-tracking-wider th-mt-0 th-mb-base">Blog Stats</h2>		<ul>
+			<li>101,807 hits</li>
+		</ul>
+		</section><section id="blog_subscription-3" class="widget widget_blog_subscription jetpack_subscription_widget"><h2 class="widget-title th-text-2xs th-text-secondary-base th-uppercase th-tracking-wider th-mt-0 th-mb-base"><label for="subscribe-field">Email Subscription</label></h2>
+
+			<div class="wp-block-jetpack-subscriptions__container">
+			<form
+				action="https://subscribe.wordpress.com"
+				method="post"
+				accept-charset="utf-8"
+				data-blog="6427613"
+				data-post_access_level="everybody"
+				id="subscribe-blog"
+			>
+				<p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+				<p id="subscribe-email">
+					<label
+						id="subscribe-field-label"
+						for="subscribe-field"
+						class="screen-reader-text"
+					>
+						Email Address:					</label>
+
+					<input
+							type="email"
+							name="email"
+							
+							style="width: 95%; padding: 1px 10px"
+							placeholder="Email Address"
+							value=""
+							id="subscribe-field"
+							required
+						/>				</p>
+
+				<p id="subscribe-submit"
+									>
+					<input type="hidden" name="action" value="subscribe"/>
+					<input type="hidden" name="blog_id" value="6427613"/>
+					<input type="hidden" name="source" value="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/"/>
+					<input type="hidden" name="sub-type" value="widget"/>
+					<input type="hidden" name="redirect_fragment" value="subscribe-blog"/>
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="e8ea83fb0a" />					<button type="submit"
+													class="wp-block-button__link"
+																	>
+						Sign me up!					</button>
+				</p>
+			</form>
+							<div class="wp-block-jetpack-subscriptions__subscount">
+					Join 8,294 other subscribers				</div>
+						</div>
+			
+</section></aside><!-- #secondary -->
+	</div><!-- .container -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer th-bg-primary-dark th-text-secondary-base">
+		<button id="gotop-button" class="clean-button gotop th-text-center th-bg-accent-base th-text-white" type="button">
+			<svg class="svg-icon th-fill-current" width="24" height="24" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>			<span class="screen-reader-text">Go to the top</span>
+		</button><!-- .gotop -->
+
+				<div class="container th-mt-base th-mb-xl">
+			<div class="footer-widget-area th-flex th-flex-wrap th--mx-base th-stack-full--lg">
+				<section id="widget_contact_info-3" class="widget widget_contact_info footer-widget th-px-base th-w-full"><h2 class="widget-title th-text-2xs th-uppercase th-tracking-wider th-mt-0 th-mb-lg">Contact Me</h2><div itemscope itemtype="http://schema.org/LocalBusiness"><div class="confit-address" itemscope itemtype="http://schema.org/PostalAddress" itemprop="address"><a href="https://maps.google.com/maps?z=16&#038;q=ananda%40anandaleeke.com" target="_blank" rel="noopener noreferrer">ananda@anandaleeke.com</a></div><div class="confit-phone"><span itemprop="telephone">202.607.3509</span></div></div></section>			</div><!-- .footer-widget-area -->
+		</div><!-- .container -->
+		
+		<div class="footer-bottom th-pb-md th-pt-sm md:th-text-left th-text-center">
+			<div class="container th-flex th-flex-wrap th-items-center th-stack-full--sm">
+				<div class="footer-links th-stack--xs md:th-w-7/12 th-w-full">
+					
+					<div class="site-info">
+						<a href="https://wordpress.com/wp/?partner_domain=authoranandaleeke.wordpress.com&#038;utm_source=Automattic&#038;utm_medium=colophon&#038;utm_campaign=Footer%20Referral&#038;utm_term=authoranandaleeke.wordpress.com" rel="generator nofollow" class="powered-by-wpcom">Proudly powered by WordPress.com.</a>
+						
+											</div><!-- .site-info -->
+				</div><!-- .footer-links -->
+
+								<nav class="social-links social-list md:th-w-5/12 th-w-full md:th-text-right" aria-label="Footer social links menu">
+					<ul id="menu-social-links-1" class="menu-items list-unstyled th-flex th-flex-wrap md:th-justify-end th-justify-center th-m-0 th-leading-none"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6745"><a href="http://www.amazon.com/Ananda-Kiamsha-Madelyn-Leeke/e/B002BRGONC/ref=ntt_athr_dp_pel_pop_1"><span class="screen-reader-text social-meta">Amazon</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726-1.53.406-3.045.61-4.516.61-2.265 0-4.41-.396-6.435-1.187-2.02-.794-3.82-1.91-5.43-3.35-.1-.074-.15-.15-.15-.22 0-.047.02-.09.05-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045-.195-.166-.375-.332-.526-.496l-.31-.347c-.06-.074-.166-.21-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5.55-.133 1.09-.222 1.612-.24.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.09.228.09.39v.15c0 .51-.14 1.11-.415 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></svg></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6749"><a href="http://instagram.com/anandaleeke"><span class="screen-reader-text social-meta">Instagram</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13637"><a href="https://open.spotify.com/show/4XCnPXjxAPVgfh8lHwu6eJ"><span class="screen-reader-text social-meta">Spotify</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6750"><a href="http://www.linkedin.com/in/anandaleeke"><span class="screen-reader-text social-meta">LinkedIn</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13638"><a href="https://www.youtube.com/user/anandaleeke"><span class="screen-reader-text social-meta">YouTube</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13639"><a href="https://www.tiktok.com/@anandaleeke"><span class="screen-reader-text social-meta">TikTok</span><svg class="svg-icon th-fill-current" width="20" height="20" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
+</ul>				</nav><!-- .social-list -->
+							</div><!-- .container -->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="//0.gravatar.com/js/hovercards/hovercards.min.js?ver=2024224d47d929f88574eb4a47e5b1778b683b87e7f6078bb6a33f34c1178752e83406" id="grofiles-cards-js"></script>
+<script type="text/javascript" id="wpgroho-js-extra">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile': 'Edit your profile',
+							'View profile': 'View profile',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.': 'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-e474d7806faa4647327a3882387491c0">
+	</div>
+	<div class="grofile-hash-map-acace58601520abc2ae6822978947c17">
+	</div>
+	<div class="grofile-hash-map-ea8fc5121eacdef8f393395ab224c7a4">
+	</div>
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-premium-fortune actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-comment" href="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/#respond">
+							<svg class="gridicon gridicons-comment" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 16l-5 5v-5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-7z"/></g></svg>							<span>Comment						</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-reblog" href="">
+							<svg class="gridicon gridicons-reblog" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M22.086 9.914L20 7.828V18c0 1.105-.895 2-2 2h-7v-2h7V7.828l-2.086 2.086L14.5 8.5 19 4l4.5 4.5-1.414 1.414zM6 16.172V6h7V4H6c-1.105 0-2 .895-2 2v10.172l-2.086-2.086L.5 15.5 5 20l4.5-4.5-1.414-1.414L6 16.172z"/></g></svg><span>Reblog</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="https://anandaleeke.com">
+				<img alt='' src='https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=50' srcset='https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=50 1x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=75 1.5x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=100 2x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=150 3x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=200 4x' class='avatar avatar-50' height='50' width='50' />				Ananda Leeke			</a>
+		</li>
+										<div class="actnbr-message no-display"></div>
+									<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" style="display: none;">
+																						<div class="actnbr-follow-count">Join 303 other subscribers</div>
+																					<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="6427613" />
+										<input type="hidden" name="source" value="https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="e8ea83fb0a" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fanandaleeke.com%252F2018%252F05%252F17%252Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://anandaleeke.com">
+				<img alt='' src='https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=50' srcset='https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=50 1x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=75 1.5x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=100 2x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=150 3x, https://anandaleeke.com/wp-content/uploads/2017/11/allogobyjem-orange-111917.jpg?w=200 4x' class='avatar avatar-50' height='50' width='50' />				Ananda Leeke			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://authoranandaleeke.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fauthoranandaleeke.wordpress.com%2F2018%2F05%2F17%2Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fanandaleeke.com%252F2018%252F05%252F17%252Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%252F">Log in</a></li>
+																	<li class="actnbr-shortlink"><a href="https://wp.me/pqY7b-2h9">Copy shortlink</a></li>
+																	<li class="flb-report">
+										<a href="https://wordpress.com/abuse/?report_url=https://anandaleeke.com/2018/05/17/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et/" target="_blank" rel="noopener noreferrer">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/blogs/6427613/posts/8751">
+											View post in Reader										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20240115";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+			<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div
+				class="jp-carousel-wrap swiper-container jp-carousel-swiper-container jp-carousel-transitions"
+				itemscope
+				itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"/>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"/>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+												<textarea
+													name="comment"
+													class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+													id="jp-carousel-comment-form-comment-field"
+													placeholder="Write a Comment..."
+												></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">Email (Required)</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Name (Required)</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Website</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" />
+															</fieldset>
+																											</div>
+													<input
+														type="submit"
+														name="submit"
+														class="jp-carousel-comment-form-button"
+														id="jp-carousel-comment-form-button-submit"
+														value="Post Comment" />
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" href="#" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"/>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/anandaleeke.com\/2018\/05\/17\/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et\/":8751};
+	</script>
+						<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??-eJyljEsKgDAMBS9kDUUquhDPom0Qaz/BNHh9KdgTuBl4w2PgIWVzKpgKRFEU5DgTg8dCm72+DTHnCicBGex2Z2EMwM9JeKtdkgvYW+YOftTaqYkaXOOix8noQU+z8S9MR0BZ&cssminify=yes' type='text/css' media='all' />
+<script type="text/javascript" id="fortune-script-js-extra">
+/* <![CDATA[ */
+var fortuneScreenReaderText = {"expand":"Expand child menu","collapse":"Collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-carousel-js-extra">
+/* <![CDATA[ */
+var jetpackSwiperLibraryPath = {"url":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-plugin\/moon\/_inc\/build\/carousel\/swiper-bundle.min.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/anandaleeke.com\/wp-admin\/admin-ajax.php","nonce":"03a04b5fdd","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/authoranandaleeke.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fanandaleeke.com%2F2018%2F05%2F17%2Fjoin-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et%2F","blog_id":"6427613","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"stats_query_args":"blog=6427613&v=wpcom&tz=-4&user_id=0&subd=authoranandaleeke","is_public":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="verbum-settings-js-before">
+/* <![CDATA[ */
+window.VerbumComments = {"Log in or provide your name and email to leave a reply.":"Log in or provide your name and email to leave a reply.","Log in or provide your name and email to leave a comment.":"Log in or provide your name and email to leave a comment.","Receive web and mobile notifications for posts on this site.":"Receive web and mobile notifications for posts on this site.","Name":"Name","Email (address never made public)":"Email (address never made public)","Website (optional)":"Website (optional)","Leave a reply. (log in optional)":"Leave a reply. (log in optional)","Leave a comment. (log in optional)":"Leave a comment. (log in optional)","Log in to leave a reply.":"Log in to leave a reply.","Log in to leave a comment.":"Log in to leave a comment.","Logged in via %s":"Logged in via %s","Log out":"Log out","Email":"Email","(Address never made public)":"(Address never made public)","Instantly":"Instantly","Daily":"Daily","Reply":"Reply","Comment":"Comment","WordPress":"WordPress","Weekly":"Weekly","Notify me of new posts":"Notify me of new posts","Email me new posts":"Email me new posts","Email me new comments":"Email me new comments","Cancel":"Cancel","Write a comment...":"Write a comment...","Write a reply...":"Write a reply...","Website":"Website","Optional":"Optional","We'll keep you in the loop!":"We'll keep you in the loop!","Loading your comment...":"Loading your comment...","Discover more from":"Discover more from Ananda Leeke","Subscribe now to keep reading and get access to the full archive.":"Subscribe now to keep reading and get access to the full archive.","Continue reading":"Continue reading","Never miss a beat!":"Never miss a beat!","Interested in getting blog post updates? Simply click the button below to stay in the loop!":"Interested in getting blog post updates? Simply click the button below to stay in the loop!","Enter your email address":"Enter your email address","Subscribe":"Subscribe","Comment sent successfully":"Comment sent successfully","Save my name, email, and website in this browser for the next time I comment.":"Save my name, email, and website in this browser for the next time I comment.","siteId":6427613,"postId":8751,"mustLogIn":false,"requireNameEmail":true,"commentRegistration":false,"connectURL":"https:\/\/authoranandaleeke.wordpress.com\/public.api\/connect\/?action=request&domain=anandaleeke.com","logoutURL":"https:\/\/authoranandaleeke.wordpress.com\/wp-login.php?action=logout&_wpnonce=3f99bb14eb","homeURL":"https:\/\/anandaleeke.com\/","subscribeToBlog":true,"subscribeToComment":true,"isJetpackCommentsLoggedIn":false,"jetpackUsername":"","jetpackUserId":0,"jetpackSignature":"","jetpackAvatar":"https:\/\/0.gravatar.com\/avatar\/?s=96&amp;d=identicon&amp;r=G","enableBlocks":true,"enableSubscriptionModal":true,"currentLocale":"en","isJetpackComments":false,"allowedBlocks":["core\/paragraph","core\/list","core\/code","core\/list-item","core\/quote","core\/image","core\/embed","core\/quote","core\/code"],"embedNonce":"a88a91cc7a","verbumBundleUrl":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-mu-wpcom-plugin\/moon\/vendor\/automattic\/jetpack-mu-wpcom\/src\/features\/verbum-comments\/dist\/index.js","isRTL":false,"vbeCacheBuster":1717067639}
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s1.wp.com/_static/??-eJydUdFOwzAM/CFab6oQ4wHxKShNvC5t7IQkZtrfY0EKg01o4inK+Xx3ucAxdTZyRa5A0qUgk+cCwS9Y4FVQ8GDYBcz9XO7gOnnGmoxdOoWOyUZqA6AYGd6QXcxgpEYytXp7QYeSLYzig1NyHoXUg0g9CphSUA93YkPediEa953Esw3iNOZcoG10GVM49eT5d9x6QFJqykheCPYxV2FcDVQhyRg0XDKT0ornSYK5ePTNKq2Z6tO/Ndrght7P637RVlqZ1uQoBcMXbwWu9XMmaxZfCGs39JtPuRXY5w+y+2N3tWg/+/Oqe8/0tH3Y7O6Hx+2wm98BL5Dwzw=='></script>
+<script type="text/javascript" id="crowdsignal-rating-js-before">
+/* <![CDATA[ */
+<!--//--><![CDATA[//><!--
+PDRTJS_settings_243576_post_8751={"id":243576,"unique_id":"wp-post-8751","title":"Join%20Ananda%20Leeke%20for%20a%20Conversation%20on%20Meditation%20on%20WHUR%20FM%20on%20May%2017%20%407PM%26nbsp%3BET","permalink":"https:\/\/anandaleeke.com\/2018\/05\/17\/join-ananda-for-conversation-on-meditation-on-whur-fm-on-may-17-7pm-et\/","item_id":"_post_8751"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_243576_post_8751 == 'undefined' ){PDRTJS_243576_post_8751 = new PDRTJS_RATING( PDRTJS_settings_243576_post_8751 );}}
+//--><!]]]]><![CDATA[>
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://polldaddy.com/js/rating/rating.js?ver=13.5-a.6" id="crowdsignal-rating-js"></script>
+<script type="text/javascript" id="sharing-js-js-extra">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s1.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/_inc/build/sharedaddy/sharing.min.js?m=1685129444i'></script>
+<script type="text/javascript" id="sharing-js-js-after">
+/* <![CDATA[ */
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-linkedin' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-linkedin' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-tumblr' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-tumblr' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+						return false;
+					}
+				} );
+			} )();
+/* ]]> */
+</script>
+
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<iframe src='https://widgets.wp.com/likes/master.html?ver=20240530#ver=20240530&amp;origin=https://anandaleeke.com' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars' class='wpl-new-layout' role="dialog" aria-hidden="true" tabindex="-1">
+		<div class="likes-text">
+			<span>%d</span>		</div>
+		<ul class="wpl-avatars sd-like-gravatars"></ul>
+	</div>
+
+		<script src="//stats.wp.com/w.js?67" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'6427613','blog_tz':'-4','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'6427613','v':'wpcom','tz':'-4','user_id':'0','post':'8751','subd':'authoranandaleeke'}]);
+		_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1oV0pFNEwueXFaVXlyMGwvVG9bYnpmRTZaZyxNTzVFOUxaR1NYc1NlSDAwRUVMeldxLCZDZklwanoxYWRddyVyPVpvYV1maD1zZkxRaE5DZ1NDYmZLL1ZyVmRMRGFdNVlnZTF8TnxsJUJMTTZaNmJ6flFbLz8vSjk2RS13NHFIJld6UV9tZ0JpNEZaNlYtRjRmfHo2NVIvMjldVjlQUCV6JWwsXUlyR3VFTVRNZ1lLTzZ4dnRSZmp1R05lLkRQZ1FoTF0sci9wW2MrYXZlQlY4XzM/bUlWYlhLL00laG9xP0ZUXUc3dlEyNFJ+cytmc2ssNjZSS2NhNzR5OVowNFRhWDBYSyZ6YVE9LnUyd3MmSjdzdDI9U3xLMT9bbndPbiw9PThMbDdULkpFZEo4S0QmYzBwSk8sP1huK114X1VMNzlQT3J6SHNoMlR4c2dETl1SR3dXU3BiRzEyNSVaQQ=='}]);
+_stq.push([ 'clickTrackerInit', '6427613', '8751' ]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<script type='disabled' id='wp-enqueue-dynamic-script:wp-i18n:after:1'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+
+<script>
+(function() {
+	'use strict';
+
+	const fetches = {};
+	const promises = {};
+	const urls = {
+		'wp-polyfill-inert': 'https://s2.wp.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?m=1677063259i&ver=3.1.2',
+		'regenerator-runtime': 'https://s2.wp.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?m=1697622337i&ver=0.14.0',
+		'wp-polyfill': 'https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?m=1710866488i&ver=3.15.0',
+		'wp-hooks': 'https://s0.wp.com/wp-content/plugins/gutenberg-core/v18.4.1/build/hooks/index.min.js?m=1716578158i&ver=3aee234ea7807d8d70bc',
+		'wp-i18n': 'https://s0.wp.com/wp-content/plugins/gutenberg-core/v18.4.1/build/i18n/index.min.js?m=1716578158i&ver=5baa98e4345eccc97e24',
+		'verbum': 'https://s2.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/verbum-comments.js?m=1715858256i&minify=false&ver=3e346647ec4ff2cd65bd'
+	};
+	const loaders = {
+		'verbum': () => {
+			fetchExternalScript('wp-polyfill-inert');
+			fetchExternalScript('regenerator-runtime');
+			fetchExternalScript('wp-polyfill');
+			fetchExternalScript('wp-hooks');
+			fetchExternalScript('wp-i18n');
+			fetchExternalScript('verbum');
+			promises['wp-polyfill-inert'] = promises['wp-polyfill-inert'] || loadWPScript('wp-polyfill-inert');
+			promises['regenerator-runtime'] = promises['regenerator-runtime'] || loadWPScript('regenerator-runtime');
+			promises['wp-polyfill'] = promises['wp-polyfill'] || Promise.all( [ promises['wp-polyfill-inert'], promises['regenerator-runtime'],  ] ).then( () => loadWPScript('wp-polyfill') );
+			promises['wp-hooks'] = promises['wp-hooks'] || promises['wp-polyfill'].then( () => loadWPScript('wp-hooks') );
+			promises['wp-i18n'] = promises['wp-i18n'] || Promise.all( [ promises['wp-hooks'], promises['wp-polyfill'],  ] ).then( () => loadWPScript('wp-i18n') );
+			promises['verbum'] = promises['verbum'] || promises['wp-i18n'].then( () => loadWPScript('verbum') );
+			return promises['verbum'];
+		},
+		
+	};
+	const scriptExtras = {
+		'wp-i18n': { translations: 0, before: 0, after: 1 },
+		
+	};
+
+	window.WP_Enqueue_Dynamic_Script = {
+		loadScript: (handle) => {
+			if (!loaders[handle]) {
+				console.error('WP_Enqueue_Dynamic_Script: unregistered script `' + handle + '`.');
+			}
+			return loaders[handle]();
+		}
+	};
+
+	function fetchExternalScript(handle) {
+		if (!urls[handle]) {
+			return Promise.resolve();
+		}
+
+		fetches[handle] = fetches[handle] || fetch(urls[handle], { mode: 'no-cors' });
+		return fetches[handle];
+	}
+
+	function runExtraScript(handle, type, index) {
+		const id = 'wp-enqueue-dynamic-script:' + handle + ':' + type + ':' + (index + 1);
+		const template = document.getElementById(id);
+		if (!template) {
+			return Promise.reject();
+		}
+
+		const script = document.createElement( 'script' );
+		script.innerHTML = template.innerHTML;
+		document.body.appendChild( script );
+		return Promise.resolve();
+	}
+
+	function loadExternalScript(handle) {
+		if (!urls[handle]) {
+			return Promise.resolve();
+		}
+
+		return fetches[handle].then(() => {
+			return new Promise((resolve, reject) => {
+				const script = document.createElement('script');
+				script.onload = () => resolve();
+				script.onerror = (e) => reject(e);
+				script.src = urls[handle];
+				document.body.appendChild(script);
+			});
+		});
+	}
+
+	function loadExtra(handle, pos) {
+		const count = (scriptExtras[handle] && scriptExtras[handle][pos]) || 0;
+		let promise = Promise.resolve();
+
+		for (let i = 0; i < count; i++) {
+			promise = promise.then(() => runExtraScript(handle, pos, i));
+		}
+
+		return promise;
+	}
+
+	function loadWPScript(handle) {
+		// Core loads scripts in this order. See: https://github.com/WordPress/WordPress/blob/a59eb9d39c4fcba834b70c9e8dfd64feeec10ba6/wp-includes/class-wp-scripts.php#L428.
+		return loadExtra(handle, 'translations')
+			.then(() => loadExtra(handle, 'before'))
+			.then(() => loadExternalScript(handle))
+			.then(() => loadExtra(handle, 'after'));
+	}
+} )();
+</script>
+
+</body>
+</html>

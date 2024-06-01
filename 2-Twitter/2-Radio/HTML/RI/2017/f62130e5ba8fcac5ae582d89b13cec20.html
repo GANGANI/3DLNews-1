@@ -1,0 +1,1157 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>The Voice of Southern New England | WPRO</title><link rel="canonical" href="https://www.997wpro.com/" />
+
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/general-https-ABC123H.css?ver=20240527072423" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/general-https-ABC123H.css?ver=20240527072423' type='text/css' media='all' />
+<link rel="preload" href="https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/layout-front_page-https-ABC123H.css?ver=20240527072423" as="style"><link rel='stylesheet' id='headway-layout-front_page-https-css' href='https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/layout-front_page-https-ABC123H.css?ver=20240527072423' type='text/css' media='all' />
+<link rel="preload" href="https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/responsive-grid-https-ABC123H.css?ver=20240527072423" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/responsive-grid-https-ABC123H.css?ver=20240527072423' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240531033029" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240531033029' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_10213/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/block-dynamic-js-layout-front_page-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-front_page-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.997wpro.com/wp-content/uploads/sites/5/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240527072423" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.997wpro.com","site_id":"5","tz":"America\/New_York","tz_offset":"-4","ts":"1715610524","blog_name":"WPRO","client_name":"cumuluspro","user_ID":"","alt_blog_name":"WPRO-AM","market":"Providence-Warwick-Pawtucket, RI","format":"News\/Talk","ts_offset":"1717111830","version":"release-3.26.01","env":"prod","settings":{"tenant_id":"see_10213","syn_site_name":"WPRO-AM","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":false,"default_show_img":false,"gtm_id":false,"format":"News\/Talk","market":"Providence-Warwick-Pawtucket, RI","region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.997wpro.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"1","moment_date_format":"MMMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"MM d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"5","callsign":"","mount_name":"WPROAM","provider":"stream_the_world","gmt_offset":"-14400","live_url":"http:\/\/player.listenlive.co\/25571","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240531033030" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.997wpro.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.997wpro.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="WPRO &raquo; Feed" href="https://www.997wpro.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/5/2019/04/30105059/wpro.png" />
+
+
+<link rel='shortlink' href='https://www.997wpro.com/' />
+	<script>
+		const express_config = { 
+			express_url : 'https://www.997wpro.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/997wpro-com\/',
+			rewards_id : '1950',
+			site_id : '5',
+			client_id : 'cumuluspro',
+			post_id : '7',
+			tracking_meta_id: '6978331',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -4,
+			timezone : 'America/New_York',
+			timezone_abbr : 'EDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -4 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'WPRO','alt_station_name':'WPRO-AM','market':'Providence-Warwick-Pawtucket, RI','format':'News/Talk','author':'System User','page_type':'page' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'UA-70347554-1');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/5/2019/04/30105059/wpro.png" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5ZJKPQ');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+	// SLOTS ARE DEFINED IN THEIR DISPLAY BLOCKS
+	window.GPT_SITE_ID = '/6717/cd.WPRO.AM';
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+	});
+</script>
+<!-- END 2023 CMLS GPT -->
+	
+<!--Pinterest Analytics-->
+<meta name="p:domain_verify" content="c8ede67482a2d542c423bbc715c1d7f0">
+<!-- End Pinterest Analytics-->
+
+<script type="text/javascript" src="//engage-see.franklymedia.com/widget/see_10214/see.js"></script>
+<script type="text/javascript">var ajaxurl = "https://www.997wpro.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'WPRO');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Market  Providence RI', 'Format  NewsTalk', 'Temporary Live Sites', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'Home');
+      googletag.pubads().setTargeting('cms-pcat', '');
+			});
+		}
+		</script>
+		<link rel="preload" fetchpriority="high" href="https://www.997wpro.com/wp-content/uploads/sites/5/themify-concate/3568307525/themify-3753639671.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.997wpro.com/wp-content/uploads/sites/5/themify-concate/3568307525/themify-3753639671.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="WPRO"/>
+  <meta property="og:title" content="WPRO"/>
+  <meta property="og:url" content="https://www.997wpro.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="WPRO"/>
+  <meta property="og:image" content="https://express-images.franklymedia.com/6616/sites/5/2021/03/10121236/new-board_edited.jpg"/>
+  <meta property="og:image:url" content="https://express-images.franklymedia.com/6616/sites/5/2021/03/10121236/new-board_edited.jpg"/>
+  <meta property="og:image:secure_url" content="https://express-images.franklymedia.com/6616/sites/5/2021/03/10121236/new-board_edited.jpg"/>
+  <meta property="article:publisher" content="http://www.facebook.com/630wpro"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="WPRO"/>
+  <meta itemprop="headline" content="WPRO"/>
+  <meta itemprop="description" content="WPRO"/>
+  <meta itemprop="image" content="https://express-images.franklymedia.com/6616/sites/5/2021/03/10121236/new-board_edited.jpg"/>
+  <meta itemprop="author" content="expressAdmin"/>
+  <!--<meta itemprop="publisher" content="WPRO"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="WPRO"/>
+  <meta name="twitter:url" content="https://www.997wpro.com"/>
+  <meta name="twitter:description" content="WPRO"/>
+  <meta name="twitter:image" content="https://express-images.franklymedia.com/6616/sites/5/2021/03/10121236/new-board_edited.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@wpro"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="home page-template-default page page-id-7 is-headway-theme custom responsive-grid-enabled responsive-grid-active pageid-7 page-slug-home layout-front_page layout-using-front_page tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-8" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-4">
+<figure id="block-31" class="logo block block-type-image block-fixed-height" data-alias="Logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/5/2023/12/21135430/WPRO-AM-Sitelogo-2023-12-21.png" alt="News Talk - WPRO 99.7FM / 630AM" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-20">
+
+<section class="sub-column sub-column-1 column column-1 grid-width-6 grid-left-0">
+<aside id="block-bgz5cc87b663dd39" class="on-air block block-type-widget-area block-fluid-height" data-alias="On Air widget" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><div style="display:none;" class="amp-onair-widget" id="amp_onair_widget-2"
+	data-title-now=""
+	data-title-upcoming=""
+	data-title=""
+	data-type="nowplaying"
+	data-change-minutes="5"
+	data-change="0"
+	data-toggle-time="5"
+	data-fields="image,timeslot"
+	data-ajaxurl="https://www.997wpro.com/wp-admin/admin-ajax.php"
+	data-updateurl="https://www.997wpro.com/shows/feed/?type=json"
+	data-memcached="1"
+	data-expiration="1717113540">
+	
+<div class="amp-onair-show nowplaying" >
+
+    <div class="amp-onair-widget-title js-widget-title"></div>
+
+        <div class="amp-onair-show-image">
+                    <img class="js-image amp-onair-show-image-img" src="https://express-images.franklymedia.com/6616/sites/5/2014/08/20111435/batchelor.png"  />
+            </div>
+        
+    <div class="amp-onair-show-title">
+            <span class="js-title">John Batchelor</span>
+        </div>
+    
+        <div class="amp-onair-show-timeslot js-timeslot" >9:00 p.m. - 11:59 p.m.</div>
+        
+        
+    
+</div>
+
+</div></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bgz5cc87b663dd39 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-11 grid-left-0">
+<section id="block-30" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="#"><img src="https://express-images.franklymedia.com/6616/sites/5/2023/12/21122459/ListenLive-Red.png" alt="Listen Live!!" title="Listen Live!!" class="img-1"  /></a></li><li><a href="https://www.facebook.com/630wpro" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/5/2023/12/21122517/Social-Facebook-White.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-2"  /></a></li><li><a href="https://x.com/wpro" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/5/2023/12/21122540/Social-X-White.png" alt="Follow us on X" title="Follow us on X" class="img-3"  /></a></li><li><a href="https://wproam.clubviprewards.com" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/5/2023/12/21122557/Social-VIP-White.png" alt="Join our VIP Club" title="Join our VIP Club" class="img-4"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-3 column column-3 grid-width-3 grid-left-0">
+<div id="block-bqi5a85c742ecee0" class="gigya-actions block block-type-custom-code block-fluid-height" data-alias="Gigya Profile Actions">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bqi5a85c742ecee0 -->
+
+</section><!-- .sub-column -->
+<nav id="block-32" class="main-nav block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left nav-search-active nav-search-position-right"><ul id="menu-main-navigation" class="menu"><li id="menu-item-41409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41409"><a href="https://www.997wpro.com/onair/">Shows</a>
+<ul class="sub-menu">
+	<li id="menu-item-33537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33537"><a href="https://www.997wpro.com/gene-valicenti/">Gene Valicenti 6-9am</a></li>
+	<li id="menu-item-452889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-452889"><a href="https://www.997wpro.com/tara-granahan/">Tara Granahan 9am-Noon</a></li>
+	<li id="menu-item-33535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33535"><a href="https://www.997wpro.com/matt-allen/">Matt Allen Noon-3pm</a></li>
+	<li id="menu-item-33539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33539"><a href="https://www.997wpro.com/dan-yorke/">Dan Yorke 3pm-6pm</a></li>
+	<li id="menu-item-41407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41407"><a href="https://www.997wpro.com/onair/">Full Show Lineup</a></li>
+</ul>
+</li>
+<li id="menu-item-39581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39581"><a href="https://www.997wpro.com/news">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-39583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39583"><a href="https://www.997wpro.com/category/local-news/">Local News</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1451911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1451911"><a href="https://www.997wpro.com/traffic/">Traffic Center</a></li>
+		<li id="menu-item-1455987" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1455987"><a href="https://www.997wpro.com/outagemap/">Real-Time Power Outage Map</a></li>
+		<li id="menu-item-489288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-489288"><a target="_blank" rel="noopener" href="http://630wpro.eviesays.com/">Community Calendar</a></li>
+	</ul>
+</li>
+	<li id="menu-item-469728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-469728"><a href="https://www.997wpro.com/category/arts/">Arts</a></li>
+	<li id="menu-item-771311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771311"><a href="https://www.997wpro.com/new-england-patriots-central/">New England Patriots Central</a></li>
+</ul>
+</li>
+<li id="menu-item-38747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38747"><a href="https://www.997wpro.com/podcasts/">Podcasts</a></li>
+<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-165"><a href="https://www.997wpro.com/contests/">Contests</a>
+<ul class="sub-menu">
+	<li id="menu-item-555719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-555719"><a href="https://www.997wpro.com/community-calendar/#!/">Events</a></li>
+	<li id="menu-item-39573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39573"><a href="/contests">Current Contests</a></li>
+	<li id="menu-item-39571" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39571"><a target="_blank" rel="noopener" href="/1111/11/11/contest-rules/">Contest Rules</a></li>
+</ul>
+</li>
+<li id="menu-item-1495385" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1495385"><a href="https://www.997wpro.com/winter-weather-center/">Weather</a>
+<ul class="sub-menu">
+	<li id="menu-item-1495387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1495387"><a href="https://www.997wpro.com/operationsnowball">OPERATION SNOWBALL</a></li>
+	<li id="menu-item-1495386" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1495386"><a href="https://www.997wpro.com/winter-weather-center/">WEATHER MAP</a></li>
+</ul>
+</li>
+<li id="menu-item-22393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22393"><a target="_blank" rel="noopener" href="https://www.sweetdeals.com/providence/deals">Sweet Deals</a></li>
+<li id="menu-item-1429470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1429470"><a title="The coordinated advertising campaign that delivers results GUARANTEED." href="/epic">Advertising</a></li>
+</ul><div class="nav-search">
+		<form method="get" id="searchform" action="https://www.997wpro.com/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="text" class="field" name="s" id="s" value="Search" onclick="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';" />
+			<input type="submit" class="submit" name="searchsubmit" id="searchsubmit" value="Search" />
+		</form>
+	</div></div><!-- .nav-horizontal nav-align-left nav-search-active nav-search-position-right -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-9" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<aside id="block-35" class="promo-reel block block-type-widget-area block-fluid-height" data-alias="Home - Promo Reel" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="amp_promo_reel-4" class="widget widget_amp_promo_reel sidebar_promo">
+<div class="sliderWrapper"><div class="sliderBody" style=""><div class="bxslider" data-navigation-arrows='1' data-rotation-time='3000' data-pager-type='none'><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.997wpro.com/2024/05/23/dangerous-brew-ocean-heat-and-la-nina-combo-likely-mean-more-atlantic-hurricanes-this-summer/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/5/2024/05/23171828/Dr-Richard-Spinrad-NOAA-Administrator.jpg"><div class="promoCaption top"><div class="captionTitle">Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.997wpro.com/mental-health-awareness-month/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/5/2023/05/01082234/LEARN-MORE-.png"><div class="promoCaption top"><div class="captionTitle">MHAM</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.997wpro.com/2024/05/23/beach-weather-is-here-and-so-are-sharks-scientists-say-its-time-to-look-out-for-great-whites/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/5/2019/11/12155250/Great-White-Shark.jpg"><div class="promoCaption top"><div class="captionTitle">Beach weather is here and so are sharks. Scientists say it's time to look out for great whites</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.997wpro.com/2024/05/23/justice-department-says-illegal-monopoly-by-ticketmaster-and-live-nation-drives-up-prices-for-fans/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/5/2024/05/23143741/Taylor-Swift-at-Gillette-in-the-rain-92PRO-FM-e1716489533897.jpg"><div class="promoCaption top"><div class="captionTitle">Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans</div></div></div></div></div></div></li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-35 -->
+<div id="block-bpe566085f9138b2" class="mobile-only nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="Responsive Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-18" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-18",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [])
+				.addSize([0,0], [[300, 250]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "midresponsive")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bpe566085f9138b2 -->
+<div id="block-bd75e1cd2c05e965" class="block block-type-custom-code block-fluid-height" data-alias="Brown Physicians NewsCenter Sponsor Block">
+<div class="block-content">
+<a href="https://www.trustedchoice.com/l/rhode-island/" target="_blank"><img src="https://i.ibb.co/dmL663R/Trusted-Choice-News-Center-final.png" alt="Trusted-Choice-News-Center-final" border="0"></a>
+</div><!-- .block-content -->
+
+</div><!-- #block-bd75e1cd2c05e965 -->
+<div id="block-btv65847f85e728e" class="post-list top-stories block block-type-content block-fluid-height" data-alias="Top Stories">
+<div class="block-content">
+<div class="loop">
+
+<div class="entry-row">
+
+<article id="post-1539128" class="post-1539128 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-atlantic-hurricane-season tag-climate-change tag-el-nino tag-forecasts tag-hurricane tag-hurricane-season tag-la-nina tag-national-oceanic-and-atmospheric-administration tag-national-weather-service tag-noaa tag-noaa-administrator-rick-spinrad tag-record-hot-weather author-steveklamkin custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/23/dangerous-brew-ocean-heat-and-la-nina-combo-likely-mean-more-atlantic-hurricanes-this-summer/" class="post-thumbnail post-thumbnail-above-title" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/05/23171828/Dr-Richard-Spinrad-NOAA-Administrator.jpg#aqua_resizer_image_not_local" alt="Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer" width="652" height="358.6" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/23/dangerous-brew-ocean-heat-and-la-nina-combo-likely-mean-more-atlantic-hurricanes-this-summer/" title="Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer" rel="bookmark">Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer</a></h2></header></article><!-- #post-1539128 --><article id="post-1539121" class="post-1539121 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-atlantic-white-shark-conservancy tag-chatham tag-great-white-shark tag-memorial-day-weekend tag-new-england tag-new-england-aquarium tag-sharks tag-summer tag-swimming tag-track-sharks author-steveklamkin alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/23/beach-weather-is-here-and-so-are-sharks-scientists-say-its-time-to-look-out-for-great-whites/" class="post-thumbnail post-thumbnail-above-title" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2019/11/12155250/Great-White-Shark.jpg#aqua_resizer_image_not_local" alt="Beach weather is here and so are sharks. Scientists say it&#8217;s time to look out for great whites" width="652" height="358.6" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/23/beach-weather-is-here-and-so-are-sharks-scientists-say-its-time-to-look-out-for-great-whites/" title="Beach weather is here and so are sharks. Scientists say it&#8217;s time to look out for great whites" rel="bookmark">Beach weather is here and so are sharks. Scientists say it's time to look out for great whites</a></h2></header></article><!-- #post-1539121 --><article id="post-1539111" class="post-1539111 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-antitrust-lawsuit tag-concerts tag-fees tag-illegal-monoppoly tag-justice-department tag-live-nation-entertainment tag-monopoly tag-music-venues tag-ticketmaster tag-tickets author-steveklamkin custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/23/justice-department-says-illegal-monopoly-by-ticketmaster-and-live-nation-drives-up-prices-for-fans/" class="post-thumbnail post-thumbnail-above-title" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/05/23143741/Taylor-Swift-at-Gillette-in-the-rain-92PRO-FM-e1716489533897.jpg#aqua_resizer_image_not_local" alt="Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans" width="652" height="358.6" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/23/justice-department-says-illegal-monopoly-by-ticketmaster-and-live-nation-drives-up-prices-for-fans/" title="Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans" rel="bookmark">Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans</a></h2></header></article><!-- #post-1539111 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1538921" class="post-1538921 post type-post status-publish format-standard has-post-thumbnail hentry category-arts category-top-stories-2 author-dougmac alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/17/doubt-closes-gamm-season-on-high-note/" class="post-thumbnail post-thumbnail-above-title" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/05/17133925/gamm.png#aqua_resizer_image_not_local" alt="“Doubt” Closes Gamm Season on High Note" width="652" height="358.6" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/17/doubt-closes-gamm-season-on-high-note/" title="“Doubt” Closes Gamm Season on High Note" rel="bookmark">“Doubt” Closes Gamm Season on High Note</a></h2></header></article><!-- #post-1538921 --><article id="post-1538871" class="post-1538871 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-cash tag-checks tag-corliss-street-postal-facility tag-gift-cards tag-mail-theft tag-postal tag-postal-theft tag-providence tag-theft tag-u-s-attorney-zachary-cunha tag-united-states-postal-service author-steveklamkin custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/15/7-postal-workers-charged-with-mail-theft-from-rhode-island-distribution-hub/" class="post-thumbnail post-thumbnail-above-title" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2022/01/19114308/Turnkey-post-office-corliss-street.jpg#aqua_resizer_image_not_local" alt="7 postal workers charged with mail theft from Rhode Island distribution hub" width="652" height="358.6" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/15/7-postal-workers-charged-with-mail-theft-from-rhode-island-distribution-hub/" title="7 postal workers charged with mail theft from Rhode Island distribution hub" rel="bookmark">7 postal workers charged with mail theft from Rhode Island distribution hub</a></h2></header></article><!-- #post-1538871 --><article id="post-1538850" class="post-1538850 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-classified-documents tag-court-martial tag-discord tag-jack-teixeira tag-massachusetts-air-national-guard tag-masscachusetts tag-military-documents tag-military-hearing-officer tag-national-defense-information tag-national-guard tag-national-security tag-national-security-leak tag-north-dighton tag-pentagon tag-plea-deal tag-secret tag-top-secret author-steveklamkin alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/15/military-hearing-officer-deciding-whether-to-recommend-court-martial-for-pentagon-leaker/" class="post-thumbnail post-thumbnail-above-title" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2023/04/27160220/Jack-Teixeira-Faceboook.jpg#aqua_resizer_image_not_local" alt="Military hearing officer deciding whether to recommend court-martial for Pentagon leaker" width="652" height="358.6" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/15/military-hearing-officer-deciding-whether-to-recommend-court-martial-for-pentagon-leaker/" title="Military hearing officer deciding whether to recommend court-martial for Pentagon leaker" rel="bookmark">Military hearing officer deciding whether to recommend court-martial for Pentagon leaker</a></h2></header></article><!-- #post-1538850 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-btv65847f85e728e -->
+<div id="block-bkt54ef7438eeacb" class="post-list thumb-25 block block-type-content block-fluid-height" data-alias="Local News">
+<div class="block-content">
+<h1 class="block-title"><span>Local News</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-1539128" class="post-1539128 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-atlantic-hurricane-season tag-climate-change tag-el-nino tag-forecasts tag-hurricane tag-hurricane-season tag-la-nina tag-national-oceanic-and-atmospheric-administration tag-national-weather-service tag-noaa tag-noaa-administrator-rick-spinrad tag-record-hot-weather author-steveklamkin custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/23/dangerous-brew-ocean-heat-and-la-nina-combo-likely-mean-more-atlantic-hurricanes-this-summer/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/05/23171828/Dr-Richard-Spinrad-NOAA-Administrator.jpg#aqua_resizer_image_not_local" alt="Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/23/dangerous-brew-ocean-heat-and-la-nina-combo-likely-mean-more-atlantic-hurricanes-this-summer/" title="Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer" rel="bookmark">Dangerous brew: Ocean heat and La Nina combo likely mean more Atlantic hurricanes this summer</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>Get ready for what nearly all the experts think will be one of the busiest Atlantic hurricane seasons on record, thanks to unprecedented ocean heat and a brewing La Nina.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1539128 --><article id="post-1539121" class="post-1539121 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-atlantic-white-shark-conservancy tag-chatham tag-great-white-shark tag-memorial-day-weekend tag-new-england tag-new-england-aquarium tag-sharks tag-summer tag-swimming tag-track-sharks author-steveklamkin alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/23/beach-weather-is-here-and-so-are-sharks-scientists-say-its-time-to-look-out-for-great-whites/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2019/11/12155250/Great-White-Shark.jpg#aqua_resizer_image_not_local" alt="Beach weather is here and so are sharks. Scientists say it&#8217;s time to look out for great whites" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/23/beach-weather-is-here-and-so-are-sharks-scientists-say-its-time-to-look-out-for-great-whites/" title="Beach weather is here and so are sharks. Scientists say it&#8217;s time to look out for great whites" rel="bookmark">Beach weather is here and so are sharks. Scientists say it's time to look out for great whites</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>Scientists with a Boston aquarium are encouraging beachgoers to report sightings of white sharks this holiday weekend after signs of shark bites were observed on multiple marine mammals.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1539121 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1539111" class="post-1539111 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-antitrust-lawsuit tag-concerts tag-fees tag-illegal-monoppoly tag-justice-department tag-live-nation-entertainment tag-monopoly tag-music-venues tag-ticketmaster tag-tickets author-steveklamkin custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/23/justice-department-says-illegal-monopoly-by-ticketmaster-and-live-nation-drives-up-prices-for-fans/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/05/23143741/Taylor-Swift-at-Gillette-in-the-rain-92PRO-FM-e1716489533897.jpg#aqua_resizer_image_not_local" alt="Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/23/justice-department-says-illegal-monopoly-by-ticketmaster-and-live-nation-drives-up-prices-for-fans/" title="Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans" rel="bookmark">Justice Department says illegal monopoly by Ticketmaster and Live Nation drives up prices for fans</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>The Justice Department filed a sweeping antitrust lawsuit against Ticketmaster and parent company Live Nation Entertainment on Thursday, accusing them of running an illegal monopoly over live events in America — squelching competition and driving up prices for fans.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1539111 --><article id="post-1538871" class="post-1538871 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-cash tag-checks tag-corliss-street-postal-facility tag-gift-cards tag-mail-theft tag-postal tag-postal-theft tag-providence tag-theft tag-u-s-attorney-zachary-cunha tag-united-states-postal-service author-steveklamkin alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/15/7-postal-workers-charged-with-mail-theft-from-rhode-island-distribution-hub/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2022/01/19114308/Turnkey-post-office-corliss-street.jpg#aqua_resizer_image_not_local" alt="7 postal workers charged with mail theft from Rhode Island distribution hub" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/15/7-postal-workers-charged-with-mail-theft-from-rhode-island-distribution-hub/" title="7 postal workers charged with mail theft from Rhode Island distribution hub" rel="bookmark">7 postal workers charged with mail theft from Rhode Island distribution hub</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>Federal prosecutors charged seven postal workers with stealing mail — targeting brightly colored cards that might contain checks or gift cards — as part of mail theft ring, officials said Wednesday.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1538871 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1538850" class="post-1538850 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-local-news category-top-stories-2 category-uncategorized tag-classified-documents tag-court-martial tag-discord tag-jack-teixeira tag-massachusetts-air-national-guard tag-masscachusetts tag-military-documents tag-military-hearing-officer tag-national-defense-information tag-national-guard tag-national-security tag-national-security-leak tag-north-dighton tag-pentagon tag-plea-deal tag-secret tag-top-secret author-steveklamkin custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/15/military-hearing-officer-deciding-whether-to-recommend-court-martial-for-pentagon-leaker/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2023/04/27160220/Jack-Teixeira-Faceboook.jpg#aqua_resizer_image_not_local" alt="Military hearing officer deciding whether to recommend court-martial for Pentagon leaker" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/15/military-hearing-officer-deciding-whether-to-recommend-court-martial-for-pentagon-leaker/" title="Military hearing officer deciding whether to recommend court-martial for Pentagon leaker" rel="bookmark">Military hearing officer deciding whether to recommend court-martial for Pentagon leaker</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>A Massachusetts Air National Guard member who pleaded guilty in March to federal crimes for leaking highly classified military documents appeared Tuesday before a military hearing officer who will recommend whether the guardsman should face a court-martial.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1538850 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bkt54ef7438eeacb -->
+<div id="block-bcb55391defce6b4" class="block block-type-text block-fluid-height" data-alias="All Local News Button">
+<div class="block-content">
+<div class="entry-content"><p>
+	<a href="https://www.997wpro.com/category/local-news/"></a><a href="https://www.997wpro.com/category/local-news/"><img src="https://www.997wpro.com/wp-content/uploads/sites/5/2015/04/LocalNews2.png" style="padding-right: 10px; float: right; margin: 0px 0px 10px 10px;" alt=""></a></p></div><!-- .entry-content -->
+</div><!-- .block-content -->
+
+</div><!-- #block-bcb55391defce6b4 -->
+<div id="block-be7615dcc247358d" class="block block-type-custom-code block-fluid-height" data-alias="Podcasts">
+<div class="block-content">
+<center><a href="https://www.997wpro.com/podcasts"><img src="https://i.ibb.co/PTj4q79/LISTEN-NOW.png" alt="LISTEN-NOW" border="0"></a></center>
+</div><!-- .block-content -->
+
+</div><!-- #block-be7615dcc247358d -->
+<div id="block-bfn5b62f70f7c5b9" class="post-list thumb-25 block block-type-content block-fluid-height" data-alias="Arts + Lifestyle">
+<div class="block-content">
+<h1 class="block-title"><span>Arts + Lifestyle</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-1538921" class="post-1538921 post type-post status-publish format-standard has-post-thumbnail hentry category-arts category-top-stories-2 author-dougmac alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/05/17/doubt-closes-gamm-season-on-high-note/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/05/17133925/gamm.png#aqua_resizer_image_not_local" alt="“Doubt” Closes Gamm Season on High Note" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/05/17/doubt-closes-gamm-season-on-high-note/" title="“Doubt” Closes Gamm Season on High Note" rel="bookmark">“Doubt” Closes Gamm Season on High Note</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>“Doubt” runs through June 2, 2024, at The Gamm Theatre, 1245 Jefferson Blvd., Warwick. Tickets may be obtained at the box office, online at gammtheatre.org or by calling 401.723.4266.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1538921 --><article id="post-1538118" class="post-1538118 post type-post status-publish format-standard has-post-thumbnail hentry category-arts category-top-stories-2 author-dougmac custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/04/26/good-times-company-at-ppac/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/04/26112746/0147-James-Earl-Jones-II-as-Harry-Kathryn-Allison-as-Sarah-Britney-Coleman-as-Bobbie-and-Judy-McLane-as-Joanne-in-the-North-American-Tour-of-COMPANY_edited.jpg#aqua_resizer_image_not_local" alt="Good Times: Company at PPAC" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/04/26/good-times-company-at-ppac/" title="Good Times: Company at PPAC" rel="bookmark">Good Times: Company at PPAC</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>By Kimberly Rau “Company,” Stephen Sondheim’s insightful 1970 musical about friendship and marriage has been thoroughly updated for the 21st century, including changing the sex of the main character and love interests. It’s a pivot that works well to refresh the show without losing the original intent, proving that there are some things that never&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1538118 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1535118" class="post-1535118 post type-post status-publish format-standard has-post-thumbnail hentry category-arts category-top-stories-2 author-dougmac alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/02/08/sorkins-to-kill-a-mockingbird-keeps-lees-classic-novel-heartbreakingly-relevant/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/02/08115125/a-Atticus-Finch-in-the-courtroom-edd34f130d-scaled.jpg#aqua_resizer_image_not_local" alt="Sorkin’s “To Kill a Mockingbird” Keeps Lee’s Classic Novel Heartbreakingly Relevant" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/02/08/sorkins-to-kill-a-mockingbird-keeps-lees-classic-novel-heartbreakingly-relevant/" title="Sorkin’s “To Kill a Mockingbird” Keeps Lee’s Classic Novel Heartbreakingly Relevant" rel="bookmark">Sorkin’s “To Kill a Mockingbird” Keeps Lee’s Classic Novel Heartbreakingly Relevant</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>“To Kill a Mockingbird” runs through Feb. 11, 2024, at the Providence Performing Arts Center, 220 Weybosset St., Providence. Tickets may be obtained at the box office, online at ppacri.org or by calling 401.421.2787</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1535118 --><article id="post-1535115" class="post-1535115 post type-post status-publish format-standard has-post-thumbnail hentry category-arts category-top-stories-2 author-dougmac custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/02/06/trinity-reps-la-broa-broad-street-a-tribute-to-rhode-island-history/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/02/08114625/53483027381_b6eef7f2d7_c.jpg#aqua_resizer_image_not_local" alt="Trinity Rep’s “La Broa (Broad Street)’” a Tribute to Rhode Island History" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/02/06/trinity-reps-la-broa-broad-street-a-tribute-to-rhode-island-history/" title="Trinity Rep’s “La Broa (Broad Street)’” a Tribute to Rhode Island History" rel="bookmark">Trinity Rep’s “La Broa (Broad Street)’” a Tribute to Rhode Island History</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>“La Broa’ (Broad Street)” runs through Feb. 8 at the Trinity Repertory Company, 201 Washington St., Providence. Tickets may be obtained at the box office, online at trinityrep.com or by calling 401.351.4242.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1535115 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1534773" class="post-1534773 post type-post status-publish format-standard has-post-thumbnail hentry category-arts category-top-stories-2 author-dougmac alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.997wpro.com/2024/01/30/gamms-whos-afraid-of-virginia-woolf-an-unflinching-glimpse-of-humanity/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/5/2024/01/30142025/virginia-woolf.png#aqua_resizer_image_not_local" alt="Gamm’s “Who’s Afraid of Virginia Woolf” an Unflinching Glimpse of Humanity" width="100" height="100" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.997wpro.com/2024/01/30/gamms-whos-afraid-of-virginia-woolf-an-unflinching-glimpse-of-humanity/" title="Gamm’s “Who’s Afraid of Virginia Woolf” an Unflinching Glimpse of Humanity" rel="bookmark">Gamm’s “Who’s Afraid of Virginia Woolf” an Unflinching Glimpse of Humanity</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>“Who’s Afraid of Virginia Woolf?” runs through Feb. 18 at the Gamm Theatre, 1245 Jefferson Blvd., Warwick. Tickets may be obtained at the box office, online at gammtheatre.org, or by calling 401.723.4266.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1534773 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bfn5b62f70f7c5b9 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<div id="block-34" class="300x250-ad-1 nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 1">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<div id="block-38" class="sweet-deals-ad block block-type-custom-code block-fluid-height" data-alias="Sweet Deals Ad">
+<div class="block-content">
+<a href="https://www.sweetdeals.com/providence/deals" target="_blank"><img src="https://www.997wpro.com/wp-content/uploads/sites/5/2015/01/headway-imported-image9.png"></a>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-38 -->
+<div id="block-bbj6128e451aabb2" class="block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+<a href="https://seascapeinc.com/" target="_blank"><img src="https://i.ibb.co/qx9d1cD/WU.jpg" alt="WU" border="0"></a><a href="https://www.accuweather.com/en/us/providence-ri/02903/weather-forecast/1078_pc" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+-->
+</a><div id="awcc1500301450766" class="aw-widget-current"  data-locationkey="1078_PC" data-unit="f" data-language="en-us" data-useip="false" data-uid="awcc1500301450766"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bbj6128e451aabb2 -->
+<div id="block-b5p5b3687265162b" class="block block-type-custom-code block-fluid-height" data-alias="Podcasts + SHSTOTW">
+<div class="block-content">
+<a href="http://www.92profm.com/stotw" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/5/2018/09/07143223/totw.jpg"></a>
+</div><!-- .block-content -->
+
+</div><!-- #block-b5p5b3687265162b -->
+<div id="block-b5v57e977bed5fbe" class="block block-type-custom-code block-fluid-height" data-alias="Facebook">
+<div class="block-content">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=164230926940638";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><div class="fb-page" data-href="https://www.facebook.com/997WPRO" data-tabs="timeline" data-width="300" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/630WPRO/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/997WPRO">News Talk 99.7 &amp; AM 630 WPRO</a></blockquote></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b5v57e977bed5fbe -->
+<div id="block-bcm56f04d9a8a2c6" class="block block-type-custom-code block-fluid-height" data-alias="Community Calendar">
+<div class="block-content">
+<h1 class="block-title"><span>Community Calendar</span></h1><div data-cswidget="9864"> </div>
+<script type="text/javascript" async defer src="//cdn.cityspark.com/wid/get.js" > </script>
+
+<!-- eviesays.com calendar -->
+<!-- <script src="https://widget.eviesays.com/630wpro/default" async></script> -->
+</div><!-- .block-content -->
+
+</div><!-- #block-bcm56f04d9a8a2c6 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-10" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-51" class="728x90-ad-2 block block-type-custom-code block-fluid-height" data-alias="728x90 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-center"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-1443929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1443929"><a href="https://www.997wpro.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1535328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1535328"><a href="https://www.997wpro.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-1443931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1443931"><a href="https://www.997wpro.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="https://www.997wpro.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="https://www.997wpro.com/station-information/">Contact</a></li>
+<li id="menu-item-403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-403"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/careers/">Employment Opportunities</a></li>
+<li id="menu-item-79367" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79367"><a target="_blank" rel="noopener" href="https://express-images.franklymedia.com/6616/sites/3/2023/12/01143639/Cumulus-Providence-2023-EEO-Public-File-Report-1.pdf">EEO Report</a></li>
+<li id="menu-item-990264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-990264"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/am-profile/WPRO">WPRO Public File</a></li>
+<li id="menu-item-1342241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1342241"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/fm-profile/WEAN-FM">WEAN Public File</a></li>
+<li id="menu-item-1468692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1468692"><a href="https://publicfiles.fcc.gov/">FCC Applications</a></li>
+<li id="menu-item-1337636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1337636"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+</ul></div><!-- .nav-horizontal nav-align-center -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2020 Cumulus Media / Cumulus Media is an equal opportunity employer / AA</p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.997wpro.com/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-bjw5ab15ad077de7" class="block block-type-text block-fluid-height" data-alias="">
+<div class="block-content">
+<div class="entry-content"><p>
+If you need help accessing the FCC Public File file due to a disability, please contact <a href="/cdn-cgi/l/email-protection#cda0acbfb4a8a1a1a8a3e3a6acaea5a4a3bea6a88daeb8a0b8a1b8bee3aea2a0"><span class="__cf_email__" data-cfemail="bbd6dac9c2ded7d7ded595d0dad8d3d2d5c8d0defbd8ced6ced7cec895d8d4d6">[email&#160;protected]</span></a>
+</p></div><!-- .entry-content -->
+</div><!-- .block-content -->
+
+</div><!-- #block-bjw5ab15ad077de7 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-5">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<div id="block-b9g55db5fc4e3376" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-b9g55db5fc4e3376 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- TGMP PLUGIN ENABLED 2016-08-06T19:33:16.733Z -->
+
+<!-- START GOOGLE ANALYTICS -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41709712-2']);
+  _gaq.push(['_setDomainName', '.630wpro.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- END GOOGLE ANALYTICS -->
+
+<!-- Begin comScore Tag --><script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "16059128" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script><noscript>
+  <img data-no-script src="http://b.scorecardresearch.com/p?c1=2&c2=16059128&cv=2.0&cj=1" />
+</noscript><!-- End comScore Tag -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_10213/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3Ljk5N3dwcm8uY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwIiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy45OTd3cHJvLmNvbS93cC1jb250ZW50L3BsdWdpbnMiLCJseiI6IjEiLCJlbWFpbFN1YiI6IkNoZWNrIHRoaXMgb3V0ISIsIm5vcCI6IkNoZWNrIHRoaXMgb3V0ISIsImxpZ2h0Ym94Ijp7ImkxOG4iOnsidENvdW50ZXIiOiIlY3VyciUgb2YgJXRvdGFsJSJ9fSwic192IjoiNS4zLjkifTs="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.997wpro.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.997wpro.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://wproam.tunegenie.com/station/pwa/fullfooter.js?bs=wproam"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "wproam";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 288/577 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-30 23:30:31 by W3 Total Cache
+-->

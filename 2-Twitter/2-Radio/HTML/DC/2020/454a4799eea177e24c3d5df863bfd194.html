@@ -1,0 +1,1542 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>News Talk 105.9 WMAL | Making Sense Of The News</title><link rel="canonical" href="https://www.wmal.com/" />
+
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/general-https-ABC123H.css?ver=20240530132822" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/general-https-ABC123H.css?ver=20240530132822' type='text/css' media='all' />
+<link rel="preload" href="https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/layout-front_page-https-ABC123H.css?ver=20240530132822" as="style"><link rel='stylesheet' id='headway-layout-front_page-https-css' href='https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/layout-front_page-https-ABC123H.css?ver=20240530132822' type='text/css' media='all' />
+<link rel="preload" href="https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/responsive-grid-https-ABC123H.css?ver=20240530132822" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/responsive-grid-https-ABC123H.css?ver=20240530132822' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530133005" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530133005' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_10345/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/block-dynamic-js-layout-front_page-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-front_page-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.wmal.com/wp-content/uploads/sites/238/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240530132822" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.wmal.com","site_id":"238","tz":"America\/New_York","tz_offset":"-4","ts":"1715610524","blog_name":"News Talk 105.9 WMAL","client_name":"cumuluspro","user_ID":"","alt_blog_name":"WMAL-FM","market":"Washington, DC","format":"News\/Talk","ts_offset":"1717061405","version":"release-3.26.01","env":"prod","settings":{"tenant_id":"see_10345","syn_site_name":"WMAL-FM","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":false,"default_show_img":false,"format":"News\/Talk","market":"Washington, DC","gtm_id":false,"region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.wmal.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"1","moment_date_format":"MMMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"MM d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"238","callsign":"","mount_name":"WMALAM","provider":"stream_the_world","gmt_offset":"-14400","live_url":"","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240530133005" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.wmal.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.wmal.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="News Talk 105.9 WMAL &raquo; Feed" href="https://www.wmal.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/238/2022/01/18161318/WMAL-FM-favicon.png" />
+
+
+<link rel='shortlink' href='https://www.wmal.com/' />
+	<script>
+		const express_config = { 
+			express_url : 'https://www.wmal.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/wmal-com\/',
+			rewards_id : '879',
+			site_id : '238',
+			client_id : 'cumuluspro',
+			post_id : '49730',
+			tracking_meta_id: '5543562',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -4,
+			timezone : 'America/New_York',
+			timezone_abbr : 'EDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -4 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'News Talk 105.9 WMAL','alt_station_name':'WMAL-FM','market':'Washington, DC','format':'News/Talk','author':'System User','page_type':'page' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'UA-96097725-1');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/238/2022/01/18161318/WMAL-FM-favicon.png" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WWV7V2');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT v2 -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+(function(window, undefined) {
+
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+	window.GPT_SITE_ID = '/6717/cd.WMAL.AF';
+
+	// APS initialization
+	if (window.cmlsAds && window.cmlsAds.apsInit) {
+		googletag.cmd.push(function() {
+			googletag.pubads().disableInitialLoad();
+		});
+		window.cmlsAds.apsInit();
+	}
+
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+
+		// Load APS bids and do initial request
+		if (window.cmlsAds && window.cmlsAds.apsLoad) {
+			window.cmlsAds.apsLoad();
+		}
+	});
+
+})(window.self);
+</script>
+<!-- END 2023 CMLS GPT v2 -->
+
+<!-- WMAL Google Tag Manager -->
+<!-- Per Wardell, local no longer believes they have access, disabled 2024-01-23
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N764TGQ');</script>
+-->
+<!-- End WMAL Google Tag Manager -->
+
+<!---Google news center ----->
+<meta name="google-site-verification" content="wFn-fuHOuxE6hYIXVd_R0jReXAzt07PxfUZ1MsORiBg">
+<!---End Google news center ----->
+
+<!-- BEGIN FACEBOOK PIXELS -->
+<!-- 
+    Do not include multiple Facebook pixel code blocks!
+    Add additional inits and noscripts as needed in this block.
+-->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  //fbq('init', '181461212508101'); // INFINITE PIXEL
+  fbq('init', '336877457932928'); // MCIVORMARKETING
+
+  fbq('track', 'PageView');
+</script>
+
+<!-- MCIVORMARKETING NOSCRIPT -->
+<noscript><img height="1" width="1" alt="" style="display:none" data-no-script src="https://www.facebook.com/tr?id=336877457932928&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<!-- END FACEBOOK PIXELS -->
+
+<meta name="google-site-verification" content="hyEObJ3kpdyY9thj1VJ7g16IZDZBkQ1RsmqP7eQQ0RY">
+
+
+<script type="text/javascript">var ajaxurl = "https://www.wmal.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'News Talk 1059 WMAL');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Format  NewsTalk', 'Market  Washington DC', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'Home');
+      googletag.pubads().setTargeting('cms-pcat', 'WMAL News Now');
+			});
+		}
+		</script>
+		<link rel="preload" fetchpriority="high" href="https://www.wmal.com/wp-content/uploads/sites/238/themify-concate/3568307525/themify-4105201084.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.wmal.com/wp-content/uploads/sites/238/themify-concate/3568307525/themify-4105201084.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="News Talk 105.9 WMAL"/>
+  <meta property="og:title" content="News Talk 105.9 WMAL"/>
+  <meta property="og:url" content="https://www.wmal.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="Making Sense Of The News"/>
+  <meta property="og:image" content="https://express-images.franklymedia.com/6616/sites/238/2022/02/04092822/WMAL-FM-Social.jpg"/>
+  <meta property="og:image:url" content="https://express-images.franklymedia.com/6616/sites/238/2022/02/04092822/WMAL-FM-Social.jpg"/>
+  <meta property="og:image:secure_url" content="https://express-images.franklymedia.com/6616/sites/238/2022/02/04092822/WMAL-FM-Social.jpg"/>
+  <meta property="og:image:width" content="1024"/>
+  <meta property="og:image:height" content="512"/>
+  <meta property="article:publisher" content="https://www.facebook.com/WMALDC/"/>
+  <meta property="fb:app_id" content="1422462444580735"/>
+ <!-- Google+ / Schema.org -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="News Talk 105.9 WMAL"/>
+  <meta name="twitter:url" content="https://www.wmal.com"/>
+  <meta name="twitter:description" content="Making Sense Of The News"/>
+  <meta name="twitter:image" content="https://express-images.franklymedia.com/6616/sites/238/2022/02/04092822/WMAL-FM-Social.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="home page-template-default page page-id-49730 is-headway-theme custom firefox gecko responsive-grid-enabled responsive-grid-active pageid-49730 page-slug-wmal-news-now layout-front_page layout-using-front_page tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-8" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="banner-fullwidth banner-padding-all block block-type-custom-code block-fluid-height" data-alias="728x90 Leaderboard Ad">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+                [[970,0], [[728, 90], [970, 90], [970, 250]]],
+                [[780,0], [[728, 90], [320, 50]]],
+                [[0,0], [[320, 50], [300, 50]]],
+            ];
+            /*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+            */
+            
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-5">
+<figure id="block-31" class="logo block block-type-image block-fixed-height" data-alias="Logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2022/01/18160857/WMAL-FM-Sitelogo-2022-01-18.png" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+<div id="block-bkj54a2b9912881a" class="takeover-left block block-type-custom-code block-fluid-height" data-alias="Skyscraper - Left">
+<div class="block-content">
+<!--
+<div id='div-gpt-ad-1418849849333-4'>
+<script type="module">
+googletag.cmd.push(function() {
+	var divId = "div-gpt-ad-1418849849333-4",
+		container = document.getElementById(divId);
+	window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+	// Do not call this ad if slot is hidden
+	if ( ! container || ! container.offsetParent) { return; }
+
+	// Don't show skyscrapers when viewport width < 1300px
+    var size = [[]];
+    if (self.innerWidth >= 1300) {
+        size = [[160, 600]];
+    }
+    /*
+	var sizeMap = googletag.sizeMapping()
+		.addSize([1300,0], [160,600])
+		.addSize([0,0], [])
+		.build();
+	*/
+
+	window.GPT_SITE_SLOTS[divId] = googletag.defineSlot(
+		GPT_SITE_ID,
+		size,
+		divId
+	)
+	.addService(googletag.pubads())
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","left");
+
+	googletag.display(divId);
+});
+</script>
+</div>
+-->
+</div><!-- .block-content -->
+
+</div><!-- #block-bkj54a2b9912881a -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-19">
+
+<section class="sub-column sub-column-1 column column-1 grid-width-3 grid-left-16">
+<div id="block-bei5a8f101c3127b" class="gigya-actions block block-type-custom-code block-fluid-height" data-alias="Gigya Profile Actions">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bei5a8f101c3127b -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-1 column column-1 grid-width-11 grid-left-8">
+<section id="block-30" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="https://www.facebook.com/WMALDC" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/238/2022/03/01162547/WMAL-Social-Facebook.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-1"  /></a></li><li><a href="https://twitter.com/WMALDC " target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/238/2024/04/17161549/WMAL-Social-X.png" alt="Follow us on X" title="Follow us on X" class="img-2"  /></a></li><li><a href="https://instagram.com/wmaldc/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/238/2022/03/01162721/WMAL-Social-Instagram.png" alt="Follow us on Instagram" title="Follow us on Instagram" class="img-3"  /></a></li><li><a href="https://wmalfm.clubviprewards.com/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/238/2022/03/01162746/WMAL-Social-VIP.png" alt="Join our VIP Club" title="Join our VIP Club" class="img-4"  /></a></li><li><a href="#" alt="Listen Live!!"><img src="https://express-images.franklymedia.com/6616/sites/238/2022/02/18180208/ListenLive-Red.png" alt="Listen Live!!" title="Listen Live!!" class="img-5"  /></a></li><li><a href="/listen-live-with-alexa"><img src="https://express-images.franklymedia.com/6616/sites/238/2022/02/18180217/SmartSpeakers-Red.png" alt="Listen with your Smart Speaker" title="Listen with your Smart Speaker" class="img-6"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .sub-column -->
+<nav id="block-32" class="main-nav block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left"><ul id="menu-main-navigation" class="menu"><li id="menu-item-1119192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1119192"><a href="https://www.wmal.com/schedule/">Shows</a>
+<ul class="sub-menu">
+	<li id="menu-item-1099621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099621"><a href="https://www.wmal.com/oconnor-company/">O&#8217;Connor &#038; Company 5am-9am</a></li>
+	<li id="menu-item-1099790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099790"><a href="https://www.wmal.com/chrisplante/">Chris Plante 9am-12pm</a></li>
+	<li id="menu-item-1100276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100276"><a href="https://www.wmal.com/the-dan-bongino-show/">Dan Bongino 12pm-3pm</a></li>
+	<li id="menu-item-1099844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1099844"><a href="https://www.wmal.com/the-vince-coglianese-show/">Vince Coglianese 3pm-6pm</a></li>
+	<li id="menu-item-49625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49625"><a href="https://www.wmal.com/mark-levin/">Mark Levin 6pm-9pm</a></li>
+	<li id="menu-item-859447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859447"><a href="https://www.wmal.com/the-ben-shapiro-show/">Ben Shapiro 9pm-11pm</a></li>
+	<li id="menu-item-49727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49727"><a href="https://www.wmal.com/john-batchelor/">John Batchelor 11pm-1am</a></li>
+	<li id="menu-item-1149614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1149614"><a href="https://www.wmal.com/red-eye-radio/">Red Eye Radio 1am-5am</a></li>
+	<li id="menu-item-1118009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1118009"><a href="https://www.wmal.com/dmv-spotlight/">DMV Spotlight with Barbara Britt</a></li>
+	<li id="menu-item-1119193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1119193"><a href="https://www.wmal.com/schedule/">On-Air Schedule</a></li>
+	<li id="menu-item-85503" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-85503"><a>Features</a>
+	<ul class="sub-menu">
+		<li id="menu-item-805576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-805576"><a href="https://www.wmal.com/?page_id=678854">The Washington Commanders on WMAL</a></li>
+		<li id="menu-item-905196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-905196"><a href="https://www.wmal.com/cal-thomas/">Cal Thomas Commentary</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-15269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15269"><a>News</a>
+<ul class="sub-menu">
+	<li id="menu-item-783373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-783373"><a href="https://www.wmal.com/category/wmal-news-now/">WMAL News Now</a></li>
+	<li id="menu-item-70761" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70761"><a href="https://www.wmal.com/category/local-news/">WMAL Local News</a></li>
+	<li id="menu-item-49811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49811"><a href="https://www.wmal.com/traffic/">WMAL Traffic</a></li>
+	<li id="menu-item-66990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66990"><a href="https://www.wmal.com/wmal-weather/">WMAL Weather</a></li>
+	<li id="menu-item-1118135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1118135"><a href="https://www.wmal.com/stormcenter/">School Closings</a></li>
+	<li id="menu-item-1101159" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1101159"><a href="https://www.wmal.com/category/newsmax-newsfront/">Newsmax &#8211; Newsfront</a></li>
+	<li id="menu-item-66639" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66639"><a href="https://www.wmal.com/politics/">Politics</a></li>
+	<li id="menu-item-579618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579618"><a href="https://www.wmal.com/business/">Business</a></li>
+	<li id="menu-item-1100739" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1100739"><a href="https://www.wmal.com/category/newsmax-health/">Health</a></li>
+</ul>
+</li>
+<li id="menu-item-51413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51413"><a href="https://www.wmal.com/podcasts/">Podcasts</a></li>
+<li id="menu-item-946464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-946464"><a href="https://www.wmal.com/events/">Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-137706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137706"><a href="https://www.wmal.com/photo-galleries/">WMAL Photo Galleries</a></li>
+</ul>
+</li>
+<li id="menu-item-49844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-49844"><a href="https://www.wmal.com/station-information/">Station</a>
+<ul class="sub-menu">
+	<li id="menu-item-1143338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143338"><a href="https://www.chrisplante.com/sweet-deals/">Store</a></li>
+	<li id="menu-item-1146999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1146999"><a href="https://www.wmal.com/mcotm/">Military Charity of the Month, presented by Leonardo DRS</a></li>
+	<li id="menu-item-725641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-725641"><a href="https://www.wmal.com/contests/">Contests</a></li>
+	<li id="menu-item-168864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168864"><a href="https://www.wmal.com/station-information/">Contact Information</a></li>
+	<li id="menu-item-639069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-639069"><a href="https://www.wmal.com/Email/">Sign Up For Our Newsletters</a></li>
+	<li id="menu-item-49946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49946"><a href="https://www.wmal.com/history/">WMAL History</a></li>
+	<li id="menu-item-843272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-843272"><a title="The coordinated advertising campaign that delivers results GUARANTEED." href="/epic">Advertising</a></li>
+	<li id="menu-item-857223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-857223"><a href="https://www.cumulus.com/work-here/">Employment Opportunities</a></li>
+	<li id="menu-item-1132150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1132150"><a href="https://www.wmal.com/eeo-public-file-report/">EEO Public File Report</a></li>
+</ul>
+</li>
+<li id="menu-item-49847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-49847"><a href="https://www.wmal.com/advertise/">Advertise With Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-1108937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1108937"><a href="https://www.wmal.com/station-information/">Contact Us</a></li>
+</ul>
+</li>
+</ul></div><!-- .nav-horizontal nav-align-left -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+<section class="sub-column sub-column-1 column column-1 grid-width-5 grid-left-0">
+<div id="block-b7x54a2b9912b304" class="takeover-right block block-type-custom-code block-fluid-height" data-alias="Skyscraper - Right">
+<div class="block-content">
+<!--
+<div id='div-gpt-ad-1418849849333-5'>
+<script type="module">
+googletag.cmd.push(function() {
+	var divId = "div-gpt-ad-1418849849333-5",
+		container = document.getElementById(divId);
+	window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+	// Do not call this ad if slot is hidden
+	if ( ! container || ! container.offsetParent) { return; }
+
+	// Don't show skyscrapers when viewport width < 1300px
+    var size = [[]];
+    if (self.innerWidth >= 1300) {
+        size = [[160, 600]];
+    }
+    /*
+	var sizeMap = googletag.sizeMapping()
+		.addSize([1300,0], [160,600])
+		.addSize([0,0], [])
+		.build();
+	*/
+		
+	window.GPT_SITE_SLOTS[divId] = googletag.defineSlot(
+		GPT_SITE_ID,
+		size,
+		divId)
+	.addService(googletag.pubads())
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","right");
+
+	googletag.display(divId);
+});
+</script>
+</div>
+-->
+</div><!-- .block-content -->
+
+</div><!-- #block-b7x54a2b9912b304 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-14 grid-left-0">
+<div id="block-bxk621026048ae32" class="nominheight block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+<!-- -->
+</div><!-- .block-content -->
+
+</div><!-- #block-bxk621026048ae32 -->
+
+</section><!-- .sub-column -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-9" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<aside id="block-35" class="promo-reel block block-type-widget-area block-fluid-height" data-alias="Home - Promo Reel" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="amp_promo_reel-3" class="widget widget_amp_promo_reel sidebar_promo">
+<div class="sliderWrapper"><div class="sliderBody" style=""><div class="bxslider" data-navigation-arrows='1' data-rotation-time='3000' data-pager-type='none'><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://operationrtr.com/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/238/2024/05/06094627/Military-Charity-of-t1920x1080-px.jpg"><div class="promoCaption bottom"><div class="captionTitle"> </div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wmal.com/2024/05/29/the-panda-party-is-back-on-as-giant-pandas-will-return-to-washingtons-national-zoo-by-years-end/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/238/2024/05/29113806/ESPN-Feature-Image-2-3.png"><div class="promoCaption bottom"><div class="captionTitle">The Panda Party is back on as giant pandas will return to Washington’s National Zoo by year’s end</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wmal.com/download-the-wmal-app/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/238/2023/12/12133653/WMAL-Poster.png"><div class="promoCaption bottom"><div class="captionTitle"> </div></div></div></div></div></div></li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-35 -->
+<div id="block-b13561c00dd83a10" class="mobile-only nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="Responsive Ad">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-18" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-18",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+                [[780,0], []],
+                [[0,0], [[300, 250]]],
+            ];
+            /*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [])
+				.addSize([0,0], [[300, 250]])
+				.build();
+            */
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "midresponsive")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-b13561c00dd83a10 -->
+<div id="block-byk621e924dd345e" class="post-list thumbnail-25 block block-type-content block-fluid-height" data-alias="Trending on WMAL">
+<div class="block-content">
+<h1 class="block-title"><span>Trending on WMAL</span></h1><div class="loop"><article id="post-1153330" class="post-1153330 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/29/the-panda-party-is-back-on-as-giant-pandas-will-return-to-washingtons-national-zoo-by-years-end/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/29113806/ESPN-Feature-Image-2-3.png#aqua_resizer_image_not_local" alt="The Panda Party is back on as giant pandas will return to Washington’s National Zoo by year’s end" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/29/the-panda-party-is-back-on-as-giant-pandas-will-return-to-washingtons-national-zoo-by-years-end/" title="The Panda Party is back on as giant pandas will return to Washington’s National Zoo by year’s end" rel="bookmark">The Panda Party is back on as giant pandas will return to Washington’s National Zoo by year’s end</a></h2><div class="entry-meta entry-meta-above">Posted May 29, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>WASHINGTON (AP) — Half a year after the nation’s capital bid an emotional farewell to its giant pandas, the National Zoo is expecting a renewed surge in panda-mania with the announcement that two more of the furry black-and-white icons will be coming to Washington&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1153330 -->
+
+<div class="entry-row">
+
+<article id="post-1153324" class="post-1153324 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/29/key-republican-calls-for-generational-increase-in-defense-spending-to-counter-us-adversaries/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/29112604/ESPN-Feature-Image-12.png#aqua_resizer_image_not_local" alt="Key Republican calls for ‘generational’ increase in defense spending to counter US adversaries" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/29/key-republican-calls-for-generational-increase-in-defense-spending-to-counter-us-adversaries/" title="Key Republican calls for ‘generational’ increase in defense spending to counter US adversaries" rel="bookmark">Key Republican calls for ‘generational’ increase in defense spending to counter US adversaries</a></h2><div class="entry-meta entry-meta-above">Posted May 29, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>WASHINGTON (AP) — The top-ranking Republican on a Senate committee that oversees the military is calling for a “generational investment” in America’s defense, saying aggressive and significant spending increases are necessary to deter coordinated threats from U.S. adversaries like Russia, Iran and China&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1153324 --><article id="post-1153032" class="post-1153032 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/23/nikki-haley-says-she-will-vote-for-donald-trump-following-their-disputes-during-republican-primary/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/04/24141459/ESPN-Feature-Image-1-2.png#aqua_resizer_image_not_local" alt="Nikki Haley says she will vote for Donald Trump following their disputes during Republican primary" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/23/nikki-haley-says-she-will-vote-for-donald-trump-following-their-disputes-during-republican-primary/" title="Nikki Haley says she will vote for Donald Trump following their disputes during Republican primary" rel="bookmark">Nikki Haley says she will vote for Donald Trump following their disputes during Republican primary</a></h2><div class="entry-meta entry-meta-above">Posted May 23, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>Nikki Haley said Wednesday that she will be voting for Donald Trump in the general election, a notable show of support given their intense and often personal rivalry during the Republican primary calendar.<br />
+But Haley also made it clear that she feels Trump has work to do to win over voters who supported her during&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1153032 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1153029" class="post-1153029 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/23/moms-for-liberty-to-spend-over-3-million-targeting-presidential-swing-state-voters/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/23125010/ESPN-Feature-Image-11.png#aqua_resizer_image_not_local" alt="Moms for Liberty to spend over $3 million targeting presidential swing state voters" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/23/moms-for-liberty-to-spend-over-3-million-targeting-presidential-swing-state-voters/" title="Moms for Liberty to spend over $3 million targeting presidential swing state voters" rel="bookmark">Moms for Liberty to spend over $3 million targeting presidential swing state voters</a></h2><div class="entry-meta entry-meta-above">Posted May 23, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>NEW YORK (AP) — The conservative parental rights group Moms for Liberty plans to spend more than $3 million on a multi-state advertising blitz to increase its membership and engage voters before November, following through on a pledge it made last year to become more politically active across the country in 2024&#8230;.</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1153029 --><article id="post-1152876" class="post-1152876 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/21/mourners-begin-days-of-funerals-for-irans-president-and-others-killed-in-helicopter-crash/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/21104716/ESPN-Feature-Image-4-1.png#aqua_resizer_image_not_local" alt="Mourners begin days of funerals for Iran’s president and others killed in helicopter crash" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/21/mourners-begin-days-of-funerals-for-irans-president-and-others-killed-in-helicopter-crash/" title="Mourners begin days of funerals for Iran’s president and others killed in helicopter crash" rel="bookmark">Mourners begin days of funerals for Iran’s president and others killed in helicopter crash</a></h2><div class="entry-meta entry-meta-above">Posted May 21, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>DUBAI, United Arab Emirates (AP) — Mourners in black began gathering Tuesday for days of funerals and processions for Iran’s late president, foreign minister and others killed in a helicopter crash, a government-led series of ceremonies aimed at both honoring the dead and projecting strength in an unsettled Middle East&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152876 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1152873" class="post-1152873 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/21/tuesdays-primaries-include-presidential-races-and-the-prosecutor-in-trumps-georgia-election-case/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/21104025/ESPN-Feature-Image-3-1.png#aqua_resizer_image_not_local" alt="Tuesday’s primaries include presidential races and the prosecutor in Trump’s Georgia election case" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/21/tuesdays-primaries-include-presidential-races-and-the-prosecutor-in-trumps-georgia-election-case/" title="Tuesday’s primaries include presidential races and the prosecutor in Trump’s Georgia election case" rel="bookmark">Tuesday’s primaries include presidential races and the prosecutor in Trump’s Georgia election case</a></h2><div class="entry-meta entry-meta-above">Posted May 21, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>The presidential primaries that Joe Biden and Donald Trump have already clinched will move closer to their end Tuesday. Voters in two states, Kentucky and Oregon, will get their chance to weigh in, symbolic decisions that provide a few more delegates to the national conventions and a gut check on where the Democratic and Republican bases stand toward their standard-bearers&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152873 --><article id="post-1152839" class="post-1152839 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/20/nikki-haley-faces-a-murky-path-forward-and-a-key-decision-on-whether-or-not-to-endorse-trump/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/20135535/ESPN-Feature-Image-2-2.png#aqua_resizer_image_not_local" alt="Nikki Haley faces a murky path forward and a key decision on whether or not to endorse Trump" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/20/nikki-haley-faces-a-murky-path-forward-and-a-key-decision-on-whether-or-not-to-endorse-trump/" title="Nikki Haley faces a murky path forward and a key decision on whether or not to endorse Trump" rel="bookmark">Nikki Haley faces a murky path forward and a key decision on whether or not to endorse Trump</a></h2><div class="entry-meta entry-meta-above">Posted May 20, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>COLUMBIA, S.C. (AP) — Nikki Haley is perhaps the highest-profile Republican in the nation who has refused to fall in line and endorse Donald Trump’s presidential bid. It’s unclear how long that might last. Some allies believe she may be forced to endorse him before the November election to avoid permanently alienating the Republican Party base. Some even suspect&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152839 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1152822" class="post-1152822 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/20/michael-cohen-says-he-stole-from-trumps-company-as-defense-presses-key-hush-money-trial-witness/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/20134714/ESPN-Feature-Image-1-3.png#aqua_resizer_image_not_local" alt="Michael Cohen says he stole from Trump’s company as defense presses key hush money trial witness" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/20/michael-cohen-says-he-stole-from-trumps-company-as-defense-presses-key-hush-money-trial-witness/" title="Michael Cohen says he stole from Trump’s company as defense presses key hush money trial witness" rel="bookmark">Michael Cohen says he stole from Trump’s company as defense presses key hush money trial witness</a></h2><div class="entry-meta entry-meta-above">Posted May 20, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>NEW YORK (AP) — Former Donald Trump attorney Michael Cohen admitted Monday to jurors in the Republican’s hush money trial that he stole tens of thousands of dollars from Trump’s company as defense lawyers seized on the star witness’ misdeeds to attack his credibility&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152822 --><article id="post-1152819" class="post-1152819 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/20/top-democrat-calls-for-biden-to-replace-fdic-chairman-to-fix-agencys-toxic-culture/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/20133957/ESPN-Feature-Image-10.png#aqua_resizer_image_not_local" alt="Top Democrat calls for Biden to replace FDIC chairman to fix agency’s ‘toxic culture’" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/20/top-democrat-calls-for-biden-to-replace-fdic-chairman-to-fix-agencys-toxic-culture/" title="Top Democrat calls for Biden to replace FDIC chairman to fix agency’s ‘toxic culture’" rel="bookmark">Top Democrat calls for Biden to replace FDIC chairman to fix agency’s ‘toxic culture’</a></h2><div class="entry-meta entry-meta-above">Posted May 20, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>NEW YORK (AP) — The most powerful Democrat in Congress on banking and financial issues called for President Joe Biden to replace the chairman of the Federal Deposit Insurance Corp. on Monday, saying the agency is broken and there must be “fundamental changes at the FDIC.”&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152819 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1152728" class="post-1152728 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/17/after-blaming-his-2020-loss-on-mail-balloting-trump-tries-to-make-gop-voters-believe-its-ok-now/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/17132543/ESPN-Feature-Image-1-2.png#aqua_resizer_image_not_local" alt="After blaming his 2020 loss on mail balloting, Trump tries to make GOP voters believe it’s OK now" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/17/after-blaming-his-2020-loss-on-mail-balloting-trump-tries-to-make-gop-voters-believe-its-ok-now/" title="After blaming his 2020 loss on mail balloting, Trump tries to make GOP voters believe it’s OK now" rel="bookmark">After blaming his 2020 loss on mail balloting, Trump tries to make GOP voters believe it’s OK now</a></h2><div class="entry-meta entry-meta-above">Posted May 17, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>Marta Moehring voted the way she prefers in Nebraska’s Republican primary Tuesday — in person, at her west Omaha polling place. She didn’t even consider taking advantage of the state’s no-excuse mail-in ballot process&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152728 --><article id="post-1152725" class="post-1152725 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/17/biden-and-trump-trading-barbs-agree-to-2-presidential-debates-in-june-and-september/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/17131638/ESPN-Feature-Image-9.png#aqua_resizer_image_not_local" alt="Biden and Trump, trading barbs, agree to 2 presidential debates, in June and September" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/17/biden-and-trump-trading-barbs-agree-to-2-presidential-debates-in-june-and-september/" title="Biden and Trump, trading barbs, agree to 2 presidential debates, in June and September" rel="bookmark">Biden and Trump, trading barbs, agree to 2 presidential debates, in June and September</a></h2><div class="entry-meta entry-meta-above">Posted May 17, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>WASHINGTON (AP) — President Joe Biden and former President Donald Trump on Wednesday agreed to hold two campaign debates — the first on June 27 hosted by CNN and the second on Sept. 10 hosted by ABC — setting the stage&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152725 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1152481" class="post-1152481 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/13/make-sure-it-doesnt-get-released-star-witness-michael-cohen-implicates-trump-in-hush-money-case/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/13125433/ESPN-Feature-Image-2-1.png#aqua_resizer_image_not_local" alt="‘Make sure it doesn’t get released;&#8217; Star witness Michael Cohen implicates Trump in hush money case" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/13/make-sure-it-doesnt-get-released-star-witness-michael-cohen-implicates-trump-in-hush-money-case/" title="‘Make sure it doesn’t get released;&#8217; Star witness Michael Cohen implicates Trump in hush money case" rel="bookmark">‘Make sure it doesn’t get released;&#8217; Star witness Michael Cohen implicates Trump in hush money case</a></h2><div class="entry-meta entry-meta-above">Posted May 13, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>NEW YORK (AP) — Donald Trump’s fixer-turned-foe, Michael Cohen, directly implicated the former president in a hush money scheme Monday, telling jurors that his celebrity client approved hefty payouts to stifle stories about sex that he feared could be harmful to his 2016 White House campaign&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152481 --><article id="post-1152478" class="post-1152478 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/13/are-us-interest-rates-high-enough-to-beat-inflation-the-fed-will-take-its-time-to-find-out/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/13125020/ESPN-Feature-Image-1-1.png#aqua_resizer_image_not_local" alt="Are US interest rates high enough to beat inflation? The Fed will take its time to find out" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/13/are-us-interest-rates-high-enough-to-beat-inflation-the-fed-will-take-its-time-to-find-out/" title="Are US interest rates high enough to beat inflation? The Fed will take its time to find out" rel="bookmark">Are US interest rates high enough to beat inflation? The Fed will take its time to find out</a></h2><div class="entry-meta entry-meta-above">Posted May 13, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>WASHINGTON (AP) — The sharp interest rate hikes of the past two years will likely take longer than previously expected to bring down inflation, several Federal Reserve officials have said in recent comments, suggesting there may be few, if any, rate cuts this year&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152478 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1152475" class="post-1152475 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/13/pro-palestinian-protests-dwindle-on-campuses-as-some-us-college-graduations-marked-by-defiant-acts/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/13124608/ESPN-Feature-Image-8.png#aqua_resizer_image_not_local" alt="Pro-Palestinian protests dwindle on campuses as some US college graduations marked by defiant acts" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/13/pro-palestinian-protests-dwindle-on-campuses-as-some-us-college-graduations-marked-by-defiant-acts/" title="Pro-Palestinian protests dwindle on campuses as some US college graduations marked by defiant acts" rel="bookmark">Pro-Palestinian protests dwindle on campuses as some US college graduations marked by defiant acts</a></h2><div class="entry-meta entry-meta-above">Posted May 13, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>A tiny contingent of Duke University graduates opposed pro-Israel comedian Jerry Seinfeld speaking at their commencement in North Carolina Sunday, with about 30 of the 7,000 students leaving their seats and chanting “free Palestine” amid a mix of boos and cheers&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152475 --><article id="post-1152289" class="post-1152289 post type-post status-publish format-standard has-post-thumbnail hentry category-headlines category-homepage-headlines category-wmal-news-now category-wmal-news-now-headlines category-politics author-rminturn custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wmal.com/2024/05/09/biden-says-us-wont-supply-weapons-for-israel-to-attack-rafah-in-warning-to-ally/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/238/2024/05/09104338/ESPN-Feature-Image-7.png#aqua_resizer_image_not_local" alt="Biden says US won’t supply weapons for Israel to attack Rafah, in warning to ally" width="180" height="180" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wmal.com/2024/05/09/biden-says-us-wont-supply-weapons-for-israel-to-attack-rafah-in-warning-to-ally/" title="Biden says US won’t supply weapons for Israel to attack Rafah, in warning to ally" rel="bookmark">Biden says US won’t supply weapons for Israel to attack Rafah, in warning to ally</a></h2><div class="entry-meta entry-meta-above">Posted May 9, 2024
+</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>WASHINGTON (AP) — President Joe Biden said that he would not supply offensive weapons that Israel could use to launch an all-out assault on Rafah — the last major Hamas stronghold in Gaza — over concern for the well-being of the more than 1 million civilians sheltering there&#8230;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-1152289 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-byk621e924dd345e -->
+<div id="block-bw3621fe726ac6f2" class="block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+<div class="post-list thumbnail-25 block block-type-content block-fluid-height" data-alias="Trending on WMAL">
+<div class="block-content">
+<div id="nav-below" class="loop-navigation loop-utility loop-utility-below" itemscope="" itemtype="http://schema.org/SiteNavigationElement"><div class="nav-previous" itemprop="url"><a href="https://www.wmal.com/category/homepage-headlines/page/2/"><span class="meta-nav">←</span> More News</a></div><div class="nav-next" itemprop="url"></div></div><!-- #nav-below -->
+</div><!-- .block-content -->
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bw3621fe726ac6f2 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<div id="block-bef623b491374639" class="block block-type-content block-fluid-height" data-alias="Missed a Show? Listen Here">
+<div class="block-content">
+<h1 class="block-title"><span>Missed a Show? Listen Here</span></h1><div class="loop"><article id="post-1103073" class="post-1103073 page type-page status-publish hentry author-tyorro alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header></header><div class="entry-content" itemprop="text"><!--themify_builder_content-->
+<div id="themify_builder_content-1103073" data-postid="1103073" class="themify_builder_content themify_builder_content-1103073 themify_builder tf_clear">
+    </div>
+<!--/themify_builder_content-->
+</div><!-- .entry-content --></article><!-- #post-1103073 --></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bef623b491374639 -->
+<figure id="block-bg96596cad92dff0" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wmal.com/oconnor-company/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2024/01/04100315/OCAC-1.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-bg96596cad92dff0 -->
+<figure id="block-b0z6596cad92f182" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wmal.com/chrisplante/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2024/01/04100425/CP-1.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-b0z6596cad92f182 -->
+<figure id="block-bq96596cad92cf69" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wmal.com/the-dan-bongino-show/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2024/01/04100513/DB-1.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-bq96596cad92cf69 -->
+<figure id="block-bhz6596cad92b5a1" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wmal.com/the-vince-coglianese-show/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2024/01/04100612/VC-1.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-bhz6596cad92b5a1 -->
+<figure id="block-bc46596cad92c22c" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wmal.com/mark-levin/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2024/01/04100655/Levin-1.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-bc46596cad92c22c -->
+<figure id="block-b3o6596cad92a289" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wmal.com/advertise/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2024/01/04101115/Untitled-design-2024-01-04T101037.442.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-b3o6596cad92a289 -->
+<div id="block-34" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 1">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+                [[780,0], [[300, 250], [300, 600]]],
+                [[0,0], [[300, 250], [300, 600]]],
+            ];
+            /*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+			*/
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<figure id="block-byu64302c2c05e50" class="block block-type-image block-fixed-height" data-alias="" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://apps.apple.com/us/app/630-wmal/id341276200?ign-mpt=uo%3D4" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/238/2023/12/12134524/DOWNLOAD-THE-APP.png#aqua_resizer_image_not_local" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-byu64302c2c05e50 -->
+<aside id="block-45" class="free-apps block block-type-widget-area block-fluid-height" data-alias="Home - Free Apps" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<h1 class="block-title"><span>WMAL APPS</span></h1><ul class="widget-area"><li id="text-3" class="widget widget_text">
+			<div class="textwidget"><div align="center">
+<a href="https://itunes.apple.com/us/app/630-wmal/id341276200?mt=8&amp;uo=4" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/238/2014/10/appstore.png" border="0"></a>&nbsp;<a href="https://play.google.com/store/apps/details?id=com.airkast.WMALAM" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/238/2014/10/googleplay.png" border="0"></a>&nbsp;<a href="https://amazon.com/dp/B00FDZ61EQ" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/238/2014/10/amazon.png" border="0"></a>
+</div></div>
+		</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-45 -->
+<div id="block-bs35cac18f110800" class="headlines block block-type-custom-code block-fluid-height" data-alias="Newsletter">
+<div class="block-content">
+<h1 class="block-title"><span>Newsletter</span></h1><div class="tl-widget tl-newsletter-widget" ><script src="https://engage-library.franklymedia.com/xinban/lsf/Scripts/trtn.nl.js" type="text/javascript"></script><script type="text/html">{ "requestUrl": "https://api.enticent.com/EmailSignUpSubs.svc/jsonp/EmailSignUp?email=", "subToken": "8F3BFFA0-4E9E-4BC5-9D2D-2233E73F090C"}</script></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bs35cac18f110800 -->
+<aside id="block-bj655674f413ecc9" class="headlines block block-type-widget-area block-fluid-height" data-alias="Right Rail Widget" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="simpleimage-4" class="widget widget_simpleimage">
+
+
+	<p class="simple-image">
+		<a href="https://www.wmal.com/traffic/"><img width="300" height="150" src="https://express-images.franklymedia.com/6616/sites/238/2019/05/29170313/Hadeed-Traffic-Center.gif" class="attachment-full size-full" alt="" decoding="async" /></a>	</p>
+
+
+</li><!-- .widget -->
+<li id="text-5" class="widget widget_text">
+			<div class="textwidget"><p><iframe style="border: 0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.4717513496257!2d-77.08860368464782!3d38.95889477956125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8248eab826b8efdb!2sWMAL!5e0!3m2!1sen!2sus!4v1575560222549!5m2!1sen!2sus" width="100%" frameborder="0"></iframe></p>
+</div>
+		</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bj655674f413ecc9 -->
+<div id="block-33" class="weather block block-type-custom-code block-fluid-height" data-alias="Weather">
+<div class="block-content">
+<h1 class="block-title"><span>Local Weather</span></h1><div style="display:flex;align-items:center;align-content:center;justify-content:center;padding:0 10px 10px;"><iframe style="display: block;" src="//cdnres.willyweather.com/widget/loadView.html?id=62241" width="100%" height="228" frameborder="0" scrolling="no"></iframe><a style="display: block;height: 20px;position: relative;margin: -20px 0 0 0;text-indent: -9999em;z-index: 1" href="https://www.willyweather.com/dc/district-of-columbia-county/chevy-chase.html" rel="nofollow">weather</a></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-33 -->
+<aside id="block-bzv568a8d6e5aa72" class="headlines block block-type-widget-area block-fluid-height" data-alias="Right Rail Widget 2" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="simpleimage-7" class="widget widget_simpleimage">
+
+
+	<p class="simple-image">
+		<a href="https://www.garagedoorrepair.com/" target="_blank"><img width="300" height="173" src="https://express-images.franklymedia.com/6616/sites/238/2019/07/31130618/garagedoorrepair-Weather-Center-v2-300x173.png" class="attachment-medium size-medium" alt="" decoding="async" fetchpriority="high" srcset="https://express-images.franklymedia.com/6616/sites/238/2019/07/31130618/garagedoorrepair-Weather-Center-v2-300x173.png 300w, https://express-images.franklymedia.com/6616/sites/238/2019/07/31130618/garagedoorrepair-Weather-Center-v2.png 667w" sizes="(max-width: 300px) 100vw, 300px" /></a>	</p>
+
+
+</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bzv568a8d6e5aa72 -->
+<aside id="block-bb1576ae905d063b" class="headlines block block-type-widget-area block-fluid-height" data-alias="Contact WMAL" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<h1 class="block-title"><span>Contact WMAL</span></h1><ul class="widget-area"><li id="text-4" class="widget widget_text">
+			<div class="textwidget"><p><strong>Studio Lines</strong>: 888-630-WMAL (9625)</p>
+<p><strong>News Room</strong>: 202-686-3020</p>
+<p><strong>Programming</strong>: 202-686-3100 Ext. 2358</p>
+<p><strong>Email Directory</strong></p>
+<p><a href="/cdn-cgi/l/email-protection#53313a3f3f7d3b3620201330263e263f26207d303c3e">Programming</a></p>
+<p><a href="/cdn-cgi/l/email-protection#c8a6adbfbb88bfa5a9a4e6aba7a5">Newsroom</a></p>
+<p><a href="/cdn-cgi/l/email-protection#90faf5f6f6bef2fff4f5fed0f3e5fde5fce5e3bef3fffd">Sales</a></p>
+<p><a href="https://www.wmal.com/wmal-website-inquiry/?utm_content=contact_widget">Website Questions or Comments</a></p>
+</div>
+		</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bb1576ae905d063b -->
+<div id="block-46" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 2">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-3" align="center">
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-3",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+                [[780,0], [[300, 250], [300, 600]]],
+                [[0,0], [[300, 250], [300, 600], [300, 50], [320, 50]]],
+            ];
+            /*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600], [300, 50], [320, 50]])
+				.build();
+			*/
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-46 -->
+<div id="block-b1z56b3ac5bca775" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="Remnant Cube">
+<div class="block-content">
+<div id='div-gpt-ad-1418849849333-19'>
+<script type="module">
+googletag.cmd.push(function() {
+    var sizeMap = [
+	    [[780,0], [[300, 250], [300, 600], [300, 50]]],
+	    [[0,0], [[300, 250], [300, 600], [320, 50], [300, 50]]],
+	];
+    
+    /*    
+	var sizeMap = googletag.sizeMapping()
+		.addSize([780,0], [[300, 250], [300, 600], [300, 50]])
+		.addSize([0,0], [[300, 250], [300, 600], [320, 50], [300, 50]])
+		.build();
+    */
+
+	googletag.defineSlot(
+		GPT_SITE_ID,
+		[[300, 250], [300, 600], [300, 50]],
+		'div-gpt-ad-1418849849333-19'
+	)
+	.addService(googletag.pubads())
+	.defineSizeMapping(sizeMap)
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","remnantcube");
+
+	googletag.display('div-gpt-ad-1418849849333-19');
+});
+</script>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b1z56b3ac5bca775 -->
+<div id="block-36" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="VIP Club Ad">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-7" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-7",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+			    [[780,0], [[300, 100], [300, 50]]],
+			    [[0,0], [[320, 100], [300, 100], [320, 50], [300, 50]]],
+			];
+			
+            /*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+			*/
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest1")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-36 -->
+<div id="block-44" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="Twitter Ad">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-9" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-9",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+			    [[780,0], [[300, 100], [300, 50]]],
+			    [[0,0], [[320, 100], [300, 100], [320, 50], [300, 50]]],
+			];
+			/*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+		    */
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest3")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-44 -->
+<div id="block-42" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="Facebook Ad">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-8" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-8",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = [
+			    [[780,0], [[300, 100], [300, 50]]],
+			    [[0,0], [[320, 100], [300, 100], [320, 50], [300, 50]]],
+			];
+			
+			/*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+            */
+            
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-42 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-10" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-51" class="nominheight banner-fullwidth banner-padding-all block block-type-custom-code block-fluid-height" data-alias="728x90 Ad 2">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+            var sizeMap = [
+                [[970,0], [[728, 90]]],
+                [[780,0], [[728, 90], [320, 100], [320, 50]]],
+                [[0,0], [[300, 250], [320, 100], [320, 50], [300, 50]]],
+            ];
+            /*
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+			*/
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-center"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-1003771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003771"><a href="https://www.wmal.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1147778" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1147778"><a href="https://www.wmal.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-1003773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003773"><a href="https://www.wmal.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://www.wmal.com/advertise/">Advertise With Us</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.wmal.com/station-information/">Station Information</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a href="https://www.cumulusmedia.com/careers/">Employment Opportunities</a></li>
+<li id="menu-item-617046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-617046"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/fm-profile/wmal-fm">FCC Public File for WMAL-FM</a></li>
+<li id="menu-item-844381" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-844381"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+<li id="menu-item-1132182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1132182"><a href="https://www.wmal.com/eeo-public-file-report/">EEO Public File Report</a></li>
+</ul></div><!-- .nav-horizontal nav-align-center -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2024 Cumulus Media / <a href="/eeo-public-file-report/">Cumulus Media is an equal opportunity employer / AA </a></p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.wmal.com/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<div id="block-bau55cde7b537616" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+				.setTargeting("noprebid", "noprebid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bau55cde7b537616 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- TGMP PLUGIN ENABLED 2016-08-07T08:58:20.243Z -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+// Auto-reload (Re-enabled 2020-08-11)
+window._CMLS = window._CMLS || {};
+window._CMLS.autoReload = window._CMLS.autoReload || [];
+window._CMLS.autoReload.push({ timeout: 8 });
+</script>
+
+<!-- WMAL Google Tag Manager (noscript) -->
+<noscript><iframe data-no-script src="https://www.googletagmanager.com/ns.html?id=GTM-N764TGQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End WMAL Google Tag Manager (noscript) -->
+
+<!---Hilton Tag--->
+<div id="ttdUniversalPixelTag93523426102c417c91061ea504cd5436" style="display:none">
+            <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                (function(global) {
+                    if (typeof TTDUniversalPixelApi === 'function') {
+                        var universalPixelApi = new TTDUniversalPixelApi();
+                        universalPixelApi.init("nsev7r6", ["1622mxt"], "https://insight.adsrvr.org/track/up", "ttdUniversalPixelTag93523426102c417c91061ea504cd5436");
+                    }
+                })(this);
+            </script>
+        </div>
+
+<!---End Hilton Tag---->
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_10345/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3LndtYWwuY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwIiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy53bWFsLmNvbS93cC1jb250ZW50L3BsdWdpbnMiLCJseiI6IjEiLCJlbWFpbFN1YiI6IkNoZWNrIHRoaXMgb3V0ISIsIm5vcCI6IkNoZWNrIHRoaXMgb3V0ISIsImxpZ2h0Ym94Ijp7ImkxOG4iOnsidENvdW50ZXIiOiIlY3VyciUgb2YgJXRvdGFsJSJ9fSwic192IjoiNS4zLjkifTs="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.wmal.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.wmal.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://wmalam.tunegenie.com/station/pwa/fullfooter.js?bs=wmalam"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "wmalam";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 401/524 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-30 09:30:06 by W3 Total Cache
+-->

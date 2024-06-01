@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="MobileOptimized" content="width" />
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8" />
+	<base href="https://ksgn.com/" />
+	<title>89.7 KSGN - Home</title>
+	<link href="https://ksgn.com/" rel="canonical" />
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/media/plg_system_jcepro/site/css/content.min.css?badb4208be409b1335b815dde676300e" rel="stylesheet" />
+	<link href="/media/plg_system_jcemediabox/css/jcemediabox.min.css?7c18c737af0919db884d585b5f82e461" rel="stylesheet" />
+	<link href="/templates/ksgn2021/css/jui/bootstrap.min.css?ec3eed78e35a628c8df994ebe1bdd1b2" rel="stylesheet" />
+	<link href="/templates/ksgn2021/css/template_2024.css?ec3eed78e35a628c8df994ebe1bdd1b2" rel="stylesheet" />
+	<link href="/modules/mod_jbcookies/assets/css/jbcookies.css?ec3eed78e35a628c8df994ebe1bdd1b2" rel="stylesheet" />
+	<script src="/templates/ksgn2021/js/jui/jquery.min.js?ec3eed78e35a628c8df994ebe1bdd1b2"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?ec3eed78e35a628c8df994ebe1bdd1b2"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?ec3eed78e35a628c8df994ebe1bdd1b2"></script>
+	<script src="/media/system/js/caption.js?ec3eed78e35a628c8df994ebe1bdd1b2"></script>
+	<script src="/media/plg_system_jcemediabox/js/jcemediabox.min.js?7c18c737af0919db884d585b5f82e461"></script>
+	<script src="/templates/ksgn2021/js/jui/bootstrap.min.js?ec3eed78e35a628c8df994ebe1bdd1b2"></script>
+	<script>
+jQuery(document).ready(function($){
+                     var optimizeall_auto = 'https://ksgn.com/index.php?option=com_imagerecycle&task=image.startOptimizeAll&mode=auto';
+                     optimizeAll = function() {
+                                $.ajax({
+                                    url: optimizeall_auto,
+                                    data: {},
+                                    type: 'post',
+                                    dataType: 'json',
+                                    success: function(response) {
+                                        //do nothing
+                                    }
+                                })
+                       }                            
+                       optimizeAll();
+                        
+                });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(document).ready(function(){WfMediabox.init({"base":"\/","theme":"light","width":"","height":"","lightbox":0,"shadowbox":0,"icons":1,"overlay":1,"overlay_opacity":0,"overlay_color":"","transition_speed":300,"close":1,"scrolling":"fixed","labels":{"close":"Close","next":"Next","previous":"Previous","cancel":"Cancel","numbers":"{{numbers}}","numbers_count":"{{current}} of {{total}}","download":"Download"},"swipe":true});});
+	</script>
+
+	
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJ3K14K0GG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JJ3K14K0GG');
+</script>    <script>
+        //global songlist var
+        var song_list;
+
+        function fetchNow() {
+            let d = new Date();
+            //console.log(d.getMinutes());
+            //console.log(d.getTime());
+            jQuery.ajax({
+                type: "GET",
+                url: "/api/now-playing/now-playing1.json?t=" + d.getTime(),
+                dataType: "json",
+                success: parseNowJSON
+            });
+        }
+
+        function parseNowJSON(data) {
+            song_list = data; // assign to global var for other scripts to access
+            var item = data[0];
+            var cat = item.category;
+            var title = (item.title.length) ? item.title : '';
+            var artist = (item.artist.length) ? item.artist : '';
+            var d = new Date();
+            //console.log('test now');
+            if (cat == "SONG" || cat == "XSONG" || cat == "SHOW" || cat == "XSHOW") {
+                jQuery(".player1 .title").html(title);
+                jQuery(".player1 .artist").html(artist);
+            } // end if
+            if (cat == "UND") {
+                jQuery(".player1 .title").html('<a href="//ksgn.com/partners">'+artist+'</a>');
+                jQuery(".player1 .artist").html('');
+            } // end if
+            if (cat == "SUPPORT" || cat == "DOH") {
+                jQuery(".player1 .title").html('Thanks for your support!<br /><a href="//ksgn.com/give">Give here!</a>');
+                jQuery(".player1 .artist").html('');
+            } // end if
+            if (cat == "STP") {
+                jQuery(".player1 .title").html('Say The Pledge with '+title);
+                jQuery(".player1 .artist").html('');
+            } // end if
+        } // end function
+
+        fetchNow();
+        setInterval(fetchNow, 10000);
+    </script>
+            
+</head>
+<body>
+	<div class="wrap">
+		<!--HEADER -->
+		<header>
+			<div id="header-container" class="container-fluid">
+				<div class="container">
+					<div>
+						<div>
+							<a href="/">
+								<img class="logo" src="/images/logo/897ksgn_logo1.svg" alt="89.7 KSGN" />
+							</a>
+						</div>
+						<div>
+							<a href="/donate/897ksgn" class="button red">
+								Give!
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--//HEADER -->
+		<!--//CONTENT -->
+		<div id="content" role="main">
+            			<!--//HERO -->
+			<div id="hero-container" class="container-fluid lazy" data-bg="url(images/stock/istock-533346621_2160x1620.jpg)">
+				<div class="container">
+					<div>
+						<div>
+                            							<h1>Experience JOY!!</h1>
+                            							<a href="#" id="player1-scroll">
+								<span class="icon-arrow"></span>
+							</a>
+						</div>
+						<div id="player1-player">
+							<div class="music-player player1">
+								<div>
+									<div>
+										<div>
+											<span>Now Playing:</span>
+										</div>
+										<div>
+											<p class="title"></p>
+											<p class="artist"></p>
+										</div>
+									</div>
+									<div>
+										<span class="icon-playing"></span>
+									</div>
+								</div>
+								<div>
+                                    <a href="//ksgn.com/live-player.php" onclick="window.open(this.href,'Live-Streaming','scrollbars=no,resizable=no,location=no,menubar=no,status=no,toolbar=no,left=0,top=0,width=400,height=450');return false;">
+										<span class="icon-play"></span>
+										<p>Click Here to Listen!</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--//HERO -->			
+            			<!--ALERT -->
+						<!--//ALERT -->
+			<!--WIDGETS -->
+			<div id="widgets-container" class="container-fluid">
+				<div class="container">
+					<div>
+						<div>
+							<a href="/encouraging-thoughts">
+								<img class="lazy" data-src="/templates/ksgn2021/img/icon-heart.png" alt="Heart" />
+								<h4>Encouraging Thought</h4>
+                                <div><p>"He will listen to the prayers of the destitute. He will not reject their pleas."<br><cite>Psalm 102:17 NLT</cite></p></div>							</a>
+						</div>
+						<div>
+							<a href="/prayer">
+								<img class="lazy" data-src="/templates/ksgn2021/img/icon-prayer.png" alt="Heart" />
+								<h4>Prayer</h4>
+								<p>Pray for others or submit a prayer request of your own.</p>
+							</a>
+						</div>
+						<div>
+							<a href="/events">
+								<img class="lazy" data-src="/templates/ksgn2021/img/icon-calendar.png" alt="Heart" />
+								<h4>Event Calendar</h4>
+								<p>Local events, workshops, and community outreach</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+            			<!--//WIDGETS -->
+			<!--CONTENT -->			
+			<div id="content-container" class="container-fluid">
+				<div class="container">
+																				<!--COMPONENT-->
+					<div>
+                        <div id="system-message-container">
+	</div>
+
+                        <div class="blog-featured " itemscope itemtype="https://schema.org/Blog">
+	<div class="col">
+	
+		
+		<div class="items-row row row-0">
+					<div class="item col-md-6 column-1"
+				itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+			
+	<h2 class="item-title" itemprop="headline">
+			<a href="/contests/music-team-contest-2024" itemprop="url">
+			Music Team Contest		</a>
+		</h2>
+
+
+
+
+
+
+		<div class="pull-none item-image">
+			<a href="/contests/music-team-contest-2024"><img
+			 src="/images/contests/canva_sunset-headphones_1920x1080.png" alt="" itemprop="thumbnailUrl"/></a>
+		</div>
+
+
+<p>Set yourself up to win an Amazon Gift Card, concert tickets, maybe more! when you help <strong>89.7 KSGN</strong> play more songs you love.</p>
+
+
+
+	
+<p class="readmore">
+			<a class="btn" href="/contests/music-team-contest-2024" itemprop="url" aria-label="Read more:  Music Team Contest">
+			<span class="icon-chevron-right" aria-hidden="true"></span> 
+			Read more ...		</a>
+	</p>
+
+
+
+			</div>
+			
+					</div>
+		
+	
+
+	</div>
+</div>
+
+					</div>
+					<!--//COMPONENT-->
+                                                                                <div>
+                        
+                    </div>
+				</div>
+			</div>
+			<!--//CONTENT -->
+			<div class="push"></div>
+		</div>
+		<!--FOOTER -->
+		<footer>
+			<div id="footer-container" class="container-fluid footer1">
+				<div class="container">
+					<div>
+                        						<div>
+                            <ul class="nav menu mod-list">
+<li class="item-1182 current active"><a href="/" >Home</a></li><li class="item-1417"><a href="https://ksgn.com/donate/897ksgn" >Give</a></li><li class="item-2227"><a href="/stories" >Stories</a></li><li class="item-103 divider deeper parent"><span class="separator ">OnAir</span>
+<ul class="nav-child unstyled small"><li class="item-654"><a href="/listen" >Listen Live</a></li><li class="item-1334"><a href="/listen/recent-songs" >Recent Songs</a></li><li class="item-1336"><a href="/shows" >Shows</a></li><li class="item-384"><a href="/encouraging-thoughts" >Encouraging Thoughts</a></li><li class="item-266"><a href="/say-the-pledge" >Say The Pledge</a></li><li class="item-307"><a href="/partners" >Partners/Sponsors</a></li></ul></li><li class="item-134 divider deeper parent"><span class="separator ">Events &amp; Activities</span>
+<ul class="nav-child unstyled small"><li class="item-1337"><a href="/events" >Event Calendar</a></li><li class="item-369"><a href="/contests" >Contests</a></li><li class="item-385"><a href="/music-team" >Music Team</a></li><li class="item-386"><a href="/fun" >Fun Club</a></li><li class="item-2357"><a href="/resources" >Resources</a></li></ul></li><li class="item-191 divider deeper parent"><span class="separator ">Faith</span>
+<ul class="nav-child unstyled small"><li class="item-152"><a href="/prayer" >Prayer</a></li><li class="item-1342"><a href="/churches" >Area Churches</a></li></ul></li><li class="item-2228 divider deeper parent"><span class="separator ">Info</span>
+<ul class="nav-child unstyled small"><li class="item-2229"><a href="/privacy" >Privacy Policy</a></li><li class="item-2231"><a href="/fcc" >FCC Information</a></li><li class="item-2232"><a href="/credits" >Credits</a></li><li class="item-2233"><a href="/contests/rules" >Contest Rules</a></li><li class="item-2230"><a href="/eeo" >EEO</a></li><li class="item-1347"><a href="/careers" >Careers/Hiring</a></li><li class="item-2234"><a href="/help" >Technical Support</a></li></ul></li></ul>
+
+						</div>
+                        						<div>
+                            <div class="social-links" style="margin-bottom:2em;"><a href="https://www.facebook.com/89.7KSGN" target="_blank" rel="noopener" title="Facebook"><span class="icon2024-facebook"></span><!--<img src="/images/template/icon-facebook.png" alt="Facebook" style="padding-right:15px">--></a> <a href="https://x.com/ksgn" target="_blank" rel="noopener" title="X"><span class="icon2024-x"></span><!--<img src="/images/template/icon-x_white-ko.svg" alt="Twitter" style="padding-right:15px;max-width:48px">--></a> <a href="https://www.instagram.com/897ksgn" target="_blank" rel="noopener"><span class="icon2024-instagram"></span><!--<img src="/images/template/icon-instagram.png" alt="Instagram" style="padding-right:15px">--></a> <a href="https://www.youtube.com/user/897ksgn" target="_blank" rel="noopener"><span class="icon2024-youtube"></span><!--<img src="/images/template/icon-youtube.png" alt="Youtube">--></a></div>
+							<img id="trustwaveSealImage" src="https://sealserver.trustwave.com/seal_image.php?customerId=788c23c60ca511e0b34b005056b201e5&amp;size=105x54&amp;style=invert" border="0" style="cursor:pointer;" onclick="javascript:window.open('https://sealserver.trustwave.com/cert.php?customerId=788c23c60ca511e0b34b005056b201e5&amp;size=105x54&amp;style=invert', 'c_TW', 'location=no, toolbar=no, resizable=yes, scrollbars=yes, directories=no, status=no, width=615, height=720'); return false;" oncontextmenu="javascript:alert('Copying Prohibited by Law - Trusted Commerce is a Service Mark of TrustWave Holdings, Inc.'); return false;" alt="This site is protected by Trustwave's Trusted Commerce program" title="This site is protected by Trustwave's Trusted Commerce program">
+							<div>
+								<h4>89.7 KSGN</h4>
+								<p>2048 Orange Tree Lane #200, Redlands, CA 92374</p>
+								<p>Studio: <a href="tel:+18888975746">888.897.5746, Option 1</a><br/>
+								Donations: <a href="tel:+18888975746">888.897.5746, Option 2</a><br/>
+								Office: <a href="tel:+18888975746">888.897.5746, Option 4</a><br/>
+								<!--Drive Thru Difference Line: 909.583.2155<br/>-->
+								Email: <a href="mailto:hello@ksgn.com">hello@ksgn.com</a><br/>
+								ksgn.com</p>
+								<p>©2014-2024 Good News Radio, a 501(c)(3) not-for-profit organization<br />
+						US TAX ID: 23-7243474</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+                        <div class="footer2">
+                <!--googleoff: all-->
+	<style type="text/css">
+		.jb-decline.link {
+			color: #37a4fc;
+			padding: 0;
+		}
+	</style>
+	<!-- Template Decline -->
+	<div class="jb-cookie-decline  robots-noindex robots-nofollow robots-nocontent" style="display: none;">
+		In order to provide you with the best online experience this website uses cookies.		<span class="jb-decline link">Delete cookies</span>
+	</div>
+	<!-- Template Default bootstrap -->
+	<div class="jb-cookie bottom black blue  robots-noindex robots-nofollow robots-nocontent" style="display: none;">
+		<!-- BG color -->
+		<div class="jb-cookie-bg black"></div>
+	    
+		<p class="jb-cookie-title">In order to provide you with the best online experience this website uses cookies.</p>
+		<p>By using our website, you agree to our use of cookies.					</p>
+		<div class="jb-accept btn blue">I agree</div>
+	</div>
+	
+	
+<!--googleon: all--><script type="text/javascript">
+    jQuery(document).ready(function () { 
+    	function setCookie(c_name,value,exdays,domain) {
+			if (domain != '') {domain = '; domain=' + domain}
+
+			var exdate=new Date();
+			exdate.setDate(exdate.getDate() + exdays);
+			var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/" + domain;
+
+			document.cookie=c_name + "=" + c_value;
+		}
+
+		var $jb_cookie = jQuery('.jb-cookie'),
+			cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)jbcookies\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
+		if (cookieValue === '') { // NO EXIST
+			$jb_cookie.delay(1000).slideDown('fast');
+					} else { // YES EXIST
+				jQuery('.jb-cookie-decline').fadeIn('slow', function() {});
+				}
+
+		jQuery('.jb-accept').click(function() {
+			setCookie("jbcookies","yes",90,"");
+			$jb_cookie.slideUp('slow');
+							jQuery('.jb-cookie-decline').fadeIn('slow', function() {});
+					});
+
+		jQuery('.jb-decline').click(function() {
+			jQuery('.jb-cookie-decline').fadeOut('slow', function() {
+									jQuery('.jb-cookie-decline').find('.hasTooltip').tooltip('hide');
+							});
+			setCookie("jbcookies","",0,"");
+			$jb_cookie.delay(1000).slideDown('fast');
+		});
+    });
+</script>
+
+            </div>
+            		</footer>
+		<!--//FOOTER -->
+        <script src="/templates/ksgn2021/js/lazyload.min.js?t=1717144774"></script>
+        <script src="/templates/ksgn2021/js/template.js?t=1717144774"></script>
+	</div> <!-- end .wrap -->
+        
+</body>
+</html>

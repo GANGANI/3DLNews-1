@@ -1,0 +1,228 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal not found</title>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap core CSS -->
+<!-- <link href="/portal/assets/bootstrap/css/bootstrap.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet"> -->
+<!-- <link href="/portal/assets/css/bootstrap.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet" type="text/css"> -->
+
+<!-- Jquery UI -->
+<!-- <link href="/portal/assets/css/jquery-ui.min.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet" type="text/css"> -->
+
+<!-- jScrollpane -->
+<!-- <link href="/portal/assets/css/jquery.jscrollpane.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet" type="text/css"> -->
+<!-- <link href="/portal/assets/css/jscrollpane.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet" type="text/css"> -->
+
+<!-- Custom styles for this template -->
+<link href="/assets/css/combined.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="/portal/assets/css/all.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet" type="text/css"> -->
+
+
+<!-- SuperFish -->
+<!-- <link href="/portal/assets/css/superfish.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet"> -->
+
+<!-- Icomoon font icons -->
+<link href="/assets/css/stretchfont.css" rel="stylesheet">
+
+<!-- NoUi Slider -->
+<link href="/assets/css/jquery.nouislider.min.css" rel="stylesheet">
+
+<!-- Date Time Picker -->
+<!-- <link href="/portal/assets/css/bootstrap-datepicker.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet"> -->
+
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/assets/ie7/ie7.css">
+<![endif]-->
+
+<!-- Credit Card Type Detector Styles -->
+<!-- <link href="/portal/assets/css/creditCardTypeDetector.css;jsessionid=B0FCF2C94A81F86D8D74F5C139D7352C" rel="stylesheet" type="text/css"> -->
+
+<style>
+  
+
+  /* Hide the drop down arrows on IE10 */
+  .hideSelectArrow::-ms-expand {
+    display: none;
+  }
+  /* Fix the dumb scroll bar on IE10 */
+  @-ms-viewport{
+    width: auto !important;
+  }
+  /* Fix screen shift when modal window appears */
+  body.modal-open {
+    margin-right: 15px;
+  }
+</style>
+
+   </head>
+   <body style="background-color: #272727;">
+      <div class="container main">
+        <div class="row">
+          <div class="col-md-12" style="margin: auto;">
+            <div class="modal-dialog modal-lg" style="width: 800px;">
+              <div class="modal-content" style="width: 792px;">
+                <div id="gameUnavailable" style="padding: 64px;">
+                  <div style="width: 100%; text-align: center;">
+                    <img src="/assets/images/gameUnavailableIcon.png" alt="Portal Unavailable" style="float: none;">
+                  </div>
+                  <div style="width: 100%; text-align: center;">
+                    <h3>The portal you have requested cannot be found.</h3>
+                  </div>
+                </div>
+              </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+    	<footer class="d-none">
+		
+			<img src="/assets/images/stretchLogo.png" alt="">
+			<!--# include file="/environment-indicator/indicator.html" -->
+		
+	</footer>
+
+	<div id="modalWindow" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg"><!--
+			<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a> -->
+			<div class="modal-content" style="width: 792px;">
+				<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+				<div id="modalWindowContent">
+				</div>
+				<div id="myAcctModalContent">
+				</div>
+			</div>
+		</div>
+	</div>
+        <div id="mobileModalContainer" tabindex="-1" role="dialog" style="display: none;">
+	</div>
+	<input type="hidden" value="" id="streamEventId">
+
+	<div id="searchModalWindow" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<!--<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>-->
+			<div class="modal-content" style="width: 792px;">
+				<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+				<div id="searchEvents">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="chooseGameModalWindow" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<!--<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>-->
+			<div class="modal-content" style="width: 792px;">
+				<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+				<div id="chooseGame">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="twitterReply" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+			<div class="modal-content" style="width: 792px;">
+				<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+				<div id="twitterReplyContent">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fbReply" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+			<div class="modal-content" style="width: 792px;">
+				<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+				<div id="fbReplyContent">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gameUnavailableModalWindow" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<!--<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>-->
+			<div class="modal-content" style="width: 792px;">
+				<a class="modalClose" aria-hidden="true" data-dismiss="modal"><i class="i-close"></i></a>
+				<div id="gameUnavailable">
+					<img src="/assets/images/gameUnavailableIcon.png" alt="Event Unavailable">
+					<div id="gameUnavailableContent">
+						<h1>This event is not yet available.</h1>
+						<h3>Please check back within 15 minutes of the scheduled start time.</h3>
+					</div>
+					<img src="/assets/images/stopwatchIcon.png" alt="" class="pull-right">
+					<img src="/assets/images/Stretch-Live-Logo-Black-Green.png" alt="" class="stretchLogo">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="eventGeoBlockedModalWindow" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content" style="width: 792px;">
+				<div id="eventGeoBlocked">
+					<img src="/assets/images/gameUnavailableIcon.png" alt="Event Unavailable">
+					<div id="eventGeoBlockedContent">
+						<h1>Unable to view at your location.</h1>
+						<h3>Streaming for this event has been restricted for your location.</h3>
+					</div>
+					<img src="/assets/images/stretchLogoBlack.png" alt="" class="stretchLogo">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="mobileOverlay">
+		<div class="message">
+			LOADING...
+		</div>
+	</div>
+	<div id="mobileBreak"></div>
+
+	<!-- Presto Payments -->
+<script src="/assets/js/prestopaymentmethod.js"></script>
+
+<!-- Require -->
+<script src="/assets/js/require.min.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/Autolinker.min.js"></script>
+
+	<script type="text/javascript">
+
+	  var GA_KEY = "";
+
+	  if(GA_KEY != ""){
+	  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', GA_KEY, 'auto');
+
+		  ga('send', 'pageview');
+	  }
+
+	</script>
+
+</body>
+</html>
+   </body>
+</html>

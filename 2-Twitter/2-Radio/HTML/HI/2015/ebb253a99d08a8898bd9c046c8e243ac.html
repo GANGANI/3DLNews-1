@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>KONG Radio</title>
+        <!-- open graph -->
+        <meta property="og:image" content="custom/images/kqng-logo-20150609184639.png"/>
+        <meta property="og:title" content="KONG Radio"/>
+        <meta property="og:description" content="KONG Radio"/>
+        <meta property="og:url" content="http://kqng.streamon.fm/"/>
+        <meta property="og:site_name" content="KONG Radio"/>
+        <meta property="og:type" content="website"/>
+        <!-- / open graph -->
+
+        <meta name="description" content="KONG Radio">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png" />
+
+
+        
+
+        <link rel="stylesheet" href="css/main.css?v=1">
+        <!--
+        <link href="fonts/fontcustom.css" rel="stylesheet">-->
+        <link href="fonts/style.css?v=1" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lte IE 7]>
+        <script src="fonts/lte-ie7.js"></script>
+        <link rel="stylesheet" href="fonts/fontello-ie7.css">
+        <![endif]-->
+
+        
+
+        <script src="vendor/modernizr-2.6.2.min.js"></script>
+
+
+        <script type="text/javascript" src="vendor/jwplayer/jwplayer.js"></script>
+        <script type="text/javascript">jwplayer.key="ii/XGTDyE+KeR69B4LIIuaspMegsp4qQF0Slng==";</script>
+
+
+        <script type="text/javascript">
+          var __I18N = {
+            "Artist": "Artist",
+            "Title": "Title",
+            "Streaming LIVE": "Streaming LIVE",
+            "Today": "Today",
+            "Yesterday": "Yesterday",
+            "Time": "Time",
+            "Listen to this": "Listen to this",
+            "dddd, MMMM D": "dddd, MMMM D" // date format
+          };
+          var __ = function(t) { return __I18N[t]; }
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="l-paneltop">
+          <div class="pad">
+            <div class="support">
+              <div class="support-body">
+                <div id="panel-forms">
+                  <div id="status-msg-holder"></div>
+                  <div id="support-steps">
+                    <h1>Need Help?</h1>
+                    <div id="support-steps-interior">
+                      <p><strong>Step 1: Verify that your browser is up to date</strong><br />
+                        If you are unable to listen to this stream, please make sure that you have an up to date browser. If you are on an older browser, you will need to ensure that you have a working version of Flash activated within your browser. You can activate Flash here:</p>
+
+                      <p><a href="http://get.adobe.com/flashplayer" title="Download Flash" target="_blank">Click here to download and activate Flash</a>.</p>
+
+                      <p>
+                        <strong>Step 2: Report the Problem</strong><br />
+                        If you are still unable to listen to this stream please let us know. Make sure to describe the symptoms of the problem so that we can help to address it.</p>
+                      </div>
+                    </div>
+                    <div id="error-msg-holder"></div>
+                      <form id="support-form">
+                    <div class="colspan">
+                      <label for="supportemail">Your Email Address</label>
+                      <input type="text" name="supportemail" id="supportemail" value=""/>
+                    </div>
+                    <div class="colspan">
+                      <label for="supportmessage">Please describe the issue you experienced</label>
+                      <textarea name="supportmessage" id="supportmessage"></textarea>
+                    </div>
+                    <a class="btn enabled" data-action="submit-support-form">Submit</a>
+                    <div id="spinnerholder"></div>
+                  </form>
+              </div>
+
+                <p>Powered by <a href="http://futurimedia.com/" target="_blank">Futuri</a></p>
+
+               
+
+                <p><a class="btn help" href="#">Close panel</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="l-utility">
+          <div class="l-left">
+            <span class="title">ONdemand Player</span>
+          </div>
+          <div class="l-right">
+            <a class="help no-underline" href="#" data-tooltiptext="Technical Support" id="technical-support-icon">
+              <span class="icon-square"><span class="icon-question"></span></span>
+            </a>
+            <a class="help icon-text" href="#">Technical Support</a>
+
+            <a class="toggle-layout no-underline" style="display:none;" href="#" data-tooltiptext="Mobile Player" id="toggle-layout-icon">
+                <span class="icon-square"><span class="icon-layout"></span></span>
+            </a>
+            <a style="display:none;" class="toggle-layout text icon-text" href="#">Mobile Player</a>
+          </div>
+        </div>
+
+        <div class="l-container" data-theme-bg>
+          <div id="left-panel-holder"></div>
+
+         <script type="text/html" id="tmpl-left-panel">
+          <div class="l-panelleft show-on-small">
+
+            <span class="toggle-left"><i class="icon icon-menu"></i> Just Played</span>
+            <div class="scrollable">
+              <div class="pad">
+                  <div class="justplayed-list"></div>
+                </div>
+            </div>
+          </div>
+          </script>
+
+          <div class="l-main">
+            <div class="l-wrap">
+
+              
+
+              <div class="l-banner mb " data-theme-banner></div>
+
+              <div class="l-player">
+                <div class="metadata">
+
+                </div>
+
+                <div class="controls is-live"> <!-- show-on-small -->
+                  <div class="controls-play">
+                    <i class="icon-play"></i>
+                  </div>
+                  <div class="controls-volume">
+                    <div class="volume-bar">
+                      <div class="progress" data-volume-seek>
+                        <div class="progress-meter"></div>
+                      </div>
+
+                      <!-- start of new -->
+                      <div class="scrub-tray-vol">
+                        <div class="scrub-handle-vol" id="scrub-handle-vol"></div>
+                      </div>
+                      <!-- end of new -->
+
+                    </div>
+                    <div class="volume-icon" data-volume-mute>
+                      <span class="icon-mute-off">&#xe006;</span>
+                    </div>
+                  </div>
+
+                  <div class="controls-listen-live">
+                    <a href="#" class="back2live">
+                      <img src="images/listen-live.png" /><br />
+                      Listen<br />Live
+                    </a>
+                  </div>
+                  <div class="controls-scrub" id="controls-scrub">
+                    <span class="controls-timer">00:00</span>
+                    <span class="controls-status"><a href="#">Streaming LIVE</a></span>
+                    <div class="scrub listen-later"  id="scrub-tray">
+                      <div class="progress">
+                        <div class="progress-buffer"></div>
+                        <div class="progress-meter"></div>
+                      </div>
+                      <div class="scrub-tray ">
+                        <div class="scrub-handle" id="scrub-handle"></div>
+                      </div>
+                    </div>
+                    <a href="#" class="need-help help">Need Help?</a>
+                  </div>
+                </div>
+                <div class="track-preloader"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="l-ad-bottom hide-on-small"><div class="ad-container" id="ad-app-container"></div></div>
+
+
+
+        <div id="sidebar-right-holder">
+
+
+
+        <!--
+        </div>
+        <script type="text/html" id="tmpl-sidebar">
+        -->
+          
+          <div class="l-panelright show-on-small">
+
+            <div class="datepicker-small" id="datepicker-with-scroll">
+                <span class="toggle-right">Further Back <i class="icon icon-menu"></i></span>
+                <form action="" class="datepickerform">
+                  <div class="datefields"></div>
+                  <div class="hourfields"></div>
+
+                  <input type="submit" class="btn" value="Search" id="listenlater-submit">
+                  <a href="#" class="play-hour btn-white">Play hour</a>
+                </form>
+
+            </div>
+
+            <div class="scrollable has-datepicker">
+              <div class="pad">
+                <div class="archive-list"></div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="l-sidebar show-on-large">
+            <ul class="tabs tabs-twoup" data-tabs>
+              
+                
+                
+                <li class="is-active"><a href="#just-played">Just Played</a></li>
+                <li><a href="#further-back">Further Back</a></li>
+              
+            </ul>
+            <div class="tabs-content">
+              
+                <div id="just-played">
+                  <div class="scrollable">
+                    <div class="pad">
+                      <div class="justplayed-list"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="further-back">
+                  <div class="pad">
+
+                    <form action="" class="datepickerform has-calendar">
+
+                      <a class="btn btn-theme btn-toggle-datepicker" id="toggle-datepicker">Pick a Date</a>
+                      <div class="datefields"></div>
+                      <div class="hourfields"></div>
+
+                      <input type="hidden" name="date" id="date-input" value="" />
+                      <input type="submit" class="btn" value="Search">
+                      <a href="#" class="play-hour btn-white">Play hour</a>
+                    </form>
+                  </div>
+                  <div class="l-furtherback">
+                    <div class="scrollable">
+                      <div class="pad">
+                        <div class="archive-list"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+
+              <div id="user-tab2-content">
+                <div class="scrollable">
+                  <div class="pad">
+                    <!-- iFrame will be inserted here at run-time -->
+                  </div>
+                </div>
+              </div>
+
+              <div id="user-config-tab-content">
+                <div class="scrollable">
+                  <div class="pad">
+                    <!-- iFrame will be inserted here at run-time -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- </script> -->
+        </script>
+
+      </div>
+
+
+      <div class="l-loading">
+        <img src="images/logo-futuri-loading.png" alt="Powered by Futuri">
+      </div>
+
+
+
+      <div class="error">
+        <div class="error-msg"></div>
+      </div>
+
+      <script type="text/html" id="tmpl-metadata">
+        <article class="metadata-wrap" data-container="player" data-id="<%= id %>" data-artist="<%= artist %>" data-title="<%= title %>">
+          <% if (hasVoting) { %>
+            <div class="vote vote_player">
+              <div class="vote_up margin_auto"><a href="#" class="thumb up <%= voteUpClasses %> fontello-thumbs-up-alt"></a></div>
+
+              <table class="score_table" cellspacing="0" cellpadding="0"><tbody>
+                <tr><td><div class="vote_up vote_cell up" data-index="1"></div></td></tr>
+                <tr><td><div class="vote_cell up" data-index="2"></div></td></tr>
+                <tr><td><div class="vote_cell up" data-index="3"></div></td></tr>
+                <tr><td><div class="vote_cell up" data-index="4"></div></td></tr>
+                <tr><td><div class="vote_cell up" data-index="5"></div></td></tr>
+
+                <tr><td><div class="vote_cell_divider" data-index="DIV"></div></td></tr>
+
+                <tr><td><div class="vote_cell down" data-index="6"></div></td></tr>
+                <tr><td><div class="vote_cell down" data-index="7"></div></td></tr>
+                <tr><td><div class="vote_cell down" data-index="8"></div></td></tr>
+                <tr><td><div class="vote_cell down" data-index="9"></div></td></tr>
+                <tr><td><div class="vote_down vote_cell down" data-index="10"></div></td></tr>
+              </tbody></table>
+
+              <div class="vote_down margin_auto"><a href="#" class="thumb down <%= voteDownClasses %> fontello-thumbs-down-alt"></a></div>
+            </div>
+          <% } %>
+          <img class="metadata-img" src="<%= album_art_src %>" alt="">
+          <div class="metadata-bd">
+            <span class="metadata-label">NOW PLAYING</span>
+            <span><%= artistlabel %><%= artistname %></span>
+            <span><%= titlelabel %><%= titlename %></span>
+
+            <div class="metadata-actions">
+
+              <% if (allow_sharing) { %><a class="metadata-share btn btn-full " href="#" data-share-trigger><i class="icon-plus"></i> Share Audio <i class="icon-facebook"></i> <i class="icon-twitter"></i> <i class="icon-email"></i></a><% } %>
+              <% if (buy_link !== '') { %><a class="btn btn-full btn-buy" href="<%= buy_link %>" alt="Buy on iTunes" target="_blank">Buy</a><% } %>
+            </div>
+          </div>
+        </article>
+
+
+
+      </script>
+
+      <script type="text/html" id="tmpl-item">
+        <article class="item <%= xtraclass %>" data-container="listen-later" <% if (allow_replaying) { %>data-playable<% } %> data-id="<%= id %>" data-artist="<%= artist %>" data-title="<%= title %>">
+          <div class="item-image <% if (allow_replaying) { %>allow-replaying<% } %>">
+            <img src="<%= album_art_src === '' ? 'images/default-album-artwork.jpg' : album_art_src  %>" alt="">
+            <% if (allow_replaying) { %><span class="centericon"> <i class="centericon-icon icon-play"></i></span><% } %>
+          </div>
+          <div class="item-bd">
+            <span>Aired at <time class="item-time"><%= time %></time></span>
+            <span class="item-artist"><%= artist %></span>
+            <span class="item-title"><%= title %></span>
+
+            <% if (hasVoting) { %>
+              <div class="vote vote_ll <%= deviceTypeClass %>">
+                <span class="vote_down margin_auto"><a href="#" class="thumb down <%= voteDownClasses %> fontello-thumbs-down-alt"></a></span>
+                <table class="score_table" cellspacing="0" cellpadding="0"><tbody>
+                  <tr>
+                    <td><div class="vote_down vote_cell down" data-index="1"></div></td>
+                    <td><div class="vote_cell down" data-index="2"></div></td>
+                    <td><div class="vote_cell down" data-index="3"></div></td>
+                    <td><div class="vote_cell down" data-index="4"></div></td>
+                    <td><div class="vote_cell down" data-index="5"></div></td>
+
+                    <td><div class="vote_cell_divider" data-index="DIV"></div></td>
+
+                    <td><div class="vote_cell up" data-index="6"></div></td>
+                    <td><div class="vote_cell up" data-index="7"></div></td>
+                    <td><div class="vote_cell up" data-index="8"></div></td>
+                    <td><div class="vote_cell up" data-index="9"></div></td>
+                    <td><div class="vote_up vote_cell up" data-index="10"></div></td>
+                  </tr>
+                </tbody></table>
+                <span class="vote_up margin_auto"><a href="#" class="thumb up <%= voteUpClasses %> fontello-thumbs-up-alt"></a></span>
+              </div>
+            <% } %>
+
+          </div>
+          <div class="item-actions">
+            <% if (allow_sharing) { %>
+              <a class="metadata-share btn btn-full btn-metadata-action" href="#" data-share-trigger>Share</a>
+            <% } %>
+            <% if (buy_link !== '') { %>
+              <a class="btn btn-full btn-metadata-action btn-buy" href="<%= buy_link %>" alt="Buy on iTunes" target="_blank">Buy</a>
+            <% } %>
+          </div>
+        </article>
+      </script>
+
+      <script type="text/html" id="tmpl-share">
+        <div class="popup">
+          <ul class="iconlist" data-share>
+            <li>
+              <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= longUrl %>" title="Share on Facebook">
+                <i class="icon-facebook"></i>
+              </a>
+            <li>
+              <a target="_blank" href="https://twitter.com/intent/tweet?text=<%= lead %><%= text %> via @<%= via %>&related=<%= via %>" title="Share on Twitter">
+                  <i class="icon-twitter"></i>
+              </a>
+            <li>
+              <a href="mailto:?subject=<%= lead %>&body=<%= longUrl %>" title="Share via email">
+                <i class="icon-email"></i>
+              </a>
+          </ul>
+          <div class="popup-arrow"></div>
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-share-bak">
+
+        <div class="popup">
+          <ul class="iconlist" data-share>
+            <li>
+              <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= longUrl %>" title="Share on Facebook">
+                <i class="icon-facebook"></i>
+              </a>
+            <li>
+              <a target="_blank" href="https://twitter.com/intent/tweet?text=<%= lead %><%= text %> via @<%= via %>&related=<%= via %>" title="Share on Twitter">
+                  <i class="icon-twitter"></i>
+              </a>
+            <li>
+              <a href="mailto:?subject=<%= lead %>&body=<%= longUrl %>" title="Share via email">
+                <i class="icon-email"></i>
+              </a>
+          </ul>
+          <div class="popup-arrow"></div>
+        </div>
+      </script>
+
+
+
+      <script type="text/html" id="tmpl-mobile-start">
+        <div class="controls-start">
+          <span class="centericon centericon-lg">
+            <i class="centericon-icon icon-play pulse"></i>
+          </span>
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-installplugins">
+        <div class="error-short">
+          Unable to find or use Flash. Please install <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash</a> and ensure it is enabled and up to date.
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-streamdown">
+        <div class="error-short">
+          Stream currently not available. Playback will resume shortly.
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-nointernet">
+        <div class="error-short">
+          Internet connection not available or service unavailable.
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-streamblocked">
+        <div class="error-short">
+          Unable to receive the stream.
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-notfound">
+        <div class="error-short">
+          Unable to play audio archive. You can
+                              <a href="#" class="back2live">play the live stream</a> instead.
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-borked">
+        <div class="error-short">
+          Something went very wrong. Please report this to Technical Support.
+        </div>
+      </script>
+
+      <script type="text/html" id="tmpl-error-flashdisabled">
+        <div class="error-short">
+          Flash looks installed but is either not allowed or outdated. Please update Flash and/or ensure it is allowed to run.
+        </div>
+      </script>
+
+        <script>
+          // load jquery only if zepto is not supported
+          document.write('<script src="vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js"><\/script>')
+        </script>
+        <script>
+          if(typeof JSON === "undefined") {
+            document.write('<script src="vendor\/json3.js"><\/script>');
+          }
+        </script>
+        <script src="vendor/underscore-min.js"></script>
+
+        <!--  for the real player... -->
+        <script src="bumblebee.js"></script>
+        <script src="bumblebee_config.js?l=en"></script>
+
+
+        <script src="skin-main.js"></script> <!-- Lift scripts -->
+        <script>
+          Modernizr.load([
+            {
+              test: Modernizr.touch,
+              yep : 'skin-touch.js', // load all touch specific scripts here
+              nope: 'skin-desktop.js' // load all desktop specific scripts here
+            }
+          ]);
+        </script>
+
+
+        
+
+        <!-- Quantcast Tag -->
+        <script type="text/javascript">
+                var _qevents = _qevents || [];
+
+                (function() {
+                        var elem = document.createElement('script');
+
+                        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+                        elem.async = true;
+                        elem.type = "text/javascript";
+                        var scpt = document.getElementsByTagName('script')[0];
+                        scpt.parentNode.insertBefore(elem, scpt);
+                })();
+        </script><script type="text/javascript">
+        var qc_accounts = [{
+                /* LDR Quantcast Account */
+                qacct:"p-a3c-1XL1robvY",
+                labels:"Streaming-KQNG"
+        }];
+        _qevents.push(qc_accounts);
+        </script>
+        <noscript>
+        <div style="display:none;">
+        <img src="//pixel.quantserve.com/pixel/p-a3c-1XL1robvY.gif?labels=Streaming-KQNG" border="0" height="1" width="1" alt="Quantcast"/>
+        </div>
+        </noscript>
+        <!-- End Quantcast tag -->
+
+        
+
+      <div class="l-preroll">
+        <div id="prerollHolder"></div>
+
+        <script type="text/javascript">
+        </script>
+
+
+      </div><!-- /.l-preroll -->
+
+    </body>
+</html>

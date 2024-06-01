@@ -1,0 +1,1337 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>WBAP 820 | News Talk WBAP-AM</title><link rel="canonical" href="https://www.wbap.com/" />
+
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/general-https-ABC123H.css?ver=20240531080945" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/general-https-ABC123H.css?ver=20240531080945' type='text/css' media='all' />
+<link rel="preload" href="https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/layout-front_page-https-ABC123H.css?ver=20240531080945" as="style"><link rel='stylesheet' id='headway-layout-front_page-https-css' href='https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/layout-front_page-https-ABC123H.css?ver=20240531080945' type='text/css' media='all' />
+<link rel="preload" href="https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/responsive-grid-https-ABC123H.css?ver=20240531080945" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/responsive-grid-https-ABC123H.css?ver=20240531080945' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240531081118" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240531081118' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_5235/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/block-dynamic-js-layout-front_page-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-front_page-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.wbap.com/wp-content/uploads/sites/274/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240531080945" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.wbap.com","site_id":"274","tz":"America\/Chicago","tz_offset":"-5","ts":"1715610524","blog_name":"News Talk WBAP-AM","client_name":"cumuluspro","user_ID":"","alt_blog_name":"WBAP-AM","market":"Dallas-Ft. Worth, TX","format":"News\/Talk","ts_offset":"1717125078","version":"release-3.26.01","env":"prod","settings":{"tenant_id":"see_5235","syn_site_name":"WBAP-AM","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":false,"default_show_img":false,"gtm_id":false,"format":"News\/Talk","market":"Dallas-Ft. Worth, TX","region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.wbap.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"1","moment_date_format":"MMMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"MM d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"274","callsign":"","mount_name":"WBAPAM","provider":"stream_the_world","gmt_offset":"-18000","live_url":"http:\/\/playerservices.streamtheworld.com\/pls\/WBAPAMAAC.pls","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240531081118" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.wbap.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.wbap.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="News Talk WBAP-AM &raquo; Feed" href="https://www.wbap.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/274/2023/12/26125549/WBAP-AM-Sitelogo-2024-01-03.png" />
+
+
+<link rel='shortlink' href='https://www.wbap.com/' />
+	<script>
+		const express_config = { 
+			express_url : 'https://www.wbap.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/wbap-com\/',
+			rewards_id : '706',
+			site_id : '274',
+			client_id : 'cumuluspro',
+			post_id : '38615',
+			tracking_meta_id: '6708748',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -5,
+			timezone : 'America/Chicago',
+			timezone_abbr : 'CDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -5 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'News Talk WBAP-AM','alt_station_name':'WBAP-AM','market':'Dallas-Ft. Worth, TX','format':'News/Talk','author':'System User','page_type':'page' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'G-B9NE24KWLW');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/274/2023/12/26125549/WBAP-AM-Sitelogo-2024-01-03.png" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJMXFD');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- WBAP Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BP6T45G');</script>
+<!-- End WBAP Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+	// SLOTS ARE DEFINED IN THEIR DISPLAY BLOCKS
+	window.GPT_SITE_ID = '/6717/cd.WBAP.AF';
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+
+	// APS initialization
+	if (window.cmlsAds && window.cmlsAds.apsInit) {
+		googletag.cmd.push(function() {
+			googletag.pubads().disableInitialLoad();
+		});
+		window.cmlsAds.apsInit();
+	}
+
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+
+		// Load APS bids and do initial request
+		if (window.cmlsAds && window.cmlsAds.apsLoad) {
+			window.cmlsAds.apsLoad();
+		}
+	});
+</script>
+<!-- END 2023 CMLS GPT -->
+
+<!--Disable Hindsight -->
+<script>window.NO_HINDSIGHT=true</script>
+<!--End Disable Hindsight -->
+
+<!-- Local GA via Heidi McIvor-Allen/Ingrid Diaz -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DHWNJ7G54R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DHWNJ7G54R');
+</script>
+
+<script type="text/javascript" src="//engage-see.franklymedia.com/widget/see_5235/see.js"></script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '863420318749683');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" data-no-script src="https://www.facebook.com/tr?id=863420318749683&amp;ev=PageView&amp;noscript=1"></noscript>
+<!-- End Meta Pixel Code -->
+<script type="text/javascript">var ajaxurl = "https://www.wbap.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'News Talk WBAPAM');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Format  NewsTalk', 'Market  DallasFort Worth TX', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'Home');
+      googletag.pubads().setTargeting('cms-pcat', ['247 Newsroom News', 'WBAP 247 News']);
+			});
+		}
+		</script>
+		<link rel="preload" fetchpriority="high" href="https://www.wbap.com/wp-content/uploads/sites/274/themify-concate/3568307525/themify-4105201084.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.wbap.com/wp-content/uploads/sites/274/themify-concate/3568307525/themify-4105201084.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="News Talk WBAP-AM"/>
+  <meta property="og:title" content="News Talk WBAP-AM"/>
+  <meta property="og:url" content="https://www.wbap.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="WBAP 820"/>
+  <meta property="og:image" content="https://express-images.franklymedia.com/6616/sites/274/2021/01/06112604/pres.png"/>
+  <meta property="og:image:url" content="https://express-images.franklymedia.com/6616/sites/274/2021/01/06112604/pres.png"/>
+  <meta property="og:image:secure_url" content="https://express-images.franklymedia.com/6616/sites/274/2021/01/06112604/pres.png"/>
+  <meta property="article:publisher" content="https://www.facebook.com/NewsTalk820WBAP/"/>
+ <!-- Google+ / Schema.org -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="News Talk WBAP-AM"/>
+  <meta name="twitter:url" content="https://www.wbap.com"/>
+  <meta name="twitter:description" content="WBAP 820"/>
+  <meta name="twitter:image" content="https://express-images.franklymedia.com/6616/sites/274/2021/01/06112604/pres.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="home page-template-default page page-id-38615 is-headway-theme custom safari webkit android responsive-grid-enabled responsive-grid-active pageid-38615 page-slug-index layout-front_page layout-using-front_page tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-8" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="top-banner block block-type-custom-code block-fluid-height" data-alias="Top Banner">
+<div class="block-content">
+<div id="div-gpt-ad-1704839787986-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1704839787986-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-5">
+<figure id="block-31" class="logo block block-type-image block-fixed-height" data-alias="Logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/274/2023/12/26125549/WBAP-AM-Sitelogo-2024-01-03.png" alt="WBAP News Talk 820 AM / 99.5 FM-HD2" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-19">
+
+<section class="sub-column sub-column-1 column column-1 grid-width-9 grid-left-0">
+<aside id="block-b1o552bc1c247e34" class="on-air block block-type-widget-area block-fluid-height" data-alias="Home - On-Air" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><div style="display:none;" class="amp-onair-widget" id="amp_onair_widget-2"
+	data-title-now=""
+	data-title-upcoming=""
+	data-title=""
+	data-type="nowplaying"
+	data-change-minutes="5"
+	data-change="0"
+	data-toggle-time="10"
+	data-fields="image,timeslot,excerpt,link,name"
+	data-ajaxurl="https://www.wbap.com/wp-admin/admin-ajax.php"
+	data-updateurl="https://www.wbap.com/shows/feed/?type=json"
+	data-memcached="1"
+	data-expiration="1717131600">
+	
+<div class="amp-onair-show nowplaying" >
+
+    <div class="amp-onair-widget-title js-widget-title"></div>
+
+        <div class="amp-onair-show-image">
+                    <a class="js-link" href="https://www.wbap.com/shows/red-eye-radio/"><img src="https://www.wbap.com/wp-content/uploads/sites/274/2015/02/141-RedEye.jpg" class="amp-onair-show-image-img js-image" /></a>
+            </div>
+        
+    <div class="amp-onair-show-title">
+            <a class="js-link" href="https://www.wbap.com/shows/red-eye-radio/"><span class="js-title">Red Eye Radio</span></a>
+        </div>
+    
+        <div class="amp-onair-show-timeslot js-timeslot" >12:00 a.m. - 5:00 a.m.</div>
+        
+        <div class="amp-onair-show-excerpt js-excerpt"></div>
+        
+        <div class="amp-onair-personality js-personalities">
+                    <div class="amp-onair-personality-container">
+
+		<div class="amp-onair-personality-image">
+		<a href="https://www.wbap.com/personalities/eric-harley-and-gary-mcnamara/"><img class="amp-onair-personality-image-img" src="https://www.wbap.com/wp-content/uploads/sites/274/2015/02/141-RedEye.jpg" /></a>
+	</div>
+		
+    <div class="amp-onair-personality-name">
+    	<a href="https://www.wbap.com/personalities/eric-harley-and-gary-mcnamara/">Eric Harley and Gary McNamara</a>
+   	</div>
+   	
+</div>            </div>
+    
+</div>
+
+</div></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-b1o552bc1c247e34 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-10 grid-left-0">
+<div id="block-b4r5a8c4a12a21d3" class="block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b4r5a8c4a12a21d3 -->
+<section id="block-30" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="#"><img src="https://express-images.franklymedia.com/6616/sites/274/2024/01/02150112/ListenLive-Bright-Red.png" alt="Listen Live!!" title="Listen Live!!" class="img-1"  /></a></li><li><a href="/listen-live-with-alexa"><img src="https://express-images.franklymedia.com/6616/sites/274/2024/01/02150202/SmartSpeakers-Bright-Red.png" alt="Listen with a Smart Speaker" title="Listen with a Smart Speaker" class="img-2"  /></a></li><li><a href="https://www.facebook.com/pages/WBAP/118175174903859" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/274/2024/01/02150228/Social-Facebook-White.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-3"  /></a></li><li><a href="https://x.com/wbap247news" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/274/2024/01/02150245/Social-X-White.png" alt="Follow us on X" title="Follow us on X" class="img-4"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .sub-column -->
+<nav id="block-32" class="main-nav block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left"><ul id="menu-main-navigation" class="menu"><li id="menu-item-1581632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-38615 current_page_item menu-item-1581632"><a href="https://www.wbap.com/" aria-current="page">Home</a></li>
+<li id="menu-item-46493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46493"><a href="https://www.wbap.com/on-air-schedule/">Shows</a>
+<ul class="sub-menu">
+	<li id="menu-item-39056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39056"><a href="https://www.wbap.com/wbap-morning-show/">5am-9am WBAP’s Morning News with Ernie, Carla, Hal and Nicole</a></li>
+	<li id="menu-item-1517265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1517265"><a href="https://www.wbap.com/the-casey-bartholomew-show/">9am &#8211; 11am The Casey Bartholomew Show</a></li>
+	<li id="menu-item-1458722" class="menu-item menu-item-type-post_type menu-item-object-amp-onair-show menu-item-1458722"><a href="https://www.wbap.com/shows/dan-bongino-show/">11am-2pm Dan Bongino Show</a></li>
+	<li id="menu-item-1558515" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1558515"><a href="https://www.wbap.com/the-james-parker-show/">2pm-5pm: James Parker</a></li>
+	<li id="menu-item-39029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39029"><a href="https://www.wbap.com/mark-levin/">5pm-8pm Mark Levin</a></li>
+	<li id="menu-item-39038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39038"><a href="https://www.wbap.com/chris-krok/">8pm-12mid Chris Krok</a></li>
+	<li id="menu-item-39026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39026"><a href="https://www.wbap.com/car-pro-show/">Sat 9am-11am Car Pro Show</a></li>
+	<li id="menu-item-1573711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1573711"><a href="https://www.wbap.com/red-eye-radio/">Red Eye Radio</a></li>
+	<li id="menu-item-39023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39023"><a href="https://www.wbap.com/weekend-shows/">Weekend Shows</a></li>
+</ul>
+</li>
+<li id="menu-item-1406663" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1406663"><a href="https://www.wbap.com/category/news-room-news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-39020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39020"><a href="https://www.wbap.com/news-staff/">WBAP News Staff</a></li>
+	<li id="menu-item-46997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46997"><a href="https://www.wbap.com/wbap-traffic-team/">WBAP Traffic Team</a></li>
+	<li id="menu-item-1409676" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1409676"><a href="https://www.wbap.com/category/news-room-news/">24/7 Newsroom News</a></li>
+	<li id="menu-item-42899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42899"><a href="https://www.wbap.com/pump-watch-dallas/">Gas Prices in Dallas</a></li>
+	<li id="menu-item-39014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39014"><a href="https://www.wbap.com/pump-watch/">Gas Prices in Ft. Worth</a></li>
+</ul>
+</li>
+<li id="menu-item-38996" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38996"><a href="https://www.wbap.com/weather-updates/">Weather</a>
+<ul class="sub-menu">
+	<li id="menu-item-1501236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1501236"><a href="https://www.wbap.com/weather-updates/">Daily Forecast</a></li>
+	<li id="menu-item-1556735" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1556735"><a href="https://www.wbap.com/2023/07/06/dfw-live-weather-radar/">Radar</a></li>
+	<li id="menu-item-1439599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1439599"><a href="https://www.wfaa.com/closings">Closings/Delays</a></li>
+</ul>
+</li>
+<li id="menu-item-39518" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39518"><a>Podcasts</a>
+<ul class="sub-menu">
+	<li id="menu-item-1547882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1547882"><a href="https://www.wbap.com/?page_id=38975">WBAP Morning News Podcast</a></li>
+	<li id="menu-item-1547890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1547890"><a href="https://www.wbap.com/the-casey-bartholomew-show/">The Casey Bartholomew Show</a></li>
+	<li id="menu-item-1577160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1577160"><a href="https://www.wbap.com/the-james-parker-show-2/">The James Parker Show</a></li>
+	<li id="menu-item-1547886" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1547886"><a href="https://www.wbap.com/?page_id=39671">Chris Krok Podcasts</a></li>
+	<li id="menu-item-1547894" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1547894"><a href="https://www.wbap.com/?p=985783">Impact Texas with Nicole Osei</a></li>
+	<li id="menu-item-1547888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1547888"><a href="https://www.wbap.com/?page_id=38861">The Car Pro Show</a></li>
+	<li id="menu-item-1157615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1157615"><a href="https://www.wbap.com/networth-radio/">Networth Radio with Spencer McGowan</a></li>
+	<li id="menu-item-1238920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1238920"><a>Travel With Hawkeye</a></li>
+	<li id="menu-item-1548006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1548006"><a href="https://www.wbap.com/category/audio-on-demand/">Audio On-Demand</a></li>
+</ul>
+</li>
+<li id="menu-item-1581633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1581633"><a>PETS</a>
+<ul class="sub-menu">
+	<li id="menu-item-1581636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1581636"><a href="https://www.facebook.com/story.php?story_fbid=868816488594979&#038;id=100063999076420&#038;mibextid=ox5AEW&#038;rdid=syJrsDVRO9cDHXGw">WBAP&#8217;s Pet of the Week!</a></li>
+</ul>
+</li>
+<li id="menu-item-812332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-812332"><a href="https://wbapam.clubviprewards.com/contests">CONTESTS</a>
+<ul class="sub-menu">
+	<li id="menu-item-1561031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1561031"><a href="https://wbapam.clubviprewards.com/contests">Enter to Win</a></li>
+	<li id="menu-item-1369934" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1369934"><a href="https://www.wbap.com/category/contests-listen-to-win/">Listen to Win</a></li>
+	<li id="menu-item-1253571" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1253571"><a href="https://www.wbap.com/local-contest-rules/">Local Contest Rules</a></li>
+</ul>
+</li>
+<li id="menu-item-1369936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1369936"><a href="https://www.wbap.com/events/">Events</a></li>
+<li id="menu-item-839524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-839524"><a href="https://www.wbap.com/connect/">Connect</a>
+<ul class="sub-menu">
+	<li id="menu-item-839536" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-839536"><a href="https://www.wbap.com/station-information/">Station Information</a></li>
+	<li id="menu-item-839542" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-839542"><a href="https://www.wbap.com/station-history/">Station History</a></li>
+	<li id="menu-item-833065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-833065"><a href="https://www.wbap.com/community-resources/">Community Resources</a></li>
+	<li id="menu-item-1358422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1358422"><a title="The coordinated advertising campaign that delivers results GUARANTEED." href="/epic">Advertising</a></li>
+	<li id="menu-item-1580435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1580435"><a href="https://cumulusmedia.jobs.net/jobs?keywords=&#038;location=Dallas%2C+TX%2C+USA">Careers</a></li>
+</ul>
+</li>
+</ul></div><!-- .nav-horizontal nav-align-left -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-9" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<aside id="block-35" class="promo-reel block block-type-widget-area block-fluid-height" data-alias="Home - Promo Reel" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="amp_promo_reel-3" class="widget widget_amp_promo_reel sidebar_promo">
+<div class="sliderWrapper"><div class="sliderBody" style=""><div class="bxslider" data-navigation-arrows='1' data-rotation-time='5000' data-pager-type='thumbnails'><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/2024/05/30/trump-guilty-on-all-34-hush-money-felony-charges-in-new-york-trial/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/05/30161324/WBAPGuilty.png"><div class="promoCaption bottom"><div class="captionTitle">  </div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.open('https://www.wbap.com/dfw-live-weather-radar/', '_blank')" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/03/21111410/WBAP-Weather-.png"><div class="promoCaption bottom"><div class="captionTitle">Live Weather Radar</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/how-to-help-north-texans-impacted-by-tornadoes/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/05/28150005/How-to-help.jpg"><div class="promoCaption bottom"><div class="captionTitle">HOW TO HELP North Texans Impacted by Tornadoes</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/2024/05/30/verdict-soon-announced-in-trump-hush-money-case-new-york/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2023/08/24201308/Donald-Trump-Indictment-Fulton-Georgia-Mugshot_02.webp"><div class="promoCaption bottom"><div class="captionTitle">Verdict Soon Announced in Trump "Hush Money" Case/New York</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/kilmeadeindfw/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/05/21145857/TUESDAY-JUNE-11.png"><div class="promoCaption bottom"><div class="captionTitle">  </div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.open('https://www.wbap.com/2024/05/27/run-off-election-voting-results/', '_blank')" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/05/28103138/Untitled-design-20.jpg"><div class="promoCaption bottom"><div class="captionTitle">Run-Off Election Voting Results</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/2024/05/01/trump-fined-for-gag-order-violations/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/05/01070826/trump.jpg"><div class="promoCaption bottom"><div class="captionTitle">TRUMP FINED FOR GAG ORDER VIOLATIONS</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/2024/05/31/your-chance-to-win-5k-for-your-top-pop/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/2024/05/30145939/TopPop-Promoreel.jpg"><div class="promoCaption bottom"><div class="captionTitle">Enter to win!</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wbap.com/2024/04/26/how-the-anti-semetic-protests-are-covered-in-media/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/274/2024/04/26102132/protest.jpg"><div class="promoCaption bottom"><div class="captionTitle">HOW THE ANTI-SEMETIC PROTESTS ARE COVERED IN MEDIA</div></div></div></div></div><div class="sliderThumbBar"><div class="sliderThumbViewport"><div class="sliderThumb selected"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/05/30161324/WBAPGuilty-150x118.png);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="0"></div><div class="sliderThumbCaption">  </div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/03/21111410/WBAP-Weather--150x118.png);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="1"></div><div class="sliderThumbCaption">Live Weather Radar</div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/05/28150005/How-to-help-150x84.jpg);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="2"></div><div class="sliderThumbCaption">HOW TO HELP North Texans Impacted by Tornadoes</div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2023/08/24201308/Donald-Trump-Indictment-Fulton-Georgia-Mugshot_02-150x75.webp);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="3"></div><div class="sliderThumbCaption">Verdict Soon Announced in Trump "Hush Money" Case/New York</div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/05/21145857/TUESDAY-JUNE-11-150x126.png);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="4"></div><div class="sliderThumbCaption">  </div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/05/28103138/Untitled-design-20-150x150.jpg);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="5"></div><div class="sliderThumbCaption">Run-Off Election Voting Results</div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/05/01070826/trump-150x84.jpg);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="6"></div><div class="sliderThumbCaption">TRUMP FINED FOR GAG ORDER VIOLATIONS</div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/2024/05/30145939/TopPop-Promoreel-150x150.jpg);background-color: #000;background-size: cover;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="7"></div><div class="sliderThumbCaption">Enter to win!</div></div><div class="sliderThumb"><div class="sliderThumbImage" style="background-image: url(https://express-images.franklymedia.com/6616/sites/274/2024/04/26102132/protest-150x84.jpg);background-color: #000;background-size: contain;background-position: 50% 50%;background-repeat: no-repeat;position: relative;" data-slide-index="8"></div><div class="sliderThumbCaption">HOW THE ANTI-SEMETIC PROTESTS ARE COVERED IN MEDIA</div></div></div></div></div></li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-35 -->
+<div id="block-bmy561c1cc633472" class="mobile-only block block-type-custom-code block-fluid-height" data-alias="Responsive Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-18" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-18",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [])
+				.addSize([0,0], [[300, 250]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "midresponsive")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bmy561c1cc633472 -->
+<aside id="block-bdh65fdc43cb38a2" class="block block-type-widget-area block-fluid-height" data-alias="Homepage : Below Promo Reel" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="custom_html-3" class="widget_text widget widget_custom_html">
+<div class="textwidget custom-html-widget"><div style="text-align: center">
+	<img src="https://radar.weather.gov/ridge/standard/KFWS_loop.gif" loading="lazy" alt="Live Weather Radar">
+</div></div></li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bdh65fdc43cb38a2 -->
+<div id="block-39" class="post-list block block-type-content block-fluid-height" data-alias="24/7 WBAP NEWSROOM NEWS">
+<div class="block-content">
+<hgroup><h1 class="block-title"><a href="/category/news-room-news/"><span>24/7 NEWSROOM NEWS</span></a></h1><h2 class="block-subtitle"><!--Sponsored by: <a href="#"><img src=""></a>--></h2></hgroup><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-1584855" class="post-1584855 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-wbap-247-news author-salan custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/31/storms-lead-to-hundreds-of-flight-delays-and-cancellations-at-dfw-airport/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2020/07/01155540/DFW-AIRPORT-1.jpg" alt="Storms Lead to Hundreds of Flight Delays, and Cancellations at DFW Airport" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/31/storms-lead-to-hundreds-of-flight-delays-and-cancellations-at-dfw-airport/" title="Storms Lead to Hundreds of Flight Delays, and Cancellations at DFW Airport" rel="bookmark">Storms Lead to Hundreds of Flight Delays, and Cancellations at DFW Airport</a></h2></header></article><!-- #post-1584855 --><article id="post-1584849" class="post-1584849 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-wbap-247-news author-salan alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/doncics-36-points-spur-mavericks-to-nba-finals-with-124-103-toppling-of-timberwolves-in-game-5/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2023/07/05183955/Dallas_Mavericks_logo.svg_.png" alt="Doncic&#8217;s 36 Points Spur Mavericks to NBA Finals With 124-103 Toppling of Timberwolves in Game 5" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/doncics-36-points-spur-mavericks-to-nba-finals-with-124-103-toppling-of-timberwolves-in-game-5/" title="Doncic&#8217;s 36 Points Spur Mavericks to NBA Finals With 124-103 Toppling of Timberwolves in Game 5" rel="bookmark">Doncic&#8217;s 36 Points Spur Mavericks to NBA Finals With 124-103 Toppling of Timberwolves in Game 5</a></h2></header></article><!-- #post-1584849 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1584809" class="post-1584809 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-breaking-news category-klif category-national-news category-national-top-stories category-promo-reel category-promoreel-story category-wbap-247-news category-wbap-breaking-news author-kjames custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/trump-guilty-on-all-34-hush-money-felony-charges-in-new-york-trial/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2023/08/24201308/Donald-Trump-Indictment-Fulton-Georgia-Mugshot_02.webp" alt="Trump GUILTY on all 34 Hush Money Felony Charges in New York Trial" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/trump-guilty-on-all-34-hush-money-felony-charges-in-new-york-trial/" title="Trump GUILTY on all 34 Hush Money Felony Charges in New York Trial" rel="bookmark">Trump GUILTY on all 34 Hush Money Felony Charges in New York Trial</a></h2></header></article><!-- #post-1584809 --><article id="post-1584802" class="post-1584802 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-breaking-news category-klif category-national-features category-national-news category-national-top-stories category-promo-reel category-promoreel-story category-top-stories category-wbap-247-news author-kjames alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/verdict-soon-announced-in-trump-hush-money-case-new-york/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2023/08/24201308/Donald-Trump-Indictment-Fulton-Georgia-Mugshot_02.webp" alt="Verdict Soon Announced in Trump &#8220;Hush Money&#8221; Case/New York" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/verdict-soon-announced-in-trump-hush-money-case-new-york/" title="Verdict Soon Announced in Trump &#8220;Hush Money&#8221; Case/New York" rel="bookmark">Verdict Soon Announced in Trump &#8220;Hush Money&#8221; Case/New York</a></h2></header></article><!-- #post-1584802 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1584776" class="post-1584776 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-promo-reel category-promoreel-story category-wbap-247-news author-nicoleosei custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/sansom-park-police-searching-for-parents-of-child-found-wandering-near-apartment-complex/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/05/30123826/Sanson-Park-Found-Child-1.png" alt="Sansom Park Police Searching for Parents of Child Found Wandering Near Apartment Complex" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/sansom-park-police-searching-for-parents-of-child-found-wandering-near-apartment-complex/" title="Sansom Park Police Searching for Parents of Child Found Wandering Near Apartment Complex" rel="bookmark">Sansom Park Police Searching for Parents of Child Found Wandering Near Apartment Complex</a></h2></header></article><!-- #post-1584776 --><article id="post-1584758" class="post-1584758 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-promo-reel category-wbap-247-news author-mtraina alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/supreme-court-clears-way-for-nra-free-speech-lawsuit/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/02/26125556/SUPREME-COURT-GETTY.jpg" alt="Supreme Court Clears Way for NRA Free Speech Lawsuit" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/supreme-court-clears-way-for-nra-free-speech-lawsuit/" title="Supreme Court Clears Way for NRA Free Speech Lawsuit" rel="bookmark">Supreme Court Clears Way for NRA Free Speech Lawsuit</a></h2></header></article><!-- #post-1584758 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1584747" class="post-1584747 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-promo-reel category-wbap-247-news author-mtraina custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/trump-says-new-york-d-a-hasnt-named-a-crime-in-hush-money-trial/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/05/29162547/DONALD-TRUMP-GETTY-7.jpg" alt="Trump Says New York D.A. Hasn&#8217;t Named a Crime in Hush Money Trial" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/trump-says-new-york-d-a-hasnt-named-a-crime-in-hush-money-trial/" title="Trump Says New York D.A. Hasn&#8217;t Named a Crime in Hush Money Trial" rel="bookmark">Trump Says New York D.A. Hasn&#8217;t Named a Crime in Hush Money Trial</a></h2></header></article><!-- #post-1584747 --><article id="post-1584735" class="post-1584735 post type-post status-publish format-standard has-post-thumbnail hentry category-news-room-news category-promo-reel category-promoreel-story category-wbap-247-news author-nicoleosei alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/2024/05/30/tarrant-county-jail-chief-retires-amid-controversy-over-inmate-deaths-more-protests-planned/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/05/30074227/Tarrant-County-Jail-Photo.png" alt="Tarrant County Jail Chief Retires Amid Controversy Over Inmate Deaths, More Protests Planned" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/2024/05/30/tarrant-county-jail-chief-retires-amid-controversy-over-inmate-deaths-more-protests-planned/" title="Tarrant County Jail Chief Retires Amid Controversy Over Inmate Deaths, More Protests Planned" rel="bookmark">Tarrant County Jail Chief Retires Amid Controversy Over Inmate Deaths, More Protests Planned</a></h2></header></article><!-- #post-1584735 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-39 -->
+<div id="block-bri635ab446cd782" class="block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+<a  href="javascript:void(0)" onClick="window.open('http://affiliates.foxnewsradio.com/Radio/special.html','playerWin','width=640,height=350');">Listen Now!</a>
+
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bri635ab446cd782 -->
+<div id="block-bco5f46c6a4501d7" class="post-list block block-type-content block-fluid-height" data-alias="Audio On Demand">
+<div class="block-content">
+<hgroup><h1 class="block-title"><a href="/category/audio-on-demand/"><span>Audio On Demand</span></a></h1><h2 class="block-subtitle"><!--Sponsored by: <a href="#"><img src=""></a>--></h2></hgroup><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-1570411" class="post-1570411 page type-page status-publish has-post-thumbnail hentry category-news-room-news category-audio-on-demand category-audio-on-demand-promo-reel category-homepage category-podcast-home-page category-top-stories category-whats-happening author-afaul custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/jfk-60-a-newstalk-820-wbap-special-on-the-60th-anniversary-of-john-f-kennedys-assassination/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2023/11/27121830/Kennedy-1.png" alt="JFK 60: A Newstalk 820 WBAP Special on the 60th Anniversary of John F Kennedy&#8217;s Assassination" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/jfk-60-a-newstalk-820-wbap-special-on-the-60th-anniversary-of-john-f-kennedys-assassination/" title="JFK 60: A Newstalk 820 WBAP Special on the 60th Anniversary of John F Kennedy&#8217;s Assassination" rel="bookmark">JFK 60: A Newstalk 820 WBAP Special on the 60th Anniversary of John F Kennedy&#8217;s Assassination</a></h2></header></article><!-- #post-1570411 --><article id="post-1470035" class="post-1470035 page type-page status-publish has-post-thumbnail hentry category-podcast-home-page author-twalker alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/wbap-news-updates/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/01/03081043/WBAP-Social-Logo-1-1-300x300.png" alt="WBAP News Updates" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/wbap-news-updates/" title="WBAP News Updates" rel="bookmark">WBAP News Updates</a></h2></header></article><!-- #post-1470035 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-38975" class="post-38975 page type-page status-publish has-post-thumbnail hentry category-podcast-home-page tag-dallas tag-texas tag-wbap tag-wbap-247-news tag-wbap-247-news-2 author-alexwells custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/podcasts/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/03/13105324/WBAP-Morning-News-5-1.png" alt="WBAP Morning News Podcast" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/podcasts/" title="WBAP Morning News Podcast" rel="bookmark">WBAP Morning News Podcast</a></h2></header></article><!-- #post-38975 --><article id="post-1507448" class="post-1507448 page type-page status-publish has-post-thumbnail hentry category-podcast-home-page author-akareem alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/the-casey-bartholomew-show/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/01/03064905/CHRIS-KROK-2-300x300.png" alt="The Casey Bartholomew Show" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/the-casey-bartholomew-show/" title="The Casey Bartholomew Show" rel="bookmark">The Casey Bartholomew Show</a></h2></header></article><!-- #post-1507448 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-39671" class="post-39671 page type-page status-publish has-post-thumbnail hentry category-podcast-home-page author-jlanzarotti custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wbap.com/chris-krok-podcasts/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/274/2024/01/03080549/Chris-Krok-Podcasts-300x300.png" alt="Chris Krok Podcast" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/chris-krok-podcasts/" title="Chris Krok Podcast" rel="bookmark">Chris Krok Podcast</a></h2></header></article><!-- #post-39671 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bco5f46c6a4501d7 -->
+<div id="block-75" class="block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones responsive-block-hiding-device-tablets-landscape responsive-block-hiding-device-tablets-portrait responsive-block-hiding-device-computers" data-alias="">
+<div class="block-content">
+nbsp;
+</div><!-- .block-content -->
+
+</div><!-- #block-75 -->
+
+<section class="sub-column sub-column-1 column column-1 grid-width-8 grid-left-0">
+<div id="block-ba85528028cc8d09" class="post-list padded block block-type-content block-fluid-height" data-alias="Newsfront">
+<div class="block-content">
+<h1 class="block-title"><span>Newsfront</span></h1><div class="loop"><article id="post-1584851" class="post-1584851 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/legal-experts-to-newsmax-something-fishy-in-quick-fraud-verdict-against-trump/" title="Legal Experts to Newsmax: Something &#8216;Fishy&#8217; in Quick Fraud Verdict Against Trump" rel="bookmark">Legal Experts to Newsmax: Something &#8216;Fishy&#8217; in Quick Fraud Verdict Against Trump</a></h2></header></article><!-- #post-1584851 -->
+
+<div class="entry-row">
+
+<article id="post-1584852" class="post-1584852 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/joseph-digenova-to-newsmax-judge-in-n-y-case-got-verdict-he-wanted/" title="Joseph diGenova to Newsmax: Judge in N.Y. Case Got Verdict He Wanted" rel="bookmark">Joseph diGenova to Newsmax: Judge in N.Y. Case Got Verdict He Wanted</a></h2></header></article><!-- #post-1584852 --><article id="post-1584853" class="post-1584853 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/dems-react-to-verdict-justice-arrived-for-trump/" title="Dems React to Verdict: &#8216;Justice Arrived for Trump&#8217;" rel="bookmark">Dems React to Verdict: &#8216;Justice Arrived for Trump&#8217;</a></h2></header></article><!-- #post-1584853 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1584854" class="post-1584854 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/trumps-donation-website-crashes-after-guilty-verdict/" title="Trump&#8217;s Donation Website Crashes After Guilty Verdict" rel="bookmark">Trump&#8217;s Donation Website Crashes After Guilty Verdict</a></h2></header></article><!-- #post-1584854 --><article id="post-1584844" class="post-1584844 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/stormy-daniels-husband-big-weight-off-her-shoulders/" title="Stormy Daniels&#8217; Husband: Big Weight Off Her Shoulders" rel="bookmark">Stormy Daniels&#8217; Husband: Big Weight Off Her Shoulders</a></h2></header></article><!-- #post-1584844 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1584845" class="post-1584845 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/jesse-binnall-to-newsmax-judge-gave-jury-no-other-option-but-convict/" title="Jesse Binnall to Newsmax: Judge Gave Jury No Other Option But Convict" rel="bookmark">Jesse Binnall to Newsmax: Judge Gave Jury No Other Option But Convict</a></h2></header></article><!-- #post-1584845 --><article id="post-1584846" class="post-1584846 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/dershowitz-to-newsmax-trump-needs-to-fire-his-lawyers/" title="Dershowitz to Newsmax: Trump Needs to Fire His Lawyers" rel="bookmark">Dershowitz to Newsmax: Trump Needs to Fire His Lawyers</a></h2></header></article><!-- #post-1584846 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1584847" class="post-1584847 feed_posts type-feed_posts status-publish hentry category-newsmax-newsfront custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/kristol-carville-trump-running-disciplined-campaign/" title="Kristol, Carville: Trump Running &#8216;Disciplined&#8217; Campaign" rel="bookmark">Kristol, Carville: Trump Running &#8216;Disciplined&#8217; Campaign</a></h2></header></article><!-- #post-1584847 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-ba85528028cc8d09 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-8 grid-left-0">
+<div id="block-102" class="post-list padded block block-type-content block-fluid-height" data-alias="Money News">
+<div class="block-content">
+<h1 class="block-title"><span>Money News</span></h1><div class="loop"><article id="post-1584277" class="post-1584277 feed_posts type-feed_posts status-publish hentry category-newsmax-money alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/after-musk-sues-media-matters-lays-off-a-dozen-staffers/" title="After Musk Sues, Media Matters Lays Off a Dozen Staffers" rel="bookmark">After Musk Sues, Media Matters Lays Off a Dozen Staffers</a></h2></header></article><!-- #post-1584277 -->
+
+<div class="entry-row">
+
+<article id="post-1584194" class="post-1584194 feed_posts type-feed_posts status-publish hentry category-newsmax-money custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/openai-news-corp-strike-deal-to-share-content/" title="OpenAI, News Corp Strike Deal to Share Content" rel="bookmark">OpenAI, News Corp Strike Deal to Share Content</a></h2></header></article><!-- #post-1584194 --><article id="post-1583850" class="post-1583850 feed_posts type-feed_posts status-publish hentry category-newsmax-money alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/billionaire-ray-dalio-us-on-the-brink-of-civil-war/" title="Billionaire Ray Dalio: US &#8216;On the Brink&#8217; of Civil War" rel="bookmark">Billionaire Ray Dalio: US &#8216;On the Brink&#8217; of Civil War</a></h2></header></article><!-- #post-1583850 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1583332" class="post-1583332 feed_posts type-feed_posts status-publish hentry category-newsmax-money custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/biden-wants-to-raise-taxes-on-the-rich-ignores-deficit/" title="Biden Wants to Raise Taxes on the Rich, Ignores Deficit" rel="bookmark">Biden Wants to Raise Taxes on the Rich, Ignores Deficit</a></h2></header></article><!-- #post-1583332 --><article id="post-1582896" class="post-1582896 feed_posts type-feed_posts status-publish hentry category-newsmax-money alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/hims-ceos-support-of-college-protesters-sparks-outrage/" title="Hims CEO&#8217;s Support of College Protesters Sparks Outrage" rel="bookmark">Hims CEO&#8217;s Support of College Protesters Sparks Outrage</a></h2></header></article><!-- #post-1582896 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1582776" class="post-1582776 feed_posts type-feed_posts status-publish hentry category-newsmax-money custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/second-boeing-whistleblower-dies-in-two-months/" title="Second Boeing Whistleblower Dies in Two Months" rel="bookmark">Second Boeing Whistleblower Dies in Two Months</a></h2></header></article><!-- #post-1582776 --><article id="post-1582210" class="post-1582210 feed_posts type-feed_posts status-publish hentry category-newsmax-money alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.wbap.com/news/gdp-growth-misses-estimate-by-64-percent-recession-fears-real/" title="GDP Growth Misses Estimate by 64 Percent, Recession Fears Real" rel="bookmark">GDP Growth Misses Estimate by 64 Percent, Recession Fears Real</a></h2></header></article><!-- #post-1582210 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-102 -->
+
+</section><!-- .sub-column -->
+<div id="block-bd755c8f45f4f648" class="block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones responsive-block-hiding-device-tablets-landscape responsive-block-hiding-device-tablets-portrait responsive-block-hiding-device-computers" data-alias="">
+<div class="block-content">
+nbsp;
+</div><!-- .block-content -->
+
+</div><!-- #block-bd755c8f45f4f648 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<nav id="block-bt358cc3a31d1d81" class="search-box block block-type-navigation block-fluid-height" data-alias="Search Box" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left nav-search-active nav-search-position-right"><div class="nav-search">
+		<form method="get" id="searchform" action="https://www.wbap.com/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="text" class="field" name="s" id="s" value="Type to search, then press enter" onclick="if(this.value=='Type to search, then press enter')this.value='';" onblur="if(this.value=='')this.value='Type to search, then press enter';" />
+			<input type="submit" class="submit" name="searchsubmit" id="searchsubmit" value="Search" />
+		</form>
+	</div></div><!-- .nav-horizontal nav-align-left nav-search-active nav-search-position-right -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-bt358cc3a31d1d81 -->
+<div id="block-34" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 1">
+<div class="block-content">
+<div id="div-gpt-ad-1704839787986-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1704839787986-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<aside id="block-bta61b0d1c96e382" class="post-list block block-type-widget-area block-fluid-height" data-alias="Top Right Rail Widget Area" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area">
+		<li id="recent-posts-3" class="widget widget_recent_entries">
+
+		<h3 class="widget-title"><span class="widget-inner">Recent Posts</span></h3>
+
+		<ul>
+											<li>
+					<a href="https://www.wbap.com/2024/05/31/your-chance-to-win-5k-for-your-top-pop/">Your chance to win 5k for your Top Pop</a>
+									</li>
+											<li>
+					<a href="https://www.wbap.com/2024/05/31/storms-lead-to-hundreds-of-flight-delays-and-cancellations-at-dfw-airport/">Storms Lead to Hundreds of Flight Delays, and Cancellations at DFW Airport</a>
+									</li>
+											<li>
+					<a href="https://www.wbap.com/2024/05/30/doncics-36-points-spur-mavericks-to-nba-finals-with-124-103-toppling-of-timberwolves-in-game-5/">Doncic&#8217;s 36 Points Spur Mavericks to NBA Finals With 124-103 Toppling of Timberwolves in Game 5</a>
+									</li>
+											<li>
+					<a href="https://www.wbap.com/2024/05/30/trump-guilty-on-all-34-hush-money-felony-charges-in-new-york-trial/">Trump GUILTY on all 34 Hush Money Felony Charges in New York Trial</a>
+									</li>
+											<li>
+					<a href="https://www.wbap.com/2024/05/30/verdict-soon-announced-in-trump-hush-money-case-new-york/">Verdict Soon Announced in Trump &#8220;Hush Money&#8221; Case/New York</a>
+									</li>
+					</ul>
+
+		</li><!-- .widget -->
+<li id="media_image-2" class="widget widget_media_image">
+<a href="https://www.wbap.com/2024/05/17/how-to-stream-news-talk-820-and-93-3-fm-wbap-on-your-mobile-phone/"><img width="300" height="152" src="https://express-images.franklymedia.com/6616/sites/274/2024/05/22141056/How_To_Stream_WBAP-300x152.png" class="image wp-image-1584182  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" decoding="async" srcset="https://express-images.franklymedia.com/6616/sites/274/2024/05/22141056/How_To_Stream_WBAP-300x152.png 300w, https://express-images.franklymedia.com/6616/sites/274/2024/05/22141056/How_To_Stream_WBAP-150x76.png 150w, https://express-images.franklymedia.com/6616/sites/274/2024/05/22141056/How_To_Stream_WBAP.png 612w" sizes="(max-width: 300px) 100vw, 300px" /></a></li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bta61b0d1c96e382 -->
+<div id="block-46" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-3" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-3",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600], [300, 50], [320, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-46 -->
+<aside id="block-ba456670e6136bab" class="headlines block block-type-widget-area block-fluid-height" data-alias="Mid Right Rail Widget Area" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="custom_html-2" class="widget_text widget widget_custom_html">
+<div class="textwidget custom-html-widget"><iframe src="https://www.sigalert.com/mobile/?partner=WBAP-AM&amp;site=portlet&amp;url=http%3A%2F%2Fwww.wbap.com%2Fwbap-traffic-team%2F&amp;tar=_top&amp;lat=33.00496&amp;lon=-96.94518&amp;z=1" style="border: 0;width: 100%"></iframe></div></li><!-- .widget -->
+	
+<div class="js-amp-poll" data-post-id="1584089" data-poll-id="poll_widget-2" data-max-choices="1">
+
+
+<!-- @brian.crigler: before widget, but shouldn't be outside of main container, right? not sure how/why this is necessarsy -->
+<li id="poll_widget-2" class="widget widget_poll_widget">
+
+<!--  before title info -->
+<h3 class="widget-title"><span class="widget-inner">
+<!--  rendered title -->
+WBAP News Listener Poll
+<!--  after title text -->
+</span></h3>
+
+<!--  sponsor, if it's on top -->
+
+<!--  rendered question -->
+<div class="question">Should future US military aid to Israel be based on conditions?</div>
+
+<form class="js-amp-poll-answers"></form>
+
+
+</li><!-- .widget -->
+</div>
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-ba456670e6136bab -->
+<div id="block-b6q5f47e89c8a72b" class="block block-type-custom-code block-fluid-height" data-alias="">
+<div class="block-content">
+<h1 class="block-title"><span>Sign up for our Newsletter</span></h1> <div class="tl-widget tl-newsletter-widget" ><script src="https://engage-library.franklymedia.com/xinban/lsf/Scripts/trtn.nl.js" type="text/javascript"></script><script type="text/html">{ "requestUrl": "https://api.enticent.com/EmailSignUpSubs.svc/jsonp/EmailSignUp?email=", "subToken": "DDEABA4B-9AA8-4A53-BE62-2BF836B6C994"}</script></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b6q5f47e89c8a72b -->
+<div id="block-48" class="facebook block block-type-custom-code block-fluid-height" data-alias="Facebook Widget">
+<div class="block-content">
+<h1 class="block-title"><span>WBAP Facebook</span></h1><div class="fb-page" data-href="https://www.facebook.com/NewsTalk820WBAP" data-width="300" data-height="525" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-48 -->
+<div id="block-bks5f47e92195287" class="nominheight banner-padding-bottom block block-type-custom-code block-fluid-height" data-alias="300x100 Ad 1">
+<div class="block-content">
+<div id='div-gpt-ad-1418849849333-7'>
+<script type="module">
+googletag.cmd.push(function() {
+	var sizeMap = googletag.sizeMapping()
+		.addSize([780,0], [[300, 100], [300, 50]])
+		.addSize([0,0], [[300, 100], [300, 50], [320, 50]])
+		.build();
+
+	googletag.defineSlot(
+		GPT_SITE_ID,
+		[[300, 100], [300, 50]],
+		'div-gpt-ad-1418849849333-7'
+	)
+	.addService(googletag.pubads())
+	.defineSizeMapping(sizeMap)
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","contest1");
+
+	googletag.display('div-gpt-ad-1418849849333-7');
+});
+</script>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bks5f47e92195287 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-10" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-51" class="728x90-ad-2 block block-type-custom-code block-fluid-height" data-alias="728x90 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-center"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-1400151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1400151"><a href="https://www.wbap.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1576476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1576476"><a href="https://www.wbap.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-1400153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1400153"><a href="https://www.wbap.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-39602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39602"><a href="https://www.wbap.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a href="https://www.cumulusmedia.com/careers/">Employment Opportunities</a></li>
+<li id="menu-item-42236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42236"><a href="https://www.wbap.com/station-information/">Station Information</a></li>
+<li id="menu-item-651624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-651624"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/am-profile/wbap">FCC Public File</a></li>
+<li id="menu-item-1445503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1445503"><a href="https://www.wbap.com/local-public-notice-announcements/">FCC Applications</a></li>
+<li id="menu-item-1425597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1425597"><a href="https://express-images.franklymedia.com/6616/sites/274/2024/03/29100532/Cumulus-Dallas-2024-EEO-Public-File-Report.pdf">EEO Public File Report</a></li>
+<li id="menu-item-1115552" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1115552"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+</ul></div><!-- .nav-horizontal nav-align-center -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2019 Cumulus Media / Cumulus Media is an equal opportunity employer / AA</p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.wbap.com/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<div id="block-b0955f181092d1eb" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-b0955f181092d1eb -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- WBAP Google Tag Manager (noscript) -->
+<noscript><iframe data-no-script src="https://www.googletagmanager.com/ns.html?id=GTM-5BP6T45G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End WBAP Google Tag Manager (noscript) -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_5235/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3LndiYXAuY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwIiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy53YmFwLmNvbS93cC1jb250ZW50L3BsdWdpbnMiLCJseiI6IjEiLCJlbWFpbFN1YiI6IkNoZWNrIHRoaXMgb3V0ISIsIm5vcCI6IkNoZWNrIHRoaXMgb3V0ISIsImxpZ2h0Ym94Ijp7ImkxOG4iOnsidENvdW50ZXIiOiIlY3VyciUgb2YgJXRvdGFsJSJ9fSwic192IjoiNS4zLjkifTs="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.wbap.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.wbap.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://wbapam.tunegenie.com/station/pwa/fullfooter.js?bs=wbapam"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "wbapam";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 498/698 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-31 03:11:20 by W3 Total Cache
+-->

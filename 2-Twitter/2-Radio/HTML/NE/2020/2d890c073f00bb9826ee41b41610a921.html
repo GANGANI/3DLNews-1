@@ -1,0 +1,831 @@
+<html>
+
+<head>
+  
+<meta name="apple-itunes-app" content="app-id=1392642543">
+<meta name="custom" content='
+
+'>
+<link rel="shortcut icon" href="https://seasoncast.com/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://seasoncast.com/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="https://seasoncast.com/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://seasoncast.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://seasoncast.com/favicon-16x16.png">
+<link rel="manifest" href="https://seasoncast.com/site.webmanifest">
+
+<title>Roncalli Catholic | SeasonCast</title>
+
+  <meta charset="utf-8">
+  <style>
+
+  video[poster]{
+
+  }
+  .vjs-poster {
+    background-color: black; !important;
+
+  }
+  .vjs-poster2 {
+    background-size: cover !important;
+    background-position: inherit !important;
+  }
+
+  div.videoAlert {
+  	width: 100%;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	position: relative;
+
+  	background: black;
+  }
+
+  div.videoAlert > div {
+  	position: absolute;
+  	top: 0; bottom: 0; left: 0; right: 0;
+
+  	color: white;
+  	font-size: 24px;
+  	text-align: center;
+  }
+  .badge{
+    font-size:0.6em !important;
+  }
+  .searchEvent {
+     outline: 0; border-width: 0 0 2px;  border-color: white; background-color:transparent; color:white
+  }
+  .searchEvent::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f0f0f0;
+  opacity: 1; /* Firefox */
+}
+
+.searchEvent:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #f0f0f0;
+}
+
+.searchEvent::-ms-input-placeholder { /* Microsoft Edge */
+  color: #f0f0f0;
+}
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@0.2.100/dist/clappr.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-markers-plugin@latest/dist/clappr-markers-plugin.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120910954-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120910954-1');
+  </script>
+  <script src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-plain.css" />
+
+
+<script>
+function searchUser(x){
+
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function() {
+    if (this.readyState == 4) {
+          if (this.status == 200 && $("#searchEvent").val()!=""){
+
+      $("#results").html(this.responseText);
+      $(".dropdown-content").show()
+      $(".dropdown-content").width($("#searchEvent").width())
+    }else{
+        $(".dropdown-content").hide()
+    }
+	}else{
+
+  }
+  };
+  if (x!=""){
+  xhttp.open("GET", "/searchEvent?u="+x, true);
+  xhttp.send();
+}else{
+   $(".dropdown-content").hide()
+}
+
+
+
+}
+</script>
+
+  <style>
+  html,body {
+  height: 100%;
+}
+
+  html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+height:100%;
+}
+.main {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+nav {
+background-color:black;
+}
+
+.authour {
+  color:grey;
+}
+.vidPlayBtn {
+
+  position: absolute; z-index: 2;
+    width: 100%; height: 100%;
+    left: 0; right: 0; top: 0; bottom: 0; margin: auto; /* center */
+}
+
+
+ tr {
+ cursor: pointer;
+ }
+  </style>
+
+  
+</head>
+
+
+<nav  style="background-color:#9E1B32" class="navbar navbar-expand-sm bg-black navbar-dark w-100 " >
+<div class="container main">
+
+
+          <a class="navbar-brand" style="float:left; color:white;font-weight:normal;font-size:1.3em;" href="/">
+            
+            Roncalli Catholic
+            
+          </a>
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      
+	    <li class="nav-item">
+        <div class="input-group">
+
+  <input type="text" id="searchEvent" class="searchEvent"  placeholder="Search Events..."  autocomplete="off" onkeyup="searchUser(this.value);" style="" >
+
+
+</div>
+
+
+				<a hidden class="nav-link" href="https://www.mylivegame.com/login.php">Login</a>
+        <div style='display: none;position: absolute;  z-index: 1;' class="dropdown-content card" >
+
+                        <ul class="list-group list-group-flush">
+                         <div id="results">
+
+
+
+
+
+                         </div>
+
+                        </ul>
+
+
+                      </div>
+      </li>
+
+
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+<body>
+  <br />
+  <div id="d" class="main container">
+    
+  
+    
+    <script src="https://cdn.jsdelivr.net/npm/p2p-media-loader-core@latest/build/p2p-media-loader-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p2p-media-loader-hlsjs@latest/build/p2p-media-loader-hlsjs.min.js"></script>
+
+
+<style>
+  div.videoAlert {
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+
+    background: black;
+  }
+
+  div.videoAlert > div {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+</style>
+
+<script>
+
+   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+   
+  function checkIfLive(){
+  setTimeout(function(){
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange=function() {
+  if (this.readyState == 4 && this.status == 200) {
+  //console.log(this.responseText);
+    if (this.responseText == "1"){
+
+    window.location.reload(true);
+
+  }
+}
+};
+xhttp.open("GET", "/isLive", true);
+xhttp.send();
+
+
+checkIfLive()
+},5000);
+}
+</script>
+
+  <div class="videoAlert">
+    <div>
+      <p style="margin:1em; font-size:50%">
+        Roncalli Catholic is not live
+
+      </p>
+    </div>
+  </div>
+  <script>checkIfLive()</script>
+
+
+
+    <br />
+    
+    <br />
+    <h5>Past Events <a class="lead" href="/list"
+        style="font-size:15px;">View All Past Events</a></h5>
+    <hr />
+
+    <style>
+  .info {
+    border-left: 1px solid rgb(221, 221, 221);
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.8rem;
+
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+  }
+
+  .scoreCard {
+    background-color: white;
+
+    border-radius: 0.3rem;
+  }
+
+  .scoreText {
+    width: 100%;
+    text-align: right;
+
+  }
+
+  .scoreCardTeams {
+    font-size: 1.3rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+  }
+
+  .scoreCardTeamsName {
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .broadcastNetwork {
+    text-align: center;
+    color: white;
+    border-radius: 0.3rem 0.3rem 0 0;
+    font-size: 0.9rem;
+    padding: 0.3rem
+  }
+
+  .scoreCardInner {
+    padding: 0.7em;
+  }
+
+
+  .scoreIMG {
+    width: auto;
+    height: 3rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+  }
+
+  .scoreColor {
+    font-size: 0.5rem;
+    line-height: 100%;
+    border-radius: 0.2rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .scoreCardHolder {
+    padding: 1rem
+  }
+
+  .scoreCardTeamList {
+    width: 70%;
+  }
+
+  .scoreCardListScore {
+    width: 30%;
+  }
+
+  .card2 {
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 0.6rem;
+  }
+</style>
+<div class="row">
+
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_XGsUTUm5MBbpU7BT6tQS"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_XGsUTUm5MBbpU7BT6tQS/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #9E1B32;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #000080;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Omaha Northwest</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[0].score">
+            5</div>
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[1].score">
+            0</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          4/26/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_OnihRt48n7ufFaeXkPFn"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_OnihRt48n7ufFaeXkPFn/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #99002C;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #DB0008;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">South Sioux City</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[0].score">
+            15</div>
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[1].score">
+            5</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          4/13/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_tmjHgk3nxmSP0a2vxKmB"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_tmjHgk3nxmSP0a2vxKmB/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #000000;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">2021 NHS Induction Mass</span>
+              </div>
+
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #000000;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">General Event</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="; " hidden
+            v-text="snippet.teams[0].score">
+            0</div>
+          <div class="scoreText" style="; " hidden
+            v-text="snippet.teams[1].score">
+            0</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          4/13/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_FE30ljv0njxEgo3IeEFp"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_FE30ljv0njxEgo3IeEFp/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #99002C;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #009400;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Skutt Catholic</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[0].score">
+            3</div>
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[1].score">
+            13</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          4/7/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_qoRY9t4o1tqM9VpO6Rno"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_qoRY9t4o1tqM9VpO6Rno/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #9E1B32;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #38A7F3;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Elkhorn North</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[0].score">
+            5</div>
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[1].score">
+            7</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          3/30/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_9KEKnbLffpT8w4aSZSQ2"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_9KEKnbLffpT8w4aSZSQ2/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #9E1B32;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #CE1141;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Elkhorn</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[0].score">
+            43</div>
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[1].score">
+            48</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          2/19/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_pbn9Jxu7LPYf4woYTIlN"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_pbn9Jxu7LPYf4woYTIlN/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #9E1B32;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #6A0DAD;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Blair</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[0].score">
+            44</div>
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[1].score">
+            25</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          2/18/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="col-md-6 p-2 scoreCard">
+    <div style="cursor:pointer;" onclick='window.location = "/watch/recording_eYmZ3zV1XV3YywjIHmrl"' class="card2">
+      <div class="row scoreCardInner">
+
+        <div class="col-7 scoreCardTeams">
+
+          <div class="d-flex flex-row">
+            <div style=" padding:0.5rem; ">
+              <img class="scoreIMG"
+                src="https://cdn.mylivegame.com/file/mylivegame/recordings/RCHSPride/recording_eYmZ3zV1XV3YywjIHmrl/thumbnail.jpg"
+                onerror="this.onerror=null;this.src='https://app.seasoncast.com/img/live_event.png';" />
+            </div>
+            <div>
+              <div style="color:#8a8a8a; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #9E1B32;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Roncalli Catholic</span>
+              </div>
+
+              <div style="; " class="scoreCardTeamsName">
+                <span class="scoreColor" style="background-color: #FFA500;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="" v-text="snippet.teams[0].name">Sergeant Bluff</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-2 scoreCardTeams">
+          <div class="scoreText" style="color:#8a8a8a; " 
+            v-text="snippet.teams[0].score">
+            34</div>
+          <div class="scoreText" style="; " 
+            v-text="snippet.teams[1].score">
+            46</div>
+
+
+        </div>
+        <div class="info col-3">
+          Final<br />
+          
+          2/15/2021
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+    <br />
+<br />
+
+<footer style="text-align:center;">
+  <small>&copy; 2024 Roncalli Catholic<br />All rights reserved.</small>
+</footer>
+
+<br />
+
+
+    <p style="width:100%; text-align: center; display: block;margin-left: auto;margin-right: auto">
+    <a  href='https://apps.apple.com/us/app/gametime-broadcast/id1392642543?mt=8"'><img alt='Download on App Store' height="40" src='https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-07-06&amp;kind=iossoftware&amp;bubble=ios_apps'/></a>
+    
+    <a  href='https://play.google.com/store/apps/details?id=com.mclmediagroup.seasoncast&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="58" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+    </p>
+  </body>
+
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+    <title>KDKR Radio</title>
+
+  <script type="text/javascript" src="//use.typekit.net/cjs2osc.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <meta name="description" content="Your stations for life. Solid Bible teaching, inspirational praise and worship music.">
+
+  <!-- Javascript that must be available up front -->
+  <script src="/assets/jquery/jquery.js"></script>
+  <script src="/assets/underscore.js"></script>
+  <script src="/assets/underscore.string.min.js"></script>
+
+  <!-- Styles -->
+  <link href="/assets/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href="/common/css/layout.css" rel="stylesheet">
+  <link href="/common/css/pages/index.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- NOTE: @import in IE8 will NOT work properly for media queries. In order
+       for Respond.js to work, you must explicitly link what is @imported in
+       CSS files. -->
+  <!--[if lt IE 9]>
+
+    <link href="/common/css/sass/layout.css" rel="stylesheet">
+
+    <script src="/assets/respond.min.js"></script>
+    <script src="/assets/html5.js"></script>
+  <![endif]-->
+
+  <style>
+    #live-streaming-section
+    {
+        background: #4baad3;
+        color: white;
+        padding: 0px;
+    }
+
+    #live-streaming-section .claim .image-main
+    {
+        margin-bottom: 20px;
+    }
+
+    #live-streaming-section .text-emphasis
+    {
+        color: #222222;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+<div id="tickertape">
+  <div class="container">
+    <div class="row">
+      <div class="navbar-inverse">
+
+        <div class="col-xs-6 col-sm-7 col-md-7 col-lg-7" style="overflow: hidden;">
+        </div>
+
+        <div class="col-xs-6 col-sm-5 col-md-5 col-lg-5">
+
+          <ul id="listenlive" class="nav navbar-nav pull-right">
+            <li>
+	      <a class="btn btn-primary" href="/listen.shtml">
+                <i class="fa fa-volume-up"></i> Listen Live
+            </a></li>
+          </ul>
+        </div>
+      </div>      
+    </div> <!-- !navbar -->      
+  </div>
+</div>  
+
+<div class="container">
+
+  <div id="main-nav" class="row">
+  
+    <div class="col-sm-6 col-md-5 col-lg-5">
+      <a href="/"><div class="logo"><img src="/images/logo.png"></div></a>
+    </div>
+    
+    <!-- Nav -->
+    <div class="navbar col-sm-6 col-md-7 col-lg-7">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-reorder" style="color: #eee;"></span>
+        </button>
+      </div>
+
+      <div class="main-nav-collapse navbar-collapse collapse">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/schedule.shtml">Programs</a></li>
+          <li><a href="/donate.shtml">Donate</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              About<b class="caret"></b>
+            </a> 
+            <ul class="dropdown-menu">
+              <li><a href="about.shtml"><span class="station-name"></span></a></li>
+              <li><a href="sponsors.shtml">Sponsors</a></li>
+              <li><a href="network.shtml">Network Stations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+    </div> <!-- !navbar -->   
+  </div> <!-- !row -->
+
+</div> <!-- !container -->
+
+
+
+
+<div id="slideshow">
+
+  <div class="container">
+
+    <!-- Carousel -->
+    <div id="the-carousel" class="carousel slide" data-interval="10000">
+
+      
+      <div class="carousel-inner">
+
+        <div id="slide-2" class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/paul_sheppard.jpg"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>Destined For Victory</h1>
+                  <h2>Paul Sheppard Weekdays at 
+                    <span class="time" data-utc="1428692400">2:00 PM</span></h2>
+                  <p>An effective communicator of God’s Word, Pastor
+                  Paul is widely known for his practical and dynamic
+                  teaching style which helps people apply the timeless
+                  truths of Scripture to their everyday lives.</p>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div id="slide-2" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/troy_brewer.jpg"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>Experiencing Real Life</h1>
+                  <h2>Troy Brewer, Weekdays at 
+                    <span class="time" data-utc="1397147400">11:30 AM</span></h2>
+                  <p>Troy Brewer is Pastor of OpenDoor Church in Burleson,
+                  Texas. His broadcast, Experiencing Real Life’s unique
+                  revelation and authentic style is real and relevant and from
+                  the Lord and is designed to empower you for victorious living.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div id="slide-2" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/davidjeremiah.jpg"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>Turning Point</h1>
+                  <h2>David Jeremiah, Weekdays at 
+                    <span data-utc="1396792800">9:00 AM</span></h2>
+                  <p>Dr. David Jeremiah is the senior pastor of Shadow
+                  Mountain Community Church in El Cajon,
+                  California. Turning Point's Mission is delivering
+                  the unchanging Word of God to an ever-changing
+                  world.</p>
+                </div>
+              </div>
+            </div>          
+          </div>          
+        </div>
+
+        <div id="slide-1" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/chuck.png"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>The Word for Today</h1>
+                  <h2>Chuck Smith, Weekdays at 
+                    <span data-utc="1396785600">7:00 AM</span></h2>
+                  <p>The Word for Today seeks to bring believers into spiritual
+                  maturity so that they would not be carried away with every wind
+                  of doctrine but rather grow in their knowledge of God through
+                  the study of His Word.</p>
+                </div>
+              </div>
+            </div>          
+          </div>          
+        </div>
+
+        <div id="slide-2" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/jeff_wickwire.png"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>LifeTalk</h1>
+                  <h2>Jeff Wickwire, Weekdays at 
+                    <span data-utc="1396782000">6:00 AM</span> &amp; 
+                    <span data-utc="1396825200">6:00 PM</span></h2>
+                  <p>Jeff Wickwire is the pastor of TurningPoint
+                  Church in Fort Worth, Texas. He is widely known for
+                  his enthusiastic and practical teaching of the Word
+                  of God. <a href="http://lifetalk.tv/">LifeTalk</a></p>
+                </div>
+              </div>
+            </div>          
+          </div>          
+        </div>
+        
+        <div id="slide-3" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/kerby_anderson.jpg"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>Point of View</h1>
+                  <h2>Kerby Anderson, Weekdays at <span data-utc="1514833200">1:00
+                   PM</span></h2>
+
+                  <p><a href="https://pointofview.net">Point of
+                  View</a> is a live, nationwide talk radio program
+                  heard daily since 1972. With a firm commitment to
+                  God’s Word as the source of all wisdom needed for
+                  today’s culture, Kerby Anderson and the Point of
+                  View team leave no topic untouched.</p>
+                </div>
+              </div>
+            </div>          
+          </div>          
+        </div>
+
+        <div id="slide-2" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/jack_hibbs.png"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>Real Radio</h1>
+                  <h2>Jack Hibbs, Weekdays at <span class="time"
+                  data-utc="1396827000">6:30 PM</span></h2>
+
+                  <p>Real Radio points people to the Word of God in a
+                  real and practical way and to bring a contemporary,
+                  powerful, no-nonsense presentation of what it has to
+                  say to this generation.</p>
+                </div>
+              </div>
+            </div>          
+          </div>          
+        </div>
+
+        <div id="slide-3" class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="carousel-img col-sm-7 col-md-5 col-lg-5">
+                <img class="border" src="/images/slideshow/greg_laurie.png"/>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-7">
+                <div class="carousel-text">
+                  <h1>A New Beginning</h1>
+                  <h2>Greg Laurie, Weekdays at <span class="time"
+                  data-utc="1396787400">7:30 AM</span></h2>
+
+                  <p>Greg Laurie is committed to “Knowing God and making him
+                  known” and to following the Acts chapter 2 model of teaching,
+                  worship, prayer, fellowship, evangelism, and communion. </p>
+                </div>
+              </div>
+            </div>          
+          </div>          
+        </div>
+
+      </div>        
+
+      
+      <a class="left carousel-control" href="#the-carousel" data-slide="prev">
+        <span>
+          <i class="icon icon-prev"></i>
+        </span>
+      </a>
+      
+      <a class="right carousel-control" href="#the-carousel" data-slide="next">
+        <span>
+          <i class="icon icon-next"></i>
+        </span>
+      </a>
+      
+    </div><!-- /.carousel -->
+    
+  </div> <!-- !container -->
+
+</div> <!-- slideshow -->
+
+<div class="container">
+
+  <div class="row claim-section">
+
+    <div class="claim claim-right">
+
+      <div class="claim-image col-sm-12 col-md-6 col-lg-6" style="text-align: center;">
+        <img class="image-main img-circle" src="images/index/bible.jpg">
+      </div>
+      
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="claim-text">
+
+          <h2 class="claim-heading">Fill your day with
+            <span class="text-emphasis">God’s Word</span>
+          </h2>
+
+          <p class="lead">We have a large variety of programs covering a broad
+          range of topics in Christian life including practical discipleship,
+          apologetics, relationships, family issues, health, education and
+          simply teaching through the Bible, verse by verse. </p>
+
+          <div style="text-align: center;">
+            <a class="btn btn-lg btn-primary" href="schedule.shtml">View Our Program Schedule</a>
+          </div>
+
+
+        </div> <!-- !claim-text -->
+      </div> <!-- !col -->
+      
+    </div> <!-- !claim -->
+
+  </div> <!-- !row -->
+
+  </div> <!-- !container -->
+
+  <div id="live-streaming-section">
+  <div class="container">
+  <div class="row claim-section">
+
+    <div class="claim claim-left">
+
+      <div class="claim-image claim-image-sm">
+        <img class="image-main img-circle" src="images/index/headphones.jpg">
+      </div> <!-- !col -->
+
+      <div class="claim-text">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+
+          <h2 class="claim-heading">
+            Listen live over the Internet <span class="text-emphasis">anywhere,
+            anytime
+            </span>
+          </h2>
+          
+          <p class="lead">We offer free, high-quality 128k audio streams of our
+          station over the Internet so you can
+          hear <span class="station-name"></span> from your computer, tablet, or
+          phone just as clear you as you can over the airwaves.</p>
+
+          <div style="text-align: center;">
+            <a class="btn btn-lg btn-default" href="/listen.shtml">Listen Online Now</a>
+          </div>
+
+        </div> <!-- !claim-text -->
+
+      </div> <!-- !col -->
+
+      <div class="claim-image claim-image-lg col-sm-12 col-md-6 col-lg-6">
+        <img class="image-main img-circle" src="images/index/headphones.jpg">
+      </div> <!-- !col -->
+            
+    </div> <!-- !claim -->
+
+  </div> <!-- !row -->
+  </div> <!-- !container -->
+  </div> <!-- bible-teaching -->
+
+  <div class="container">
+    <div class="row claim-section">
+
+      <div class="claim claim-right">
+        
+        <div class="claim-image col-sm-12 col-md-6 col-lg-6" style="text-align: center;">
+          <img class="image-main img-circle" src="images/index/guitar.jpg">
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="claim-text">
+            
+            <h2 class="claim-heading">
+              Trying to find some <span class="text-emphasis">music</span> you
+              heard?
+            </h2>
+            
+            <p class="lead">We keep a list of every song we play each day
+            available online. If you hear a song you like and want to know more
+            about it, all you need is the date and approximate time and you can
+            easily find it online.</p>
+            
+            <div style="text-align: center;">
+              <a class="btn btn-lg btn-primary" href="music.shtml">Search Our Playlists</a>
+            </div>
+            
+          </div> <!-- !claim-text -->          
+        </div> <!-- !col -->        
+      </div> <!-- !claim -->     
+    </div> <!-- !row -->    
+  </div> <!-- !container -->
+  
+
+<!-- Footer -->
+<div id="footer-1">  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div id="footer-station-info">
+
+        <h1><span id="station"><span class="station-name"></span></span>Radio 
+          </span></h1>
+        
+                  <p><font color="#FFFFFF"><span class="station-id"></span> is a
+            non-profit Christian radio station. Our main focus is solid biblical
+            teaching. We've assembled some of the best Christian radio programs
+            to inspire and help you grow in your walk with God. Our hope is to
+            help you better understand your relationship with God and how that
+            applies to your everyday life.</font></p>
+
+
+
+      </div><!-- !padding -->
+      </div><!-- !col-6 -->
+            
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+        <div class="footer-links">
+          <h2>Contact</h2>
+
+                    <table>
+            <tr><td>KDKR Radio</td></tr>
+            <tr><td>5617 Diamond Oaks Drive South Ste. 200</td></tr>
+            <tr><td>Fort Worth, TX 76117</td></tr>
+            <tr><td><hr></td></tr>
+            <tr><td><b>Email:</b> steve@kdkr.org</td></tr>
+            <tr><td><b>Phone:</b> 817.831.9130</td></tr>
+            <tr><td><b>Toll Free:</b> 877.588.9130</td></tr>
+          </table>
+
+
+        </div><!-- !links -->
+        
+      </div> <!-- !col-6 -->
+      
+    </div> <!-- !row -->
+  </div> <!-- !container -->
+</div> <!-- !footer-1 -->
+
+<div id="footer-2" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 footer-info-wrapper">
+        <span>© 2015 Penfold Communications </span>
+      </div>
+      <!-- /.footer-info-wrapper -->
+      <div class="col-xs-12 col-sm-6 footer-info-wrapper" style="text-align: right;">
+
+                  <a href="privacy.shtml">Privacy Policy</a> &nbsp; 
+        <a href="terms.shtml">Terms of Use</a> &nbsp; 
+        <a href="https://publicfiles.fcc.gov/fm-profile/KDKR">Public Inspection File</a>
+        <a href="/assets/fcc_applications.pdf">FCC Applications</a>
+
+        
+      </div> <!-- !social-link-wrapper -->
+    </div> <!-- !row -->
+  </div> <!-- !container -->
+</div> <!-- !footer-2 -->        
+
+<script src="/common/js/station.js"></script>
+<script src="/assets/monkeypatch.js"></script>
+
+<script>
+function update_nowplaying()
+{
+    // Fetch data from server. 
+    $.getJSON('nowplaying.json',
+    function(response)
+    {
+        console.log(response);
+        var text = response['title'] + ' &mdash; ' + response['artist'];
+        $('.nowplaying-text').html(text);
+    });
+}
+
+$(function() 
+{
+    // Sub station name/id/frequency in text
+    $('span.station-name').html(station.name);
+    $('span.station-id').html(station.id);
+    $('span.station-frequency').html(station.frequency);
+
+    update_nowplaying();
+    setInterval(update_nowplaying, 30000);
+
+    // Integrate underscore.string into underscore
+    _.mixin(_.str.exports());
+});
+
+function open_stream_player(URL)
+{
+    day = new Date();
+    id = day.getTime();
+    eval("page" + id + " = window.open(URL, '" + id 
+         + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=450,height=260,left=650,top=375');");
+    }
+
+</script>
+
+
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/assets/moment.min.js"></script>
+
+<script>
+$(function() 
+{
+    $('#the-carousel').carousel('cycle');
+
+    translate_times();
+});
+
+function translate_times()
+{
+    // Go through each element of class=time and convert its content from 
+    // UTC data to local timezone.
+    $('[data-utc]').each(function(index)
+    {
+        var m = moment.unix($(this).attr('data-utc'));
+        $(this).html(m.format("h:mm A"));
+
+        //console.log('Converting ' + $(this).attr('data-utc') + ' to ' + m.format("h:mm A"));
+    });
+}
+</script>
+
+</body>
+</html>

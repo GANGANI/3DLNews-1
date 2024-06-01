@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Utah Internet Radio plays music from local bands." />
+<title>Utah Internet Radio | Local Music Stations</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="images/favicon.ico">
+<meta name="verify-v1" content="9wNyQArgkkBf47tgFwFEjonGiSNPNvNMT+X6SsDiVeY=" >
+<!-- Flash -->
+<script type="text/javascript" language="javascript" src="includes/niftyplayer.js"></script>
+<script type="text/javascript" src="includes/swfobject.js"></script>
+<script type="text/javascript" id="thePlayer">
+	var params = {};
+	params.wmode = "transparent";
+	swfobject.embedSWF("flash/niftyplayer.swf?file='+songURL+'&as=0", "niftyPlayer1", "165", "40", "9.0.0", false, false, params);
+</script>
+<!-- Ajax Jazz -->
+<script type="text/javascript" src="includes/ajaxFunctions.js"></script>
+<!-- Grab Songs & Make Playlist -->
+<!-- XML Parser -->
+    <!-- Band Playlist -->
+    <script type="text/javascript" src="includes/xmlFunctions.js"></script>
+<!-- Start Song -->
+<script type="text/javascript" src="includes/playerFunctions.js"></script>
+</head>
+
+<body onload="stationSelector();">
+
+<div class="top">
+    <div style="float: left; width: 320px;">
+       	<a href="index.htm"><img src="images/logo.png" width="221" height="44" alt="" style="margin: 3px 0 0 25px;" /></a>
+    </div>
+    <div style="float: right; margin: 22px 25px 0 0;">
+    	<a href="signin.htm">sign in</a>        <span id="reportLink"><a href="report.htm">report song</a></span>
+        <form method="post" action="search.htm" style="margin: 0; padding: 0; display: inline;">
+        	<a>band search:</a> <input type="text" name="search" style="margin: 0; padding: 0;" />&nbsp;<input type="image" src="images/search.png" style="margin: 0 0 -3px 0; padding: 0;" />
+        </form>
+    </div>
+</div>
+<div class="stations">
+    <p style="margin: 10px 0 0 0; text-align: center; font-weight: bold; font-size: 18px;">Choose a Station</p>
+	<p style="margin: 10px 0 0 10px; text-align: center;">
+        <select name="station" id="station" style="vertical-align: middle;">
+        	<option value="all">All Genres</option>
+            				<option value="Acoustic">Acoustic</option>
+                <option value="Alternative">Alternative</option>
+                <!-- <option value="Bluegrass">Bluegrass</option> -->
+                <option value="Blues">Blues</option>
+                <!-- <option value="Christian">Christian</option> -->
+                <!-- <option value="Classical">Classical</option> -->
+                <option value="Country">Country</option>
+                <option value="Electronic">Electronic</option>
+                <!-- <option value="Emo">Emo</option> -->
+                <!-- <option value="Funk">Funk</option> -->
+                <!-- <option value="Hip Hop">Hip Hop / R&amp;B</option> -->
+                <option value="Indie">Indie</option>
+                <!-- <option value="Instrumental">Instrumental</option> -->
+                <!-- <option value="Jazz">Jazz</option> -->
+                <option value="Pop">Pop</option>
+                <option value="Punk">Punk</option>
+                <!-- <option value="Rap">Rap</option> -->
+                <!-- <option value="Reggae">Reggae</option> -->
+                <option value="Rock">Rock</option>
+                <!-- <option value="Ska">Ska</option> -->
+                <!-- <option value="Vocal">Vocal</option> -->        </select>&nbsp;
+        <input type="image" src="images/chooseStationButton.png" onclick="chooseStation();" style="vertical-align: middle;" />
+    </p>
+    <p style="margin: 20px 0 10px 0; font-weight: bold; font-size: 14px; text-align: center;">or...<br /><span>Create Your Own</span></p>
+    <div style="margin: 0 auto; width: 165px; text-align: left;">
+        <p style="margin: 0;"><span style="font-size:12px; font-weight: bold;">Genre 1</span><br />
+        <select name="genre1" id="genre1">
+        	<option value="none"></option>
+            				<option value="A cappella">A cappella</option>
+                <option value="Acoustic">Acoustic</option>
+                <option value="Alternative">Alternative</option>
+                <option value="Ambient">Ambient</option>
+                <option value="Ballad">Ballad</option>
+                <option value="Barbershop">Barbershop</option>
+                <option value="Bass">Bass</option>
+                <option value="Breakbeat">Breakbeat</option>
+                <option value="Bluegrass">Bluegrass</option>
+                <option value="Blues">Blues</option>
+                <option value="Brass">Brass</option>
+                <option value="Christian">Christian</option>
+                <option value="Classic Rock">Classic Rock</option>
+                <option value="Classical">Classical</option>
+                <option value="Club">Club</option>
+                <option value="Country">Country</option>
+                <option value="Downtempo">Downtempo</option>
+                <option value="Drum&amp;Bass">Drum&amp;Bass</option>
+                <option value="Dub">Dub</option>
+                <option value="Easy Listening">Easy Listening</option>
+                <option value="Electronic">Electronic</option>
+                <option value="Emo">Emo</option>
+                <option value="Experimental">Experimental</option>
+                <option value="Folk">Folk</option>
+                <option value="Funk">Funk</option>
+                <option value="Hip Hop">Hip Hop</option>
+                <option value="House">House</option>
+                <option value="Indie">Indie</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Instrumental">Instrumental</option>
+                <option value="Island">Island</option>
+                <option value="Jam">Jam</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Latin">Latin</option>
+                <option value="Metal">Metal</option>
+                <option value="Opera">Opera</option>
+                <option value="Other">Other</option>
+                <option value="Piano">Piano</option>
+                <option value="Pop">Pop</option>
+                <option value="Punk">Punk</option>
+                <option value="R&amp;B">R&amp;B</option>
+                <option value="Rap">Rap</option>
+                <option value="Reggae">Reggae</option>
+                <option value="Rock">Rock</option>
+                <option value="Screamo">Screamo</option>
+                <option value="Ska">Ska</option>
+                <option value="Soul">Soul</option>
+                <option value="Strings">Strings</option>
+                <option value="Techno">Techno</option>
+                <option value="Trance">Trance</option>
+                <option value="Turntablism">Turntablism</option>
+                <option value="Vocal">Vocal</option>        </select></p>
+        <p style="margin: 5px 0;"><span style="font-size:12px; font-weight: bold;">Genre 2</span><br />
+        <select name="genre2" id="genre2">
+        	<option value="none"></option>
+            				<option value="A cappella">A cappella</option>
+                <option value="Acoustic">Acoustic</option>
+                <option value="Alternative">Alternative</option>
+                <option value="Ambient">Ambient</option>
+                <option value="Ballad">Ballad</option>
+                <option value="Barbershop">Barbershop</option>
+                <option value="Bass">Bass</option>
+                <option value="Breakbeat">Breakbeat</option>
+                <option value="Bluegrass">Bluegrass</option>
+                <option value="Blues">Blues</option>
+                <option value="Brass">Brass</option>
+                <option value="Christian">Christian</option>
+                <option value="Classic Rock">Classic Rock</option>
+                <option value="Classical">Classical</option>
+                <option value="Club">Club</option>
+                <option value="Country">Country</option>
+                <option value="Downtempo">Downtempo</option>
+                <option value="Drum&amp;Bass">Drum&amp;Bass</option>
+                <option value="Dub">Dub</option>
+                <option value="Easy Listening">Easy Listening</option>
+                <option value="Electronic">Electronic</option>
+                <option value="Emo">Emo</option>
+                <option value="Experimental">Experimental</option>
+                <option value="Folk">Folk</option>
+                <option value="Funk">Funk</option>
+                <option value="Hip Hop">Hip Hop</option>
+                <option value="House">House</option>
+                <option value="Indie">Indie</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Instrumental">Instrumental</option>
+                <option value="Island">Island</option>
+                <option value="Jam">Jam</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Latin">Latin</option>
+                <option value="Metal">Metal</option>
+                <option value="Opera">Opera</option>
+                <option value="Other">Other</option>
+                <option value="Piano">Piano</option>
+                <option value="Pop">Pop</option>
+                <option value="Punk">Punk</option>
+                <option value="R&amp;B">R&amp;B</option>
+                <option value="Rap">Rap</option>
+                <option value="Reggae">Reggae</option>
+                <option value="Rock">Rock</option>
+                <option value="Screamo">Screamo</option>
+                <option value="Ska">Ska</option>
+                <option value="Soul">Soul</option>
+                <option value="Strings">Strings</option>
+                <option value="Techno">Techno</option>
+                <option value="Trance">Trance</option>
+                <option value="Turntablism">Turntablism</option>
+                <option value="Vocal">Vocal</option>        </select></p>
+        <p style="margin: 5px 0;"><span style="font-size:12px; font-weight: bold;">Genre 3</span><br />
+        <select name="genre3" id="genre3">
+        	<option value="none"></option>
+            				<option value="A cappella">A cappella</option>
+                <option value="Acoustic">Acoustic</option>
+                <option value="Alternative">Alternative</option>
+                <option value="Ambient">Ambient</option>
+                <option value="Ballad">Ballad</option>
+                <option value="Barbershop">Barbershop</option>
+                <option value="Bass">Bass</option>
+                <option value="Breakbeat">Breakbeat</option>
+                <option value="Bluegrass">Bluegrass</option>
+                <option value="Blues">Blues</option>
+                <option value="Brass">Brass</option>
+                <option value="Christian">Christian</option>
+                <option value="Classic Rock">Classic Rock</option>
+                <option value="Classical">Classical</option>
+                <option value="Club">Club</option>
+                <option value="Country">Country</option>
+                <option value="Downtempo">Downtempo</option>
+                <option value="Drum&amp;Bass">Drum&amp;Bass</option>
+                <option value="Dub">Dub</option>
+                <option value="Easy Listening">Easy Listening</option>
+                <option value="Electronic">Electronic</option>
+                <option value="Emo">Emo</option>
+                <option value="Experimental">Experimental</option>
+                <option value="Folk">Folk</option>
+                <option value="Funk">Funk</option>
+                <option value="Hip Hop">Hip Hop</option>
+                <option value="House">House</option>
+                <option value="Indie">Indie</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Instrumental">Instrumental</option>
+                <option value="Island">Island</option>
+                <option value="Jam">Jam</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Latin">Latin</option>
+                <option value="Metal">Metal</option>
+                <option value="Opera">Opera</option>
+                <option value="Other">Other</option>
+                <option value="Piano">Piano</option>
+                <option value="Pop">Pop</option>
+                <option value="Punk">Punk</option>
+                <option value="R&amp;B">R&amp;B</option>
+                <option value="Rap">Rap</option>
+                <option value="Reggae">Reggae</option>
+                <option value="Rock">Rock</option>
+                <option value="Screamo">Screamo</option>
+                <option value="Ska">Ska</option>
+                <option value="Soul">Soul</option>
+                <option value="Strings">Strings</option>
+                <option value="Techno">Techno</option>
+                <option value="Trance">Trance</option>
+                <option value="Turntablism">Turntablism</option>
+                <option value="Vocal">Vocal</option>        </select></p>
+        <p style="margin: 5px 0;"><span style="font-size:12px; font-weight: bold;">Recording Quality:</span><br />
+        <select name="recording" id="recording">
+        	<option value="any">Any</option>
+            <option value="home">Home</option>
+            <option value="live">Live</option>
+            <option value="studio">Studio</option>
+        </select></p>
+      	<p style="font-size: 12px; font-weight: bold; margin: 10px 0 0 0;">
+        	<span>explicit content:</span><br />
+        	<input type="radio" name="explicit" id="explicit" value="no" checked="checked" /> no<input type="radio" name="explicit" value="yes" /> yes
+        	&nbsp;&nbsp;&nbsp;<input style="vertical-align: middle;" type="image" src="images/chooseStationButton.png" onclick="createStation();" />
+      	</p>
+      	<p style=" text-align: right; font-size: 12px; font-weight: bold; color: #DADADA; margin: 5px 0 0 0;">
+          	<input type="checkbox" name="remember" id="remember" value="yes" />&nbsp;remember station
+      	</p>    
+    </div>
+    <div id="message" style="text-align: center; margin: 25px 0 0 0; color: #333333;"><!-- --></div>
+</div>
+
+<div class="player">
+	<div class="screen">
+		<!-- Display Song Info / Play History-->
+		<div id="station_title"></div>
+        <div id="song"></div>
+        <div class="play_history">
+        	<div id="history1"></div>
+        	<div id="history2"></div>
+        	<div id="history3"></div>
+        	<div id="history4"></div>
+        	<div id="history5"></div>
+        </div>
+	</div>
+    <div class="toolbar">
+    	<!-- Start Player -->
+        <div id="niftyPlayer1">
+        	You Need to Download the <a href="http://www.adobe.com/products/flashplayer/">Flash Player</a>.
+        </div>
+      <div id="buttons">
+        	<a href="javascript:niftyplayer('niftyPlayer1').play()" onclick="doneYet(); startSong()"><img src="images/play.png" width="41" height="42" alt="" /></a><a href="javascript:niftyplayer('niftyPlayer1').playToggle()"><img src="images/pause.png" width="41" height="42" alt="" /></a><a href="javascript:niftyplayer('niftyPlayer1').stop()"><img src="images/stop.png" width="41" height="42" alt="" /></a><a href="javascript:void(0);
+" onclick="playHistory(); loadTrack(); startSong()"><img src="images/skip.png" width="41" height="42" alt="" /></a>
+   	  </div>
+        <!--<div id="nextback">    
+            <a href="javascript:niftyplayer('niftyPlayer1').play()" onclick="playHistory(); loadTrack();"><img src="images/next.png" width="21" height="21" alt="" /></a><br />
+            <img src="images/back.png" width="21" height="21" alt="" />        </div> -->
+  </div>
+	
+</div>
+
+<fieldset class="additional_links">
+	<a href="events.htm">Upcoming Shows</a>
+</fieldset>
+<fieldset class="sponsors">
+	<legend style="margin: 0 0 0 5px; font-weight: bold; font-size: 14px; color: #4A4A4A;">Sponsors:</legend>
+    <p style="margin: 0; height: 50px;">&nbsp;</p>
+            	<script type="text/javascript"><!--
+                google_ad_client = "pub-2448716738767068";
+                /* UIR, Image 250x250 */
+                google_ad_slot = "3635952813";
+                google_ad_width = 250;
+                google_ad_height = 250;
+                //-->
+                </script>
+                <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script></fieldset>
+
+
+<div class="footer">
+	<a href="index.htm">home</a><a href="about.htm">about</a><a href="tos.htm">terms of service</a><a href="privacy.htm">privacy</a><a href="create-account.htm">add your band</a><a href="contact.htm">contact</a>
+	<hr style="background-color: #C9C9C9; color: #C9C9C9; border: none; height: 1px; width: 405px;" />
+    <p style="font-size: 12px; font-weight: bold; color: #4d4d4d;">copyright &copy;2024 Utah Internet Radio<br /><a href="http://www.webfiz.com" style="color: #999999;">powered by:&nbsp; fiz<!--<img src="images/poweredby.png" width="120" height="41" alt="" />--></a></p>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1177746-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

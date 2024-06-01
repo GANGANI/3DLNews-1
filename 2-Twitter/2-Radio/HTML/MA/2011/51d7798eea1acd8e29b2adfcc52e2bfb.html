@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();</script>
+	
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO plugin v22.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>9+ Sanrio Clothing Themes For Adults (Kawaii Outfit Aesthetic &amp; More Tips) - Lockerz</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2Cregular%2Citalic%2C600%2C700&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2Cregular%2Citalic%2C600%2C700&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2Cregular%2Citalic%2C600%2C700&#038;display=swap" /></noscript>
+	<link rel="canonical" href="https://lockerz.com/sanrio-clothing-outfit-aesthetic/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="9+ Sanrio Clothing Themes For Adults (Kawaii Outfit Aesthetic &amp; More Tips) - Lockerz" />
+	<meta property="og:description" content="Hello Kitty, My Melody, and Keroppi might seem like a strange assortment of characters to some, but for the people ... Read more" />
+	<meta property="og:url" content="https://lockerz.com/sanrio-clothing-outfit-aesthetic/" />
+	<meta property="og:site_name" content="Lockerz" />
+	<meta property="article:published_time" content="2024-02-13T13:27:06+00:00" />
+	<meta name="author" content="Style Kawaii" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Style Kawaii" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="25 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#article","isPartOf":{"@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/"},"author":{"name":"Style Kawaii","@id":"https://lockerz.com/#/schema/person/5bd2d9b9f0b4aa2ed4510eb57b552ab0"},"headline":"9+ Sanrio Clothing Themes For Adults (Kawaii Outfit Aesthetic &#038; More Tips)","datePublished":"2024-02-13T13:27:06+00:00","dateModified":"2024-02-13T13:27:06+00:00","mainEntityOfPage":{"@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/"},"wordCount":2302,"commentCount":0,"publisher":{"@id":"https://lockerz.com/#organization"},"image":{"@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#primaryimage"},"thumbnailUrl":"","articleSection":["Fashion &amp; Style"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/","url":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/","name":"9+ Sanrio Clothing Themes For Adults (Kawaii Outfit Aesthetic & More Tips) - Lockerz","isPartOf":{"@id":"https://lockerz.com/#website"},"primaryImageOfPage":{"@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#primaryimage"},"image":{"@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#primaryimage"},"thumbnailUrl":"","datePublished":"2024-02-13T13:27:06+00:00","dateModified":"2024-02-13T13:27:06+00:00","breadcrumb":{"@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://lockerz.com/sanrio-clothing-outfit-aesthetic/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#primaryimage","url":"","contentUrl":""},{"@type":"BreadcrumbList","@id":"https://lockerz.com/sanrio-clothing-outfit-aesthetic/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://lockerz.com/"},{"@type":"ListItem","position":2,"name":"9+ Sanrio Clothing Themes For Adults (Kawaii Outfit Aesthetic &#038; More Tips)"}]},{"@type":"WebSite","@id":"https://lockerz.com/#website","url":"https://lockerz.com/","name":"Lockerz","description":"Unlock a World of Knowledge and Inspiration","publisher":{"@id":"https://lockerz.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://lockerz.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://lockerz.com/#organization","name":"Lockerz","url":"https://lockerz.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://lockerz.com/#/schema/logo/image/","url":"https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-logo.png","contentUrl":"https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-logo.png","width":500,"height":244,"caption":"Lockerz"},"image":{"@id":"https://lockerz.com/#/schema/logo/image/"}},{"@type":"Person","@id":"https://lockerz.com/#/schema/person/5bd2d9b9f0b4aa2ed4510eb57b552ab0","name":"Style Kawaii","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://lockerz.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/8844523498a49819a2d6442e62315af4?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/8844523498a49819a2d6442e62315af4?s=96&d=mm&r=g","caption":"Style Kawaii"},"url":"https://lockerz.com/author/style/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lockerz &raquo; Feed" href="https://lockerz.com/feed/" />
+<style type="text/css" media="all">
+.wpautoterms-footer{background-color:#ffffff;text-align:center;}
+.wpautoterms-footer a{color:#000000;font-family:Arial, sans-serif;font-size:14px;}
+.wpautoterms-footer .separator{color:#cccccc;font-family:Arial, sans-serif;font-size:14px;}</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://lockerz.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.3' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--color--accent-2: var(--accent-2);--wp--preset--color--accent-hover: var(--accent-hover);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='wpautoterms_css-css' href='https://lockerz.com/wp-content/cache/min/1/wp-content/plugins/auto-terms-of-service-and-privacy-policy/css/wpautoterms.css?ver=1713960198' media='all' />
+<link data-minify="1" rel='stylesheet' id='c4wp-public-css' href='https://lockerz.com/wp-content/cache/min/1/wp-content/plugins/wp-captcha/assets/css/c4wp-public.css?ver=1713960198' media='all' />
+<link rel='stylesheet' id='generate-widget-areas-css' href='https://lockerz.com/wp-content/themes/generatepress/assets/css/components/widget-areas.min.css?ver=3.4.0' media='all' />
+<link rel='stylesheet' id='generate-style-css' href='https://lockerz.com/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.4.0' media='all' />
+<style id='generate-style-inline-css'>
+body{background-color:var(--base);color:var(--contrast);}a{color:#1b78e2;}a:hover, a:focus, a:active{color:var(--accent-hover);}.wp-block-group__inner-container{max-width:1200px;margin-left:auto;margin-right:auto;}.site-header .header-image{width:210px;}:root{--contrast:#212121;--contrast-2:#2f4468;--contrast-3:#878787;--base:#fafafa;--base-2:#f7f8f9;--base-3:#ffffff;--accent:#242226;--accent-2:#1b78e2;--accent-hover:#35343a;}:root .has-contrast-color{color:var(--contrast);}:root .has-contrast-background-color{background-color:var(--contrast);}:root .has-contrast-2-color{color:var(--contrast-2);}:root .has-contrast-2-background-color{background-color:var(--contrast-2);}:root .has-contrast-3-color{color:var(--contrast-3);}:root .has-contrast-3-background-color{background-color:var(--contrast-3);}:root .has-base-color{color:var(--base);}:root .has-base-background-color{background-color:var(--base);}:root .has-base-2-color{color:var(--base-2);}:root .has-base-2-background-color{background-color:var(--base-2);}:root .has-base-3-color{color:var(--base-3);}:root .has-base-3-background-color{background-color:var(--base-3);}:root .has-accent-color{color:var(--accent);}:root .has-accent-background-color{background-color:var(--accent);}:root .has-accent-2-color{color:var(--accent-2);}:root .has-accent-2-background-color{background-color:var(--accent-2);}:root .has-accent-hover-color{color:var(--accent-hover);}:root .has-accent-hover-background-color{background-color:var(--accent-hover);}body, button, input, select, textarea{font-family:Open Sans, sans-serif;font-size:17px;}.main-title{font-size:25px;}.widget-title{font-weight:600;}button:not(.menu-toggle),html input[type="button"],input[type="reset"],input[type="submit"],.button,.wp-block-button .wp-block-button__link{font-size:15px;}h1{font-weight:600;font-size:40px;}h2{font-weight:600;font-size:30px;}h3{font-size:20px;}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a{color:#3a3a3a;}.main-title a,.main-title a:hover{color:#ffffff;}.site-description{color:#757575;}.main-navigation,.main-navigation ul ul{background-color:var(--base-3);}.main-navigation .main-nav ul li a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{color:var(--accent);}.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:#10a259;background-color:var(--base-3);}button.menu-toggle:hover,button.menu-toggle:focus{color:var(--accent);}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:var(--accent);background-color:var(--base-3);}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:#10a259;background-color:var(--base-3);}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:var(--base-3);}.inside-article a,.paging-navigation a,.comments-area a,.page-header a{color:var(--accent-2);}.inside-article a:hover,.paging-navigation a:hover,.comments-area a:hover,.page-header a:hover{color:var(--accent-hover);}.entry-title a{color:var(--contrast-2);}.entry-title a:hover{color:var(--accent-hover);}.entry-meta{color:var(--contrast-3);}.entry-meta a{color:var(--contrast-2);}.entry-meta a:hover{color:var(--accent-hover);}h1{color:var(--contrast-2);}h2{color:var(--contrast-2);}h3{color:var(--contrast-2);}.sidebar .widget{color:#1f314f;background-color:var(--base-3);}.sidebar .widget a{color:#1b8fe3;}.sidebar .widget a:hover{color:var(--accent-hover);}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{color:var(--base-3);background-color:#076033;}.footer-widgets a{color:var(--base-3);}.footer-widgets a:hover{color:var(--base-3);}.footer-widgets .widget-title{color:var(--base-2);}.site-info{color:var(--contrast-2);}.site-info a{color:var(--contrast-2);}.site-info a:hover{color:var(--accent-hover);}.footer-bar .widget_nav_menu .current-menu-item a{color:var(--accent-hover);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:var(--contrast);background-color:#fafafa;border-color:var(--contrast);}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:var(--contrast-3);background-color:#ffffff;border-color:var(--contrast-3);}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:var(--accent);}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:var(--accent-hover);}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}:root{--gp-search-modal-bg-color:var(--base-3);--gp-search-modal-text-color:var(--contrast);--gp-search-modal-overlay-bg-color:rgba(0,0,0,0.2);}@media (max-width: 768px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:var(--accent);}}.inside-top-bar{padding:10px;}.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container{padding:0px 20px 0px 20px;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:50px;}.site-main .wp-block-group__inner-container{padding:50px;}.separate-containers .paging-navigation{padding-top:20px;padding-bottom:20px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-50px;width:calc(100% + 100px);max-width:calc(100% + 100px);}.one-container.right-sidebar .site-main,.one-container.both-right .site-main{margin-right:50px;}.one-container.left-sidebar .site-main,.one-container.both-left .site-main{margin-left:50px;}.one-container.both-sidebars .site-main{margin:0px 50px 0px 50px;}.one-container.archive .post:not(:last-child):not(.is-loop-template-item), .one-container.blog .post:not(:last-child):not(.is-loop-template-item){padding-bottom:50px;}.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .menu-bar-item > a{line-height:65px;}.navigation-search input[type="search"]{height:65px;}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}.widget-area .widget{padding:50px;}.inside-site-info{padding:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:30px;}.site-main .wp-block-group__inner-container{padding:30px;}.inside-site-info{padding-right:10px;padding-left:10px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}.one-container .site-main .paging-navigation{margin-bottom:20px;}}/* End cached CSS */.is-right-sidebar{width:30%;}.is-left-sidebar{width:25%;}.site-content .content-area{width:70%;}@media (max-width: 768px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .menu-bar-item > a{transition: line-height 300ms ease}.main-navigation.toggled .main-nav > ul{background-color: var(--base-3)}.sticky-enabled .gen-sidebar-nav.is_stuck .main-navigation {margin-bottom: 0px;}.sticky-enabled .gen-sidebar-nav.is_stuck {z-index: 500;}.sticky-enabled .main-navigation.is_stuck {box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);}.navigation-stick:not(.gen-sidebar-nav) {left: 0;right: 0;width: 100% !important;}@media (max-width: 768px){#sticky-placeholder{height:0;overflow:hidden;}.has-inline-mobile-toggle #site-navigation.toggled{margin-top:0;}.has-inline-mobile-menu #site-navigation.toggled .main-nav > ul{top:1.5em;}}.nav-float-right .navigation-stick {width: 100% !important;left: 0;}.nav-float-right .navigation-stick .navigation-branding {margin-right: auto;}.main-navigation.has-sticky-branding:not(.grid-container) .inside-navigation:not(.grid-container) .navigation-branding{margin-left: 10px;}.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container{padding-left:40px;padding-right:40px;}@media (max-width:768px){.main-navigation.navigation-stick.has-sticky-branding .inside-navigation.grid-container{padding-left:0;padding-right:0;}}
+</style>
+
+<link rel='stylesheet' id='generate-blog-images-css' href='https://lockerz.com/wp-content/plugins/gp-premium/blog/functions/css/featured-images.min.css?ver=2.4.0' media='all' />
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://lockerz.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://lockerz.com/wp-content/cache/min/1/wp-content/plugins/auto-terms-of-service-and-privacy-policy/js/base.js?ver=1713960198" id="wpautoterms_base-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://lockerz.com/wp-content/cache/min/1/wp-content/plugins/stop-user-enumeration/frontend/js/frontend.js?ver=1713960198" id="stop-user-enumeration-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://lockerz.com/wp-content/cache/min/1/wp-content/plugins/wp-captcha/assets/js/c4wp-public.js?ver=1713960198" id="c4wp-public-js" defer></script>
+<link rel="https://api.w.org/" href="https://lockerz.com/wp-json/" /><link rel="alternate" type="application/json" href="https://lockerz.com/wp-json/wp/v2/posts/6558" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lockerz.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.3" />
+<link rel='shortlink' href='https://lockerz.com/?p=6558' />
+<link rel="alternate" type="application/json+oembed" href="https://lockerz.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flockerz.com%2Fsanrio-clothing-outfit-aesthetic%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://lockerz.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flockerz.com%2Fsanrio-clothing-outfit-aesthetic%2F&#038;format=xml" />
+<meta name="publicationmedia-verification" content="fe003ced-8005-4377-b8c0-bdbec081dbe8"><!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-W24ENZ4EX3"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W24ENZ4EX3');
+</script>
+
+<link rel="icon" href="https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-fav-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-fav-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-fav-180x180.png" />
+<meta name="msapplication-TileImage" content="https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-fav-270x270.png" />
+		<style id="wp-custom-css">
+			/* GeneratePress Site CSS */ .inside-article,
+.sidebar .widget,
+.comments-area {
+	border-right: 2px solid rgba(0, 0, 0, 0.07);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+	box-shadow: 0 0 10px rgba(232, 234, 237, 0.5);
+}
+
+/* Featured widget */
+.sidebar .widget:first-child,
+.sidebar .widget:first-child .widget-title{
+	background-color: #ffffff;
+	color: #000;
+}
+.sidebar .widget:first-child a,
+.sidebar .widget:first-child a:hover {
+	color: #076033;
+}
+
+.separate-containers .page-header {
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.page-header h1 {
+	font-size: 1.5em;
+}
+
+.button, .wp-block-button .wp-block-button__link {
+	padding: 15px 25px;
+}
+
+@media (max-width: 768px) {
+	.post-image img {
+		max-width: 100%;
+	}
+} /* End GeneratePress Site CSS */		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body class="post-template-default single single-post postid-6558 single-format-standard wp-custom-logo wp-embed-responsive post-image-above-header post-image-aligned-center sticky-menu-no-transition sticky-enabled both-sticky-menu right-sidebar nav-float-right separate-containers header-aligned-left dropdown-hover featured-image-active" itemtype="https://schema.org/Blog" itemscope>
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site"  itemtype="https://schema.org/WPHeader" itemscope>
+			<div class="inside-header grid-container">
+				<div class="site-logo">
+					<a href="https://lockerz.com/" rel="home">
+						<img  class="header-image is-logo-image" alt="Lockerz" src="https://lockerz.com/wp-content/uploads/2022/09/cropped-Lockerz-logo.png" width="500" height="244" />
+					</a>
+				</div>	<nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle">
+				<button data-nav="site-navigation" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>		</button>
+	</nav>
+			<nav class="auto-hide-sticky main-navigation sub-menu-right" id="site-navigation" aria-label="Primary"  itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-primary" class=" menu sf-menu"><li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10"><a href="https://lockerz.com">Home</a></li>
+<li id="menu-item-9888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9888"><a href="https://lockerz.com/getting-started-with-style-kawaii/">Start Here</a></li>
+<li id="menu-item-9343" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9343"><a href="/blog/">Blog</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-81"><a href="https://lockerz.com/category/net-worth/">Net Worth</a></li>
+<li id="menu-item-878" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-878"><a href="https://lockerz.com/category/tips/">Tips</a></li>
+<li id="menu-item-12506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12506"><a href="https://lockerz.com/contact/">Contact</a></li>
+</ul></div>			</div>
+		</nav>
+					</div>
+		</header>
+		
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+			
+<article id="post-6558" class="post-6558 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion-style" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+		<div class="featured-image  page-header-image-single ">
+				
+			</div>			<header class="entry-header">
+				<h1 class="entry-title" itemprop="headline">9+ Sanrio Clothing Themes For Adults (Kawaii Outfit Aesthetic &#038; More Tips)</h1>		<div class="entry-meta">
+			<span class="posted-on"><time class="entry-date published" datetime="2024-02-13T13:27:06+00:00" itemprop="datePublished">February 13, 2024</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope><a class="url fn n" href="https://lockerz.com/author/style/" title="View all posts by Style Kawaii" rel="author" itemprop="url"><span class="author-name" itemprop="name">Style Kawaii</span></a></span></span> 		</div>
+					</header>
+			
+		<div class="entry-content" itemprop="text">
+			
+<p>Hello Kitty, My Melody, and Keroppi might seem like a strange assortment of characters to some, but for the people who love Sanrio, these are family.</p>
+
+
+
+<p>Sanrio characters have been ruling the world of adorable fashion for decades now. They&#8217;re known for their sweet personalities, but they&#8217;ve also done a good job of sneaking into our wardrobes and makeup bags to become an important part of our daily lives.</p>
+
+
+
+<p>If you&#8217;re looking to step up your style game, then check out these 9 popular Sanrio outfit themes that will keep you looking cute all day every day! </p>
+
+
+
+<h2 class="wp-block-heading"><strong>Kuromi</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Yunbei-Chocolat-Cosplay-Costume-Female-M/dp/B07GVDHHFM?crid=229JEN7IWGI79&amp;keywords=sanrio+maid+dress&amp;qid=1646930006&amp;sprefix=sanrio+maid%2Caps%2C309&amp;sr=8-24%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=303b8c2954db50f5422aba0846ef7f20&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07GVDHHFM&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07GVDHHFM" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/35M4eYc" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best <strong>Cat Girl Maid</strong></strong> <strong>Cosplay Costume </strong></p>
+
+
+
+<p><strong>Lovely!💖</strong> &#8211; It came super fast with everything inside and no damage to any items. it fits exactly to the measurements listed and was pretty well made for the price! you definitely need a petticoat for the skirt but it still looks really good outside of the bag!</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/T-Shirt-Cartoon-Graphic-Harajuku-Streetwear/dp/B08S3V1S1B?keywords=kuromi&amp;qid=1647166087&amp;sr=8-26-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMkxRVThYR1o0TDE4JmVuY3J5cHRlZElkPUEwNjEzMTcxTk9RUzZOMkk1QjVYJmVuY3J5cHRlZEFkSWQ9QTAzNTgxMTAxR1VYSlhSRkxPVThTJndpZGdldE5hbWU9c3BfbXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ%3D%3D&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=5d3edf087513db28dc837dfe21118461&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08S3V1S1B&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08S3V1S1B" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3i6WhPL" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Top Gothic E-Girls Summer Sexy Streetwear</strong></p>
+
+
+
+<p><strong>Perfect for Alternative Fashion</strong> &#8211; Very cute crop top!  wish could have actually gotten it from the designer, blakking on Instagram, The quality is really nice! suggest maybe washing it inside out to save the print on the shirt.</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Cinnamoroll</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/SAZAC-Cinnamoroll-Kigurumi/dp/B01J2QRXYI?crid=2ZO3ROOJPVS3G&amp;keywords=sanrio+outfits&amp;qid=1646925628&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=sanrio+outfi%2Caps%2C839&amp;sr=8-17%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=506c1b9bdb1b71ca0a5d98320f36d7a2&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B01J2QRXYI&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B01J2QRXYI" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3KJiuQd" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Cinnamoroll <strong>Halloween Costume</strong> Onesie Jumpsuit </strong></p>
+
+
+
+<p><strong>Very Comfortable and Worth the price</strong> &#8211; This kigurumi is very high quality. It has a pocket in the shape of a star with cinnomoll&#8217;s name embroidered on it, putting anything important in there though because it could easily fall out. The tail is detachable by Velcro so you can sit down comfortably. It is the cutest and most comfortable onesie ever!</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Honeybomber-Cinnamoroll-Costumes-Bloomers-Lingerie/dp/B08GPPMZV4?crid=2C09YVDNWK2G5&amp;keywords=sanrio+cosplay&amp;qid=1646930133&amp;sprefix=sanrio+cosplay%2Caps%2C299&amp;sr=8-2%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=b5de43e9da0f7e93245866d0d87f7b38&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08GPPMZV4&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08GPPMZV4" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3MXrZxd" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Kawaii Pajamas Set Cinna&amp;moroll Sleepwear</strong></p>
+
+
+
+<p class="has-text-align-left"><strong>SO comfortable!</strong> &#8211; Absolutely love it! It&#8217;s super soft and surprisingly warm. The material doesn&#8217;t feel cheap and it&#8217;s super cute! The top is stays on pretty well so you can hide the straps inside and it won&#8217;t slide down!</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-5 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Cinnamoroll-Hat-Sanrio-Character/dp/B07WSGQG7L?crid=2YH4MCL7AOFZ5&amp;keywords=Cinnamoroll+Clothes&amp;qid=1646928330&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=cinnamoroll+clothes%2Caps%2C499&amp;sr=8-6%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=10a1bc1bc5755820eb7587be9774ace3&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07WSGQG7L&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07WSGQG7L" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3pWIuzu" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Cinnamoroll Hat </strong></p>
+
+
+
+<p><strong>Super great Hat</strong> &#8211; Great product and friendly seller. Looks exactly like the picture. They also gave a cute gift with a cute note and an origami crane. Thank you so much and keep up the good work!</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>My Melody</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-6 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/My-Melody-Hat-Sanrio-Character/dp/B07WNH3FJZ?crid=BL4LKKB2IKTB&amp;keywords=my+melody+sanrio&amp;qid=1646940375&amp;sprefix=my+melody+san%2Caps%2C265&amp;sr=8-17%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=f19d8ba2ddd28c242f10d7bff182970e&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07WNH3FJZ&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07WNH3FJZ" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3tPJNBn" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best My Melody Hat</strong></p>
+
+
+
+<p><strong>Adorable! &#8211; </strong>The hat came with a sweet thank you note and a pack of hello kitty tissues, so cute. the hand written letter was so cute.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-7 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Alyweatry-Womens-Pajamas-Cinnamoroll-Sleepwear/dp/B09471MLDT?keywords=my+melody+sanrio&amp;qid=1647167435&amp;sr=8-26-spons&amp;psc=1&amp;smid=A3NKIHTL1W8MA8&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFTTk5YVUVGMzdDUkYmZW5jcnlwdGVkSWQ9QTA5MTg3MTMzM1VVQzlYUkM1NlFSJmVuY3J5cHRlZEFkSWQ9QTAwMjQ1NThFM1ZOMjFXM1NMSEMmd2lkZ2V0TmFtZT1zcF9tdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=86721227b3cd6b5fe9f4cc4c4dca55b9&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B09471MLDT&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B09471MLDT" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3I20Dlz" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Cinnamoroll Melody Kuromi Pajama Set</strong></p>
+
+
+
+<p><strong>Soft, Cute, Comfy</strong> &#8211; The pajama set is super soft and loose, a warm teenage pajamas. A great choice for cute girls.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Sanrio-Melody-stainless-bottle-S-883352/dp/B07P9NPHXS?crid=BL4LKKB2IKTB&amp;keywords=my+melody+sanrio&amp;qid=1646940462&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=my+melody+san%2Caps%2C265&amp;sr=8-9%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=b4b4c3e5b0abe51bda5141273a3111b5&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07P9NPHXS&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07P9NPHXS" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3I96Mg3" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Sanrio My Melody Cover With Stainless Steel Bottle</strong></p>
+
+
+
+<p><strong>It was a cute water bottle</strong> &#8211; It was nice to be able to purchase it cute and advantageous. It&#8217;s a classic shape, so it&#8217;s good to be able to buy parts if it breaks.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/SANRIO-665924-Melody-vinyl-wallet/dp/B00MHCP9ZK?crid=BL4LKKB2IKTB&amp;keywords=my+melody+sanrio&amp;qid=1646940409&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=my+melody+san%2Caps%2C265&amp;sr=8-33%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=fe6c4be2dcf02ea48baefb8bdbed8a0c&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00MHCP9ZK&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B00MHCP9ZK" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3MIIQnd" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best My Melody vinyl wallet</strong></p>
+
+
+
+<p><strong>So cute!! 💕💕</strong> &#8211; Very cute, even better than what you expected! the whole design is adorable.The material seems pretty durable and flexible. it’s structured like a normal wallet, and it has plenty of room to store cards n stuff so no complaints there. it even has a my melody themed card to put some personal info 🙂 overall, very happy with this purchase!</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Hello Kitty</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-10 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Hello-Kitty-Personalized-Adjustable-Customizable/dp/B0929KLXJ4?crid=2ZO3ROOJPVS3G&amp;keywords=sanrio+outfits&amp;qid=1646925628&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=sanrio+outfi%2Caps%2C839&amp;sr=8-33%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=4eaa42e1a99ced48b28be246717aabce&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B0929KLXJ4&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B0929KLXJ4" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3w2xZ1y" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Hello Kitty Personalized Custom Name Necklace</strong></p>
+
+
+
+<p><strong><strong>Cute and fun necklace!</strong></strong> &#8211; Super cute! It looks perfect , it has great color and cute charm. It&#8217;s really cute kinda expected the necklace to be bigger but other than that it&#8217;s super cute.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-11 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/GSTARL-Gothic-Knitted-Sleeves-Fingerless/dp/B09BBFKVKB?pd_rd_i=B09BBFKVKB&amp;psc=1&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=a8d2a02f345b29be808a9fdb21ca74c5&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B09BBFKVKB&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B09BBFKVKB" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/35U62yf" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Gothic Cat Arm Warmer For Women</strong></p>
+
+
+
+<p><strong>Cute arm warmers</strong> &#8211; The y2k gothic arm cover arm warmers are made of acrylic, warm and have good stretch to ensure a comfortable fit, very soft.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-12 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Anniversary-Bifold-Wallet/dp/B08L1F5XJG?crid=2YH4MCL7AOFZ5&amp;keywords=Cinnamoroll+Clothes&amp;qid=1646928330&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=cinnamoroll+clothes%2Caps%2C499&amp;sr=8-34%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=8d49178d6320f92a769af5b73f6fe70c&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08L1F5XJG&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08L1F5XJG" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3t5Y6CC" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Sanrio Hello Kitty Bifold Wallet</strong></p>
+
+
+
+<p><strong>Exactly as described</strong> &#8211; Adorable wallet! the zipper for the coin purse works very well!! just wish it held more cards but overall its amazing and get tons of compliments on it 🙂</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-13 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Hello-Kitty-Glasses-Pullover-Hoodie/dp/B07PXV6JPX?crid=1ZUT0BFTDHD8M&amp;keywords=hello+kitty+clothes&amp;qid=1646928724&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=hello+kitty+clothe%2Caps%2C311&amp;sr=8-1%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=d6fdf12b3eb8bf153d25dee2bbca15aa&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07PXV6JPX&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07PXV6JPX" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3CBNj6m" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Hello Kitty Nerd Glasses Pullover Hoodie</strong></p>
+
+
+
+<p><strong>A well made Hello Kitty item.</strong> &#8211; The Hello Kitty is silk screened on perfectly. The design did not come off in the wash or anything weird like some have reported. The sweater itself is well made, warm, and comfy. If you like Hello Kitty and sweaters that do not suck then this is for you.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-14 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Hello-Kitty-Strawberry-Picking-T-Shirt/dp/B07VMC252H?crid=3LLHR52WEHKGU&amp;keywords=hello+kitty+goth&amp;qid=1646929220&amp;sprefix=hello+kitty+goth%2Caps%2C190&amp;sr=8-26%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=bdbe8801e3a30e764cee802501a4905d&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07VMC252H&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07VMC252H" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/35QWS5q" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Hello Kitty Strawberry Picking Farm T-Shirt</strong></p>
+
+
+
+<p><strong>Great shirt </strong>&#8211; The shirt was great. Shirt does run a little small. Was a great shirt for the strawberry festival</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-15 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Hello-Kitty-Yellow-Gold-Earrings/dp/B07B84NJNT?crid=1URTH77H8XBF6&amp;keywords=hello+kitty&amp;qid=1646929544&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=hello+kitty%2Caps%2C203&amp;sr=8-100%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=6e9b4cfbfc0a4d68a00e536053e495c6&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07B84NJNT&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07B84NJNT" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3CF8uVh" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Hello Kitty Stud Earrings</strong></p>
+
+
+
+<p><strong>Great product</strong> &#8211; Good packaging and earrings are very good . Hello Kitty 10k Yellow Gold with Pink Bow Stud Earrings. These charming Hello Kitty pink bow earring are finished in 10k yellow gold and are secured with a friction back post for a secure fit. The Sanrio Hello Kitty earrings come gift boxed making them a perfect gift for all girls including your daughter, sister, granddaughter, niece, any loved one or for yourself!</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Gudetama</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-16 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://lockerz.com/sanrio-clothing-outfit-aesthetic/" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08KRXSKZ4&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08KRXSKZ4" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3I93Gsq" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Gudetama Boa Room Shoes</strong></p>
+
+
+
+<p><strong>Great quality &#8211; </strong>Perfect quality pair shoes. very soft and comfortable to wear .Highly recommended, very happy to purchased.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-17 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Gudetama-womens-Casual-Yellow-Accents/dp/B08TKKR5SJ?pd_rd_w=EZslS&amp;pf_rd_p=4b6b5072-e9bd-4f30-a3af-a1f5d52978ec&amp;pf_rd_r=EC5HWHKP1YW4A7YY132P&amp;pd_rd_r=0634a90c-433a-4c10-95f3-ec477e4d7451&amp;pd_rd_wg=ICpdb&amp;pd_rd_i=B07JNCN64R&amp;th=1&amp;psc=1&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=69f2c483fd926be48a066f2b71f6e29d&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08TKKR5SJ&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08TKKR5SJ" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3q0Q3VV" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Gudetama Women&#8217;s Socks</strong></p>
+
+
+
+<p><strong>Perfect, as expected.</strong> &#8211; This sock set is perfect for any Gudetama fan. They’re absolutely adorable, high quality, lightweight, no-show socks. Came with original tag! Great value for 5 pairs of socks!</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Pompompurin</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-18 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Yamanoshigyo-Sanrio-Accessories-Barrette-PomPomPurin/dp/B09BLQRW2W?crid=89URUFRU9C77&amp;keywords=pompompurin+sanrio&amp;qid=1646936755&amp;sprefix=Pompompurin+%2Caps%2C187&amp;sr=8-19%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=33b5250b5cdb40d5737958cba66131fb&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B09BLQRW2W&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B09BLQRW2W" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3I61Okc" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Sanrio Hair pin Bangs Clips Accessories</strong></p>
+
+
+
+<p><strong>Good quality and cute</strong> &#8211; They were small but still super cute clips. It comes exactly as shown in the picture.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-19 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Pom-Purin-Pancake-Friends-Shirt/dp/B07GC9GQ4Y?crid=89URUFRU9C77&amp;keywords=pompompurin+sanrio&amp;qid=1646936755&amp;sprefix=Pompompurin+%2Caps%2C187&amp;sr=8-4%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=9a91880b4a01c9d856890da032ef7be9&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07GC9GQ4Y&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07GC9GQ4Y" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3I62h5W" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Pompompurin Pancake Friends T-Shirt</strong></p>
+
+
+
+<p><strong>Get it ! So adorable!</strong> &#8211; The shirt fit well and is pretty good quality, you&#8217;ve warn and washed it a couple of times and the image hasn&#8217;t faded. Its adorable and love it.</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Keroppi</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-20 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Keroppi-Cosplay-Tri-Fold/dp/B08511RBZZ?keywords=keroppi+sanrio&amp;pd_rd_r=b2f0a587-cacc-4160-86f2-e9b3e2e9df0f&amp;pd_rd_w=xxeY1&amp;pd_rd_wg=yDKaI&amp;pf_rd_p=4fa0e97a-13a4-491b-a127-133a554b4da3&amp;pf_rd_r=VD4W05S44XCD6MXTWG9P&amp;qid=1646937318&amp;sr=8-2%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=7423892fe0084481266be160892eb2e1&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08511RBZZ&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08511RBZZ" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3KE1HxY" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Sanrio Hello Kitty Keroppi Cosplay Tri-fold Wallet</strong></p>
+
+
+
+<p><strong>PERFECTLY MADE</strong> &#8211; Its a bigger size wallet and happy. For Keroppi fans, this is a a must. Very well made and the detail of it all is beyond expectations. Have the wallet and the matching backpack.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-21 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Shop-Skincare-Non-slip-Comfortable-Adhesive/dp/B07JGLK4Y4?keywords=keroppi+sanrio&amp;pd_rd_r=b2f0a587-cacc-4160-86f2-e9b3e2e9df0f&amp;pd_rd_w=xxeY1&amp;pd_rd_wg=yDKaI&amp;pf_rd_p=4fa0e97a-13a4-491b-a127-133a554b4da3&amp;pf_rd_r=VD4W05S44XCD6MXTWG9P&amp;qid=1646937318&amp;sr=8-7%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=c546c4c066fca6cbdd9dc1b55499852c&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07JGLK4Y4&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B07JGLK4Y4" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3J45nbM" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Keroppi Sanrio Soft Hair Towel And Wrap Band</strong></p>
+
+
+
+<p><strong>Super soft, cute and holds hair back perfectly</strong> &#8211; It’s SUPER cute! Very soft and stays put when use it to wash face or apply a face mask! Nice material, fits all head sizes, overall cute and nice.</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Badtz-Maru</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-22 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Squishmallows-Official-Kellytoy-Squishy-Badtz-Maru/dp/B0972FYP1N?keywords=badtz&amp;qid=1647177383&amp;sr=8-2&amp;th=1&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=67f47f54cd6a6a25951c4c3ce333f655&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B0972FYP1N&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B0972FYP1N" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3q2GK7M" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Badtz-Maru Plush Stuff Toy</strong></p>
+
+
+
+<p><strong>Good quality popular toy</strong> &#8211; This was a gift. She loved it. Special characters usually are a bit more costly. Important thing is that it made someone smile and was a great addition to her collection. For more <strong><a href="https://lockerz.com/cute-plushies/" target="_blank" rel="noreferrer noopener">cute kawaii plushies</a></strong>, don&#8217;t forget to check out our guide!</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-23 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Sanrio-Compatible-AirPods-Lanyard-Shell/dp/B089RSLGJV?crid=65AWW6FM4RMF&amp;keywords=badtz&amp;qid=1646941198&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=badtz%2Caps%2C331&amp;sr=8-18%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=84054de0dd1c21b3450a6e3166c38fa3&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B089RSLGJV&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B089RSLGJV" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3t89Vsj" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Face Bad Badtz-Maru Air Pods Cover</strong></p>
+
+
+
+<p><strong>Super cute and protective!</strong> &#8211; Compatible with AirPods Pro Case is made from hard plastic (Polycarbonate), shock-resistant to protect your Compatible with AirPods Pro Case from scratches and external impacts. The lid and the body are two separate pieces, No fragile hinge is torn and allow a full opening of the lid.</p>
+</div>
+</div>
+
+
+
+<h2 class="wp-block-heading"><strong>Little Twin Stars</strong></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-24 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Sanrio-Little-Accessories-Barrette-Yellow/dp/B089S3D4S1?pd_rd_w=hxYMd&amp;pf_rd_p=87af4f4c-0b6c-4122-8df1-bcb9f3d7f2c7&amp;pf_rd_r=9QE9H4TJ1XWSZQWF7ANX&amp;pd_rd_r=eb8a78f5-9896-4ca5-88c0-4f70a6677f80&amp;pd_rd_wg=ERRna&amp;pd_rd_i=B089S3D4S1&amp;psc=1&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=4d4016747a38d5c4c1f6fca023235bc8&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B089S3D4S1&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B089S3D4S1" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/3KGvHt2" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Sanrio Little Twin Stars Hair 3-Pin Accessories</strong></p>
+
+
+
+<p><strong>VERY CUTE AND STYLISH</strong> &#8211; This is very cute <a href="http://TameYourWildChild.net" target="_blank" rel="noreferrer noopener">for children</a> or for adults it works fine nothing was broken but be careful trying to pit it in your hair.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-25 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<a href="https://www.amazon.com/Wet-Wild-Setting-Highlighters-Collection/dp/B09K3NQ8NW?crid=39P2RQINVOKPN&amp;keywords=little+twin+stars+makeup&amp;qid=1646940990&amp;s=beauty&amp;sprefix=little+twin+stars+makeup%2Cbeauty%2C377&amp;sr=1-2%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=8205e2b2a912a493351103f966413ed9&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B09K3NQ8NW&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B09K3NQ8NW" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center has-background" style="background-color:#e3f4ff"><strong><em><a href="https://amzn.to/35R9ARP" target="_blank" rel="noreferrer noopener"><strong><em>❤️</em></strong>❤️❤️❤️❤️ See Price On Amazon</a></em></strong></p>
+
+
+
+<p class="has-text-align-center"><strong>✅ Best Little Twin Stars Full Makeup Set</strong></p>
+
+
+
+<p><strong>ITS ADORABLE AND MASSIVE</strong> &#8211; THIS IS ADORABLE. Also MUCH bigger than expected and is in perfect condition! Plus arrived much earlier :)) 💞💞💞 100/100</p>
+</div>
+</div>
+
+
+
+<h3 class="wp-block-heading"><strong>What is Sanrio outfit?</strong></h3>
+
+
+
+<p>Sanrio is a company based in Japan that sells cute character goods and merchandise. Their products range from dolls and plushies to clothing, accessories, stationery, and food items. The most famous Sanrio character is Hello Kitty, but many others have become popular in recent years such as My Melody and Keroppi.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>What should you wear to look Sanrio?</strong></h3>
+
+
+
+<p>The key elements of a Sanrio-inspired aesthetic include pastel colors, polka dots, flowers, bows and ribbons, hearts, soft textures, Japanese characters, cute kawaii elements and of course Sanrio characters with scenes.</p>
+
+
+
+<p>The Sanrio aesthetic clothing is not only for babies and kids, or for kawaii maid cosplay and Halloween costumes. It is also widely popular for adults who are into Japanese culture as everyday wear. Some fans are even wearing gowns of Sanrio themes for their weddings. </p>
+
+
+
+<p>Sanrio is known to be a cute kawaii brand but you can actually mix and match Sanrio fashion pieces to give an alt aesthetic. Popular related outfit themes include Sanrio goth, Hello Kitty goth, pastel goth, pink goth, eGirl and grunge Hello Kitty aesthetic.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>What are Sanrio outfit colors?</strong></h3>
+
+
+
+<p>Sanrio outfit colors are usually pastel, lavender, mint green, sage, bright white, bright yellow, bubblegum pink and baby blue. For adults looking for an alt vibe, you can contrast these colors with black, burgundy, forest green and other dark shades.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>What accessories to wear with <strong>Sanrio</strong> outfits?</strong></h3>
+
+
+
+<p>There are a lot of kawaii Sanrio hair accessories (like bows and headbands), as well as temporary tattoos, leg warmers, arm warms and bags to compliment your Sanrio outfits. If you want to show off your Sanrio pride in a more subtle way, just hang a Sanrio plush or toy on the backpack or get a Sanrio tote bag. The brand even has stuff for your pets too. </p>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-26 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Pumpkin-Convertible-Backpack/dp/B08LT2987F?crid=2ZO3ROOJPVS3G&amp;keywords=sanrio+outfits&amp;qid=1646925628&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=sanrio+outfi%2Caps%2C839&amp;sr=8-24%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=d2a98a4b4a6f10f2a77aadfbc9aa632b&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08LT2987F&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08LT2987F" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Kawaii-Convertible-Backpack/dp/B08F16FV39?crid=2YH4MCL7AOFZ5&amp;keywords=Cinnamoroll+Clothes&amp;qid=1646928330&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=cinnamoroll+clothes%2Caps%2C499&amp;sr=8-10%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=887765e8593442e0436df8feb9e17854&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08F16FV39&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08F16FV39" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Tuxedo-Cosplay-Shoulder/dp/B08S3M7M6P?crid=2C09YVDNWK2G5&amp;keywords=sanrio+cosplay&amp;qid=1646930199&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=sanrio+cosplay%2Caps%2C299&amp;sr=8-1%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=18189bcaf4e3b32599c444b704914f63&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08S3M7M6P&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08S3M7M6P" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+</div>
+
+
+
+<p class="has-text-align-center has-background" style="background-color:#ffdbe5"><strong><em>✅ Sanrio bags are adorable, girly but yet cool eye-catchers. They add cuteness to any outfit and work for fans of any age. Click the images to see deals on Amazon!</em></strong></p>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-27 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Hello-Crossbody-Bucket-Pastel/dp/B08F9BHVN6?crid=1URTH77H8XBF6&amp;keywords=hello%2Bkitty&amp;qid=1646929705&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=hello%2Bkitty%2Caps%2C203&amp;sr=8-152%2F&amp;WZoneDirect-no-more-redirect=undefined&amp;th=1&amp;psc=1&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=a53508adde2ba35da5ff13a80ff3db1e&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08F9BHVN6&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08F9BHVN6" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Kuromi-Cosplay-Shoulder/dp/B08MWM8XPJ?crid=3KR2BWBML8I87&amp;keywords=hello+kitty+goth+accessories&amp;qid=1646929284&amp;sprefix=hello+kitty+goth%2Caps%2C261&amp;sr=8-21%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=35d9ff47d6e433d12026d3f17c20eb16&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08MWM8XPJ&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08MWM8XPJ" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Keroppi-Cosplay-Backpack/dp/B085121KNC?crid=2C09YVDNWK2G5&amp;keywords=sanrio+cosplay&amp;qid=1646930199&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=sanrio+cosplay%2Caps%2C299&amp;sr=8-8%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=6fe1c5a26f9d4b94c4148e1978941782&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B085121KNC&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B085121KNC" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Thermos-Stainless-Insulated-Adorable-Tumbler/dp/B08YQPCCGT?crid=2JXZ6TK7EATVU&amp;keywords=hello+kitty+water+bottle&amp;qid=1658507536&amp;sprefix=hello+kitty+water+%2Caps%2C68&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyTFBRS1I2VVA0WEVJJmVuY3J5cHRlZElkPUEwMjMzNTU5M1NURkg3SUdEUDNPSSZlbmNyeXB0ZWRBZElkPUEwNzA4NzAwM0JWTklEWjFTTTgwNCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU%3D&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=216ff2ed98bc5239166344c499a541cf&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08YQPCCGT&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08YQPCCGT" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Cinnamoroll-PomPomPurin-Cartoon-Shoulder-Cosplay/dp/B097C392YM?keywords=my+melody+cosplay&amp;pd_rd_r=15267871-597c-4264-9fe5-173bbc3c9b8c&amp;pd_rd_w=dcAVf&amp;pd_rd_wg=BiMTw&amp;pf_rd_p=4fa0e97a-13a4-491b-a127-133a554b4da3&amp;pf_rd_r=3VGFSG8ERCP90MDF3R42&amp;qid=1646934193&amp;sr=8-17%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=6d27f3d48f5cc2f52f4b445d66059c4b&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B097C392YM&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B097C392YM" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Sanrio-Machine-Figural-Backpack/dp/B08F18TZML?crid=2C09YVDNWK2G5&amp;keywords=sanrio+cosplay&amp;qid=1646930199&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&amp;sprefix=sanrio+cosplay%2Caps%2C299&amp;sr=8-7%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=101e60fe491a6cfa5641b865e91e37a0&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08F18TZML&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08F18TZML" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-29 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Loungefly-Hello-Badtz-Maru-Cosplay-Backpack/dp/B08KTQCQHN?crid=65AWW6FM4RMF&amp;keywords=badtz&amp;qid=1646941170&amp;sprefix=badtz%2Caps%2C331&amp;sr=8-1%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=9d7b83466a7b5f8e2b92499ee7fc6b26&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B08KTQCQHN&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B08KTQCQHN" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/Crossbody-Shoulder-Handbag-Silicone-Accessories/dp/B097ZTG33S?keywords=My+Melody&amp;qid=1646940619&amp;sr=8-8%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=09f27bac687eaec8b43cc6eaf1bf1d9c&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B097ZTG33S&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B097ZTG33S" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<a href="https://www.amazon.com/BAGS-CR-HK-SEQUN-COSMETIC/dp/B0063404K8?crid=W6G92WW6U20G&amp;keywords=sanrio+bag&amp;qid=1646941811&amp;refinements=p_72%3A2661618011&amp;rnid=2661617011&amp;sprefix=sanrio+bag%2Caps%2C296&amp;sr=8-42%2F&amp;WZoneDirect-no-more-redirect=&amp;linkCode=li3&amp;tag=we7-20&amp;linkId=65f89da5172d7ab030e33e0152ad4627&amp;language=en_US&amp;ref_=as_li_ss_il" target="_blank" rel="noopener"><img decoding="async" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B0063404K8&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=we7-20&amp;language=en_US" border="0"></a><img loading="lazy" decoding="async" src="https://ir-na.amazon-adsystem.com/e/ir?t=we7-20&amp;language=en_US&amp;l=li3&amp;o=1&amp;a=B0063404K8" alt="" style="border:none !important; margin:0px !important;" width="1" height="1" border="0">
+</div>
+</div>
+
+
+
+<h3 class="wp-block-heading"><strong>How do you style your hair for <strong>Sanrio outfits</strong>?</strong></h3>
+
+
+
+<p>If you have long hair, you could try tying your hair up into two buns on top of your head. If you have short hair, you could consider getting some bangs to make yourself look more like kawaii. Pastel hair dye, wigs and hair accessories are also popular for Sanrio outfits. There are many different types of headbands that you can use to accessorize your look with Sanrio characters such as Hello Kitty or My Melody!</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How do you do <strong>Sanrio</strong> aesthetic nails?</strong></h3>
+
+
+
+<p>Sanrio nail art can be the talking point for any gathering, there are many themes to try for Birthdays, Christmas and Halloween. If you&#8217;re looking to do a simple cute Japanese Sanrio nail design, here are a few easy things you&#8217;ll need to do. </p>
+
+
+
+<p>First, you&#8217;ll need some nail polish. You can either go for a black base or something more girly to match your outfit. Second, you&#8217;ll need some Sanrio nail stickers, popular patterns will be Hello Kitty, Kuromi, My Melody, Little Twin Stars and Cinnamoroll. Finally, you&#8217;ll need some cotton balls and a q-tip. </p>
+
+
+
+<p>To do the nails, start by applying your base color to your nails and then placing the stickers on top of it. Once they&#8217;re in place, use a cotton ball to dampen them and then apply your desired polish.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How do you do <strong>Sanrio</strong> aesthetic tattoos?</strong></h3>
+
+
+
+<p>It may seem strange at first to get a tattoo of something so cute and cuddly! But there are many different reasons why people get tattoos: you might want something fun on your body that will remind you of your teenage life, you might want a small matching black and white Sanrio character outline tattoo with your best friend. </p>
+
+
+
+<p>If you are getting a tattoo for the first time, get your favorite Sanrio character tattooed on the upper arms, forearms, thighs, and calves. Elbow and knee tattooing can be a little more difficult, but still doable. It is because the skin on the torso is softer and lighter, tattoos on the torso hurt more.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How to do makeup for Sanrio outfits?</strong></h3>
+
+
+
+<p>Different Sanrio characters have different color schemes, for example, The Kuromi makeup look is dark and gothic, the Pom Pom Purin makeup look is more colorful with hearts and bows, while the My Melody and Hello Kitty makeup look is supposed to be apple red/pinky. In all cases, your Sanrio makeup look should look both clean and innocent. Black gel and/or liquid eyeliner, cream blush, sparkly lip gloss, removable tattoo stickers of Sanrio characters and light concealer/foundation are all recommended for your Sanrio aesthetic makeup. </p>
+
+
+
+<p>Sanrio also had a lot of crossover with different makeup product brands. From makeup organizers, cosmetic bags, brushes, eyeshadow palettes, glitter lip gloss to other kits and sets, Sanrio fans can for sure find something fun to try.</p>
+
+
+
+<h3 class="wp-block-heading" id="where-to-get-kawaii-gamer-girl-room-decor"><strong>Where to get kawaii Sanrio outfits?</strong></h3>
+
+
+
+<p>You can buy from the official Sanrio store, or find a lot of other brands that crossover with Sanrio for different items. There are also a lot of Sanrio-inspired items to be purchased at a cheaper price on Amazon or eBay. If you want to buy cute kawaii Sanrio outfits and accessories at the lowest sale price (and do not care about copyright issues) then you can even explore sources like Shein, AliExpress or Wish. </p>
+
+
+
+<p>Another good idea to support small businesses is to shop from your local game shop and anime stores. Or travel to Japan to buy the latest Japanese Sanrio room decor from the famous Harajuku area of Tokyo.</p>
+
+
+
+<p>If you are into handmade crafting, ethnic outfits, crochets and indie products, you can spend some hours in our DIY session to get inspiration or shop from Etsy.</p>
+
+
+
+<p>Delivery time is usually the fastest when ordering from Amazon or local stores.</p>
+<div class="crp_related     crp-text-only"><h3>Related Posts:</h3><ul><li><a href="https://lockerz.com/coquette-fashion-aesthetic-clothing/"     class="crp_link post-6110"><span class="crp_title">Coquette Fashion & Aesthetic Clothing For Flirty&hellip;</span></a></li><li><a href="https://lockerz.com/sanrio-room/"     class="crp_link post-6561"><span class="crp_title">Sanrio Room Theme & Decor For Cute Kawaii Aesthetic&hellip;</span></a></li><li><a href="https://lockerz.com/hello-kitty-room-aesthetic/"     class="crp_link post-9893"><span class="crp_title">21+ Hello Kitty Room Aesthetic: How To Design Cute&hellip;</span></a></li><li><a href="https://lockerz.com/real-cute-house-aesthetic/"     class="crp_link post-9890"><span class="crp_title">Kawaii Aesthetic Houses: How To Design A Real Cute&hellip;</span></a></li><li><a href="https://lockerz.com/clothing-aesthetics-list/"     class="crp_link post-2605"><span class="crp_title">Clothing Aesthetic List (77+ Cute Fashion Trends To&hellip;</span></a></li><li><a href="https://lockerz.com/room-aesthetic-list/"     class="crp_link post-3978"><span class="crp_title">Room Aesthetic List (139+ Popular Decor, Themes,&hellip;</span></a></li></ul><div class="crp_clear"></div></div>		</div>
+
+				<footer class="entry-meta" aria-label="Entry meta">
+			<span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" /></svg></span><span class="screen-reader-text">Categories </span><a href="https://lockerz.com/category/fashion-style/" rel="category tag">Fashion &amp; Style</a></span> 		<nav id="nav-below" class="post-navigation" aria-label="Posts">
+			<div class="nav-previous"><span class="gp-icon icon-arrow-left"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 138.212c0 2.265-1.133 4.813-2.832 6.512L64.276 256.001l111.317 111.277c1.7 1.7 2.832 4.247 2.832 6.513 0 2.265-1.133 4.813-2.832 6.512L161.43 394.46c-1.7 1.7-4.249 2.832-6.514 2.832-2.266 0-4.816-1.133-6.515-2.832L16.407 262.514c-1.699-1.7-2.832-4.248-2.832-6.513 0-2.265 1.133-4.813 2.832-6.512l131.994-131.947c1.7-1.699 4.249-2.831 6.515-2.831 2.265 0 4.815 1.132 6.514 2.831l14.163 14.157c1.7 1.7 2.832 3.965 2.832 6.513z" fill-rule="nonzero" /></svg></span><span class="prev"><a href="https://lockerz.com/juvederm-voluma/" rel="prev">Discovering Juvederm Voluma</a></span></div><div class="nav-next"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span><span class="next"><a href="https://lockerz.com/academia-aesthetics-types-names-list/" rel="next">Types Of Academia Aesthetics (52+ Names List)</a></span></div>		</nav>
+				</footer>
+			</div>
+</article>
+		</main>
+	</div>
+
+	<div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+	<div class="inside-right-sidebar">
+		<aside id="categories-3" class="widget inner-padding widget_categories"><h2 class="widget-title">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-38"><a href="https://lockerz.com/category/aesthetic/">Aesthetic</a>
+</li>
+	<li class="cat-item cat-item-65"><a href="https://lockerz.com/category/blog/">Blog</a>
+</li>
+	<li class="cat-item cat-item-99"><a href="https://lockerz.com/category/business/">Business</a>
+</li>
+	<li class="cat-item cat-item-592"><a href="https://lockerz.com/category/car/">Car</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://lockerz.com/category/christmas/">Christmas</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://lockerz.com/category/cosplay/">cosplay</a>
+</li>
+	<li class="cat-item cat-item-248"><a href="https://lockerz.com/category/education/">Education</a>
+</li>
+	<li class="cat-item cat-item-49"><a href="https://lockerz.com/category/entertainment/">Entertainment</a>
+</li>
+	<li class="cat-item cat-item-50"><a href="https://lockerz.com/category/fashion-style/">Fashion &amp; Style</a>
+</li>
+	<li class="cat-item cat-item-218"><a href="https://lockerz.com/category/finance/">Finance</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="https://lockerz.com/category/food/">Food</a>
+</li>
+	<li class="cat-item cat-item-179"><a href="https://lockerz.com/category/gambling/">Gambling</a>
+</li>
+	<li class="cat-item cat-item-46"><a href="https://lockerz.com/category/gaming/">Gaming</a>
+</li>
+	<li class="cat-item cat-item-93"><a href="https://lockerz.com/category/health/">Health</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://lockerz.com/category/home/">Home</a>
+</li>
+	<li class="cat-item cat-item-317"><a href="https://lockerz.com/category/law/">Law</a>
+</li>
+	<li class="cat-item cat-item-48"><a href="https://lockerz.com/category/love/">Love</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://lockerz.com/category/net-worth/">Net Worth</a>
+</li>
+	<li class="cat-item cat-item-718"><a href="https://lockerz.com/category/pets/">Pets</a>
+</li>
+	<li class="cat-item cat-item-200"><a href="https://lockerz.com/category/sport/">Sport</a>
+</li>
+	<li class="cat-item cat-item-313"><a href="https://lockerz.com/category/technology/">Technology</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://lockerz.com/category/tips/">Tips</a>
+</li>
+	<li class="cat-item cat-item-784"><a href="https://lockerz.com/category/travel/">Travel</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://lockerz.com/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</aside>	</div>
+</div>
+
+	</div>
+</div>
+
+
+<div class="site-footer">
+				<div id="footer-widgets" class="site footer-widgets">
+				<div class="footer-widgets-container grid-container">
+					<div class="inside-footer-widgets">
+							<div class="footer-widget-1">
+		<aside id="text-5" class="widget inner-padding widget_text"><h2 class="widget-title">Contact us</h2>			<div class="textwidget"><p>Email : <span data-sheets-root="1" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;online@lockerz.com\n&quot;}" data-sheets-userformat="{&quot;2&quot;:515,&quot;3&quot;:{&quot;1&quot;:0},&quot;4&quot;:{&quot;1&quot;:2,&quot;2&quot;:6989903},&quot;12&quot;:0}">online@lockerz.com<br />
+</span></p>
+</div>
+		</aside>	</div>
+		<div class="footer-widget-2">
+		<aside id="text-4" class="widget inner-padding widget_text"><h2 class="widget-title">Affiliate Disclosure</h2>			<div class="textwidget"><p>Lockerz.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+<p>Amazon, the Amazon logo, AmazonSupply, and the AmazonSupply logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+</div>
+		</aside>	</div>
+		<div class="footer-widget-3">
+			</div>
+						</div>
+				</div>
+			</div>
+					<footer class="site-info" aria-label="Site"  itemtype="https://schema.org/WPFooter" itemscope>
+			<div class="inside-site-info grid-container">
+								<div class="copyright-bar">
+					&copy; 2024 Lockerz.com				</div>
+			</div>
+		</footer>
+		</div>
+
+<script type="rocketlazyloadscript" id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script><style id='core-block-supports-inline-css'>
+.wp-container-core-columns-is-layout-1.wp-container-core-columns-is-layout-1{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-2.wp-container-core-columns-is-layout-2{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-3.wp-container-core-columns-is-layout-3{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-4.wp-container-core-columns-is-layout-4{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-5.wp-container-core-columns-is-layout-5{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-6.wp-container-core-columns-is-layout-6{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-7.wp-container-core-columns-is-layout-7{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-8.wp-container-core-columns-is-layout-8{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-9.wp-container-core-columns-is-layout-9{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-10.wp-container-core-columns-is-layout-10{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-11.wp-container-core-columns-is-layout-11{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-12.wp-container-core-columns-is-layout-12{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-13.wp-container-core-columns-is-layout-13{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-14.wp-container-core-columns-is-layout-14{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-15.wp-container-core-columns-is-layout-15{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-16.wp-container-core-columns-is-layout-16{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-17.wp-container-core-columns-is-layout-17{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-18.wp-container-core-columns-is-layout-18{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-19.wp-container-core-columns-is-layout-19{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-20.wp-container-core-columns-is-layout-20{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-21.wp-container-core-columns-is-layout-21{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-22.wp-container-core-columns-is-layout-22{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-23.wp-container-core-columns-is-layout-23{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-24.wp-container-core-columns-is-layout-24{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-25.wp-container-core-columns-is-layout-25{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-26.wp-container-core-columns-is-layout-26{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-27.wp-container-core-columns-is-layout-27{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-28.wp-container-core-columns-is-layout-28{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-29.wp-container-core-columns-is-layout-29{flex-wrap:nowrap;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-content/plugins/gp-premium/menu-plus/functions/js/sticky.min.js?ver=2.4.0" id="generate-sticky-js" defer></script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/lockerz.com","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<!--[if lte IE 11]>
+<script src="https://lockerz.com/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.4.0" id="generate-classlist-js"></script>
+<![endif]-->
+<script id="generate-menu-js-extra">
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://lockerz.com/wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.4.0" id="generate-menu-js" defer></script>
+<div class="wpautoterms-footer"><p>
+		<a href="https://lockerz.com/wpautoterms/terms-and-conditions/">Terms and Conditions</a><span class="separator"> - </span><a href="https://lockerz.com/wpautoterms/privacy-policy/">Privacy Policy</a></p>
+</div><script>window.lazyLoadOptions={elements_selector:"iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://lockerz.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img src="https://i.ytimg.com/vi_webp/ID/hqdefault.webp" alt="" width="480" height="360">',a='<button class="play" aria-label="play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi_webp/ID/hqdefault.webp'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1717055610 -->

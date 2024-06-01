@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><title>Contests | www.971theriver.com</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- templates/common/web/includes/extended_meta.html --><meta name="description" content="Contests"/><meta name="keywords" content=""/><meta property="og:title" content="Contests"/><meta property="og:type" content="article"/><meta property="og:url" content="http://www.971theriver.com/s/vendor/upickem/"/><link rel="shortcut icon" href="http://media.cmgdigital.com/shared/media/web/site/www_971theriver_com/images/favicon.ico" /><link rel="apple-touch-icon" href="http://media.cmgdigital.com/shared/media/web/site/www_971theriver_com/images/favicon-apple-touch-icon.png" /><link rel="stylesheet" href="http://media.cmgdigital.com/shared/CACHE/css/62fc0bde2f0c.css" type="text/css" media="screen"><link rel="stylesheet" href="http://media.cmgdigital.com/shared/CACHE/css/482719e62d32.css" type="text/css" media="print"><script type="text/javascript" src="http://media.cmgdigital.com/shared/media/web/common/javascript/jquery-1.4.4.min.js"></script><script type="text/javascript">/* <![CDATA[ */
+    var cmg = {query: jQuery.noConflict(true)};
+    
+    
+    cmg.query.ondeps = function(fun) { cmg.query(document).bind('ondeps', fun); };
+    cmg.query.ajax_includes = function(fun) { cmg.query(document).bind('ajax_includes', fun); };
+    
+    var mediaurl = "http://media.cmgdigital.com/shared/media/web/common/";
+    
+    var site_domain = "www.971theriver.com";
+    
+    var metrics_signin = 0;/* ]]> */
+</script><script type="text/javascript" src="http://media.cmgdigital.com/shared/media/web/common/javascript/jquery.cmfullwidth.js"></script><script type="text/javascript" src="http://media.cmgdigital.com/shared/media/web/common/javascript/jquery-ui-1.8.5.custom.min.js"></script><script type="text/javascript" src="http://media.cmgdigital.com/shared/media/web/common/javascript/cmtooltip.js"></script><script type="text/javascript">/* <![CDATA[ */
+    
+    cmg.query(function() {
+        var js_reqs = [
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/swfobject.js",
+            
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/formchecking.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/jquery.vjustify.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/tabbedcontainer.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/comments.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/vote.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/cmExpandable.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/omniture_event.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/jquery.cmlightbox.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/cmwidgets.js",
+            
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/rotator.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/writeCapture.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/jquery.writeCapture.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/json2.min.js",
+            "http://media.cmgdigital.com/shared/media/web/common/javascript/medley_ads/ad_fill.js"
+        ];
+        var process_next_js = function() {
+            if (js_reqs.length > 0) { 
+                var next_url = js_reqs.shift();
+                cmg.query.getScript(next_url, process_next_js);
+            } else { cmg.query(document).trigger('ondeps'); }
+        };
+        process_next_js();
+    });
+    
+    (function($) {
+        var NUM_RETRIES = 3;
+        var URL_ATTR = 'data-href';
+        var REPLACE_SELECTOR = 'span.cmAjaxInclude';
+
+        $.ondeps(function(){
+            var urls = [];
+            $(REPLACE_SELECTOR).each(function(){
+                url = $(this).attr(URL_ATTR);
+                if (url) {
+                    urls.push(url);
+                }
+            });
+
+            if (urls.length > 0) {
+                var retriesLeft = NUM_RETRIES;
+                var settings = {
+                    type: "POST",
+                    url: '/common-admin/ajax-include/',
+                    cache: false,
+                    data: { urls: JSON.stringify(urls) },
+                    dataType: 'json',
+                    success: function(data, textStatus, xhr) {
+                        errorUrls = [];
+                        $.each(data, function(url, response) {
+                            if (response.status === 200) {
+                                var span = $(REPLACE_SELECTOR + '[' + URL_ATTR + '="' + url + '"]');
+                                span.replaceWith(response.content);
+                            } else {
+                                errorUrls.push(url);
+                            }
+                        });
+
+                        
+                        if (errorUrls.length > 0) {
+                            settings.data.urls = JSON.stringify(errorUrls);
+                            settings.error();
+                        }
+                        if (errorUrls.length === 0 || retriesLeft === 0) {
+                            cmg.query(document).trigger('ajax_includes');
+                        }
+                    },
+                    error: function(xhr, textStatus, errorThrown) {
+                        if (retriesLeft > 0) {
+                            retriesLeft -= 1;
+                            $.ajax(settings);
+                        }
+                    }
+                };
+                $.ajax(settings);
+            }
+        });
+    })(cmg.query);/* ]]> */
+</script><script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><script type="text/javascript" src="http://media.cmgdigital.com/shared/media/web/common/javascript/cmmapmarkers.js"></script><meta name="title" content="Roger Daltrey performs Tommy" />
+<meta name="description" content="" />
+</head><body id="cmBaseBody" class="cmBody"><!-- begin ad_rp06 block --><!-- Ad position RP06 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP06--><div class="cmAd cmAdFind" id="RP06" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="RP06"></div><!-- end ad_rp06 block --><!-- begin ad_rp07 block --><!-- Ad position RP07 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP07--><!--Ad Targeting mapping does not exist--><!-- end ad_rp07 block --><!-- begin cmHeaderWrap block --><!-- header000.html --><div class="cmMainContainer"><div class="cmContainer9"><div class="cmHeaderWrap cmCol9"><!-- begin cmHeaderWrap block --><!-- header001.html --><div class="cmHeaderCap cmClearfix"><div class="cmHeaderCapInner"><div class="cmHeaderCap001"><p>Follow us on</p><ul class="cmSocialMediaLinks cmFloatLeft"><li><a href="http://www.facebook.com/971theriver"><span class="sprite sharing iconFacebook">&nbsp;&nbsp;</span></a></li><li><a href="http://twitter.com/ClassicHits971"><span class="sprite sharing iconTwitter">&nbsp;&nbsp;</span></a></li></ul></div><span class="cmAjaxInclude" data-href="http://www.971theriver.com/common-admin/ajax/user_welcome/"></span></div></div><div id="cmHeaderMainContainer" class="cmClearfix"><div id="cmHeaderLogoContainer"><a href="http://www.971theriver.com/" title="www.971theriver.com"><img src="http://media.cmgdigital.com/shared/media/web/site/www_971theriver_com/images/logo.png" alt="www.971theriver.com Logo" name="cmHeaderLogo" id="cmHeaderLogo" /></a></div><div id="cmNowPlayingWidget"><div class="cmNowPlayingIcon"></div><a class="cmNowPlayingRecentAds" href="http://www.971theriver.com/lsp/ads/">recent on-air advertisers</a><div id="cmNowPlayingStreaming" class="cmNowPlayingSummary" style="display:none;"><img src="" id="cmNowPlayingImage" alt="Now Playing" class="cmDarkBoxShadow cmPhotoBorderWhite" style="display:none;" /><h3 id="cmNowPlayingHeader">Now Playing</h3><span id="cmNowPlayingTitle"><a href="javascript:void(0);"></a></span><br /><span id="cmNowPlayingSubtitle"><a href="javascript:void(0);"></a></span></div><div id="cmNowPlayingDefault" class="cmNowPlayingSummary"><h3 id="cmNowPlayingDefaultHeader">Now Playing</h3><span id="cmNowPlayingDefaultTitle">971 The River</span><br /><span id="cmNowPlayingDefaultSubtitle">Classic Concerts and ...</span></div><script type="text/javascript">
+    cmg.query(function() {
+        var streams = {
+            "default_stream" : "http://streaming.971theriver.com/_players/coxradio/index.php?callsign=WSRVFM",
+            "mp3_stream" : "http://provisioning.streamtheworld.com/pls/WSRVFM.pls"
+        };
+
+        var active_stream = streams.default_stream;
+
+        if ( navigator.userAgent.indexOf('Mobile') != -1) {
+            if (navigator.userAgent.indexOf('Android') != -1) {
+                var active_stream = streams.default_stream;
+            } else {
+                var active_stream = streams.mp3_stream;
+            }
+            cmg.query('.cmListenLiveButton').attr("href", active_stream).text("Listen Live");
+        } else {
+            cmg.query('.cmListenLiveButton').attr("href", active_stream)
+            .click(function() {
+                window.open(this.href, 'playerlivepopup', 'width=800,height=440,resizable=1,toolbar=0,status=0,location=0,scrollbars=0');return false;
+                }).html("<span>Listen Live</span>");
+        }
+    });
+</script><a href="http://www.971theriver.com/#" class="cmListenLiveButton"></a></div><script type="text/javascript">
+/* <![CDATA[ */
+
+var timeoutVar = 0;
+var musicString = 'Music'; 
+var historyString = 'History'; 
+var retryInterval = 20; 
+var defaultTitle = '971 The River';
+var defaultSubtitle = 'Classic Concerts and ...';
+
+function now_playing_jsonp_cb(data) {
+    if (typeof data.objects[0] != 'undefined') {
+        cmg.query('#cmNowPlayingDefaultTitle').text(typeof data.objects[0].title != 'undefined' ? data.objects[0].title : defaultTitle);
+        cmg.query('#cmNowPlayingDefaultSubtitle').text(typeof data.objects[0].subtitle != 'undefined' ? data.objects[0].subtitle : defaultSubtitle);
+        if (data.objects[0].data_source == historyString && typeof data.objects[0].recently_played[0] != 'undefined' && typeof data.objects[0].recently_played[0].type != 'undefined' && data.objects[0].recently_played[0].type == musicString) {
+            var thisObject = new Object();
+            var rpNode = data.objects[0].recently_played[0];
+            thisObject.image = typeof rpNode.track.artist_detail.image != 'undefined' ? rpNode.track.artist_detail.image : null;
+            thisObject.title = typeof rpNode.title != 'undefined' ? rpNode.title : '';
+            thisObject.subtitle = typeof rpNode.artist != 'undefined' ? rpNode.artist : '';
+            thisObject.title_url = typeof rpNode.track.absolute_url != 'undefined' ? rpNode.track.absolute_url : 'javascript:void(0);';
+            thisObject.subtitle_url = typeof rpNode.track.artist_detail.html_link != 'undefined' ? rpNode.track.artist_detail.html_link : 'javascript:void(0);';
+            thisObject.subtitle_chunk = typeof rpNode.track.artist_detail.html_link != 'undefined' ? rpNode.track.artist_detail.html_link : '';
+            thisObject.ttl = data.objects[0].ttl != null ? data.objects[0].ttl : 10;
+            populateNowPlaying(thisObject);
+        } else if(data.objects[0].current_program != null){
+            var thisObject = new Object();
+            var cpNode = data.objects[0].current_program;
+            thisObject = new Object();
+            thisObject.image = typeof cpNode.photo_url != 'undefined' ? cpNode.photo_url : null;
+            thisObject.title = typeof cpNode.title != 'undefined' ? cpNode.title : '';
+            thisObject.subtitle = typeof cpNode.subtitle != 'undefined' ? cpNode.subtitle : '';
+            thisObject.title_url = typeof cpNode.absolute_url != 'undefined' ? cpNode.absolute_url : 'javascript:void(0);';
+            thisObject.subtitle_url = typeof cpNode.absolute_url != 'undefined' ? cpNode.absolute_url : 'javascript:void(0);';
+            thisObject.subtitle_chunk = cmg.query('#cmNowPlayingSubtitle a').text(thisObject.subtitle).attr('href',thisObject.subtitle_url);
+            thisObject.ttl = data.objects[0].ttl != null ? data.objects[0].ttl : 10;
+            populateNowPlaying(thisObject);
+        } else if (data.objects[0].ttl != null) {
+            showDefault();
+            runTimer(data.objects[0].ttl != null ? data.objects[0].ttl : 10);
+        }
+    } else {
+        showDefault();
+        runTimer(retryInterval);
+    }
+}
+
+cmg.query(document).ready(function() { getData(); });
+
+
+function getData() {
+    try {
+        
+        cmg.query.ajax({
+            
+            url: 'http://'+site_domain+'/lsp/_api/v1/stream/',
+            data: {format:'jsonp', callback: 'now_playing_jsonp_cb'},
+            accepts: 'text/javascript',
+            method: 'GET',
+            dataType:'script',
+            error: function() { throw("error loading now playing"); },
+            success: function() {
+                
+            }
+        });
+    }
+    catch(err) {
+        showDefault();
+        runTimer(retryInterval);
+    }
+}
+
+function populateNowPlaying(currentObject){
+    if(currentObject.image != null){
+        cmg.query('#cmNowPlayingImage').attr({src: currentObject.image, alt: currentObject.subtitle}).show();
+    } else {
+        cmg.query('#cmNowPlayingImage').hide();
+    }
+    cmg.query('#cmNowPlayingTitle a').text(currentObject.title).attr('href',currentObject.title_url);
+    cmg.query('#cmNowPlayingSubtitle').html(currentObject.subtitle_chunk);
+    showDetails();
+    runTimer(currentObject.ttl);
+}
+
+function runTimer(timeInterval){
+    clearTimeout(timeoutVar);
+    timeInterval *= 1000;
+    timeoutVar = setTimeout("getData()",timeInterval);
+}
+
+function showDefault(){
+    cmg.query('#cmNowPlayingStreaming').hide();
+    cmg.query('#cmNowPlayingDefault').show();
+}
+
+function showDetails(){
+    cmg.query('#cmNowPlayingDefault').hide();
+    cmg.query('#cmNowPlayingStreaming').show();
+}
+
+/* ]]> */
+</script><div id="cmWeatherWidget"></div><script type="text/javascript">
+            
+            function weather_jsonp_cb(data) {
+                var html = data['html'];
+                if (html) {
+                    cmg.query('#cmWeatherWidget').html(html);
+                }
+            }
+            var widget_path = '/weather/widget/';
+            
+            var request_url = 'http://' + site_domain + widget_path;
+            cmg.query.ajax({
+                url: request_url,
+                method:'GET',
+                accepts:'text/javascript',
+                data: {format:'jsonp', callback:'weather_jsonp_cb'},
+                dataType:'script',
+                error: function() { },
+                success: function() {
+                    
+                }
+            });
+        </script><div id="cmSearchForm" class="cmFloatRight cmClearfix"><form action="http://www.971theriver.com/search/" method="get" class="search_form" autocomplete="off"><p><input type="text" name="q" value=""><button type="submit">Search</button></p></form></div></div><!-- header003.html --><div class="cmNavigation cmLeftFloat cmClearfix"><ul class="cmSiteNav"><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/">Home</a></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/lsp/">Last Songs Played</a></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/list/entertainment/971-river-interviews/eDX/">Audio/Video</a></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/s/events/">Event Guide</a><ul class="cmSubNav"><li class="cmSubNavMenu"><a href="http://www.971theriver.com/s/community/">The River Cares</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/events/">Calendar Search</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/list/events/concerts/rivers-concert-calendar/aKC/">Concerts &amp; Tours</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/local-attractions/">Local Attractions</a></li></ul></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/s/music/">Music</a></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/staff/kaedy-kiely/">Kaedy Kiely</a><ul class="cmSubNav"><li class="cmSubNavMenu"><a href="http://www.971theriver.com/weblogs/kaedys-blog/">My Blog</a></li></ul></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/s/contests/">Contests</a></li><li class="cmPrimaryNavMenu"><a href="http://www.971theriver.com/s/inside/">Inside</a><ul class="cmSubNav"><li class="cmSubNavMenu"><a href="http://www.971theriver.com/profile/edit/private/">Member Center</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/s/inside/personalities/">Personalities</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/s/inside/photos/">Photo Gallery</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/contact-us/">Contact Us</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/work-with-us/">Employment</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/lsp/ads/">About our Advertisers</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/news/online/site-information/our-internship-program/nWfS/">Internships</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/news/events/station-events/meet-river-rats/nCbjq/">Meet the River Rats</a></li><li class="cmSubNavMenu"><a href="http://www.971theriver.com/s/special-offers/">Special Offers</a></li></ul></li></ul></div><script type="text/javascript" src="http://media.cmgdigital.com/shared/CACHE/js/d1a3511cf8e2.js" charset="utf-8"></script><div class="cmCol9 cmFirst cmLast cmClearfix"><div class="cmPencilAd"><!-- pencil ad --></div></div><!-- end header003.html --><!-- header004.html --><div class="cmCol9 cmFirst cmLast cmClearfix"><div id="cmAlertBar"><!-- alert bar --></div></div><!-- header005.html --><div class="cmCol9 cmFirst cmLast cmClearfix"><div class=""><!-- header005 --></div></div><!-- end cmHeaderWrap block --></div><!-- begin cmSubHeaderWrap block> --><div class="cmSubHeaderWrap cmCol9"><!-- begin ad_pb01 block --><!-- end ad_pb01 block --><!-- begin ad_hp00 block --><!-- Ad position HP00 www.971theriver.com contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : HP00--><div class="cmAd cmAdFind" id="HP00" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="HP00"></div><!-- end ad_hp00 block --><!-- begin ad_hp01 block --><!-- Ad position HP01 www.971theriver.com contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : HP01--><div class="cmAd cmAdFind" id="HP01" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="HP01"></div><!-- begin ad_hp01 block --></div><!-- end cmSubHeaderWrap block --><div class="cmBodyWrap cmCol9"><!-- begin cmBodyWrap block --><!-- center "content well" --><script type="text/javascript">if(_cmHeaderUserRegistration = document.getElementById('cmHeaderUserRegistration')){ _cmHeaderUserRegistration.style.display = 'none'; }</script><div class="cmCol6">
+<script type="text/javascript" src="https://971theriver.upickem.net/engine/includes/iFrameResizer.js"></script>
+<iframe id="childFrame" src="https://971theriver.upickem.net/engine/Welcome.aspx?contestid=35785&iframe=1" width="100%" frameborder="0" scrolling="no"></iframe>
+
+</div><div class="cmCol3"><!-- right "rail" --><div class="cmCol3 cmFirst cmRightRail"><div class="cmFeedUtilities cmModule"><ul><li class="sprite iconEmail"><a href="http://www.971theriver.com/newsletters/signup/">Newsletters</a></li><li class="sprite iconRss"><a href="http://www.971theriver.com/rss/">RSS Feeds</a></li></ul></div><!-- Ad position RP01 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP01--><div class="cmAd cmAdFind" id="RP01" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="RP01"></div><!-- Ad position RP02 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP02--><div class="cmAd cmAdFind" id="RP02" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="RP02"></div><div class="cmModule cmCenter"><iframe src="http://www.facebook.com/plugins/likebox.php?id=16003464107&amp;width=293&amp;connections=10&amp;stream=false&amp;header=false&amp;height=255" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:293px; height:255px;" allowTransparency="true"></iframe></div><!-- Ad position RP03 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP03--><div class="cmAd cmAdFind" id="RP03" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="RP03"></div><!-- Ad position RP04 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP04--><div class="cmAd cmAdFind" id="RP04" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="RP04"></div><!-- Ad position RP05 www.971theriver.com Ad category:contests --><!--environment : prod--><!--sitename : 971theriver--><!--sectionname : contests--><!--position : RP05--><div class="cmAd cmAdFind" id="RP05" data-environment="prod" data-sitename="971theriver" data-sectionname="contests" data-position="RP05"></div></div></div><div class="cmCol3"><!-- right "rail" --><div class="cmCol3 cmFirst cmRightRail"></div></div><!-- end cmBodyWrap block --></div><div class="cmClear">&nbsp;</div><div class="cmInnerFooterWrap cmCol9"><!-- begin cmFooterWrap block --><!-- footer001.html --><!-- footer002.html --><div id="cmFooterContainer"><div class="cmOuterFooterWrap"><div id="cmFooterSiteMap" class="cmClearFix"><div class="cmSiteMapColumn cmLeftFloat cmFirst"><h4>Audio</h4><ul class="cmSiteMapList"><li><a href="http://www.971theriver.com/lsp/">Last Songs Played</a></ul><h4>Event Guide</h4><ul class="cmSiteMapList"><li><a href="http://www.971theriver.com/events/">Events</a></li><li><a href="http://www.971theriver.com/s/concerts/">Concerts</a></li></ul></div><div class="cmSiteMapColumn cmLeftFloat"><h4>About Us</h4><ul class="cmSiteMapList"><li><a href="http://www.971theriver.com/contact-us/">Contact Us</a></li><li><a href="http://www.971theriver.com/work-with-us/">Work With Us</a></li><li><a href="http://www.971theriver.com/eeoc/">EEOC Statement</a></li></ul></div><div class="cmSiteMapColumn cmLeftFloat"><h4>Advertisers and Sponsors</h4><ul class="cmSiteMapList"><li><a href="http://www.971theriver.com/ads/">How to Advertise</a></li><li><a href="http://www.971theriver.com/lsp/ads/">Recent on-air advertisers</a></li><li><a href="http://www.autotrader.com/fyc/index.jsp?LNX=CXRATFTRLNK">Cars</a> on <a href="http://www.autotrader.com/fyc/index.jsp?LNX=CXRATFTRLNK">AutoTrader.com</a></li><li><a href="http://www.kudzu.com">Contractors on Kudzu.com</a></li></ul></div><div class="cmSiteMapColumn cmLeftFloat"><h4>Help</h4><ul class="cmSiteMapList"><li><a href="http://www.971theriver.com/online/audio-help/">Audio Help</a></li><li><a href="http://www.971theriver.com/online/video-help/">Video Help</a></li><li><a href="http://www.971theriver.com/online/search-help/">Search Help</a></li></ul></div><div class="cmClear"></div></div><div class="cmFooterTerms"><p>&#169; 2011 <a href="http://www.coxmediagroup.com">Cox Media Group</a>. By using this website, you accept the terms of our <a href="http://www.971theriver.com/visitor_agreement/">Visitor Agreement</a> and <a href="http://www.971theriver.com/privacy_policy/">Privacy Policy</a><br/><br/></p><p><img src="http://media.cmgdigital.com/shared/img/photos/2011/03/29/rovi_logo.jpg" height="16" width="30" align="middle" alt="Rovi"/>&nbsp;Portions of Content Provided by Rovi Corporation. &#169; 2011 Rovi Corporation<br></p></div></div></div><!-- end cmFooterWrap block --></div><div class="cmClear">&nbsp;</div></div></div><!-- begin cmFooterContainer block --><!-- outer_footer001.html --><!-- end cmFooterContainer block --><!-- begin analytics block --><!-- begin google analytics --><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12967665-11");
+pageTracker._setDomainName(".www.971theriver.com");
+pageTracker._trackPageview();
+} catch(err) {}</script><!-- end google analytics --><span style="display:none;" id="cm_s_code"></span><!-- SiteCatalyst code version: H.22.1
+Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com --><script type="text/javascript">//<![CDATA[
+    
+    
+    
+
+    
+    var cx_siteName = "WSRV-FM";
+    var cx_rsID = "coxwsrvfm";
+    var cx_marketpath = "GA: Atlanta";
+    var cx_medium = "Radio";
+
+    var s_account = cx_rsID;
+
+    if (("prod" == "prod") && !cx_rsID.match(/dev/)) {
+        if (cx_medium == "Radio" || cx_medium == "Tv") {
+            s_account = s_account+",coxradioglobal,coxglobal";
+        }
+        else if(cx_medium == "Newspaper") {
+            var cx_state = cx_marketpath.split(/:/)[0].toLowerCase();
+            s_account = s_account+",cox"+cx_state+"global,coxglobal";
+        }
+    }
+    else {
+        
+        s_account = "coxradiodev,coxnewspaperdev,coxtvdev";
+    }
+//]]></script><script type="text/javascript" src="http://media.cmgdigital.com/shared/media/web/common/javascript/omniture_core.js"></script><script type="text/javascript">//<![CDATA[
+    
+    cmg.s_coxnews.siteName=cx_siteName;
+    cmg.s_coxnews.linkInternalFilters = "javascript:,doubleclick.net,alt.coxnewsweb.com,legacy.com,uclick.com,signin.cmgdigital.com,www.971theriver.com";
+    cmg.s_coxnews.server = window.location.host;
+    cmg.s_coxnews.prop13 = cmg.s_coxnews.eVar13 = document.title.replace("| www.971theriver.com", "");
+
+    
+    var clean_url = window.location.href.split(/[#?]/);
+    cmg.s_coxnews.pageName = cmg.s_coxnews.eVar55 = clean_url[0];
+    
+
+    if (metrics_signin == 1) {
+        cmg.s_coxnews.prop22 = cmg.s_coxnews.eVar22 = "gur";
+    }
+
+    
+    if (cmg.s_coxnews.prop13.length == 0) {
+        cmg.s_coxnews.prop13 = cmg.s_coxnews.eVar13 = "no page title available";
+    }
+    cmg.s_coxnews.hier3 = cmg.s_coxnews.channel = cmg.s_coxnews.eVar56 = "no category";
+
+    
+
+    
+    if(cx_medium=="Radio" || cx_medium=="Tv" || cx_medium=="Paper") {
+        cmg.s_coxnews.hier1 = cx_marketpath+"|"+cx_medium+"|"+cx_siteName;
+        cmg.s_coxnews.hier2 = cx_medium+"|"+cx_marketpath+"|"+cx_siteName;
+        
+        var search_page_re = new RegExp(cmg.s_coxnews.server+"\/search");
+        var search_match = search_page_re.exec(window.location);
+        if(search_match != null){
+            cmg.s_coxnews.eVar1 = cmg.s_coxnews.getQueryParam('q');
+            if(cx_no_results){
+                cmg.s_coxnews.events = "event13,event14";
+                cmg.s_coxnews.prop46 = "no";
+            } else {
+                cmg.s_coxnews.events = "event13";
+                cmg.s_coxnews.prop46 = "yes";
+            }
+            if(cmg.s_coxnews.getQueryParam("searchType") == "web"){
+                cmg.s_coxnews.eVar45=cmg.s_coxnews.prop45 = "web";
+            } else {
+                cmg.s_coxnews.eVar45=cmg.s_coxnews.prop45 = "site";
+            }
+        }
+        if (cx_medium == "Radio") {
+            cmg.s_coxnews.eVar43=cmg.s_coxnews.prop43 = "classicrock";
+        }
+    }
+    
+    
+cmg.s_coxnews.hier3 = "entertainment|contests";
+cmg.s_coxnews.prop42 = "wsrv-fm";
+cmg.s_coxnews.eVar42 = "wsrv-fm";
+cmg.s_coxnews.prop43 = "classicrock";
+cmg.s_coxnews.eVar43 = "classicrock";
+cmg.s_coxnews.prop14 = "contests";
+cmg.s_coxnews.eVar14 = "contests";
+cmg.s_coxnews.prop16 = "non-mobile site";
+cmg.s_coxnews.eVar16 = "non-mobile site";
+cmg.s_coxnews.prop17 = "";
+cmg.s_coxnews.eVar17 = "";
+cmg.s_coxnews.prop22 = "section front";
+cmg.s_coxnews.eVar22 = "section front";
+cmg.s_coxnews.pageName = "/re/314/211/s/vendor/upickem/";
+cmg.s_coxnews.eVar55 = "/re/314/211/s/vendor/upickem/";
+cmg.s_coxnews.channel = "entertainment";
+cmg.s_coxnews.eVar56 = "entertainment";
+
+    var path = '/analytics/get-user-metrics/';
+    var request_url = 'http://' + site_domain + path;
+    var settings = {
+        url: request_url,
+        method:'GET',
+        accepts:'text/javascript',
+        data: {format:'jsonp', callback:'user_metrics_cb'},
+        dataType:'script',
+        error: function() { finalize_metrics(); },
+        success: function() {
+            
+        }
+    };
+    function user_metrics_cb(data) {
+        for (key in data) {
+            var assignment = data[key];
+            var parent_varname = assignment['parent'];
+            var lvalue = assignment['lvalue'];
+            var rvalue = assignment['rvalue'];
+            cmg[parent_varname][lvalue] = rvalue;
+        }
+       
+        for (key in cmg.s_coxnews) {
+            if (key.match(/prop|eVar|hier/) !== null) {
+                cmg.s_coxnews[key] = cmg.s_coxnews[key].toLowerCase();
+            }
+        }
+        finalize_metrics();
+    }
+    function finalize_metrics() {
+        var s_code = cmg.s_coxnews.t();
+        if (s_code) { cmg.query('#cm_s_code').text(s_code); }
+    }
+    cmg.query.ajax(settings);
+//]]></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://coxnet.112.2o7.net/b/ss/coxwsrvfm/1/H.22.1--NS/0" height="1" width="1" border="0" alt="" /></a></noscript><!-- Quantcast Tag --><script type="text/javascript">
+    var _qevents = _qevents || [];
+
+    (function() {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+    })();
+
+    _qevents.push({
+        qacct:"p-38KriKc8Foyx-",
+        labels:"atlanta.radio"
+    });
+</script><noscript><div style="display:none;"><img src="http://www.971theriver.com/pixel.quantserve.com/pixel/p-38KriKc8Foyx-.gif" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><!-- End Quantcast tag --><!-- end analytics block --><script type="text/javascript">
+        
+        cmg.query(function() {
+            if(cmg.query('span.st_sharethis').length != 0) {
+                cmg.query.getScript("http://w.sharethis.com/button/buttons.js", function() {
+                    stLight.options({publisher:'c05913fd-d628-465f-b30e-89feef788ec7'});
+                });
+            }
+        });
+
+        
+
+        cmg.query(document).ready(function(){
+            cmg.query('a.cmNeedsNext').live('click', function(e){
+                e.preventDefault();
+                var new_url = url_with_next(cmg.query(this).attr('href'));
+                window.location = new_url;
+            });
+
+            cmg.query('form.cmNeedsNext').live('submit', function(e){
+                add_next_params(cmg.query(this));
+            });
+        });
+
+        
+
+        cmg.query.ajax_includes(function() {
+            cmg.query('.cmNeedsNext').each(function() {
+                add_next_params(cmg.query(this));
+            });
+        });
+
+        function add_next_params(el){
+            
+            var attr = el.attr('action') ? 'action' : 'href';
+            var existing_url = el.attr(attr);
+            el.attr(attr, url_with_next(existing_url));
+        }
+
+        function url_with_next(url)
+        {
+            
+
+            
+            url = url.replace(/\?next=?&/, '?').replace(/&next=?&/, '&').replace(/[?&]next=?$/, '').replace(/[?&]next=?#/, '#');
+
+            var next_param = get_param('next', url);
+            if(next_param)  // Johnny 5
+                return url;
+
+            var connector = (url.match(/\?/)) ? "&" : "?";
+            var next_val = window.location.pathname + window.location.search + window.location.hash;
+            return url + connector + 'next=' + encodeURIComponent(next_val);
+        }
+
+        function get_param(name, url){
+            
+            var m = RegExp('[?&]' + name + '=([^&^#]*)').exec(url);
+            return m && decodeURIComponent(m[1].replace(/\+/g, ' '));
+        }
+    </script></body></html>
+

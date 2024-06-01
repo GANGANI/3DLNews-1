@@ -1,0 +1,1640 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<HEAD>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="WMBR Playlist, Playlist for Kit Kelt on WMBR's Ceangal Ceilteach, Monday, December 11, 2017 (7-8am)">
+    <meta name="author" content="Kit Kelt WMBR 88.1FM">
+    <link rel="icon" href="../favicon.ico">
+	<TITLE>Playlist for Kit Kelt on WMBR's Ceangal Ceilteach, Monday, December 11, 2017 (7-8am)</TITLE>
+    <!-- Bootstrap core CSS -->
+    <link href="css/track-blaster.css" rel="stylesheet">
+    <link href="css/bootstrap-ms.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/track-blaster-extra.css" rel="stylesheet">
+	<link rel="stylesheet" href="AudioPlayer/css/audioplayer.css" type="text/css">
+</HEAD>
+
+<BODY>
+<div class="hidden" id="hiddenLogo">
+	<img id="imgLogo" src="../images/track-blaster-logo.gif" alt="Track-Blaster Logo" />
+</div>
+<div class="modal" id="workingModal" tabindex="-1" role="dialog" aria-labelledby="working">
+    <div class="vertical-alignment-helper">
+    	<div class="modal-dialog vertical-align-center">
+		    <div class="modal-content text-center">
+				<img id="imgWorking" src="images/img_working.gif" alt="W O R K I N G" />
+		    </div>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="working">
+    <div class="vertical-alignment-helper">
+    	<div class="modal-dialog vertical-align-center">
+		    <div class="modal-content">
+	            <div id="defaultModalNode"></div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.php"><img src="images/img_wmbr-drawn.png" id="img_wmbr" class="img-responsive" alt="hand-drawn wmbr logo"></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Playlists <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="playlist.php?id=29608">Previous Playlist</a></li>
+            <li><a href="playlist.php?id=29177">Next Playlist</a></li>
+            <li><a href="index.php" title="View all playlists">All Playlists</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="playlist.php?id=29444">DJ's Previous</a></li>
+            <li><a href="playlist.php?id=29785">DJ's Next</a></li>
+            <li><a href="index.php?dj=52" title="View all playlists from Kit Kelt">All by this DJ</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="playlist.php?id=29444">Show's Previous</a></li>
+            <li><a href="playlist.php?id=29785">Show's Next</a></li>
+            <li><a href="index.php?program=77" title="View all playlists from Ceangal Ceilteach">All from this Show</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" id="searchDropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+            	<form id="searchform" name="searchForm" action="search.php" method="get">
+	                <div class="form-group">
+    	            	<div class="radio">
+							<label>
+            	          	<input type="radio" name="whichForm" id="radioFindBands" value="findbands"  checked>
+							Find when an artist or song has been played.
+							</label>
+						</div>
+						<div class="radio">
+							<label>
+							<input type="radio" name="whichForm" id="radioTopBands" value="topbands" >
+							Find the most played artists or songs.
+							</label>
+						</div>
+					</div>
+	    	        <div role="separator" class="divider"></div>
+            	    <div id="sectionFindBands">
+						<label>Find songs where the</label>
+						<div class="form-group">
+			    			<select id="inpField" name="field" class="form-control select-inline">
+								<option value="artist" selected>artist name</option>
+					    		<option value="song">song title</option>
+					    		<option value="album">album title</option>
+					    		<option value="label">label name</option>
+							</select>&nbsp;&nbsp;<select id="inpHow" name="exact" class="form-control select-inline">
+								<option value="is" selected>is</option>
+								<option value="sw">starts with</option>
+								<option value="con">contains</option>
+							</select>
+        	            </div>
+						<div class="form-group">
+					        <input id="inpKey" type="text" name="key" class="form-control" value="">
+                    	</div>
+					</div>
+            	    <div id="sectionTopBands" style="display:none;">
+						<div class="form-group keep-together select-inline">
+							<label class="select-inline">&nbsp;Find the top</label>&nbsp;&nbsp;<select id="inpRows" name="rows" class="form-control select-inline">
+			    				<option value="10" selected>10</option>
+							    <option value="25">25</option>
+			    				<option value="50">50</option>
+							    <option value="100">100</option>
+							    <option value="250">250</option>
+							</select>
+	                    </div>
+						<div class="form-group keep-together select-inline">
+ 	    	              	<label class="select-inline">&nbsp;most played</label>&nbsp;&nbsp;<select id="inpTopField" name="topfield" class="form-control select-inline">
+			    				<option value="artists" selected>artists</option>
+							    <option value="songs">songs</option>
+							</select>
+            	        </div>
+						<div class="form-group keep-together select-inline">
+                    	    <label class="select-inline">&nbsp;of</label>&nbsp;&nbsp;<select id="inpTopYear" name="topYear" class="form-control select-inline">
+								<option value="all" selected>all time</option>
+								<option value="1984">1984</option>
+								<option value="1985">1985</option>
+								<option value="1986">1986</option>
+								<option value="1987">1987</option>
+								<option value="1988">1988</option>
+								<option value="1989">1989</option>
+								<option value="1990">1990</option>
+								<option value="1991">1991</option>
+								<option value="1992">1992</option>
+								<option value="1993">1993</option>
+								<option value="1994">1994</option>
+								<option value="1995">1995</option>
+								<option value="1996">1996</option>
+								<option value="1997">1997</option>
+								<option value="1998">1998</option>
+								<option value="1999">1999</option>
+								<option value="2000">2000</option>
+								<option value="2001">2001</option>
+								<option value="2002">2002</option>
+								<option value="2003">2003</option>
+								<option value="2004">2004</option>
+								<option value="2005">2005</option>
+								<option value="2006">2006</option>
+								<option value="2007">2007</option>
+								<option value="2008">2008</option>
+								<option value="2009">2009</option>
+								<option value="2010">2010</option>
+								<option value="2011">2011</option>
+								<option value="2012">2012</option>
+								<option value="2013">2013</option>
+								<option value="2014">2014</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+								<option value="2023">2023</option>
+								<option value="2024">2024</option>
+							</select>
+						</div>
+
+						<div class="checkbox">
+    	                	<label><input id="NewOnly" name="newonly" type="checkbox" value="1">
+				 			Only include songs that are tagged as a new release.</label>
+            	        </div>
+					</div>
+                    
+					<div class="form-group">
+						<input type="submit" name="action" class="btn btn-default color3" value="Go!">
+					</div>
+
+ 		            <div role="separator" class="divider"></div>
+                    
+					<div class="form-group">
+           	        	<label>Limit search to</label><br />
+               	        <select name="program" class="form-control select-inline">
+							<option value="0" selected>   All Shows</option>
+							<option value="311">-9.8 m/s&sup2;</option>
+							<option value="259">{Empty Set}</option>
+							<option value="361">00XTC</option>
+							<option value="269">1001</option>
+							<option value="323">2GroovE</option>
+							<option value="214">323H</option>
+							<option value="346">The Show Formerly Known as 323H</option>
+							<option value="320">401 Unauthorized</option>
+							<option value="79">88 Rewound</option>
+							<option value="422">A Change of Scenery</option>
+							<option value="127">A Day In Jazz</option>
+							<option value="13">A Distorted Reality</option>
+							<option value="439">A E S T H E T I C</option>
+							<option value="285">A Little Bit Imaginary</option>
+							<option value="400">A Map, a String, a Light</option>
+							<option value="484">A Program of Jazz</option>
+							<option value="151">A Shot of Exprezzo</option>
+							<option value="180">A Tempo</option>
+							<option value="240">A-rhythmic</option>
+							<option value="420">A-side B-side</option>
+							<option value="287">Abstractions</option>
+							<option value="503">Abundance of Caution</option>
+							<option value="55">Africa Kabisa</option>
+							<option value="260">AfroBeat MIT</option>
+							<option value="540">Afterhours Memories</option>
+							<option value="122">All Night Broadcast</option>
+							<option value="290">All Things Africa</option>
+							<option value="322">Alternating Current</option>
+							<option value="205">Alternative Definition</option>
+							<option value="66">American Primitive</option>
+							<option value="308">Amorphous</option>
+							<option value="482">An Average Attempt at Philosophy</option>
+							<option value="406">An Eccentric Universe</option>
+							<option value="140">An Hour Wasted with Fuzzy and Leonid</option>
+							<option value="164">Analog Bubblebath</option>
+							<option value="349">Analogue Bubblebath</option>
+							<option value="182">Anarchist Agenda</option>
+							<option value="14">Annual Top 100 Countdown</option>
+							<option value="233">Antoxicated Radio</option>
+							<option value="263">Anything Goes</option>
+							<option value="432">Anything with a Beat</option>
+							<option value="410">Around the World in One Summer</option>
+							<option value="215">Astral Traveller</option>
+							<option value="15">Atlas Method</option>
+							<option value="496">the auracle</option>
+							<option value="9">Aural Fixation</option>
+							<option value="174">Avant-Garden</option>
+							<option value="359">BABEs: The Radio Experience</option>
+							<option value="369">Back to Normal</option>
+							<option value="227">Back to the Garden</option>
+							<option value="136">Background Music</option>
+							<option value="265">Backpacks and Magazines</option>
+							<option value="67">Backwoods</option>
+							<option value="502">Bag Hours</option>
+							<option value="367">Bangers and Banter</option>
+							<option value="168">The Basement Scene</option>
+							<option value="341">Basementality</option>
+							<option value="342">Bass Case</option>
+							<option value="10">Bats in the Belfry</option>
+							<option value="446">Beat-Deprived</option>
+							<option value="360">Bengali Beats and Tales</option>
+							<option value="497">Benny's Playlists</option>
+							<option value="189">Better Off Dead</option>
+							<option value="16">Better Than Elvis</option>
+							<option value="258">Bike Talk</option>
+							<option value="165">Bird Listening</option>
+							<option value="357">Bombastic & Stochastic</option>
+							<option value="17">Boners And Groaners</option>
+							<option value="445">Bonkerz</option>
+							<option value="103">Books on the Radio</option>
+							<option value="185">Boomerang</option>
+							<option value="195">Boots and Cats</option>
+							<option value="276">Boston Talks</option>
+							<option value="450">Bottom of the Record Bin</option>
+							<option value="525">Box of Maniacs</option>
+							<option value="18">Boy in a Dress</option>
+							<option value="192">Brainworms Radio</option>
+							<option value="1">Breakfast of Champions</option>
+							<option value="448">The Broken Leg Cafe</option>
+							<option value="382">Broken Records</option>
+							<option value="220">Burnt Biscuits</option>
+							<option value="453">Calling the Cranes</option>
+							<option value="268">Cambridge Happy Hour</option>
+							<option value="19">Carbon Dioxide</option>
+							<option value="177">Casual Encounters</option>
+							<option value="77">Ceangal Ceilteach</option>
+							<option value="383">Cha Chaan Teng</option>
+							<option value="241">Charles River Variety</option>
+							<option value="8">Cheese Patrol</option>
+							<option value="298">Chemistry 101</option>
+							<option value="433">Chicken Soup for the MIT Soul</option>
+							<option value="318">Chika and the Trash</option>
+							<option value="435">Chill Vibes with Aayush and Ritaank</option>
+							<option value="89">The Choice is Yourz</option>
+							<option value="144">Chopsticks</option>
+							<option value="330">Claire&sup2;</option>
+							<option value="81">Classical & Sundry</option>
+							<option value="480">The Clinton Years</option>
+							<option value="11">Clueless Clubhouse</option>
+							<option value="327">Cocktail Hour</option>
+							<option value="68">Coffeetime</option>
+							<option value="468">Coherence</option>
+							<option value="397">CoLab Radio on Air</option>
+							<option value="358">Colourless Green Ideas Sleep Furiously</option>
+							<option value="538">Community Conduit</option>
+							<option value="142">Compas sur FM</option>
+							<option value="333">Confusion Corner</option>
+							<option value="368">Connect the Dot.</option>
+							<option value="539">The Cosmic Deadbeat Radio Hour</option>
+							<option value="256">The Cosmic Hearse</option>
+							<option value="181">CPR</option>
+							<option value="201">Crazy Overnight Fill-In</option>
+							<option value="78">Crosscurrents</option>
+							<option value="499">Crossdressed Lullabies</option>
+							<option value="543">Crunchy Plastic Dinosaurs</option>
+							<option value="393">Cryptid Office Hours</option>
+							<option value="355">Cuéntame</option>
+							<option value="20">Czech For Rabbits</option>
+							<option value="275">Dancing Days</option>
+							<option value="191">Danfoolery</option>
+							<option value="412">Dangerous Things</option>
+							<option value="159">Day Break</option>
+							<option value="415">The Daydream Company</option>
+							<option value="145">Dealer's Choice</option>
+							<option value="529">Dewey Decibel System</option>
+							<option value="390">Diamond Hearts Club</option>
+							<option value="161">Differential RIYL</option>
+							<option value="474">Digital After Dark</option>
+							<option value="443">Digital.Trash</option>
+							<option value="166">Disjecta Membra</option>
+							<option value="303">Diss-oh-nonsense</option>
+							<option value="216">Dissonance</option>
+							<option value="204">Dizzy Magenta Bananas</option>
+							<option value="69">DJ Awesome and the Wonderfriends</option>
+							<option value="3">Do the Chisel</option>
+							<option value="232">Don't Take Me Seriously</option>
+							<option value="235">Dos Platanos</option>
+							<option value="288">Down River</option>
+							<option value="464">Drink Spot Radio Hour</option>
+							<option value="80">Droppin Knowledge</option>
+							<option value="156">Drunking Funk</option>
+							<option value="302">Duality and Paradox</option>
+							<option value="343">Dude, Where's My Capo?</option>
+							<option value="21">Dumping Ground</option>
+							<option value="296">Early in the Morning</option>
+							<option value="194">Eaters' Digest</option>
+							<option value="264">Eclectic Café</option>
+							<option value="336">El Gringo Bacano</option>
+							<option value="498">Electile Dysfunction</option>
+							<option value="354">Electronic Bubblebath</option>
+							<option value="438">Ellipsis</option>
+							<option value="421">Empathy Street</option>
+							<option value="347">Empirical Observations</option>
+							<option value="339">Entrepreneurs Of The World, Unite!</option>
+							<option value="379">Entropy</option>
+							<option value="384">Evolutions</option>
+							<option value="169">Excommunicated by the Catholic Church</option>
+							<option value="338">Exit Tangent</option>
+							<option value="334">Exposure Therapy</option>
+							<option value="457">Fall/Winter Soulstice</option>
+							<option value="141">Faves Uncategorized</option>
+							<option value="486">Femmes at the Front</option>
+							<option value="183">Fermat's Last Album</option>
+							<option value="229">Firehose Chat</option>
+							<option value="22">First Cup</option>
+							<option value="508">Flailing About</option>
+							<option value="92">Flying Ruckus</option>
+							<option value="456">FM Road</option>
+							<option value="196">Folk is Dead</option>
+							<option value="459">Food Spot Radio Hour</option>
+							<option value="51">For Your Pleasure</option>
+							<option value="461">Founder's Couch</option>
+							<option value="490">Freddy the Piano Man</option>
+							<option value="53">Free of Form</option>
+							<option value="463">Freezer Jams</option>
+							<option value="501">Frek[ENS] 88.1</option>
+							<option value="52">French Toast</option>
+							<option value="506">From Bindu to Ojas</option>
+							<option value="45">From Paradise to Hell, MI</option>
+							<option value="533">The Froot Loops</option>
+							<option value="337">Fuel for MIT</option>
+							<option value="197">Fun Hazard</option>
+							<option value="391">Funk in the Trunk</option>
+							<option value="408">Futbol Fever</option>
+							<option value="58">Generoso's Bovine Ska and Rocksteady</option>
+							<option value="252">GesamkunsTwerk</option>
+							<option value="120">Girls Only</option>
+							<option value="50">Global Frequency</option>
+							<option value="112">gloRap</option>
+							<option value="398">Gojira Schmojira</option>
+							<option value="405">Good Stuff</option>
+							<option value="44">Gorilla Got Me</option>
+							<option value="407">Grab Bag</option>
+							<option value="65">Green (In the Margin)</option>
+							<option value="4">Greg Reibman School of Broadcasting</option>
+							<option value="317">Grey Matters</option>
+							<option value="462">Grinds My Gears</option>
+							<option value="403">Grit & Glass</option>
+							<option value="427">Gritty City Radio</option>
+							<option value="522">The Grunch Hour</option>
+							<option value="110">Güibiri</option>
+							<option value="335">Hairy Bugs</option>
+							<option value="143">Haiti Focus</option>
+							<option value="217">Happy Hour</option>
+							<option value="126">Hard Bop Café</option>
+							<option value="273">Hardcore Hour</option>
+							<option value="94">Heartbreak & Footwork</option>
+							<option value="429">Heavenly High Notes</option>
+							<option value="179">Hello World</option>
+							<option value="139">Henry's Hard Drive</option>
+							<option value="190">Hi Friend</option>
+							<option value="23">Hi-Fi Lo-Fi</option>
+							<option value="99">Hi, How Are You?</option>
+							<option value="109">The Hidden Capital</option>
+							<option value="48">Hidden Gems in Plain Sight</option>
+							<option value="364">High Frequency</option>
+							<option value="418">The Hip Hop Head Variety Hour</option>
+							<option value="291">Hip To Be Square</option>
+							<option value="107">Hipster Happy Hour</option>
+							<option value="175">Historiographone</option>
+							<option value="310">Hit with Soft Rocks</option>
+							<option value="247">The Hole</option>
+							<option value="184">Hollie's Hipster Hour</option>
+							<option value="218">Holly Would</option>
+							<option value="24">Hook Heavy</option>
+							<option value="207">Horny Harmonics</option>
+							<option value="528">The Hot Rat Sessions</option>
+							<option value="505">The Hotspot</option>
+							<option value="95">House Therapy</option>
+							<option value="97">Howlin' the Blues</option>
+							<option value="353">Human Music</option>
+							<option value="115">The Human Spark</option>
+							<option value="128">I Love a Parade</option>
+							<option value="352">I Saw a Dog Today</option>
+							<option value="157">The I-5 Connection</option>
+							<option value="162">If 6 Was 9</option>
+							<option value="171">Ignition with PYR</option>
+							<option value="212">Ill Vibes</option>
+							<option value="203">The Illest Villains</option>
+							<option value="121">Improbability Field</option>
+							<option value="277">In Diaspora</option>
+							<option value="228">In Five Colors</option>
+							<option value="113">In the Margin</option>
+							<option value="25">In The Margin Of The Other</option>
+							<option value="530">In Transit</option>
+							<option value="477">Inches from the Abyss—A Charcuterie Board of Music</option>
+							<option value="301">Indie Tra$h</option>
+							<option value="199">Indy Cindie</option>
+							<option value="292">insert label here</option>
+							<option value="316">Insomnia Sounds</option>
+							<option value="111">Instrumental Surroundings</option>
+							<option value="57">The Intercontinental</option>
+							<option value="350">The Intergalactic Witching Hour with Crood &gt;Boi&gt; and Lorinda</option>
+							<option value="282">Interplanetary Mind</option>
+							<option value="124">Inverse Lullabies</option>
+							<option value="56">The iPod Shuffle Kerfuffle</option>
+							<option value="286">It's College, No Parents</option>
+							<option value="319">Jam Jam Yams</option>
+							<option value="82">Jam Session</option>
+							<option value="6">James Dean Death Car Experience</option>
+							<option value="74">Jazz Me Blues</option>
+							<option value="451">Jazz on a Summer's Afternoon</option>
+							<option value="70">The Jazz Train</option>
+							<option value="63">The Jazz Volcano</option>
+							<option value="236">The Juice Box</option>
+							<option value="370">Juicebox Hero</option>
+							<option value="469">The Kaleidoscope</option>
+							<option value="426">kawaiibeats</option>
+							<option value="375">KGBeats</option>
+							<option value="101">Kind of Blue</option>
+							<option value="117">King Ghidorah</option>
+							<option value="374">Kingston Vibrations</option>
+							<option value="479">Kook of the Cosmos</option>
+							<option value="138">Kumquat Robot</option>
+							<option value="137">La Casa del Perreo</option>
+							<option value="454">The LA Times</option>
+							<option value="46">The Land of Sand and Birds</option>
+							<option value="26">Last Call Radio</option>
+							<option value="27">Last Dance at the Death Disco</option>
+							<option value="305">Latchkey Sounds</option>
+							<option value="226">Late Night Jazz</option>
+							<option value="401">Late Night Jazz Abstractions with Crood Bot and Lorindex</option>
+							<option value="377">Late Night Space Jazz with Crood &gt;Boi&gt; and Lorinda</option>
+							<option value="300">Late Night Thoughts with Kosi Aroh</option>
+							<option value="2">Late Risers' Club</option>
+							<option value="132">Lattice Vibrations</option>
+							<option value="430">Lemonade</option>
+							<option value="470">Lentil and Stone</option>
+							<option value="340">Let Them Eat Chlake!</option>
+							<option value="255">Let's Get Started</option>
+							<option value="542">Let's Talk About Sax</option>
+							<option value="386">The Lethal List</option>
+							<option value="71">Listening Watching</option>
+							<option value="239">The Living Room</option>
+							<option value="123">Loose Talk</option>
+							<option value="12">Lost and Found</option>
+							<option value="28">Lost Highway</option>
+							<option value="213">Lost in my Bedroom</option>
+							<option value="473">Luau in the Attic</option>
+							<option value="243">Lucid Dreams</option>
+							<option value="149">Madame Resistance</option>
+							<option value="202">Robby and Kiana's Magic Carpet Ride</option>
+							<option value="396">Magic is Real</option>
+							<option value="304">Magic Lantern</option>
+							<option value="59">The Magik Bus</option>
+							<option value="526">Mama Cass' House</option>
+							<option value="324">Mare Nubium</option>
+							<option value="458">Mark & Evelyn's American Top 41</option>
+							<option value="478">Mass Jazz and Blues</option>
+							<option value="402">Massachusetts Baywatch Nights with Crood &gt;Boi&gt; and Lorinda</option>
+							<option value="211">Meandering Mentality</option>
+							<option value="512">The Meaning of the Blues</option>
+							<option value="351">Mecha Shuffle</option>
+							<option value="187">Megalopolis</option>
+							<option value="83">Mellow Madness</option>
+							<option value="5">Michiana Noise</option>
+							<option value="556">The Middleground</option>
+							<option value="467">Midnight Air</option>
+							<option value="387">Mighty Close to Heaven</option>
+							<option value="495">Mindblown</option>
+							<option value="160">Missed Connections</option>
+							<option value="466">The Mix</option>
+							<option value="193">Moody Food</option>
+							<option value="61">Moon Monster</option>
+							<option value="91">The Morning After</option>
+							<option value="537">Morning Wood</option>
+							<option value="329">Mouthfeel</option>
+							<option value="274">Multiple Choice</option>
+							<option value="154">Musenomix</option>
+							<option value="135">Music by Dead People</option>
+							<option value="517">Music For Eels</option>
+							<option value="409">Music Is Healing</option>
+							<option value="509">Music Therapy</option>
+							<option value="280">Mystery Flavor</option>
+							<option value="356">Mythical Grooves</option>
+							<option value="373">Mythical Moving Movies</option>
+							<option value="436">Mythos and Monsters</option>
+							<option value="395">Near and Far</option>
+							<option value="413">Nebulosity</option>
+							<option value="245">Necroticism</option>
+							<option value="98">The Neutral Theory</option>
+							<option value="54">The New Edge</option>
+							<option value="29">New Wave New Year</option>
+							<option value="30">Night Owl</option>
+							<option value="476">Nightclubs Where They Only Play Tchaikovsky</option>
+							<option value="248">No Sleep Club</option>
+							<option value="437">Noise.Pollution</option>
+							<option value="49">Nonstop Ecstatic Screaming</option>
+							<option value="251">Not Brahms and Liszt</option>
+							<option value="133">Not So Average Cabbage</option>
+							<option value="399">NUMTOT Radio</option>
+							<option value="326">Ode To Melanie</option>
+							<option value="371">Of Moments and Melodies</option>
+							<option value="345">oh no</option>
+							<option value="230">On the Dark Side of the Moon</option>
+							<option value="388">Ontem, Hoje, Sempre</option>
+							<option value="223">Opus Magnum</option>
+							<option value="150">Out for the Count</option>
+							<option value="460">Out of Your Orbit</option>
+							<option value="380">Ozymandias Melancholia</option>
+							<option value="131">Painful Hip</option>
+							<option value="186">Paisanos en un Mundo Extrano</option>
+							<option value="381">Palpitations</option>
+							<option value="116">The Paradox Box</option>
+							<option value="170">Part Time Punks</option>
+							<option value="114">Party Shuffle</option>
+							<option value="504">PhD Offense</option>
+							<option value="424">The Philharmonic Is My Backup Band</option>
+							<option value="447">Pickle Sounds</option>
+							<option value="210">Pieces of What</option>
+							<option value="119">Pink Bullets</option>
+							<option value="85">Pipeline!</option>
+							<option value="404">Plalist</option>
+							<option value="549">Playing with Sticks</option>
+							<option value="558">Playlistener</option>
+							<option value="152">Poeddictions</option>
+							<option value="328">Politics and the African Pulse</option>
+							<option value="31">The Pontoon Palace</option>
+							<option value="541">Porcelain Cow</option>
+							<option value="278">The Post ER</option>
+							<option value="325">Post-It Wall</option>
+							<option value="452">Post-Patriarchal</option>
+							<option value="32">Post-Pipeline</option>
+							<option value="209">Pourin' a Graphic</option>
+							<option value="188">Premature Anticipation</option>
+							<option value="206">Pretty</option>
+							<option value="297">Prompt Corner</option>
+							<option value="208">Propulsion</option>
+							<option value="534">Psychomania</option>
+							<option value="521">Pulsewidth</option>
+							<option value="172">Punk-Alt-Del</option>
+							<option value="234">The Pursuit of Happiness</option>
+							<option value="231">QJams</option>
+							<option value="362">QPR</option>
+							<option value="423">Quarters</option>
+							<option value="167">QV Noise</option>
+							<option value="372">R.S.V.P.</option>
+							<option value="33">R&B Jukebox</option>
+							<option value="100">Radio Ninja</option>
+							<option value="158">Radio Radio</option>
+							<option value="86">Radio with a View</option>
+							<option value="560">RADIO with a VIEW: A History Lesson</option>
+							<option value="281">Radio X</option>
+							<option value="434">Real Talk with Jennah Haque</option>
+							<option value="249">REALAX</option>
+							<option value="155">Really Really Ridiculously Good-Sounding Music</option>
+							<option value="449">Recreation</option>
+							<option value="34">Reel to Reel</option>
+							<option value="455">Refracted Frequency</option>
+							<option value="271">Remixed Signals</option>
+							<option value="87">Research & Development</option>
+							<option value="548">Revolutionary Rhymes</option>
+							<option value="125">Riding the Norse Horse</option>
+							<option value="270">The Right Now Show</option>
+							<option value="376">Riverside Chats</option>
+							<option value="441">The Roarin' Twenties</option>
+							<option value="200">Rocks, Pops, Kilts and Alternatives</option>
+							<option value="225">Rodents of Unusual Size</option>
+							<option value="244">Rookie Mistakes</option>
+							<option value="262">Rough and Ready</option>
+							<option value="392">RPS</option>
+							<option value="147">The Rude Show</option>
+							<option value="64">Running Returning</option>
+							<option value="527">Sad Boys Soundbox</option>
+							<option value="313">Sad Succulent</option>
+							<option value="492">Salvation Corner</option>
+							<option value="35">Sans Serif</option>
+							<option value="279">Sarah and Stephanie's Infinite Playlist</option>
+							<option value="75">The Scene</option>
+							<option value="425">Scheduled Broadcast</option>
+							<option value="104">Sci Fidelity</option>
+							<option value="465">Seasonal Soulstice</option>
+							<option value="219">Second Fiddle</option>
+							<option value="394">Second Hand Reporting</option>
+							<option value="76">Secret Heartbeats</option>
+							<option value="238">See the Music, Hear the Dance</option>
+							<option value="134">Sewersounds</option>
+							<option value="419">Shape-Shift & Trick</option>
+							<option value="378">Sharratives with XhiDae</option>
+							<option value="72">Shelium</option>
+							<option value="36">The Show Show</option>
+							<option value="108">Si No Hay Material</option>
+							<option value="7">Sick Packages</option>
+							<option value="307">Silicon Gothic</option>
+							<option value="510">Sin on Saturday, Pray on Sunday</option>
+							<option value="544">Sixer Mixer</option>
+							<option value="428">Sixty Minutes More or Less with Madame Psychosis</option>
+							<option value="129">Slow and Unsteady</option>
+							<option value="221">So Phisticated</option>
+							<option value="163">The Song Remains the Same</option>
+							<option value="481">Sonic Mood Ring</option>
+							<option value="283">Sound and Fury</option>
+							<option value="102">Sound Principles</option>
+							<option value="321">Sounds That Will Make Your Mother Say 'Okay I Approve'</option>
+							<option value="148">Soundscapes</option>
+							<option value="389">Soundtracks of Bilitis</option>
+							<option value="37">Sour City</option>
+							<option value="332">Southern Exposure</option>
+							<option value="523">Space at the End of Joy</option>
+							<option value="488">Space is Deep</option>
+							<option value="266">Space Is The Place</option>
+							<option value="348">Spelunking</option>
+							<option value="47">Spherio</option>
+							<option value="491">Spin Control</option>
+							<option value="513">Spit Happens</option>
+							<option value="242">Still Sane</option>
+							<option value="153">The Stitching Hour</option>
+							<option value="514">Stop the World</option>
+							<option value="294">Story Time with Ru and Trevor</option>
+							<option value="88">Strangers with Candy</option>
+							<option value="475">String Theory</option>
+							<option value="176">Study Break</option>
+							<option value="293">stuff & things</option>
+							<option value="344">Stun Gun Lullaby</option>
+							<option value="38">Subject to Change</option>
+							<option value="363">Subtly Submerging Submarines</option>
+							<option value="39">Summer Soul Revue</option>
+							<option value="414">Summer Soulstice</option>
+							<option value="224">Summertime Clothes</option>
+							<option value="440">Sunset Beats</option>
+							<option value="494">The SurreaList</option>
+							<option value="431">Takeoff</option>
+							<option value="385">Talkin' Tunes</option>
+							<option value="315">Tasteless</option>
+							<option value="146">Tasty Beats</option>
+							<option value="237">Tender Hooligans</option>
+							<option value="444">Tenure Traxx</option>
+							<option value="472">TERMS and CONDITIONS</option>
+							<option value="90">Terravoice</option>
+							<option value="559">The ...</option>
+							<option value="312">The Theme of the Week</option>
+							<option value="250">There and Back Again</option>
+							<option value="173">This Is Not a Safe Space</option>
+							<option value="555">This Musical Life</option>
+							<option value="130">Three Ring Circus</option>
+							<option value="93">Time Traveling</option>
+							<option value="60">Todo Mundo</option>
+							<option value="105">Tonto's Fury</option>
+							<option value="118">Totes McGoats</option>
+							<option value="178">Train to Bexley</option>
+							<option value="284">Transistor Radio</option>
+							<option value="417">Treaty of Tordesillas</option>
+							<option value="73">Troubadour</option>
+							<option value="331">Trunk Full of Pearl</option>
+							<option value="289">Two Broke Memes</option>
+							<option value="487">Uncommon Grounds</option>
+							<option value="84">Uneasy Listening</option>
+							<option value="365">Unpredictable</option>
+							<option value="267">Vagabond Noise</option>
+							<option value="261">Vegan Soulfood</option>
+							<option value="518">Vibe Check</option>
+							<option value="253">Vinyl Rays of Sun</option>
+							<option value="40">Virgin Radio</option>
+							<option value="483">Vitamin Sneve</option>
+							<option value="309">Voice Box</option>
+							<option value="222">Voo Doo</option>
+							<option value="246">Wake Up Knowing</option>
+							<option value="554">Wave Wandering Highway</option>
+							<option value="257">Wavelength</option>
+							<option value="416">We Are All Immigrants</option>
+							<option value="471">Welcome to the Jungle</option>
+							<option value="254">West Coast Vibes</option>
+							<option value="106">What's Left</option>
+							<option value="545">What's Your Weird?</option>
+							<option value="442">Where's Patriarchy?</option>
+							<option value="411">The White Tiger</option>
+							<option value="41">Who It Is</option>
+							<option value="42">Window Tint the Sun</option>
+							<option value="485">Windows 2000</option>
+							<option value="366">Word Spacing</option>
+							<option value="96">Worldbeat</option>
+							<option value="198">The Wrong Generation</option>
+							<option value="272">Yawnie</option>
+							<option value="43">You Are Here</option>
+							<option value="550">Zero Monthly Listeners</option>
+							<option value="62">ZoëRadio</option>
+						</select>
+                    </div> 
+					<div class="form-group">
+       	            	<label>and</label><br />
+           	            <select name="dj" class="form-control select-inline">
+							<option value="0" selected>   All DJs</option>
+							<option value="315">[REDACTED]</option>
+							<option value="212">Abby Harris</option>
+							<option value="338">Abby Lyda</option>
+							<option value="252">Adela Yang</option>
+							<option value="267">Adrian Meza</option>
+							<option value="259">Aidan Faustina</option>
+							<option value="84">AK Stark</option>
+							<option value="128">Alex &amp; Kara</option>
+							<option value="283">Alex List</option>
+							<option value="49">Alex McNeil</option>
+							<option value="345">Alexander Kuptel</option>
+							<option value="99">Alexander Souvannakhot</option>
+							<option value="235">Alexandra Smerekanych</option>
+							<option value="219">alice</option>
+							<option value="294">Alice Zhang</option>
+							<option value="170">Alley Stoughton</option>
+							<option value="142">Allison</option>
+							<option value="269">Ally Allen</option>
+							<option value="241">Amanda Beck</option>
+							<option value="33">Amy Battisti-Ashe</option>
+							<option value="113">Ana Neri</option>
+							<option value="119">Angela Mapes</option>
+							<option value="86">Angelynn Grant</option>
+							<option value="117">Anna Cataldo</option>
+							<option value="302">Anna Chung</option>
+							<option value="297">Anna with an H</option>
+							<option value="38">Anne</option>
+							<option value="266">Arlesa</option>
+							<option value="15">Aron Eklund</option>
+							<option value="320">Audrey X.</option>
+							<option value="248">Baba</option>
+							<option value="182">Baltazar Ortiz</option>
+							<option value="171">Banti Gheneti</option>
+							<option value="7">Becca Smith</option>
+							<option value="2">Becky Nicodemus</option>
+							<option value="26">Ben</option>
+							<option value="285">Ben Bray</option>
+							<option value="140">Ben Eck</option>
+							<option value="347">Ben Osborn</option>
+							<option value="8">Ben Shanks</option>
+							<option value="299">Ben Silverman</option>
+							<option value="319">Benny</option>
+							<option value="79">blochwave</option>
+							<option value="103">Blue</option>
+							<option value="68">Bob Dubrow</option>
+							<option value="127">Bob Roffi</option>
+							<option value="133">Boshy</option>
+							<option value="78">Brain Dead Hipster</option>
+							<option value="166">Brandy Webb</option>
+							<option value="343">Bread Head</option>
+							<option value="192">Brett Boston</option>
+							<option value="22">Brian</option>
+							<option value="74">Brian Sennett</option>
+							<option value="270">Brian Thompson</option>
+							<option value="289">Brian Wilson</option>
+							<option value="307">Brother Wayne</option>
+							<option value="87">Bruce Sylvester</option>
+							<option value="203">brutus leaderson</option>
+							<option value="214">Bryce Hwang</option>
+							<option value="122">Caitlin Fischer</option>
+							<option value="34">Cal Ixto</option>
+							<option value="339">Caleb Mathewos</option>
+							<option value="46">Captain Al</option>
+							<option value="274">Captain Emily Soice</option>
+							<option value="116">Cats</option>
+							<option value="60">Charlie Kohlhase</option>
+							<option value="106">Charlotte Zhu</option>
+							<option value="200">Chibueze Amanchukwu</option>
+							<option value="233">Chika Eke</option>
+							<option value="10">Chris M.</option>
+							<option value="196">Chris Xue</option>
+							<option value="300">Christina Spinelli</option>
+							<option value="6">Christopher Vyce</option>
+							<option value="27">Chuck U.</option>
+							<option value="311">Claire McLellan-Cassivi</option>
+							<option value="229">Claire Traweek</option>
+							<option value="316">Clara Xu</option>
+							<option value="199">Cole Perkinson</option>
+							<option value="298">Colin Greybosh</option>
+							<option value="51">Comrade Cosmobot</option>
+							<option value="272">Conrad Goffinet</option>
+							<option value="85">counts</option>
+							<option value="124">Craig Thorburn</option>
+							<option value="246">Crood [Boi]</option>
+							<option value="172">Cynthia Odu</option>
+							<option value="164">Dana Scott</option>
+							<option value="195">Dang Pham</option>
+							<option value="250">Daniel Duane</option>
+							<option value="180">Daniel Guberek</option>
+							<option value="255">Daniel M</option>
+							<option value="158">Daniel Richman</option>
+							<option value="277">Dariel</option>
+							<option value="161">Dave Goodman</option>
+							<option value="63">David Greene</option>
+							<option value="163">David Mercado</option>
+							<option value="148">David Miranda</option>
+							<option value="279">David Palmer</option>
+							<option value="111">ddoss</option>
+							<option value="144">Derb</option>
+							<option value="292">DJ Astra</option>
+							<option value="290">dj botnet</option>
+							<option value="118">DJ Candy</option>
+							<option value="293">DJ Dengelberg</option>
+							<option value="181">DJ DK</option>
+							<option value="218">dj heartbleed</option>
+							<option value="76">DJ Lipika</option>
+							<option value="244">DJ Naem</option>
+							<option value="231">DJ Scooter</option>
+							<option value="37">DJ Slick</option>
+							<option value="318">DJ T.A.G.O.E.</option>
+							<option value="242">DJChaled</option>
+							<option value="56">Doug Gesler</option>
+							<option value="173">Dr. MasterMix</option>
+							<option value="238">Dustin the Turkey</option>
+							<option value="230">dyce.</option>
+							<option value="280">Dylan Lewis</option>
+							<option value="177">E-Ram</option>
+							<option value="77">Elaine &amp; Elliot</option>
+							<option value="121">Elaine Kung</option>
+							<option value="286">Elena Polozova</option>
+							<option value="47">Eli Polonsky</option>
+							<option value="258">Eli Yang</option>
+							<option value="243">Elina Sendonaris</option>
+							<option value="162">Elise B</option>
+							<option value="168">Elizabeth Rider</option>
+							<option value="120">Ellie &amp; Reva</option>
+							<option value="109">Erik Morrison</option>
+							<option value="336">Ev Berger-Wolf</option>
+							<option value="12">Evan Wendel</option>
+							<option value="249">FiSHER</option>
+							<option value="61">Fred Allen</option>
+							<option value="97">Fuzzy and Leonid</option>
+							<option value="295">Galen Moore</option>
+							<option value="138">Generoso Fierro</option>
+							<option value="288">Geoff</option>
+							<option value="314">Gillian Roeder</option>
+							<option value="227">Graham Leverick</option>
+							<option value="139">Grant Sellers</option>
+							<option value="206">Hadrian Merced</option>
+							<option value="287">Haley Meisenholder</option>
+							<option value="275">Hayley H</option>
+							<option value="19">Heather Back</option>
+							<option value="191">Heather D.</option>
+							<option value="301">Heclectic</option>
+							<option value="205">Henry Shackleton</option>
+							<option value="135">Holly</option>
+							<option value="282">Ian C.</option>
+							<option value="141">Indy Cindie</option>
+							<option value="331">Inna Voloshchuk</option>
+							<option value="232">Ishwarya</option>
+							<option value="329">Izzy L.</option>
+							<option value="41">Jack Murphy</option>
+							<option value="151">Jack Spira</option>
+							<option value="185">Jackson Kearl</option>
+							<option value="198">Jaclyn Baughman</option>
+							<option value="174">JacobKakob</option>
+							<option value="325">James Rock</option>
+							<option value="70">Jason Beek</option>
+							<option value="178">Jayne C</option>
+							<option value="123">Jeff Breeze</option>
+							<option value="101">Jeff Geisinger</option>
+							<option value="81">Jenny Chen</option>
+							<option value="36">Jesse Kaminsky</option>
+							<option value="234">Jessica Adams</option>
+							<option value="143">Jessie Zhao</option>
+							<option value="145">JLu</option>
+							<option value="210">Jmonatomic</option>
+							<option value="216">Joana</option>
+							<option value="44">Joanie</option>
+							<option value="257">Joe Paradiso</option>
+							<option value="125">John Funke</option>
+							<option value="130">Jon Beaulieu</option>
+							<option value="1">Jon Bernhardt</option>
+							<option value="57">Jon Pollack</option>
+							<option value="108">Jon Sellon</option>
+							<option value="213">Jonah Ko</option>
+							<option value="169">Jonathan Uesato</option>
+							<option value="32">Josh Bails</option>
+							<option value="197">Josh Graves</option>
+							<option value="291">Julia Arnold</option>
+							<option value="247">Julia Fiksinski</option>
+							<option value="150">Julia Mongo</option>
+							<option value="334">June Jimenez</option>
+							<option value="190">Juniper Leigh</option>
+							<option value="131">Kara E-O</option>
+							<option value="226">Karina</option>
+							<option value="340">Kate Pearce</option>
+							<option value="95">Katie Bartel</option>
+							<option value="349">Keira Mooney</option>
+							<option value="322">Keith Clark</option>
+							<option value="4">Keith Sawyer</option>
+							<option value="25">Ken Field</option>
+							<option value="42">Kennedy Compound</option>
+							<option value="54">Keri Garel</option>
+							<option value="149">Kiana Jodeiry</option>
+							<option value="52">Kit Kelt</option>
+							<option value="261">Klajdi</option>
+							<option value="211">Kosi</option>
+							<option value="35">Kostas &amp; Yannis</option>
+							<option value="115">Kristen Sunter</option>
+							<option value="16">Kyle Bittenger</option>
+							<option value="337">Kyle Williams</option>
+							<option value="64">L-Train</option>
+							<option value="215">Lauren Clamon</option>
+							<option value="157">Lauren Paul</option>
+							<option value="105">Lawrence Azrin</option>
+							<option value="271">Lawrence Barriner II</option>
+							<option value="152">Lawrence Wu</option>
+							<option value="268">Leanne Galanek</option>
+							<option value="225">leather purse</option>
+							<option value="305">Lex I</option>
+							<option value="53">Linda Pinkow</option>
+							<option value="59">Lindsay Ellison</option>
+							<option value="3">Lisa</option>
+							<option value="40">Lisa Smith</option>
+							<option value="24">liucubed</option>
+							<option value="28">Lone Wolf</option>
+							<option value="98">Lucy Gabriel</option>
+							<option value="183">M Khat</option>
+							<option value="207">Maddie Cusimano</option>
+							<option value="326">Maggie</option>
+							<option value="29">MaGoGo</option>
+							<option value="147">Manuel &quot;Quentin&quot; Castro</option>
+							<option value="67">Marc Stern</option>
+							<option value="284">Marco &amp; Tim</option>
+							<option value="14">Marianna Parker</option>
+							<option value="75">Mark Francis</option>
+							<option value="112">Mark Robinson</option>
+							<option value="236">Marta Manzin</option>
+							<option value="11">Mary Lee</option>
+							<option value="312">Mateo Pisinger</option>
+							<option value="91">Mateo S. Williams</option>
+							<option value="330">Mateo Stagg</option>
+							<option value="186">Matt</option>
+							<option value="102">Matt Hodel</option>
+							<option value="167">Max Dunitz</option>
+							<option value="134">Max Haubenstock</option>
+							<option value="239">Mel Chen</option>
+							<option value="328">Mena VE</option>
+							<option value="93">Metamoss</option>
+							<option value="132">Micaela Hall</option>
+							<option value="66">Michael Peng</option>
+							<option value="251">Michelle Oraa Ali</option>
+							<option value="92">Michelle Victora</option>
+							<option value="165">Michelle Wu</option>
+							<option value="20">Mike Feng</option>
+							<option value="217">milka</option>
+							<option value="209">Miske</option>
+							<option value="50">Mistress Laura</option>
+							<option value="189">Mook</option>
+							<option value="73">Mully</option>
+							<option value="154">Muna Kangsen</option>
+							<option value="276">Nan Tian</option>
+							<option value="90">Nancy M</option>
+							<option value="160">Natalia Guerrero</option>
+							<option value="240">Nic Amato</option>
+							<option value="18">Nick McCarthy</option>
+							<option value="58">Nick Saloman &amp; Paul Simmons</option>
+							<option value="30">Nick Wang</option>
+							<option value="346">Nikasha (nikiminasha)</option>
+							<option value="175">noa mori</option>
+							<option value="264">Nolan</option>
+							<option value="344">Numeric Entry DJs</option>
+							<option value="80">Olga</option>
+							<option value="228">Paige the Mage</option>
+							<option value="21">Patrick Bryant</option>
+							<option value="137">Patrick Wahl</option>
+							<option value="237">Petey D</option>
+							<option value="204">Phelan</option>
+							<option value="155">PJ Porter</option>
+							<option value="107">Premature Anticipation Crew</option>
+							<option value="342">PunkyZebra</option>
+							<option value="263">Rachel W</option>
+							<option value="308">Raquel Garcia</option>
+							<option value="23">Ré Antoine</option>
+							<option value="341">Rebecca S</option>
+							<option value="208">Renae</option>
+							<option value="89">Rich Pontius</option>
+							<option value="114">Rick Biskit Roth</option>
+							<option value="48">Rik Eberhardt</option>
+							<option value="265">Rob Bugliarelli</option>
+							<option value="153">Rob Sloan</option>
+							<option value="304">Roksi Freeman</option>
+							<option value="126">Ron</option>
+							<option value="194">Ru</option>
+							<option value="104">Sabina</option>
+							<option value="223">Sahara Villarreal</option>
+							<option value="317">Sam Ying</option>
+							<option value="202">Sara Achour</option>
+							<option value="69">Sara J.</option>
+							<option value="17">Sara Mouradian</option>
+							<option value="281">Sara Sime</option>
+							<option value="273">Sarah Otts</option>
+							<option value="327">Selector J.R.</option>
+							<option value="310">Shawn Mamros</option>
+							<option value="351">Shelby Elder</option>
+							<option value="306">Shruti</option>
+							<option value="309">sky</option>
+							<option value="221">Skylar Lewis</option>
+							<option value="348">Sneve</option>
+							<option value="278">Sonny</option>
+							<option value="176">Sophia McG</option>
+							<option value="253">Sophia Tigges</option>
+							<option value="220">Sorin Grama</option>
+							<option value="110">Stat Ham</option>
+							<option value="39">Stefan &amp; Lisa</option>
+							<option value="45">Stefan Zajic</option>
+							<option value="187">Stephanie Eiler</option>
+							<option value="5">Sue Safton</option>
+							<option value="55">Sue Schardt</option>
+							<option value="156">Tasha Schoenstein</option>
+							<option value="96">Tayo</option>
+							<option value="65">Tayo &amp; Kathy</option>
+							<option value="9">Ted Young</option>
+							<option value="72">Teep</option>
+							<option value="332">Temkin</option>
+							<option value="222">Tetration</option>
+							<option value="31">Thao</option>
+							<option value="159">The AntOxy</option>
+							<option value="313">the auracle</option>
+							<option value="335">The Cosmic Deadbeat</option>
+							<option value="146">The Hungarian Barbarian</option>
+							<option value="262">The Infamous Will</option>
+							<option value="254">The Restless One</option>
+							<option value="193">Theia</option>
+							<option value="179">Tiandra</option>
+							<option value="83">Tiff</option>
+							<option value="71">Tim Gilman</option>
+							<option value="324">Tim Kelly</option>
+							<option value="82">Tim Reardon</option>
+							<option value="94">TinDefacto</option>
+							<option value="201">TJ Connelly</option>
+							<option value="88">Tom O'Connor</option>
+							<option value="188">Uma Roy</option>
+							<option value="303">Val Shum</option>
+							<option value="129">Valentina Chamorro</option>
+							<option value="323">Valerie</option>
+							<option value="136">Valerie Peng</option>
+							<option value="100">Victor Gutierrez</option>
+							<option value="321">Victoria Dzieciol</option>
+							<option value="13">Will K.</option>
+							<option value="350">Will Wake</option>
+							<option value="333">Willow Carretero Chavez</option>
+							<option value="296">Wyatt Giroux</option>
+							<option value="260">XhiDae</option>
+							<option value="184">Yanisa Techagumthorn</option>
+							<option value="62">Yurij</option>
+							<option value="224">Zach Church</option>
+							<option value="245">Zach Hall</option>
+							<option value="43">Zoë</option>
+							<option value="256">zoyuz</option>
+						</select>
+					</div>
+	    	        <div role="separator" class="divider"></div>
+					<div class="checkbox">
+                   		<label><input id="Alias" name="alias" type="checkbox" value="1" checked>
+		 				Include alternate artist names (e.g.&quot;Roky Erickson &amp; the Aliens&quot; for &quot;Roky Erickson&quot;,  &quot;REM&quot;
+                        for &quot;R.E.M.&quot;, etc.). <a href="search.php?field=aliases">See List</a>.</label>
+                    </div>
+				</form>
+            </li>
+          </ul>
+
+
+        </li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Useful Links <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="http://wmbr.org">WMBR Home</a></li>
+            <li><a href="http://ceangalceilteach.celts.me/">Homepage</a></li>
+		</ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class='email' target='_blank' href='index.php' rel='em/stlec//hcaetlieclagnaec'>Email DJ</a></li>            <li><a class='email' target='_blank' href='index.php' rel='moc/retsalb-kcart//nimda'>Email Admin</a></li>          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" id="djDropdown" class="dropdown-toggle xsmall" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DJs Only <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+               	<form id="loginForm" name="loginForm" action="playlist.php?id=29609" method="post">
+          	<input type="hidden" name="prevpage" value="" />
+		<div class="form-group">
+				<label for="loginUser">Username:</label>
+				<input class="form-control" type="text" name="user" id="loginUser" maxlength="30" value="">
+		</div>
+		<div class="form-group">
+				<label for="loginPW">Password:</label>
+				<input class="form-control" type="password" name="pass" id="loginPW" maxlength="30" value="">
+                <label class="keep-together"><a href="pl_iamlame.php">D'ohh! I forgot my password!</a></label>
+		</div>
+		<div class="checkbox">
+				<label><input type="checkbox" name="remember" />&nbsp;Remember me next time</label>
+		</div>
+		<div class="form-group">
+				<input type="submit" class="btn btn-default color3" name="sublogin" value="Login">
+        </div>
+        <div role="separator" class="divider"></div>
+		<div class="form-group">
+       		<b>Don't have an ID?</b> If you're interested in posting online playlists, <a class='email' target='_blank' href='index.php' rel='moc/retsalb-kcart//nimda'>Contact the administrator</a>.
+   		</div>
+	</form>
+
+            </li>
+		</ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container inv-container">
+	<div class="row">
+		<div class="col-xs-2 col-sm-1">DJ: </div><div class="col-xs-10 col-sm-11"><a href="index.php?dj=52" title="View all playlists from Kit Kelt">Kit Kelt</a></div>
+	</div>
+	<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+	<div class="row">
+		<div class="col-xs-2 col-sm-1">Show: </div><div class="col-xs-10 col-sm-11"><a href="index.php?program=77" title="View all playlists from Ceangal Ceilteach">Ceangal Ceilteach</a></div>
+	</div>
+	<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+	<div class="row">
+		<div class="col-xs-2 col-sm-1">What: </div><div id="headerWhat" class="col-xs-10 col-sm-11">Playlist for Monday, December 11, 2017 (7-8am)</div>
+	</div>
+	<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+	<div class="page-header"><h3>Volume 24, Episode 6</h3></div></div>
+
+<div class="container">
+	<div class="row hidden-xs">
+		<div class="col-sm-1 col-Time">Time</div>
+		<div class="col-sm-3 col-Artist">Artist</div>
+		<div class="col-sm-3 col-Song">Song</div>
+		<div class="col-sm-3 col-AlbumFormat">Album [Format]</div>
+		<div class="col-sm-2 col-Misc">Misc</div>
+	</div>
+	<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+	<div class="row">
+		<div class="col-xs-12 keyRowData"><b>Misc &#8211;</b>
+				[&nbsp;]:<span class="keyRowTagLong">Manx</span>&nbsp;
+			BRE:<span class="keyRowTagLong">Breton</span>&nbsp;
+			COR:<span class="keyRowTagLong">Cornish</span>&nbsp;
+			WEL:<span class="keyRowTagLong">Welsh</span>&nbsp;
+			IG:<span class="keyRowTagLong">Irish</span>&nbsp;
+			SG:<span class="keyRowTagLong">Scots Gaelic</span>&nbsp;
+				NEW:<span class="keyRowTagLong">New Release</span>&nbsp;
+			(&nbsp;):<span class="keyRowTagLong">Label, Year Rec/Rel</span></div>	</div>
+	<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+	<div id="bjFirst" class="row setdivider" role="separator"></div>
+    
+<!-- playlist data start -->
+	<div id="playlist_data" showID="29609" showstart="2017/12/11 07:00:00" showend="2017/12/11 08:00:00" autotime="" autohide="" autonewyear="">
+	<div id="wrap731929"><a name="rec731929"></a>
+		<div id="bj731929" class="row setdivider hide" role="separator"></div>
+		<div id="row_731929" class="row print_song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731929" fulltime="2017/12/11 07:01:00">7:01</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Paul%20Gregory" name="rec731929" title="View all times Paul Gregory has been played">Paul Gregory</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Rhyw%20Ddydd" title="View all times Rhyw Ddydd has been played">Rhyw Ddydd</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Can%20I%20Gymru%20%28Y%20Casgliad%20Cyflawn%3A%201969-2005%29%20%2F%20Song%20For%20Wales" title="View all times Can I Gymru (Y Casgliad Cyflawn: 1969-2005) / Song For Wales has been played">Can I Gymru (Y Casgliad Cyflawn: 1969-2005) / Song For Wales</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Can%20I%20Gymru%20%28Y%20Casgliad%20Cyflawn%3A%201969-2005%29%20%2F%20Song%20For%20Wales" title="View all times Can I Gymru (Y Casgliad Cyflawn: 1969-2005) / Song For Wales has been played">Can I Gymru (Y Casgliad Cyflawn: 1969-2005) / Song For Wales</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[3:21 * WEL] • (2010)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731930"><a name="rec731930"></a>
+		<div id="bj731930" class="row setdivider hide" role="separator"></div>
+		<div id="row_731930" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731930" fulltime="2017/12/11 07:04:00">7:04</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Eamon%20Doorley%20%2F%20Julie%20Fowlis%20%2F%20Ross%20Martin%20%2F%20Muireann%20Nic%20Amhlaoibh" name="rec731930" title="View all times Eamon Doorley / Julie Fowlis / Ross Martin / Muireann Nic Amhlaoibh has been played">Eamon Doorley / Julie Fowlis / Ross Martin / Muireann Nic Amhlaoibh</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Da%20bhFaigheann%20mo%20Rogha%20de%20Thriur%20acu%20%2F%20Dhannsamaid%20le%20Ailean%20%2F%20Cairistion%27%20Nigh%27n%20Eoghainn" title="View all times Da bhFaigheann mo Rogha de Thriur acu / Dhannsamaid le Ailean / Cairistion' Nigh'n Eoghainn has been played">Da bhFaigheann mo Rogha de Thriur acu / Dhannsamaid le Ailean / Cairistion' Nigh'n Eoghainn</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Dual" title="View all times Dual has been played">Dual</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Dual" title="View all times Dual has been played">Dual</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[3:44 * IG] • (2008)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731931"><a name="rec731931"></a>
+		<div id="bj731931" class="row setdivider hide" role="separator"></div>
+		<div id="row_731931" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731931" fulltime="2017/12/11 07:08:00">7:08</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=The%20Golowan%20Band" name="rec731931" title="View all times The Golowan Band has been played">The Golowan Band</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Tansys%20Golowan" title="View all times Tansys Golowan has been played">Tansys Golowan</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=The%20Golowan%20Band" title="View all times The Golowan Band has been played">The Golowan Band</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=The%20Golowan%20Band" title="View all times The Golowan Band has been played">The Golowan Band</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[2:13 * COR] • (2005)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731932"><a name="rec731932"></a>
+		<div id="bj731932" class="row setdivider hide" role="separator"></div>
+		<div id="row_731932" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731932" fulltime="2017/12/11 07:10:00">7:10</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Ken%2C%20Paul%2C%20and%20Lynda" name="rec731932" title="View all times Ken, Paul, and Lynda has been played">Ken, Paul, and Lynda</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Ushag%20Veg%20Ruy" title="View all times Ushag Veg Ruy has been played">Ushag Veg Ruy</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=YouTube" title="View all times YouTube has been played">YouTube</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=YouTube" title="View all times YouTube has been played">YouTube</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[4:12 * MG * ENG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731933"><a name="rec731933"></a>
+		<div id="bj731933" class="row setdivider hide" role="separator"></div>
+		<div id="row_731933" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731933" fulltime="2017/12/11 07:14:00">7:14</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=The%20Revels" name="rec731933" title="View all times The Revels has been played">The Revels</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Kenavo%20D%27ar%20Yaouankis" title="View all times Kenavo D'ar Yaouankis has been played">Kenavo D'ar Yaouankis</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Celtic%20Roads%3A%20Through%20Ireland%2C%20Scotland%20and%20Brittany" title="View all times Celtic Roads: Through Ireland, Scotland and Brittany has been played">Celtic Roads: Through Ireland, Scotland and Brittany</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Celtic%20Roads%3A%20Through%20Ireland%2C%20Scotland%20and%20Brittany" title="View all times Celtic Roads: Through Ireland, Scotland and Brittany has been played">Celtic Roads: Through Ireland, Scotland and Brittany</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[2:22 * BRE] • (1998)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731934"><a name="rec731934"></a>
+		<div id="bj731934" class="row setdivider hide" role="separator"></div>
+		<div id="row_731934" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731934" fulltime="2017/12/11 07:16:00">7:16</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Capercaillie" name="rec731934" title="View all times Capercaillie has been played">Capercaillie</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Ailein%20Duinn" title="View all times Ailein Duinn has been played">Ailein Duinn</a> [Dark Alan]</div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Celtic%20Voices%20%5BGreen%20Linnet%5D" title="View all times Celtic Voices [Green Linnet] has been played">Celtic Voices [Green Linnet]</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Celtic%20Voices%20%5BGreen%20Linnet%5D" title="View all times Celtic Voices [Green Linnet] has been played">Celtic Voices [Green Linnet]</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[3:34 * SG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731935"><a name="rec731935"></a>
+		<div id="bj731935" class="row setdivider hide" role="separator"></div>
+		<div id="row_731935" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731935" fulltime="2017/12/11 07:20:00">7:20</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Einion%20Edwards" name="rec731935" title="View all times Einion Edwards has been played">Einion Edwards</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Bum%20Yn%20Caru%20%28Cainc%20Y%20Datgeiniad%29" title="View all times Bum Yn Caru (Cainc Y Datgeiniad) has been played">Bum Yn Caru (Cainc Y Datgeiniad)</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Goreuon%20Cerdd%20Dant%20-%20Cyfrol%202" title="View all times Goreuon Cerdd Dant - Cyfrol 2 has been played">Goreuon Cerdd Dant - Cyfrol 2</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Goreuon%20Cerdd%20Dant%20-%20Cyfrol%202" title="View all times Goreuon Cerdd Dant - Cyfrol 2 has been played">Goreuon Cerdd Dant - Cyfrol 2</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[1:56 * WEL] • (2010)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731936"><a name="rec731936"></a>
+		<div id="bj731936" class="row setdivider hide" role="separator"></div>
+		<div id="row_731936" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731936" fulltime="2017/12/11 07:22:00">7:22</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Br%C3%A9ag" name="rec731936" title="View all times Bréag has been played">Bréag</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=%C3%89irigh%20Suas" title="View all times Éirigh Suas has been played">Éirigh Suas</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Can%20Jah" title="View all times Can Jah has been played">Can Jah</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Can%20Jah" title="View all times Can Jah has been played">Can Jah</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[2:34 * IG] • (2009)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731937"><a name="rec731937"></a>
+		<div id="bj731937" class="row setdivider hide" role="separator"></div>
+		<div id="row_731937" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731937" fulltime="2017/12/11 07:24:00">7:24</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Pol%20Hodge" name="rec731937" title="View all times Pol Hodge has been played">Pol Hodge</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Rapp%20gans%20Pol%20Hodge" title="View all times Rapp gans Pol Hodge has been played">Rapp gans Pol Hodge</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=" title="View all times  has been played"></a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat">&nbsp;</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[1:19 * COR * ENG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731938"><a name="rec731938"></a>
+		<div id="bj731938" class="row setdivider hide" role="separator"></div>
+		<div id="row_731938" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731938" fulltime="2017/12/11 07:25:00">7:25</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Caarjyn%20Cooidjagh" name="rec731938" title="View all times Caarjyn Cooidjagh has been played">Caarjyn Cooidjagh</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Arrane%20y%20Skeddan" title="View all times Arrane y Skeddan has been played">Arrane y Skeddan</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=" title="View all times  has been played"></a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat">&nbsp;</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[2:14 * MG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731939"><a name="rec731939"></a>
+		<div id="bj731939" class="row setdivider hide" role="separator"></div>
+		<div id="row_731939" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731939" fulltime="2017/12/11 07:28:00">7:28</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Denez%20Abernot" name="rec731939" title="View all times Denez Abernot has been played">Denez Abernot</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Ar%20Vosenn" title="View all times Ar Vosenn has been played">Ar Vosenn</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Tri%20Miz%20Noz" title="View all times Tri Miz Noz has been played">Tri Miz Noz</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Tri%20Miz%20Noz" title="View all times Tri Miz Noz has been played">Tri Miz Noz</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[3:29 * BRE] • (1998)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731940"><a name="rec731940"></a>
+		<div id="bj731940" class="row setdivider hide" role="separator"></div>
+		<div id="row_731940" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731940" fulltime="2017/12/11 07:31:00">7:31</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=M%C3%A0iri%20Smith" name="rec731940" title="View all times Màiri Smith has been played">Màiri Smith</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Mo%20Dh%C3%B9rachd%20do%27n%20Tir" title="View all times Mo Dhùrachd do'n Tir has been played">Mo Dhùrachd do'n Tir</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Datgan" title="View all times Datgan has been played">Datgan</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Datgan" title="View all times Datgan has been played">Datgan</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[4:04 * SG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731941"><a name="rec731941"></a>
+		<div id="bj731941" class="row setdivider hide" role="separator"></div>
+		<div id="row_731941" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731941" fulltime="2017/12/11 07:36:00">7:36</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Diffiniad" name="rec731941" title="View all times Diffiniad has been played">Diffiniad</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Ar%20Ddiwedd%20y%20Dydd%20%28Mics%20y%20%27Dolig%29" title="View all times Ar Ddiwedd y Dydd (Mics y 'Dolig) has been played">Ar Ddiwedd y Dydd (Mics y 'Dolig)</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Ram%20Jam%203" title="View all times Ram Jam 3 has been played">Ram Jam 3</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Ram%20Jam%203" title="View all times Ram Jam 3 has been played">Ram Jam 3</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[2:55 * WEL]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731942"><a name="rec731942"></a>
+		<div id="bj731942" class="row setdivider hide" role="separator"></div>
+		<div id="row_731942" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731942" fulltime="2017/12/11 07:39:00">7:39</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Se%C3%A1n%20Monaghan" name="rec731942" title="View all times Seán Monaghan has been played">Seán Monaghan</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Amhr%C3%A1n%20an%20Dreoil%C3%ADn" title="View all times Amhrán an Dreoilín has been played">Amhrán an Dreoilín</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=R%C3%A9alta%2095" title="View all times Réalta 95 has been played">Réalta 95</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=R%C3%A9alta%2095" title="View all times Réalta 95 has been played">Réalta 95</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[3:26 * IG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731943"><a name="rec731943"></a>
+		<div id="bj731943" class="row setdivider hide" role="separator"></div>
+		<div id="row_731943" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731943" fulltime="2017/12/11 07:42:00">7:42</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Brian%20Webb" name="rec731943" title="View all times Brian Webb has been played">Brian Webb</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Tan%20y%27n%20Golonn" title="View all times Tan y'n Golonn has been played">Tan y'n Golonn</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=" title="View all times  has been played"></a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat">&nbsp;</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[4:17 * COR]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731944"><a name="rec731944"></a>
+		<div id="bj731944" class="row setdivider hide" role="separator"></div>
+		<div id="row_731944" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731944" fulltime="2017/12/11 07:46:00">7:46</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=The%20Mediaeval%20Baebes" name="rec731944" title="View all times The Mediaeval Baebes has been played">The Mediaeval Baebes</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Lhiannan%20Shee" title="View all times Lhiannan Shee has been played">Lhiannan Shee</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Mirabilis" title="View all times Mirabilis has been played">Mirabilis</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Mirabilis" title="View all times Mirabilis has been played">Mirabilis</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[2:52 * MG]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731945"><a name="rec731945"></a>
+		<div id="bj731945" class="row setdivider hide" role="separator"></div>
+		<div id="row_731945" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731945" fulltime="2017/12/11 07:49:00">7:49</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Denez%20Prigent" name="rec731945" title="View all times Denez Prigent has been played">Denez Prigent</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Dispi" title="View all times Dispi has been played">Dispi</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Sarac%27H" title="View all times Sarac'H has been played">Sarac'H</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Sarac%27H" title="View all times Sarac'H has been played">Sarac'H</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[6:11 * BRE] • (2007)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731946"><a name="rec731946"></a>
+		<div id="bj731946" class="row setdivider hide" role="separator"></div>
+		<div id="row_731946" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731946" fulltime="2017/12/11 07:55:00">7:55</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=The%20MacDonald%20Sisters" name="rec731946" title="View all times The MacDonald Sisters has been played">The MacDonald Sisters</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Gaelic%20Waulking%20Song%3B%20Dh%27%20Theidhinn%20a%20Dh%27Uibhist" title="View all times Gaelic Waulking Song; Dh' Theidhinn a Dh'Uibhist has been played">Gaelic Waulking Song; Dh' Theidhinn a Dh'Uibhist</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=A%20Beginners%20Guide%20to%20Traditional%20Scottish%20Music" title="View all times A Beginners Guide to Traditional Scottish Music has been played">A Beginners Guide to Traditional Scottish Music</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=A%20Beginners%20Guide%20to%20Traditional%20Scottish%20Music" title="View all times A Beginners Guide to Traditional Scottish Music has been played">A Beginners Guide to Traditional Scottish Music</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[1:19 * SG] • (2007)</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	<div id="wrap731947"><a name="rec731947"></a>
+		<div id="bj731947" class="row setdivider hide" role="separator"></div>
+		<div id="row_731947" class="row print_song_in_set song_in_set">
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Time">Time: </div><div class="col-xs-9 col-sm-1 col-Time" id="time731947" fulltime="2017/12/11 07:56:00">7:56</div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Artist">Artist: </div><div class="col-xs-9 col-sm-3 col-Artist"><a href="search.php?field=artist&key=Mehefin%20Y%20Cyntaf" name="rec731947" title="View all times Mehefin Y Cyntaf has been played">Mehefin Y Cyntaf</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Song">Song: </div><div class="col-xs-9 col-sm-3 col-Song"><a href="search.php?field=song&key=Hedfan%20mewn%20i%27r%20Haul" title="View all times Hedfan mewn i'r Haul has been played">Hedfan mewn i'r Haul</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Album: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Album"><a href="search.php?field=album&key=Y%20Gwir%20yn%20Erbyn%20y%20Byd" title="View all times Y Gwir yn Erbyn y Byd has been played">Y Gwir yn Erbyn y Byd</a></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg col-Format">Format: </div><div class="col-xs-9 hidden-sm hidden-md hidden-lg col-Format"></div>
+		<div class="clearfix visible-xs-block"></div>
+		<div class="hidden-xs col-sm-3 col-AlbumFormat"><a href="search.php?field=album&key=Y%20Gwir%20yn%20Erbyn%20y%20Byd" title="View all times Y Gwir yn Erbyn y Byd has been played">Y Gwir yn Erbyn y Byd</a></div>
+		<div class="col-xs-3 hidden-sm hidden-md hidden-lg">Misc: </div><div class="col-xs-9 col-sm-2 col-Misc">[3:43 * WEL]</div>
+		<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+		<div class="col-xs-12">
+	        <hr class="comment_in_song hide">
+        </div>
+		</div>
+		<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+</div>
+	</div><!-- playlist data end -->
+</div><!-- /.container -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script src="AudioPlayer/js/audioplayer.js"></script>
+<script src="AudioPlayer/js/audio_start.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/track-blaster.js"></script>
+<script>
+    setInterval(function(){ 
+		$( "#playlist_data" ).load( "pl_ajax.php", { 
+			doWhat: 'refreshPlaylist', 
+			show_id:$('#playlist_data').attr('showID') 
+		} ); 
+	}, 180*1000);
+</script>
+    
+</BODY>
+</HTML>

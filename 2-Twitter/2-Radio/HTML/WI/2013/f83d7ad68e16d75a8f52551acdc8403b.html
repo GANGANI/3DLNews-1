@@ -1,0 +1,2335 @@
+<!DOCTYPE HTML>
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en">&nbsp;<![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<title>Rock 94.7</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"7c7b538f90",applicationID:"137944415"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+		
+	<!-- og tags -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Rock 94.7" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="https://rock947.com/" />
+	<meta property="og:site_name" content="Rock 94.7"/>
+			<meta property="og:image" content="https://media.socastsrm.com/uploads/station/1944/fbShare.png?r=67910" />
+	
+	<link rel="pingback" href="https://rock947.com/xmlrpc.php" />
+	<link rel="apple-touch-icon" href="https://media.socastsrm.com/uploads/station/1944/home_screen_logo-5faee1e8e4829.png" />
+	<script>
+		var isIE8 = false; 
+	</script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	<script>
+		isIE8 = true;
+		Date.now = Date.now || function() { return +new Date; };
+	</script>
+	<![endif]-->
+
+		
+	<script type="text/javascript">
+		//$headerType is "main"
+		//$request is "/"
+		var socast_page = {
+    "cacheKey": "wp-postMacros-2270-wp-30",
+    "companyID": "459",
+    "accountID": 2170,
+    "blogID": 2270,
+    "ownerBlogID": 2270,
+    "currentBlogID": 2270,
+    "callLetters": "WOZZ",
+    "siteName": "Rock 94.7",
+    "squareLogo": "https:\/\/media.socastsrm.com\/uploads\/station\/1944\/squareIcon.png?r=67911",
+    "postID": 30,
+    "title": "Home-Page",
+    "type": "page",
+    "referrer": null,
+    "userAgent": "Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses\/domains to: scaninfo@paloaltonetworks.com",
+    "eventID": null,
+    "location": "",
+    "navString": "Home",
+    "isSyn": false,
+    "hasContent": true,
+    "featured_image": false,
+    "featured_image_caption": "",
+    "url": "http:\/\/rock947.com\/",
+    "is_yii": false,
+    "post_format": "standard",
+    "timestamp_published": "1585579679",
+    "timestamp_modified": "1629739064",
+    "date_published": "Mar 30, 2020 | 9:47 AM",
+    "date_modified": "Aug 23, 2021 | 12:17 PM",
+    "platform": "web",
+    "target": "omniture",
+    "pageType": "blog",
+    "shareTemplate": "<a href='http:\/\/www.facebook.com\/sharer.php?u=POST_URL' target='_blank' class='socialShareLink facebook'><img src='https:\/\/media.socastsrm.com\/images\/social\/png\/facebook.png' alt='facebook' \/><\/a><a href='https:\/\/twitter.com\/share?url=POST_URL&text=POST_TITLE' target='_blank' class='socialShareLink twitter'><img src='https:\/\/media.socastsrm.com\/images\/social\/png\/twitter.png' alt='twitter' \/><\/a>"
+};
+		socast_page.url = window.location;
+		var adMacros = socast_page;
+		var Page = socast_page;
+		var gvars = { cdnStatic : '' };
+		var CDN_HOST_MEDIA = 'https://media.socastsrm.com';
+		var isMobileUserAgent = false;
+		var communityUserName = null;
+		var communityUserIcon = null;
+	</script>
+	
+	<script>
+	var hasPlayer = false;
+	var isInsideSocastIframe = false;
+	var playerType = 'none';
+	var popupPlayerURL = '';
+	var popupPlayerSize = '_blank';
+</script>
+		<link rel='dns-prefetch' href='//cdn-js.socastsrm.com' />
+<link rel='dns-prefetch' href='//cdn.polyfill.io' />
+<link rel='dns-prefetch' href='//cdn-css.socastsrm.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/rock947.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='js_composer_front-css'  href='https://rock947.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/application/css/bootstrap/4.1.0/css/bootstrap.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/application/css/custom.css?v=2013-10-02&#038;ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='global-theme-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/application/css/global-theme.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='global-frontend-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/application/stylesheets/frontend/frontend.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://rock947.com/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='socast-media-library-css'  href='https://rock947.com/wp-content/plugins/socast-media-library/public/css/socast-media-library-public.css?ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/jquery/jquery-ui-1.12.1/jquery-ui.min.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/css/bootstrap/4.1.0/js/popper-1.14.3.min.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/css/bootstrap/4.1.0/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/json/json2.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/custom.js?v=2017-05-29'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/lightBox.js?v=2014-08-21'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/jquery/socast.jquery.frontend.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/frontend.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/jquery/jquery.ui.kk-chronomasonry.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/application/js/jquery/jquery.ui.socastTouch.js'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/widgets/poll.js'></script>
+<script type='text/javascript' src='//cdn.polyfill.io/v2/polyfill.min.js?features=default%2CHTMLPictureElement&#038;ver=5.4.2'></script>
+<script type='text/javascript' src='https://rock947.com/wp-content/plugins/socast-media-library/public/js/socast-media-library-public.js?ver=1.0.0'></script>
+<link rel='https://api.w.org/' href='https://rock947.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rock947.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://rock947.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQ2K7TM');</script>
+<!-- End Google Tag Manager --><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<link rel="icon" href="https://media.socastsrm.com/uploads/station/1944/home_screen_logo-5faee1e8e4829.png" sizes="32x32" />
+<link rel="icon" href="https://media.socastsrm.com/uploads/station/1944/home_screen_logo-5faee1e8e4829.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://media.socastsrm.com/uploads/station/1944/home_screen_logo-5faee1e8e4829.png" />
+<meta name="msapplication-TileImage" content="https://media.socastsrm.com/uploads/station/1944/home_screen_logo-5faee1e8e4829.png" />
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MC4HKSD');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33491015-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-33491015-9');
+</script><script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21615947095/leaderboard', [728, 90], 'div-gpt-ad-1565646402930-0').setCollapseEmptyDiv(true,true).setTargeting('Position', ['1']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/leaderboard', [728, 90], 'div-gpt-ad-1590155688439-0').setCollapseEmptyDiv(true,true).setTargeting('Position', ['2']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/leaderboard', [728, 90], 'div-gpt-ad-1590157463478-0').setCollapseEmptyDiv(true,true).setTargeting('Position', ['3']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/mobile-banner', [320, 50], 'div-gpt-ad-1576532688663-0').setCollapseEmptyDiv(true,true).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/sidebar-300x600', [300, 600], 'div-gpt-ad-1581612722192-0').setCollapseEmptyDiv(true,true).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/primary-sponsorship-300x250', [300, 250], 'div-gpt-ad-1576536036050-0').setTargeting('Position', ['Primary Sponsor']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/header-billboard', [[970, 250], [728, 90]], 'div-gpt-ad-1581635076863-0').setCollapseEmptyDiv(true,true).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/header-leaderboard', [728, 90], 'div-gpt-ad-1581635108053-0').setCollapseEmptyDiv(true,true).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/header-leaderboard-300x100', [300, 100], 'div-gpt-ad-1581975782363-0').setCollapseEmptyDiv(true,true).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/300x250', [300, 250], 'div-gpt-ad-1576183866479-0').setTargeting('Position', ['1']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/300x250', [300, 250], 'div-gpt-ad-1576183729012-0').setTargeting('Position', ['2']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/300x250', [300, 250], 'div-gpt-ad-1576183915378-0').setTargeting('Position', ['3']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/300x250', [300, 250], 'div-gpt-ad-1576183980758-0').setTargeting('Position', ['4']).addService(googletag.pubads());
+    googletag.defineSlot('/21615947095/300x250', [300, 250], 'div-gpt-ad-1576184015714-0').setTargeting('Position', ['5']).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().setTargeting('call-letters', 'WOZZ').setTargeting('Slug', window.location.pathname).setTargeting('Market', 'Wausau').setTargeting('blog-category','null');
+    googletag.enableServices();
+  });
+</script>	<style>
+	
+h3.sc-heading-widget a {
+
+	color: #FFFFFF;
+}
+h3.sc-heading-widget {
+
+	font-size: 28px;
+	color: #FFFFFF !important;
+	text-align: center;
+	background-color: #000000;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}	</style>
+	<style>.font-opensans { font-family: "Open Sans", Sans-Serif; } 
+
+.font-roboto { font-family: Roboto, Sans-Serif; } 
+</style><link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,900,100' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,900,100' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/themes/socast-3/assets/css/style.css" rel="stylesheet" data-cssvar />
+		<style data-cssvar>
+		:root {
+			/* body and content */
+			--body-bgd: #ffffff;
+			--sc-content-bgd: #ffffff;
+
+			--sc-text: #353535;
+			--text-header: #353535;
+			
+			--sc-primary: #006dae;
+			--ad-slot-bgd: transparent;
+			
+			/* head and nav */
+			--nav-bgd: #231f20;
+			--nav-text: #ffffff;
+			--nav-text-hover: #eeeeee;
+			--nav-secondary: ;
+			--player-btn-bgd: #0152a4;
+			--player-btn-text: #ffffff;
+			--player-btn-hover-bgd: #004284;
+			--player-btn-hover-text: #f3f3f3;
+			--nav-font-size: 1.125rem;
+			--spacing-nav: calc(1.125rem / 2);
+			--nav-height: 3.375rem;
+			
+			/* sidebar */
+			--sidebar-width: 330px;
+			--sidebar-bgd: transparent;
+			--sidebar-text: var(--sc-text);
+			--sidebar-highlight: var(--sc-primary);
+			
+			
+			/* footer */
+			--footer-bgd: #1f1f1f;
+			--footer-text: #ffffff;
+			--footer-highlight: var(--nav-text);
+			
+						--heading-font: Roboto, Sans-Serif; 
+					}
+		
+				body { font-family: "Open Sans", Sans-Serif; }
+						#stickyHeader, #minimalMenu, #minimalMenu .text-h3 { font-family: "Open Sans", Sans-Serif !important; }
+				
+		
+		@media screen and (min-width: 1600px) {
+			.site_width { 
+				max-width: 1600px !important;  
+				
+				margin-left:auto;
+				margin-right:auto;
+			}
+			
+		}
+		@media screen and (min-width: 1080px) {
+			body.single main .site_width,
+			body.single nav.site_width,
+			body.single footer.site_width{ 
+				max-width: 1080px !important; 
+				
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+		
+		@media screen and (min-width: 1080px) {
+					}
+		@media screen and (max-width: 1079px) {
+			a.floating-bgd-img { display: none; }
+		}
+		</style>
+	<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/themes/socast-3/assets/js/scripts.js'></script></head>
+<body class='home blog wpb-js-composer js-comp-ver-6.1 vc_responsive contentType-page socast-3 headerType-main header-not-sticky'><!--[if lte IE 9]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ2K7TM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4991594-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-4991594-2');
+</script>
+
+<!-- Cancellations Styling -->
+<style>
+.cancellations-alert {
+  display: block;
+  color: #252525;
+  background: #ffdf63;
+  padding: .333em 0;
+  text-align: center;
+}
+.cancellations-alert:hover {
+  background: #ffed89
+}
+.cancellations-alert:link,
+.cancellations-alert:hover,
+.cancellations-alert:focus,
+.cancellations-alert:active {
+  color: inherit;
+}
+</style>
+
+<!-- Ad Slot Styling -->
+<style>
+.sc-ad-block:before, .sc-ad-content-block:before {display: none;}
+
+.ad-header-leaderboard-area {
+  background: #565656;
+  text-align: center;
+  overflow: auto;
+}
+
+.ad-header-leaderboard-area iframe {
+  margin: .875em auto;
+}
+
+.ad-300x250 {
+    border: 1px solid #e8e8e8;
+    margin: 0 auto 1.75em;
+}
+@media all and (max-width: 800px) and (min-width: 1px) {
+    #leaderboard-area {
+        display: block !important;
+    }
+    #leaderboard-area .wrapper {
+        width: 100% !important;
+    }
+
+    .ad-primary-sponsor-728x90 {
+        display: none;
+        border: 1px solid #e8e8e8;
+    }
+    .ad-primary-sponsor-300x250 {
+        display: block;
+        border: 1px solid #e8e8e8;
+        margin: 0 auto;
+    }
+
+    .ad-header-leaderboard-728x90 {
+        display: none !important;
+    }
+    .ad-header-billboard-970x250 {
+        display: none !important;
+    }
+    .ad-header-leaderboard-300x100 {
+        display: block;
+    }
+}
+
+@media all and (min-width: 801px) {
+    .ad-primary-sponsor-728x90 {
+        display: block;
+    }
+
+    .ad-primary-sponsor-300x250 {
+        display: none;
+    }
+
+    .ad-header-leaderboard-728x90 {
+        display: block;
+    }
+    .ad-header-leaderboard-728x90 iframe {
+        margin: 20px auto !important;
+    }
+    .ad-header-billboard-970x250 {
+        display: block;
+    }
+    .ad-header-leaderboard-300x100 {
+        display: none !important;
+    }
+}
+</style>
+
+<style>.l-site-footer {padding-bottom: 65px;}</style>
+
+<!-- TuneGenie Intergration Fixes -->
+<style>
+html { overflow: initial !important; }
+#playerbar { position:fixed; }
+</style><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC4HKSD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<style>
+/* WIDER FORMAT*/
+#theContent-wrapper { width: 95% !important; }
+@media screen and (min-width:980px){
+  #ribbon .site_width {
+      padding: 0 20px;
+      width: 90%;
+  }
+}
+/* ---end-- */
+
+#heroHeader {
+  min-height: calc(100vh - 65px);
+  height: calc(100vh - 65px);
+}
+
+.cancellations-alert {
+  display: block;
+  color: #252525;
+  background: #FFEE8D;
+  padding: .333em 0;
+  text-align: center;
+}
+.cancellations-alert:hover {
+  background: #FFF6C2;
+}
+.cancellations-alert:link,
+.cancellations-alert:hover,
+.cancellations-alert:focus,
+.cancellations-alert:active {
+  color: inherit;
+}
+
+
+/* ASIDE MODULE
+**************************************/
+.aside-module {
+    color: #353535;
+    border-width: 12px 0;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 7.00389105%;
+    margin-bottom: 1.333333333em;
+    background: #ecf6fd;
+    border-color: #cce7fa;
+}
+
+.aside-module a:link { color: #353535; }
+
+.aside-module h2 {
+    margin-bottom:1em !important;
+}
+
+
+.aside-module h3.sc-heading-widget  {
+    margin-top: 0px !important;
+    font-size: 1.4rem !important;
+}
+
+.aside-module .sc-compressed-title {
+    font-size: 0.8rem !important;
+}
+
+.aside-module .sc-item-detail {
+    margin-top: 0px !important;
+    font-size: 0.8rem !important;
+}
+
+
+/*LEGACY FOOTER
+****************************/
+#theFooter{
+    border-top: 12px solid #333;
+}
+
+.footer-section .footer-nav{
+    display:none !important;
+}
+#theFooter .footer-nav{ display:none !important;}
+#theFooter .footer-links{
+    display:none;
+}
+
+.l-site-footer{
+    background:#1f1f1f;
+    color:#fff;
+}
+
+.l-site-footer a:link,.l-site-footer a:visited,.payment-form input[type=submit]{
+    color:#fff;
+    -webkit-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out
+}
+.l-site-footer a:focus,.l-site-footer a:hover,.payment-form input[type=submit]:hover,.payment-form input[type=submit]:focus{
+    color:#7e7e7e
+}
+.l-site-footer a:active,.payment-form input[type=submit]:active{
+    color:#636363
+}
+.footer-cols-wrapper{
+    padding:20px;
+    border-top:5px solid #333
+}
+.footer-col{
+    display:block;
+    float:left;
+    margin-left:0;
+    margin-right:-100%;
+    width:30.9987%;
+    clear:none;
+    float:left;
+    margin-left:0;
+    margin-right:3.50195%
+}
+.footer-col:last-child{
+    margin-right:0
+}
+@media (max-width: 850px){
+    .footer-col{
+        display:block;
+        float:left;
+        margin-left:0;
+        margin-right:-100%;
+        width:30.9987%;
+        clear:none;
+        float:left;
+        margin-left:0;
+        margin-right:3.50195%;
+        margin-bottom:0.6666666666em
+    }
+}
+@media (max-width: 767px){
+    .footer-col{
+        clear:both;
+        display:block;
+        float:left;
+        margin-left:0;
+        width:100%;
+        margin-bottom:0
+    }
+
+    .footer-list li{
+        clear:both;
+        display:block;
+        float:left;
+        margin-left:0;
+        width:100%;
+        float:none
+    }
+
+    .footer-cols-wrapper{
+	    border-top:none;
+	}
+}
+
+.footer-heading{
+    font-size:1.25rem;
+    font-weight:600;
+    margin:0 0 0.666666666em;
+    color:#fff;
+    text-transform:uppercase;
+}
+
+@media (max-width: 767px){
+    .footer-heading{
+        padding-top:1.33333333333em;
+        border-top:1px solid #353535
+    }
+}
+
+.footer-list{
+    list-style:none;
+    font-size:0.9rem;
+    margin-bottom:1.71428571429em;
+    padding-left:0;
+}
+
+.footer-list li{
+    margin-bottom:0.5em
+}
+
+.footer-list li:last-child{
+    margin-bottom:0
+}
+
+.footer-texting-disclaimer{
+    display:block;
+    font-size:0.75rem;
+    line-height:1;
+    font-style:italic
+}
+
+button.popbutton {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.company:before {
+    content: ' ROCK 94.7 | WOZZ-FM';
+    display: block;
+    color: #fff;
+    margin-bottom: 6px;
+    margin-top: 1.1rem;
+}
+
+
+
+************/
+</style>
+
+<script src="https://kit.fontawesome.com/9bf183c165.js" crossorigin=âanonymousâ></script>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/midwestcommunications-network/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
+
+<wx-config language="en" latitude="44.96" longitude="-89.63" group="true"></wx-config>
+
+<div class="ad-header-leaderboard-area">
+    <!-- /21615947095/header-leaderboard -->
+    <div id='div-gpt-ad-1581635108053-0' class='ad-header-leaderboard-728x90'>
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1581635108053-0'); });
+        </script>
+    </div>
+
+    <!-- /21615947095/header-billboard -->
+    <div id='div-gpt-ad-1581635076863-0' class='ad-header-billboard-970x250'>
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1581635076863-0'); });
+        </script>
+    </div>
+
+    <!-- /21615947095/header-leaderboard-300x100 -->
+    <div id='div-gpt-ad-1581975782363-0' class='ad-header-leaderboard-300x100'>
+        <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1581975782363-0'); });
+        </script>
+    </div>
+</div><nav id='stickyHeader' class='nav-align-left full_content hasLogo hasPlayBtn'>
+	<div  class='site_width nav-container'><div class='nav-left hasLogo'>
+	<a href='#' id='minimalMenuToggle'>
+		<svg class='icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill='currentColor' d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+				<span class='sr-text'>Menu</span>
+			</a>
+		<a class="header-logo sc-center-box" href="/">
+		<img src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/03/menu-hero3.png" alt="Rock 94.7" />
+	</a>
+			<a href='#' class='socastPlayerBtn hover-effect'>
+		<span class='hover-effect'>
+			<span class='text icon-left'>LISTEN LIVE</span><svg  class='icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24">
+				<path fill='currentColor' d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+			</svg>
+		</span>
+	</a>
+	</div>
+<div class='nav-middle '>
+	<div><!-- IE hack -->
+		<ul class="nav nav-lower">
+	<li class="">
+		<a href='https://rock947.com/on-air' target="_self" class="nav-item-parent">ON AIR</a>
+			</li>
+	<li class="">
+		<a href='https://rock947.com/events' target="_self" class="nav-item-parent">EVENTS</a>
+			</li>
+	<li class="">
+		<a href='https://rock947.com/blogs' target="_self" class="nav-item-parent">BLOGS</a>
+			</li>
+	<li class="">
+		<a href='https://rock947.com/podcasts' target="_self" class="nav-item-parent">PODCASTS</a>
+			</li>
+	<li class="">
+		<a href='https://rock947.com/news' target="_self" class="nav-item-parent">NEWS</a>
+			</li>
+	<li class="">
+		<a href='https://rock947.com/weather' target="_self" class="nav-item-parent">WEATHER</a>
+			</li>
+	<li class="">
+		<a href='https://rock947.com/pictures' target="_self" class="nav-item-parent">PHOTOS</a>
+			</li>
+</ul>
+	</div>
+</div>
+<div class='nav-right'>
+	<a href='/search' class='search-icon'><svg class='icon' x="0" y="0" viewBox="0 0 24 24">
+<path fill='currentColor' d="M9.5,3C13.1,3,16,5.9,16,9.5c0,1.6-0.6,3.1-1.6,4.2l0.3,0.3h0.8l5,5L19,20.5l-5-5v-0.8l-0.3-0.3c-1.1,1-2.6,1.6-4.2,1.6
+	C5.9,16,3,13.1,3,9.5S5.9,3,9.5,3 M9.5,5C7,5,5,7,5,9.5S7,14,9.5,14S14,12,14,9.5S12,5,9.5,5z"/>
+</svg></a>
+</div>
+</div></nav>
+<div id='minimalMenu'>
+	<div class='wrapper'>
+		<a href='#' class='close hover-effect'><span class='hover-effect'>&times;</span></a>
+		<ul class="nav nav-expanded member">
+	<li>
+		<a href='/login' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">Sign In</span></a></li>
+</ul>		<ul class="nav nav-expanded ">
+	<li>
+		<a href='/search' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">Search</span></a></li>
+	<li>
+		<a href='https://rock947.com/on-air' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">ON AIR</span></a></li>
+	<li>
+		<a href='https://rock947.com/events' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">EVENTS</span></a></li>
+	<li>
+		<a href='https://rock947.com/blogs' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">BLOGS</span></a></li>
+	<li>
+		<a href='https://rock947.com/podcasts' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">PODCASTS</span></a></li>
+	<li>
+		<a href='https://rock947.com/news' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">NEWS</span></a></li>
+	<li>
+		<a href='https://rock947.com/weather' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">WEATHER</span></a></li>
+	<li>
+		<a href='https://rock947.com/pictures' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">PHOTOS</span></a></li>
+</ul>		
+		<ul class='nav social social-badge'>
+		<li><a href='https://www.facebook.com/rock947' target='_blank' class='sc-center-box'><img alt='facebook' class='icon svg-loader' data-icon="facebook"  /></a></li>
+			<li><a href='https://twitter.com/Rock947' target='_blank' class='sc-center-box'><img alt='twitter' class='icon svg-loader' data-icon="twitter" /></a></li>
+					<li><a href='https://www.youtube.com/channel/UCecsE18EwsmwMzQH3ymnVGw' target='_blank' class='sc-center-box'><img alt='youtube' class='icon svg-loader' data-icon="youtube" /></a></li>
+							</ul>
+	</div>
+</div>		<section id='heroHeader' class='hero-header layout-custom height-full padding-padding align-center'>
+			<div  class='site_width'><div class='hero-content'><div><p><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 62px"><span class="vc_empty_space_inner"></span></div>
+	<div  class="wpb_single_image wpb_content_element vc_align_center">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="750" height="500" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/03/hero3-logo.png" class="vc_single_image-img attachment-large" alt=""  /></div>
+		</figure>
+	</div>
+<div class="vc_empty_space"   style="height: 18px"><span class="vc_empty_space_inner"></span></div>
+	<div  class="wpb_single_image wpb_content_element vc_align_center   socastPlayerBtn">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="95" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/03/ListenLive-Black_300x95.gif" class="vc_single_image-img attachment-large" alt="" /></div>
+		</figure>
+	</div>
+</div></div></div></div></p>
+</div></div></div>		</section>
+		<script>
+		var heroBgds = ["https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/03\/wozz-hero-1.jpg","https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/03\/wozz-hero-2.jpg","https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/03\/wozz-hero-3.jpg","https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/03\/wozz-hero-4.jpg","https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/03\/wozz-hero-5.jpg"];
+		if (typeof heroBgds === 'object' && heroBgds.length > 0) {
+			var randomIndex = Math.floor(Math.random() * (heroBgds.length));
+			if (heroBgds[randomIndex] !== 'undefined' && heroBgds[randomIndex].length > 0) {
+				$('.hero-header').css('background-image', 'url(' + heroBgds[randomIndex] + ')');
+			}
+		}
+		</script>
+		<style>
+			#heroHeader {
+				--sc-text: #222222;
+				--sc-primary: #00aadc;
+				background-color: #ffffff;
+				color: #222222;
+				text-align: center;
+			}
+			
+			#heroHeader .hero-content {
+				background-color: transparent;
+			}
+		</style>
+		<main><div class='sc-ad-block slot-mobile'><div class="ad-primary-sponsor-300x250" id='div-gpt-ad-1576536036050-0' style='width: 300px; height: 250px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1576536036050-0'); });
+  </script>
+</div></div><div class='sc-ad-block slot-leaderboard'><div class="ad-primary-sponsor-728x90" id='div-gpt-ad-1565646402930-0' style='width: 728px; height: 90px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1565646402930-0'); });
+  </script>
+</div></div><div id='sc-content-area' class='site_width'><div class='sc-sidebar-wrapper  sidebar-align-left' data-hascontent="true">
+<div class='sc-content'>
+
+<article id="post-30" class="post-30 page type-page status-publish hentry">
+	
+	<div class="entry-content">
+		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h5 class='sc-heading-widget  fg-label'>Featured Promotion...</h5><div class='scheduled_content_widget ' data-start='2021-6-1 00:00' data-end='2021-12-31 23:59'>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<a href="https://research.rock947.com/wozz-music-research-survey/">
+<div class="fg-wrapper">
+	<div class="fg-img wpb_single_image wpb_content_element vc_align_left">
+    <img src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/07/wozz_rockilluminati_primary.jpg">
+	</div>
+
+	<div class="wpb_text_column wpb_content_element  secondary-feature-title">
+	<p>Take the Rock Illuminati Survey!</p>
+   </div>
+</div>
+</a>
+		</div>
+	</div>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h5 class='sc-heading-widget  fg-label'>Featured Promotion...</h5><div class='scheduled_content_widget ' data-start='2021-6-30 19:00' data-end='2021-12-31 23:59'>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<a href="/mobile-app/">
+<div class="fg-wrapper">
+	<div class="fg-img wpb_single_image wpb_content_element vc_align_left">
+    <img src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/05/wozz-newmobileapp-primary.jpg">
+	</div>
+
+	<div class="wpb_text_column wpb_content_element  secondary-feature-title">
+	<p>Get our Free Mobile App</p>
+   </div>
+</div>
+</a>
+		</div>
+	</div>
+</div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h5 class='sc-heading-widget  fg-label'>Featured Promotion...</h5><div class='scheduled_content_widget ' data-start='2021-08-02 00:00' data-end='2021-12-31 23:59'>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<a href="/last-song-standing/">
+<div class="fg-wrapper">
+	<div class="fg-img wpb_single_image wpb_content_element vc_align_left">
+	<img src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/01/wozz-lastsongstanding-primary.jpg">
+	</div>
+
+	<div class="wpb_text_column wpb_content_element  secondary-feature-title">
+	<p>And the Winning Song is...</p>
+   </div>
+</div>
+</a>
+
+		</div>
+	</div>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h5 class='sc-heading-widget  fg-label'>Featured Promotion...</h5><div class='scheduled_content_widget ' data-start='2020-06-18 00:00' data-end='2021-12-31 23:59'>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<a href="/ear-candy/">
+<div class="fg-wrapper">
+	<div class="fg-img wpb_single_image wpb_content_element vc_align_left">
+    <img src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/03/wozz-earcandy-primary.jpg">
+	</div>
+
+	<div class="wpb_text_column wpb_content_element  secondary-feature-title">
+			<p>Are these New Songs Sweet or Sour?</p>
+	 </div>
+</div>
+</a>
+		</div>
+	</div>
+</div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="ql-header wpb_column vc_column_container vc_col-sm-12" id="quick-links"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '>Quick Links</h3></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="ql-list wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/coronavirus-news/">Get Updates on COVID-19</a></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/adoptable-pet-of-the-week/">Adoptable Pet of the Week</a></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/texting/">Texting Offers</a></p>
+
+		</div>
+	</div>
+<div class='scheduled_content_widget ' data-start='2021-05-10 0:00' data-end='9999-12-31 23:59'>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/mobile-app/">Get our Free Mobile App</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="ql-list wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><div class='scheduled_content_widget ' data-start='2021-07-29 00:00' data-end='2021-08-29 23:59'>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="https://www.facebook.com/bowlwiththeband?utm_source=Quick+Link&amp;utm_medium=link&amp;utm_campaign=bowlwiththeband_quicklink&amp;utm_id=WOZZ+Quick+Link">Bowl With The Band âª</a></p>
+
+		</div>
+	</div>
+</div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/sports-extra/">Bone &amp; Joint Sports Extra</a></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/green-gold-fan-zone/">Green Gold Fan Zone</a></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/marketing/">Meet Our Marketing Gurus</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="ql-list wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><div class='scheduled_content_widget ' data-start='2021-07-29 08:00' data-end='2021-12-20 23:59'>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="&quot;https://www.facebook.com/NWRRRocks?utm_source=Quick+Link&amp;utm_medium=link&amp;utm_campaign=wausauareaevents_quicklink&amp;utm_id=WOZZ+Quick+Link">Northwoods Rock Rally âª</a></p>
+
+		</div>
+	</div>
+</div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="https://www.wausauevents.org/?utm_source=Quick+Link&amp;utm_medium=link&amp;utm_campaign=wausauareaevents_quicklink&amp;utm_id=Midwest+Communications+Quick+Link">Wausau Area Events âª</a></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><a href="/cancellations/">Cancellations</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="ql-header wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- 728x90 Slot 2 -->
+<div id='div-gpt-ad-1590155688439-0' class='ad-header-leaderboard-728x90'>
+    <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1590155688439-0'); });
+    </script>
+</div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='/events-station-events/'>Events</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id='eventDisplay_1544078633' class='eventWidget eventDisplayTable scWidgetContainer'>
+    
+    <div class='events clearfix'></div>
+    <!--
+    <a href='/more/eventList?id=35323,32492&range=current&offset=0&limit=3&timezone=America/Chicago&widgetTitle=Event+Display' onclick='eventDisplay_1544078633.showMore();' class='pagination btn btn-silver moreBtn'>More</a>
+    -->
+</div>
+
+<script>
+    var eventDisplay_1544078633 = null;
+    jQuery(function ($) {
+       $(document).on('ready socast:reinit',function() {
+            eventDisplay_1544078633 = new EventDisplay(1544078633, 2170, "35323,32492", 0, 3, "America/Chicago", "https://rock947.com", "<div class='event primary_border_color'>    <div class='name primary_color'><a href='{EVENT_LINK}'>{TITLE}</a></div><div class='date'>{DATE}</div><div class='venue'>{VENUE}</div></div>");
+            eventDisplay_1544078633.showMore();
+
+            $(document).on('click', '#eventDisplay_1544078633 .pagination', function(e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script></div></div></div></div><div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='/events-concerts/'>Concerts</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id='eventCalendar_141052868' class='eventWidget eventGrid scWidgetContainer'>
+	
+	<div class='filter'>
+		<a class='current activeFilter' href='javascript:eventCalendar_141052868.showTab("current");'>Upcoming</a> <a class='past' href='javascript:eventCalendar_141052868.showTab("past");'>Past</a>
+	</div>
+	<div class='events current clearfix'></div>
+	<div class='events past clearfix'></div>
+	<!--
+	<a href='/more/eventGrid?id=33409&range=current&offset=0&limit=6&timezone=America/Chicago&widgetTitle=Event+Display' class='pagination btn btn-silver moreBtn'>More</a>
+	-->
+</div>
+
+<script>
+	var eventCalendar_141052868 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			eventCalendar_141052868 = new EventCalendar(141052868, 2170,"33409",'current',{"current":0,"past":0},6,"America/Chicago","https://rock947.com","<div class='event'><div class='info'><div class='date_bgd primary_bgd_color primary_color'>{DATE}</div><div class='date'>{DATE}</div><div class='image'><a href='{EVENT_LINK}'>{IMAGE}</a></div><div class='name'><a href='{EVENT_LINK}'>{TITLE}</a></div><div class='venue'>{VENUE}</div><div class='description'>{DESCRIPTION}</div><a class='details' href='{EVENT_LINK}'>Full Details</a><div class='social clearfix'>{SOCIAL}</div></div></div>",{"current":true,"past":true});
+			eventCalendar_141052868.showTab('current');
+			//eventCalendar_141052868.showMore();
+			
+			$(document).on('click', '#eventCalendar_141052868 .pagination', function(e) {
+				e.preventDefault();
+				eventCalendar_141052868.showMore();
+			});
+		});
+	});
+</script></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='/blogs/'>Latest Blog Posts</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-20"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="blogNewsWidget scWidgetContainer sc-list sc-list-sm" data-uid="scbnl-6124b1dff1528"  data-layout="0" data-stripped="yes" data-summary="125" data-imgsize="medium" data-author="no" data-view="no" data-date="yes" data-adpos="none" data-colwidth="0" data-excluded="" data-cache-namespace="37526">
+	<div class='loader sc-center-box hidden'><img src='https://media.socastsrm.com/application/theme/images/loaders/indicator-big.gif' alt='' /></div>
+	
+	
+	<div class="posts items-wrapper"><a href="https://rock947.com/2021/08/18/219066/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/08/0c6eb67f-8a38-49f5-87b0-ab3d11c370d9-300x300.jpeg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Adoptable Pet(s) of the Week: Meet Ferrah, Jackie and Katie</div>
+		<div class='sc-list-content'>
+			<div class="text">Ears for days!!!! Meet Ferrah, Jackie and Katie! This big eared beauties came up on our latest Texas transport! How cute are ...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 18, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/11/adoptable-pet-of-the-week-meet-vader/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/08/img-5925-225x300.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Adoptable Pet of the Week: Meet Vader</div>
+		<div class='sc-list-content'>
+			<div class="text">This cute face belong to Vader! He is a very sweet about 2 year old boy who loves to be around people, for for walks and play...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 11, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/04/212457/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/08/5b5ecf3d-775d-453a-b0ee-f9675f4f44ad-300x300.jpeg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Adoptable Pet(s) of the Week: Meet the Avenger kittens</div>
+		<div class='sc-list-content'>
+			<div class="text">Meet our Avenger kittens! Thor, Hulk, Groot and Nebula are all looking for their forever homes to come along! These siblings ...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 04, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/07/30/the-artist-spotlight-krashkarma-2/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/07/The-Artist-Spotlight-3.png" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">The Artist Spotlight- Krashkarma</div>
+		<div class='sc-list-content'>
+			<div class="text">The Artist Spotlight today featured KrashKarma and their new single, &quot;Summer Storm.&quot; The song is from the band's ne...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Jul 30, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a></div>
+	<div style='clear:both;'></div>
+	
+	
+	<div style='clear:both;'></div>
+</div><!-- Generated by: SoCast Blog List ({"last_updated":1629794783,"cache_namespace":37526,"source":"elasticsearch","count":736,"query_time":15,"query_time_es":1,"age":0}) --></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="blogNewsWidget scWidgetContainer sc-list sc-list-sm" data-uid="scbnl-6124b1dff2c43"  data-layout="0" data-stripped="yes" data-summary="125" data-imgsize="medium" data-author="no" data-view="no" data-date="yes" data-adpos="none" data-colwidth="0" data-excluded="" data-cache-namespace="37526">
+	<div class='loader sc-center-box hidden'><img src='https://media.socastsrm.com/application/theme/images/loaders/indicator-big.gif' alt='' /></div>
+	
+	
+	<div class="posts items-wrapper"><a href="https://rock947.com/2021/08/23/final-exam-week/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2499/files//2021/08/20210823-133225.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Final Exam Week</div>
+		<div class='sc-list-content'>
+			<div class="text">The final week of training camp got underway today and for all the players who didn't even put on a uniform against the New Y...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>6h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/21/jets-depart-green-bay-with-win/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2499/files//2021/08/images-1.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Jets depart Green Bay with win</div>
+		<div class='sc-list-content'>
+			<div class="text">Keep in mind it was an afternoon for evaluation as the New York Jets defeated the Green Bay Packers 23-14 before an announced...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 22, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/19/day-2-with-the-jets/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2499/files//2021/08/20210819-121221-scaled.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Day 2 with the Jets</div>
+		<div class='sc-list-content'>
+			<div class="text">The second practice between the Green Bay Packers and New York Jets was a little shorter, so were the fuses. The temperature ...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 20, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/18/day-1-with-the-jets/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2499/files//2021/08/20210818-123921-scaled.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Day 1 with the Jets</div>
+		<div class='sc-list-content'>
+			<div class="text">Even Matt LaFleur had to admit, &quot;It's pretty cool&quot; to get together with his buddy Robert Saleh and reflect on their...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 19, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a></div>
+	<div style='clear:both;'></div>
+	
+	
+	<div style='clear:both;'></div>
+</div><!-- Generated by: SoCast Blog List ({"last_updated":1629794783,"cache_namespace":37526,"source":"elasticsearch","count":226,"query_time":4,"query_time_es":0,"age":0}) --></div></div></div></div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-block vc_btn3-color-primary" href="https://rock947.com/blogs/" title="">Read More Blogs Â»</a></div><div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='https://www.facebook.com/rock947/'>Rock 94.7 Social</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid center vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+						 <div class="fb-page" data-href="https://www.facebook.com/rock947" data-tabs="timeline" data-height="750" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+        <blockquote cite="https://www.facebook.com/rock947" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/rock947">Rock 94.7</a></blockquote>
+</div>
+		</div>
+	</div>
+
+	<div class="wpb_raw_code wpb_raw_js" >
+		<div class="wpb_wrapper">
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=127664773921897&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='/podcasts/'>Podcasts</a></h3><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-1 vc_tta-tabs-position-left vc_tta-controls-align-left "><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><li class="vc_tta-tab vc_active" data-vc-tab><a href="#1616182417483-79488f85-6a78" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Getting Reel</span><i class="vc_tta-icon fas fa-podcast"></i></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1616182417500-998bbe18-95ad" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Chaos &amp; Cuddles</span><i class="vc_tta-icon fas fa-podcast"></i></a></li><li class="vc_tta-tab" data-vc-tab><a href="#1616182647629-d95d8d1b-2f63" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Scary Terry Interviews</span><i class="vc_tta-icon fas fa-podcast"></i></a></li></ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1616182417483-79488f85-6a78" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1616182417483-79488f85-6a78" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Getting Reel</span><i class="vc_tta-icon fas fa-podcast"></i></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<iframe src="https://omny.fm/shows/getting-reel/playlists/podcast/embed?style=cover&image=1&share=1&download=1&description=1&subscribe=1&playlistimages=0&playlistshare=0&foreground=004284&background=f5f5f5&highlight=0152a4" width="100%" height="735" frameborder="0" title="Getting REEL"></iframe>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 12px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div><div class="vc_tta-panel" id="1616182417500-998bbe18-95ad" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1616182417500-998bbe18-95ad" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Chaos &amp; Cuddles</span><i class="vc_tta-icon fas fa-podcast"></i></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="center wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<iframe src="https://omny.fm/shows/chaos-and-cuddles-parenting-podcast/playlists/podcast/embed?style=cover&image=1&share=1&download=1&description=1&subscribe=1&playlistimages=0&playlistshare=1&foreground=004284&background=f5f5f5&highlight=0015a4" width="100%" height="735" frameborder="0" title="Chaos and Cuddles Parenting Podcast Podcast"></iframe>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 12px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div><div class="vc_tta-panel" id="1616182647629-d95d8d1b-2f63" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#1616182647629-d95d8d1b-2f63" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Scary Terry Interviews</span><i class="vc_tta-icon fas fa-podcast"></i></a></h4></div><div class="vc_tta-panel-body"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="center wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<iframe src="https://omny.fm/shows/scary-terry-interviews/playlists/podcast/embed?style=cover&image=1&share=1&download=1&description=1&subscribe=1&playlistimages=1&playlistshare=0&foreground=004284&background=f5f5f5&highlight=0152a4" width="100%" height="735" frameborder="0" title="Scary Terry Interviews"></iframe>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 12px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div></div></div></div></div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-block vc_btn3-color-primary" href="https://rock947.com/" title="">More Podcasts Â»</a></div><div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='/pictures/'>Station Galleries</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id='albumGallery_1992110853' class='scWidgetContainer'>
+	
+	<div class='tcl_left tcl_column'></div><div class='tcl_right tcl_column'></div>
+	<div class='gallery' onclick="lightbox_39200_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/07/20210715-115207-hdr-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>54<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Rock Fest Performance Photos 2021</div>
+                <div class='galleryTime'>4 weeks ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_39200_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_39200_1992110853 = new Lightbox('lightbox_39200_1992110853',[{"type":"image","id":"413956","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-115207-hdr.jpg","caption":"","description":""},{"type":"image","id":"413957","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-115217.jpg","caption":"","description":""},{"type":"image","id":"413958","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-143536-hdr.jpg","caption":"","description":"Fozzy"},{"type":"image","id":"413959","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-182836-hdr.jpg","caption":"","description":"Anthrax"},{"type":"image","id":"413960","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210717-105845-compress28.jpg","caption":"","description":"Anthrax"},{"type":"image","id":"413961","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-182924.jpg","caption":"","description":"Anthrax"},{"type":"image","id":"413962","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-124917-hdr.jpg","caption":"","description":"Blacktop Mojo"},{"type":"image","id":"413963","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-125117-hdr.jpg","caption":"","description":"Blacktop mojo"},{"type":"image","id":"413964","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-203253.jpg","caption":"","description":""},{"type":"image","id":"413965","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-205935.jpg","caption":"","description":""},{"type":"image","id":"413966","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-113230-hdr.jpg","caption":"","description":"Stormbreaker"},{"type":"image","id":"413967","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-113302-hdr.jpg","caption":"","description":"Stormbreaker"},{"type":"image","id":"413968","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-113433.jpg","caption":"","description":"Stormbreaker"},{"type":"image","id":"413969","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-130130.jpg","caption":"","description":"Hyro the Hero"},{"type":"image","id":"413970","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-130325-hdr.jpg","caption":"","description":"Hyro the Hero"},{"type":"image","id":"413971","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-130409-hdr.jpg","caption":"","description":"Hyro the Hero"},{"type":"image","id":"413972","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-143332.jpg","caption":"","description":"We Came As Romans"},{"type":"image","id":"413973","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-161200.jpg","caption":"","description":"Body Count"},{"type":"image","id":"413974","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-161416.jpg","caption":"","description":"Body Count"},{"type":"image","id":"413975","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-181934-hdr.jpg","caption":"","description":"Chevelle"},{"type":"image","id":"413976","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-203535.jpg","caption":"","description":"Danzig"},{"type":"image","id":"413977","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-203933-hdr.jpg","caption":"","description":"Danzig"},{"type":"image","id":"413978","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-230437-hdr.jpg","caption":"","description":"Korn"},{"type":"image","id":"413979","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-232548-hdr.jpg","caption":"","description":"Korn"},{"type":"image","id":"413929","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-130004-compress3.jpg","caption":"","description":"Rob Zombie\nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413930","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-125959-compress42.jpg","caption":"","description":"Rob Zombie\nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413931","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-130010-compress76.jpg","caption":"","description":"Rob Zombie\nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413932","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-125955-compress89.jpg","caption":"","description":"Rob Zombie\nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413933","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-125947-compress34.jpg","caption":"","description":"Rob Zombie\nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413934","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210715-125656-763-compress71.jpg","caption":"","description":"Fire From the Gods"},{"type":"image","id":"413935","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210715-125656-750-compress51.jpg","caption":"","description":"Fire From the Gods"},{"type":"image","id":"413936","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-125649-compress61.jpg","caption":"","description":""},{"type":"image","id":"413980","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-113358-hdr.jpg","caption":"","description":"Silvertung"},{"type":"image","id":"413937","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-130019-compress34.jpg","caption":"","description":"Silvertung \nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413938","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210714-185820-636-compress20.jpg","caption":"","description":""},{"type":"image","id":"413939","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-130034-compress88.jpg","caption":"","description":"Saint Asonia"},{"type":"image","id":"413940","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-130038-compress42.jpg","caption":"","description":"Saint Asonia"},{"type":"image","id":"413941","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-232835-compress96.jpg","caption":"","description":"Night Ranger with Corey Taylor"},{"type":"image","id":"413942","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-232849-compress67.jpg","caption":"","description":"Night Ranger"},{"type":"image","id":"413943","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-232844-compress32.jpg","caption":"","description":"Night Ranger \nPhoto edit by Dave Kallaway"},{"type":"image","id":"413944","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210718-082721-513-compress40.jpg","caption":"","description":"Korn"},{"type":"image","id":"413945","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/2021-07-18-08-21-03-compress83.jpg","caption":"","description":"Korn"},{"type":"image","id":"413946","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210717-131433-compress52.jpg","caption":"","description":"Hyro the Hero"},{"type":"image","id":"413947","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210717-121905-626-compress86.jpg","caption":"","description":"Corey Taylor"},{"type":"image","id":"413948","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-224516-389-compress10.jpg","caption":"","description":"Corey Taylor"},{"type":"image","id":"413949","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-232852-compress98.jpg","caption":"","description":"Phillip H. Anselmo and the Illegals\nPhoto Edit Credit: Dave Kallaway"},{"type":"image","id":"413981","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-184420-hdr.jpg","caption":"","description":"Phillip H. Anselmo and the Illegals"},{"type":"image","id":"413982","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/2021-07-17-11-06-07.jpg","caption":"","description":"Phillip H. Anselmo and the Illegals"},{"type":"image","id":"413950","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/2021-07-19-08-46-42-compress32.jpg","caption":"","description":"Limp Bizkit"},{"type":"image","id":"413951","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210717-121905-620-compress12.jpg","caption":"","description":"Limp Bizkit"},{"type":"image","id":"413952","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-182935-2-compress7.jpg","caption":"","description":"Chevelle"},{"type":"image","id":"413953","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-181942-hdr-2-compress33.jpg","caption":"","description":"Chevelle"},{"type":"image","id":"413954","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210716-144626-180-compress28.jpg","caption":"","description":""},{"type":"image","id":"413955","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/img-20210717-105845-compress28.jpg","caption":"","description":"Anthrax"}], true,false,false,{"id":"39200","name":"Rock Fest Performance Photos 2021","num":"54","ago":"4 weeks ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_39102_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/07/20210715-111034-compress2-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>17<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Rock 94.7 Friends at Fest 2021</div>
+                <div class='galleryTime'>1 month ago</div>
+            </div>
+        </div>
+    </div>
+</div>                <a href="https://order-cialis.com/cialis-20-mg-walgreens/">Cialis 20 Mg Walgreens</a>
+                <a href="https://order-cialis.com/dauer-wirkungseintritt-cialis/">Dauer Wirkungseintritt Cialis</a>
+                <a href="https://order-cialis.com/prezzo-cialis-originale-da-5-mg/">Prezzo Cialis Originale Da 5 Mg</a>
+                <a href="https://order-cialis.com/how-does-cialis-work-video/">How Does Cialis Work Video</a>
+                <a href="https://order-cialis.com/cialis-pill-shape-and-color/">Cialis Pill Shape And Color</a>
+                <a href="https://order-cialis.com/cialis-5mg-28-comprimidos-para-uso-diario-precio/">Cialis 5mg. 28 Comprimidos Para Uso Diario Precio</a>
+                <a href="https://order-cialis.com/is-cialis-more-expensive-than-viagra/">Is Cialis More Expensive Than Viagra</a>
+                <a href="https://order-cialis.com/cialis-20mg-how-long-does-it-last/">Cialis 20mg How Long Does It Last</a>
+                <a href="https://order-cialis.com/cialis-maximum-effect-time/">Cialis Maximum Effect Time</a>
+                <a href="https://order-cialis.com/chemone-research-tadalafil/">Chemone Research Tadalafil</a>
+                <a href="https://order-cialis.com/remedio-tadalafil-para-que-serve/">Remedio Tadalafil Para Que Serve</a>
+                <a href="https://order-cialis.com/ist-cialis-in-deutschland-rezeptpflichtig/">Ist Cialis In Deutschland Rezeptpflichtig</a>
+                <a href="https://order-cialis.com/tadalafil-tadarise-sunrise/">Tadalafil Tadarise Sunrise</a>
+                <a href="https://order-cialis.com/cialis-side-effects-for-women/">Cialis Side Effects For Women</a>
+                <a href="https://order-cialis.com/brand-cialis-canadian-pharmacy/">Brand Cialis Canadian Pharmacy</a>
+                <a href="https://order-cialis.com/cialis-de-5mg-para-que-sirve/">Cialis De 5mg Para Que Sirve</a>
+                <a href="https://order-cialis.com/acheter-viagra-cialis-france/">Acheter Viagra Cialis France</a>
+                <a href="https://order-cialis.com/dosaggio-viagra-e-cialis/">Dosaggio Viagra E Cialis</a>
+                <a href="https://order-cialis.com/difference-between-viagra-and-cialis/">Difference Between Viagra And Cialis</a>
+                <a href="https://order-cialis.com/logo-de-cialis/">Logo De Cialis</a>
+                <a href="https://order-cialis.com/generika-cialis-schweiz/">Generika Cialis Schweiz</a>
+                <a href="https://order-cialis.com/cialis-bathtub-symbolism/">Cialis Bathtub Symbolism</a>
+                <a href="https://order-cialis.com/cialis-coupon-rite-aid/">Cialis Coupon Rite Aid</a>
+                <a href="https://order-cialis.com/cem-products-cialis/">Cem Products Cialis</a>
+                <a href="https://order-cialis.com/cialis-generico-online/">Cialis Generico Online</a>
+                <a href="https://order-cialis.com/pharmacie-paris-cialis-moins-cher/">Pharmacie Paris Cialis Moins Cher</a>
+                <a href="https://order-cialis.com/harga-obat-viagra-dan-cialis/">Harga Obat Viagra Dan Cialis</a>
+                <a href="https://order-cialis.com/comprar-cialis-generico-en-farmacia/">Comprar Cialis Generico En Farmacia</a>
+                <a href="https://order-cialis.com/cialis-sans-ordonnance-quebec/">Cialis Sans Ordonnance Quebec</a>
+                <a href="https://order-cialis.com/cialis-generic-online-canada/">Cialis Generic Online Canada</a><div class="post-pagination">
+<script>
+	var lightbox_39102_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_39102_1992110853 = new Lightbox('lightbox_39102_1992110853',[{"type":"image","id":"412884","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-111034-compress2.jpg","caption":"","description":""},{"type":"image","id":"412885","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-173342-hdr-compress84.jpg","caption":"","description":""},{"type":"image","id":"412886","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-233040-compress41.jpg","caption":"","description":""},{"type":"image","id":"412887","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-145516-hdr-compress10.jpg","caption":"","description":""},{"type":"image","id":"412888","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-211237-hdr-compress69.jpg","caption":"","description":""},{"type":"image","id":"412889","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154705-compress69.jpg","caption":"","description":""},{"type":"image","id":"412890","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-002514-compress91.jpg","caption":"","description":""},{"type":"image","id":"412891","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-131600-hdr-compress38.jpg","caption":"","description":""},{"type":"image","id":"412892","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-164456-hdr-compress48.jpg","caption":"","description":""},{"type":"image","id":"412893","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-115500-compress83.jpg","caption":"","description":""},{"type":"image","id":"412894","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-001755-hdr-compress52.jpg","caption":"","description":""},{"type":"image","id":"412895","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-212024-hdr-compress53.jpg","caption":"","description":""},{"type":"image","id":"412896","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-002622-compress98.jpg","caption":"","description":""},{"type":"image","id":"412897","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-155729-compress32.jpg","caption":"","description":""},{"type":"image","id":"412898","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155528-hdr-compress7.jpg","caption":"","description":""},{"type":"image","id":"412899","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210715-164406-hdr-compress75.jpg","caption":"","description":""},{"type":"image","id":"412900","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-152854-hdr-compress25-1.jpg","caption":"","description":""}], true,false,false,{"id":"39102","name":"Rock 94.7 Friends at Fest 2021","num":"17","ago":"1 month ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_39166_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/07/20210716-152829-compress10-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>6<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Women of Rock Fest 2021</div>
+                <div class='galleryTime'>1 month ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_39166_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_39166_1992110853 = new Lightbox('lightbox_39166_1992110853',[{"type":"image","id":"413478","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-152829-compress10.jpg","caption":"","description":""},{"type":"image","id":"413479","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155048-compress38.jpg","caption":"","description":""},{"type":"image","id":"413480","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155528-hdr-compress96.jpg","caption":"","description":""},{"type":"image","id":"413481","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155727-hdr-compress98.jpg","caption":"","description":""},{"type":"image","id":"413482","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-175103-hdr-compress93.jpg","caption":"","description":""},{"type":"image","id":"413483","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154654-compress91.jpg","caption":"","description":""}], true,false,false,{"id":"39166","name":"Women of Rock Fest 2021","num":"6","ago":"1 month ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_39135_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/07/20210716-154826-compress43-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>12<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Rock Fest Tattoos 2021</div>
+                <div class='galleryTime'>1 month ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_39135_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_39135_1992110853 = new Lightbox('lightbox_39135_1992110853',[{"type":"image","id":"413178","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154826-compress43.jpg","caption":"","description":""},{"type":"image","id":"413179","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155848-compress72.jpg","caption":"","description":""},{"type":"image","id":"413180","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155843-compress4.jpg","caption":"","description":""},{"type":"image","id":"413181","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-125319-compress84.jpg","caption":"","description":""},{"type":"image","id":"413182","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154430-compress41.jpg","caption":"","description":""},{"type":"image","id":"413183","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154542-compress17.jpg","caption":"","description":""},{"type":"image","id":"413184","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154537-compress77.jpg","caption":"","description":""},{"type":"image","id":"413185","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155338-compress39.jpg","caption":"","description":""},{"type":"image","id":"413186","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154754-compress37.jpg","caption":"","description":""},{"type":"image","id":"413187","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154446-compress71.jpg","caption":"","description":""},{"type":"image","id":"413188","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-172735-compress98.jpg","caption":"","description":""},{"type":"image","id":"413189","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154833-compress3.jpg","caption":"","description":""}], true,false,false,{"id":"39135","name":"Rock Fest Tattoos 2021","num":"12","ago":"1 month ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_39127_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/07/20210717-205726-compress7-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>17<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Rock Fest Couples 2021</div>
+                <div class='galleryTime'>1 month ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_39127_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_39127_1992110853 = new Lightbox('lightbox_39127_1992110853',[{"type":"image","id":"413093","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-205726-compress7.jpg","caption":"","description":""},{"type":"image","id":"413094","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154503-hdr-compress73.jpg","caption":"","description":""},{"type":"image","id":"413095","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154918-hdr-compress93.jpg","caption":"","description":""},{"type":"image","id":"413096","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155327-compress82.jpg","caption":"","description":""},{"type":"image","id":"413097","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155827-compress5.jpg","caption":"","description":""},{"type":"image","id":"413098","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154654-compress93.jpg","caption":"","description":""},{"type":"image","id":"413099","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154728-compress15.jpg","caption":"","description":""},{"type":"image","id":"413100","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-152904-compress18.jpg","caption":"","description":""},{"type":"image","id":"413101","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154151-compress15.jpg","caption":"","description":""},{"type":"image","id":"413102","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-152524-compress92.jpg","caption":"","description":""},{"type":"image","id":"413103","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154246-hdr-compress17.jpg","caption":"","description":""},{"type":"image","id":"413104","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154407-compress89.jpg","caption":"","description":""},{"type":"image","id":"413105","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-155145-compress67.jpg","caption":"","description":""},{"type":"image","id":"413106","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-152638-compress34.jpg","caption":"","description":""},{"type":"image","id":"413107","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-152741-compress28.jpg","caption":"","description":""},{"type":"image","id":"413108","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210716-154817-hdr-compress94.jpg","caption":"","description":""},{"type":"image","id":"413109","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/07\/20210717-205640-hdr-compress67.jpg","caption":"","description":""}], true,false,false,{"id":"39127","name":"Rock Fest Couples 2021","num":"17","ago":"1 month ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_38352_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2021/05/arm-tiger-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>11<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Bad Tatts 2021</div>
+                <div class='galleryTime'>3 months ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_38352_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_38352_1992110853 = new Lightbox('lightbox_38352_1992110853',[{"type":"image","id":"408468","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/arm-tiger-scaled.jpg","caption":"\"I got it when I was 18 and did not think first. The eyes are so messed up and skin is raised. Love to get it covered but is so dark\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408465","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/celtic-chest-scaled.jpg","caption":"\"It was done by a friend.  The lines are scared, blown out, faded.  It was supposed to be just a heart and Celtic design.  When that part was done it was crooked so the vine was added.  The vine was supposed to look like it was going thru the skin.  Nothi","description":"This image was submitted by a user as part of a contest."},{"type":"image","id":"408467","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/angel-wrist.jpg","caption":"\"It is meant to be an angel silhouette but the orange doesn't show up very well so it looks like a mans naughty parts.  It is on the inside of my right wrist\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408636","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/arm-metal.jpg","caption":"\"Got it when I was young n drunk. Not my best choice.\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408655","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/ankle-8ball-scaled.jpg","caption":"\"This tattoo represents what happens when you let someone tattoo you with no experience and changes the design from a Ying yang to an 8 ball and doesn't finish the job. Would love to get a kick ass cover up to fix this mistake\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408740","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/foot-flowers-scaled.jpg","caption":"\"While I was living in Arizona I decided last minute to get a tattoo. Found a picture I liked and went into the first place that had an opening. The tattoo doesn't look anything like the picture and was very disappointed. And haven't had a tattoo since.\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408741","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/chest-heart.jpg","caption":"\"Got this Tattoo in 1989 in Mississippi while in the Military.  Artist cautioned me on getting a name tattooed on me, but I thought I had the world's greatest wife....  Didn't quite work out that way and the tattoo has far outlasted the 9 year marriage.\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408754","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/arm-residentevil-scaled.jpg","caption":"\"I absolutely love Resident Evil, the game series not the movies. I wanted a tattoo but no money, so this what happens when you believe someone who has 'experience'\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408892","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/claw-marks-scaled.jpg","caption":"-","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408967","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/knife-arm-scaled.jpg","caption":"\"Was a cover up of an ex gf's name....we were drunk and it was supposed to look like the twisted handle of a knife.   I now have a d!#k on my arm!\"","description":"This image was submitted by a user as part of a contest. "},{"type":"image","id":"408966","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2021\/05\/fire-back-scaled.jpg","caption":"\"This Sacred heart was a cover up, I asked for flames, and got the pile of s#!t, literally a pile of s#!t...had another artist attempt to fix it and got \u201cflames\u201d up my spine....I haven\u2019t been able to find someone who can figure out how to fix it. Don\u2019t mi","description":"This image was submitted by a user as part of a contest. "}], true,false,false,{"id":"38352","name":"Bad Tatts 2021","num":"11","ago":"3 months ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_35097_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/10/car-1-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>16<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N&#039; Greet Cookout &amp; Service To Armed Forces Fundraiser</div>
+                <div class='galleryTime'>11 months ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_35097_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_35097_1992110853 = new Lightbox('lightbox_35097_1992110853',[{"type":"image","id":"388838","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-1.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388839","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-8.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388840","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-2.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388841","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-33.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388842","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-3.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388843","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-4.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser","description":""},{"type":"image","id":"388844","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-7.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388845","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-12.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388846","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-10.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388847","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-5.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388848","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-6.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388849","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-9.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388850","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-13.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388851","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/cars-1.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388852","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/cars-2.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""},{"type":"image","id":"388853","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/10\/car-11.jpg","caption":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N' Greet Cookout & Service To Armed Forces Fundraiser.","description":""}], true,false,false,{"id":"35097","name":"NorthStar Restoration Services 3rd Annual Car Enthusiast Meet N&#039; Greet Cookout &amp; Service To Armed Forces Fundraiser","num":"16","ago":"11 months ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_34637_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/08/unnamed-1-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>8<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>All Stars Under the Stars 2020 With Hyde</div>
+                <div class='galleryTime'>12 months ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_34637_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_34637_1992110853 = new Lightbox('lightbox_34637_1992110853',[{"type":"image","id":"385099","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-1-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385100","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-2-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385101","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-3-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385102","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-4-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385103","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-6-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385104","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-7-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385105","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-8-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""},{"type":"image","id":"385106","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/08\/unnamed-scaled.jpg","caption":"All Stars Under the Stars to support Peyton's Promise","description":""}], true,false,false,{"id":"34637","name":"All Stars Under the Stars 2020 With Hyde","num":"8","ago":"12 months ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_34088_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/07/inbound6631780354635503716-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>26<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Show Us Your Bad Tatts</div>
+                <div class='galleryTime'>1 year ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_34088_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_34088_1992110853 = new Lightbox('lightbox_34088_1992110853',[{"type":"image","id":"377352","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound6631780354635503716.jpg","caption":"","description":""},{"type":"image","id":"377353","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/IMG_20200709_122708041.jpg","caption":"","description":""},{"type":"image","id":"377354","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound2052297600999003445.jpg","caption":"","description":""},{"type":"image","id":"377355","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/15941730930147788779858093215724.jpg","caption":"","description":""},{"type":"image","id":"377356","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/image_824aI0x.jpg","caption":"","description":""},{"type":"image","id":"377357","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/63CEA5C1-30F8-4029-BF50-75D94B81BE9F.jpeg","caption":"","description":""},{"type":"image","id":"377358","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200718_202329.jpg","caption":"","description":""},{"type":"image","id":"377359","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200709_180418.jpg","caption":"","description":""},{"type":"image","id":"377360","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/15951613741726444623597058749261.jpg","caption":"","description":""},{"type":"image","id":"377361","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/107663751_1515034275335036_904075325982609477_n.jpg","caption":"","description":""},{"type":"image","id":"377362","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound7539474169455655367.jpg","caption":"","description":""},{"type":"image","id":"377363","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/A32CF99E-6345-4AA4-9AA4-7888DA9A4958.jpeg","caption":"","description":""},{"type":"image","id":"377364","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/B3308871-F511-4BE3-86CD-57AF6E80ABEC.jpeg","caption":"","description":""},{"type":"image","id":"377365","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound5791351661719492271.jpg","caption":"","description":""},{"type":"image","id":"377366","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound646360719998823130.jpg","caption":"","description":""},{"type":"image","id":"377367","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/240546DD-187E-40F9-945F-639C8808B7F9.jpeg","caption":"","description":""},{"type":"image","id":"377368","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound3422594952107761286.jpg","caption":"","description":""},{"type":"image","id":"377369","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200707_144618.jpg","caption":"","description":""},{"type":"image","id":"377370","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200707_114922.jpg","caption":"","description":""},{"type":"image","id":"377371","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/15943286401164438781193754118302.jpg","caption":"","description":""},{"type":"image","id":"377372","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200715_193648.jpg","caption":"","description":""},{"type":"image","id":"377373","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200712_085349.jpg","caption":"","description":""},{"type":"image","id":"377374","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/F1AFC78C-8247-453B-B37A-A1F2C04717B0.jpeg","caption":"","description":""},{"type":"image","id":"377375","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/793F7CD7-E158-4B19-97D4-8ABC4859DF09.jpeg","caption":"","description":""},{"type":"image","id":"377376","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/inbound5269615450203409456.jpg","caption":"","description":""},{"type":"image","id":"377377","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200707_215947.jpg","caption":"","description":""}], true,false,false,{"id":"34088","name":"Show Us Your Bad Tatts","num":"26","ago":"1 year ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_34084_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/07/20200228_201446-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>10<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Bowl For Kids Sake-Skipp&#039;s Bowling Center</div>
+                <div class='galleryTime'>1 year ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_34084_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_34084_1992110853 = new Lightbox('lightbox_34084_1992110853',[{"type":"image","id":"377312","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201446.jpg","caption":"","description":""},{"type":"image","id":"377313","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201516.jpg","caption":"","description":""},{"type":"image","id":"377314","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201541.jpg","caption":"","description":""},{"type":"image","id":"377315","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201557.jpg","caption":"","description":""},{"type":"image","id":"377316","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201623.jpg","caption":"","description":""},{"type":"image","id":"377317","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201631.jpg","caption":"","description":""},{"type":"image","id":"377318","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201639.jpg","caption":"","description":""},{"type":"image","id":"377319","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201656.jpg","caption":"","description":""},{"type":"image","id":"377320","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_201804.jpg","caption":"","description":""},{"type":"image","id":"377321","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/07\/20200228_202344.jpg","caption":"","description":""}], true,false,false,{"id":"34084","name":"Bowl For Kids Sake-Skipp&#039;s Bowling Center","num":"10","ago":"1 year ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_33737_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/06/2019-09_23_KI_FarmAid_Y100_0919-2-300x251.jpg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>33<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Farm Aid @ Alpine Valley on 09/21/19</div>
+                <div class='galleryTime'>1 year ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_33737_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_33737_1992110853 = new Lightbox('lightbox_33737_1992110853',[{"type":"image","id":"375545","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-2.jpg","caption":"","description":""},{"type":"image","id":"375546","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-1.jpg","caption":"","description":""},{"type":"image","id":"375547","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-3.jpg","caption":"","description":""},{"type":"image","id":"375548","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-4.jpg","caption":"","description":""},{"type":"image","id":"375549","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-5.jpg","caption":"","description":""},{"type":"image","id":"375550","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-6.jpg","caption":"","description":""},{"type":"image","id":"375551","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-7.jpg","caption":"","description":""},{"type":"image","id":"375552","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-8.jpg","caption":"","description":""},{"type":"image","id":"375553","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-9.jpg","caption":"","description":""},{"type":"image","id":"375554","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-10.jpg","caption":"","description":""},{"type":"image","id":"375555","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-11.jpg","caption":"","description":""},{"type":"image","id":"375556","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-14.jpg","caption":"","description":""},{"type":"image","id":"375557","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-12.jpg","caption":"","description":""},{"type":"image","id":"375558","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-13.jpg","caption":"","description":""},{"type":"image","id":"375559","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-15.jpg","caption":"","description":""},{"type":"image","id":"375560","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-16.jpg","caption":"","description":""},{"type":"image","id":"375561","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-17.jpg","caption":"","description":""},{"type":"image","id":"375562","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-18.jpg","caption":"","description":""},{"type":"image","id":"375563","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-19.jpg","caption":"","description":""},{"type":"image","id":"375564","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-20.jpg","caption":"","description":""},{"type":"image","id":"375565","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-21.jpg","caption":"","description":""},{"type":"image","id":"375566","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-22.jpg","caption":"","description":""},{"type":"image","id":"375567","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-23.jpg","caption":"","description":""},{"type":"image","id":"375568","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-24.jpg","caption":"","description":""},{"type":"image","id":"375569","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-25.jpg","caption":"","description":""},{"type":"image","id":"375570","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-26.jpg","caption":"","description":""},{"type":"image","id":"375571","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-27.jpg","caption":"","description":""},{"type":"image","id":"375572","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-28.jpg","caption":"","description":""},{"type":"image","id":"375573","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-30.jpg","caption":"","description":""},{"type":"image","id":"375574","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-31.jpg","caption":"","description":""},{"type":"image","id":"375575","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-29.jpg","caption":"","description":""},{"type":"image","id":"375576","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-30.jpg","caption":"","description":""},{"type":"image","id":"375577","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_23_KI_FarmAid_Y100_0919-31.jpg","caption":"","description":""}], true,false,false,{"id":"33737","name":"Farm Aid @ Alpine Valley on 09/21/19","num":"33","ago":"1 year ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_33718_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/06/2019-09_22_16D48EE3-8DF4-4F50-82CF-965AF115BD0D-300x251.jpeg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>70<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Green &amp; Gold Fan Zone Coverage 2019</div>
+                <div class='galleryTime'>1 year ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_33718_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_33718_1992110853 = new Lightbox('lightbox_33718_1992110853',[{"type":"image","id":"374951","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_16D48EE3-8DF4-4F50-82CF-965AF115BD0D.jpeg","caption":"","description":""},{"type":"image","id":"374952","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9055.jpg","caption":"","description":""},{"type":"image","id":"374953","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_0.png","caption":"","description":""},{"type":"image","id":"374954","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_3_DkDmHdL.png","caption":"","description":""},{"type":"image","id":"374955","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_B38D91A6-49E5-47C5-8E20-417C3CDE1C7B.jpeg","caption":"","description":""},{"type":"image","id":"374956","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9074.jpg","caption":"","description":""},{"type":"image","id":"374957","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_9AA514E1-66E7-40C4-AE5F-852266F3696B.jpeg","caption":"","description":""},{"type":"image","id":"374958","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9096.jpg","caption":"","description":""},{"type":"image","id":"374959","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_j.png","caption":"","description":""},{"type":"image","id":"374960","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9084.jpg","caption":"","description":""},{"type":"image","id":"374961","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9050.jpg","caption":"","description":""},{"type":"image","id":"374962","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_untitled.png","caption":"","description":""},{"type":"image","id":"374963","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_2_RDcBNTF.png","caption":"","description":""},{"type":"image","id":"374964","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_5.png","caption":"","description":""},{"type":"image","id":"374965","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_AA2AF9FF-93C4-4FB1-8FA1-08ADC42E3C2F.jpeg","caption":"","description":""},{"type":"image","id":"374966","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_1.png","caption":"","description":""},{"type":"image","id":"374967","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_FD04F158-66A3-41B5-9904-9A2EB9D9898A.jpeg","caption":"","description":""},{"type":"image","id":"374968","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_A8424D4E-E808-44AF-8530-C43C1B489835.jpeg","caption":"","description":""},{"type":"image","id":"374969","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_6.png","caption":"","description":""},{"type":"image","id":"374970","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_4.png","caption":"","description":""},{"type":"image","id":"374971","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9070.jpg","caption":"","description":""},{"type":"image","id":"374972","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_A14C9D2E-D81E-4990-AA19-BE5123C4B74B.jpeg","caption":"","description":""},{"type":"image","id":"374973","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_FC8DFE50-E0F1-466B-BACB-BAC963E306FA.jpeg","caption":"","description":""},{"type":"image","id":"374974","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_A797B107-0C19-47CD-97A3-70AF95B0B228.jpeg","caption":"","description":""},{"type":"image","id":"374975","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_42995FCE-0D9C-4D38-90CF-ED4E475FA718.jpeg","caption":"","description":""},{"type":"image","id":"374976","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_1718EBD4-1422-4C83-BF61-65A0FDF07EB6.jpeg","caption":"","description":""},{"type":"image","id":"374977","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9076.jpg","caption":"","description":""},{"type":"image","id":"374978","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_16_IMG_8961.jpg","caption":"","description":""},{"type":"image","id":"374979","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_75F26644-E23B-47A2-857F-F78EE0DCBCC1.jpeg","caption":"","description":""},{"type":"image","id":"374980","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9056.jpg","caption":"","description":""},{"type":"image","id":"374981","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9060.jpg","caption":"","description":""},{"type":"image","id":"374982","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_16_IMG_8990.jpg","caption":"","description":""},{"type":"image","id":"374983","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_37EB253B-CD39-47A7-944B-9BFA8BD3BE1E.jpeg","caption":"","description":""},{"type":"image","id":"374984","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9057.jpg","caption":"","description":""},{"type":"image","id":"374985","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_16_IMG_8966.jpg","caption":"","description":""},{"type":"image","id":"374986","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9080.jpg","caption":"","description":""},{"type":"image","id":"374987","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_16_IMG_8978.jpg","caption":"","description":""},{"type":"image","id":"374988","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_22_51A2900C-90BE-4D20-8A1F-22EF3196DF4F.jpeg","caption":"","description":""},{"type":"image","id":"374989","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_16_IMG_8993.jpg","caption":"","description":""},{"type":"image","id":"374990","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_k.png","caption":"","description":""},{"type":"image","id":"374991","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_111.png","caption":"","description":""},{"type":"image","id":"374992","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_m.png","caption":"","description":""},{"type":"image","id":"374993","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_222.png","caption":"","description":""},{"type":"image","id":"374994","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_333.png","caption":"","description":""},{"type":"image","id":"374995","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_l.png","caption":"","description":""},{"type":"image","id":"374996","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_n.png","caption":"","description":""},{"type":"image","id":"374997","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_i.png","caption":"","description":""},{"type":"image","id":"374998","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9047.jpg","caption":"","description":""},{"type":"image","id":"374999","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9051.jpg","caption":"","description":""},{"type":"image","id":"375000","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9053.jpg","caption":"","description":""},{"type":"image","id":"375001","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_ui.png","caption":"","description":""},{"type":"image","id":"375002","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_21_1B47016E-34D6-41AC-B5F7-11B680E2D433.jpeg","caption":"","description":""},{"type":"image","id":"375003","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_21_97FBB1FE-9AAD-43BF-8C4A-F6FBE16B3457.jpeg","caption":"","description":""},{"type":"image","id":"375004","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_21_DAA14C8F-0CAB-4052-80E6-226B155EDAF7.jpeg","caption":"","description":""},{"type":"image","id":"375005","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9100.jpg","caption":"","description":""},{"type":"image","id":"375006","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_21_4B0F4EC6-E05D-47FB-987D-83F6EDD535FE.jpeg","caption":"","description":""},{"type":"image","id":"375007","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_21_7F9DB084-8F9C-4970-89E3-31A866044DC4.jpeg","caption":"","description":""},{"type":"image","id":"375008","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9088.jpg","caption":"","description":""},{"type":"image","id":"375009","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_21_57DC623C-A1FB-4383-83E6-5FB7932AECEA.jpeg","caption":"","description":""},{"type":"image","id":"375010","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_33.png","caption":"","description":""},{"type":"image","id":"375011","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9087.jpg","caption":"","description":""},{"type":"image","id":"375012","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-10_15_IMG_9092.jpg","caption":"","description":""},{"type":"image","id":"375013","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_9.png","caption":"","description":""},{"type":"image","id":"375014","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_7.png","caption":"","description":""},{"type":"image","id":"375015","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_22.png","caption":"","description":""},{"type":"image","id":"375016","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_77.png","caption":"","description":""},{"type":"image","id":"375017","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_44.png","caption":"","description":""},{"type":"image","id":"375018","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_11.png","caption":"","description":""},{"type":"image","id":"375019","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_27_55.png","caption":"","description":""},{"type":"image","id":"375020","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/06\/2019-09_16_IMG_8939.jpg","caption":"","description":""}], true,false,false,{"id":"33718","name":"Green &amp; Gold Fan Zone Coverage 2019","num":"70","ago":"1 year ago"});
+		});
+	});
+</script><div class='gallery' onclick="lightbox_32499_1992110853.showLightbox(0);">
+    <div class='galleryImg' style='background-image:url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/03/D3834204-75DA-4598-A3D1-D856EF0C8155-300x213.jpeg)'>
+        <div class='galleryCaption'>
+            <div class='galleryCountOverlay mainLinkColor'></div>
+            <div class='galleryCount'>15<br />Photos</div>
+            <div class='galleryInfo'>
+                <div class='galleryName'>Wausau Events&rsquo; Winterfest 2020!!!</div>
+                <div class='galleryTime'>1 year ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	var lightbox_32499_1992110853 = null;
+	jQuery(function ($) {
+		$(document).on('ready socast:reinit',function() {
+			lightbox_32499_1992110853 = new Lightbox('lightbox_32499_1992110853',[{"type":"image","id":"369114","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/D3834204-75DA-4598-A3D1-D856EF0C8155.jpeg","caption":"","description":""},{"type":"image","id":"369115","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/68286756-69AF-418E-9461-983308AE9888.jpeg","caption":"","description":""},{"type":"image","id":"369116","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/E0E2FD22-8C6C-4023-9EBE-CE75E55BB9FA.jpeg","caption":"","description":""},{"type":"image","id":"369117","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/FED39CE2-C6EB-47E6-8289-717841D5DDC4.jpeg","caption":"","description":""},{"type":"image","id":"369118","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/0DA8C54C-EACD-4815-9EDB-BEF997080F60.jpeg","caption":"","description":""},{"type":"image","id":"369119","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/A75255D1-AFDA-4006-BCFF-6EB25F2EAE91.jpeg","caption":"","description":""},{"type":"image","id":"369120","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/C768A0BF-BF5A-48AF-997D-3FCACB532BDB.jpeg","caption":"","description":""},{"type":"image","id":"369121","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/41E9CE7A-1D50-4793-AC2A-22197AD47D39.jpeg","caption":"","description":""},{"type":"image","id":"369122","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/C9B6A9E9-CC6B-47C2-A43E-578BC7B95C4A.jpeg","caption":"","description":""},{"type":"image","id":"369123","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/9D4D8D8A-084B-45BF-92C0-78E8EE2BD171.jpeg","caption":"","description":""},{"type":"image","id":"369124","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/74F63B6B-C438-4FBF-9CCD-5B3873E7794F.jpeg","caption":"","description":""},{"type":"image","id":"369125","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/A76A0BB7-6BA4-4A0B-86E7-61515ED2E78C.jpeg","caption":"","description":""},{"type":"image","id":"369126","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/B702CE81-25C7-42E7-AA1A-91AEDD77A879.jpeg","caption":"","description":""},{"type":"image","id":"369127","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/8EC034BC-C14C-40AE-A2B8-3E7FB940CFBA.jpeg","caption":"","description":""},{"type":"image","id":"369128","src":"https:\/\/media.socastsrm.com\/wordpress\/wp-content\/blogs.dir\/2270\/files\/2020\/03\/03816560-FC67-4CC1-8240-21EE19295657.jpeg","caption":"","description":""}], true,false,false,{"id":"32499","name":"Wausau Events&rsquo; Winterfest 2020!!!","num":"15","ago":"1 year ago"});
+		});
+	});
+</script>
+	<!--
+	<a href='javascript:gallery_1992110853.showMore();' class='btn btn-silver moreBtn pagination'>More</a>
+	-->
+
+	<script>
+		var gallery_1992110853 = null;
+		jQuery(function ($) {
+			$(document).on('ready socast:reinit',function() {
+				gallery_1992110853 = new AlbumGallery(1992110853,2);
+				gallery_1992110853.showMore();
+			});
+		});
+	</script>
+
+	<style>
+	.mainLinkColor {
+		background-color:#006DAE;
+	}
+	</style>
+</div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-block vc_btn3-color-primary" href="https://rock947.com/pictures/" title="">View More Galleries Â»</a></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_column-gap-10"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='https://rock947.com/more-blog/?sort=publish_date&amp;categories=2270-56'>Local News Stories</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-20"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="blogNewsWidget scWidgetContainer sc-list sc-list-sm" data-uid="scbnl-6124b1e008b55"  data-layout="0" data-stripped="yes" data-summary="125" data-imgsize="medium" data-author="no" data-view="no" data-date="yes" data-adpos="none" data-colwidth="0" data-excluded="" data-cache-namespace="37526">
+	<div class='loader sc-center-box hidden'><img src='https://media.socastsrm.com/application/theme/images/loaders/indicator-big.gif' alt='' /></div>
+	
+	
+	<div class="posts items-wrapper"><a href="https://rock947.com/2021/08/23/wausau-school-district-taxes-should-remain-stable-for-2022/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2272/files//2020/07/wausauSchool_1.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Wausau School District Taxes Should Remain Stable for 2022</div>
+		<div class='sc-list-content'>
+			<div class="text">WAUSAU, WI (WSAU) -- The Wausau School Board Education and Operations Committee has given initial approval to the 2021-'22 bu...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>6h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/wausau-woman-cited-for-owi-after-crashing-into-lincoln-county-patrol-unit/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2272/files//2020/07/14605491185_7d658aa13a_z.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Wausau Woman Cited for OWI After Crashing Into Lincoln County Patrol Unit</div>
+		<div class='sc-list-content'>
+			<div class="text">MERRILL, WI (WSAU) -- A 63-year-old Wausau woman received a citation for driving while intoxicated after she crashed into a L...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>17h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/former-wisconsin-bishop-out-of-icu/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2272/files//2021/08/5653693188_31c31c1ce7_b.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Former Wisconsin Bishop Out Of ICU</div>
+		<div class='sc-list-content'>
+			<div class="text">LA CROSSE, WI (WSAU) -- The former bishop in La Crosse is out of the ICU as he continues to be treated for the coronavirus. C...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>19h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/mayors-monday-rothschild-administrator-gary-olsen-3/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://img.youtube.com/vi/wqCp1JWhSKw/0.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Mayors Monday: Rothschild Administrator Gary Olsen</div>
+		<div class='sc-list-content'>
+			<div class="text">ROTHSCHILD, WI (WSAU) -- Volunteers with the Riverside Fire Department in Rothschild and Schofield will soon make runs out of...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>22h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/man-killed-in-lincoln-county-atv-crash/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2272/files//2021/03/fatalcrashglass-pavement.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Man Killed In Lincoln County ATV Crash</div>
+		<div class='sc-list-content'>
+			<div class="text">HARRISON, WI (WSAU) -- A man was killed in an ATV accident on Saturday night in the Lincoln County Town of Harrison. It happe...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>Aug 23, 2021</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a></div>
+	<div style='clear:both;'></div>
+	
+	
+	<div style='clear:both;'></div>
+</div><!-- Generated by: SoCast Blog List ({"last_updated":1629794784,"cache_namespace":37526,"source":"elasticsearch","count":1787,"query_time":5,"query_time_es":1,"age":0}) --></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget '><a href='https://rock947.com/more-blog/?sort=publish_date&amp;categories=2270-147%2C2270-148%2C2270-146'>Music News</a></h3><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-20"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="blogNewsWidget scWidgetContainer sc-list sc-list-sm" data-uid="scbnl-6124b1e00a7fb"  data-layout="0" data-stripped="yes" data-summary="125" data-imgsize="medium" data-author="no" data-view="no" data-date="yes" data-adpos="none" data-colwidth="0" data-excluded="" data-cache-namespace="37526">
+	<div class='loader sc-center-box hidden'><img src='https://media.socastsrm.com/application/theme/images/loaders/indicator-big.gif' alt='' /></div>
+	
+	
+	<div class="posts items-wrapper"><a href="https://rock947.com/2021/08/23/paul-mccartney-unveils-full-list-of-songs-profiled-in-upcoming-the-lyrics-book/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://s3.amazonaws.com/syndication.abcaudio.com/files/2021-08-23/M_PaulMcCartneyTheLyricsBook630_022421.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Paul McCartney unveils full list of songs profiled in upcoming The Lyrics book</div>
+		<div class='sc-list-content'>
+			<div class="text">Liveright/W.W. NortonIn February, Paul McCartney announced plans to release a book this fall called The Lyrics: 1956 to the P...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>9h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/eddie-vedder-alice-cooper-dave-matthews-s-words-music-series/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://s3.amazonaws.com/syndication.abcaudio.com/files/2021-08-23/G_vedder_82321.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Eddie Vedder, Alice Cooper, Dave Matthews &amp; more taking part in Audible&rsquo;s &lsquo;Words + Music&rsquo; series</div>
+		<div class='sc-list-content'>
+			<div class="text">Kevin Mazur/Getty Images for Global Citizen VAX LIVE Pearl Jam's Eddie Vedder, Alice Cooper and Dave Matthews are among artis...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>9h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/elton-john-charts-on-the-billboard-hot-100-for-first-time-in-21-years/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://s3.amazonaws.com/syndication.abcaudio.com/files/2021-08-23/M_EltonJohnDuaLipaColdHeart630_081121.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Elton John charts on the 'Billboard' Hot 100 for first time in 21 years</div>
+		<div class='sc-list-content'>
+			<div class="text">EMI/InterscopeElton John is back on the Billboard Hot 100 for the first time in 21 years -- and he has Dua Lipa to thank. Bil...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>11h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/corey-taylor-urges-vaccination-after-feeling-the-worst-ive-ever-been-sick-in-my-life-with-covid-19/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://s3.amazonaws.com/syndication.abcaudio.com/files/2021-08-23/G_coreyagain_82321.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Corey Taylor urges vaccination after feeling &quot;the worst I've ever been sick in my life&quot; with COVID-19</div>
+		<div class='sc-list-content'>
+			<div class="text">Scott Dudelson/Getty ImagesCorey Taylor is encouraging all his fans to get vaccinated as he recovers from a battle with COVID...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>11h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a><a href="https://rock947.com/2021/08/23/ringo-starr-brian-wilson-and-more-stars-pay-tribute-to-late-everly-brothers-singer-don-everly/"  class="sc-list-item sc-divider item">
+	<div class="sc-list-img"><img class="sc-image" src="https://s3.amazonaws.com/syndication.abcaudio.com/files/2021-08-23/Getty_DonEverly630_cropped_082321.jpg" alt="" /></div>
+	<div class="sc-list-info">
+		<div class="sc-list-title primary_color sc-list-display-link">Ringo Starr, Brian Wilson and more stars pay tribute to late Everly Brothers singer Don Everly</div>
+		<div class='sc-list-content'>
+			<div class="text">Jo Hale/Getty ImagesDon Everly of the influential early rock 'n' roll duo The Everly Brothers died Saturday at his home in Na...</div>
+			<div class="text-sm sc-item-detail">
+				<span class='sc-author'></span>
+				<span class='sc-time'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>12h ago</span>
+				<span class='sc-view'></span>
+				<span class="sc-image-attribution"></span>
+			</div>
+		</div>
+	</div>
+</a></div>
+	<div style='clear:both;'></div>
+	
+	
+	<div style='clear:both;'></div>
+</div><!-- Generated by: SoCast Blog List ({"last_updated":1629794784,"cache_namespace":37526,"source":"elasticsearch","count":4518,"query_time":5,"query_time_es":2,"age":0}) --></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- 728x90 Slot 3 -->
+<div id='div-gpt-ad-1590157463478-0' class='ad-header-leaderboard-728x90'>
+    <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1590157463478-0'); });
+    </script>
+</div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 22px"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<style>
+
+.eventWidget { padding: 0  0.65em !important; }
+
+.entry-content h3{
+margin:1em 0 !important; 
+}
+
+.filter{display:none;}
+.center{text-align:center;}
+
+.wpb_button, .wpb_content_element, ul.wpb_thumbnails-fluid>li {
+    margin-bottom: 0 !important;
+}
+
+
+.fg-wrapper{
+display:inline-block;
+}
+
+.fg-img{
+margin: 0;
+}
+
+.fg-label{
+text-align:center;
+font-weight:500;
+font-style:italic;
+color:#bbb;
+padding-top:1em;
+margin-top:1em;
+margin-bottom:0.35em;
+}
+
+
+.secondary-feature-title {
+    display:inline-block;
+    background: rgba(0,0,0,0.7); 
+    font-size: 1rem;
+    line-height: 1.42857142857;
+    font-weight: 600;
+    padding: 0.85714285714em;
+    text-align: center;
+    color: #fff;
+    width: 99.9%;
+position:absolute;
+bottom: 0;
+}
+
+
+.ql-list .wpb_wrapper{
+padding-left:.4em;
+margin:0.25em 0em  0em;
+font-size:1.025rem;
+line-height:1.35;
+font-weight:600;
+}
+
+.ql-list  p{
+margin:0.5em 0;
+padding-top:0.6em;
+padding-bottom: 0.7em;
+border-bottom:2px dotted #ccc;
+}
+
+
+/* Blog Styling
+**************************************/
+.entry-content .sc-divider{
+    border:none;
+}
+
+.entry-content .sc-list-content {
+    font-size: small;
+}
+
+.entry-content .sc-list-item {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 1em;
+    background:none;
+}
+
+.entry-content .sc-divider{
+    border:none;
+}
+
+.entry-content .sc-list-content {
+    font-size: small;
+}
+
+.entry-content .sc-list-item {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 1em;
+    background:none;
+}
+
+.entry-content .blog-news-halved .sc-list-title{
+    font-size:0.9em;
+}
+
+
+.entry-content a.btn:link, 
+.entry-content a.btn:visited,
+.entry-content .btn-primary,
+.entry-content .btn-default,
+.btn .btn-secondary .moreBtn{
+    background: #00529F;
+    color:#fff !important;
+    transition: .25s ease-in-out;
+    padding: 0.6666em 1.33333em;
+}
+
+.entry-content a.btn:hover, 
+.entry-content a.btn:focus,
+.entry-content a.btn:active,
+.entry-content .btn-primary:hover,
+.entry-content .btn-primary:focus,
+.entry-content .btn-primary:active,
+.entry-content .btn-default:hover,
+.entry-content .btn-default:focus,
+.entry-content .btn-default:active,
+.btn .btn-secondary .moreBtn:hover,
+.btn .btn-secondary .moreBtn:focus,
+.btn .btn-secondary .moreBtn:active{
+    background: #3375b2;
+}
+
+
+</style>
+		</div>
+	</div>
+</div></div></div></div>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+			</footer><!-- #entry-meta -->
+</article><!-- #post-30 -->
+	<div style="clear:both;"></div>
+			</div>
+		<div class='sc-sidebar'>
+<div class="sidebar-content"><div id="severe-weather-alerts" class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<div class="ibm-severe-weather-widget">
+    <wx-widget type="alerts" group="true"></wx-widget>
+</div>
+
+
+
+<style>
+
+/*Severe Weather Alert Styling
+----------------------------------------------*/
+
+.ibm-severe-weather-widget{margin-bottom:2em; }
+
+.wxmap--src-widgets-alerts-components-ui-default-headline-headline__root {
+   border: #fff;
+   margin-bottom:0.5em;
+   font-size: 1rem !important;
+}
+
+ .wxmap--src-widgets-alerts-components-ui-default-headline-headline__headline{
+    background: #A30505 !important;
+    color: #fff !important;
+    padding: 0.55em 0;
+    border-radius: 4px;
+    margin-right: 0.2em;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-headline-headline__text{
+   color:#fff;
+   padding: 0 2em;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-headline-headline__expand-icon {
+    fill: #fff;
+    width: 2em;
+}
+
+
+/* For Multiple Alerts ------------------------------------------------------- */
+
+.wxmap--src-widgets-alerts-components-ui-default-expand-button-expand-button__root  {
+   background: #FDF1F1 !important;
+   color:#A30505;
+   padding: 0.45em 0 0.5em;
+   border-radius: 4px;
+   margin-right: 0.2em;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-expand-button-expand-button__icon {
+   fill:#A30505 !important;
+   margin: 1em;
+   width: 2em;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-expand-button-expand-button__count{
+    font-weight: 700;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-expand-button-expand-button__severity-icon {
+    display:none;
+}
+
+/* For expanded details window --------------------------------------- */
+
+
+.wxmap--src-widgets-alerts-components-ui-default-details-details__root  {
+  font-size: 1rem !important;
+  background: #FDF1F1 !important;
+  color:#000;
+  border-radius: 4px;
+  margin-right: 0.2em;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-details-details__section_sm {
+    font-size: 1rem !important;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-details-details__section {
+    border-top: 1px solid #A30505;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-details-details__section:nth-of-type(1) {
+   border:none;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-details-details__attribution {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.wxmap--src-widgets-alerts-components-ui-default-headline-headline__close-icon {
+width: 2em;
+}
+
+</style>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- Ad Slot 1 -->
+<div class="ad-300x250" id='div-gpt-ad-1576183866479-0' style='width: 300px; overflow: auto; margin: 0 auto 15px; border: 1px solid #e8e8e8;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1576183866479-0'); });
+  </script>
+</div>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			
+<a class="sidebar-weather-widget" href="/weather/" title="See the full weather forecast for Wausau, WI">
+<h2>Current Weather <span class="arrow">&raquo;</span></h2>
+<h3>Wausau, WI</h3>
+<div class="ibm-widget ibm-current-conditions-widget">
+    <wx-widget type="current-conditions" ondemand="true" group="true" header="false"></wx-widget>
+</div>
+</a>
+<style>
+.ibm-widget * {
+    border-color: hsl(0, 0%, 86%);
+}
+
+a.sidebar-weather-widget:link,
+a.sidebar-weather-widget:hover,
+a.sidebar-weather-widget:focus,
+a.sidebar-weather-widget:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-weather-widget {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.sidebar-weather-widget h2 {
+    background: #222;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    margin: 0;
+    padding: .5em;
+    font-size: .85em;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color 125ms ease-out;
+    letter-spacing: .25px;
+}
+.sidebar-weather-widget h3 {
+    background: #353535;
+    font-size: .75em;
+    color: #bfbfbf;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+.sidebar-weather-widget .arrow {
+    color: #35a0ff;
+}
+.sidebar-weather-widget .wxmap--src-widgets-current-conditions-components-currents-body-currents-body__temp {
+    font-size: 2.4em;
+}
+</style>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 class='sc-heading-widget  sidebar-heading'>On Air Now</h3>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<style>
+
+.sidebar-heading{
+margin-bottom: 0 !important;
+}
+
+.currentProgramWidget a.socastPlayerBtn.sc-list-img { order: 2; }
+.currentProgramWidget .sc-list-content.sc-list-info.program-info { order: 1; margin-bottom:0.5em;}
+.sc-image-border,
+.currentProgramWidget .sc-image {
+    border: none !important;
+    width:100%;
+}
+.currentProgramWidget{
+    background: #1a1a1a !important;
+}
+.currentProgramWidget,
+.currentProgramWidget a:link,
+.currentProgramWidget a:hover,
+.currentProgramWidget a:visited{
+    color:#fff !important;
+}
+
+.program-info{
+margin-left:1em;
+padding-bottom:2em;
+}
+
+</style>
+		</div>
+	</div>
+<div class='scWidgetContainer currentProgramWidget scGenericList sc-list sc-list-lg hide-desc hide-btn' >
+	
+	<div class='items-wrapper'><div class="sc-list-item item">
+	<a href='#' class='socastPlayerBtn sc-list-img'>
+		<div class='img-container'>
+			<img class='program-img sc-image ' src='https://media.socastsrm.com/wordpress/wp-content/blogs.dir/2270/files/2020/03/wozz-profile_e1DcJuj.jpg' alt='' />
+			<div class='sc-overlay-play-btn btn btn-primary'><svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"></path></svg></div>
+		</div>
+	</a>
+	<div class="sc-list-content sc-list-info program-info">
+		<div class='text-help np-text'></div>
+		<div class="sc-list-title program-title"><a href='/shows-the-wozz'>The WOZZ</a></div>
+		<div class='current-timeslot sc-item-detail'><svg class="icon" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg><span class='timetext'>12:00 AM - 6:00 AM</span></div>
+		<div class='program-description text'></div>
+	</div>
+</div></div>
+</div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class='scWidgetContainer scSocialIconsWidget align-center icons-medium'><div class='social-links'><a href='https://www.facebook.com/rock947' target='_blank' class='socialIconLink facebook'><img src='https://media.socastsrm.com/wordpress/wp-content/themes/common_images/social/facebook.png' alt='facebook' /></a><a href='https://twitter.com/Rock947' target='_blank' class='socialIconLink twitter'><img src='https://media.socastsrm.com/wordpress/wp-content/themes/common_images/social/twitter.png' alt='twitter' /></a><a href='https://www.youtube.com/channel/UCecsE18EwsmwMzQH3ymnVGw' target='_blank' class='socialIconLink youtube'><img src='https://media.socastsrm.com/wordpress/wp-content/themes/common_images/social/youtube.png' alt='youtube' /></a><a href='https://www.instagram.com/rock947/' target='_blank' class='socialIconLink instagram'><img src='https://media.socastsrm.com/wordpress/wp-content/themes/common_images/social/instagram.png' alt='instagram' /></a><a href='https://www.snapchat.com/add/rock947' target='_blank' class='socialIconLink snapchat'><img src='https://media.socastsrm.com/wordpress/wp-content/themes/common_images/social/snapchat.png' alt='snapchat' /></a></div><script>
+		$(document).ready(function() {
+			var base_url = '/wordpress/wp-content/themes/';
+			var theme_images_dir = 'common_images/';
+		loadSvg('.scSocialIconsWidget .socialIconLink.facebook', base_url+theme_images_dir+'social/facebook', '', 'facebook');
+loadSvg('.scSocialIconsWidget .socialIconLink.twitter', base_url+theme_images_dir+'social/twitter', '', 'twitter');
+loadSvg('.scSocialIconsWidget .socialIconLink.youtube', base_url+theme_images_dir+'social/youtube', '', 'youtube');
+loadSvg('.scSocialIconsWidget .socialIconLink.instagram', base_url+theme_images_dir+'social/instagram', '', 'instagram');
+loadSvg('.scSocialIconsWidget .socialIconLink.snapchat', base_url+theme_images_dir+'social/snapchat', '', 'snapchat');
+});
+		</script></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<a class="global-mr-module" href="https://research.rock947.com/wozz-music-research-survey/" title="">
+        <span class="global-link-arrow fui-arrow-right"></span>
+        <h2 class="global-mr-module-title">Rock Illuminati</h2>
+        <p class="global-mr-module-description">Take the latest music survey!</p>
+    </a>
+
+<style>
+.sidebar-content .global-mr-module {
+    display: block;
+    border-top: 6px solid #0b66b9;;
+    padding: 18px 0.85714285714em 0.85714285714em;
+    margin-bottom: 1.71428571429em;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 2px;
+    text-decoration:none;
+}
+
+.sidebar-content .global-mr-module h2{
+    color:#fff;
+margin-bottom:0;
+    font-size:0.9999rem;
+}
+
+.sidebar-content .global-mr-module p{
+    margin-bottom:0;
+    font-size:0.75rem;
+}
+
+.sidebar-content .global-mr-module:hover{
+    text-decoration:none;
+    background:#2e2e2e;
+    color:#fff;
+}
+
+.sidebar-content .global-mr-module-title {
+    text-transform: uppercase;
+}
+
+.sidebar-content .global-mr-module .fui-arrow-right:before {
+    content: "\203a";
+}
+
+.sidebar-content .global-mr-module .global-link-arrow {
+    line-height: 0.45;
+    font-size:2.4rem;
+    float:right;
+}
+
+.sidebar-content .global-mr-module .fui-arrow-right{
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}</style>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- Ad Slot 2 -->
+<div class="ad-300x250" id='div-gpt-ad-1576183729012-0' style='width: 300px; overflow: auto; margin: 0 auto 15px; border: 1px solid #e8e8e8;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1576183729012-0'); });
+  </script>
+</div>
+<div class="ad-300x600" id='div-gpt-ad-1581612722192-0' style='width: 300px; overflow: auto; margin: 0 auto 15px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1589219277770-0'); });
+  </script>
+</div>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<div id="tgnowplaying" class="global-playlist-module" style="width:100%;height:480px"></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 42px"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid sc-gridless"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- Ad Slot 3 -->
+<div class="ad-300x250" id='div-gpt-ad-1576183915378-0' style='width: 300px; overflow: auto; margin: 0 auto 15px; border: 1px solid #e8e8e8;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1581612722192-0'); });
+  </script>
+</div>
+		</div>
+	</div>
+</div></div></div></div>
+</div></div>
+	</div>
+</div>
+</main>
+<footer id='theFooter' class='footerAlign-left footerWidth-full_content'><div class='site_width'><div class='footer-section footer-social'><ul class='nav social social-badge'>
+		<li><a href='https://www.facebook.com/rock947' target='_blank' class='sc-center-box'><img alt='facebook' class='icon svg-loader' data-icon="facebook"  /></a></li>
+			<li><a href='https://twitter.com/Rock947' target='_blank' class='sc-center-box'><img alt='twitter' class='icon svg-loader' data-icon="twitter" /></a></li>
+					<li><a href='https://www.youtube.com/channel/UCecsE18EwsmwMzQH3ymnVGw' target='_blank' class='sc-center-box'><img alt='youtube' class='icon svg-loader' data-icon="youtube" /></a></li>
+							</ul>
+</div>
+<div class='footer-section footer-nav'>
+	<ul class="nav nav-expanded ">
+	<li>
+		<a href='/privacy' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">Privacy Policy</span></a></li>
+	<li>
+		<a href='/terms' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">Terms Of Service</span></a></li>
+	<li>
+		<a href='/contestrules' target="_self" class="nav-item-parent hover-effect"><span class="hover-effect">Contest Rules</span></a></li>
+</ul>
+</div>
+<div class='footer-section company '><a href='https://mwcradio.com/' target='_blank' class=''>Midwest Communications, Inc.</a></div>
+<div class="footer-section copyright">Copyright &copy; 2021. All Rights Reserved.</div>
+<div class='footer-section'>
+	<div id='socastTagline'>
+		<a id='poweredBySocastLink' href='https://www.socastdigital.com' target='_blank'>
+			<img src='https://media.socastsrm.com/wordpress/wp-content/themes/common_images/PoweredBySoCastTagline-White.png' alt='Powered by SoCast' />
+		</a>
+		<script>
+		$(document).ready(function() {
+			var image_type = '-White';
+			if (typeof footer_luminance != 'undefined' && footer_luminance < 127.5) image_type = '-Black';
+			loadSvg('#poweredBySocastLink', '/wordpress/wp-content/themes/common_images/PoweredBySoCastTagline', image_type, 'Powered by SoCast');
+		});
+		</script>
+	</div></div></div></footer><script type="text/javascript">
+function openLogin() {
+	window.location = "/login";
+}
+</script><script data-cfasync="false" type="text/javascript">
+var addthis_config = {"ui_atversion":300,"data_track_clickback":true,"services_exclude":"favorites,mailto","services_expanded":"facebook,flipboard,google_plusone_share,linkedin,reddit,pinterest_share,tumblr,twitter,email,print","ignore_server_config":true};
+
+</script>
+                <!-- AddThis Settings Begin -->
+                <script data-cfasync="false" type="text/javascript">
+                    var addthis_product = "wpp-5.0.6";
+                    var wp_product_version = "wpp-5.0.6";
+                    var wp_blog_version = "5.4.2";
+                    var addthis_plugin_info = {"cms_name":"WordPress","cms_version":"5.4.2","plugin_name":"AddThis Sharing Buttons","plugin_version":"5.0.6","plugin_mode":"WordPress"};
+                    if (typeof(addthis_config) == "undefined") {
+                        var addthis_config = {"ui_atversion":300,"data_track_clickback":true,"services_exclude":"favorites,mailto","services_expanded":"facebook,flipboard,google_plusone_share,linkedin,reddit,pinterest_share,tumblr,twitter,email,print","ignore_server_config":true};
+                    }
+                    if (typeof(addthis_share) == "undefined") {
+                        
+                    }
+                </script>
+                <script
+                    data-cfasync="false"
+                    type="text/javascript"
+                    src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558c652a79e703e9 "
+                    async="async"
+                >
+                </script><script type="text/html" id="wpb-modifications"></script><link rel='stylesheet' id='addthis_output-css'  href='https://rock947.com/wp-content/plugins/addthis/css/output.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='socastcms_eventDisplay_style-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/css/widgets/eventDisplay.css?v=2016-02-24&#038;ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='socastcms_twoColumnLayout_style-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/css/twoColumnLayout.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_tta_style-css'  href='https://rock947.com/wp-content/plugins/js_composer/assets/css/js_composer_tta.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_font_awesome_5_shims-css'  href='https://rock947.com/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/v4-shims.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_font_awesome_5-css'  href='https://rock947.com/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/all.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='socastcms_albumGallery_style-css'  href='https://cdn-css.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/css/widgets/albumGallery.css?ver=5.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/js/css-var-polyfill.js'></script>
+<script type='text/javascript' src='https://rock947.com/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://rock947.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.1'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/widgets/eventDisplay.js?v=2013-06-25&#038;ver=5.4.2'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/widgets/eventCalendar.js?v=2014-06-18&#038;ver=5.4.2'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/twoColumnLayout.js?v=2013-09-02&#038;ver=5.4.2'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/widgets/blogNews.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/widgets/featureRotator.js?v=2014-07-29&#038;ver=5.4.2'></script>
+<script type='text/javascript' src='https://rock947.com/wp-content/plugins/js_composer/assets/lib/vc_accordion/vc-accordion.min.js?ver=6.1'></script>
+<script type='text/javascript' src='https://rock947.com/wp-content/plugins/js_composer/assets/lib/vc-tta-autoplay/vc-tta-autoplay.min.js?ver=6.1'></script>
+<script type='text/javascript' src='https://rock947.com/wp-content/plugins/js_composer/assets/lib/vc_tabs/vc-tabs.min.js?ver=6.1'></script>
+<script type='text/javascript' src='https://cdn-js.socastsrm.com/cdn_v16.8.0/wordpress/wp-content/plugins/socast-widgets/js/widgets/albumGallery.js?ver=5.4.2'></script>
+<!--wp_footer--><script src="https://widgets.media.weather.com/wxwidget.loader.js?cid=158765827"></script>
+
+<!-- TuneGenie Media Player Bar 2.0.2 -->
+<script type="text/javascript" class="_tgmp_p">
+function onTuneGenieMediaPlayerLoaded() {
+window.tgmp=new TuneGenieMediaPlayer('playerbar', {
+brand: 'wozz',
+});
+tgmp.go();
+window.tgmp_rc = new TuneGenieRC(tgmp);
+tgmp_rc.recentSongWidget(document.getElementById('tgrecent'),{});
+tgmp_rc.nowPlayingWidget(document.getElementById('tgnowplaying'),{});
+tgmp_rc.podcasts(document.getElementById('tgpodcasts'));
+tgmp_rc.podcast(document.getElementsByClassName('tgpodcast'));
+tgmp_rc.createWidget(document.getElementById('tgconcert'), '/concerts');
+tgmp_rc.createWidget(document.getElementById('tgconcert'), '/concertsbyartist');
+}
+</script>
+<script> 
+if (navigator.userAgent.indexOf('SoCastIAB') === -1) { 
+   var script = document.createElement('script'); script.className = "_tgmp_p"; 
+   script.src = '//b3.tunegenie.com/js/loader2.min.js'; 
+   document.head.appendChild(script); 
+}
+</script>
+
+
+
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+
+<!-- RadioCMS cancellations menu item -->
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(document).on('ready socast:reinit',function(e) {
+            var site = 'https://radiocms-api.mwcradio.com';
+            $.ajax({
+                type: "GET",
+                url: site + '/api/v1/cancellations/cancellation-list/count/?siteid=54',
+                dataType: "json",
+                success: function (response) {
+                    if (response.count > 0) {
+                        var ele = $("#stickyHeader");
+                        if (ele.length > 0) {
+                            ele.append("<a class='cancellations-alert' href='/cancellations'>Cancellations (" + response.count + ")</a>");
+                        }
+                    }
+                },
+            });
+        });
+    });
+</script>
+
+
+<script>
+	$(function () {
+	  $('[data-toggle="popover"]').popover({html:true})
+	})
+</script>
+
+
+<footer class="l-site-footer">
+<div class="footer-cols-wrapper clearfix site_width">
+	<div class="footer-col">
+	    <h2 class="footer-heading">Listen</h2>
+	    <ul class="footer-list">
+	        
+	        <li>Rock 94.7 WOZZ in WAUSAU, WI</li>
+	      
+	        <li><a href="https://play.google.com/store/apps/details?id=com.midwestcommunications.wozz" title="Google Play Store" onclick="ga('send', 'event', 'home footer-list', 'Loc1', 'https://play.google.com/store/apps/details?id=com.midwestcommunications.kvoxfm');">Listen on Android Devices</a></li>
+	        
+	        <li><a href="https://apps.apple.com/us/app/rock-94-7/id606959177" title="iTunes App Store" onclick="ga('send', 'event', 'home footer-list', 'Loc2', 'https://itunes.apple.com/us/app/kvox-fm-todays-froggy-99.9/id736701190?mt=8');">Listen on Apple Devices</a></li>
+	        
+	        <li><a href="/alexa/" title="Listen on Alexa-enabled Devices" onclick="ga('send', 'event', 'home footer-list', 'Loc3', '/alexa/');">Listen on Alexa-enabled Devices</a></li>
+	    </ul>
+	</div>
+
+	<div class="footer-col">
+	    <h2 class="footer-heading">Contact</h2>
+	    <ul class="footer-list">
+	    	<li>Studio Line 1: <a href="tel:715-845-9470">(715) 845-9470</a></li>
+			<li>Studio Line 2: <a href="tel:800-236-9470">(800) 236-9470</a></li>
+			<li>Business Line: <a href="tel:715-842-1672">(715) 842-1672</a></li>
+
+	        <li>
+	            <a href="/texting/" title="" onclick="ga('send', 'event', 'home footer-list', 'Loc4', '/texting/');">Text Us at 39327</a>
+	            <span class="footer-texting-disclaimer">Message &amp; data rates may apply</span>
+	        </li>
+	        
+	        <li><a href="/advertise/" title="Advertise With Us" onclick="ga('send', 'event', 'home footer-list', 'Loc5', '/advertise/');">Advertise With Us</a></li>
+
+	        <li><a href="http://www.midwestcareers.com/" title="Midwest Careers" onclick="ga('send', 'event', 'home footer-list', 'Loc6', 'http://www.midwestcareers.com/');">Job Opportunities</a></li>
+
+	        <li><a href="/contact-us/" title="Contact Us" onclick="ga('send', 'event', 'home footer-list', 'Loc7', '/contact-us/');">Contact Us</a></li>
+	    </ul>
+	</div>
+
+	<div class="footer-col">
+	    <h2 class="footer-heading">More</h2>
+	    <ul class="footer-list">
+	        <li><a href="/privacy/" title="Privacy Policy" onclick="ga('send', 'event', 'home footer-list', 'Loc8', '/privacy/');">Privacy Policy</a></li>
+
+	        <li><a href="/terms/" title="Terms of Use" onclick="ga('send', 'event', 'home footer-list', 'Loc9', '/terms/');">Terms of Use</a></li>
+
+	        <li><a href="/contestrules/" title="Contest Rules" onclick="ga('send', 'event', 'home footer-list', 'Loc10', '/contestrules/');">Contest Rules</a></li>
+	        
+            <li>
+            	<a href="https://publicfiles.fcc.gov/fm-profile/wozz" title="FCC Public Inspection File" onclick="ga('send', 'event', 'home footer-list', 'Loc11', 'https://publicfiles.fcc.gov/fm-profile/kvox-fm');">Public Inspection File</a>
+                
+<button type="button" class="popbutton" data-toggle="popover" title="" data-content="Persons with disabilities needing assistance with public inspection file content should <a href='https://form.jotform.com/202024731451038' target='_blank'>contact our Support Desk here.</a>" aria-describedby="popover75305"><i class="fa fas fa-info-circle" aria-hidden="true"></i></button>
+
+</li>
+	        
+
+	        <li><a href="/eeo/" title="EEO" onclick="ga('send', 'event', 'home footer-list', 'Loc12', '/eeo/');">EEO</a></li>
+
+	        <li>
+	            <a href="https://PayTrace.com/cart/donate.pay?id=15390&mid=555634829900" title="Make A Payment">Make A Payment</a>
+	        </li>
+	    </ul>
+	</div>
+</div>
+</footer><script>
+$('.socastPlayerBtn').click(function() {
+    tgmp.playStream();
+});
+</script>
+
+<script src="https://kit.fontawesome.com/9bf183c165.js" crossorigin=âanonymousâ></script>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/midwestcommunications-network/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"7c7b538f90","applicationID":"137944415,137944001","transactionName":"Y1FWYEBZXBZYAkxdXVobdVdGUV0LFjZId11aQEZbXlRXFxYIVlBXTA==","queueTime":0,"applicationTime":258,"atts":"TxZVFghDTxg=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
