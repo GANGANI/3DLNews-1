@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+      <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+			<meta name="robots" content="noindex" />
+      <!-- Page Generated at: 2024-05-31 03:33:56 -0500 -->
+      
+        <title>SPNN </title>
+      
+			<link rel="stylesheet" href="/stylesheets/print.min.css" type="text/css" media="print" />
+			<link rel="stylesheet" href="/stylesheets/main.min.css?ver=2.0.0" type="text/css" media="screen" charset="utf-8" />
+      <!-- jQuery Library + UI Tools -->
+      <script>
+        var OVERLAY_VISIBLE = false;
+        var webkit = false;
+    		window.ondevicemotion = function(event) {
+  		    if (navigator.platform.indexOf("iPad") != -1) {
+  		      webkit = true;
+  		    }
+  		    window.ondevicemotion = null;
+  		  }
+      </script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+      <!--
+      <script src="/javascripts/overlay.js" type="text/javascript" charset="utf-8"></script>
+      -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+      <script type="text/javascript" src="/javascripts/popup.js?rwdv2" ></script>
+      <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+      <script src="/javascripts/jquery.xdomainajax.js?rwdv2" type="text/javascript"></script>
+      <script src="/javascripts/rfc3339date.js?rwdv2" type="text/javascript"></script>
+      <script src="/javascripts/jquery.addtocal.js?rwdv2" type="text/javascript"></script>
+      <script src="/javascripts/proweb.js?rwdv2" type="text/javascript"></script>
+      <script src="/javascripts/selectivizr.js?rwdv2" type="text/javascript"></script>
+
+
+      <script type="text/javascript" src="/javascripts/TabManager.js?rwdv2"></script>
+
+  	  <script type="text/javascript" src="/javascripts/jquery-cookie.js?rwdv2"></script>
+  	  <script type="text/javascript" src="/javascripts/jquery-extensions.js?rwdv2"></script>
+
+
+      <script type="text/javascript">
+        window.onbeforeunload = function(){
+          document.body.style.cursor = 'wait'
+        }
+      </script>
+
+      <script type="text/javascript" src="/javascripts/jquery.scrollTo.min.js"></script>
+      <script type="text/javascript" src="/javascripts/jquery.touchSlider.js?rwdv2"></script>
+      <script type="text/javascript" src="/javascripts/matchMedia.js?rwdv2"></script>
+      <script type="text/javascript" src="/javascripts/grid.js?rwdv2"></script>
+      <script type="text/javascript" src="/javascripts/clamp.js?rwdv2"></script>
+
+      <!--[if IE]><link rel="stylesheet" href="/stylesheets/ie_main.css?rwdv2" type="text/css" media="screen" charset="utf-8" /><![endif]-->
+      <!--[if IE 7]><link rel="stylesheet" type="text/css" href="/stylesheets/ie7.css?rwdv2" media="screen" charset="utf-8" /><![endif]-->
+      <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/stylesheets/ie8.css?rwdv2" media="screen" charset="utf-8" /><![endif]-->
+      <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/stylesheets/print-ie8.css?rwdv2" media="print" charset="utf-8" /><![endif]-->
+
+     <script src="/javascripts/respond.min.js?rwdv2" type="text/javascript"></script>
+		<script type="text/javascript" src="/javascripts/jquery.ui.datepicker-es.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery.ui.datepicker-de.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery.ui.datepicker-fr.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery.ui.datepicker-ja.js"></script>
+		<style type="text/css" media="screen">
+
+  /* --------------------------------- */
+  /* THEMES */
+  /* --------------------------------- */
+  
+  
+  
+
+  /* --------------------------------- */
+  /* Global Styles */
+  /* --------------------------------- */
+
+  body, html, * {
+    font-family: Arial, Helvetica, sans-serif, 'Open Sans', sans-serif;
+  }
+
+  .is-favorite {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(598 -351)"><g id="Vector"><use xlink:href="%23path0_fill" transform="translate(-598 351)" fill="%23000000"/></g></g><defs><path id="path0_fill" d="M 3.43754 17L 5.57969 10.5009L -2.50353e-07 6.49282L 6.88652 6.50768L 9 8.70579e-08L 11.1135 6.50768L 18 6.49282L 12.4203 10.5009L 14.5625 17L 9 12.9685L 3.43754 17Z"/></defs></svg>');
+    background-position: 95% 10px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+  }
+
+  .main-container,
+  .schedule_subhead__filters,
+  .channel-row__block--title,
+  .popup__heading {
+    font-family: Arial, Helvetica, sans-serif, 'Open Sans', sans-serif;
+  }
+
+  .main-container {
+    background-color: #2C738C;
+  }
+
+  input {
+    outline-color: #000000;
+  }
+
+  a:active,
+  a:focus,
+  input:active,
+  input:focus,
+  .schedule_subhead a.print_button:active,
+  .schedule_subhead a.print_button:focus,
+  .schedule_subhead__filters .schedule_subhead__control-date select:active,
+  .schedule_subhead__filters .schedule_subhead__control-date select:focus,
+  .schedule_subhead__filters .schedule_subhead__control-provider select:active,
+  .schedule_subhead__filters .schedule_subhead__control-provider select:focus,
+  .time-zone-select:active,
+  .time-zone-select:focus {
+    outline: 2px solid #000000;
+    z-index: 9999;
+  }
+
+  /* --------------------------------- */
+  /* Tab Navigation */
+  /* --------------------------------- */
+
+  .schedule_head__tab.selected {
+  	border-top: 3px solid #000000;
+  }
+
+  /* --------------------------------- */
+  /* DAY view */
+  /* --------------------------------- */
+
+  /* ------ Filters ------*/
+
+  .schedule_subhead__light .schedule_subhead__control-time button.selected {
+    color: #000000
+  }
+
+  /* ------ Channel container ------ */
+
+  .time-zone-select__dark,
+  .time-zone-select__light {
+  
+      background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><title>keyboard_arrow_down</title><path d='M7.41,10.48,12,13.77l4.59-3.29,1.41,1-6,4.3-6-4.3' fill='%23FFF'></path></svg>") no-repeat right;
+  
+  }
+
+  /* ------ Time bar ------  */
+
+  .time-bar__item--current {
+    
+    	border-top: 4px solid #000000;
+    
+  }
+
+  /* ------ Program blocks ------ */
+
+  .channel-row__block--program:not(.blank):hover,
+  .week-column__block--program:not(.blank):hover {
+    -moz-box-shadow: 0px 2px 5px #000000;
+    -webkit-box-shadow: 0px 2px 5px #000000;
+  	box-shadow: 0px 2px 5px #000000;
+    -webkit-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+  	z-index:500;
+  }
+
+  /* --------------------------------- */
+  /* Popup */
+  /* --------------------------------- */
+
+  .popup__body--head--channel-station,
+  .popup__body--additional--divider {
+    color: #000000;
+  }
+
+  .popup__body--email--form select {
+    background: #fff url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><title>keyboard_arrow_down</title><path d='M7.41,10.48,12,13.77l4.59-3.29,1.41,1-6,4.3-6-4.3' fill='%23000000'></path></svg>");
+    background-position: right;
+    background-repeat: no-repeat;
+    outline-color: #000000;
+  }
+
+  .popup__body--email--form .popup__body--email--field {
+    outline-color: #000000;
+  }
+
+  .popup__body--head--favorites--star {
+    background: url('data:image/svg+xml;utf8,<svg width="32" height="30" viewBox="0 0 32 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(730 -52)"><g id="favoriteStarEmpty"><use xlink:href="%23path0_fill" transform="translate(-730 52)" fill="%23000000"/></g></g><defs><path id="path0_fill" d="M 6.11119 30L 9.91945 18.531L -4.45071e-07 11.4579L 12.2427 11.4841L 16 1.53632e-07L 19.7573 11.4841L 32 11.4579L 22.0805 18.531L 25.8888 30L 16 22.8856L 6.11119 30ZM 16 20.1151L 21.5417 24.1027L 19.4071 17.6745L 24.9688 13.711L 18.1057 13.7263L 15.9999 7.28923L 13.894 13.7263L 7.03101 13.711L 12.5927 17.6745L 10.458 24.1027L 16 20.1151Z"/></defs></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .popup__body--head--favorites--star:checked {
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(598 -351)"><g id="Vector"><use xlink:href="%23path0_fill" transform="translate(-598 351)" fill="%23000000"/></g></g><defs><path id="path0_fill" d="M 3.43754 17L 5.57969 10.5009L -2.50353e-07 6.49282L 6.88652 6.50768L 9 8.70579e-08L 11.1135 6.50768L 18 6.49282L 12.4203 10.5009L 14.5625 17L 9 12.9685L 3.43754 17Z"/></defs></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  html {background-color: #FFFFFF;}
+
+  .whats-on-module__light span.mod_time {
+    color: #000000;
+  }
+
+  /* --------------------------------- */
+  /* Datepicker */
+  /* --------------------------------- */
+  .ui-datepicker .ui-state-default{
+    background: #f7f9fa;
+    color: #133040;
+  }
+
+  .ui-datepicker .ui-state-active {
+    background: #000000;
+    color: #fff;
+  }
+
+  .ui-datepicker .ui-state-hover,
+  .ui-datepicker .ui-datepicker {
+    background: #36454D;
+    color: #fff;
+  }
+
+  
+    
+  
+</style>
+
+
+  </head>
+
+  <body>
+    <div id="proweb" class="generic main-container popup__dark">
+      No such program was found.  You may have followed an outdated bookmark.
+    </div>
+    <div class='popup_mask' id='popup_mask'></div>
+    <div class='popup_wrapper' id='popup_wrapper'>
+    	<div class="popup popup__dark" id='popup'>
+  			<div class='popup_content' id='popup_content'></div>
+    	</div>
+    </div>
+
+    
+
+    <script type="text/javascript">
+      tabManager = null;
+      $(function(){
+        $('.schedule_subhead').css({visibility: 'visible'})
+
+        tabManager = new TabManager()
+        if ($('.options').length > 0){
+        	$( ".options" ).accordion({ collapsible: true, active: false });
+
+        	$('.search-box,.menu' ).hide();
+  	    $('.options li:first-child').click(function() {
+  	      $(this).toggleClass('active');
+  	      $('.search-box').toggle();
+  	      $('.menu').hide();
+  	      $('.options li:last-child').removeClass('active');
+  	    });
+  	    $('.options li:last-child').click(function() {
+  	      $(this).toggleClass('active');
+  	      $(".menu").slideToggle(800);
+  	      $('.search-box').hide();
+  	      $('.options li:first-child').removeClass('active');
+
+  	      //
+  	      // This should be the right place to change screenreader span text
+  	      // on toggle fo the menu.
+  	      //
+  	      //
+  	      $('#mobile-menu-reader').html($('#mobile-menu-reader').html() == 'Open (Tap to Close)' ? '(Tap to Open)' : 'Open (Tap to Close)');
+
+  	    });
+  	    $('.skip').click(function() {
+  	      $(".menu").slideUp(800);
+  	    });
+  	    $('.content').click(function() {
+  	      $('.search-box,.menu' ).hide();
+  	      $('.options li:last-child, .options li:first-child').removeClass('active');
+  	    });
+        }
+      })
+    </script>
+
+    
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+
+        // Myers production analytics
+				// Not migrating to GTag at this time.
+				var myersKey = 'UA-698133-6'
+				if (myersKey.indexOf('UA') === 0) {
+					_gaq.push(['_setAccount', 'UA-698133-6']);
+					_gaq.push(['_trackPageview']);
+				}
+
+        
+
+        (function() {
+					var key = ''
+					// Legacy Universal Analytics
+					if (key.indexOf('UA-') === 0) {
+						console.log('Setting up Universal Analytics ', key);
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					} else if (key.indexOf('G-') === 0) {
+						// GA4 Tag
+						console.log('Setting up GA4 ', key);
+						var ga4 = document.createElement('script'); ga4.type = 'text/javascript'; ga4.async = true;
+						ga4.src = ('https:' == document.location.protocol ? 'https://www' : 'http://www') + '.googletagmanager.com/gtag/js?id=' + key;
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga4, s);
+					} else {
+						console.log('Not setting up google analytics...')
+					}
+        })();
+      </script>
+    
+
+		
+			<script>
+				/*
+				* Uncommment to re-enable AWS RUM
+				(function (n, i, v, r, s, c, x, z) {
+					var url = window.location.href;
+					if (!url.includes('proweb-staging') && (url.includes('day') || url.includes('week') || url.includes('atoz'))) {
+						x = window.AwsRumClient = {q: [], n: n, i: i, v: v, r: r, c: c};
+						window[n] = function (c, p) {
+							x.q.push({c: c, p: p});
+						};
+						z = document.createElement('script');
+						z.async = true;
+						z.src = s;
+						document.head.insertBefore(z, document.getElementsByTagName('script')[0]);
+					}
+				})('cwr',
+					'bd249d9d-2897-49c4-92cd-1089ce619965',
+					'5.4.5',
+					'us-east-1',
+					'/javascripts/cwr.js',
+					{
+						sessionSampleRate: 1,
+						guestRoleArn: "arn:aws:iam::685412945014:role/RUM-Monitor-us-east-1-685412945014-9092088688961-Unauth",
+						identityPoolId: "us-east-1:db377e2d-14ef-492e-912d-1486b7adba62",
+						endpoint: "https://dataplane.rum.us-east-1.amazonaws.com",
+						telemetries: ["performance", "errors", "http"],
+						allowCookies: true,
+						enableXRay: false
+					});
+				 */
+			</script>
+		
+  </body>
+</html>

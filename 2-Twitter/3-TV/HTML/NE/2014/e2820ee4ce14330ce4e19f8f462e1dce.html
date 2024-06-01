@@ -1,0 +1,2333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+
+	
+
+	<head>
+		
+			<base href="/v5/"/>
+		
+		<script type="text/javascript" src="scripts/bowser.min.js"></script>
+		
+
+		<script>
+			var pColorTitle='FF8A10';
+			var ckColor = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pColorTitle);
+			if(ckColor){
+				var pColorTitle='FF8A10';
+			}else{
+				var pColorTitle='4F7FF7';
+			} 
+			var allowHTTPS=true;
+			var playSessionID = "F50E393E-ED07-9261-F7C895021089060A";
+			var mobilePlayer = false;
+			var mobilePlayerNew = false;
+			var privateLabel = false;
+			
+			var centralSvrPrefixURL = "https://radio.securenetsystems.net/";
+			var adnSvrPrefixURL = "https://ssiadnweb.securenetsystems.net/";
+
+			var launchFrom = "";
+			var enableCirrusOmni = false;
+
+			var stationSlogan = "Securenet Streaming";
+			var cdnRfPrefixURL = "https://cdnrf.securenetsystems.net/file_radio/";
+			var playerBgImg = cdnRfPrefixURL + "v5/skins/standard.png";
+
+			var geoCTCode = "LK";
+			var geoDMACode = "0";
+			var geoLocLat = "6.9047";
+			var geoLocLon = "79.9638";
+			var cGeoLocationLevel = "5";
+			var clientIPAddr = "112.134.171.20";
+
+			var playerAdvertisingMode = "ADN";
+			var sPrerollSkipSecs="";
+			var bannerRotationFqcy = 28;
+			var definedBannerTypes = "M,D,N,E";
+			var sLocaFillOnAdnFail = false;
+			var sTerrFillOnLocalFail = true;
+			var sBedFillOnAllFail = false;
+			var sBedFillFileName = "COMMERCIAL-BREAK-BACKGROUNDER.m4a";
+			var sTspStnId = "SECURENET45";
+			var sGenre = "S45";
+			var logVPAID = false;
+			var vastAbortTimer;
+
+			var royaltyMarkProgram = 30;
+			var royaltyMarkAd = 90;
+
+			var adBlockerPresent = false;
+
+			
+			var prerollApp = new Array();
+			
+					
+					prerollApp.push("player-check-ab");
+					
+				
+			var checkIEModernUI = false;
+
+			var playerAppOnDemand = true;
+			var playerAppHome = true;
+			var playerAppContact = true;
+			var playerAppFacebook = true;
+			var playerAppTwitter = true;
+			var playerAppYouTube = true;
+			var playerAppsYouTubeUserName = "youtubenation";
+			var youtubeUserType = "U";
+			var playerAppUstream = false;
+			var playerAppsUstreamCid = "";
+			var playerAppFacebookLive = true;
+			var playerAppFacebookLiveSrc = 'https://www.facebook.com/facebook/videos/10153231379946729/';
+			var playerAppOtherStations = true;
+			var playerAppShareThis = true;
+			var playerAppNews = true;
+			var playerAppNewsSrc = "https://news.yahoo.com/rss/mostviewed";
+			var playerAppSports = true;
+			var playerAppSportsSrc = "http://sports.espn.go.com/espn/rss/news";
+			var playerAppStocks = false;
+			var playerAppStocksSrc = "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml";
+			var playerAppEntertainment = true;
+			var playerAppEntertainmentSrc = "http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml";
+			var playerAppWeather = true;
+			var playerAppFlight = false;
+			var playerAppYelp = false;
+			var playerAppDeals = true;
+			var playerAppPolls = false;
+			var playerAppSongRequest = true;
+			var playerAppChat = false;
+			var chatChannel = "1242441014";
+			var playerAppGames = false;
+			var playerAppWobot = false;
+			var playerAppWobotSrc = "http://www.wobot.tv/rss/";
+			var playerAppPlaylist = true;
+			var playerAppLyrics = true;
+			var playerAppSendToMobile = true;
+			var playerAppHelp = true;
+			var fbComments=true;
+			var fbCommentsMin=true;
+			
+				var stationCallUrl="https://streamdb0web.securenetsystems.net";
+			
+				var playerAutoStartApp = "";
+			
+			var playerAutoStartChannel = "";
+			var playerAutoStartShow = "";
+			var playerAutoStartPodcast = "";
+			var listenSessionTimeout = 90;
+			var playerAppTimeout = true;
+
+			var dspAlbumArt = true;
+			var dftAlbumArt = "https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/album-art-default.png";
+			var dspBuyMediaButton = false;
+			var dspMediaRate = true;
+
+			var dspMenuIcon = true;
+			var playerMenuAutoOpen = false;
+
+			var stationCallSign = "DEMOSTN";
+
+			var polling = new Object();
+			polling.enabled = true;
+			polling.active = false;
+			polling.adInsert = false;
+			
+			var adnPrebidEnable = true;
+			
+			
+			var adnPrebidFloor = 0.00;			
+			var adnPrebidLimit = 0;		;
+			var adnPrebidTimeout = 8000;		
+			var adnPrebidObj = new Object();
+			var adnImpCntObj = new Object();
+			
+						adnPrebidObj[0]=new Object();
+						adnPrebidObj[0].externalProvider='ADNLIJ';
+						adnPrebidObj[0].cID="0AA4A30A-E41E-9551-8692E8AD024DE4FC";
+						adnPrebidObj[0].cIDn=27703;
+						adnPrebidObj[0].cType="PBB";
+						adnPrebidObj[0].aType="M";
+						adnPrebidObj[0].aHsize="300";
+						adnPrebidObj[0].aVsize="250";
+						adnPrebidObj[0].soAdNetBRF=0;
+						adnPrebidObj[0].soAdNetPBF=-1;
+						adnPrebidObj[0].caCode="{\"bidder\": \"sovrn\", \"params\": {\"tagid\": \"402693\"}}";
+						adnPrebidObj[0].pC=0.00;
+						adnPrebidObj[0].eD=0;
+						adnPrebidObj[0].mI=-1;
+						adnPrebidObj[0].lastRequest=0;
+						adnPrebidObj[0].totalRequest=0;
+						
+						adnPrebidObj[1]=new Object();
+						adnPrebidObj[1].externalProvider='ADNLIJ';
+						adnPrebidObj[1].cID="0AF643E8-AABF-2B60-CA701A2788C5343F";
+						adnPrebidObj[1].cIDn=27704;
+						adnPrebidObj[1].cType="PBB";
+						adnPrebidObj[1].aType="D";
+						adnPrebidObj[1].aHsize="728";
+						adnPrebidObj[1].aVsize="90";
+						adnPrebidObj[1].soAdNetBRF=0;
+						adnPrebidObj[1].soAdNetPBF=-1;
+						adnPrebidObj[1].caCode="{\"bidder\": \"sovrn\", \"params\": {\"tagid\": \"402694\"}}";
+						adnPrebidObj[1].pC=0.00;
+						adnPrebidObj[1].eD=0;
+						adnPrebidObj[1].mI=-1;
+						adnPrebidObj[1].lastRequest=0;
+						adnPrebidObj[1].totalRequest=0;
+						
+						adnPrebidObj[2]=new Object();
+						adnPrebidObj[2].externalProvider='ADNAPN';
+						adnPrebidObj[2].cID="1892949C-CADF-EFA8-E80DC4E7E3D41769";
+						adnPrebidObj[2].cIDn=27723;
+						adnPrebidObj[2].cType="PBB";
+						adnPrebidObj[2].aType="M";
+						adnPrebidObj[2].aHsize="300";
+						adnPrebidObj[2].aVsize="250";
+						adnPrebidObj[2].soAdNetBRF=0;
+						adnPrebidObj[2].soAdNetPBF=-1;
+						adnPrebidObj[2].caCode="{\"bidder\": \"appnexus\",\"params\": {\"placementId\": \"6978609\"}}";
+						adnPrebidObj[2].pC=0.00;
+						adnPrebidObj[2].eD=0;
+						adnPrebidObj[2].mI=-1;
+						adnPrebidObj[2].lastRequest=0;
+						adnPrebidObj[2].totalRequest=0;
+						
+						adnPrebidObj[3]=new Object();
+						adnPrebidObj[3].externalProvider='ADNAPN';
+						adnPrebidObj[3].cID="18FE65F4-938C-6AB8-5FB8A35B36B895B6";
+						adnPrebidObj[3].cIDn=27724;
+						adnPrebidObj[3].cType="PBB";
+						adnPrebidObj[3].aType="D";
+						adnPrebidObj[3].aHsize="728";
+						adnPrebidObj[3].aVsize="90";
+						adnPrebidObj[3].soAdNetBRF=0;
+						adnPrebidObj[3].soAdNetPBF=-1;
+						adnPrebidObj[3].caCode="{\"bidder\": \"appnexus\",\"params\": {\"placementId\": \"6978610\"}}";
+						adnPrebidObj[3].pC=0.00;
+						adnPrebidObj[3].eD=0;
+						adnPrebidObj[3].mI=-1;
+						adnPrebidObj[3].lastRequest=0;
+						adnPrebidObj[3].totalRequest=0;
+						
+						adnPrebidObj[4]=new Object();
+						adnPrebidObj[4].externalProvider='ADNCON';
+						adnPrebidObj[4].cID="4AE68A72-D283-0A54-8C9FC1D3AD335513";
+						adnPrebidObj[4].cIDn=31848;
+						adnPrebidObj[4].cType="PBB";
+						adnPrebidObj[4].aType="M";
+						adnPrebidObj[4].aHsize="300";
+						adnPrebidObj[4].aVsize="250";
+						adnPrebidObj[4].soAdNetBRF=0;
+						adnPrebidObj[4].soAdNetPBF=-1;
+						adnPrebidObj[4].caCode="{\"bidder\": \"conversant\", \"params\": {\"site_id\": \"108556\"}}";
+						adnPrebidObj[4].pC=0.00;
+						adnPrebidObj[4].eD=0;
+						adnPrebidObj[4].mI=-1;
+						adnPrebidObj[4].lastRequest=0;
+						adnPrebidObj[4].totalRequest=0;
+						
+						adnPrebidObj[5]=new Object();
+						adnPrebidObj[5].externalProvider='ADNCON';
+						adnPrebidObj[5].cID="4B83BBD0-B2F3-3496-EBBCE185E82580C3";
+						adnPrebidObj[5].cIDn=31849;
+						adnPrebidObj[5].cType="PBB";
+						adnPrebidObj[5].aType="D";
+						adnPrebidObj[5].aHsize="728";
+						adnPrebidObj[5].aVsize="90";
+						adnPrebidObj[5].soAdNetBRF=0;
+						adnPrebidObj[5].soAdNetPBF=-1;
+						adnPrebidObj[5].caCode="{\"bidder\": \"conversant\", \"params\": {\"site_id\": \"108556\"}}";
+						adnPrebidObj[5].pC=0.00;
+						adnPrebidObj[5].eD=0;
+						adnPrebidObj[5].mI=-1;
+						adnPrebidObj[5].lastRequest=0;
+						adnPrebidObj[5].totalRequest=0;
+						
+						adnPrebidObj[6]=new Object();
+						adnPrebidObj[6].externalProvider='ADNSON';
+						adnPrebidObj[6].cID="B0DDF0A5-A5EA-95E7-F557924B5096D917";
+						adnPrebidObj[6].cIDn=43161;
+						adnPrebidObj[6].cType="PBB";
+						adnPrebidObj[6].aType="M";
+						adnPrebidObj[6].aHsize="300";
+						adnPrebidObj[6].aVsize="250";
+						adnPrebidObj[6].soAdNetBRF=0;
+						adnPrebidObj[6].soAdNetPBF=-1;
+						adnPrebidObj[6].caCode="{\"bidder\": \"sonobi\",\"params\": {\"placement_id\": \"d60f224a9238144280f0\"}}";
+						adnPrebidObj[6].pC=0.00;
+						adnPrebidObj[6].eD=0;
+						adnPrebidObj[6].mI=-1;
+						adnPrebidObj[6].lastRequest=0;
+						adnPrebidObj[6].totalRequest=0;
+						
+						adnPrebidObj[7]=new Object();
+						adnPrebidObj[7].externalProvider='ADNSON';
+						adnPrebidObj[7].cID="B23621ED-AAE7-3898-A2050CB22B78100E";
+						adnPrebidObj[7].cIDn=43162;
+						adnPrebidObj[7].cType="PBB";
+						adnPrebidObj[7].aType="D";
+						adnPrebidObj[7].aHsize="728";
+						adnPrebidObj[7].aVsize="90";
+						adnPrebidObj[7].soAdNetBRF=0;
+						adnPrebidObj[7].soAdNetPBF=-1;
+						adnPrebidObj[7].caCode="{\"bidder\": \"sonobi\",\"params\": {\"placement_id\": \"365bf62d0396983751e6\"}}";
+						adnPrebidObj[7].pC=0.00;
+						adnPrebidObj[7].eD=0;
+						adnPrebidObj[7].mI=-1;
+						adnPrebidObj[7].lastRequest=0;
+						adnPrebidObj[7].totalRequest=0;
+						
+						adnPrebidObj[8]=new Object();
+						adnPrebidObj[8].externalProvider='ADNDIS';
+						adnPrebidObj[8].cID="10BCA8B0-3D16-4F50-90E519B36AEF3C91";
+						adnPrebidObj[8].cIDn=58474;
+						adnPrebidObj[8].cType="PBB";
+						adnPrebidObj[8].aType="M";
+						adnPrebidObj[8].aHsize="300";
+						adnPrebidObj[8].aVsize="250";
+						adnPrebidObj[8].soAdNetBRF=0;
+						adnPrebidObj[8].soAdNetPBF=-1;
+						adnPrebidObj[8].caCode="{\"bidder\": \"sharethrough\", \"params\": {\"pkey\": \"rdaXLlICSi7Svg04SAYrA0KO\", \"iframe\": false}}";
+						adnPrebidObj[8].pC=0.00;
+						adnPrebidObj[8].eD=0;
+						adnPrebidObj[8].mI=-1;
+						adnPrebidObj[8].lastRequest=0;
+						adnPrebidObj[8].totalRequest=0;
+						
+						adnPrebidObj[9]=new Object();
+						adnPrebidObj[9].externalProvider='ADNDIS';
+						adnPrebidObj[9].cID="520C68CF-F5E4-4766-883780363CA591FC";
+						adnPrebidObj[9].cIDn=58475;
+						adnPrebidObj[9].cType="PBB";
+						adnPrebidObj[9].aType="D";
+						adnPrebidObj[9].aHsize="728";
+						adnPrebidObj[9].aVsize="90";
+						adnPrebidObj[9].soAdNetBRF=0;
+						adnPrebidObj[9].soAdNetPBF=-1;
+						adnPrebidObj[9].caCode="{\"bidder\": \"sharethrough\", \"params\": {\"pkey\": \"zuySZri0LpJREjmwXL6xOXNF\", \"iframe\": false}}";
+						adnPrebidObj[9].pC=0.00;
+						adnPrebidObj[9].eD=0;
+						adnPrebidObj[9].mI=-1;
+						adnPrebidObj[9].lastRequest=0;
+						adnPrebidObj[9].totalRequest=0;
+						
+			var adnPrebidTypes = new Object();
+			adnPrebidTypes['M']=new Object();
+			adnPrebidTypes['M'].floorNbRequest=0;
+			adnPrebidTypes['M'].floorList='0.00';
+			adnPrebidTypes['D']=new Object();
+			adnPrebidTypes['D'].floorNbRequest=0;
+			adnPrebidTypes['D'].floorList='0.00';
+			var sAdNetPFR=0;
+			
+			
+				var otherStations = new Object();
+				
+						otherStations["1"] = new Array("DEMOSTN","https://streamdb0web.securenetsystems.net");
+					
+						otherStations["2"] = new Array("DEMOSTNM","https://streamdb0web.securenetsystems.net");
+					
+				var otherStationsCount = 2;
+			
+			var encoderType = "ACP";
+			
+			
+				
+				// var streamProvider = "http";
+				var streamProvider = "http";
+
+				
+				
+				
+				var streamSRC = "https://ice1.securenetsystems.net/DEMOSTN?playSessionID=F50E393E-ED07-9261-F7C895021089060A";
+				var streamSRC_b = "https://ice1.securenetsystems.net/DEMOSTN?playSessionID=F50E393E-ED07-9261-F7C895021089060A";
+				var encoderType = "ACP";
+				var playlistType = "";
+				primary = "html5";
+				if(encoderType === "ACP"){
+					if((bowser.firefox) || (bowser.msie)){
+						/*if(swfobject.hasFlashPlayerVersion("1")){
+							if(streamSRC.indexOf(";stream.nsv") <= -1){
+								streamSRC += "&type=.flv";
+							}
+								playlistType = "flv";
+								primary = "flash";
+						}else{
+							if(!mobilePlayer){
+								//prerollApp.push("flashRequired");
+							}
+						}*/
+					}else{
+						playlistType = "aac";
+						primary = "html5";
+					}
+				}else if(encoderType === "MP3"){
+					playlistType = "mp3"
+					primary = "html5";
+				}
+
+				// if(encoderType === "ACP"){
+				// 	if(streamSRC.indexOf(";stream.nsv") > -1){
+				// 		streamSRC += "&type=.flv";
+				// 		playlistType = "aac";
+				// 	}else{
+				// 		streamSRC += "&type=.flv";
+				// 		playlistType = "flv";
+				// 	}
+				// }else if(encoderType === "MP3"){
+				// 	if(streamSRC.indexOf(";stream.nsv") > -1){
+				// 		streamSRC += "&type=.flv";
+				// 		playlistType = "flv";
+				// 	}else{
+				// 		streamSRC += "&type=.flv";
+				// 		playlistType = "flv";
+				// 	}
+				// }
+				
+
+				var liveStreamEnable = true;
+				var streamRoot = "https://ice1.securenetsystems.net/media";
+				var liveStreamStart = true;
+				var blackout = new Object();
+				blackout.active = 0;
+				blackout.type = "";
+				blackout.app = "";
+				blackout.nextCheck = 86449000;
+				blackout.resumeTime = "Friday, 5/31/2024 6:53 PM EDT";
+
+				var rejoinPriority = "PGM";
+				var enforceRejoinPriority = true;
+
+				var persistAlbumArt = true;
+
+				
+				var xmlODUrl = "";
+				var onDemandQueue = new Object();
+
+				var onDemandFileCount = 21;
+				var onDemandAutoStart = false;
+				var onDemandFill = new Object();
+				onDemandFill.enabled = true;
+				onDemandFill.active = false;
+				
+
+						onDemandQueue[0]=new Object();
+						onDemandQueue[0].fileId=11;
+						onDemandQueue[0].chId='23';
+						onDemandQueue[0].shId='11';
+						onDemandQueue[0].filetype = 'S';
+						
+							onDemandQueue[0].title="Videos";
+							onDemandQueue[0].allowUserInteraction = '1';
+						
+
+						onDemandQueue[1]=new Object();
+						onDemandQueue[1].fileId=22;
+						onDemandQueue[1].chId='22';
+						onDemandQueue[1].shId='';
+						onDemandQueue[1].filetype = 'C';
+						
+							onDemandQueue[1].title="Hot Topics";
+							onDemandQueue[1].allowUserInteraction = '1';
+						
+
+						onDemandQueue[2]=new Object();
+						onDemandQueue[2].fileId=198286;
+						onDemandQueue[2].chId='23';
+						onDemandQueue[2].shId='11';
+						onDemandQueue[2].filetype = 'AUD';
+						
+							// onDemandQueue[2].fileName="Aerial Shots Video.mp4";
+							onDemandQueue[2].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Aerial Shots Video.mp4";
+							onDemandQueue[2].fileDsp="Aerial Shots Video";
+							onDemandQueue[2].duration="526.320";
+							onDemandQueue[2].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/198286/coverArt.jpg";
+							onDemandQueue[2].title="Aerial Views";
+							onDemandQueue[2].artist="John V.";
+							onDemandQueue[2].album="John's Aerial";
+							onDemandQueue[2].video=true;
+							onDemandQueue[2].modal=false;
+							onDemandQueue[2].chID = '23';
+							onDemandQueue[2].shID = '11';
+						
+
+						onDemandQueue[3]=new Object();
+						onDemandQueue[3].fileId=892324;
+						onDemandQueue[3].chId='22';
+						onDemandQueue[3].shId='13';
+						onDemandQueue[3].filetype = 'AUD';
+						
+							// onDemandQueue[3].fileName="Place-for-Mom.m4a";
+							onDemandQueue[3].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Place-for-Mom.m4a";
+							onDemandQueue[3].fileDsp="Place-for-Mom";
+							onDemandQueue[3].duration="13.300";
+							onDemandQueue[3].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892324/coverArt.jpg";
+							onDemandQueue[3].title="A Place for Mom";
+							onDemandQueue[3].artist="A Place for Mom";
+							onDemandQueue[3].album="Senior Help";
+							onDemandQueue[3].video=false;
+							onDemandQueue[3].modal=false;
+							onDemandQueue[3].chID = '22';
+							onDemandQueue[3].shID = '13';
+						
+
+						onDemandQueue[4]=new Object();
+						onDemandQueue[4].fileId=1990855;
+						onDemandQueue[4].chId='24';
+						onDemandQueue[4].shId='';
+						onDemandQueue[4].filetype = 'AUD';
+						
+							// onDemandQueue[4].fileName="My Podcast File.m4a";
+							onDemandQueue[4].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"My Podcast File.m4a";
+							onDemandQueue[4].fileDsp="My Podcast File";
+							onDemandQueue[4].duration="655.444";
+							onDemandQueue[4].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/1990855/coverArt.png";
+							onDemandQueue[4].title="My Podcast File";
+							onDemandQueue[4].artist="";
+							onDemandQueue[4].album="";
+							onDemandQueue[4].video=false;
+							onDemandQueue[4].modal=false;
+							onDemandQueue[4].chID = '24';
+							onDemandQueue[4].shID = '';
+						
+
+						onDemandQueue[5]=new Object();
+						onDemandQueue[5].fileId=198285;
+						onDemandQueue[5].chId='23';
+						onDemandQueue[5].shId='11';
+						onDemandQueue[5].filetype = 'AUD';
+						
+							// onDemandQueue[5].fileName="Plane Landing Video.mp4";
+							onDemandQueue[5].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Plane Landing Video.mp4";
+							onDemandQueue[5].fileDsp="Plane Landing Video";
+							onDemandQueue[5].duration="61.320";
+							onDemandQueue[5].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/198285/coverArt.jpg";
+							onDemandQueue[5].title="Plane Landing";
+							onDemandQueue[5].artist="Planes, Inc.";
+							onDemandQueue[5].album="Planes for Days";
+							onDemandQueue[5].video=true;
+							onDemandQueue[5].modal=false;
+							onDemandQueue[5].chID = '23';
+							onDemandQueue[5].shID = '11';
+						
+
+						onDemandQueue[6]=new Object();
+						onDemandQueue[6].fileId=892321;
+						onDemandQueue[6].chId='22';
+						onDemandQueue[6].shId='13';
+						onDemandQueue[6].filetype = 'AUD';
+						
+							// onDemandQueue[6].fileName="Rover-com.m4a";
+							onDemandQueue[6].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Rover-com.m4a";
+							onDemandQueue[6].fileDsp="Rover-com";
+							onDemandQueue[6].duration="62.020";
+							onDemandQueue[6].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892321/coverArt.jpg";
+							onDemandQueue[6].title="Rover.com";
+							onDemandQueue[6].artist="Rover.com";
+							onDemandQueue[6].album="Pets Part 1";
+							onDemandQueue[6].video=false;
+							onDemandQueue[6].modal=false;
+							onDemandQueue[6].chID = '22';
+							onDemandQueue[6].shID = '13';
+						
+
+						onDemandQueue[7]=new Object();
+						onDemandQueue[7].fileId=23;
+						onDemandQueue[7].chId='23';
+						onDemandQueue[7].shId='';
+						onDemandQueue[7].filetype = 'C';
+						
+							onDemandQueue[7].title="Worldwide Trends";
+							onDemandQueue[7].allowUserInteraction = '1';
+						
+
+						onDemandQueue[8]=new Object();
+						onDemandQueue[8].fileId=12;
+						onDemandQueue[8].chId='23';
+						onDemandQueue[8].shId='12';
+						onDemandQueue[8].filetype = 'S';
+						
+							onDemandQueue[8].title="Daily Scoop with Ashley";
+							onDemandQueue[8].allowUserInteraction = '1';
+						
+
+						onDemandQueue[9]=new Object();
+						onDemandQueue[9].fileId=13;
+						onDemandQueue[9].chId='22';
+						onDemandQueue[9].shId='13';
+						onDemandQueue[9].filetype = 'S';
+						
+							onDemandQueue[9].title="Family Life";
+							onDemandQueue[9].allowUserInteraction = '1';
+						
+
+						onDemandQueue[10]=new Object();
+						onDemandQueue[10].fileId=24;
+						onDemandQueue[10].chId='24';
+						onDemandQueue[10].shId='';
+						onDemandQueue[10].filetype = 'C';
+						
+							onDemandQueue[10].title="Personal Topics";
+							onDemandQueue[10].allowUserInteraction = '1';
+						
+
+						onDemandQueue[11]=new Object();
+						onDemandQueue[11].fileId=892322;
+						onDemandQueue[11].chId='22';
+						onDemandQueue[11].shId='13';
+						onDemandQueue[11].filetype = 'AUD';
+						
+							// onDemandQueue[11].fileName="800-DonateCars.m4a";
+							onDemandQueue[11].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"800-DonateCars.m4a";
+							onDemandQueue[11].fileDsp="800-DonateCars";
+							onDemandQueue[11].duration="58.440";
+							onDemandQueue[11].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892322/coverArt.png";
+							onDemandQueue[11].title="Donate Cars";
+							onDemandQueue[11].artist="Donate Cars";
+							onDemandQueue[11].album="Cars4u";
+							onDemandQueue[11].video=false;
+							onDemandQueue[11].modal=false;
+							onDemandQueue[11].chID = '22';
+							onDemandQueue[11].shID = '13';
+						
+
+						onDemandQueue[12]=new Object();
+						onDemandQueue[12].fileId=892325;
+						onDemandQueue[12].chId='24';
+						onDemandQueue[12].shId='';
+						onDemandQueue[12].filetype = 'AUD';
+						
+							// onDemandQueue[12].fileName="Proactiv.m4a";
+							onDemandQueue[12].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Proactiv.m4a";
+							onDemandQueue[12].fileDsp="Proactiv";
+							onDemandQueue[12].duration="61.040";
+							onDemandQueue[12].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892325/coverArt.jpg";
+							onDemandQueue[12].title="Proactiv";
+							onDemandQueue[12].artist="Proactiv";
+							onDemandQueue[12].album="It Works!";
+							onDemandQueue[12].video=false;
+							onDemandQueue[12].modal=false;
+							onDemandQueue[12].chID = '24';
+							onDemandQueue[12].shID = '';
+						
+
+						onDemandQueue[13]=new Object();
+						onDemandQueue[13].fileId=892326;
+						onDemandQueue[13].chId='24';
+						onDemandQueue[13].shId='';
+						onDemandQueue[13].filetype = 'AUD';
+						
+							// onDemandQueue[13].fileName="Debt Solutions.m4a";
+							onDemandQueue[13].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Debt Solutions.m4a";
+							onDemandQueue[13].fileDsp="Debt Solutions";
+							onDemandQueue[13].duration="60.070";
+							onDemandQueue[13].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892326/coverArt.png";
+							onDemandQueue[13].title="Debt Solutions";
+							onDemandQueue[13].artist="Debt Solutions";
+							onDemandQueue[13].album="Part 1";
+							onDemandQueue[13].video=false;
+							onDemandQueue[13].modal=false;
+							onDemandQueue[13].chID = '24';
+							onDemandQueue[13].shID = '';
+						
+
+						onDemandQueue[14]=new Object();
+						onDemandQueue[14].fileId=892320;
+						onDemandQueue[14].chId='22';
+						onDemandQueue[14].shId='14';
+						onDemandQueue[14].filetype = 'AUD';
+						
+							// onDemandQueue[14].fileName="Go Dish.m4a";
+							onDemandQueue[14].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Go Dish.m4a";
+							onDemandQueue[14].fileDsp="Go Dish";
+							onDemandQueue[14].duration="60.020";
+							onDemandQueue[14].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892320/coverArt.jpg";
+							onDemandQueue[14].title="Dish Network";
+							onDemandQueue[14].artist="Dish Network";
+							onDemandQueue[14].album="TV";
+							onDemandQueue[14].video=false;
+							onDemandQueue[14].modal=false;
+							onDemandQueue[14].chID = '22';
+							onDemandQueue[14].shID = '14';
+						
+
+						onDemandQueue[15]=new Object();
+						onDemandQueue[15].fileId=14;
+						onDemandQueue[15].chId='22';
+						onDemandQueue[15].shId='14';
+						onDemandQueue[15].filetype = 'S';
+						
+							onDemandQueue[15].title="Product Reviews";
+							onDemandQueue[15].allowUserInteraction = '1';
+						
+
+						onDemandQueue[16]=new Object();
+						onDemandQueue[16].fileId=61320;
+						onDemandQueue[16].chId='23';
+						onDemandQueue[16].shId='12';
+						onDemandQueue[16].filetype = 'AUD';
+						
+							// onDemandQueue[16].fileName="Podcast 2.m4a";
+							onDemandQueue[16].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Podcast 2.m4a";
+							onDemandQueue[16].fileDsp="Podcast 2";
+							onDemandQueue[16].duration="86.510";
+							onDemandQueue[16].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/61320/coverArt.jpg";
+							onDemandQueue[16].title="Another Podcast";
+							onDemandQueue[16].artist="SSI";
+							onDemandQueue[16].album="SSI Volume 2";
+							onDemandQueue[16].video=false;
+							onDemandQueue[16].modal=false;
+							onDemandQueue[16].chID = '23';
+							onDemandQueue[16].shID = '12';
+						
+
+						onDemandQueue[17]=new Object();
+						onDemandQueue[17].fileId=892323;
+						onDemandQueue[17].chId='24';
+						onDemandQueue[17].shId='';
+						onDemandQueue[17].filetype = 'AUD';
+						
+							// onDemandQueue[17].fileName="USTaxShield.m4a";
+							onDemandQueue[17].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"USTaxShield.m4a";
+							onDemandQueue[17].fileDsp="USTaxShield";
+							onDemandQueue[17].duration="60.070";
+							onDemandQueue[17].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892323/coverArt.jpeg";
+							onDemandQueue[17].title="US Tax Shield";
+							onDemandQueue[17].artist="US Tax Shield";
+							onDemandQueue[17].album="Taxes";
+							onDemandQueue[17].video=false;
+							onDemandQueue[17].modal=false;
+							onDemandQueue[17].chID = '24';
+							onDemandQueue[17].shID = '';
+						
+
+						onDemandQueue[18]=new Object();
+						onDemandQueue[18].fileId=734361;
+						onDemandQueue[18].chId='23';
+						onDemandQueue[18].shId='12';
+						onDemandQueue[18].filetype = 'AUD';
+						
+							// onDemandQueue[18].fileName="Podcast 1.m4a";
+							onDemandQueue[18].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Podcast 1.m4a";
+							onDemandQueue[18].fileDsp="Podcast 1";
+							onDemandQueue[18].duration="113.240";
+							onDemandQueue[18].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/734361/coverArt.jpg";
+							onDemandQueue[18].title="";
+							onDemandQueue[18].artist="SSI";
+							onDemandQueue[18].album="SSI Volume 1";
+							onDemandQueue[18].video=false;
+							onDemandQueue[18].modal=false;
+							onDemandQueue[18].chID = '23';
+							onDemandQueue[18].shID = '12';
+						
+
+						onDemandQueue[19]=new Object();
+						onDemandQueue[19].fileId=62186;
+						onDemandQueue[19].chId='23';
+						onDemandQueue[19].shId='12';
+						onDemandQueue[19].filetype = 'AUD';
+						
+							// onDemandQueue[19].fileName="Podcast 3.m4a";
+							onDemandQueue[19].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Podcast 3.m4a";
+							onDemandQueue[19].fileDsp="Podcast 3";
+							onDemandQueue[19].duration="230.570";
+							onDemandQueue[19].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/62186/coverArt.jpg";
+							onDemandQueue[19].title="Great Stuff";
+							onDemandQueue[19].artist="Cirrus Streaming";
+							onDemandQueue[19].album="Cirrus Volume 1";
+							onDemandQueue[19].video=false;
+							onDemandQueue[19].modal=false;
+							onDemandQueue[19].chID = '23';
+							onDemandQueue[19].shID = '12';
+						
+
+						onDemandQueue[20]=new Object();
+						onDemandQueue[20].fileId=62187;
+						onDemandQueue[20].chId='23';
+						onDemandQueue[20].shId='12';
+						onDemandQueue[20].filetype = 'AUD';
+						
+							// onDemandQueue[20].fileName="Podcast 4.m4a";
+							onDemandQueue[20].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Podcast 4.m4a";
+							onDemandQueue[20].fileDsp="Podcast 4";
+							onDemandQueue[20].duration="397.590";
+							onDemandQueue[20].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/62187/coverArt.JPG";
+							onDemandQueue[20].title="Interesting Facts";
+							onDemandQueue[20].artist="Cirrus Streaming";
+							onDemandQueue[20].album="Cirrus Volume 2";
+							onDemandQueue[20].video=false;
+							onDemandQueue[20].modal=false;
+							onDemandQueue[20].chID = '23';
+							onDemandQueue[20].shID = '12';
+						
+					
+					var d = new Date();
+					var localServerTSoffset = d.getTime()+d.getTimezoneOffset()*60000 - Date.parse("30 May 2024 22:52:31");
+				
+
+				
+					var nielsenEnabled = true;
+				
+
+			var enableStream = true;
+
+			
+			
+					
+				var streamSrcDB = 'https://ice1.securenetsystems.net/DEMOSTN';
+				var streamSrcFlv = 'https://ice1.securenetsystems.net/DEMOSTN';
+			
+			
+			var streamSrcPlay=streamSrcDB.replace("?type=.flv","")+'?playSessionID=F50E393E-ED07-9261-F7C895021089060A';
+			var streamSrcAac = streamSrcDB+(streamSrcDB.indexOf("?")==-1?"?":"&")+"playSessionID=F50E393E-ED07-9261-F7C895021089060A";		//streamSrcDB.replace("?type=.flv","");
+			var streamSrcMp3 = streamSrcDB.replace("type=.flv","type=.mp3");
+			var bDRC=false;
+			var sessionDebugLog=false;
+			var sessionDebugLogSent=0;
+			var ne_enable=false;
+			var ne_enable_time=15;
+			var streamErrorRetryDelay=5;
+			
+			var adnModePrebid=1;
+			var adnModeWaterfall=1;
+			var enableURLRewrite=false;
+			var embedEnable=true;
+			
+				var prebidSplit=1;
+					
+					var tagRotationOffset = 0;
+				
+			
+			var maxRotationWhenMin=-1;
+			var crtRotationWhenMin=0;
+			var enableRadioStats='';
+			var pOnDemandTitle="Podcasts";
+			var pLiveStreamReturnTitle="live stream"
+			
+				var bannerMaxRotation=999;
+				
+			var minimizedRotate="1";
+		</script>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE, must-revalidate, max-age=0" />
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+		<META HTTP-EQUIV="EXPIRES" CONTENT="0" />
+		<meta name="distribution" content="Global" />
+		
+			
+				<meta property="og:title" content="DEMOSTN" />
+				<meta property="og:description" content="Listen to our station on your computer or mobile device!" />
+				<meta property="og:image" content="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/logo.png" />
+			
+			<link REL="SHORTCUT ICON" HREF="images/ssiicon.ico">
+			
+			
+		<title>Securenet Streaming</title>
+		<meta name='ir-site-verification-token' value='-923417589' />
+		<link rel="stylesheet" href="css/style.css?v=1" type="text/css" />
+		
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="css/style_stdres.css" type="text/css" />
+		<![endif]-->
+		<!--[if (!IE)|(gte IE 9)]> -->
+			<link rel="stylesheet" href="css/style_hires.css" type="text/css" />
+		<!-- <![endif]-->
+
+		<style>
+			.bodyDiv {
+				background:url(https://cdnrf.securenetsystems.net/file_radio/v5/skins/standard.png) no-repeat top left #1B1B1B;
+				top:50%;
+				left:50%;
+				height:630px;
+				
+					width:940px;
+					margin:-315px 0 0 -470px;
+				
+				position:absolute;
+				display:none;
+			}
+			div {
+				color: #416DFF;
+			}
+			a:link, a:visited, a:hover, a:active, .menuHeader, .player-apps-title, #transport-counter, #transport-volume-label {
+				color: #FF8A10;
+			}
+			
+		</style>
+
+		
+		<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ ga('create', 'UA-38311419-1', 'auto');
+ ga('send', 'pageview');
+</script> 
+	
+	<script type="text/javascript" src="scripts/prebid.js?v=4.411" async></script> 
+	<script type="text/javascript">
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		var preBidCounter = 0; 
+		var waterfallCounter = 0;
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+	</script>
+	
+	<!--script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script-->
+	<script src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.json-2.2.min.js"></script>
+	<script type="text/javascript" src="scripts/ifvisible.min.js"></script>
+	
+	<script src="/cirruscore/cirruscore_v2.js"></script>
+	<script src="scripts/html5vast.js"></script>
+	
+	
+	<script type="text/javascript" id="ssi_Script" src="scripts/ads/prebid.js?2479"></script>
+
+		<script type="text/javascript" src="scripts/jquery.qrcode.min.js"></script>
+	
+			<script type="text/javascript" src="scripts/v5.min.js?cb=20240530185231"></script>
+		
+		
+		<style>
+			.PRLinProgres .rightPin{
+				display:none;
+			}
+		</style>
+	</head>
+
+	<body>
+	
+	<h1 style="display:none">#stationSlogan#</h1>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMQ5XX9MHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MMQ5XX9MHQ');
+</script>
+		
+
+		
+
+		
+			<div id="bodyDiv" class="bodyDiv">
+
+				<div id="ajax-loader" class="ajax-loader-container ajax-loader"></div>
+				<img id="stationLogo" alt="stationCallSign" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/logo.png" /> 
+<div id="top-menu-wrapper" class="top-menu-wrapper dH tS">
+	
+		
+		<div class="top-menu-button-wrapper" role="button" tabindex="0"  aria-label="Button"  role="button" tabindex="0" onclick="openURL('http://streamdb0web.securenetsystems.net/ce/index.cfm?stationCallSign=DEMOSTNM');">
+			<div class="top-menu-button-bg" role="img" tabindex="0" style="background:url(https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/top-menu/ce%2Epng) no-repeat top center;">
+				<div class="top-menu-button dT top-menu-button-border"   role="button" tabindex="0"  aria-label="Button">
+					<div class="top-menu-button-c1">
+						<div class="top-menu-button-c2 top-menu-text" style="color:#ffffff;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		
+		<div class="top-menu-button-wrapper" role="button" tabindex="0"  aria-label="Live Feed"  role="button" tabindex="0" onclick="startApp('facebook-live',-1,'');">
+			<div class="top-menu-button-bg" role="img" tabindex="0" style="background:url(https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/top-menu/fb%2Dlive%2Dbutton%2Epng) no-repeat top center;">
+				<div class="top-menu-button dT top-menu-button-border"   role="button" tabindex="0"  aria-label="Live Feed">
+					<div class="top-menu-button-c1">
+						<div class="top-menu-button-c2 top-menu-text" style="color:#ffffff;">Live Feed</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		
+		<div class="top-menu-button-wrapper" role="button" tabindex="0"  aria-label="Podcasts"  role="button" tabindex="0" onclick="startApp('on-demand',-1,'');">
+			<div class="top-menu-button-bg" role="img" tabindex="0" style="background:url(https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/top-menu/od%2Epng) no-repeat top center;">
+				<div class="top-menu-button dT top-menu-button-border"   role="button" tabindex="0"  aria-label="Podcasts">
+					<div class="top-menu-button-c1">
+						<div class="top-menu-button-c2 top-menu-text" style="color:#ffffff;">Podcasts</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		
+		<div class="top-menu-button-wrapper" role="button" tabindex="0"  aria-label="Home"  role="button" tabindex="0" onclick="startApp('top-menu-1',-1,'WorkPost_149.jpg');">
+			<div class="top-menu-button-bg" role="img" tabindex="0" style="background:url(https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/top-menu/home%2Epng) no-repeat top center;">
+				<div class="top-menu-button dT top-menu-button-border"   role="button" tabindex="0"  aria-label="Home">
+					<div class="top-menu-button-c1">
+						<div class="top-menu-button-c2 top-menu-text" style="color:#ffffff;">Home</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+
+
+
+<div id="menu" class="menu">
+	
+	<div class="menu-close" title="Close menu" role="button" aria-label="Close menu"  role="button" tabindex="0" onclick="dspMenu();"></div>
+	
+
+	<div class="menu-row">
+		
+			<div class="fL menuIcons">
+				<div class="menuText menuHeader f15em">Station info</div>
+				<img src="images/homepage.png" width="60" title="Our website" alt="Our website"  role="button" tabindex="0" onclick="startApp('home');" /> <img src="images/contact.png" width="60" title="Contact information" alt="Contact information" role="button" tabindex="0" onclick="startApp('contact');" /> <img src="images/facebook.png" width="60" title="Facebook feed" alt="Facebook feed" role="button" tabindex="0" onclick="startApp('facebook');" /> <img src="images/twitter.png" width="60" title="Read our twitter feed" alt="Read our twitter feed"  role="button" tabindex="0" onclick="startApp('twitter');" /> <a href="https://youtube.com/@youtubenation" target="_blank" title="YouTube"><img src="images/youtube.png" width="60" title="YouTube" alt="YouTube" /></a> 
+		
+			</div>
+		
+					<div class="fL menuIcons" style="margin-left:75px;padding-right:0px;">
+						<div class="menuText menuHeader f15em">Share</div>
+						<!-- AddThis Button BEGIN -->
+						<div class="shareThis addthis_toolbox addthis_default_style addthis_32x32_style">
+						<a class="addthis_button_preferred_1" role="button" tabindex="0" aria-label="Share"></a>
+						<a class="addthis_button_preferred_2" role="button" tabindex="0" aria-label="Share"></a>
+						<a class="addthis_button_preferred_3" role="button" tabindex="0" aria-label="Share"></a>
+						<a class="addthis_button_preferred_4" role="button" tabindex="0" aria-label="Share"></a>
+						<a class="addthis_button_compact" role="button" tabindex="0" aria-label="Share"></a>
+						<a class="addthis_counter addthis_bubble_style" role="button" tabindex="0" aria-label="Share"></a>
+						</div>
+						<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-502552987eaa3f3d"></script>
+						<!-- AddThis Button END -->
+					</div>
+				
+
+	</div>
+	<div class="menu-apps-row dT">
+		<div class="top-menu-button-c1">
+			<div class="top-menu-button-c2">
+				
+					<div class="fL menu-apps mr20" style="width:517px;">
+						<div class="menuText menuHeader f15em">Player apps</div>
+						<img src="images/news.png" width="60" title="News" alt="News"  role="button" tabindex="0" onclick="startApp('news');" /> <img src="images/sports.png" width="60" title="Sports" alt="Sports"  role="button" tabindex="0" onclick="startApp('sports');" /> <img src="images/entertainment.png" width="60" title="Entertainment" alt="Entertainment" role="button" tabindex="0" onclick="startApp('entertainment');" /> <img src="images/weather.png" width="60" title="Weather" alt="Weather" role="button" tabindex="0" onclick="startApp('weather');" /> <img src="images/deals.png" width="60" title="Deals & coupons" alt="Deals & coupons" role="button" tabindex="0" onclick="startApp('deals');" /> <img src="images/request.png" width="60" title="Song request" alt="Song request" role="button" tabindex="0" onclick="startApp('request');" /> <img src="images/help.png" width="60" title="Problems streaming? Click here for common answers." alt="Problems streaming? Click here for common answers." role="button" tabindex="0" onclick="startApp('help');" />
+					</div>
+				
+					<div class="fL menuIcons" style="padding-right:0px;width:370px;">
+						<div class="menuText menuHeader f15em">Streams</div>
+						<img src="images/media-send-to-mobile.png" width="60" title="Send player to mobile phone" alt="Send player to mobile phone" role="button" tabindex="0" onclick="startApp('send-to-mobile');" /> <img src="images/playlist.png" width="60" title="Recently played" alt="Recently played" role="button" tabindex="0" onclick="startApp('playlist');" /> <img src="images/other-stations.png" width="60" title="Other radio stations" alt="Other radio stations" role="button" tabindex="0" onclick="startApp('other-stations');" /> <img src="images/on-demand.png" width="60" title="Podcasts" alt="Podcasts" role="button" tabindex="0" onclick="startApp('on-demand');" /> <img src="images/soundcloud.png" width="60" title="Soundcloud" alt="Soundcloud" role="button" tabindex="0" onclick="startApp('soundcloud');" /> <img src="images/fblive-v5.png" width="60" title="Facebook live" alt="Facebook live" role="button" tabindex="0" onclick="startApp('facebook-live');" /> <img src="images/youtubelive-v5.png" width="60" title="YouTube Live" alt="YouTube Live" role="button" tabindex="0" onclick="startApp('youtube-live');" /> 
+					</div>
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+				
+
+				
+				<div id="updateBrowser">
+					<p>Your browser is out of date. Please upgrade your browser to proceed to the live stream.</p>
+					<p>This player utilizes features that are unavailable in your version of browser. Don't worry - there is an easy solution. Simply upgrade your browser to the latest version and then return to this player to proceed to the live stream. You'll be enjoying your favorite station before you know it!</p>
+				</div>
+				
+
+				
+				
+
+	
+
+		
+		<div id="player-apps-flashRequired" class="player-apps-preroll dH">
+			<div>
+				<div class="player-apps-content papbct dT">
+					<div class="top-menu-button-c1">
+						<p>Adobe Flash Required</p>
+						<br>
+						<p>Adobe Flash is required to listen to this station, but you don't appear to have it installed.</p>
+						<br>
+						<p><a href="https://get.adobe.com/flashplayer/">Click here to install Adobe Flash</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+			<div id="player-apps-player-check-ab" role="img" aria-label="Ad blocker" class="player-apps-preroll dH">
+				<div>
+					<div class="player-apps-content papbct dT">
+						<div class="top-menu-button-c1">
+							
+							
+							
+
+							<div id="adblockWrapper"></div>
+							<script>
+								function getQueryVariable(variable){
+							       var query = window.location.search.substring(1);
+							       var vars = query.split("&");
+							       for (var i=0;i<vars.length;i++) {
+							               var pair = vars[i].split("=");
+							               if(pair[0] == variable){return pair[1];}
+							       }
+							       return(false);
+								}
+
+								function adyJHgTTgxZLcZNvaw76CQZtgBpdjYs1OcTqE6SdV7fLFA6d13FwQ97I94nLt4DzeJZTEXuZw1jb7bsCApcPSU1UooQPIffzDhSUGpaEzcvXNBDAPp3IuZUc8zVz8Bazqp7INxrHvOnnph9UiUJ3hlxaKKYRtsfnIG5IL5D2xfL0bB9EpEmNB(){
+									if(window.iExist === undefined){
+										console.log("ad blocker detected");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\"><img id=\"blockImage\" alt=\"adblock detected\" src=\"images/blockdetected.jpg\"  style=\"max-width:605px\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb0web.securenetsystems.net/v5/index.cfm?stationCallSign=DEMOSTN&retry=true&playSessionID=F50E393E-ED07-9261-F7C895021089060A");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "images/blockdetected.jpg");
+										}
+									}else if(window.iExist!='2479'){
+										console.log("ad blocker detected");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\"><img id=\"blockImage\" alt=\"adblock detected\" src=\"images/blockdetected.jpg\"  style=\"max-width:605px\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb0web.securenetsystems.net/v5/index.cfm?stationCallSign=DEMOSTN&retry=true&playSessionID=F50E393E-ED07-9261-F7C895021089060A");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "images/blockdetected.jpg");
+										}
+									}else{
+										adBlockerPresent = false;
+										console.log("ad blocker NOT detected");
+										$("#adblockWrapper").hide();
+										$.ajax('scripts/ads/prebid.js?v=1.32')
+										.fail(function(d){
+											allowPrebid=false;
+											console.log("ad blocker detected");
+											//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+											$("#adblockWrapper").show();
+											adBlockerPresent = true;
+											$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\"><img id=\"blockImage\" alt=\"adblock detected\" src=\"images/blockdetected.jpg\"  style=\"max-width:605px\"></a>");
+											var retryVar = getQueryVariable("retry");
+											if(!retryVar){
+												setTimeout(function(){
+													window.location.replace("https://streamdb0web.securenetsystems.net/v5/index.cfm?stationCallSign=DEMOSTN&retry=true&playSessionID=F50E393E-ED07-9261-F7C895021089060A");
+												}, 500000);
+											}else{
+												$("#blockImage").attr("src", "images/blockdetected.jpg");
+											}
+										});
+									}
+								}
+
+								if(playerAdvertisingMode=="ADN" || playerAdvertisingMode=="SEQ"){
+									setTimeout(function(){
+										adyJHgTTgxZLcZNvaw76CQZtgBpdjYs1OcTqE6SdV7fLFA6d13FwQ97I94nLt4DzeJZTEXuZw1jb7bsCApcPSU1UooQPIffzDhSUGpaEzcvXNBDAPp3IuZUc8zVz8Bazqp7INxrHvOnnph9UiUJ3hlxaKKYRtsfnIG5IL5D2xfL0bB9EpEmNB();
+									}, 500);
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		
+		
+	
+
+	
+	<div id="player-apps" class="player-apps">
+
+		
+		<div id="player-apps-close-button" class="player-apps-close-button player-apps-close-button-app" title="Close player app"  aria-label="Close player app" role="button" tabindex="0" onclick="closeApp();"></div>
+		
+
+		
+		
+			<div id="player-apps-home" class="dH">
+				<div>
+					<img src="images/homepage.png" width="40" alt="Homepage" height="40" />
+					<div class="player-apps-title" role="heading">Welcome to our stream</div>
+					<div class="player-apps-content">
+						<p>This is your player&#39;s homepage. You can enter in any text and/or images you want. This can be changed at any time via your station&#39;s dashboard using a full HTML editor.</p>
+
+<p>You can enter as much text as you want.</p>
+
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-contact" class="dH">
+				<div>
+					<img src="images/contact.png" alt="Contact" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Contact</div>
+					<div class="player-apps-content">
+						<div id="player-apps-contact-icons">
+							<div class="player-apps-contact-phone">954-481-9402</div> <div class="player-apps-contact-web"  role="button" tabindex="0" onclick="openURL('http://cir.st');">http://cir.st</div> <div class="player-apps-contact-email"  role="button" tabindex="0" onclick="dspContactForm(true);">Click here to send us a message</div> <div class="player-apps-contact-address"  role="button" tabindex="0" onclick="openURL('https://maps.google.com/maps?q=356%20SW%2012th%20Ave%2E%20%20Deerfield%20Beach%2C%20FL%2033442');">356 SW 12th Ave.<br />Deerfield Beach, FL 33442</div>
+						</div>
+						<div id="player-apps-contact-form">
+							<div style="clear:both;padding-top:0px;float:right;margin-right:2px;">
+								<script src='https://www.google.com/recaptcha/api.js'></script>
+								<div class="g-recaptcha" data-sitekey="6Ld3unQUAAAAAN5U_Qq7hGSAirQ8xohsSNb0aEwO"></div>
+							</div>
+							<input type="text" style="width:230px;" id="contactFormName" value="Your name" aria-label="Your name" size="40" maxlength="64"  role="button" tabindex="0" onclick="fieldDesc(this,'in','Your name',2);" onBlur="fieldDesc(this,'out','Your name',2);">
+							<br /><br />
+							<input type="text" style="width:230px;" id="contactFormEmail" value="Your email address" aria-label="Your email address" size="40" maxlength="64"  role="button" tabindex="0" onclick="fieldDesc(this,'in','Your email address',10);" onBlur="fieldDesc(this,'out','Your email address',10);">
+							<br /><br />
+							<textarea style="height:83px;" id="contactFormMessage" aria-label="Your message" role="button" tabindex="0" onclick="fieldDesc(this,'in','Your message',5);" onBlur="fieldDesc(this,'out','Your message',5);">Your message</textarea>
+
+							<br />
+							<p>I accept Securenet Systems' <a href="javascript:startApp('help')" style="color:#416DFF">Privacy Statement</a></p>
+
+							<div class="player-apps-contact-back fL"  role="button" tabindex="0" onclick="dspContactForm(false);"></div>
+
+							<div class="fL">
+							<input type="button" value="Send message"  role="button" tabindex="0" onclick="contactForm();"></div>
+							<div id="contactFormErr" class="fL ml10 red formErrMsg"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-facebook" class="dH">
+				<div>
+					<img src="images/facebook.png" alt="Facebook" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Facebook</div>
+					<div class="player-apps-content" id="player-apps-content-facebook">
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-twitter" class="dH">
+				<div>
+					<img src="images/twitter.png" alt="Twitter" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Twitter</div>
+					<div class="player-apps-content" id="player-apps-content-twitter">
+						<iframe src="/v5/twitter.cfm?iframew=520&iframeh=250&playerAppTwitterUserName=securenet" width="100%" height="250" class="iframeMap" frameborder="no" scrolling="no" ></iframe>
+
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-youtube" class="dH">
+				<div>
+					<img src="images/youtube.png" alt="Youtube" width="40" height="40" />
+					<div class="player-apps-title" role="heading">YouTube</div>
+					<script type="text/javascript" src="scripts/youtube.js"></script>
+					<div class="player-apps-content" id="player-apps-content-youtube">
+						<link rel="stylesheet" href="css/youtube.css" type="text/css" />
+						<div id="youtubevideos">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-soundcloud" class="dH">
+				<div>
+					<img src="images/soundcloud.png" alt="Soundcloud" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Soundcloud</div>
+					<div class="player-apps-content" id="player-apps-content-soundcloud">
+						<div id="soundcloudlist">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-facebook-live" class="dH">
+				<div>
+					<img src="images/fblive-v5.png" alt="Facebook live" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Facebook live</div>
+					<div class="player-apps-content" id="player-apps-content-facebook-live">
+
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-youtube-live" class="dH">
+				<div>
+					<img src="images/youtubelive-v5.png" alt="Youtube live" width="40" height="40" />
+					<div class="player-apps-title" role="heading">YouTube Live</div>
+					<div class="player-apps-content" id="player-apps-content-youtube-live">
+
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-other-stations" class="dH">
+				<div>
+					<img src="images/other-stations.png" alt="Other radio stations" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Other radio stations</div>
+					<div class="player-apps-content">
+						<p>Click on any of the stations below to start listening</p>
+						
+							<div class="other-stations-row cP"  role="button" tabindex="0" onclick="location.href='https://streamdb0web.securenetsystems.net/v5/index.cfm?stationCallSign=DEMOSTN';">
+								<div class="on-demand-state fL on-demand-on-air"></div>
+								<div class="other-stations-logo fL"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/logo.png" width="125" height="47" alt="Securenet Streaming" /></div>
+								<div class="other-stations-slogan dT fL">
+									<div class="top-menu-button-c1">
+										<div class="top-menu-button-c2">
+											Securenet Streaming 
+												<div id="other-stations-now-playing-1" class="f08em"></div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+							<div class="other-stations-row cP"  role="button" tabindex="0" onclick="location.href='https://streamdb0web.securenetsystems.net/v5/index.cfm?stationCallSign=DEMOSTNM';">
+								<div class="on-demand-state fL "></div>
+								<div class="other-stations-logo fL"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTNM/v5/logo.png" width="125" height="47" alt="SSI 2" /></div>
+								<div class="other-stations-slogan dT fL">
+									<div class="top-menu-button-c1">
+										<div class="top-menu-button-c2">
+											SSI 2 
+												<div id="other-stations-now-playing-2" class="f08em"></div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		
+			<style>
+				.tooltipLink{
+									position:absolute;
+									top:0px;
+									right:0px;
+									width:230px;
+									height:15px;
+									text-align:center;
+									border-radius:5px;
+									border:1px solid #cdcdcd;
+									background:#ffffff;
+									padding:5px;;
+									color:#000000;
+									font-size:12px!important;
+									font-weight:normal!important;
+									box-shadow: 0 0 10px 5px rgba(205, 205, 205, 0.5);
+								}
+			</style>
+			<div id="player-apps-on-demand" class="dH">
+				<div>
+					<img src="images/on-demand.png" alt="Podcasts" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Podcasts</div>
+					<div id="on-demand-list" class="player-apps-content">
+						<p>Click on any file to start listening</p>
+						<script language="javascript">var downloadClick=0;</script>
+
+						
+							<script language="javascript">
+							function convertUTCDateToLocalDate(data,div) {
+								var d=new Date(data.substr(0,4),(parseInt(data.substr(5,2))-1),data.substr(8,2),data.substr(11,2),data.substr(14,2),data.substr(17,2),0)
+								var newDate = new Date(d.getTime()-(d.getTimezoneOffset()*60*1000));
+
+								//var offset = d.getTimezoneOffset() / 60;
+								//var hours = d.getHours();
+
+								//newDate.setHours(hours - offset);
+								/*if(div=='entered_ts_624766'){
+									console.log('MMM:'+d);
+									console.log('MMM:'+d.getTimezoneOffset());
+									//console.log('MMM:'+offset);
+									//console.log('MMM:'+hours);
+									console.log('MMM:'+newDate);
+								}*/
+								$("#"+div).html(newDate.toLocaleString().substring(0,10));;
+							}
+							</script>
+							
+									<div id="shID11" class="shRow chshRow on-demand-row cellBkgColor " data-userinteraction="1" data-chid="23" data-shid="11" style="padding-bottom:10px;overflow:hidden;">
+										<img  role="button" tabindex="0" onclick="openCHsh('23','11')"  alt="Videos" aria-label="Videos" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/s11/coverArt.jpg"/>
+										<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"   role="button" tabindex="0" onclick="openCHsh('23','11')">Videos</h3>
+												<div class="shareShDiv">
+													<div style="float:left;margin-right:5px;cursor:pointer">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','shID11','sh',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','shID11','sh',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','shID11','sh',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=23&shid=11" target="_blank" class="songRssLink">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">Videos of the world. <P></span></div>
+												<div class="rowElmCH"></div>
+										</div>
+
+										<div class="openCloseShow"  role="button" tabindex="0"  alt="Videos" aria-label="Videos" onclick="openCHsh('23','11')"><span>more &raquo;</span></div>
+									</div>
+								
+									<div id="chID22"  class="chRow chshRow on-demand-row cellBkgColor themeFontColorDark" data-userinteraction="1" data-chid="22" style="padding-bottom:10px;overflow:hidden;">
+
+											<img  role="button" tabindex="0" onclick="openCHsh('22','')" alt="Hot Topics" aria-label="Hot Topics" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/c22/coverArt.jpg"/>
+											<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"  role="button" tabindex="0" onclick="openCHsh('22','')">Hot Topics</h3>
+												<div class="shareChDiv">
+													<div style="float:left;margin-right:5px;">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15"  class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook" aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook" role="button" tabindex="0" onclick="socialPodcastShare('facebook','chID22','ch',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15" border="0" title="Tweet this podcast" alt="Tweet this podcast" aria-label="Tweet this podcast" role="button" tabindex="0" onclick="socialPodcastShare('twitter','chID22','ch',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15" border="0" title="Copy link to clipboard" alt="Copy link to clipboard" aria-label="Copy link to clipboard" role="button" tabindex="0" onclick="socialPodcastShare('link','chID22','ch',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=22" target="_blank" title="RSS" aria-label="Open RSS in new window" class="songRssLink ">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">Browse through our hot topics for some insight on what's currently trending. <P></span></div>
+												<div class="rowElmCH"></div>
+											</div>
+
+										<div class="openCloseChannel"  role="button" tabindex="0" alt="Hot Topics" aria-label="Hot Topics" onclick="openCHsh('22','')"><span>more &raquo;</span></div>
+									</div>
+								
+								<div class="on-demand-row" data-chid="23" data-shid="11" data-odid="od_198286" id="od_198286">
+
+									<div id="on-demand-on-air-2" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/198286/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="2"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(2,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Aerial Views
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:08:46 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_198286','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_198286','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_198286','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_198286"><script language="javascript">convertUTCDateToLocalDate('2015-10-02 19:10:49.45','entered_ts_198286')</script></div> John V.<br> John's Aerial<br> <br><span class="f08em">Check out these awesome aerial shots taken by John here at the station. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="22" data-shid="13" data-odid="od_892324" id="od_892324">
+
+									<div id="on-demand-on-air-3" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892324/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="3"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(3,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															A Place for Mom
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:00:13 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892324','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892324','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892324','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892324"><script language="javascript">convertUTCDateToLocalDate('2019-12-04 13:11:08.387','entered_ts_892324')</script></div> A Place for Mom<br> Senior Help<br> <br><span class="f08em">Does your mom need daily assistance? Find out why A Place for Mom is the best option for senior care. https://cir.st/  <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="24" data-shid="" data-odid="od_1990855" id="od_1990855">
+
+									<div id="on-demand-on-air-4" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/1990855/coverArt.png" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="4"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(4,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															My Podcast File
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:10:55 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_1990855','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_1990855','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_1990855','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_1990855"><script language="javascript">convertUTCDateToLocalDate('2023-01-30 15:17:17.96','entered_ts_1990855')</script></div> <br><span class="f08em">This is my podcast file that was created using voice synthesis. My voice's name is Mary. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="23" data-shid="11" data-odid="od_198285" id="od_198285">
+
+									<div id="on-demand-on-air-5" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/198285/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="5"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(5,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Plane Landing
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:01 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_198285','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_198285','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_198285','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_198285"><script language="javascript">convertUTCDateToLocalDate('2015-10-02 19:10:49.447','entered_ts_198285')</script></div> Planes, Inc.<br> Planes for Days<br> <br><span class="f08em">Watch this plane land. You can upload video podcasts, too! <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="22" data-shid="13" data-odid="od_892321" id="od_892321">
+
+									<div id="on-demand-on-air-6" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892321/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="6"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(6,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Rover.com
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:02 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892321','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892321','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892321','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892321"><script language="javascript">convertUTCDateToLocalDate('2019-09-18 12:39:35.19','entered_ts_892321')</script></div> Rover.com<br> Pets Part 1<br> <br><span class="f08em">Browse through local pet sitters to find one near you. Read reviews and name your price. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+									<div id="chID23"  class="chRow chshRow on-demand-row cellBkgColor themeFontColorDark" data-userinteraction="1" data-chid="23" style="padding-bottom:10px;overflow:hidden;">
+
+											<img  role="button" tabindex="0" onclick="openCHsh('23','')" alt="Worldwide Trends" aria-label="Worldwide Trends" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/c23/coverArt.jpg"/>
+											<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"  role="button" tabindex="0" onclick="openCHsh('23','')">Worldwide Trends</h3>
+												<div class="shareChDiv">
+													<div style="float:left;margin-right:5px;">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15"  class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook" aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook" role="button" tabindex="0" onclick="socialPodcastShare('facebook','chID23','ch',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15" border="0" title="Tweet this podcast" alt="Tweet this podcast" aria-label="Tweet this podcast" role="button" tabindex="0" onclick="socialPodcastShare('twitter','chID23','ch',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15" border="0" title="Copy link to clipboard" alt="Copy link to clipboard" aria-label="Copy link to clipboard" role="button" tabindex="0" onclick="socialPodcastShare('link','chID23','ch',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=23" target="_blank" title="RSS" aria-label="Open RSS in new window" class="songRssLink ">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">See what's trending in the world around you with our weekly podcasts. New podcasts go up every Friday at 8pm. <P></span></div>
+												<div class="rowElmCH"></div>
+											</div>
+
+										<div class="openCloseChannel"  role="button" tabindex="0" alt="Worldwide Trends" aria-label="Worldwide Trends" onclick="openCHsh('23','')"><span>more &raquo;</span></div>
+									</div>
+								
+									<div id="shID12" class="shRow chshRow on-demand-row cellBkgColor " data-userinteraction="1" data-chid="23" data-shid="12" style="padding-bottom:10px;overflow:hidden;">
+										<img  role="button" tabindex="0" onclick="openCHsh('23','12')"  alt="Daily Scoop with Ashley" aria-label="Daily Scoop with Ashley" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/s12/coverArt.jpg"/>
+										<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"   role="button" tabindex="0" onclick="openCHsh('23','12')">Daily Scoop with Ashley</h3>
+												<div class="shareShDiv">
+													<div style="float:left;margin-right:5px;cursor:pointer">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','shID12','sh',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','shID12','sh',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','shID12','sh',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=23&shid=12" target="_blank" class="songRssLink">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">Spend an hour with Ashley each day to hear what she has to say about what's going on in the world. <P></span></div>
+												<div class="rowElmCH"></div>
+										</div>
+
+										<div class="openCloseShow"  role="button" tabindex="0"  alt="Daily Scoop with Ashley" aria-label="Daily Scoop with Ashley" onclick="openCHsh('23','12')"><span>more &raquo;</span></div>
+									</div>
+								
+									<div id="shID13" class="shRow chshRow on-demand-row cellBkgColor " data-userinteraction="1" data-chid="22" data-shid="13" style="padding-bottom:10px;overflow:hidden;">
+										<img  role="button" tabindex="0" onclick="openCHsh('22','13')"  alt="Family Life" aria-label="Family Life" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/s13/coverArt.jpg"/>
+										<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"   role="button" tabindex="0" onclick="openCHsh('22','13')">Family Life</h3>
+												<div class="shareShDiv">
+													<div style="float:left;margin-right:5px;cursor:pointer">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','shID13','sh',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','shID13','sh',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','shID13','sh',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=22&shid=13" target="_blank" class="songRssLink">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">Our favorites... <P></span></div>
+												<div class="rowElmCH"></div>
+										</div>
+
+										<div class="openCloseShow"  role="button" tabindex="0"  alt="Family Life" aria-label="Family Life" onclick="openCHsh('22','13')"><span>more &raquo;</span></div>
+									</div>
+								
+									<div id="chID24"  class="chRow chshRow on-demand-row cellBkgColor themeFontColorDark" data-userinteraction="1" data-chid="24" style="padding-bottom:10px;overflow:hidden;">
+
+											<img  role="button" tabindex="0" onclick="openCHsh('24','')" alt="Personal Topics" aria-label="Personal Topics" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/c24/coverArt.jpg"/>
+											<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"  role="button" tabindex="0" onclick="openCHsh('24','')">Personal Topics</h3>
+												<div class="shareChDiv">
+													<div style="float:left;margin-right:5px;">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15"  class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook" aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook" role="button" tabindex="0" onclick="socialPodcastShare('facebook','chID24','ch',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15" border="0" title="Tweet this podcast" alt="Tweet this podcast" aria-label="Tweet this podcast" role="button" tabindex="0" onclick="socialPodcastShare('twitter','chID24','ch',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15" border="0" title="Copy link to clipboard" alt="Copy link to clipboard" aria-label="Copy link to clipboard" role="button" tabindex="0" onclick="socialPodcastShare('link','chID24','ch',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=24" target="_blank" title="RSS" aria-label="Open RSS in new window" class="songRssLink ">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">Here we talk about all things personal, from skincare to diets. <P></span></div>
+												<div class="rowElmCH"></div>
+											</div>
+
+										<div class="openCloseChannel"  role="button" tabindex="0" alt="Personal Topics" aria-label="Personal Topics" onclick="openCHsh('24','')"><span>more &raquo;</span></div>
+									</div>
+								
+								<div class="on-demand-row" data-chid="22" data-shid="13" data-odid="od_892322" id="od_892322">
+
+									<div id="on-demand-on-air-11" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892322/coverArt.png" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="11"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(11,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Donate Cars
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:00:58 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892322','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892322','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892322','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892322"><script language="javascript">convertUTCDateToLocalDate('2019-09-18 12:39:35.197','entered_ts_892322')</script></div> Donate Cars<br> Cars4u<br> <br><span class="f08em">Donate your car to help those in need. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="24" data-shid="" data-odid="od_892325" id="od_892325">
+
+									<div id="on-demand-on-air-12" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892325/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="12"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(12,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Proactiv
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:01 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892325','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892325','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892325','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892325"><script language="javascript">convertUTCDateToLocalDate('2019-09-18 12:39:35.213','entered_ts_892325')</script></div> Proactiv<br> It Works!<br> <br><span class="f08em">Hear how Proactiv is helping millions of people battle acne. Buy today and receive a second bottle for free! <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="24" data-shid="" data-odid="od_892326" id="od_892326">
+
+									<div id="on-demand-on-air-13" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892326/coverArt.png" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="13"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(13,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Debt Solutions
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:00 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892326','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892326','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892326','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892326"><script language="javascript">convertUTCDateToLocalDate('2019-09-18 12:39:35.22','entered_ts_892326')</script></div> Debt Solutions<br> Part 1<br> <br><span class="f08em">Here we talk about debt solutions and how we can help you consolidate your payments into one. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="22" data-shid="14" data-odid="od_892320" id="od_892320">
+
+									<div id="on-demand-on-air-14" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892320/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="14"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(14,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Dish Network
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:00 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892320','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892320','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892320','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892320"><script language="javascript">convertUTCDateToLocalDate('2019-09-18 12:39:35.187','entered_ts_892320')</script></div> Dish Network<br> TV<br> <br><span class="f08em"> Dish Network is great, but what's the best option for satellite tv? Find out. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+									<div id="shID14" class="shRow chshRow on-demand-row cellBkgColor " data-userinteraction="1" data-chid="22" data-shid="14" style="padding-bottom:10px;overflow:hidden;">
+										<img  role="button" tabindex="0" onclick="openCHsh('22','14')"  alt="Product Reviews" aria-label="Product Reviews" class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/s14/coverArt.jpg"/>
+										<div class="songDetail">
+												<h3 class="mr20 menuHeader" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px"   role="button" tabindex="0" onclick="openCHsh('22','14')">Product Reviews</h3>
+												<div class="shareShDiv">
+													<div style="float:left;margin-right:5px;cursor:pointer">Share:</div>
+													<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','shID14','sh',$(this));" />
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','shID14','sh',$(this));" /></a>
+													<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','shID14','sh',$(this));" /></a>
+													<a href="https://radio.securenetsystems.net/dx/podcast_rss.cfm?stationCallSign=DEMOSTN&chId=22&shid=14" target="_blank" class="songRssLink">RSS</a>
+												</div><br>
+												<div class="chshDescription"><br><span class="f08em">We review the best products and services that can benefit you in all aspects of life. <P></span></div>
+												<div class="rowElmCH"></div>
+										</div>
+
+										<div class="openCloseShow"  role="button" tabindex="0"  alt="Product Reviews" aria-label="Product Reviews" onclick="openCHsh('22','14')"><span>more &raquo;</span></div>
+									</div>
+								
+								<div class="on-demand-row" data-chid="23" data-shid="12" data-odid="od_61320" id="od_61320">
+
+									<div id="on-demand-on-air-16" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/61320/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="16"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(16,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Another Podcast
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:26 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_61320','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_61320','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_61320','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_61320"><script language="javascript">convertUTCDateToLocalDate('2013-01-08 17:43:43.81','entered_ts_61320')</script></div> SSI<br> SSI Volume 2<br> <br><span class="f08em">More good stuff on podcasts.  <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="24" data-shid="" data-odid="od_892323" id="od_892323">
+
+									<div id="on-demand-on-air-17" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/892323/coverArt.jpeg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="17"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(17,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															US Tax Shield
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:00 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_892323','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_892323','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_892323','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_892323"><script language="javascript">convertUTCDateToLocalDate('2019-09-18 12:39:35.2','entered_ts_892323')</script></div> US Tax Shield<br> Taxes<br> <br><span class="f08em">US Tax Shield can help you with taxes, no matter how much. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="23" data-shid="12" data-odid="od_734361" id="od_734361">
+
+									<div id="on-demand-on-air-18" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/734361/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="18"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(18,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Podcast 1
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:01:53 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_734361','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_734361','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_734361','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_734361"><script language="javascript">convertUTCDateToLocalDate('2019-01-30 15:05:25.243','entered_ts_734361')</script></div> SSI<br> SSI Volume 1<br> <br><span class="f08em">Good stuff on podcasts.  <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="23" data-shid="12" data-odid="od_62186" id="od_62186">
+
+									<div id="on-demand-on-air-19" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/62186/coverArt.jpg" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="19"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(19,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Great Stuff
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:03:50 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_62186','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_62186','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_62186','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_62186"><script language="javascript">convertUTCDateToLocalDate('2013-01-18 14:34:05.82','entered_ts_62186')</script></div> Cirrus Streaming<br> Cirrus Volume 1<br> <br><span class="f08em">Podcasting is a great way to get your message out there and create a following. Upload your files to become a podcaster. <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+								<div class="on-demand-row" data-chid="23" data-shid="12" data-odid="od_62187" id="od_62187">
+
+									<div id="on-demand-on-air-20" class="on-demand-state fL"><img class="songCover ondemandcoverart" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/podcasts/62187/coverArt.JPG" style="width:40px"/></div>
+									<div class="on-demand-media-details dT fL cP" data-rowid="20"  role="button" tabindex="0" title="Play" onclick="if(downloadClick==1){downloadClick=0}else{loadMediaClick(20,true);}">
+										<div class="top-menu-button-c1">
+											<div class="top-menu-button-c2">
+												<div class="menuHeader oE">
+
+														<p class="fL mr20 songTitle" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															Interesting Facts
+														</p>
+														<p class="fR mr20" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:0px">
+															00:06:37 
+														</p>
+														<br>
+														<div class="shareChDiv" style="float:right;font-size:12px;line-height:15px;margin-top:5px;">
+															<div style="float:left;margin-right:5px;">Share:</div>
+															<img style="float:left;margin-right:5px;cursor:pointer" src="images/facebookIcon.png" height="15" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this podcast on Facebook"  aria-label="Share this podcast on Facebook" alt="Share this podcast on Facebook"  role="button" tabindex="0" onclick="socialPodcastShare('facebook','od_62187','od',$(this));" />
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-twitter3" src="images/twitterIcon.png" class="menuIcon" height="15"  border="0" title="Tweet this podcast" aria-label="Tweet this podcast" alt="Tweet this podcast"  role="button" tabindex="0" onclick="socialPodcastShare('twitter','od_62187','od',$(this));" /></a>
+															<img style="float:left;margin-right:5px;cursor:pointer" id="media-icons-link" src="images/linkIcon.png" class="menuIcon" height="15"  border="0" title="Copy link to clipboard" aria-label="Copy link to clipboard" alt="Copy link to clipboard"  role="button" tabindex="0" onclick="socialPodcastShare('link','od_62187','od',$(this));" /></a>
+													
+														</div>
+													<div style="clear:both">
+													<div style="font-size:12px;" id="entered_ts_62187"><script language="javascript">convertUTCDateToLocalDate('2013-01-18 14:36:05.577','entered_ts_62187')</script></div> Cirrus Streaming<br> Cirrus Volume 2<br> <br><span class="f08em">Interesting fact about podcasting: it's easy with Cirrus Streaming Podcasting Platform! <P></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br style="clear:both"/>
+								</div>
+								
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-help" class="dH">
+				<div>
+					<img src="images/help.png" alt="Help" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Help</div>
+					<div class="player-apps-content">
+						<p><b>If you accessed the player from a desktop computer (PC or Mac)</b></p>
+						<ul>
+							<li>For the best experience, we recommend upgrading to the latest version of your Internet browser</li>
+							<li>If the stream is not audible, or doesn't start, please verify that you have the latest version of Adobe Flash plug-in installed.</li>
+							<li>The player is known to work on Windows, Mac OS and Linux, using Chrome, Firefox, Safari or Internet Explorer</li>
+						</ul>
+						<br />
+						<p><b>If you accessed the player from a mobile device</b></p>
+						<ul>
+							<li>If this station has a mobile app, we recommend installing and using it for the best experience</li>
+							<li>Since Adobe Flash is not supported on most mobile devices, you may not be able to listen to the audio stream; however, you can use most of the interactive features of the player</li>
+						</ul>
+						<br />
+						<p><b>Privacy Policy</b></p>
+						<p>
+						This streaming player is provided by Securenet Systems on behalf of the broadcaster.</p>
+<p><strong>Personal data processing and storage:</strong><br>
+Securenet Systems does not process and/or store personal information about you, except as outlined below:<br/>
+<ul>
+<li>When a broadcaster displays an information collection form (such as demographics, where you can tell the station more about you, song requests, or similar types of contact forms). In this case, Securenet Systems collects the data and forwards it to the station; we do not store it, nor share it with anyone else.</li>
+<li>When a broadcaster restricts access to authenticated users, in which case said broadcaster provides Securenet Systems with login credentials for validation purposes only. This information is being stored and processed by Securenet Systems, and is not shared with anyone else.</li>
+</ul>
+All personal information obtained by Securenet Systems is processed and stored in the United States of America.</p>
+
+<p>For the purposes of the EU General Data Protection Regulation (GDPR), the controller of your personal information is Securenet Systems, 101 North Federal Highway, Suite 602, Boca Raton, FL 33432, United States of America.</p>
+<p><strong>Retention period</strong><br/>
+We will not retain personal information longer than necessary to fulfill the purposes for which it is processed, including the security of our processing complying with legal and regulatory obligations (e.g. audit, accounting and statutory retention terms), handling disputes, and for the establishment, exercise or defense of legal claims in the countries where we do business.</p>
+<p><strong>Your rights</strong><br/>
+You can request to access, update or correct your personal information. You also have the right to object to direct marketing. You can contact us with your request as indicated below.<br/>
+</p>
+<p>You may have additional rights pursuant to your local law applicable to the processing. For example, if the processing of your personal information is subject to the EU General Data Protection Regulation ("GDPR"), and your personal information is processed based on legitimate interests, you have the right to object to the processing on grounds relating to your specific situation. Under GDPR you may also have the right to request to have your personal information deleted or restricted and ask for portability of your personal information.</p>
+<p><strong>Contact information</strong><br/>
+Please direct questions regarding Securenet Systems' handling of your information to:<br/>
+</p>
+<p>Securenet Systems<br/>
+Data Protection Officer<br/>
+101 North Federal Highway<br>
+Suite 602<br/>
+Boca Raton, FL 33432</p>
+<p><strong>Third parties</strong><br/>
+We may allow third-party companies to serve ads and/or collect certain anonymous information when you visit this website. These companies may use non-personally identifiable information (e.g., click stream information, browser type, time and date, subject of advertisements clicked or scrolled over) during your visits to this and other websites in order to provide advertisements about goods and services likely to be of greater interest to you. These companies typically use a cookie or third party web beacon to collect this information. To learn more about this behavioral advertising practice or to opt-out of this type of advertising, you can visit <a href="http://networkadvertising.org/choices" target="_blank" title="Networkadvertising" aria-label="Open in new window Networkadvertising">http://networkadvertising.org/choices</a>.<br/>
+</p>
+<p>Our properties may feature Nielsen proprietary measurement software, which will allow you to contribute to market research, such as Nielsen Audio. To learn more about the information that Nielsen software may collect and your choices with regard to it, please see the Nielsen Digital Measurement Privacy Policy at <a href="http://www.nielsen.com/digitalprivacy" target="_blank" title="Nielsen" aria-label="Open in new window Nielsen">http://www.nielsen.com/digitalprivacy</a>.
+</p>
+<p><strong>YouTube</strong><br/>
+Securenet Systems uses YouTube API Services to display content directly from YouTube. By interacting with our properties containing YouTube API Services, you are agreeing to be bound by the YouTube Terms of Service. Please see the <a href="https://www.youtube.com/t/terms" target="_blank" aria-label="Open in new window YouTube Terms of Service" title="Open in new window YouTube Terms of Service">YouTube Terms of Service</a>. You may also view the <a href="http://www.google.com/policies/privacy" target="_blank" aria-label="Open in new window Google Privacy Policy" title="Open in new window Google Privacy Policy">Google Privacy Policy</a>.
+</p>
+<p>
+For questions or complaints regarding Securenet Systems use of the YouTube API Services, please contact:
+</p>
+
+<p>Securenet Systems<br/>
+Data Protection Officer<br/>
+101 North Federal Highway<br>
+Suite 602<br/>
+Boca Raton, FL 33432</p>
+
+					</div>
+				</div>
+			</div>
+		
+		
+		
+
+			<div id="player-apps-cookies" class="dH">
+				<div>
+					<img src="images/help.png" alt="Cookie Policy" width="40" height="40" />
+					<div class="player-apps-title" role="heading">COOKIE POLICY</div>
+					<div class="player-apps-content">
+						<p>
+						This web site uses cookies and by continuing to use the site you agree to our use of cookies.
+						</p><p>
+						Our cookie policy explains what cookies are, how we use them on securenetsystems.net and what benefits they bring.
+						</p><p>
+						<b>What are cookies?</b><br/>
+						Cookies are small text files that are sent to and stored on your computer, smartphone or other device for accessing the internet, whenever you visit a web site. Cookies are useful because they allow a web site to recognize a user's device.
+						</p><p>
+						<b>How cookies make our web site safer and easier to use</b><br/>
+						The use of cookies is common and advantageous. We use cookies on our web site (securenetsystems.net) to create the most secure and effective web site possible for our users. The cookies allow us to improve your experience when using our web site and to ensure the site performs as you expect it to.
+						</p><p>
+						Cookies help us to personalize web content and meet the desires of our visitors. Among other things, we use cookies to avoid repeatedly displaying information meant for one-time consumption. We use cookies to safeguard your privacy. Our web site does not use cookies to collect personal information from your computer that was not initially sent as a cookie. We never store passwords or similarly sensitive data in cookies.
+						</p><p>
+						We use 'analytics' cookies to help us analyze how users use this web site. By indicating how and when visitors use the site, cookies aid us in finding out which areas are popular and which areas are not and how we can improve things for you. Many improvements and updates are based on information supplied by these cookies.
+						</p><p>
+						<b>Can cookies pass on my personal information to others?</b><br/>
+						We use 'analytics' cookies on this web site and in doing so we do share certain limited information with our third party 'analytics' provider but none of that information can be traced to an individual.
+						</p><p>
+						Our web site may contain links to other sites. Please be aware that Securenet Systems is not responsible for the privacy practices or the content of such third party websites as well as any information they might collect, even though our name or logo may appear on those sites. We encourage you to be aware when you leave our site and to read the Privacy statements of each and every web site that you visit, as the privacy policy of those sites may differ from ours.
+						</p><p>
+						<b>Third-party cookies</b><br>
+						This site may embed content provided by third-parties. Such content can be display or other medium advertisements, social media feeds, etc., which set and track their own cookies. With certain limited exceptions (such as furnishing geolocation data, if present) we do not share any information obtained about your use of this site with said providers.
+						</p><p>
+						<b>How you can manage your cookies</b><br/>
+						The browsers of most computers, smartphones and other web-enabled devices are typically set up to accept cookies. You have the option to control the acceptance of cookies yourself and, if you wish, to block them entirely by configuring your Internet browser. Please refer to the documentation for your browser to change your preferences for this.
+						</p><p>
+						Please remember that cookies are used to enable and improve certain functions on our web site. If you choose to switch certain cookies off, it is likely to affect how our site works.
+						</p><p>
+						Learn more about cookies on Wikipedia:<br/>
+						<a href="http://en.wikipedia.org/wiki/HTTP_cookie" target="_blank">en.wikipedia.org/wiki/HTTP_cookie</a>
+						</p><p>
+						To find out more about how Securenet Systems protects your privacy when using our web site, see our <a href="javascript:startApp('help')">Privacy policy</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+
+		
+
+		
+		
+			<div id="player-apps-news" class="dH">
+				<div>
+					<img src="images/news.png" alt="News" width="40" height="40" />
+					<div class="player-apps-title" role="heading">News</div>
+					<div id="player-apps-content-news" class="player-apps-content"></div>
+				</div>
+			</div>
+		
+			<div id="player-apps-sports" class="dH">
+				<div>
+					<img src="images/sports.png" alt="Sports" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Sports</div>
+					<div id="player-apps-content-sports" class="player-apps-content"></div>
+				</div>
+			</div>
+		
+			<div id="player-apps-entertainment" class="dH">
+				<div>
+					<img src="images/entertainment.png" alt="Entertainment" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Entertainment</div>
+					<div id="player-apps-content-entertainment" class="player-apps-content"></div>
+				</div>
+			</div>
+		
+			<div id="player-apps-weather" class="dH">
+				<div>
+					<img src="images/weather.png" alt="Weather" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Weather</div>
+					<div class="player-apps-content" id="player-apps-weather-content" style="background-color:#C8D6FB">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-deals" class="dH">
+				<div>
+					<img src="images/deals.png" alt="Deals & coupons" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Deals & coupons</div>
+					<div class="player-apps-content">
+						<p style="margin-left: 40px;"><img alt="" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/DEMOSTN/v5/content/images/coupon-email-pcrte34.gif" style="width: 350px; height: 263px;" /></p>
+
+<p style="margin-left: 80px;">&nbsp;</p>
+
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-request" class="dH">
+				<div>
+					<img src="images/request.png" width="40" alt="song request" height="40" />
+					<div class="player-apps-title" role="heading">Song request</div>
+					<div class="player-apps-content">
+						<p>Is there a particular song you'd like to have us play? Fill out & stay tuned!<br />
+						Your email address will not be used for any other purpose.</p>
+						<div style="clear:both;padding-top:0px;float:right;margin-right:2px;">
+								<script src='https://www.google.com/recaptcha/api.js'></script>
+								<div class="g-recaptcha" data-sitekey="6Ld3unQUAAAAAN5U_Qq7hGSAirQ8xohsSNb0aEwO"></div>
+							</div>
+						<input type="text" id="songRequestName" style="width:230px;" value="Your name" aria-label="Your name" size="40" maxlength="64"  role="button" tabindex="0" onclick="fieldDesc(this,'in','Your name',2);" onBlur="fieldDesc(this,'out','Your name',2);">
+						<br /><br />
+						<input type="text" id="songRequestEmail" style="width:230px;" value="Your email address" aria-label="Your email address" size="40" maxlength="64"  role="button" tabindex="0" onclick="fieldDesc(this,'in','Your email address',10);" onBlur="fieldDesc(this,'out','Your email address',10);">
+						<br /><br />
+						<input type="text" id="songRequestTitle" value="Song request" aria-label="Song request" size="40" maxlength="64"  role="button" tabindex="0" onclick="fieldDesc(this,'in','Song request',5);" onBlur="fieldDesc(this,'out','Song request',5);">
+
+						<br />
+
+						<div class="fL">
+						<p>I accept Securenet Systems' <a href="javascript:startApp('help')" style="color:#416DFF">Privacy Statement</a></p>
+						<input type="button" value="Send request"  role="button" tabindex="0" onclick="songRequest();"></div>
+						<div id="songRequestErr" class="fL ml10 red formErrMsg"></div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-playlist" class="dH">
+				<div>
+					<img src="images/media-playlist.png" alt="Recently played" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Recently played</div>
+					<div>
+						<iframe id="player-apps-frame-playlist" class="player-apps-frame" frameborder="no" scrolling="no" src="sd/index.cfm?stationCallSign=DEMOSTN" allowtransparency="true"></iframe>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-lyrics" class="dH">
+				<div>
+					<img src="images/media-lyrics.png" alt="Song lyrics" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Song lyrics</div>
+					<div class="player-apps-content" id="player-apps-content-lyrics"></div>
+				</div>
+			</div>
+		
+			<div id="player-apps-send-to-mobile" class="dH">
+				<div>
+					<img src="images/media-send-to-mobile.png" alt="Send to mobile" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Send to mobile</div>
+					<div class="player-apps-content">
+						<br /><br />
+						<div class="playerAppSendToMobileQR-wrapper fL mr20">
+							<div id="playerAppSendToMobileQR"></div>
+						</div>
+						<div>
+							<div class="f15em">Scan the QR code to send the player to your compatible mobile device.</div>
+							<div><br />If your mobile device doesn't have a QR scanning app, download a free one from your device's app store.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-timeout" class="dH">
+				<div>
+					<img src="images/on-air.png" alt="Are you still here?" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Are you still here?</div>
+					<div class="player-apps-content">
+						<div id="playerAppTimeoutIni">
+							<div class="fL">Due to inactivity on the player, the stream will stop in&nbsp;</div><div id="sTO_remTime" class="fL">60 seconds</div>
+							<br /><br />
+							<div  role="button" tabindex="0" onclick="streamTimeoutCancel();" class="cP">Click here to continue listening</div>
+						</div>
+						<div id="playerAppTimeoutOn" class="dH">
+							<p>The audio stream has been stopped due to inactivity on the player.</p>
+							<div  role="button" tabindex="0" onclick="streamTimeoutReset();" class="cP">Click here to resume listening</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-top-menu-4" class="dH">
+				<div>
+					<img src="images/web.png" alt="" width="40" height="40" />
+					<div class="player-apps-title" role="heading"></div>
+					<div class="player-apps-content">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-top-menu-3" class="dH">
+				<div>
+					<img src="images/web.png" alt="Live Feed" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Live Feed</div>
+					<div class="player-apps-content">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-top-menu-2" class="dH">
+				<div>
+					<img src="images/web.png" alt="Podcasts" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Podcasts</div>
+					<div class="player-apps-content">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div id="player-apps-top-menu-1" class="dH">
+				<div>
+					<img src="images/web.png" alt="Home" width="40" height="40" />
+					<div class="player-apps-title" role="heading">Home</div>
+					<div class="player-apps-content">
+						<p>This is an example of the content section that opens within the player. You can add as much text and as many images as you want.</p>
+
+<p><span style="line-height: 1.6em;">You can also upload a player skin takeover. The player&#39;s background will refresh to whatever image you upload. This is great for sponsorships and premium ad sales. Or just great to use if you have multiple content sections and want to differentiate.</span></p>
+
+					</div>
+				</div>
+			</div>
+		
+		
+
+	</div>
+	
+
+<div id="playerDiv" class="player-div" role="main">
+
+	 
+
+		<div id="transport-icons">
+			<img id="transport-play" src="images/transport-play.png" class="player-div-img dH cP" width="80" height="80"  role="button" tabindex="0" onclick="transportAction('play',true);" alt="Start playing media" title="Start playing media" aria-label="Start playing media" />
+			<img id="transport-pause" src="images/transport-pause.png" class="player-div-img dH cP" width="80" height="80"  role="button" tabindex="0" onclick="transportAction('pause',true);" alt="Pause media" title="Pause media" aria-label="Pause media" />
+			<img id="transport-buffering" src="images/transport-buffering.gif" class="player-div-img dH cP" width="54" height="55" alt="Preparing media, please wait...." title="Preparing media, please wait...." />
+		</div>
+
+		<img id="now-playing-album-art" src="images/dot_blank.gif" tabindex="0" alt="Click for song-related options" class="player-div-img cP " width="250" height="250" title="Click for song-related options" />
+
+		<div id="transport-counter-wrapper">
+			<div id="transport-counter" class="now-playing f15em tS">00:00</div>
+			<div id="transport-progress"><div id="transport-progress-bar"></div></div>
+		</div>
+
+		<div id="transport-volume-label" class="now-playing f15em tS">VOL</div>
+		<div id="transport-volume" role="button" tabindex="0" aria-label="Click to change volume" title="Click to change volume"><div id="transport-volume-bar"></div></div>
+
+		<div id="now-playing" class="now-playing tS ">
+			<div id="now-playing-title" class="menuHeader f15em"></div>
+			<div id="now-playing-artist"></div>
+			<div id="now-playing-album"></div> 
+		</div>
+		
+		
+			<div id="media-rate-wrapper" class="media-rate-wrapper tS dH">
+				<div id="media-rate-up" class="media-rate-up cP fL mr20"  role="button" tabindex="0" onclick="mediaRate('up');" title="Like this track" aria-label="Like this track"></div>
+				<div id="media-rate-down" class="media-rate-down cP fL mr20"  role="button" tabindex="0" onclick="mediaRate('down');" title="Dislike this track" aria-label="Dislike this track"></div>
+				<div id="media-rate-message" class="fL"></div>
+			</div>
+		
+
+		<div id="media-icons" role="img" aria-label="Share" class="media-icons dH">
+			<img src="images/media-playlist.png" height="30" width="30" border="0" title="View last songs played" alt="View last songs played"  role="button" tabindex="0" onclick="startApp('playlist');" />
+			<!--img src="images/media-lyrics.png" height="30" width="30" border="0" title="View song lyrics"  role="button" tabindex="0" onclick="startApp('lyrics');getSongLyrics();" /--> 
+				<img src="images/media-facebook.png" height="30" width="30" border="0" title="Share this song on Facebook" alt="Share this song on Facebook"  role="button" tabindex="0" onclick="socialShare('facebook');" />
+				<img id="media-icons-twitter" src="images/media-twitter.png" height="30" width="30" border="0" title="Tweet this song" alt="Tweet this song"  role="button" tabindex="0" onclick="socialShare('twitter');" /></a>
+			
+		</div>
+	
+	
+</div>
+
+					<div id="powered-about" role="button" tabindex="0" onClick="dspPoweredSSI();">CIRRUS&#174; &nbsp;BY SSI. WE BUILD IMMERSIVE MEDIA PLAYERS FOR TERRESTRIAL AND INTERNET RADIO STATIONS WORLDWIDE.</div>
+					<div id="powered-link" role="button" tabindex="0" onClick="openURL('http://www.securenetsystems.net');">CLICK HERE TO GET STARTED WITH</div>
+					<div id="powered-ssi" onClick="dspPoweredSSI();" role="button" tabindex="0" aria-label="powered-ssi"></div>
+				
+					<div id="menu-button-expand" class="menu-button" onClick="dspMenu();" role="button" aria-label="Show menu" tabindex="0" title="Show menu"></div>
+					<div id="menu-button-contract" class="menu-button" onClick="dspMenu();" role="button" aria-label="Show menu" tabindex="0" title="Hide menu"></div>
+				
+				
+
+				
+				<div id="bannerM" tabindex="0" role="button" aria-label="Advertising"></div>
+				<div id="bannerD" tabindex="0" role="button" aria-label="Advertising"></div>
+					
+					<div id="bannerN" class="bannerNotActive"></div>
+					<div id="bannerE" class="bannerNotActive"></div>
+					
+				
+
+				
+				<div id="mediaplayer" class="mediaplayer mediaplayer-audio"></div>
+				<div id="mediaplayerOD" class="mediaplayer videoplayer-hide"></div>
+				<div id="vpaidplayerdiv" class="mediaplayer vpaidplayer vpaidplayer-hide"></div>
+				<div id="mediaplayer-video-shader" class="mediaplayer-video mediaplayer-video-shader"></div>
+				
+
+				
+				<div class="flash-proxy">
+					
+				</div>
+				
+
+				
+				<div id="impressionDiv" class="impression-div"></div>
+				
+
+				
+
+			</div>
+		
+
+		
+		<div id="debugDiv">
+			
+		</div>
+		
+		<div class="cookieBanner" style="display:none;position:fixed;bottom:0px;left:0px;width:100%;min-height:70px;background:#cdcdcd;color:#000000!important;z-index:12"><div style="color:#000000!important;max-width:1100px;margin:0 auto;margin-top:20px;margin-bottom:20px;"><div style="float:right;width:200px;height:100%;text-align:right;"><input type="button" style="width:150px;background-color: rgba(0,0,0,0.6);	padding: 5px 0px 5px 0px;color:#fff;text-align:center;border-radius: 6px;margin:0px 0px 10px 0px;	border:0px;	font-weight:600;cursor:pointer;" name="cookieButton" id="cookieButton" onclick="acceptCookies()" value="Close"/><br><a href="javascript:void()" role="button" onclick="startApp('cookies')">cookie policy &raquo;</a></div>Securenet Systems uses cookies for the purposes of statistical analysis, improving the friendliness and usability of our website, tailoring content to your interests and engaging with social media. By visiting and using our website, you consent to our use of cookies as described in our cookie policy.</div></div>
+<script language="javascript">
+$(document).ready(function(){
+
+	if(bowser.msie && encoderType=='ACP'){
+		if(parseInt(bowser.version)<=11){
+			$('#bodyDiv').css('display','none');
+			$('.mediaplayer').remove();
+			$('body').append('<div style="font-family:Arial;position:fixed;top:0px;left:0px;right:0px;bottom:0px;text-align:center;font-size:22px;color:#ffffff;background-color:#3e3e3e;"><table border="0" style="width:100%;height:100%;border:0px;"><tr><td valign="middle" align="center">This program cannot be streamed in Internet Explorer 11.<br> Please use an alternate browser such as Edge, Chrome, or Firefox</td></tr></table></div>');
+		};
+	}
+});
+</script>
+
+	<div id="stationBlackoutMessage" style="display:none"></div>  
+
+
+	</body>
+
+</html>

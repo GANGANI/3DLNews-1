@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head><meta property="og:url" content="https://www.icontact-archive.com/1LhCmXuzVYuP1n_i7kbhFeJw_uYh45xv?w=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="static/css/jquery-ui-1.8.11-c.custom.css" type="text/css" media="all" />
+<script>
+	
+	var shortUrls = {"0":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"},"1":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"},"2":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"},"3":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"},"4":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"},"6":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"},"7":{"archiveUrl":"https:\/\/www.icontact-archive.com\/archive?c=730220&f=9905&s=12869&m=448550&t=ef1cb648b8b719503ac22d8f3a598836a92454a16ff75c8a3a6b4fc6c36d6956","shortenedUrl":"https:\/\/icont.ac\/4X3q4"}};
+	
+	(function($) {
+		$.extend({
+			getUrlVars: function()
+			{
+				var vars = [];
+				if(window.location.search.length == 0) {
+					return vars;
+				}
+				var hashes = window.location.search.slice(window.location.search.indexOf('?') + 1).split('&');
+				for (var i = 0; i < hashes.length; i++) {
+					var hash = hashes[i].split('=');
+					vars.push(hash[0]);
+					vars[hash[0]] = hash[1];
+				}
+				return vars;
+			},
+
+			getUrlVar: function(name)
+			{
+				return $.getUrlVars()[name];
+			},
+
+			getShortUrl:  function()
+			{
+				var wParameter = $.getUrlVar('w');
+				if (wParameter !== undefined && shortUrls[wParameter] !== undefined) {
+					return shortUrls[wParameter]['shortenedUrl'];
+				}
+				return shortUrls[0]['shortenedUrl'];
+			},
+
+			urlEncodeParameters: function(o)
+			{
+				tail = [];
+				$.each(o, function(key, value)
+				{
+					tail.push(key + "=" + encodeURIComponent(value));
+				})
+				return tail.join("&");
+			},
+
+           processClick: function(key,statType,baseUrl)
+           {
+               	var data = {
+						"d"  : key,
+						"t"  : statType
+					}
+
+					var w = $.getUrlVar('w');
+					if (w !== null && w !== undefined){
+						data.w = w;
+					}
+
+					var params = $.urlEncodeParameters(data);
+
+					$.getJSON(baseUrl + "/rtrack.php?" + params, '&jsoncallback=?', function(data){});
+           }
+
+		});
+
+	})(jQuery);
+
+</script>
+<meta property="og:title" content="Great news regarding Archbishop Wester&#039;s Installation Mass!" />
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="217374801631195" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+(function() {
+    $(document).ready(function() {
+            var share = $("script[type='IN/Share']").each(function(){
+				$(this).attr('data-url', $.getShortUrl());
+			});
+            var po = document.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+            po.src = 'http://platform.linkedin.com/in.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
+
+            var showDialogBox = (window.location.hash == '#linkedinshare' ? true : false);
+            if(showDialogBox) {
+                var linkedinshareDialog = $( "#linkedIn-dialog-modal" ).dialog({
+                        height: 150,
+                        width: 370,
+                        resizable: false,
+                        draggable: false,
+                        modal: true
+                });
+
+                //Work around for jQuery UI to allow limiting CSS to just the dialog and overlay
+                linkedinshareDialog.parent().wrap('<div class="__dialog_theme linkedIn"></div>')
+                         .parent().next().wrap('<div class="__dialog_theme"></div>');//the next element is the overlay
+			}
+    });
+
+    })();
+
+
+function handleLinkedInShareEvent(){
+                
+                    $.processClick("1LhCmXuzVYsZMW9aYTJBus_8Lf7oIXz9dkjutOk8WPwy5RLmUajAbBzEJnywey6R","500","https://click.icptrack.com/icp");
+                   
+                if((window.location.hash == '#linkedinshare' ? true : false)) {
+			$('#linkedInInstructions').hide();
+			$('#linkedInThankYou').show();
+			$("#linkedIn-dialog-modal").parent().delay(1000).fadeOut(function() {
+			$("#linkedIn-dialog-modal").dialog('close');
+			});
+		}
+        }
+</script>
+
+
+<div id="linkedIn-dialog-modal" class="linkedin dialogue"  style="display:none;">
+	<span id="linkedInInstructions">
+		<h2>Share this message</h2>
+		<p>Click the button below to share this on LinkedIn.</p>
+	</span>
+	<span id="linkedInThankYou" style="display:none;">
+		<h2>Thank you</h2>
+		<p>Thank you for sharing our message on LinkedIn.</p>
+	</span>
+	<div id="dialoglinkedIn" class="ui-corner-all"><script type="IN/Share" data-url="https://icont.ac/4X3q4" data-onSuccess="handleLinkedInShareEvent"></script></div>
+</div>
+<script type="text/javascript">
+window.___gcfg = {
+    lang: 'en-US'
+};
+
+(function() {
+    $(document).ready(function() {
+        var googleplusone = $("g\\:plus").each(function() {
+            $(this).attr('href', $.getShortUrl());
+        });
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+        var showDialogBox = (window.location.hash == '#googleplusone' ? true : false);
+        if (showDialogBox) {
+            var googleDialog = $("#google-dialog-modal").dialog({
+                height: 150,
+                width: 375,
+                resizable: false,
+                draggable: false,
+                modal: true
+            });
+
+            //Work around for jQuery UI to allow limiting CSS to just the dialog and overlay
+            googleDialog.parent().wrap('<div class="__dialog_theme googlePlusOne"></div>')
+                    .parent().next().wrap('<div class="__dialog_theme"></div>');//the next element is the overlay
+        }
+
+    }); //end doc ready
+})(); //end function
+
+function handleGooglePlusOneEvent(l, s){
+        if (s != 'off') {
+					
+                    $.processClick("1LhCmXuzVYsZMW9aYTJBus_8Lf7oIXz9dkjutOk8WPwy5RLmUajAbBzEJnywey6R","400","https://click.icptrack.com/icp");
+                    
+        }
+        if ((window.location.hash == '#googleplusone' ? true : false)) {
+            $('#googleInstructions').hide();
+            $('#googleThankYou').show();
+            $("#google-dialog-modal").parent().delay(1000).fadeOut(function() {
+                $("#google-dialog-modal").dialog('close');
+            });
+        }
+}
+</script>
+
+
+<div id="google-dialog-modal" class="google dialogue" style="display:none;">
+	<span id="googleInstructions">
+		<h2>+1 this message</h2>
+		<p>Click the button below to +1 this on Google+.</p>
+	</span>
+	<span id="googleThankYou" style="display:none;">
+		<h2>Thank you</h2>
+		<p>Thank you for sharing our message on Google+.</p>
+	</span>
+
+    <div id="dialogGoogle" class="ui-corner-all"><g:plusone size="tall" annotation="none" callback="handleGooglePlusOneEvent" href="https://icont.ac/4X3q4"></g:plusone></div>
+</div>
+<script>
+	(function($) {
+
+		$(document).ready(function() {
+			$('a[class="twitter-share-button"]').each(function()
+			{
+				$(this).attr('data-url', $.getShortUrl());
+			});
+
+		$.getScript("http://platform.twitter.com/widgets.js", function(){
+			var data = {
+			
+				"d"  : "1LhCmXuzVYsZMW9aYTJBus_8Lf7oIXz9dkjutOk8WPwy5RLmUajAbBzEJnywey6R",
+				"t"  : "300"
+			
+			}
+
+			var w = $.getUrlVar('w');
+			if (w !== null && w !== undefined) {
+				data.w = w;
+			}
+
+			var params = $.urlEncodeParameters(data);
+
+			function handleTweetEvent(event){
+						
+							$.getJSON("https://click.icptrack.com/icp/rtrack.php?" + params, '&jsoncallback=?',
+						
+								function(data){}
+								);
+			}
+
+			if($.browser.msie) {
+				twttr.events.bind('click',
+					handleTweetEvent
+				);
+			}
+			else {
+				twttr.events.bind('tweet',
+					handleTweetEvent
+				);
+			}
+		})
+});
+})(jQuery);
+
+
+</script>
+<div id="fb-root"></div>
+
+<script>
+	(function()	{
+		$(document).ready(function() {
+			var fblike = $("fb\\:like").each(function(){
+				$(this).attr('href', $.getShortUrl());
+			});
+			var e = document.createElement('script');
+			var showDialogBox = (window.location.hash == '#fblike' ? true : false);
+			e.type = 'text/javascript';
+			e.src = document.location.protocol + i18n.global.facebook.api_url;
+			e.async = true;
+			document.getElementById('fb-root').appendChild(e);
+
+			window.fbAsyncInit = function()	{
+				FB.init({appId:'217374801631195', status: true, cookie: true,xfbml: true, oauth: true});
+
+				FB.Event.subscribe('edge.create', function(href, widget) {
+					if(showDialogBox) {
+							$('#likeInstructions').hide();
+							$('#likeThankYou').show();
+							$("#dialog-modal").parent().delay(1000).fadeOut(function() {
+								$("#dialog-modal").dialog('close');
+							});
+					}
+					
+                    $.processClick("1LhCmXuzVYsZMW9aYTJBus_8Lf7oIXz9dkjutOk8WPwy5RLmUajAbBzEJnywey6R","200","https://click.icptrack.com/icp");
+                    
+				});
+
+			};
+
+			if(showDialogBox) {
+				var likeDialog = $( "#dialog-modal" ).dialog({
+					height: 150,
+					width: 370,
+					resizable: false,
+					draggable: false,
+					modal: true
+				});
+
+				//Work around for jQuery UI to allow limiting CSS to just the dialog and overlay
+				likeDialog.parent().wrap('<div class="__dialog_theme facebook"></div>')
+					 .parent().next().wrap('<div class="__dialog_theme"></div>');//the next element is the overlay
+			}
+		});
+	}());
+
+
+</script>
+
+<div id="dialog-modal" class="facebook dialogue" style="display:none;">
+	<span id="Instructions">
+		<h2>Like this message.</h2>
+		<p>Click the button below to like this on Facebook.</p>
+	</span>
+	<span id="likeThankYou" style="display:none;">
+		<h2>Thank you</h2>
+		<p>Thank you for sharing our message on Facebook.</p>
+	</span>
+	<div id="dialogLike" class="ui-corner-all"><span style="width:84px;height:20px;overflow:hidden;display:inline-block;"><fb:like href="https://icont.ac/4X3q4" show_faces="false" width="50" font="" layout="button_count" ref=""></fb:like></span></div>
+
+</div><table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ebedee" style="background-color:#ebedee"><tbody><tr><td align="center" style="text-align:left"><table align="center" cellpadding="0" cellspacing="0" id="topMessageWrapper" style="background-color: #ebedee; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px; width: 560px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; border-top: 0px none transparent; border-right: 0px none transparent; border-bottom: 0px none transparent; border-left: 0px none transparent; margin: 0 auto;" bgcolor="#ebedee" width="560"><tbody><tr><td>
+<!-- DO NOT DELETE OR CHANGE - This template derived from HeadMainAndFoot --><table border="0" cellpadding="0" cellspacing="0" width="560"><tbody>
+<tr><td style="background-color: transparent; border-width: 0px; border-style: solid; border-color: transparent; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" bgcolor="transparent">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td style="padding-top: 10px; padding-right: 0px; padding-bottom: 15px; padding-left: 0px; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" unselectable="on" valign="top">
+<div style="border-color: #c2d9e7;" class>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="word-wrap: break-word; table-layout: fixed;"><tbody><tr><td style="background-color: transparent; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" bgcolor="transparent">
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<img alt src="https://staticapp.icpsc.com/icp/loadimage.php/mogile/730220/be94106ad8bd88858900357d23f77610/image/jpeg" style="border: 0px solid transparent; margin: 0px; width: 560px; height: 162px; display: inline;" width="560" height="162"><a href="https://click.icptrack.com/icp/rclick.php?cid=730220&amp;mid=448550&amp;destination=http%3A%2F%2Ftwitter.com%2F%23%2521%2FASFOfficial&cfid=9905&vh=bf04e9f46f1b406cb717c1bf5fa3323667f2755c24891af4cdc21c599a9f8dc4" style="color: #5a82a3;"><img alt src="http://files.icontact.com/templates/v2/GlobalTechPostcardGray/images/twitter.gif" style="border: 0px solid transparent; margin: 0px; float: right; display: block;" align="right"></a><a href="https://click.icptrack.com/icp/rclick.php?cid=730220&amp;mid=448550&amp;destination=http%3A%2F%2Fwww.facebook.com%2Fpages%2FAlbuquerque-NM%2FArchdiocese-of-Santa-Fe-Official%2F10150094714850134&cfid=9905&vh=5ec8267f6c76b58772c59217c8baf43790ddb5c27a3ee6e0180fe16a1dc64755" style="color: #5a82a3;"><img alt src="http://files.icontact.com/templates/v2/GlobalTechPostcardGray/images/facebook.gif" style="border: 0px solid transparent; margin: 0px; float: right; display: block;" align="right"></a></p>
+</td></tr></tbody></table>
+</div>
+<div class style="display: block; top: 0px; left: 0px; border-color: #c2d9e7;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="word-wrap: break-word; table-layout: fixed;"><tbody><tr><td style="background-color: transparent; padding-top: 11px; padding-right: 11px; padding-bottom: 11px; padding-left: 11px; border-top: 0px none transparent; border-right: 0px none transparent; border-bottom: 0px none transparent; border-left: 0px none transparent; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" bgcolor="transparent">
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 15px;"><strong>Dear friends,</strong></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	&nbsp;</p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 15px;"><strong>Just in…</strong></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	&nbsp;</p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 15px;"><strong>KRQE just informed us they will be streaming Archbishop John C. Wester’s Installation Mass, June 4, 2015!</strong></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	&nbsp;</p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 15px;"><strong>It will be streaming it on their website <a href="https://click.icptrack.com/icp/rclick.php?cid=730220&amp;mid=448550&amp;destination=http%3A%2F%2Fwww.krqe.com&cfid=9905&vh=a1cc5799d78ef29eb1d8c06a91136e2fc7f3b8893a543a4c06be0cf43b124544" style="color: #5a82a3;">www.KRQE.com</a> on Thursday, June 4, 2015 at 2:00pm.</strong></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	&nbsp;</p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 15px;"><strong>God is good…all the time!</strong></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	&nbsp;</p>
+</td></tr></tbody></table>
+</div>
+</td></tr></tbody></table>
+</td></tr>
+<tr><td style="background-color: #ffffff; border-width: 0px; border-style: solid; border-color: transparent; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" bgcolor="#ffffff">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" unselectable="on" valign="top">
+<div class style="display: block; top: 0px; left: 0px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="word-wrap: break-word; table-layout: fixed;"><tbody><tr><td style="background-color: transparent; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" bgcolor="transparent">
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 18px;"><span style="color: #5a82a3;">Archdiocese of Santa Fe Office of Communications/Media</span></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-size: 12px;"><span style="color: #5a82a3;">Celine Baca Radigan, Director</span></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 12px;"><span style="color: #45443a;">505.831.8162&nbsp; Website: <span style="color: #5a82a3;"><a href="https://click.icptrack.com/icp/rclick.php?cid=730220&amp;mid=448550&amp;destination=http%3A%2F%2Fwww%2Farchdiosf.org&cfid=9905&vh=c72b9290da52dcaf05a90964e5e0538eac0ff3f77af65dfdd71a78c8c7bf88f1" style="color: #5a82a3;">http://www.archdiosf.org</a></span></span></span></span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="color: #000000;"><img src="http://files.icontact.com/templates/v2/PaperPostcardInvite/images/facebook.gif" style="display: inline;">&nbsp; </span><a href="https://click.icptrack.com/icp/rclick.php?cid=730220&amp;mid=448550&amp;destination=http%3A%2F%2Fwww.facebook.com%2F%23%2521%2Fpages%2FArchdiocese-of-Santa-Fe-Official%2F10150094714850134&cfid=9905&vh=dcb74d07be251b22cd128f4399b062a27b4c57216eb5e9aa063383f6dd58dc3a" style="color: #5a82a3;"><span style="color: #000000;">Archdiocese of Santa Fe Official</span></a><span style="color: #000000;">&nbsp;&nbsp;</span></p>
+<p style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding: 0;">
+	<span style="color: #000000;"><img src="http://files.icontact.com/templates/v2/PaperPostcardInvite/images/twitter.gif" style="display: inline; width: 11px; height: 15px;" width="11" height="15">&nbsp; </span><a href="https://click.icptrack.com/icp/rclick.php?cid=730220&amp;mid=448550&amp;destination=http%3A%2F%2Ftwitter.com%2F%23%2521%2Fasfofficial&cfid=9905&vh=2ac2dff6cc7043b0c2cdfb28d7624f25e6abb190e17d8e7c477766b02c039277" style="color: #5a82a3;"><span style="color: #000000;">ASFOfficial</span></a><span style="color: #000000;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; </span></p>
+</td></tr></tbody></table>
+</div>
+</td></tr></tbody></table>
+</td></tr>
+<tr><td style="background-color: transparent; border-width: 0px; border-style: solid; border-color: transparent; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" bgcolor="transparent">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr><td style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; color: #000000; font-family: 'Trebuchet MS'; font-size: 11px;" unselectable="on" valign="top"></td></tr></tbody></table>
+</td></tr>
+</tbody></table>
+
+</td></tr></tbody></table></td></tr></tbody></table>
+
+
+
+<!-- <img src="https://click.icptrack.com/icp/rtrack.php?d=1LhCmXuzVYuP1n_i7kbhFY0g9VNkTSvBsNsSJjN_HNGxIb5q0C8aNA2PCw3OyDuI" width="1" height="1"> -->
+</body>
+<img src="https://click.icptrack.com/icp/rtrack.php?cid=730220&mid=448550" width="1" height="1" /></html>
