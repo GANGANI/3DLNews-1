@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="/stylesheets/text-view.css?1640672210" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/text-view.js?1640672210" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery-1.8.0.min.js?1640672210" type="text/javascript"></script>
+  <title>Dust Focus of OSHA Investigation at Sugar Plant</title>
+  <style type="text/css">
+  	#shareTip{
+  		    right: 0;
+    		background-color: rgba(62,130,247,.7);	
+    		bottom: 0;
+		    color: rgba(255,255,255,.9);
+		    line-height: 1;
+		    padding: 5px 10px;
+		    position: fixed;
+  	}
+  	#shareTip a{
+  		color: rgba(255,255,255,.9);
+  		font-weight: bold;
+  		text-decoration:none;
+  	}
+  </style>
+  <script type="text/javascript">
+      var diigo_bookmark_url = 'http://savdailynews.com/main.asp?SectionID=14&SubSectionID=151&ArticleID=26819';
+      var diigo_permalink_title='Dust Focus of OSHA Investigation at Sugar Plant';
+      var diigo_permalink_user='comdust';
+      var diigo_permalink_group='';
+      var diigo_permalink_group_display_name='';
+      var diigo_permalink_key = '1e060a990f807b1c97c43886d4f1b663';
+      var diigo_permalink_mode = 1;
+      var diigo_permalink_legacy = false;
+
+      function getDocument() {
+          $.ajax({
+              type: "GET",
+              cache: false,
+              url: '/readability',
+              data: {
+                  url: diigo_bookmark_url
+              },
+              crossDomain: false,
+              success: function (d) {
+                  if (d.code === 1) {
+                      $(d.article).appendTo($('#article_content'));
+                      $('#article_title').text(d.title);
+                      var parser = document.createElement('a');
+                      parser.href = diigo_bookmark_url;
+                      $('#article_original_link').html('<a target="_blank" href="'+diigo_bookmark_url+'">'+parser.host+'</a>');
+                      var script = document.createElement('script');
+                      script.src = '/javascripts/webtoolbar/diigolet_b_h_fn.js';
+                      $(document.body).append(script);
+                  }else{
+                  	 document.location.href = document.location.href.replace(/annotated/,"annotated/original");
+                  }
+              },
+              error: function (err) {
+                  console.log(err);
+              },
+              complete:function(){
+                 $('#loading-area').hide()
+              }
+          });
+      }
+      $(document).ready(function () {
+          getDocument();
+      })
+  </script>
+</head>
+<body style="overflow:auto">
+<div id="main" role="main">
+  <div id="readability-content">
+    <article id="readable-article">
+      <header>
+        <h2 class="title" id="article_title"></h2>
+        <div class="meta clearfix">
+          <span class="caption">From: </span>
+          <span class="original_link" id="article_original_link"></span>
+        </div>
+      </header>
+      <div class="entry-content" id="article_content">
+      </div>
+    </article>
+  </div>
+  
+  <div id="shareTip">This is an annotated view created by <i><a href="/profile/comdust">John Astad</a></i>.</div>
+  
+</div>
+
+<div class="loading-area" id="loading-area">
+  <div class="la-pacman">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+</body>
+</html>

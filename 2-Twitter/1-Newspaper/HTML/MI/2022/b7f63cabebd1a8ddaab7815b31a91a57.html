@@ -1,0 +1,2751 @@
+
+
+
+
+
+
+  
+  <!DOCTYPE html>
+<html class="uk-root" lang="en">
+<head>
+
+<script type="text/javascript" async="true">
+(function() {
+var host = 'www.clevescene.com';
+var element = document.createElement('script');
+var firstScript = document.getElementsByTagName('script')[0];
+var url = 'https://cmp.inmobi.com'
+.concat('/choice/', '3aUwSh68Wuxdp', '/', host, '/choice.js?tag_version=V3');
+var uspTries = 0;
+var uspTriesLimit = 3;
+element.async = true;
+element.type = 'text/javascript';
+element.src = url;
+firstScript.parentNode.insertBefore(element, firstScript);
+function makeStub() {
+var TCF_LOCATOR_NAME = '__tcfapiLocator';
+var queue = [];
+var win = window;
+var cmpFrame;
+function addFrame() {
+var doc = win.document;
+var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+if (!otherCMP) {
+if (doc.body) {
+var iframe = doc.createElement('iframe');
+iframe.style.cssText = 'display:none';
+iframe.name = TCF_LOCATOR_NAME;
+doc.body.appendChild(iframe);
+} else {
+setTimeout(addFrame, 5);
+}
+}
+return !otherCMP;
+}
+function tcfAPIHandler() {
+var gdprApplies;
+var args = arguments;
+if (!args.length) {
+return queue;
+} else if (args[0] === 'setGdprApplies') {
+if (
+args.length > 3 &&
+args[2] === 2 &&
+typeof args[3] === 'boolean'
+) {
+gdprApplies = args[3];
+if (typeof args[2] === 'function') {
+args[2]('set', true);
+}
+}
+} else if (args[0] === 'ping') {
+var retr = {
+gdprApplies: gdprApplies,
+cmpLoaded: false,
+cmpStatus: 'stub'
+};
+if (typeof args[2] === 'function') {
+args[2](retr);
+}
+} else {
+if(args[0] === 'init' && typeof args[3] === 'object') {
+args[3] = Object.assign(args[3], { tag_version: 'V3' });
+}
+queue.push(args);
+}
+}
+function postMessageEventHandler(event) {
+var msgIsString = typeof event.data === 'string';
+var json = {};
+try {
+if (msgIsString) {
+json = JSON.parse(event.data);
+} else {
+json = event.data;
+}
+} catch (ignore) {}
+var payload = json.__tcfapiCall;
+if (payload) {
+window.__tcfapi(
+payload.command,
+payload.version,
+function(retValue, success) {
+var returnMsg = {
+__tcfapiReturn: {
+returnValue: retValue,
+success: success,
+callId: payload.callId
+}
+};
+if (msgIsString) {
+returnMsg = JSON.stringify(returnMsg);
+}
+if (event && event.source && event.source.postMessage) {
+event.source.postMessage(returnMsg, '*');
+}
+},
+payload.parameter
+);
+}
+}
+while (win) {
+try {
+if (win.frames[TCF_LOCATOR_NAME]) {
+cmpFrame = win;
+break;
+}
+} catch (ignore) {}
+if (win === window.top) {
+break;
+}
+win = win.parent;
+}
+if (!cmpFrame) {
+addFrame();
+win.__tcfapi = tcfAPIHandler;
+win.addEventListener('message', postMessageEventHandler, false);
+}
+};
+makeStub();
+var uspStubFunction = function() {
+var arg = arguments;
+if (typeof window.__uspapi !== uspStubFunction) {
+setTimeout(function() {
+if (typeof window.__uspapi !== 'undefined') {
+window.__uspapi.apply(window.__uspapi, arg);
+}
+}, 500);
+}
+};
+var checkIfUspIsReady = function() {
+uspTries++;
+if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+console.warn('USP is not accessible');
+} else {
+clearInterval(uspInterval);
+}
+};
+if (typeof window.__uspapi === 'undefined') {
+window.__uspapi = uspStubFunction;
+var uspInterval = setInterval(checkIfUspIsReady, 6000);
+}
+})();
+</script>
+
+<link rel="stylesheet" type="text/css" href="/fdn-system/assets/pub/styles/desktop.min.css?cb=63d13e5b531c305cfa12b00dc802fe1f" />
+<script src="/fdn-system/assets/pub/scripts/uikit.min.js"></script>
+<script src="/fdn-system/assets/pub/scripts/uikit-icons-fdn.min.js"></script>
+<link href="/foundation/fontawesome-v6/css/all.min.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="layout" content="Home (Responsive, Live, Air)" />
+<script>
+window.__FOUNDATION_RESPONSIVE__ = true
+// 
+window.__FBAPIv__ = 'v3.2'
+// 
+</script>
+<script src="/foundation/scripts/foundation-air-2-0-1.js?cb=17ec08f7623a83e13a6088d35cee8130"></script>
+<link rel="alternate" type="application/rss+xml" title="Cleveland Scene RSS: Whole Site" href="https://www.clevescene.com/cleveland/Rss.xml" />
+<meta name="google-signin-client_id" content="831259846830-8v0ikdgi8nqu0iheh6s2p8be0hn4l6hs.apps.googleusercontent.com">
+
+
+<style type="text/css">@font-face {font-family:Lato;font-style:normal;font-weight:400;src:url(/cf-fonts/s/lato/5.0.18/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:400;src:url(/cf-fonts/s/lato/5.0.18/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:700;src:url(/cf-fonts/s/lato/5.0.18/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:700;src:url(/cf-fonts/s/lato/5.0.18/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Titillium Web;font-style:normal;font-weight:400;src:url(/cf-fonts/s/titillium-web/5.0.18/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Titillium Web;font-style:normal;font-weight:400;src:url(/cf-fonts/s/titillium-web/5.0.18/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Titillium Web;font-style:normal;font-weight:700;src:url(/cf-fonts/s/titillium-web/5.0.18/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Titillium Web;font-style:normal;font-weight:700;src:url(/cf-fonts/s/titillium-web/5.0.18/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:400;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:700;src:url(/cf-fonts/s/montserrat/5.0.16/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Righteous;font-style:normal;font-weight:400;src:url(/cf-fonts/s/righteous/5.0.18/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Righteous;font-style:normal;font-weight:400;src:url(/cf-fonts/s/righteous/5.0.18/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans+Condensed:wght@300;700&family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--pub-primary-color:#EE1C25;
+--pub-link-color:#EE1C25;
+--real-1-primary-color: #EE1C25;
+--real-1-secondary-color: #EE1C2566;
+}
+</style>
+<script> !(function () { window.googletag = window.googletag || {}; window.vmpbjs = window.vmpbjs || {}; window.vpb = window.vpb || {}; vpb.cmd = vpb.cmd || []; vpb.st=Date.now();  vpb.fastLoad = true; googletag.cmd = googletag.cmd || []; vmpbjs.cmd = vmpbjs.cmd || []; var cmds = []; try{ cmds = googletag.cmd.slice(0); googletag.cmd.length = 0; }catch(e){} var ready = false; function exec(cb) { return cb.call(googletag); } var overriden = false; googletag.cmd.push(function () { overriden = true; googletag.cmd.unshift = function (cb) { if (ready) { return exec(cb); } cmds.unshift(cb); if (cb._startgpt) { ready = true; for (var k = 0; k < cmds.length; k++) { exec(cmds[k]); } } }; googletag.cmd.push = function (cb) { if (ready) { return exec(cb); } cmds.push(cb); }; }); if(!overriden){ googletag.cmd.push = function (cb) { cmds.push(cb); }; googletag.cmd.unshift = function (cb) { cmds.unshift(cb); if (cb._startgpt) { ready = true; if (googletag.apiReady) { cmds.forEach(function (cb) { googletag.cmd.push(cb); }); } else { googletag.cmd = cmds; } } }; } var dayMs = 36e5, cb = Math.floor(Date.now()*Math.random()), vpbSrc = '//player.bidmatic.io/prebidlink/' + cb + '/wrapper_hb_745151_17747.js', pbSrc = vpbSrc.replace('wrapper_hb', 'hb'), gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; s.defer=false; c.appendChild(s); s.onload = cb; s.onerror = function(){ var fn = function(){}; fn._startgpt = true; googletag.cmd.unshift(fn); }; return s; } loadScript(pbSrc); loadScript(gptSrc); loadScript(vpbSrc); })() </script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>window.googletag = window.googletag || { cmd: [] };</script>
+<script>
+window.Foundation.Ad = Foundation.Ad || {};
+window.Foundation.Ad.slotsToDefineInHeader = ["CLE_LeaderboardHeader-1", "CLE_Footer-1", "CLE_Leaderboard-2", "CLE_Leaderboard-3", "CLE_300x250ATF-1", "CLE_Tower-2", "CLE_Reskin-1"];
+window.Foundation.Ad.setupPageTargeting = function () {
+googletag.pubads().setTargeting("template", ["Home"]); // template | Home
+googletag.pubads().setTargeting("media", ["screen"]); // media | screen
+googletag.pubads().setTargeting("vertical", ["home"]); // vertical | home
+}
+</script>
+<script src="/cleveland/scripts/gam.js?cb=a2f779e7fc8f1936452e40f0962bedd71"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K2Z8MMGQ');</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5882309-1', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview', { 'dimension1': 'home', 'dimension2': '' });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQKK3Q23Q8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag('config', 'G-NQKK3Q23Q8');
+</script>
+
+
+<script>
+var Euclid = Euclid || {}
+Euclid.CleveScene = Euclid.CleveScene || {}
+Euclid.CleveScene.vertical = Euclid.CleveScene.vertical || 'home'
+</script>
+
+
+
+
+
+
+<meta name="robots" content="max-image-preview:large" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="title" content="Cleveland Scene" />
+<meta name="description" content="Cleveland Scene is your free source for Cleveland and Northeast Ohio news, arts and culture coverage, restaurant reviews, music, things to do, photos, and more." />
+<meta name="keywords" content="Cleveland Scene, Scene, Cleveland News, Ohio News, Elections, Arts, Culture, Restaurants, Concerts, Events, Things to Do in Cleveland" />
+<title>Cleveland Scene</title>
+<meta name="news_keywords" content="cleveland scene, scene, cleveland news, ohio news, elections, arts, culture, restaurants, concerts, events" />
+<link rel="image_src" href="https://www.clevescene.com/binary/0282/adminIcon_clevescene.jpg" />
+<meta name="thumbnail" content="https://www.clevescene.com/binary/0282/adminIcon_clevescene.jpg" />
+<link rel="canonical" href="https://www.clevescene.com/" />
+<meta property="og:url" content="https://www.clevescene.com/" />
+<meta property="fb:app_id" content="242962682388947" />
+<meta property="og:site_name" content="Cleveland Scene" />
+<meta property="og:title" content="Cleveland Scene" />
+<meta property="og:image" content="https://www.clevescene.com/binary/0282/adminIcon_clevescene.jpg" />
+<meta property="og:image:width" content="366" />
+<meta property="og:image:height" content="366" />
+<meta property="og:description" content="Cleveland Scene is your free source for Cleveland and Northeast Ohio news, arts and culture coverage, restaurant reviews, music, things to do, photos, and more." />
+<meta property="og:type" content="website" />
+
+<script>window.twttr = (function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0],
+t = window.twttr || {};
+if (d.getElementById(id)) return t;
+js = d.createElement(s);
+js.id = id;
+js.src = "https://platform.twitter.com/widgets.js";
+fjs.parentNode.insertBefore(js, fjs);
+t._e = [];
+t.ready = function(f) {
+t._e.push(f);
+};
+return t;
+}(document, "script", "twitter-wjs"));</script>
+<script>jQuery(window).on('beforeprint',()=>{jQuery(`img[loading]`).each((index,item)=>{item.removeAttribute(`loading`);});});</script>
+</head>
+<body id="Home" class="clevescene Home RespOneCol">
+<script>
+jQuery(() => {
+if (Foundation.Ad && typeof(Foundation.Ad.showFooter) === 'function') {
+googletag.cmd.push(function() {
+Foundation.Ad.showFooter('CLE_Footer-1');
+});
+}
+});
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2Z8MMGQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="fb-root"></div>
+<script>
+(function () {
+var app = new Foundation.Facebook.Application();
+app.receiveAuthNotifications();
+app.receiveLikeNotifications();
+})();
+</script>
+<script>
+(function () {
+var googAuth = Foundation.Google.loadGoogleOauth().then(function(){
+//if(window.console) console.log("Foundation.Google.loadGoogleOauth OAuth initialized.")
+}.bind(this), function(){
+if(window.console) console.log("Foundation.Google.loadGoogleOauth OAuth didn't init.")
+})
+})()
+</script>
+<div id="Home" class="grid-resp-1 page layout-Home">
+<div class="ev-grid-layout ev-clamp@m ev-clamp@l">
+<div class="ev-grid-zone ev-leader-zone">
+<div class="ev-grid-col uk-width-1-1" data-ev-zone="Leader">
+</div>
+</div>
+<div class="ev-grid-zone ev-header-zone">
+<div class="ev-grid-col uk-width-1-1" data-ev-zone="GlobalHeader">
+
+<div class="GlobalHeader Home  uk-margin-remove new-header uk-root fdn-margin-vert SiteHeader comp-shell-siteheader" data-component-id="SiteHeader">
+<div class="uk-flex uk-flex-wrap fdn-site-header-flex">
+<div class="uk-hidden@m uk-margin-auto-right uk-margin-auto-vertical fdn-site-header-nav-toggle">
+<a href="#offcanvas-slide-navigation" class="fdn-nav-toggle uk-button" uk-toggle>
+<span class="uk-icon"><i class="fas fa-bars fa-2x"></i></span>
+</a>
+</div>
+<div class="uk-margin-auto uk-width-auto uk-width-1-1@m fdn-site-header-logo">
+<div class="GlobalHeader Logoresponsive  uk-margin-remove uk-root fdn-margin-vert Logo comp-shell-logo" data-component-id="Logo">
+<h1 class="uk-margin-remove">
+<a class="uk-logo" href="https://www.clevescene.com/" title="Cleveland Scene">
+<img src="https://www.clevescene.com/images/logos/mainLogo.jpg" alt="Cleveland Scene">
+</a>
+</h1>
+<div class="uk-visible@m uk-margin-auto-left uk-flex uk-flex-middle">
+<div ad-slot-div-id="CLE_LeaderboardHeader-1" display-targets="all" class="uk-width-1-1 uk-flex uk-flex-around " preset-height="true" leaderboardheader-desktop-stub hidden>
+<script>Foundation.Ad.showAd();</script>
+</div>
+</div>
+</div>
+<div id="fdn-logo-hook"></div>
+</div>
+<div class="uk-width-1-1 uk-flex-none uk-visible@m fdn-site-header-nav">
+<style>
+.uk-root .fdn-nav-parent.fdn-nav-parent > a {
+padding: 1px 2px !important;
+}
+</style>
+
+<div id="NavigationHorizontal" class="GlobalHeader NavigationHorizontalresponsive uk-margin-remove   uk-root fdn-margin-vert NavigationHorizontal comp-shell-navigationhorizontal" data-component-id="NavigationHorizontal">
+<nav class="fdn-nav-block uk-navbar-container uk-navbar-transparent
+uk-responsive-width uk-visible@m" id="mainNav" uk-navbar>
+<ul class="site-nav-source uk-navbar-nav uk-width-1-1">
+<li class="fdn-nav-parent uk-parent uk-visible@m fdn-site-nav-home" id="Home">
+<a href="https://www.clevescene.com/cleveland/home" target="_self">Home</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="newsviews">
+<a href="https://www.clevescene.com/news" target="_self">News &amp; Views</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item uk-hidden@m"><a href="https://www.clevescene.com/news" target="_self" title>Latest News &amp; Views</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/topic/abortion-rights-39351653" target="_self" title>Abortion Rights</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/cleveland-news-38416998" target="_self" title>Cleveland News</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/ohio-news-38417004" target="_self" title>Ohio News</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/cleveland-sports-38417010" target="_self" title>Cleveland Sports</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland-guides" target="_self" title>Cleveland Guides</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/IssueArchives?issue=this%20week" target="_self" title>Digital Issue</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/slideshows/?section=1392923" target="_self" title>News Slideshows</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="artsculture">
+<a href="https://www.clevescene.com/arts" target="_self">Arts &amp; Culture</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item uk-hidden@m"><a href="https://www.clevescene.com/arts" target="_self" title>Latest Arts &amp; Culture</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/arts-stories-and-interviews-38417016" target="_self" title>Arts &amp; Culture Interviews</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/things-to-do-38417022" target="_self" title>Things to Do</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/slideshows/?section=1392919" target="_self" title>Arts &amp; Culture Slideshows</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="film">
+<a href="https://www.clevescene.com/movies-tv" target="_self">Movies</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item uk-hidden@m"><a href="https://www.clevescene.com/movies-tv" target="_self" title>Latest Movies</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/movie-reviews-and-stories-38417028" target="_self" title>Movie Reviews and Stories</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/MovieTimes" target="_self" title>Movie Times</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/LocationSearch?locationCategory=1430798&sortType=name" target="_self" title>Find a Theater</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="fooddrink">
+<a href="https://www.clevescene.com/food-drink" target="_self">Food &amp; Drink</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item uk-hidden@m"><a href="https://www.clevescene.com/food-drink" target="_self" title>Latest Food &amp; Drink</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/food-news-38417034" target="_self" title>Food News</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/drink-news-38417327" target="_self" title>Drink News</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/slideshows/?section=1392921" target="_self" title>Food &amp; Drink Slideshows</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="music">
+<a href="https://www.clevescene.com/music" target="_self">Music</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item uk-hidden@m"><a href="https://www.clevescene.com/music" target="_self" title>Latest Music</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/music-news-38417333" target="_self" title>Music News</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/category/local-music-38417339" target="_self" title>Local Music</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/EventSearch?eventSection=1471254&sortType=date&v=d" target="_self" title>Find a Concert</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/slideshows/?section=1392924" target="_self" title>Music Slideshows</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="events">
+<a href="https://www.clevescene.com/cleveland/EventSearch?v=d" target="_self">Calendar</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/EventSearch?narrowByDate=Today" target="_self" title>Today&#39;s Events</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/EventSearch?narrowByDate=This%20Weekend&sortType=date&v=d" target="_self" title>This Weekend</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/Events/AddEvent" target="_self" title>Submit an Event</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="bestof">
+<a href="https://voting.clevescene.com" target="_self">Best Of</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item uk-hidden@m"><a href="https://www.clevescene.com/cleveland/BestOf" target="_self" title>Best Of Home</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/best-of/arts-and-entertainment" target="_self" title>Arts &amp; Entertainment</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/best-of/food-and-drink" target="_self" title>Food &amp; Drink</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/best-of/people-and-places" target="_self" title>People &amp; Places</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/best-of/bars-and-clubs" target="_self" title>Bars &amp; Clubs</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/best-of/shops-and-services" target="_self" title>Shops &amp; Services</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/best-of/sports-and-recreation" target="_self" title>Sports &amp; Recreation</a></li>
+<li class="fdn-nav-item "><a href="https://newskeepsake.com/pages/cleveland-scene" target="_blank" title>Shop Best Of Awards</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="PromosEvents">
+<a href="https://www.clevescene.com/cleveland/FreeStuff" target="_self">Promos+Events</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/FreeStuff?category=4531979" target="_self" title>Scene Events</a></li>
+<li class="fdn-nav-item "><a href="https://www.clevescene.com/cleveland/FreeStuff?category=4531976" target="_self" title>Giveaways</a></li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="Slideshows">
+<a href="https://www.clevescene.com/slideshows/" target="_self">Slideshows</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent " id="Support">
+<a href="https://clevelandscene.fundjournalism.org/scene-supporters-1/?utm_source=website&utm_medium=topnav&utm_campaign=scenesupporters" target="_blank">Support</a>
+<div class="fdn-nav-dropdown uk-navbar-dropdown" uk-dropdown="offset: 0;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent fdn-nav-login-NavigationHorizontal
+fdn-login-loggedout-container" data-view="loggedout" style="display:none">
+<a href="#LogIn" aria-label="Login">
+<i class="fas fa-user"></i>
+</a>
+</li>
+<li class="fdn-nav-parent uk-parent fdn-nav-logout-NavigationHorizontal
+fdn-login-loggedin-container" data-view="loggedin" style="display: none;">
+<a href="#"><i class="fas fa-user"></i></a>
+<div class="fdn-nav-dropdown" uk-dropdown="pos:bottom-right;">
+<ul class="fdn-nav-list uk-nav uk-navbar-dropdown-nav">
+<li class="fdn-nav-item-header">
+<span data-label="username">Username</span>
+</li>
+<li class="fdn-nav-item fdn-site-login-view-profile">
+<a href="https://posting.clevescene.com/cleveland/MyProfile">
+View Profile
+</a>
+</li>
+<li class="fdn-nav-item fdn-site-login-edit-profile">
+<a href="https://posting.clevescene.com/cleveland/Profile/MySettings">
+Edit Profile
+</a>
+</li>
+<li class="fdn-nav-item fdn-site-login-logout">
+<a href="https://posting.clevescene.com/cleveland/Logout">
+Log Out
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="fdn-nav-parent uk-parent"><a href="#"><i class="far fa-search fa-flip-horizontal fa-sm"></i></a>
+<div id="fdn-NavigationHorizontal-dropdown-hook" uk-dropdown="mode:click,hover;offset:0;pos:bottom-right;" class="GlobalHeader NavigationHorizontalresponsive uk-margin-remove  fdn-site-search-dropdown uk-root fdn-margin-vert NavigationHorizontal comp-shell-navigationhorizontal" data-component-id="NavigationHorizontal">
+<form action="https://www.clevescene.com/cleveland/Search">
+<div class="fdn-site-search-input-block ">
+<div class="uk-search uk-search-default uk-width-1-1">
+<span class="fdn-site-search-icon" uk-search-icon></span>
+<input class="fdn-site-search-input ev-search-input uk-search-input" name="keywords" placeholder="Enter Keywords..." autocomplete="off" type="search" />
+</div>
+</div>
+<div>
+<ul class="fdn-site-search-list uk-nav uk-margin-remove">
+<li><a class="fdn-site-search-item" href="https://www.clevescene.com/cleveland/ArticleArchives">in Articles &amp; Posts</a></li>
+<li><a class="fdn-site-search-item" href="https://www.clevescene.com/slideshows/">in Slideshows</a></li>
+<li><a class="fdn-site-search-item" href="https://www.clevescene.com/cleveland/EventSearch">in Events</a></li>
+<li><a class="fdn-site-search-item" href="https://www.clevescene.com/cleveland/LocationSearch">in Locations</a></li>
+<li><a class="fdn-site-search-item" href="https://www.clevescene.com/cleveland/Search">All</a></li>
+</ul>
+</div>
+<div class="fdn-site-search-submit-block ">
+<button class="uk-button fdn-button-control fdn-site-search-submit">GO</button>
+</div>
+</form>
+<script>
+jQuery("#fdn-NavigationHorizontal-dropdown-hook")
+.on("beforehide", function(){ return !jQuery(".fdn-site-search-input").is(":focus") })
+</script>
+<script>
+(function(){
+// 
+var componentId = 'NavigationHorizontal'
+var defaultSearchUrl = 'https://www.clevescene.com/cleveland/Search'
+var componentElement = jQuery('div[data-component-id='+componentId+']')
+var searchForm = componentElement.find('form') 
+var searchInput = searchForm.find('input')
+var searchLinks = searchForm.find('a')
+// 
+searchForm.submit(function(e){
+e.preventDefault()
+window.location = defaultSearchUrl + '?keywords=' + searchInput.val() 
+})
+// 
+searchLinks.on('click', function(e){
+e.preventDefault()
+window.location = jQuery(e.target).attr('href') + '?keywords=' + searchInput.val()
+})
+// 
+jQuery("#fdn-NavigationHorizontal-dropdown-hook")
+.on("beforehide", function(){
+return !jQuery(this).find(".fdn-site-search-input").is(":focus")
+})
+})()
+</script>
+</div></li>
+</ul>
+</nav>
+<div id="offcanvas-slide-navigation" uk-offcanvas="overlay: true">
+<div id="site-nav-target" class="fdn-nav-panel-block uk-offcanvas-bar">
+<ul class="site-nav-source uk-width-1-1 uk-nav uk-nav-parent-icon" uk-nav="multiple: false;">
+<li class="fdn-nav-parent uk-visible@m fdn-site-nav-home" id="offcanvas-Home"><a href="https://www.clevescene.com/cleveland/home" target="_self">Home</a></li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-LatestNewsViews">
+<a href="https://www.clevescene.com/news" target="_self">News &amp; Views<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/news" target="_self" title>Latest News &amp; Views</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/topic/abortion-rights-39351653" target="_self" title>Abortion Rights</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/cleveland-news-38416998" target="_self" title>Cleveland News</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/ohio-news-38417004" target="_self" title>Ohio News</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/cleveland-sports-38417010" target="_self" title>Cleveland Sports</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland-guides" target="_self" title>Cleveland Guides</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/IssueArchives?issue=this%20week" target="_self" title>Digital Issue</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/slideshows/?section=1392923" target="_self" title>News Slideshows</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-LatestArtsCulture">
+<a href="https://www.clevescene.com/arts" target="_self">Arts &amp; Culture<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/arts" target="_self" title>Latest Arts &amp; Culture</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/arts-stories-and-interviews-38417016" target="_self" title>Arts &amp; Culture Interviews</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/things-to-do-38417022" target="_self" title>Things to Do</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/slideshows/?section=1392919" target="_self" title>Arts &amp; Culture Slideshows</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-LatestMovies">
+<a href="https://www.clevescene.com/movies-tv" target="_self">Movies<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/movies-tv" target="_self" title>Latest Movies</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/movie-reviews-and-stories-38417028" target="_self" title>Movie Reviews and Stories</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/MovieTimes" target="_self" title>Movie Times</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/LocationSearch?locationCategory=1430798&sortType=name" target="_self" title>Find a Theater</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-LatestFoodDrink">
+<a href="https://www.clevescene.com/food-drink" target="_self">Food &amp; Drink<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/food-drink" target="_self" title>Latest Food &amp; Drink</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/food-news-38417034" target="_self" title>Food News</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/drink-news-38417327" target="_self" title>Drink News</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/slideshows/?section=1392921" target="_self" title>Food &amp; Drink Slideshows</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-LatestMusic">
+<a href="https://www.clevescene.com/music" target="_self">Music<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/music" target="_self" title>Latest Music</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/music-news-38417333" target="_self" title>Music News</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/category/local-music-38417339" target="_self" title>Local Music</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/EventSearch?eventSection=1471254&sortType=date&v=d" target="_self" title>Find a Concert</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/slideshows/?section=1392924" target="_self" title>Music Slideshows</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-TodaysEvents">
+<a href="https://www.clevescene.com/cleveland/EventSearch?v=d" target="_self">Calendar<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/EventSearch?narrowByDate=Today" target="_self" title>Today&#39;s Events</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/EventSearch?narrowByDate=This%20Weekend&sortType=date&v=d" target="_self" title>This Weekend</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/Events/AddEvent" target="_self" title>Submit an Event</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-BestOfHome">
+<a href="https://voting.clevescene.com" target="_self">Best Of<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/BestOf" target="_self" title>Best Of Home</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/best-of/arts-and-entertainment" target="_self" title>Arts &amp; Entertainment</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/best-of/food-and-drink" target="_self" title>Food &amp; Drink</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/best-of/people-and-places" target="_self" title>People &amp; Places</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/best-of/bars-and-clubs" target="_self" title>Bars &amp; Clubs</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/best-of/shops-and-services" target="_self" title>Shops &amp; Services</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/best-of/sports-and-recreation" target="_self" title>Sports &amp; Recreation</a></li>
+<li class="fdn-nav-item"><a href="https://newskeepsake.com/pages/cleveland-scene" target="_blank" title>Shop Best Of Awards</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent uk-parent " id="offcanvas-SceneEvents">
+<a href="https://www.clevescene.com/cleveland/FreeStuff" target="_self">Promos+Events<span uk-icon="chevron-left"></span></a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/FreeStuff?category=4531979" target="_self" title>Scene Events</a></li>
+<li class="fdn-nav-item"><a href="https://www.clevescene.com/cleveland/FreeStuff?category=4531976" target="_self" title>Giveaways</a></li>
+</ul>
+</li>
+<li class="fdn-nav-parent " id="offcanvas-Slideshows"><a href="https://www.clevescene.com/slideshows/" target="_self">Slideshows</a></li>
+<li class="fdn-nav-parent " id="offcanvas-Support"><a href="https://clevelandscene.fundjournalism.org/scene-supporters-1/?utm_source=website&utm_medium=topnav&utm_campaign=scenesupporters" target="_blank">Support</a></li>
+<li class="fdn-nav-parent fdn-nav-login-NavigationHorizontal
+fdn-login-loggedout-container" data-view="loggedout" style="display:none">
+<a href="#LogIn" aria-label="Login">
+<i class="fas fa-user"></i>&nbsp;Login
+</a>
+</li>
+<li class="fdn-nav-parent uk-parent fdn-nav-logout-NavigationHorizontal
+fdn-login-loggedin-container" data-view="loggedin" style="display: none;">
+<a href="#">
+<span class="uk-text-left" data-label="username">Username</span>
+<i class="fas fa-user"></i>
+<span uk-icon="chevron-left"></span>
+</a>
+<ul class="fdn-nav-list uk-nav-sub">
+<li class="fdn-nav-item fdn-site-login-view-profile">
+<a href="https://posting.clevescene.com/cleveland/MyProfile">
+View Profile
+</a>
+</li>
+<li class="fdn-nav-item fdn-site-login-edit-profile">
+<a href="https://posting.clevescene.com/cleveland/Profile/MySettings">
+Edit Profile
+</a>
+</li>
+<li class="fdn-nav-item fdn-site-login-logout">
+<a href="https://posting.clevescene.com/cleveland/Logout">
+Log Out
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<script>jQuery('body').append(jQuery('#offcanvas-slide-navigation'))</script>
+<script> new Foundation.LoginRequiredComponent('#NavigationHorizontal') </script>
+</div>
+</div>
+<div class="uk-hidden@m uk-margin-auto-left uk-margin-auto-vertical fdn-site-header-search-toggle">
+<span class="fdn-nav-toggle uk-button" uk-toggle="target: #fdn-SiteSearchModalOnly-modal-hook">
+<span class="uk-icon"><i class="fas fa-search fa-2x"></i></span>
+</span>
+<div class="GlobalHeader SiteSearchModalOnlyShellresponsive   uk-root fdn-margin-vert SiteSearchModalOnly comp-shell-search" data-component-id="SiteSearchModalOnly">
+<div id="fdn-SiteSearchModalOnly-modal-hook" class="fdn-site-search-modal" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<h2 class="uk-modal-title">Search</h2>
+<button class="uk-modal-close uk-modal-close-default" type="button" uk-close></button>
+<form action="https://www.clevescene.com/cleveland/Search" class="uk-flex uk-flex-wrap">
+<div class="fdn-site-search-modal-input-block uk-width-1-1 uk-flex-none">
+<div class="uk-search uk-search-default uk-width-1-1">
+<span class="fdn-site-search-modal-icon" uk-search-icon></span>
+<input class="fdn-site-search-modal-input ev-search-input uk-search-input" name="keywords" placeholder="Enter Keywords..." autocomplete="off" type="search" />
+</div>
+</div>
+<div class="uk-width-expand">
+<ul class="fdn-site-search-modal-list uk-nav uk-margin-remove">
+<li>
+<a class="fdn-site-search-modal-item" href="https://www.clevescene.com/cleveland/ArticleArchives">
+in Articles &amp; Posts
+</a>
+</li>
+<li>
+<a class="fdn-site-search-modal-item" href="https://www.clevescene.com/cleveland/LocationSearch">
+in Locations
+</a>
+</li>
+<li>
+<a class="fdn-site-search-modal-item" href="https://www.clevescene.com/cleveland/EventSearch">
+in Events
+</a>
+</li>
+<li>
+<a class="fdn-site-search-modal-item" href="https://www.clevescene.com/slideshows/">
+in Slideshows
+</a>
+</li>
+<li>
+<a class="fdn-site-search-modal-item" href="https://www.clevescene.com/cleveland/Search">
+All
+</a>
+</li>
+</ul>
+</div>
+<div class="fdn-site-search-modal-submit-block uk-margin-auto-left uk-margin-auto-top uk-padding-xsmall-left">
+<button class="uk-button fdn-button-control fdn-site-search-modal-submit">
+GO
+</button>
+</div>
+</form>
+</div>
+</div>
+<script>
+(function(){
+// 
+var componentId = 'SiteSearchModalOnly'
+var defaultSearchUrl = 'https://www.clevescene.com/cleveland/Search'
+var componentElement = jQuery('div[data-component-id='+componentId+']')
+var searchForm = componentElement.find('form') 
+var searchInput = searchForm.find('input')
+var searchLinks = searchForm.find('a')
+// 
+searchForm.submit(function(e){
+e.preventDefault()
+window.location = defaultSearchUrl + '?keywords=' + searchInput.val() 
+})
+// 
+searchLinks.on('click', function(e){
+e.preventDefault()
+window.location = jQuery(e.target).attr('href') + '?keywords=' + searchInput.val()
+})
+// 
+jQuery("#fdn-SiteSearchModalOnly-dropdown-hook")
+.on("beforehide", function(){
+return !jQuery(this).find(".fdn-site-search-input").is(":focus")
+})
+})()
+</script>
+</div>
+</div>
+</div>
+<script>
+(() => {
+var headerZone = jQuery('.ev-grid-zone.ev-header-zone');
+var headerZoneFullStickyClass = `full-header-sticky`;
+var headerZoneSmallStickyClass = `just-nav-sticky`;
+var navScrollPosBreakPoint = 400;
+var navScrollTimeout = null
+var navScrollUpdateRate = 50;
+var navScrollLastUpdate = 0;
+var adjustNav = () => {
+var isContentPage = jQuery('#ContentDefault').length > 0;
+var offsetSelector = (isContentPage) ? '.fdn-content-body' : '.ev-grid-zone.ev-primary-zone'
+var navScrollCollapseOffset = jQuery(offsetSelector).first().offset();
+var navHeight = jQuery('.ev-grid-zone.ev-header-zone').height();
+var navScrollPosBreakPoint = navScrollCollapseOffset ? navScrollCollapseOffset.top - navHeight : navHeight;
+var isSmallDisplay = window.innerWidth < 998;
+if (isSmallDisplay) {
+headerZone.removeClass(headerZoneSmallStickyClass)
+.removeClass(headerZoneFullStickyClass);
+}
+else if (window.scrollY <= navScrollPosBreakPoint) {
+headerZone.removeClass(headerZoneSmallStickyClass)
+.addClass(headerZoneFullStickyClass);
+}
+else {
+headerZone.removeClass(headerZoneFullStickyClass)
+.addClass(headerZoneSmallStickyClass);
+}
+navScrollLastUpdate = new Date().getTime();
+// console.log(`adjustNav: navScrollLastUpdate === ${navScrollLastUpdate}`);
+}
+adjustNav();
+jQuery(adjustNav);
+jQuery(document).on('scroll', () => {
+var timeToUpdate = new Date().getTime() > navScrollLastUpdate + navScrollUpdateRate;
+if (timeToUpdate) {
+adjustNav();
+}
+clearTimeout(navScrollTimeout);
+navScrollTimeout = setTimeout(adjustNav, navScrollUpdateRate);
+});
+})();
+</script>
+</div>
+</div>
+</div>
+<div class="ev-grid-zone ev-primary-zone">
+<div class="ev-grid-col fdn-grid-main-single fdn-primary" data-ev-zone="MainTop">
+<script>
+if (Foundation.Ad && typeof(Foundation.Ad.showReskin) === 'function') {
+  googletag.cmd.push(function() {
+    Foundation.Ad.showReskin('CLE_Reskin-1');
+  });
+}
+</script><div class="uk-width-1-1 uk-flex uk-flex-around uk-margin uk-margin-top" LeaderboardHeader-mobile-stub hidden>
+</div>
+<div class="componentGrid-TwoZones-2x-1x uk-width-1-1 uk-flex uk-flex-row uk-flex-wrap fdn-component-grid-row@m" uk-height-match data-component-grid-id="HomeFeatureCalendarFollowsAd">
+<div class="uk-width-1-1 uk-width-2-3@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone">
+<div class="ComponentZoneA HomeFeatureCalendarFollowsAdresponsive   uk-root fdn-margin-vert HomeFeatureContentorSlideshow comp-landing-features" data-component-id="HomeFeatureContentorSlideshow">
+<div class="pres-ContentFeatureMagnum uk-grid uk-grid-small" uk-grid="true" data-ev-presentation="ContentFeatureMagnum" uk-height-match=".fdn-pres-image">
+<div class="uk-width-1-1">
+<div class="uk-flex uk-flex-column">
+<div>
+<div class="fdn-feature-category">
+<a href="https://www.clevescene.com">
+</a>
+</div>
+<a href="https://www.clevescene.com/cleveland/concert-photos-and-review-chappell-roan-brought-the-midwest-princess-tour-to-a-sold-out-jacobs-pavilion/Slideshow/44415098">
+<h3 class="fdn-feature-headline">
+Concert Photos and Review: Chappell Roan Brought 'The Midwest Princess' Tour to a Sold-Out Jacobs Pavilion
+</h3>
+</a>
+<div class="fdn-feature-infoline fdn-inline-split-list">
+<p><span class="fdn-teaser-by">by</span> Judie Vegh</p>
+<time>
+May 29, 2024
+</time>
+</div>
+</div>
+<div class="fdn-feature-margin-bottom uk-flex-first">
+<a href="https://www.clevescene.com/cleveland/concert-photos-and-review-chappell-roan-brought-the-midwest-princess-tour-to-a-sold-out-jacobs-pavilion/Slideshow/44415098">
+<img src="https://media2.clevescene.com/clevescene/imager/concert-photos-and-review-chappell-roan-brought-the-midwest-princess-tour-to-a-sold-out-jacobs-pavilion/u/r-big16x10/44415118/chappell-roan-11.jpg?cb=1716995934" alt="Chappell Roan, Cleveland 5/28/24" width="660" height="370" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ComponentZoneA HomeFeatureCalendarFollowsAdresponsive   uk-root fdn-margin-vert HomeFeatureFollowsContentorSlideshow comp-landing-features" data-component-id="HomeFeatureFollowsContentorSlideshow">
+<div class="pres-ContentTileRectangleBriefVariableAcross uk-grid uk-grid-small" uk-grid="true" data-ev-presentation="ContentTileRectangleBriefVariableAcross" uk-height-match=".fdn-pres-image">
+<div class="uk-width-1-2@s uk-width-1-2@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/arts/15-things-to-do-in-cleveland-this-weekend-may-30-june-2-44314574">
+<div>
+<p class="fdn-teaser-headline">
+15+ Things to Do in Cleveland This Weekend (May 30-June 2)
+</p>
+<p class="fdn-feature-subheadline">
+Pride in the CLE returns to downtown Cleveland and Chris Stapleton brings his All-American Road Show to Blossom
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Jeff Niesel
+</p>
+<time>
+May 29, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media1.clevescene.com/clevescene/imager/15-things-to-do-in-cleveland-this-weekend-may-30-june-2/u/golden-s/44402929/enp-5871.jpg?cb=1716981823" alt="Pride in the CLE returns to downtown Cleveland on Saturday." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@s uk-width-1-2@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/arts/world-premeire-of-the-prospect-of-equality-at-ensemble-theatre-celebrates-rbgs-career-highlights-44406407">
+<div>
+<p class="fdn-teaser-headline">
+World Premiere of 'The Prospect of Equality' at Ensemble Theatre Celebrates RBG's Career Highlights
+</p>
+<p class="fdn-feature-subheadline">
+Content to serve as a compilation of the Supreme Court Justice's achievements, the play does little to explore her depths or faults
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Christine Howey
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/new-headline/u/golden-s/44406409/poe_1.jpeg?cb=1716911130" alt="The Prospect of Equality, through June 9" width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="uk-width-1-1 uk-width-1-3@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone">
+<div class="ComponentZoneB HomeFeatureCalendarFollowsAdresponsive   uk-root fdn-margin-vert CalendarPicks comp-landing-calendarpicks" data-component-id="CalendarPicks">
+<div class="fdn-component-header-block uk-margin uk-margin-small-bottom">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a class="fdn-component-header-link-text" href="https://www.clevescene.com/cleveland/EventSearch" target>Events</a>
+</h3>
+</div>
+<div class="uk-flex uk-flex-column">
+<div class="fdn-calendar-picks-staff-picks-block">
+<ul class="pres-EventListStacked uk-list uk-list-divider uk-margin-remove">
+<li class="fdn-pres-item">
+<div class="uk-flex uk-flex-wrap">
+<div class="uk-width-1-1 uk-width-2-5@xs fdn-EventListStacked-image-block">
+<a href="https://www.clevescene.com/event/maggie-rose-43826561">
+<img src="https://media1.clevescene.com/clevescene/imager/maggie-rose/u/golden-s/43826560/a456b5c0-f484-4bfe-aa9f-b993605986c3_source?cb=1709566196" alt="Maggie Rose" width="600" height="371" loading="lazy" />
+</a>
+</div>
+<div class="fdn-pres-content uk-flex-1">
+<p class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/event/maggie-rose-43826561">
+Maggie Rose
+</a>
+</p>
+<div class="uk-flex uk-flex-between">
+<div class="uk-flex uk-flex-middle uk-flex-wrap uk-width-expand">
+<p class="fdn-teaser-infoline fdn-event-location uk-width-1-1 uk-margin-small-bottom">
+<span class="fdn-location-name">
+<span class="fdn-EventListStacked-at-location">@</span>
+Beachland Ballroom
+</span>
+</p>
+<p class="fdn-teaser-infoline fdn-event-date">
+Thu., May 30, 8 p.m.
+</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="uk-width-1-1 uk-flex uk-flex-center
+fdn-calendar-picks-event-links-block uk-margin-small-top">
+<ul class="uk-list uk-flex uk-flex-row fdn-separated-list fdn-calendar-event-links-block">
+<li>
+<i class="fal fa-search"></i>
+<a href="https://www.clevescene.com/cleveland/EventSearch?narrowByDate=today" target>
+All of today's events
+</a>
+</li>
+<li>
+<a href="https://www.clevescene.com/cleveland/EventSearch?feature=Staff%20Pick" target>
+Staff Picks
+</a>
+</li>
+</ul>
+</div>
+<div class="uk-width-1-1 fdn-calendar-picks-tabbed-selectors-block uk-margin-small-top">
+<ul class="uk-margin-remove-bottom" uk-switcher="animation: uk-animation-fade;active:0;swiping:false;itemNav:.fdn-tab-link" uk-tab="swiping:false;">
+<li><a class="fdn-tab-link fdn-tab-link-block" href="#" target>Events</a></li>
+<li><a class="fdn-tab-link fdn-tab-link-block" href="#" target>Music</a></li>
+<li><a class="fdn-tab-link fdn-tab-link-block" href="#" target>Movies</a></li>
+<li><a class="fdn-tab-link fdn-tab-link-block" href="#" target>Dining</a></li>
+</ul>
+<ul class="uk-switcher uk-margin-xsmall-top">
+<li><form name="eventSearchForm" method="get" action="https://www.clevescene.com/cleveland/EventSearch" uk-margin target>
+<select class="fdn-interface-select uk-select" name="narrowByDate" id="narrowByDate-events" aria-label="Narrow By Date">
+<option value>-All Dates-</option>
+<option value="2024-05-30" selected="selected">Thursday, May 30</option>
+<option value="2024-05-31">Friday, May 31</option>
+<option value="2024-06-01">Saturday, June 1</option>
+<option value="2024-06-02">Sunday, June 2</option>
+<option value="2024-06-03">Monday, June 3</option>
+<option value="2024-06-04">Tuesday, June 4</option>
+<option value="2024-06-05">Wednesday, June 5</option>
+<option value="2024-06-06">Thursday, June 6</option>
+<option value="2024-06-07">Friday, June 7</option>
+<option value="2024-06-08">Saturday, June 8</option>
+<option value="2024-06-09">Sunday, June 9</option>
+<option value="2024-06-10">Monday, June 10</option>
+<option value="2024-06-11">Tuesday, June 11</option>
+<option value="2024-06-12">Wednesday, June 12</option>
+<option value="2024-06-13">Thursday, June 13</option>
+<option value="2024-06-14">Friday, June 14</option>
+<option value="2024-06-15">Saturday, June 15</option>
+<option value="2024-06-16">Sunday, June 16</option>
+<option value="2024-06-17">Monday, June 17</option>
+<option value="2024-06-18">Tuesday, June 18</option>
+<option value="2024-06-19">Wednesday, June 19</option>
+<option value="2024-06-20">Thursday, June 20</option>
+<option value="2024-06-21">Friday, June 21</option>
+<option value="2024-06-22">Saturday, June 22</option>
+<option value="2024-06-23">Sunday, June 23</option>
+<option value="2024-06-24">Monday, June 24</option>
+<option value="2024-06-25">Tuesday, June 25</option>
+<option value="2024-06-26">Wednesday, June 26</option>
+<option value="2024-06-27">Thursday, June 27</option>
+<option value="2024-06-28">Friday, June 28</option>
+<option value="2024-06-29">Saturday, June 29</option>
+</select>
+<select class="fdn-interface-select uk-select" name="eventCategory" id="eventCategory-events" aria-label="Event Category">
+<option value>-All Categories-</option>
+<optgroup label="Arts & Culture">
+<option value="1471269">&nbsp;&nbsp;Art Exhibits</option>
+<option value="1471271">&nbsp;&nbsp;Auditions</option>
+<option value="1471278">&nbsp;&nbsp;Books, Lit, & Authors</option>
+<option value="36154065">&nbsp;&nbsp;Classical Music</option>
+<option value="1471272">&nbsp;&nbsp;Dance (Participatory)</option>
+<option value="1471309">&nbsp;&nbsp;Dance Performances</option>
+<option value="1471275">&nbsp;&nbsp;Film</option>
+<option value="1471286">&nbsp;&nbsp;Lectures</option>
+<option value="1471301">&nbsp;&nbsp;Museum Exhibits</option>
+<option value="36154064">&nbsp;&nbsp;Opera</option>
+<option value="1471283">&nbsp;&nbsp;Theatrical Events</option>
+</optgroup>
+<optgroup label="Community Fun">
+<option value="1471279">&nbsp;&nbsp;Classes & Workshops</option>
+<option value="1471274">&nbsp;&nbsp;Fairs/Festivals</option>
+<option value="1471306">&nbsp;&nbsp;Family & Kids</option>
+<option value="1471310">&nbsp;&nbsp;Farmers' Markets</option>
+<option value="1173495">&nbsp;&nbsp;Food/Drink</option>
+<option value="1471307">&nbsp;&nbsp;Fund-Raisers</option>
+<option value="1530572">&nbsp;&nbsp;Seasonal Special Happenings</option>
+<option value="1471282">&nbsp;&nbsp;Sports (Participatory)</option>
+<option value="1471289">&nbsp;&nbsp;Sports (Spectator)</option>
+<option value="1471294">&nbsp;&nbsp;Trash/Treasure</option>
+<option value="1471312">&nbsp;&nbsp;Volunteers</option>
+</optgroup>
+<optgroup label="Lifestyle">
+<option value="1471270">&nbsp;&nbsp;Body/Spirit</option>
+<option value="1471296">&nbsp;&nbsp;Fashion</option>
+<option value="1471285">&nbsp;&nbsp;Home/Garden</option>
+<option value="1471276">&nbsp;&nbsp;LGBTQ</option>
+<option value="1471292">&nbsp;&nbsp;Outdoors</option>
+<option value="1471297">&nbsp;&nbsp;Pets</option>
+<option value="1471280">&nbsp;&nbsp;Politics</option>
+<option value="1471291">&nbsp;&nbsp;Singles</option>
+</optgroup>
+<optgroup label="Nightlife & Entertainment">
+<option value="1471268">&nbsp;&nbsp;Cabaret & Gentlemen's</option>
+<option value="1471308">&nbsp;&nbsp;Casinos, Gambling</option>
+<option value="1471255">&nbsp;&nbsp;Comedy</option>
+</optgroup>
+<optgroup label="Promotional">
+<option value="1521823">&nbsp;&nbsp;Promotional</option>
+</optgroup>
+</select>
+<input name="neighborhoodGroup" type="hidden" value>
+<select class="fdn-interface-select uk-select" name="neighborhood" id="neighborhood-events" aria-label="Neighborhood">
+<option value>-All Neighborhoods-</option>
+<option value data-location-neighborhoodgroup="1430804">
+DOWNTOWN
+</option>
+<option value="1430810">
+&nbsp;&nbsp;Downtown/Flats/Warehouse District
+</option>
+<option value="1430819">
+&nbsp;&nbsp;West Side/Ohio City/Tremont/Detroit Shoreway
+</option>
+<option value data-location-neighborhoodgroup="1430801">
+EAST
+</option>
+<option value="1430807">
+&nbsp;&nbsp;East Side/University Circle/Little Italy
+</option>
+<option value="1430808">
+&nbsp;&nbsp;Eastern OH
+</option>
+<option value="1430812">
+&nbsp;&nbsp;Eastern Suburbs
+</option>
+<option value="1430815">
+&nbsp;&nbsp;Mentor/Lake County
+</option>
+<option value="1430816">
+&nbsp;&nbsp;Northern OH
+</option>
+<option value data-location-neighborhoodgroup="1430802">
+WEST
+</option>
+<option value="1430820">
+&nbsp;&nbsp;Western OH
+</option>
+<option value="1430821">
+&nbsp;&nbsp;Western Suburbs
+</option>
+<option value data-location-neighborhoodgroup="1430803">
+SOUTH
+</option>
+<option value="1430806">
+&nbsp;&nbsp;Akron/Summit County
+</option>
+<option value="1430809">
+&nbsp;&nbsp;Canton/Stark County
+</option>
+<option value="1430813">
+&nbsp;&nbsp;Kent/Portage County
+</option>
+<option value="1430814">
+&nbsp;&nbsp;Medina County
+</option>
+<option value="1430817">
+&nbsp;&nbsp;Southern OH
+</option>
+<option value="1430818">
+&nbsp;&nbsp;Southern Suburbs
+</option>
+<option value data-location-neighborhoodgroup="1430805">
+CENTRAL OH
+</option>
+<option value="1430811">
+&nbsp;&nbsp;Central OH
+</option>
+<option value data-location-neighborhoodgroup="32783549">
+ONLINE
+</option>
+<option value="32783550">
+&nbsp;&nbsp;Online Only
+</option>
+</select>
+<div class="uk-flex fdn-interface-input-group">
+<div class="uk-flex-1 uk-width-5-6 uk-margin-xsmall-right uk-position-relative">
+<span class="uk-form-icon uk-form-icon-flip fdn-icon-transform-horizontal">
+<i class="fal fa-search fa-lg"></i>
+</span>
+<input type="text" name="keywords" title="Enter keywords..." placeholder="Enter keywords..." class="fdn-interface-search-input uk-input" value>
+</div>
+<input class="fdn-button-submit uk-button uk-width-1-6 uk-flex-none" type="submit" value="go">
+</div>
+<script>
+(function () {
+jQuery('form[name="eventSearchForm"]').change(function () {
+var neighborhoodGroup = jQuery(this)
+.find('select[name="neighborhood"] option:selected')
+.attr('data-location-neighborhoodgroup')
+var neighborhood = jQuery(this)
+.find('select[name="neighborhood"] option:selected')
+.val()
+if (neighborhood === '' && neighborhoodGroup !== '') {
+jQuery(this).find('input[name="neighborhoodGroup"]').val(neighborhoodGroup)
+}
+else {
+jQuery(this).find('input[name="neighborhoodGroup"]').val('')
+}
+})
+})()
+</script>
+</form></li>
+<li><form name="musicEventSearchForm" method="get" action="https://www.clevescene.com/cleveland/EventSearch" uk-margin target>
+<input name="eventSection" type="hidden" value="1471254">
+<select class="fdn-interface-select uk-select" name="narrowByDate" id="narrowByDate-music" aria-label="Narrow By Date">
+<option value>-All Dates-</option>
+<option value="2024-05-30" selected="selected">Thursday, May 30</option>
+<option value="2024-05-31">Friday, May 31</option>
+<option value="2024-06-01">Saturday, June 1</option>
+<option value="2024-06-02">Sunday, June 2</option>
+<option value="2024-06-03">Monday, June 3</option>
+<option value="2024-06-04">Tuesday, June 4</option>
+<option value="2024-06-05">Wednesday, June 5</option>
+<option value="2024-06-06">Thursday, June 6</option>
+<option value="2024-06-07">Friday, June 7</option>
+<option value="2024-06-08">Saturday, June 8</option>
+<option value="2024-06-09">Sunday, June 9</option>
+<option value="2024-06-10">Monday, June 10</option>
+<option value="2024-06-11">Tuesday, June 11</option>
+<option value="2024-06-12">Wednesday, June 12</option>
+<option value="2024-06-13">Thursday, June 13</option>
+<option value="2024-06-14">Friday, June 14</option>
+<option value="2024-06-15">Saturday, June 15</option>
+<option value="2024-06-16">Sunday, June 16</option>
+<option value="2024-06-17">Monday, June 17</option>
+<option value="2024-06-18">Tuesday, June 18</option>
+<option value="2024-06-19">Wednesday, June 19</option>
+<option value="2024-06-20">Thursday, June 20</option>
+<option value="2024-06-21">Friday, June 21</option>
+<option value="2024-06-22">Saturday, June 22</option>
+<option value="2024-06-23">Sunday, June 23</option>
+<option value="2024-06-24">Monday, June 24</option>
+<option value="2024-06-25">Tuesday, June 25</option>
+<option value="2024-06-26">Wednesday, June 26</option>
+<option value="2024-06-27">Thursday, June 27</option>
+<option value="2024-06-28">Friday, June 28</option>
+<option value="2024-06-29">Saturday, June 29</option>
+</select>
+<select class="fdn-interface-select uk-select" name="eventCategory" id="eventCategory-music" aria-label="Event Category">
+<option value>-All Categories-</option>
+<option value="1471256">&nbsp;&nbsp;DJ & Dance</option>
+<option value="1471295">&nbsp;&nbsp;Music Around Town</option>
+<option value="1471284">&nbsp;&nbsp;On Tour</option>
+<option value="1471264">&nbsp;&nbsp;Open Mic & Karaoke</option>
+<option value="1471265">&nbsp;&nbsp;Rock & Pop</option>
+<option value="1524446">&nbsp;&nbsp;Spoken Word</option>
+</select>
+<input name="neighborhoodGroup" type="hidden" value>
+<select class="fdn-interface-select uk-select" name="neighborhood" id="neighborhood-music" aria-label="Neighborhood">
+<option value>-All Neighborhoods-</option>
+<option value data-location-neighborhoodgroup="1430804">
+DOWNTOWN
+</option>
+<option value="1430810">
+&nbsp;&nbsp;Downtown/Flats/Warehouse District
+</option>
+<option value="1430819">
+&nbsp;&nbsp;West Side/Ohio City/Tremont/Detroit Shoreway
+</option>
+<option value data-location-neighborhoodgroup="1430801">
+EAST
+</option>
+<option value="1430807">
+&nbsp;&nbsp;East Side/University Circle/Little Italy
+</option>
+<option value="1430808">
+&nbsp;&nbsp;Eastern OH
+</option>
+<option value="1430812">
+&nbsp;&nbsp;Eastern Suburbs
+</option>
+<option value="1430815">
+&nbsp;&nbsp;Mentor/Lake County
+</option>
+<option value="1430816">
+&nbsp;&nbsp;Northern OH
+</option>
+<option value data-location-neighborhoodgroup="1430802">
+WEST
+</option>
+<option value="1430820">
+&nbsp;&nbsp;Western OH
+</option>
+<option value="1430821">
+&nbsp;&nbsp;Western Suburbs
+</option>
+<option value data-location-neighborhoodgroup="1430803">
+SOUTH
+</option>
+<option value="1430806">
+&nbsp;&nbsp;Akron/Summit County
+</option>
+<option value="1430809">
+&nbsp;&nbsp;Canton/Stark County
+</option>
+<option value="1430813">
+&nbsp;&nbsp;Kent/Portage County
+</option>
+<option value="1430814">
+&nbsp;&nbsp;Medina County
+</option>
+<option value="1430817">
+&nbsp;&nbsp;Southern OH
+</option>
+<option value="1430818">
+&nbsp;&nbsp;Southern Suburbs
+</option>
+<option value data-location-neighborhoodgroup="1430805">
+CENTRAL OH
+</option>
+<option value="1430811">
+&nbsp;&nbsp;Central OH
+</option>
+<option value data-location-neighborhoodgroup="32783549">
+ONLINE
+</option>
+<option value="32783550">
+&nbsp;&nbsp;Online Only
+</option>
+</select>
+<div class="uk-flex fdn-interface-input-group">
+<div class="uk-flex-1 uk-width-5-6 uk-margin-xsmall-right uk-position-relative">
+<span class="uk-form-icon uk-form-icon-flip fdn-icon-transform-horizontal">
+<i class="fal fa-search fa-lg"></i>
+</span>
+<input type="text" name="keywords" title="Enter keywords..." placeholder="Enter keywords..." class="fdn-interface-search-input uk-input" value>
+</div>
+<input class="fdn-button-submit uk-button uk-width-1-6 uk-flex-none" type="submit" value="go">
+</div>
+<script>
+(function () {
+var musicEventSection = '1471254'
+jQuery('form[name="musicEventSearchForm"]').change(function () {
+if (jQuery(this).find('select[name="eventCategory"]').val() === '') {
+jQuery(this).find('input[name="eventSection"]').val(musicEventSection)
+}
+else {
+jQuery(this).find('input[name="eventSection"]').val('')
+}
+})
+})()
+</script>
+<script>
+(function () {
+jQuery('form[name="musicEventSearchForm"]').change(function () {
+var neighborhoodGroup = jQuery(this)
+.find('select[name="neighborhood"] option:selected')
+.attr('data-location-neighborhoodgroup')
+var neighborhood = jQuery(this)
+.find('select[name="neighborhood"] option:selected')
+.val()
+if (neighborhood === '' && neighborhoodGroup !== '') {
+jQuery(this).find('input[name="neighborhoodGroup"]').val(neighborhoodGroup)
+}
+else {
+jQuery(this).find('input[name="neighborhoodGroup"]').val('')
+}
+})
+})()
+</script>
+</form></li>
+<li><form name="movietimesSearchForm" method="get" action target>
+<select name="Film" class="fdn-interface-select uk-select" id="nowPlayingFilm-CalendarPicks" aria-label="Select a movie">
+<option value selected disabled>
+Select a movie
+</option>
+<option value="https://www.clevescene.com/cleveland/abigail/Film?oid=44092343">
+Abigail
+</option>
+<option value="https://www.clevescene.com/cleveland/babes/Film?oid=44326043">
+Babes
+</option>
+<option value="https://www.clevescene.com/cleveland/back-to-black/Film?oid=44279113">
+Back to Black
+</option>
+<option value="https://www.clevescene.com/cleveland/back-to-the-future/Film?oid=2153262">
+Back to the Future
+</option>
+<option value="https://www.clevescene.com/cleveland/the-bad-and-the-beautiful/Film?oid=44373089">
+The Bad and the Beautiful
+</option>
+<option value="https://www.clevescene.com/cleveland/bhaje-vaayu-vegam/Film?oid=44411945">
+Bhaje Vaayu Vegam
+</option>
+<option value="https://www.clevescene.com/cleveland/the-blue-angels/Film?oid=44372849">
+The Blue Angels
+</option>
+<option value="https://www.clevescene.com/cleveland/challengers/Film?oid=44117386">
+Challengers
+</option>
+<option value="https://www.clevescene.com/cleveland/civil-war/Film?oid=44045566">
+Civil War
+</option>
+<option value="https://www.clevescene.com/cleveland/the-commandants-shadow/Film?oid=44365471">
+The Commandant's Shadow
+</option>
+<option value="https://www.clevescene.com/cleveland/the-cremator/Film?oid=44372842">
+The Cremator
+</option>
+<option value="https://www.clevescene.com/cleveland/the-crow-30th-anniversary/Film?oid=44365341">
+The Crow 30th Anniversary
+</option>
+<option value="https://www.clevescene.com/cleveland/the-dead-dont-hurt/Film?oid=44372817">
+The Dead Don't Hurt
+</option>
+<option value="https://www.clevescene.com/cleveland/dune-part-two/Film?oid=43761849">
+Dune: Part Two
+</option>
+<option value="https://www.clevescene.com/cleveland/evil-does-not-exist/Film?oid=44311498">
+Evil Does Not Exist
+</option>
+<option value="https://www.clevescene.com/cleveland/ezra/Film?oid=44372856">
+Ezra
+</option>
+<option value="https://www.clevescene.com/cleveland/the-fall-guy/Film?oid=44186135">
+The Fall Guy
+</option>
+<option value="https://www.clevescene.com/cleveland/farki-farki/Film?oid=44365474">
+Farki Farki
+</option>
+<option value="https://www.clevescene.com/cleveland/furiosa-a-mad-max-saga/Film?oid=44326035">
+Furiosa: A Mad Max Saga
+</option>
+<option value="https://www.clevescene.com/cleveland/gam-gam-ganesha/Film?oid=44411873">
+Gam Gam Ganesha
+</option>
+<option value="https://www.clevescene.com/cleveland/gangs-of-godavari/Film?oid=44373000">
+Gangs of Godavari
+</option>
+<option value="https://www.clevescene.com/cleveland/the-garfield-movie/Film?oid=44326038">
+The Garfield Movie
+</option>
+<option value="https://www.clevescene.com/cleveland/garudan/Film?oid=44411923">
+Garudan
+</option>
+<option value="https://www.clevescene.com/cleveland/godzilla-x-kong-the-new-empire/Film?oid=43948827">
+Godzilla x Kong: The New Empire
+</option>
+<option value="https://www.clevescene.com/cleveland/haikyu-the-dumpster-battle/Film?oid=44372826">
+Haikyu!! The Dumpster Battle
+</option>
+<option value="https://www.clevescene.com/cleveland/i-saw-the-tv-glow/Film?oid=44319078">
+I Saw the TV Glow
+</option>
+<option value="https://www.clevescene.com/cleveland/if/Film?oid=44279099">
+IF
+</option>
+<option value="https://www.clevescene.com/cleveland/in-a-violent-nature/Film?oid=44372872">
+In a Violent Nature
+</option>
+<option value="https://www.clevescene.com/cleveland/kingdom-of-the-planet-of-the-apes/Film?oid=44232096">
+Kingdom of the Planet of the Apes
+</option>
+<option value="https://www.clevescene.com/cleveland/kung-fu-panda-4/Film?oid=43808795">
+Kung Fu Panda 4
+</option>
+<option value="https://www.clevescene.com/cleveland/love-me/Film?oid=44358369">
+Love Me
+</option>
+<option value="https://www.clevescene.com/cleveland/the-ministry-of-ungentlemanly-warfare/Film?oid=44092320">
+The Ministry of Ungentlemanly Warfare
+</option>
+<option value="https://www.clevescene.com/cleveland/rose-rosy-te-gulab/Film?oid=44365295">
+Rose Rosy Te Gulab
+</option>
+<option value="https://www.clevescene.com/cleveland/science-on-screen-the-stanford-prison-experiment-with-jennifer-bazar/Film?oid=44373028">
+Science on Screen: The Stanford Prison Experiment with Jennifer Bazar
+</option>
+<option value="https://www.clevescene.com/cleveland/sight/Film?oid=44326021">
+Sight
+</option>
+<option value="https://www.clevescene.com/cleveland/the-strangers-chapter-1/Film?oid=44279096">
+The Strangers: Chapter 1
+</option>
+<option value="https://www.clevescene.com/cleveland/summer-camp/Film?oid=44372814">
+Summer Camp
+</option>
+<option value="https://www.clevescene.com/cleveland/tarot/Film?oid=44186130">
+Tarot
+</option>
+<option value="https://www.clevescene.com/cleveland/three-old-boys/Film?oid=44365378">
+Three Old Boys
+</option>
+<option value="https://www.clevescene.com/cleveland/unsung-hero/Film?oid=44130684">
+Unsung Hero
+</option>
+<option value="https://www.clevescene.com/cleveland/wildcat/Film?oid=44285847">
+Wildcat
+</option>
+<option value="https://www.clevescene.com/cleveland/young-woman-and-the-sea/Film?oid=44372887">
+Young Woman and the Sea
+</option>
+</select>
+</form>
+<p class="fdn-interface-divider">or</p>
+<form name="movietimesSearchForm" method="get" action target>
+<select class="fdn-interface-select uk-select" id="nowPlayingTheater-CalendarPicks" aria-label="Select a Location">
+<option value selected disabled>Select a location</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430806&amp;show=theater">
+<b>Akron/Summit County</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30686955&amp;show=theater">
+- Cinemark Cuyahoga Falls and XD
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30687454&amp;show=theater">
+- Lake 8 Movies
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=4387908&amp;show=theater">
+- Nightlight Cinema
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433371&amp;show=theater">
+- Regal Hudson Cinema 10
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30687113&amp;show=theater">
+- Regal Independence
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430809&amp;show=theater">
+<b>Canton/Stark County</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30694878&amp;show=theater">
+- Cinemark Movies 10
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30694856&amp;show=theater">
+- Cinemark Tinseltown USA and XD
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430810&amp;show=theater">
+<b>Downtown/Flats/Warehouse District</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=31275920&amp;show=theater">
+- Cedar Lee Theatres
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430808&amp;show=theater">
+<b>Eastern OH</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=42132143&amp;show=theater">
+- Cinemark Wooster Movies 10
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30694961&amp;show=theater">
+- Regal Massillon
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430812&amp;show=theater">
+<b>Eastern Suburbs</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=4295426&amp;show=theater">
+- Atlas Cinemas Eastgate
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30684983&amp;show=theater">
+- Atlas Lakeshore 7
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433358&amp;show=theater">
+- Cinemark at Valley View
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1431580&amp;show=theater">
+- Cleveland Cinematheque
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433259&amp;show=theater">
+- Shaker Heights Cinema
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30684909&amp;show=theater">
+- Silverspot Cinema Pinecrest
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430813&amp;show=theater">
+<b>Kent/Portage County</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30686524&amp;show=theater">
+- Cinemark 10 Aurora
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30687251&amp;show=theater">
+- Kent Cinemas
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30687382&amp;show=theater">
+- Ravenna 7 Movies
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430814&amp;show=theater">
+<b>Medina County</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433361&amp;show=theater">
+- Hickory Ridge Cinemas
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30686814&amp;show=theater">
+- Regal Medina
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430815&amp;show=theater">
+<b>Mentor/Lake County</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30686198&amp;show=theater">
+- Atlas Cinema Great Lakes Stadium 16
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30686554&amp;show=theater">
+- Atlas Diamond Center 16
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433375&amp;show=theater">
+- Regal Willoughby Commons 16
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430816&amp;show=theater">
+<b>Northern OH</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433347&amp;show=theater">
+- Apollo Theatre
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430817&amp;show=theater">
+<b>Southern OH</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=4961844&amp;show=theater">
+- Cinemark Strongsville at Southpark Mall
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430819&amp;show=theater">
+<b>West Side/Ohio City/Tremont/Detroit Shoreway</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=2472382&amp;show=theater">
+- Capitol Theatre
+</option>
+<option value>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?neighborhood=1430821&amp;show=theater">
+<b>Western Suburbs</b>
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=3592596&amp;show=theater">
+- AMC Ridge Park Square Cinema 8
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=3592597&amp;show=theater">
+- AMC Westwood Town Center Cinema
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=31773355&amp;show=theater">
+- Amherst Cinema
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=30686354&amp;show=theater">
+- Regal Cobblestone Square
+</option>
+<option value="https://www.clevescene.com/cleveland/MovieTimes?location=1433370&amp;show=theater">
+- Regal Crocker Park Stadium 16
+</option>
+<option value>
+</option>
+</select>
+</form>
+<script>
+jQuery(function(){
+jQuery("select#nowPlayingFilm-CalendarPicks,select#nowPlayingTheater-CalendarPicks").change(function() {
+if(jQuery(this).val()!=''){
+window.location.href=jQuery(this).val();
+}
+})
+})
+</script>
+<p class="fdn-link-separator">
+<a class="uk-link-reset" href="https://www.clevescene.com/cleveland/MovieTimes" target>Browse all Film Times</a>
+</p></li>
+<li><form name="diningSearchForm" method="get" action="https://www.clevescene.com/cleveland/LocationSearch" uk-margin target>
+<input name="locationSection" type="hidden" value="1435342">
+<select class="fdn-interface-select uk-select" name="locationCategory" id="locationCategory-dining" aria-label="Location Category">
+<option value>-All Categories-</option>
+<option value="1525698">&nbsp;&nbsp;African/Ethiopian/Eritrean</option>
+<option value="1525664">&nbsp;&nbsp;American</option>
+<option value="1525689">&nbsp;&nbsp;Asian</option>
+<option value="2733408">&nbsp;&nbsp;Asian/Indian/Middle Eastern</option>
+<option value="1525665">&nbsp;&nbsp;Bakery</option>
+<option value="1525694">&nbsp;&nbsp;Barbecue</option>
+<option value="1525708">&nbsp;&nbsp;Brazilian</option>
+<option value="1525669">&nbsp;&nbsp;Breakfast</option>
+<option value="32754590">&nbsp;&nbsp;Brewery</option>
+<option value="1525695">&nbsp;&nbsp;Brunch</option>
+<option value="1525680">&nbsp;&nbsp;Buffet</option>
+<option value="2714939">&nbsp;&nbsp;Cafes, Coffee Shops & Bakeries</option>
+<option value="1525681">&nbsp;&nbsp;Cajun/Creole</option>
+<option value="1525711">&nbsp;&nbsp;California cuisine</option>
+<option value="1525699">&nbsp;&nbsp;Cambodian</option>
+<option value="1525703">&nbsp;&nbsp;Caribbean</option>
+<option value="1525684">&nbsp;&nbsp;Central American</option>
+<option value="1525693">&nbsp;&nbsp;Central European</option>
+<option value="1525663">&nbsp;&nbsp;Chinese</option>
+<option value="1525696">&nbsp;&nbsp;Coffeehouse/Cafe</option>
+<option value="1525671">&nbsp;&nbsp;Contemporary</option>
+<option value="1525668">&nbsp;&nbsp;Continental</option>
+<option value="1536821">&nbsp;&nbsp;Cuban</option>
+<option value="1525662">&nbsp;&nbsp;Deli</option>
+<option value="1525683">&nbsp;&nbsp;Dessert</option>
+<option value="2714935">&nbsp;&nbsp;Destinations</option>
+<option value="1525705">&nbsp;&nbsp;Diner</option>
+<option value="1525700">&nbsp;&nbsp;Eastern European</option>
+<option value="1525670">&nbsp;&nbsp;Eclectic</option>
+<option value="1525672">&nbsp;&nbsp;English/Irish</option>
+<option value="1525710">&nbsp;&nbsp;European/Mediterranean</option>
+<option value="1525673">&nbsp;&nbsp;French</option>
+<option value="1525678">&nbsp;&nbsp;Global</option>
+<option value="1525688">&nbsp;&nbsp;Greek</option>
+<option value="1525706">&nbsp;&nbsp;Hawaiian</option>
+<option value="1525691">&nbsp;&nbsp;Home Cooking</option>
+<option value="1525690">&nbsp;&nbsp;Indian/Pakistani</option>
+<option value="1525660">&nbsp;&nbsp;Italian</option>
+<option value="2714936">&nbsp;&nbsp;Italian/Pizza</option>
+<option value="1525661">&nbsp;&nbsp;Japanese/Sushi</option>
+<option value="1525675">&nbsp;&nbsp;Mexican</option>
+<option value="1525676">&nbsp;&nbsp;Middle Eastern</option>
+<option value="1536819">&nbsp;&nbsp;Moroccan</option>
+<option value="1525707">&nbsp;&nbsp;New American</option>
+<option value="1525679">&nbsp;&nbsp;Pizza</option>
+<option value="1525658">&nbsp;&nbsp;Pub Fare/Breweries</option>
+<option value="2733413">&nbsp;&nbsp;Pubs/Wine & Martini Bars</option>
+<option value="1536820">&nbsp;&nbsp;Puerto Rican</option>
+<option value="1525666">&nbsp;&nbsp;Quick Casual</option>
+<option value="1523711">&nbsp;&nbsp;Restaurant</option>
+<option value="1525667">&nbsp;&nbsp;Seafood</option>
+<option value="1525704">&nbsp;&nbsp;Soup Kitchen</option>
+<option value="1536822">&nbsp;&nbsp;South American</option>
+<option value="1525712">&nbsp;&nbsp;South Indian</option>
+<option value="2714941">&nbsp;&nbsp;South of the Border</option>
+<option value="1525701">&nbsp;&nbsp;Southern/Soul Food</option>
+<option value="1536816">&nbsp;&nbsp;Southwestern</option>
+<option value="1536815">&nbsp;&nbsp;Spanish</option>
+<option value="1525677">&nbsp;&nbsp;Steakhouse</option>
+<option value="2714940">&nbsp;&nbsp;Steaks & Seafood</option>
+<option value="1525659">&nbsp;&nbsp;Subs/Sandwich Shop</option>
+<option value="1525709">&nbsp;&nbsp;Sushi</option>
+<option value="1525702">&nbsp;&nbsp;Tea Room</option>
+<option value="1536818">&nbsp;&nbsp;Tex-Mex</option>
+<option value="1525674">&nbsp;&nbsp;Thai</option>
+<option value="1536817">&nbsp;&nbsp;Vegetarian</option>
+<option value="1525686">&nbsp;&nbsp;Vietnamese</option>
+<option value="1525692">&nbsp;&nbsp;Wine/Martini Bar</option>
+</optgroup>
+</select>
+<input name="neighborhoodGroup" type="hidden" value>
+<select class="fdn-interface-select uk-select" name="neighborhood" id="neighborhood-dining" aria-label="Neighborhood">
+<option value>-All Neighborhoods-</option>
+<option value data-location-neighborhoodgroup="1430804">
+DOWNTOWN
+</option>
+<option value="1430810">
+&nbsp;&nbsp;Downtown/Flats/Warehouse District
+</option>
+<option value="1430819">
+&nbsp;&nbsp;West Side/Ohio City/Tremont/Detroit Shoreway
+</option>
+<option value data-location-neighborhoodgroup="1430801">
+EAST
+</option>
+<option value="1430807">
+&nbsp;&nbsp;East Side/University Circle/Little Italy
+</option>
+<option value="1430808">
+&nbsp;&nbsp;Eastern OH
+</option>
+<option value="1430812">
+&nbsp;&nbsp;Eastern Suburbs
+</option>
+<option value="1430815">
+&nbsp;&nbsp;Mentor/Lake County
+</option>
+<option value="1430816">
+&nbsp;&nbsp;Northern OH
+</option>
+<option value data-location-neighborhoodgroup="1430802">
+WEST
+</option>
+<option value="1430820">
+&nbsp;&nbsp;Western OH
+</option>
+<option value="1430821">
+&nbsp;&nbsp;Western Suburbs
+</option>
+<option value data-location-neighborhoodgroup="1430803">
+SOUTH
+</option>
+<option value="1430806">
+&nbsp;&nbsp;Akron/Summit County
+</option>
+<option value="1430809">
+&nbsp;&nbsp;Canton/Stark County
+</option>
+<option value="1430813">
+&nbsp;&nbsp;Kent/Portage County
+</option>
+<option value="1430814">
+&nbsp;&nbsp;Medina County
+</option>
+<option value="1430817">
+&nbsp;&nbsp;Southern OH
+</option>
+<option value="1430818">
+&nbsp;&nbsp;Southern Suburbs
+</option>
+<option value data-location-neighborhoodgroup="1430805">
+CENTRAL OH
+</option>
+<option value="1430811">
+&nbsp;&nbsp;Central OH
+</option>
+<option value data-location-neighborhoodgroup="32783549">
+ONLINE
+</option>
+<option value="32783550">
+&nbsp;&nbsp;Online Only
+</option>
+</select>
+<div class="uk-flex fdn-interface-input-group">
+<div class="uk-flex-1 uk-width-5-6 uk-margin-xsmall-right uk-position-relative">
+<span class="uk-form-icon uk-form-icon-flip fdn-icon-transform-horizontal">
+<i class="fal fa-search fa-lg"></i>
+</span>
+<input type="text" name="keywords" title="Enter keywords..." placeholder="Enter keywords..." class="fdn-interface-search-input uk-input" value>
+</div>
+<input class="fdn-button-submit uk-button uk-width-1-6 uk-flex-none" type="submit" value="go">
+</div>
+<script>
+(function () {
+jQuery('form[name="diningSearchForm"]').change(function () {
+var neighborhoodGroup = jQuery(this)
+.find('select[name="neighborhood"] option:selected')
+.attr('data-location-neighborhoodgroup')
+var neighborhood = jQuery(this)
+.find('select[name="neighborhood"] option:selected')
+.val()
+if (neighborhood === '' && neighborhoodGroup !== '') {
+jQuery(this).find('input[name="neighborhoodGroup"]').val(neighborhoodGroup)
+}
+else {
+jQuery(this).find('input[name="neighborhoodGroup"]').val('')
+}
+})
+})()
+</script>
+</form></li>
+</ul>
+</div>
+<div class="fdn-add-event-submit-link-block fdn-calendar-picks-submit-event-block">
+<a class="fdn-add-event-submit-link-text" href="https://posting.clevescene.com/cleveland/Events/AddEvent" target>Submit an Event</a>
+</div>
+</div>
+</div><div ad-slot-div-id="CLE_300x250ATF-1" display-targets="all" class="uk-width-1-1 uk-flex uk-flex-around " preset-height="true" hidden>
+<script>Foundation.Ad.showAd();</script>
+</div>
+</div>
+</div>
+
+<div class="ZoneA Home   uk-root fdn-margin-vert HomeLatest comp-landing-contentteasers" data-component-id="HomeLatest">
+<div class="fdn-component-header-block uk-margin  ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a href="https://www.clevescene.com/cleveland/ArticleArchives">The Latest</a>
+</h3>
+</div>
+<div class="pres-ContentTileRectangleBriefVariableAcross uk-grid uk-grid-small" uk-grid="true" data-ev-presentation="ContentTileRectangleBriefVariableAcross" uk-height-match=".fdn-pres-image">
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/news/cleveland-heights-school-district-failed-to-address-student-sexual-harassment-and-assault-incidents-lawsuit-claims-44414832">
+<div>
+<p class="fdn-teaser-headline">
+Cleveland Heights School District Failed to Address Student Sexual Harassment and Assault Incidents, Lawsuit Claims
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Mark Oprea
+</p>
+<time>
+May 29, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/cleveland-heights-school-district-failed-to-manage-student-sexual-harassment-lawsuit-claims/u/golden-s/44415858/201982110228446_image.jpeg?cb=1717008076" alt="Roxboro Middle School, shown here in an undated photo, was a site of one of several Title IX cases included in a lawsuit against the district on Wednesday." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/news/ohio-dems-lay-out-education-bills-to-increase-funding-target-private-vouchers-and-student-hunger-44415153">
+<div>
+<p class="fdn-teaser-headline">
+Ohio Dems Lay Out Education Bills to Increase Funding, Target Private Vouchers and Student Hunger
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Susan Tebben, The Ohio Capital Journal
+</p>
+<time>
+May 29, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media1.clevescene.com/clevescene/imager/ohio-dems-lay-out-education-bills-to-increase-funding-target-private-vouchers-and-student-hunger/u/golden-s/44415162/9568671352_41ef19b5f3_c.jpg?cb=1716996218" alt="Ohio Dems Lay Out Education Bills to Increase Funding, Target Private Vouchers and Student Hunger" width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/news/cleveland-police-say-no-arrests-made-after-playhouse-square-drifter-incident-44408100">
+<div>
+<p class="fdn-teaser-headline">
+Cleveland Police Say No Arrests Made After Playhouse Square Drifter Incident
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Mark Oprea
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/cleveland-police-say-no-arrests-made-after-playhouse-square-drifter-incident/u/golden-s/44409018/screenshot_2024-05-28_at_5.01.12_pm.jpg?cb=1716930126" alt="A screenshot from a video showing the Playhouse Square Drifter incident over Memorial Day Weekend." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/arts/goofy-gore-and-an-odd-ending-in-a-behanding-in-spokane-at-blank-canvas-theatre-44407047">
+<div>
+<p class="fdn-teaser-headline">
+Goofy Gore and an Odd Ending in 'A Behanding in Spokane' at Blank Canvas Theatre
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Christine Howey
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/new-headline/u/golden-s/44407049/ded64b8f-adad-4995-98fd-081d75b0e15d.jpeg?cb=1716910472" alt="A Behanding in Spokane, through June 8" width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/food-drink/bistro-on-the-falls-in-olmsted-falls-has-closed-44406979">
+<div>
+<p class="fdn-teaser-headline">
+Bistro on the Falls in Olmsted Falls Has Closed
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Douglas Trattner
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media1.clevescene.com/clevescene/imager/bistro-on-the-falls-in-olmsted-falls-has-closed/u/golden-s/44407024/bistro_on_the_falls_google.png?cb=1716906829" alt="Bistro on the Falls in Olmsted Falls has closed." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/arts/last-ship-to-proxima-centauri-at-convergence-continuum-is-a-dark-sci-fi-comedy-that-doesnt-quite-hit-44406703">
+<div>
+<p class="fdn-teaser-headline">
+'Last Ship to Proxima Centauri' at Convergence-Continuum is a Dark Sci-Fi Comedy That Doesn't Quite Hit
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Christine Howey
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/new-headline/u/golden-s/44406717/lastship2.jpg?cb=1716904235" alt="&#39;Last Ship to Proxima Centauri&#39; at Convergence-Continuum is a Dark Sci-Fi Comedy That Doesn&#39;t Quite Hit" width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/news/ohio-senate-republicans-make-biden-ballot-fix-conditional-on-attacking-voter-ballot-initiatives-44406689">
+<div>
+<p class="fdn-teaser-headline">
+Ohio Senate Republicans Make Biden Ballot Fix Conditional on Attacking Voter Ballot Initiatives
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Marilou Johanek, Ohio Capital Journal
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/ohio-senate-republicans-make-biden-ballot-fix-conditional-on-attacking-voter-ballot-initiatives/u/golden-s/44406694/20230208__r321429-2048x1365.jpg?cb=1716903682" alt="Ohio Senate President Matt Huffman, R-Lima, speaks with reporters." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/music/cma-and-ideastream-public-media-partner-for-new-local-music-series-at-transformer-station-44389021">
+<div>
+<p class="fdn-teaser-headline">
+CMA and Ideastream Public Media Partner for New Local Music Series at Transformer Station
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Jeff Niesel
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/cma-and-ideastream-public-media-partner-for-local-music-series-at-transformer-station/u/golden-s/44389049/opus_216.png?cb=1716902389" alt="Opus 216." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+</div>
+</div>
+<div ad-slot-div-id="CLE_Leaderboard-2" display-targets="all" class="uk-width-1-1 uk-flex uk-flex-around uk-margin" preset-height="true" hidden>
+<script>Foundation.Ad.showAd();</script>
+</div>
+<div class="componentGrid-ThreeAcross uk-width-1-1 uk-flex uk-flex-row uk-flex-wrap fdn-component-grid-row@m" uk-height-match data-component-grid-id="SectionBreakoutTowerAd">
+<div class="uk-width-1-1 uk-width-1-3@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone">
+<div class="ComponentZoneA SectionBreakoutTowerAdresponsive   uk-root fdn-margin-vert SectionBreakoutNews comp-landing-breakoutteasers" data-component-id="SectionBreakoutNews">
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teasers-column">
+<div class="uk-flex uk-flex-wrap fdn-section-teasers-section-block">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a class="fdn-component-header-link-text" href="https://www.clevescene.com/news" target>News & Views</a>
+</h3>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/news/cleveland-heights-school-district-failed-to-address-student-sexual-harassment-and-assault-incidents-lawsuit-claims-44414832">
+<img src="https://media2.clevescene.com/clevescene/imager/cleveland-heights-school-district-failed-to-manage-student-sexual-harassment-lawsuit-claims/u/golden-s/44415858/201982110228446_image.jpeg?cb=1717008076" alt="Roxboro Middle School, shown here in an undated photo, was a site of one of several Title IX cases included in a lawsuit against the district on Wednesday." width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/news/cleveland-heights-school-district-failed-to-address-student-sexual-harassment-and-assault-incidents-lawsuit-claims-44414832">By Mark Oprea</a>
+</p>
+<time>May 29, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/news/cleveland-heights-school-district-failed-to-address-student-sexual-harassment-and-assault-incidents-lawsuit-claims-44414832">
+Cleveland Heights School District Failed to Address Student Sexual Harassment and Assault Incidents, Lawsuit Claims
+</a>
+</h3>
+</div>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/news/ohio-dems-lay-out-education-bills-to-increase-funding-target-private-vouchers-and-student-hunger-44415153">
+<img src="https://media1.clevescene.com/clevescene/imager/ohio-dems-lay-out-education-bills-to-increase-funding-target-private-vouchers-and-student-hunger/u/golden-s/44415162/9568671352_41ef19b5f3_c.jpg?cb=1716996218" alt="Ohio Dems Lay Out Education Bills to Increase Funding, Target Private Vouchers and Student Hunger" width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/news/ohio-dems-lay-out-education-bills-to-increase-funding-target-private-vouchers-and-student-hunger-44415153">By Susan Tebben, The Ohio Capital Journal</a>
+</p>
+<time>May 29, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/news/ohio-dems-lay-out-education-bills-to-increase-funding-target-private-vouchers-and-student-hunger-44415153">
+Ohio Dems Lay Out Education Bills to Increase Funding, Target Private Vouchers and Student Hunger
+</a>
+</h3>
+</div>
+</div>
+<div class="fdn-section-teasers-more-link">
+<a class="uk-flex-inline uk-flex-center uk-flex-middle" href="https://www.clevescene.com/news">More News & Views <i class="fas fa-angle-right"></i></a>
+</div>
+<div class="uk-width-1-1 fdn-section-teasers-column-links">
+<div class="uk-flex uk-flex-wrap uk-flex-center uk-grid-small fdn-section-teasers-category-links" uk-grid>
+<a href="https://www.clevescene.com/category/cleveland-news-38416998">Cleveland News</a>
+<a href="https://www.clevescene.com/category/ohio-news-38417004">Ohio News</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ComponentZoneA SectionBreakoutTowerAdresponsive   uk-root fdn-margin-vert SectionBreakoutArts comp-landing-breakoutteasers" data-component-id="SectionBreakoutArts">
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teasers-column">
+<div class="uk-flex uk-flex-wrap fdn-section-teasers-section-block">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a class="fdn-component-header-link-text" href="https://www.clevescene.com/arts" target>Arts & Culture</a>
+</h3>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/arts/goofy-gore-and-an-odd-ending-in-a-behanding-in-spokane-at-blank-canvas-theatre-44407047">
+<img src="https://media2.clevescene.com/clevescene/imager/new-headline/u/golden-s/44407049/ded64b8f-adad-4995-98fd-081d75b0e15d.jpeg?cb=1716910472" alt="A Behanding in Spokane, through June 8" width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/arts/goofy-gore-and-an-odd-ending-in-a-behanding-in-spokane-at-blank-canvas-theatre-44407047">By Christine Howey</a>
+</p>
+<time>May 28, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/arts/goofy-gore-and-an-odd-ending-in-a-behanding-in-spokane-at-blank-canvas-theatre-44407047">
+Goofy Gore and an Odd Ending in 'A Behanding in Spokane' at Blank Canvas Theatre
+</a>
+</h3>
+</div>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/arts/last-ship-to-proxima-centauri-at-convergence-continuum-is-a-dark-sci-fi-comedy-that-doesnt-quite-hit-44406703">
+<img src="https://media2.clevescene.com/clevescene/imager/new-headline/u/golden-s/44406717/lastship2.jpg?cb=1716904235" alt="&#39;Last Ship to Proxima Centauri&#39; at Convergence-Continuum is a Dark Sci-Fi Comedy That Doesn&#39;t Quite Hit" width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/arts/last-ship-to-proxima-centauri-at-convergence-continuum-is-a-dark-sci-fi-comedy-that-doesnt-quite-hit-44406703">By Christine Howey</a>
+</p>
+<time>May 28, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/arts/last-ship-to-proxima-centauri-at-convergence-continuum-is-a-dark-sci-fi-comedy-that-doesnt-quite-hit-44406703">
+'Last Ship to Proxima Centauri' at Convergence-Continuum is a Dark Sci-Fi Comedy That Doesn't Quite Hit
+</a>
+</h3>
+</div>
+</div>
+<div class="fdn-section-teasers-more-link">
+<a class="uk-flex-inline uk-flex-center uk-flex-middle" href="https://www.clevescene.com/arts">More Arts & Culture <i class="fas fa-angle-right"></i></a>
+</div>
+<div class="uk-width-1-1 fdn-section-teasers-column-links">
+<div class="uk-flex uk-flex-wrap uk-flex-center uk-grid-small fdn-section-teasers-category-links" uk-grid>
+<a href="https://www.clevescene.com/category/things-to-do-38417022">Things to Do</a>
+<a href="https://www.clevescene.com/category/savage-love-2746007">Savage Love</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="uk-width-1-1 uk-width-1-3@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone"><div ad-slot-div-id="CLE_Tower-2" display-targets="all" class="uk-width-1-1 uk-flex uk-flex-around uk-margin" preset-height="true" hidden>
+<script>Foundation.Ad.showAd();</script>
+</div></div>
+<div class="uk-width-1-1 uk-width-1-3@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone">
+<div class="ComponentZoneC SectionBreakoutTowerAdresponsive   uk-root fdn-margin-vert SectionBreakoutFood comp-landing-breakoutteasers" data-component-id="SectionBreakoutFood">
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teasers-column">
+<div class="uk-flex uk-flex-wrap fdn-section-teasers-section-block">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a class="fdn-component-header-link-text" href="https://www.clevescene.com/food-drink" target>Food & Drink</a>
+</h3>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/food-drink/bistro-on-the-falls-in-olmsted-falls-has-closed-44406979">
+<img src="https://media1.clevescene.com/clevescene/imager/bistro-on-the-falls-in-olmsted-falls-has-closed/u/golden-s/44407024/bistro_on_the_falls_google.png?cb=1716906829" alt="Bistro on the Falls in Olmsted Falls has closed." width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/food-drink/bistro-on-the-falls-in-olmsted-falls-has-closed-44406979">By Douglas Trattner</a>
+</p>
+<time>May 28, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/food-drink/bistro-on-the-falls-in-olmsted-falls-has-closed-44406979">
+Bistro on the Falls in Olmsted Falls Has Closed
+</a>
+</h3>
+</div>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/food-drink/first-look-tricky-tortoise-brewing-opening-this-weekend-in-willoughby-44382672">
+<img src="https://media2.clevescene.com/clevescene/imager/first-look-tricky-tortoise-opening-this-weekend-in-willoughby/u/golden-s/44382679/img_8353.jpg?cb=1716575838" alt="Tricky Tortoise owner Bobby Ehasz." width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/food-drink/first-look-tricky-tortoise-brewing-opening-this-weekend-in-willoughby-44382672">By Douglas Trattner</a>
+</p>
+<time>May 24, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/food-drink/first-look-tricky-tortoise-brewing-opening-this-weekend-in-willoughby-44382672">
+First Look: Tricky Tortoise Brewing, Opening This Weekend in Willoughby
+</a>
+</h3>
+</div>
+</div>
+<div class="fdn-section-teasers-more-link">
+<a class="uk-flex-inline uk-flex-center uk-flex-middle" href="https://www.clevescene.com/food-drink">More Food & Drink <i class="fas fa-angle-right"></i></a>
+</div>
+<div class="uk-width-1-1 fdn-section-teasers-column-links">
+<div class="uk-flex uk-flex-wrap uk-flex-center uk-grid-small fdn-section-teasers-category-links" uk-grid>
+<a href="https://www.clevescene.com/category/food-news-38417034">Food News</a>
+<a href="https://www.clevescene.com/category/drink-news-38417327">Drink News</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ComponentZoneC SectionBreakoutTowerAdresponsive   uk-root fdn-margin-vert SectionBreakoutMusic comp-landing-breakoutteasers" data-component-id="SectionBreakoutMusic">
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teasers-column">
+<div class="uk-flex uk-flex-wrap fdn-section-teasers-section-block">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a class="fdn-component-header-link-text" href="https://www.clevescene.com/music" target>Music</a>
+</h3>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/music/cma-and-ideastream-public-media-partner-for-new-local-music-series-at-transformer-station-44389021">
+<img src="https://media2.clevescene.com/clevescene/imager/cma-and-ideastream-public-media-partner-for-local-music-series-at-transformer-station/u/golden-s/44389049/opus_216.png?cb=1716902389" alt="Opus 216." width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/music/cma-and-ideastream-public-media-partner-for-new-local-music-series-at-transformer-station-44389021">By Jeff Niesel</a>
+</p>
+<time>May 28, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/music/cma-and-ideastream-public-media-partner-for-new-local-music-series-at-transformer-station-44389021">
+CMA and Ideastream Public Media Partner for New Local Music Series at Transformer Station
+</a>
+</h3>
+</div>
+</div>
+<div class="uk-flex uk-margin-small fdn-section-teaser">
+<div class="fdn-section-teaser-image uk-width-2-5">
+<a href="https://www.clevescene.com/music/singer-guitarist-dave-clark-talks-about-his-cleveland-connections-44288303">
+<img src="https://media2.clevescene.com/clevescene/imager/singer-guitarist-dave-clark-talks-about-his-cleveland-connections/u/golden-s/44288305/thumbnail_daveclark_sedona_print-38.jpg?cb=1716588213" alt="Dave Clark." width="600" height="371" loading="lazy" />
+</a>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+<a href="https://www.clevescene.com/music/singer-guitarist-dave-clark-talks-about-his-cleveland-connections-44288303">By Jeff Niesel</a>
+</p>
+<time>May 27, 2024</time>
+</div>
+</div>
+<div class="uk-flex uk-flex-wrap uk-flex-column fdn-section-teaser-text uk-padding-small uk-padding-remove-vertical uk-width-3-5">
+<h3 class="fdn-teaser-headline">
+<a href="https://www.clevescene.com/music/singer-guitarist-dave-clark-talks-about-his-cleveland-connections-44288303">
+Singer-Guitarist Dave Clark Talks About His Cleveland Connections
+</a>
+</h3>
+</div>
+</div>
+<div class="fdn-section-teasers-more-link">
+<a class="uk-flex-inline uk-flex-center uk-flex-middle" href="https://www.clevescene.com/music">More Music <i class="fas fa-angle-right"></i></a>
+</div>
+<div class="uk-width-1-1 fdn-section-teasers-column-links">
+<div class="uk-flex uk-flex-wrap uk-flex-center uk-grid-small fdn-section-teasers-category-links" uk-grid>
+<a href="https://www.clevescene.com/category/music-news-38417333">Music News</a>
+<a href="https://www.clevescene.com/category/local-music-38417339">Local Music</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ZoneA Home  trending-by-day uk-root fdn-margin-vert TrendingContentHome comp-landing-trending" data-component-id="TrendingContentHome">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+Trending
+</h3>
+</div>
+<div class="pres-ContentTileRectangleBriefVariableAcross uk-grid uk-grid-small" uk-grid="true" data-ev-presentation="ContentTileRectangleBriefVariableAcross" uk-height-match=".fdn-pres-image">
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/food-drink/bistro-on-the-falls-in-olmsted-falls-has-closed-44406979">
+<div>
+<p class="fdn-teaser-headline">
+Bistro on the Falls in Olmsted Falls Has Closed
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Douglas Trattner
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media1.clevescene.com/clevescene/imager/bistro-on-the-falls-in-olmsted-falls-has-closed/u/golden-s/44407024/bistro_on_the_falls_google.png?cb=1716906829" alt="Bistro on the Falls in Olmsted Falls has closed." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/food-drink/first-look-tricky-tortoise-brewing-opening-this-weekend-in-willoughby-44382672">
+<div>
+<p class="fdn-teaser-headline">
+First Look: Tricky Tortoise Brewing, Opening This Weekend in Willoughby
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Douglas Trattner
+</p>
+<time>
+May 24, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/first-look-tricky-tortoise-opening-this-weekend-in-willoughby/u/golden-s/44382679/img_8353.jpg?cb=1716575838" alt="Tricky Tortoise owner Bobby Ehasz." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/news/cleveland-police-say-no-arrests-made-after-playhouse-square-drifter-incident-44408100">
+<div>
+<p class="fdn-teaser-headline">
+Cleveland Police Say No Arrests Made After Playhouse Square Drifter Incident
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Mark Oprea
+</p>
+<time>
+May 28, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/cleveland-police-say-no-arrests-made-after-playhouse-square-drifter-incident/u/golden-s/44409018/screenshot_2024-05-28_at_5.01.12_pm.jpg?cb=1716930126" alt="A screenshot from a video showing the Playhouse Square Drifter incident over Memorial Day Weekend." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+<div class="uk-width-1-2@xs uk-width-1-2@s uk-width-1-4@m">
+<a class="uk-flex uk-flex-column fdn-decoration-remove" href="https://www.clevescene.com/news/cleveland-heights-school-district-failed-to-address-student-sexual-harassment-and-assault-incidents-lawsuit-claims-44414832">
+<div>
+<p class="fdn-teaser-headline">
+Cleveland Heights School District Failed to Address Student Sexual Harassment and Assault Incidents, Lawsuit Claims
+</p>
+<div class="fdn-teaser-infoline fdn-inline-split-list">
+<p>
+By Mark Oprea
+</p>
+<time>
+May 29, 2024
+</time>
+</div>
+</div>
+<div class="uk-margin-small-bottom uk-flex-first">
+<img src="https://media2.clevescene.com/clevescene/imager/cleveland-heights-school-district-failed-to-manage-student-sexual-harassment-lawsuit-claims/u/golden-s/44415858/201982110228446_image.jpeg?cb=1717008076" alt="Roxboro Middle School, shown here in an undated photo, was a site of one of several Title IX cases included in a lawsuit against the district on Wednesday." width="600" height="371" loading="lazy" />
+</div>
+</a>
+</div>
+</div>
+</div>
+<div ad-slot-div-id="CLE_Leaderboard-3" display-targets="all" class="uk-width-1-1 uk-flex uk-flex-around uk-margin" preset-height="true" hidden>
+<script>Foundation.Ad.showAd();</script>
+</div>
+<div class="ZoneA Home   uk-root fdn-margin-vert SlideshowTeaserStrip comp-landing-slideshows" data-component-id="SlideshowTeaserStrip">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+Trending Slideshows
+</h3>
+</div>
+<div class="uk-flex uk-flex-wrap uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-4@m">
+<div class="uk-padding-xsmall fdn-slideshow-teaser">
+<a href="https://www.clevescene.com/cleveland/concert-photos-and-review-chappell-roan-brought-the-midwest-princess-tour-to-a-sold-out-jacobs-pavilion/Slideshow/44415098">
+<img src="https://media2.clevescene.com/clevescene/imager/concert-photos-and-review-chappell-roan-brought-the-midwest-princess-tour-to-a-sold-out-jacobs-pavilion/u/golden-s/44415118/chappell-roan-11.jpg?cb=1716995934" alt="Chappell Roan, Cleveland 5/28/24" width="600" height="371" loading="lazy" />
+<h3 class="fdn-teaser-headline">Concert Photos and Review: Chappell Roan Brought 'The Midwest Princess' Tour to a Sold-Out Jacobs Pavilion</h3>
+</a>
+</div>
+<div class="uk-padding-xsmall fdn-slideshow-teaser">
+<a href="https://www.clevescene.com/cleveland/concert-photos-gary-clark-jr-at-jacobs-pavilion/Slideshow/44407004">
+<img src="https://media2.clevescene.com/clevescene/imager/concert-photos-gary-clark-jr-at-jacobs-pavilion/u/golden-s/44407014/8-bml_photography_147196_rt_gary_clark_jr_jacobs_pavilion_5_24_2024_lr.jpg?cb=1716906454" alt="Gary Clark Jr. in Cleveland" width="600" height="371" loading="lazy" />
+<h3 class="fdn-teaser-headline">Concert Photos: Gary Clark Jr. at Jacobs Pavilion</h3>
+</a>
+</div>
+<div class="uk-padding-xsmall fdn-slideshow-teaser">
+<a href="https://www.clevescene.com/cleveland/concert-photos-mr-big-at-the-agora/Slideshow/44406383">
+<img src="https://media1.clevescene.com/clevescene/imager/concert-photos-mr-big-at-the-agora/u/golden-s/44406393/10.jpg?cb=1716897881" alt="Mr. Big in Cleveland" width="600" height="371" loading="lazy" />
+<h3 class="fdn-teaser-headline">Concert Photos: Mr. Big at the Agora</h3>
+</a>
+</div>
+<div class="uk-padding-xsmall fdn-slideshow-teaser">
+<a href="https://www.clevescene.com/cleveland/photos-cleveland-public-theatres-station-hope-celebrated-clevelands-social-justice-heritage-at-historic-st-johns-episcopal-church/Slideshow/44401314">
+<img src="https://media2.clevescene.com/clevescene/imager/photos-cleveland-public-theatres-station-hope-celebrated-clevelands-social-justice-heritage-at-historic-st-johns-episcopal-church/u/golden-s/44401338/enp-8012.jpg?cb=1716830489" alt="Station Hope at St. John&#39;s Episcopal Church" width="600" height="371" loading="lazy" />
+<h3 class="fdn-teaser-headline">Photos: Cleveland Public Theatre's Station Hope Celebrated Cleveland's Social Justice Heritage at Historic St. John's Episcopal Church</h3>
+</a>
+</div>
+</div>
+</div>
+<div class="componentGrid-TwoZones-Equal-Width uk-width-1-1 uk-flex uk-flex-row uk-flex-wrap fdn-component-grid-row@m" uk-height-match data-component-grid-id="BestOfSpecialIssues">
+<div class="uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone">
+<div class="ComponentZoneA BestOfSpecialIssuesCurrentIssuuresponsive   uk-root fdn-margin-vert BestOfTeaser comp-landing-bestofteasers" data-component-id="BestOfTeaser">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+<a class="fdn-component-header-link-text" href="https://www.clevescene.com/best-of" target>Best of Cleveland</a>
+</h3>
+</div>
+<div class="uk-flex uk-flex-wrap fdn-best-of-teasers-block">
+<div class="uk-width-1-3@m uk-width-1-2@s uk-width-1-1 uk-padding-xsmall fdn-best-of-teasers-cover-image">
+<a href="https://www.clevescene.com/best-of">
+<img src="/imager//b/magnum/42734337/b67f/BOC2023-Cover.jpeg" alt="Best of Cleveland" width="1200" height="1542" class="no-foundation-imgeditor fdn-best-of-category-explorer-cover-image no-foundation-imgeditor" loading="lazy" />
+</a>
+</div>
+<div class="uk-width-2-3@m uk-width-1-2@s uk-width-1-1 uk-padding-xsmall fdn-best-of-teasers-link-block">
+<div class>
+<ul class="uk-list fdn-best-of-teasers-category-links">
+<li class="uk-margin-small">
+<a href="https://www.clevescene.com/best-of/2023/bars-and-clubs">Bars & Clubs</a>
+</li>
+<li class="uk-margin-small">
+<a href="https://www.clevescene.com/best-of/2023/sports-and-recreation">Sports & Recreation</a>
+</li>
+<li class="uk-margin-small">
+<a href="https://www.clevescene.com/best-of/2023/shops-and-services">Shops & Services</a>
+</li>
+<li class="uk-margin-small">
+<a href="https://www.clevescene.com/best-of/2023/people-and-places">People & Places</a>
+</li>
+<li class="uk-margin-small">
+<a href="https://www.clevescene.com/best-of/2023/food-and-drink">Food & Drink</a>
+</li>
+<li class="uk-margin-small">
+<a href="https://www.clevescene.com/best-of/2023/arts-and-entertainment">Arts & Entertainment</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-inline fdn-component-grid-zone">
+<div class="ComponentZoneB BestOfSpecialIssuesCurrentIssuuresponsive   uk-root fdn-margin-vert CurrentIssuu comp-landing-currentissuu" data-component-id="CurrentIssuu">
+<div class="fdn-component-header-block uk-margin ">
+<h3 class="fdn-component-header-text uk-margin-remove " role="presentation">
+Digital Issue
+</h3>
+</div>
+<h3>May 22, 2024</h3>
+<iframe title="Current Issue" src="https://issuu.com/greatlakespublishing/docs/clescene052224?fr=sNzViMDYzMDMzMTk" allowfullscreen allow="fullscreen" style="border:none;width:100%;height:300px;"></iframe>
+<p>
+<a class="more" href="https://www.clevescene.com/cleveland/IssueArchives">View more issues <i class="fal fa-angle-right fa-lg"></i></a>
+</p>
+</div>
+</div>
+</div>
+<div class="ZoneA Home   uk-root fdn-margin-vert AANWire comp-shell-aanwire" data-component-id="AANWire">
+<script src="https://aanwire.com/widgets/feed-widget/feed-widget.js" defer></script>
+<aan-news-aggregator title="Get the Best Local Journalism in North America in your Inbox" hideThumbnails="false" hideSource="false" hidePublishDate="false" sponsoredPosition="1" adButlerID="183069" adButlerSetID="572628"></aan-news-aggregator>
+</div>
+</div>
+</div>
+<div class="ev-grid-zone ev-column-zone uk-flex uk-flex-wrap uk-child-width-1-2@m">
+<div class="ev-grid-col" data-ev-zone="ZoneB">
+</div>
+<div class="ev-grid-col" data-ev-zone="ZoneC">
+</div>
+</div>
+<div class="ev-grid-zone ev-secondary-zone" data-ev-zone="ZoneD">
+<div class="ev-grid-col uk-width-1-1">
+</div>
+</div>
+<div class="ev-grid-zone ev-footer-zone" data-ev-zone="GlobalFooter">
+<div class="ev-grid-col uk-width-1-1">
+<div class="GlobalFooter Home   uk-root fdn-margin-vert FooterNavigationCustom comp-shell-footernavigation" data-component-id="FooterNavigationCustom">
+<div class="uk-flex uk-flex-wrap uk-grid-small fdn-custom-footer-link-block" uk-grid>
+<div class="fdn-custom-footer-section-column">
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-news___views">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/news" target="_self">News & Views</a>
+</li>
+<li>
+<a href="/topic/abortion-rights-39351653" target="_self">Abortion Rights</a>
+</li>
+<li>
+<a href="/category/cleveland-news-38416998" target="_self">Cleveland News</a>
+</li>
+<li>
+<a href="/category/ohio-news-38417004" target="_self">Ohio News</a>
+</li>
+<li>
+<a href="/category/cleveland-sports-38417010" target="_self">Cleveland Sports</a>
+</li>
+<li>
+<a href="/topic/news-feature-38404097" target="_self">News Features</a>
+</li>
+<li>
+<a href="/topic/politics-and-elections-38404096" target="_self">Politics & Elections</a>
+</li>
+<li>
+<a href="/cleveland/IssueArchives?issue=this%20week" target="_self">Digital Issue</a>
+</li>
+<li>
+<a href="/slideshows/?section=1392923" target="_self">News Slideshows</a>
+</li>
+</ul>
+</div>
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-cleveland_guides">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/cleveland-guides" target="_self">Cleveland Guides</a>
+</li>
+<li>
+<a href="/category/city-guide-4491053" target="_self">City Guide</a>
+</li>
+<li>
+<a href="/category/cleveland-people-3631702" target="_self">Cleveland People</a>
+</li>
+<li>
+<a href="/category/college-guide-4358626" target="_self">College Guide</a>
+</li>
+<li>
+<a href="/category/flavor-3801465" target="_self">Flavor</a>
+</li>
+<li>
+<a href="/category/fall-arts-guide-4383033" target="_self">Fall Arts Guide</a>
+</li>
+<li>
+<a href="/sponsored" target="_self">Sponsored Articles</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="fdn-custom-footer-section-column">
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-arts___culture">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/arts" target="_self">Arts & Culture</a>
+</li>
+<li>
+<a href="/category/arts-stories-and-interviews-38417016" target="_self">Arts Stories & Interviews</a>
+</li>
+<li>
+<a href="/category/things-to-do-38417022" target="_self">Things to Do</a>
+</li>
+<li>
+<a href="/topic/arts-and-culture-feature-38404099" target="_self">Arts & Culture Feature</a>
+</li>
+<li>
+<a href="/slideshows/?section=1392919" target="_self">Arts & Culture Slideshows</a>
+</li>
+<li>
+<a href="https://savage.love/savagelove" target="_blank">Savage Love</a>
+</li>
+</ul>
+</div>
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-calendar">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/cleveland/EventSearch?v=d" target="_self">Calendar</a>
+</li>
+<li>
+<a href="/cleveland/EventSearch?narrowByDate=Today" target="_self">Today's Events</a>
+</li>
+<li>
+<a href="/cleveland/EventSearch?narrowByDate=This%20Weekend&sortType=date&v=d" target="_self">This Weekend</a>
+</li>
+<li>
+<a href="/cleveland/Events/AddEvent" target="_self">Submit an Event</a>
+</li>
+</ul>
+</div>
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-promos_events">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/cleveland/FreeStuff" target="_self">Promos+Events</a>
+</li>
+<li>
+<a href="/cleveland/FreeStuff?category=4531979" target="_self">Scene Events</a>
+</li>
+<li>
+<a href="/cleveland/FreeStuff?category=4531976" target="_self">Giveaways</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="fdn-custom-footer-section-column">
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-food___drink">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/food-drink" target="_self">Food & Drink</a>
+</li>
+<li>
+<a href="/category/food-news-38417034" target="_self">Food News</a>
+</li>
+<li>
+<a href="/category/drink-news-38417327" target="_self">Drink News</a>
+</li>
+<li>
+<a href="/topic/food-and-drink-feature-38404107" target="_self">Food & Drink Feature</a>
+</li>
+<li>
+<a href="/topic/restaurant-reviews-38404104" target="_self">Restaurant Reviews</a>
+</li>
+<li>
+<a href="/slideshows/?section=1392921" target="_self">Food & Drink Slideshows</a>
+</li>
+</ul>
+</div>
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-movies">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/movies-tv" target="_self">Movies</a>
+</li>
+<li>
+<a href="/category/movie-reviews-and-stories-38417028" target="_self">Movie Reviews & Stories</a>
+</li>
+<li>
+<a href="/cleveland/MovieTimes" target="_self">Movie Times</a>
+</li>
+<li>
+<a href="/cleveland/LocationSearch?locationCategory=1430798&sortType=name" target="_self">Find a Theater</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="fdn-custom-footer-section-column">
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-music">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/music" target="_self">Music</a>
+</li>
+<li>
+<a href="/category/music-news-38417333" target="_self">Music News</a>
+</li>
+<li>
+<a href="/category/local-music-38417339" target="_self">Local Music</a>
+</li>
+<li>
+<a href="/topic/music-feature-38404110" target="_self">Music Feature</a>
+</li>
+<li>
+<a href="/cleveland/EventSearch?eventSection=1471254&sortType=date&v=d" target="_self">Find a Concert</a>
+</li>
+<li>
+<a href="/slideshows/?section=1392924" target="_self">Music Slideshows</a>
+</li>
+</ul>
+</div>
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-about_us">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/cleveland/SupportLocalJournalism/Page" target="_self">About Us</a>
+</li>
+<li>
+<a href="/cleveland/Contact/Page" target="_self">Contact</a>
+</li>
+<li>
+<a href="/cleveland/Jobs/Page" target="_self">Jobs</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/d/u/0/viewer?ll=41.509876853800954%2C-81.70991655000002&z=11&mid=1QduKrLeJMknBMJfVNHa4zRY2o0Y19olt" target="_blank">Distribution Map</a>
+</li>
+<li>
+<a href="/cleveland/AdvertiseWithClevelandScene/Page" target="_self">Advertise</a>
+</li>
+<li>
+<a href="https://media1.clevescene.com/clevescene/imager/o/original/42817459/2023_media_kit.pdf" target="_blank">Media Kit</a>
+</li>
+<li>
+<a href="/cleveland/Policies/Page" target="_self">Policies</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="fdn-custom-footer-section-column">
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-best_of">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="/cleveland/BestOf" target="_self">Best Of</a>
+</li>
+<li>
+<a href="/best-of/arts-and-entertainment" target="_self">Arts & Entertainment</a>
+</li>
+<li>
+<a href="/best-of/food-and-drink" target="_self">Food & Drink</a>
+</li>
+<li>
+<a href="/best-of/people-and-places" target="_self">People & Places</a>
+</li>
+<li>
+<a href="/best-of/bars-and-clubs" target="_self">Bars & Clubs</a>
+</li>
+<li>
+<a href="/best-of/shops-and-services" target="_self">Shops & Services</a>
+</li>
+<li>
+<a href="/best-of/sports-and-recreation" target="_self">Sports & Recreation</a>
+</li>
+</ul>
+</div>
+<div class="fdn-custom-footer-section-block fdn-custom-footer-section-block-support">
+<ul class="uk-list">
+<li class="fdn-custom-footer-section-header ">
+<a href="https://clevelandscene.fundjournalism.org/scene-supporters-1/?utm_source=website&utm_medium=footer&utm_campaign=scenesupporters" target="_self">Support</a>
+</li>
+<li>
+<a href="/cleveland/ClevesceneNewsletterSignup/Page" target="_self">Subscribe</a>
+</li>
+<li>
+<a href="/cleveland/AdvertiseWithClevelandScene/Page" target="_self">Advertise</a>
+</li>
+<li>
+<a href="https://www.instagram.com/clevelandscene/" target="_blank">Instagram</a>
+</li>
+<li>
+<a href="https://twitter.com/ClevelandScene" target="_blank">Twitter</a>
+</li>
+<li>
+<a href="https://www.facebook.com/ClevelandScene" target="_blank">Facebook</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="FooterInfo" class="GlobalFooter Home   uk-root fdn-margin-vert FooterInfo comp-shell-footerinfo" data-component-id="FooterInfo">
+<div class="uk-flex uk-flex-wrap fdn-custom-footer-info-block">
+<div class="uk-width-1-1 fdn-custom-footer-info-address">
+<h3 class="uk-margin-remove">
+Cleveland Scene
+</h3>
+<p class="uk-margin-remove">1422 Euclid Avenue, Suite 730</p>
+<p class="uk-margin-remove">Cleveland, OH 44115</p>
+</div>
+<div class="uk-width-1-1 uk-flex fdn-custom-footer-info-links">
+<div class="uk-grid-small uk-flex-middle fdn-custom-footer-info-social-links" uk-grid>
+<a href="https://www.facebook.com/ClevelandScene" target="_blank" uk-tooltip="Facebook">
+<img src="https://media1.clevescene.com/clevescene/imager/facebook/u/square/35797699/f_logo_rgb-blue_512.png?cb=1691527441" alt="Facebook" width="120" height="120" class="no-foundation-imgeditor" loading="lazy" />
+</a>
+<a href="https://twitter.com/ClevelandScene" target="_blank" uk-tooltip="X">
+<img src="https://media2.clevescene.com/clevescene/imager/x/u/square/43036669/unnamed-3.jpg?cb=1698783560" alt="X" width="120" height="120" class="no-foundation-imgeditor" loading="lazy" />
+</a>
+<a href="https://www.instagram.com/clevelandscene/" target="_blank" uk-tooltip="Instagram">
+<img src="https://media2.clevescene.com/clevescene/imager/instagram-icon/u/square/35797700/instagram_appicon_aug2017.png?cb=1645724296" alt="Instagram Icon" width="120" height="120" class="no-foundation-imgeditor" loading="lazy" />
+</a>
+<a href="https://apple.news/T3zEhGlfYTLKMdgomjEL19Q" target="_blank" uk-tooltip="Apple News">
+<img src="https://media2.clevescene.com/clevescene/imager/apple-news-icon/u/square/35797701/c8269638ca74fdcb0896367bbc1eff24.png?cb=1645724303" alt="Apple News Icon" width="120" height="120" class="no-foundation-imgeditor" loading="lazy" />
+</a>
+<a href="https://news.google.com/publications/CAAqKQgKIiNDQklTRkFnTWFoQUtEbU5zWlhabGMyTmxibVV1WTI5dEtBQVAB?hl=en-US&gl=US&ceid=US%3Aen" target="_blank" uk-tooltip="Google News">
+<img src="https://media1.clevescene.com/clevescene/imager/google-news-icon/u/square/35797703/google_news_icon.png?cb=1645724310" alt="Google News Icon" width="120" height="120" class="no-foundation-imgeditor" loading="lazy" />
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+if (typeof window.__uspapi === 'function') {
+  window.__uspapi('uspPing', 1, function(obj, status) {
+    if (status && obj.mode.includes('USP') && obj.jurisdiction.includes(obj.location.toUpperCase())) {
+      var message = document.createElement("p");
+      message.setAttribute("class", "ccpaNotice");
+      message.innerHTML = 'Our website uses technical, analytical, marketing, and preference cookies to provide the best experience for our readers and to give us information about how our site is used. You may request that your data not be shared with third parties here: ' 
+        + `<a href="#" onclick="window.__uspapi('displayUspUi');"` 
+        + '>Do Not Sell My Data</a>' 
+        + '.';
+      document.getElementById('FooterInfo').append(message);
+      window.__uspapi('setUspDftData', 1, function(obj, status) {
+        if (!status) {
+            console.log("Error: USP string not updated!")
+        }
+      });
+   }
+  });
+}
+</script>
+<div class="GlobalFooter Home   uk-root fdn-margin-vert FooterCopyright comp-shell-footercopyright" data-component-id="FooterCopyright">
+<div class="uk-text-center">
+<div class="fdn-copyright-text">
+© 2024 Cleveland Scene
+</div>
+<div class="fdn-copyright-text uk-margin-small-top">
+<a class="fdn-copyright-link" href="https://publishwithfoundation.com/" target="_blank">
+<img width="110" alt="Powered By Foundation" src="/foundation/images/PoweredByFoundation.svg" loading="lazy">
+</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+  (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+  vgo('setAccount', '26668640');
+  vgo('setTrackByDefault', true);
+
+  vgo('process');
+</script>
+</div>
+</div>
+<div class="ev-grid-zone ev-closer-zone" data-ev-zone="Closer">
+<div class="ev-grid-col uk-width-1-1">
+<div class="Closer Home   uk-root fdn-margin-vert SupportUs comp-shell-supportus" data-component-id="SupportUs">
+<div class="fdn-support-us-button-block">
+<a href="https://clevelandscene.fundjournalism.org/scene-supporters-1/?utm_source=website&utm_medium=floatingbutton&utm_campaign=scenesupporters">Support Us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

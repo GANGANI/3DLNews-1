@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="eng" ng-app="player" ng-controller="playerCtrl">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script>
+	    var RADIO_ID = 96;
+        var API_BASE_URL = "/api/v1";
+        var WS_URL = "wss://" + location.hostname + ":9445";
+    </script>
+    <title>Online radio</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/video-js.min.css">
+    <link rel="stylesheet" href="css/angular-csp.css">
+</head>
+
+<body ng-style="bodyStyle" class="ng-cloak">
+
+    <!-- BLOCKED Text-block START  -->
+    <div class="text-banner-wrap" ng-if="radioLoaded && radioIsBlocked">
+        <div class="container">
+            <div class="text-banner" style="text-align: center;">OFFLINE</div>
+        </div>
+    </div>
+
+    <!-- Player -->
+    <div id="rtJpID-1"></div>
+    <div id="prerollPlayer"></div>
+
+    <div class="player-full-wrap">
+
+        <!-- Logo block START -->
+        <div class="header-wrap" ng-if="radioLoaded && !radioIsBlocked && radio.logo">
+            <div class="header">
+                <a ng-href="{{radio.logo_url}}" ng-if="radio.logo_url" target="_blank">
+                    <img ng-src="{{radio.logo}}" alt="">
+                </a>
+                <img ng-if="!radio.logo_url" ng-src="{{radio.logo}}" alt="">
+            </div>
+        </div>
+
+        <div class="player-wrap" ng-cloak ng-if="!radioIsBlocked" ng-show="radioLoaded">
+            <div class="player">
+
+                <div class="current player-main clearfix">
+
+                    <div class="now-playing-text"><span ng-if="!radio.deactivate_metadata && radio.show_covers && radio.player_type == 0">Now Playing</span></div>
+
+                    <div class="cover-img" ng-if="radioLoaded && currentTrack && radio.show_covers  && radio.player_type == 0">
+                        <div class="cover-img-wrap">
+                            <div class="cover-img-overlay" ng-if="radio.show_additional_art"><img src="./images/earbuds.png"></div>
+                            <img ng-if="radio.show_covers && currentTrack.image_url && !radio.deactivate_metadata" ng-src="{{currentTrack.image_url}}"
+                                ng-attr-alt="{{currentTrack.meta}}" class="cover--img">
+                            <img ng-if="(radio.show_covers && !currentTrack.image_url) || (!radio.show_covers || radio.deactivate_metadata)" ng-src="./images/no_album.png"
+                                ng-attr-alt="{{currentTrack.meta}}" class="cover--img">
+                        </div>
+                    </div>
+
+                    <div class="track" ng-style="{'padding-left': (!radio.show_covers || radio.player_type == 1) && '40px', 'margin': (!radio.show_covers || radio.player_type == 1) && '0 auto', 'float': (!radio.show_covers || radio.player_type == 1) && 'none' }">
+                        <p class="track--name" ng-if="radioLoaded && currentTrack">{{ radio.deactivate_metadata ? '' : currentTrack.meta }}</p>
+                        <p class="track--name" ng-if="radioLoaded && radio.player_type==1 && !radio.enable_playlist">{{ radio.deactivate_metadata ? '' : radio.ondemand_meta }}</p>
+                        <p class="track--name" ng-if="radioLoaded && radio.player_type==1 && radio.enable_playlist">{{ radio.deactivate_metadata ? '' : radio.playlist[currentPlaylistItemIndex].title }}</p>
+                        <div class="track-wrap clearfix">
+
+                            <div class="slider-wrap clearfix">
+
+                                <div class="volume-sign minus">&ndash;</div>
+                                <div class="volume-sign plus">+</div>
+                                <div class="volume mute-volume" id="rtplmute-1"><span class="fa fa-volume-off"></span></div>
+                                <div class="slider-bar">
+                                    <div class="slider" id="rtplvolume-1"></div>
+                                </div>
+                                <div class="volume full-volume" id="rtplmaxvol-1"><span class="fa fa-volume-up"></span></div>
+
+
+
+                            </div>
+
+                            <div class="track-play-time">
+                                <div class="track-play-wrap">
+                                    <div class="track--play" ng-click="togglePlayer()" id="button_play_stop-1"></div>
+                                </div>
+                                <p id="current_time-1" class="time">00:00:00</p>
+                            </div>
+
+                            <div class="slider-btns clearfix" ng-show="radioLoaded && !radioIsBlocked && radio.show_sharing_buttons">
+                                <!--<img src="images/slider-link.png" alt="">-->
+                                <div class="share-btns">share:
+                                    <span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{playerURL}}&amp;title={{radio.title}}" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?status={{radio.title}}%20{{playerURL}}" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </span>
+                                </div>
+                                <div class="buy-btn">
+                                    <a ng-if="radio.show_buy_buttons && !radio.deactivate_metadata  && radio.player_type !== 1 && currentTrack.amazon_url" ng-href="{{currentTrack.amazon_url}}" target="_blank">Buy Now</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ./track-wrap -->
+                    </div>
+                    <!-- ./track -->
+
+                </div>
+                <!-- ./current player-main -->
+
+                <div class="track-footer clearfix">
+
+                    <div class="contact-donate">
+                        <div class="track-footer--link" ng-if="radio.email">
+                            <a href="mailto:{{radio.email}}" class="contact-track--link footer--link"><i class="fa fa-user"></i> Contact</a>
+                        </div>
+
+                        <div class="track-footer--link donate" ng-if="radioLoaded && !radioIsBlocked && radio.show_donate && radio.paypal_donate_addr">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 2px;">
+
+                                <!-- Identify your business so that you can collect the payments. -->
+                                <input type="hidden" name="business" value="{{radio.paypal_donate_addr}}">
+
+                                <!-- Specify a Donate button. -->
+                                <input type="hidden" name="cmd" value="_donations">
+
+                                <!-- Specify details about the contribution -->
+                                <input type="hidden" name="item_name" value="Donation">
+
+                                <!--<input type="hidden" name="item_number" value="Fall Cleanup Campaign">-->
+                                <input type="hidden" name="currency_code" value="USD">
+
+                                <!-- Display the payment button. -->
+                                <!--<input type="image" name="submit" src="images/donate.png" alt="Donate">-->
+                                <button type="submit" name="submit"><i class="fa fa-paypal"></i> Donate</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="track-footer--link recent-track-link" ng-if="radioLoaded && radio.show_recent && radio.player_type === 0" ng-click="togglePlaylistLayer()">
+                        <span class="recent-track--link footer--link"><i class="fa fa-list-ul"></i> Recent Tracks</span>
+                    </div>
+
+                    <div class="track-footer--link recent-track-link" ng-if="radioLoaded && radio.enable_playlist && radio.show_recent && radio.player_type === 1" ng-click="togglePlaylistLayer()">
+                        <span class="recent-track--link footer--link"><i class="fa fa-list-ul"></i> Playlist</span>
+                    </div>
+
+                </div>
+                <!-- ./track-footer -->
+
+            </div>
+            <!-- ./player -->
+        </div>
+        <!-- ./player-wrap -->
+
+        <div class="recent-hidden">
+            <div class="recent-wrap">
+                <div class="recent scroll-pane">
+                    <!-- On demand: played -->
+                    <div class="recent-item clearfix" ng-show="playlistLayerOpen" ng-if="radio.player_type === 1 && playedTracks.length > 0">
+                        <p class="playlist-item--text-heading">Played recently</p>
+                    </div>
+
+                    <div class="recent-item clearfix" ng-show="playlistLayerOpen" ng-if="radio.player_type === 1" ng-repeat="track in playedTracks track by track.play_order">
+                        <p class="playlist-item--text" ng-bind="track.title"></p>
+                    </div>
+
+                    <!-- On demand: upcoming -->
+                    <div class="recent-item clearfix" ng-show="playlistLayerOpen" ng-if="radio.player_type === 1 && upcomingTracks.length > 0">
+                            <p class="playlist-item--text-heading">Upcoming</p>
+                    </div>
+
+                    <div class="recent-item clearfix" ng-show="playlistLayerOpen" ng-if="radio.player_type === 1" ng-repeat="track in upcomingTracks">
+                        <p class="playlist-item--text" ng-bind="track.title"></p>
+                    </div>
+                    <!-- Streaming player history -->
+                    <div class="recent-item clearfix" ng-if="radio.player_type === 0" ng-repeat="track in history track by track.id">
+                        <div class="recent-item--img" ng-if="radio.show_covers">
+                            <img ng-if="track.image_url" ng-src="{{track.image_url}}" alt="">
+                            <img ng-if="!track.image_url" src="images/no_album_small.png" alt="">
+                        </div>
+                        <p class="recent-item--text" ng-bind="track.meta"></p>
+                        <div class="buy-btn">
+                            <a ng-href="{{track.amazon_url}}" target="_blank" ng-if="radio.show_buy_buttons && track.amazon_url">Buy Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Text banner -->
+        <div class="text-banner-wrap" ng-if="radioLoaded && !radioIsBlocked && radio.custom_text">
+            <div class="text-banner" id="custom-text-block" ng-bind-html="radio.custom_text"></div>
+        </div>
+
+    </div>
+    <!-- ./player-full-wrap -->
+
+    <!-- Bottom banner -->
+    <div class="bot-banner-wrap" ng-if="bannersLoaded && banners.length > 0 && banner && !radioIsBlocked">
+        <div class="container">
+            <a ng-href="{{banner.link}}" target="_blank" class="bot-banner"><img ng-src="{{banner.image}}" alt=""></a>
+        </div>
+    </div>
+
+    <!-- Social -->
+    <div class="social-wrap" ng-if="radioLoaded">
+        <div class="container">
+            <div class="social">
+                <a ng-href="{{radio.facebook_url}}" ng-if="radio.facebook_url" class="social--link" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a ng-href="{{radio.twitter_url}}" ng-if="radio.twitter_url" class="social--link" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a ng-if="radio.instagram_url" ng-href="{{radio.instagram_url}}" class="social--link" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a ng-if="radio.youtube_url" ng-href="{{radio.youtube_url}}" class="social--link" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="powered-by-wrap">
+        <div class="container">
+            <div class="powered-by" ng-if="radio.show_copyright" ng-switch="radio.show_copyright">
+                <p ng-switch-when="1" class="powered-by_text">Powered By</p>
+                <p ng-switch-when="2" class="powered-by_text pb_black">Powered By</p>
+                <p ng-switch-when="3" class="powered-by_text pb_gray">Powered By</p>
+                <a href="https://broadcastmatrix.com/" class="powered-by_link" target="_blank">
+                    <img ng-switch-when="1" src="./images/powered-by-white.png" alt="">
+                    <img ng-switch-when="2" src="./images/powered-by-black.png" alt="">
+                    <img ng-switch-when="3" src="./images/powered-by-gray.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video -->
+    <div class="video-bg">
+        <div class="video-wrap">
+            <div class="video-in">
+
+                <div class="video--img">
+                    <video class="video-js" autoplay id="video-preroll-player"></video>
+                </div>
+
+                <div class="video-sound">
+                    <div class="video-slider">
+                        <div id="video-slider" class="slider slider2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div>
+
+    <script src="js/lib/jquery-1.10.2.min.js"></script>
+    <script src="js/lib/jquery-ui.min.js"></script>
+    <script src="js/lib/jquery.mousewheel.js"></script>
+    <script src="js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/jquery.jplayer.min.js"></script>
+    <script src="js/lib/video.min.js"></script>
+    <script src="js/lib/reconnecting-websocket.min.js"></script>
+
+    <script>
+        videojs.options.flash.swf = "/js/lib/video-js.swf"
+    </script>
+
+    <script src="js/common.js?"></script>
+    <script src="js/player.js?"></script>
+
+</body>
+
+</html>

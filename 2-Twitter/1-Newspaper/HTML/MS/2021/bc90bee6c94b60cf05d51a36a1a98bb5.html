@@ -1,0 +1,926 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home - Mississippi State Department of Health</title>
+
+    <meta content="Department of Health, Public Health, Health, Mississippi, Epidemiology" name="keywords">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+ <meta name="HandheldFriendly" content="true">
+ <meta name="viewport" content = "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale= 1">
+<meta property="fb:admins" content="100001736052671">
+
+<!-- reload to HTTPS before we spend time on any other actions -->
+<script>
+   if (window.location.protocol.toLowerCase() != "https:")
+   {
+      var secure_url = "https://msdh.ms.gov" + window.location.pathname + window.location.search;
+      window.location = secure_url;
+   }
+   
+   function countNavigationAction (an_id)
+   {
+      gtag('event', 'select_content', {'content_type':'Navigation', 'content_id':an_id});
+   }
+   
+   function countPromotionAction (a_promotion_name)
+   {
+      gtag('event', 'select_promotion', {'promotion_name':a_promotion_name});
+   }
+
+
+
+function dateBetween (begin_date_str, end_date_str)
+{
+   function date_from_str (a_str)
+   {
+      var dateParts = a_str.split ("/");
+      if (dateParts.length == 3)
+      {
+         return new Date (parseInt (dateParts [2]), parseInt (dateParts [0]) - 1, parseInt (dateParts [1]));
+      }
+      else return "";
+   }
+   
+   var begin_date = date_from_str (begin_date_str);
+   var end_date = date_from_str (end_date_str);
+   var today = new Date ();
+
+   if (begin_date != "" && end_date != "")
+      { return begin_date <= today && today <= end_date;}
+   else
+      return false;
+}
+
+function dateAfter (off_date_str)
+{
+   function date_from_str (a_str)
+   {
+      var dateParts = a_str.split ("/");
+      if (dateParts.length == 3)
+      {
+         return new Date (parseInt (dateParts [2]), parseInt (dateParts [0]) - 1, parseInt (dateParts [1]));
+      }
+      else return "";
+   }
+   
+   var today = new Date();
+   var off_date = date_from_str (off_date_str);
+
+   return today >= off_date;
+}
+
+function choose_variable_slide ()
+{
+   var which_slide = "EatWell_prevent_cancer_slide.jpg";
+   var which_identifier = "1";
+   const random3 = Math.floor (3*Math.random ())+1;
+   switch (random3)
+   {
+      case 1: which_slide = "ActiveHealthy_slide1.jpg"; which_identifier = "HomeSlide-ActiveHealthy_runner"; break;
+      case 2: which_slide = "ActiveHealthy_slide2.jpg"; which_identifier = "HomeSlide-ActiveHealthy_biker"; break;
+      case 3: which_slide = "ActiveHealthy_slide3.jpg"; which_identifier = "HomeSlide-ActiveHealthy_dancer"; break;
+   }
+   document.getElementById ("variable_slide").src = "/msdhsite/theme/slides/" + which_slide;
+   document.getElementById ("variable_identifier").onclick = function () { countPromotionAction (which_identifier) };
+}
+
+</script>
+
+<link type="text/css" rel="Stylesheet" href="msdhsite/styles/normalize.css">
+<link type="text/css" rel="Stylesheet" href="msdhsite/styles/style.css">
+<link type="text/css" rel="Stylesheet" href="msdhsite/styles/home.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="msdhsite/theme/orbitSlideshowRandomized.js"></script>
+<script type="text/javascript" src="msdhsite/theme/home.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="MSDH News, Events and Updates" href="https://msdh.ms.gov/msdhsite/rssFeed.xml">
+   
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYB9XTRNM4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BYB9XTRNM4');
+    </script>
+
+<style type="text/css">
+.banner-promo { text-align:center; background-color:#f4f4f4; padding-top:10px; padding-bottom:10px}
+.banner-text { padding: 0 10px 0 10px}
+#banner-video {  }
+@media screen and (max-width: 900px) { .flexibleFrame { max-width: 100%; max-height: 508px} }
+@media screen and (max-width: 780px) { .flexibleFrame { max-width: 100%; max-height: 440px} }
+@media screen and (max-width: 600px) { .flexibleFrame { max-width: 100%; max-height: 340px} }
+@media screen and (max-width: 500px) { .flexibleFrame { max-width: 100%; max-height: 282px} }
+@media screen and (max-width: 400px) { .flexibleFrame { max-width: 100%; max-height: 226px} }
+
+@media screen and (max-width: 735px)
+{
+
+}
+
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+<!--<link rel="stylesheet" type="text/css" href="https://msdh.ms.gov/msdhsite/styles/chatbot.css">-->
+
+
+   <div id="pageContainer">
+<!--   
+       <div id="azDropdown">
+          <a href="/page/4,0,207.html#A">A</a>
+         <a href="/page/4,0,207.html#B">B</a>
+         <a href="/page/4,0,207.html#C">C</a>
+         <a href="/page/4,0,207.html#D">D</a>
+         <a href="/page/4,0,207.html#E">E</a><sub> </sub>
+         <a href="/page/4,0,207.html#F">F</a>
+         <a href="/page/4,0,207.html#G" style="clear: both">G</a>
+         <a href="/page/4,0,207.html#H">H</a>
+         <a href="/page/4,0,207.html#I">I</a>
+         <a href="/page/4,0,207.html#J">J</a>
+         <a href="/page/4,0,207.html#K">K</a>
+         <a href="/page/4,0,207.html#L">L</a>
+         <a href="/page/4,0,207.html#M" style="clear: both">M</a>
+         <a href="/page/4,0,207.html#N">N</a>
+         <a href="/page/4,0,207.html#O">O</a>
+         <a href="/page/4,0,207.html#P">P</a>
+         <a href="/page/4,0,207.html#Q">Q</a>
+         <a href="/page/4,0,207.html#R">R</a>
+         <a href="/page/4,0,207.html#S" style="clear: both">S</a>
+         <a href="/page/4,0,207.html#T">T</a>
+         <a href="/page/4,0,207.html#U">U</a>
+         <a href="/page/4,0,207.html#V">V</a>
+         <a href="/page/4,0,207.html#W">W</a>
+         <a href="/page/4,0,207.html#X">X</a>
+         <a href="/page/4,0,207.html#Y" style="clear: both">Y</a>
+         <a href="/page/4,0,207.html#Z">Z</a>
+         <a href="#" onclick ="toggleAZDropdown()" id="azClose">[CLOSE]</a>
+      </div>
+-->
+
+        <header id="header">
+        <a href="/page/4,0,204.html"><!--<img src="/msdhsite/theme/infoDesk.png" alt="Info"/>-->ABOUT</a>
+        <span id="headerLinks"><a href="/page/19,0,166.html">LOCATIONS</a>
+           <a href="/page/4,0,204.html">CONTACT</a>
+<!--           <a href="/page/4,0,207.html" id="azDropdownLink">TOPICS A-Z</a> -->
+           <a href="/page/19,0,123.html">JOBS</a>
+         </span>
+        <a href="/page/4,0,207.html" id="HeaderSearchLink">SEARCH</a>
+        </header>
+
+      <nav id="nav">
+         <ul>
+            <li><a href="/page/30.html">Licensure</a></li>
+            <li><a href="/page/30.html">Regulation</a></li>
+            <li><a href="/page/14.html">Disease Control</a></li>
+            <li><a href="/page/31.html">Data and Statistics</a></li>
+            <li><a href="/page/44.html">Health and Safety</a></li>
+            <li ><a href="/page/32.html">Public Services</a></li>
+            <li data-noslide="noslide"><a href="/page/44,0,99.html">EMS/Trauma</a></li>
+            <li class="endNavList"></li>
+         </ul>
+      </nav>
+
+<!-- the slider can be replaced by a single image.  In that case, use the following line, and comment out the "feature" DIV. -->
+
+<div class="appointmentBox appointmentBox_mobile">Schedule an appointment for services: <strong>855&#8209;767&#8209;0170</strong></div>
+      
+
+   <div id="feature">
+      <div id="orbit-slider">
+         <!-- always start with exactly one feature slide; all the rest go AFTER the menu entries. First slide gets wrapped in a special DIV to identify it to old (IE6/7) browsers -->
+         <!-- if using the randomizing slideshow, the attribute data-randomize controls whether the first slide will always be first, or can be swapped with another slide.  0=do not swap (always first). Other values are treated as percentages, i.e. 25=a 25% chance of being swapped -->
+
+         <!--featured slide-->
+        <div id="firstSlide" data-randomize="50">
+                  <a href="/page/23,0,195,505.html" onClick="countPromotionAction ('HomeSlide-HealthySummer')"><img src="/msdhsite/theme/slides/Summer-health-and-safety-slide.png" alt=""></a>
+      </div>
+
+      
+    <!-- the second DIV here begins the main menu selections, IN ORDER. If the sequence of menu items changes, these DIVs must be rearranged to have the same sequence. -->
+       <div class="menuSlide menuHidden" aria-hidden="true" id="Licensure">
+            <div class="box" style="margin-left: 0">
+               <p><a href="/page/30,0,82.html">Professional Licensure</a></p>
+               <ul>
+                  <li><a href="/page/30,0,82,93.html">Applications and Guidelines</a></li>
+                  <li><a href="/page/30,0,82,138.html">Continuing Education</a></li>
+                  <li><a href="/page/30,0,82,353.html">Renewal &amp; Verification</a></li>
+                  <li><a href="/page/30,0,82,60.html">Regulations</a></li>
+                  <li><a href="/page/30,0,82.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box">
+               <p><a href="/page/30,0,83.html">Health and Care Facilities</a></p>
+               <ul>
+                  <li><a href="/page/30,0,83,613.html">Health Facilities Directory</a></li>
+                  <li><a href="/page/30,0,83.html">Health Facilities Licensure</a></li>
+                  <li><a href="/page/30,0,83.html">Nursing Homes and Adult Care</a></li>
+                  <li><a href="/page/30,0,83,265.html">Utilization Review</a></li>
+                  <li><a href="/page/30,0,83.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-right:0; margin-left: 0">
+               <p><a href="/page/30,0,183.html">Child Care &amp; Youth Camps</a></p>
+               <ul>
+                  <li><a href="/page/30,0,183,438.html">Find a Child Care Provider</a></li>
+                  <li><a href="/page/30,19112,183,776.html">How to Get a Child Care License</a></li>
+                  <li><a href="/page/30,0,183,707.html">Violations</a></li>
+                  <li><a href="/page/30,0,183.html" class="moreLink">All Topics</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-top: 1em">
+               <p><a href="/page/30.html">Other Licenses &amp; Permits</a></p>
+               <ul>
+                  <li><a href="/page/30,0,77.html">Food Permits</a></li>
+                  <li><a href="https://www.mmcp.ms.gov/">Medical Cannabis</a></li>
+                  <li><a href="/page/30,0,78.html">On-Site Wastewater</a></li>
+                  <li><a href="/page/30.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+         </div>
+
+       <div class="menuSlide menuHidden" aria-hidden="true" id="Regulation">
+            <div class="box" style="margin-left: 0">
+               <p><a href="/page/30,0,83.html">Health and Care Facilities</a></p>
+               <ul>
+                  <li><a href="/page/30,0,84.html">Certificates of Need</a></li>
+                  <li><a href="/page/30,0,206.html">Criminal History Record Checks</a></li>
+                  <li><a href="/page/14,0,356.html">Electronic Health Records</a></li>
+                  <li><a href="/page/30,0,83,613.html">Health Facilities Directory</a></li>
+                  <li><a href="/page/30,0,83.html">Hospitals and Health Facilities</a></li>
+                  <li><a href="/page/30,0,83.html">Nursing Homes/Care Facilities</a></li>
+                  <li><a href="/page/30,0,83,60.html">Regulations/Minimum Standards</a></li>
+                  <li><a href="/page/30,0,83,265.html">Utilization Review</a></li>
+                  <li><a href="/page/30,0,83.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box">
+               <p><a href="/page/30,0,183.html">Child Care Facilities</a></p>
+               <ul>
+                  <li><a href="/page/30,0,183.html">Child Care Division</a></li>
+                  <li><a href="/page/30,0,183,464.html">Menu Planning</a></li>
+                  <li><a href="/page/30,0,183,225.html">Regulations and Guidelines</a></li>
+                  <li><a href="/page/14,0,404.html">Returning After Illness</a></li>
+                  <li><a href="/page/30,0,183,707.html">Violations</a></li>
+                  <li><a href="/page/30,0,183.html">Youth Camps</a></li>
+                  <li><a href="/page/30,0,183.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-left: 0; margin-right: 0">
+               <p><a href="/page/30.html">Other Regulation</a></p>
+               <ul>
+                  <li><a href="/page/30,0,193.html">Boiler &amp; Pressure Vessel</a></li>
+                  <li><a href="/page/30,0,77.html">Food Code and Permits</a></li>
+                  <li><a href="/page/30,0,425.html">Medical Cannabis</a></li>
+                  <li><a href="/page/30,0,117.html">Milk &amp; Bottled Water</a></li>
+                  <li><a href="/page/30,0,78.html">On-Site Wastewater</a></li>
+                  <li><a href="/page/30,0,102.html">Radiological Health</a></li>
+                  <li><a href="/page/30,0,76.html">Water Supply</a></li>
+                  <li><a href="/page/30.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+<!---->
+         </div>
+
+
+         
+
+<div class="menuSlide menuHidden" aria-hidden="true" id="DiseaseControl">
+            <div class="box" style="margin-left: 0">
+               <p><a href="/page/14.html">Disease Information</a></p>
+               <ul>
+                  <li><a href="/page/14,0,150.html">Chlamydia</a></li>
+                  <li><a href="/page/14,0,420.html">COVID-19</a></li>
+                  <li><a href="/page/14,0,250.html">Hepatitis</a></li>
+                  <li><a href="/page/14,0,150.html">HIV</a></li>
+                  <li><a href="/page/14,0,199.html">Influenza (flu)</a></li>
+                  <li><a href="/page/14,0,150.html">Sexually-transmitted</a></li>
+                  <li><a href="/page/14,0,150.html">Syphilis</a></li>
+                  <li><a href="/page/14,0,125.html">Tuberculosis</a></li>
+                  <li><a href="/page/14,0,93.html">West Nile Virus</a></li>
+                  <li><a href="/page/14.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box">
+               <p><a href="/page/43,0,91.html">Chronic Diseases</a></p>
+               <ul>
+                  <li><a href="/page/43,0,328.html">Breast Cancer</a></li>
+                  <li><a href="/page/43,0,329.html">Cervical Cancer</a></li>
+                  <li><a href="/page/43,0,311.html">Colorectal Cancer</a></li>
+                  <li><a href="/page/43,0,296.html">Diabetes</a></li>
+                  <li><a href="/page/43,0,297.html">Heart Disease and Stroke</a></li>
+                  <li><a href="/page/43,0,91,474.html">Management</a></li>
+                  <li><a href="/page/43,0,289.html">Obesity</a></li>
+                  <li><a href="/page/43,0,91.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-left:0; margin-right: 0">
+               <p><a href="/page/14.html">Special Areas</a></p>
+               <ul>
+                  <li><a href="/page/14,0,73.html">Epidemiology</a></li>
+                  <li><a href="/page/14,0,71.html">Immunizations</a></li>
+                  <li><a href="/page/14,0,356.html">Interoperability/EHRs</a></li>
+                  <li><a href="/page/14,0,428.html">Pharmacy</a></li>
+                  <li><a href="/page/14,0,188.html">Public Health Laboratory</a></li>
+                  <li><a href="/page/14,0,194.html">Reportable Diseases</a></li>
+                  <li><a href="/page/14,0,261.html">Statistics and Reports</a></li>
+                  <li><a href="/page/14.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+         </div>
+
+
+
+    <div class="menuSlide menuHidden" aria-hidden="true" id="DataAndStatistics">
+            <div class="box" style="margin-left: 0">
+               <p><a href="/page/31.html">Health Data &amp; Reports</a></p>
+               <ul>
+                  <li><a href="/page/31,0,110.html">Behavior Risk Factor Survey</a></li>
+                  <li><a href="/page/31,0,261.html">Disease Statistics</a></li>
+                  <li><a href="/page/31.html">Health Data Sources</a></li>
+                  <li><a href="/page/14,0,194.html">Reportable Diseases</a></li>
+                  <li><a href="/page/31,0,302.html">Youth Risk Behavior</a></li>
+                  <li><a href="/page/31,0,303.html">Youth Tobacco Survey</a></li>
+                  <li><a href="/page/31.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box">
+               <p><a href="/page/31,0,75.html">Vital Records &amp; Statistics</a></p>
+               <ul>
+                  <li><a href="/page/31,0,75.html">Mississippi Vital Statistics</a></li>
+                  <li><a href="/page/31,0,109.html">Vital Records</a></li>
+                  <li><a href="http://mstahrs.msdh.ms.gov/">MSTAHRS Data Query</a></li>
+                  <li><a href="/page/31,0,75.html">Vital Events Reporting</a></li>
+                  <li><a href="/page/31,0,75.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-left:0; margin-right: 0">
+               <p>Special Areas</p>
+               <ul>
+                  <li><a href="/page/31,0,427.html">Data Requests</a></li>
+                  <li><a href="/page/31,0,299.html">Health Data and Research</a></li>
+                  <li><a href="/page/31,0,348.html">Hospital Discharge Data System</a></li>
+                  <li><a href="/page/31.html" class="moreLink">All Topics</a></li>
+               </ul>
+            </div>
+         </div>
+
+
+<div class="menuSlide menuHidden" aria-hidden="true" id="Programs">
+            <div class="box" style="margin-left: 0">
+               <p><a href="/page/32.html">Health For</a></p>
+               <ul>
+                  <li><a href="/page/41,0,170.html">Children</a></li>
+                  <li><a href="/page/41,0,304.html">Adolescents</a></li>
+                  <li><a href="/page/41.html">Mothers</a></li>
+                  <li><a href="/page/41,0,225.html">Women</a></li>
+                  <li><a href="/page/42.html">Families and Adults</a></li>
+                  <li><a href="/page/42,0,241.html">Seniors</a></li>
+                  <li style="margin-top: 1.5em"><a href="/page/44,0,111.html">Rural Areas</a></li>
+                  <li><a href="/page/43,0,343.html">Schools</a></li>
+            <li><a href="/page/43,0,277.html">Worksites</a></li>
+               </ul>
+            </div>
+            <div class="box">
+               <p><a href="/page/44.html">Health Programs</a></p>
+               <ul>
+                    <li><a href="/page/43,0,292.html">Cancer</a></li>
+                  <li><a href="/page/43,0,91.html" title="Cancer, Diabetes, Heart Disease, and more">Chronic Diseases</a></li>
+                    <li><a href="/page/43,0,296.html">Diabetes</a></li>
+                    <li><a href="/page/43,0,151.html">Dental and Oral Health</a></li>
+                    <li><a href="/page/44,0,95.html">Environmental Health</a></li>
+                    <li><a href="/page/43,0,297.html">Heart Disease &amp; Stroke</a></li>
+                    <li><a href="/page/44,0,360.html">Lead and Healthy Homes</a></li>
+                    <li><a href="/page/43.html">Preventive Health</a></li>
+                    <li><a href="/page/43,0,94.html">Tobacco Control</a></li>
+                    <li><a href="/page/44.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-left:0; margin-right: 0">
+               <p><a href="/page/44.html">Safety</a></p>
+               <ul>
+                  <li><a href="/page/44,0,122.html">Emergency Preparedness</a></li>
+                  <li><a href="/page/43,0,377.html">Food Safety</a></li>
+                    <li><a href="/page/43,0,98.html">Injury Prevention</a></li>
+                    <li><a href="/page/44,0,100.html">Radon</a></li>
+                    <li><a href="/page/44.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-left:0; margin-right: 0">
+               <p><a href="/page/44.html">Special Programs</a></p>
+               <ul>
+                  <li><a href="/page/44,0,397.html">Acute Care Systems</a></li>
+                  <li><a href="/page/44,0,236.html">Health Equity</a></li>
+                  <li><a href="/page/44,0,382.html">Prescription Drug Abuse</a></li>
+                  <li><a href="/page/44,0,111.html">Rural Health/J-1</a></li>
+               </ul>
+            </div>
+         </div>
+
+<div class="menuSlide menuHidden" aria-hidden="true" id="Services">
+            
+            <div class="box" style="margin-left: 0;">
+               <p><a href="/page/32.html#clinical">Clinical Services</a></p>
+               <ul>
+                  <li><a href="/page/32.html#clinical">Appointments at all county health departments</a>
+                     <span style="font-weight:bold;color:#ee8600;font-size:120%">855&#8209;767&#8209;0170</span>
+                  </li>
+                  <li><a href="/page/32.html#clinical" class="moreLink">All Services and Care</a></li>
+               </ul>
+            
+               <p style="color:#040;margin:30px 0 10px 10px;border-bottom: 1px dotted #aaa; font-size:17px; font-family:Georgia"><a href="/page/41.html">Women's Services</a></p>
+               <ul>
+                  <li><a href="/page/41,0,103.html">Breast &amp; Cervical Cancer</a></li>
+                  <li><a href="/page/41,0,107.html">Family Planning</a></li>
+                  <li><a href="/page/41,0,106.html">Healthy Moms, Healthy Babies</a></li>
+                  <li><a href="/page/41,0,128.html">WIC Nutrition Program</a></li>
+                  <li><a href="/page/41.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box">
+               <p><a href="/page/41,0,170.html">Children's Services</a></p>
+               <ul>
+                  <li><a href="/page/41,0,304.html">Adolescent Health</a></li>
+                  <li><a href="/page/41,0,96.html">Children's Health Insurance</a></li>
+                  <li><a href="/page/41,0,163.html">Children with Special Health Needs</a></li>
+                  <li><a href="/page/41,0,151.html">Dental and Oral Health</a></li>
+                  <li><a href="/page/41,0,74.html">Early Intervention</a></li>
+                  <li><a href="/page/41,0,164.html">Early Screening (EPSDT)</a></li>
+                  <li><a href="/page/41,0,174.html">Early Hearing (EHDI)</a></li>
+                  <li><a href="/page/41,0,71.html">Immunization</a></li>
+                  <li><a href="/page/41,0,176.html">Lead Poisoning Screening</a></li>
+                  <li><a href="/page/41,0,170.html" class="moreLink">More</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-left:0; margin-right: 0">
+               <p><a href="/page/32.html">Other Services</a></p>
+               <ul>
+                  <li><a href="/page/31,0,109.html">Birth &amp; Death Certificates</a></li>
+                  <li><a href="/page/41,0,107.html">Family Planning</a></li>
+                  <li><a href="/page/42,0,167.html">Social Services</a></li>
+                  <li><a href="/page/14,0,150.html">STD/HIV Testing</a></li>
+                  <li><a href="/page/31,0,109.html">Vital Records</a></li>
+                  <li><a href="/page/32.html" class="moreLink">All Services</a></li>
+               </ul>
+            </div>
+            <div class="box" style="margin-top:1em; margin-left:0; margin-right: 0">
+               <p>Related Topics</p>
+               <ul>
+                  <li><a href="/page/41,0,245.html">Financial Status Form</a></li>
+                  <li><a href="https://app.powerbigov.us/view?r=eyJrIjoiMDFiYjY2NDEtOTk2NC00ZWE2LTllNzAtZWYxZWVlZGQ1NzBlIiwidCI6IjU1OTA0MmRjLThiZjAtNGQ4Ni05ZmMwLWZiZjRjNzUwM2M3OSJ9" target="_blank">Resource Directory</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <!-- Continue with promotional slides -->
+         <!-- N.b.: if the random version of the slideshow is being used, these won't appear in the order they're written -->
+         <!-- *************************** -->
+
+                  <a href="/page/43,0,270,806.html"  id="variable_identifier"><img src="" alt="" id="variable_slide"></a>
+                  <a href="/page/14,26010,150,786.html" onClick="countPromotionAction ('HomeSlide-FreeHIVSyphilisTest')"><img src="/msdhsite/theme/slides/Free_syphilis_test_slide.png" alt=""></a>
+            <a href="/page/41,0,106.html" onClick="countPromotionAction ('HomeSlide-HealthyMomHealthyBaby_help')"><img src="/msdhsite/theme/slides/Healthy_mom_baby_help_slide.jpg" alt=""></a>
+     <!-- <a href="/page/19,0,166.html" onClick="gtag('event', 'select_promotion', {'promotion_name':'HomeSlide-FreeBPBSScreenings'});"><img src="/msdhsite/theme/slides/BloodPressureBloodSugar_slide.png" alt=""></a>-->
+<!--                  <a href="/page/44,0,382.html" onClick="countPromotionAction ('HomeSlide-Opioid_OD')"><img src="/msdhsite/theme/slides/Opioid_od_slide.jpg" alt=""></a>-->
+<!--        <a href="/page/14,0,420,976.html" onClick="countPromotionAction ('HomeSlide-COVID19_updated_vaccination')"><img src="/msdhsite/theme/slides/COVID19_updated_vaccination_slide.png" alt=""></a>-->
+<!--                  <a href="/page/19,0,123.html" onClick="countPromotionAction ('HomeSlide-Hiring')"><img src="/msdhsite/theme/slides/Hiring_slide.png" alt=""></a>-->
+
+<script>
+// if (dateBetween ("03/26/2024", "03/27/2024")) document.getElementById ("dad_slide").classList.remove ("noDisplay");
+</script>   
+
+      </div> <!-- end slider content -->
+   </div> <!-- end feature area container -->
+
+
+<!-- <div style="clear: both; background-color: white; padding: 5px 10px 5px 10px;"><div style="background-color: #fff044; color: black; padding: 5px">Message placement</div></div> -->
+
+
+<!--
+<div style="clear: both; background-color: white; padding: 5px 10px 5px 10px;">
+<div style="background-color: #eee; color: black; padding: 5px"><strong>MSDH Hotline:</strong> 877-978-6453 (M-F, 8 a.m. &ndash; 6 p.m. and Sat, 8 a.m. &ndash; noon)&nbsp; Hearing impaired? Dial 711.</div>
+</div>
+-->
+    
+      <div id="HomePageAlert" style="clear:both"></div><!-- for real-time insertion of dynamic notes from AssetNow text -->
+
+
+ <div id="searchContainer">
+    <form accept-charset="UTF-8" action="https://msdh.ms.gov/msdhsite/search/index.cfm" method="post" name="search_form" id="search_form" style="margin-top: 0.5em; padding: 0; display: inline; float:left;">
+       <input name="HomeSearch" value="yes" type="hidden">
+       <input name="Criteria" role="searchbox" id="SearchString" size="25" maxlength="40" placeholder=" Search for a topic" onKeyUp="findItem()" onBlur="if (this.value != '') countNavigationAction ('HomeSearch_searchBox')" autofocus="autofocus">
+       <a href="#" aria-role="button" id="searchIconLink" onClick="if (document.getElementById('SearchString').value.length >2) { this.classList.add ('activated'); countNavigationAction ('HomeSearch_icon'); document.getElementById('search_form').submit()}"><span id="searchIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></span></a>
+<!--    
+     <div style="float:left;width:33%;margin-left:4%; ">
+       <button type="submit" value="Search" class="submit button semibold" id="searchButton" onClick="searchingOn()" style="font-size:90%;">FULL SEARCH</button>
+    </div>
+-->    
+   </form>
+   <div id="searchResults" style="clear:both"></div> 
+</div>    
+
+<!--
+<h2 style="text-align:center; font-family:Georgia, Palatino, Serif; font-weight:normal">Celebrate National Public Health Week With Us!</h2>
+<div style="text-align:center; margin-top:10px"><iframe class="flexibleFrame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="576" src="https://www.youtube.com/embed/Z454n6Tomwg?rel=0" width="1020"></iframe></div>
+-->
+
+<!--featured box-->
+      <div class="box firstBox" id="featureBox">
+         <ul>
+             <!--<li id="HomePageSpecialFeatureLink"></li>-->
+            <li><a href="/page/23,0,195,505.html" onClick="countNavigationAction ('HomeFeatureLink-HealthySummer')">Tips for Summer Safety</a></li>
+            <li><a href="/page/43,0,270,806.html" onClick="countNavigationAction ('HomeFeatureLink-ActiveHealthy')">Start Your Summer Makeover!</a></li>
+            <li><a href="/page/14,26010,150,786.html" onClick="countNavigationAction ('HomeFeatureLink-FreeHIVSyphilisTest')">Free Syphilis and HIV Tests</a></li>              
+            <li><a href="/page/41,0,106.html" onClick="countNavigationAction ('HomeFeatureLink-HealthyMomHealthyBaby_PregnancyHealth')">Help with Pregnancy Health</a></li>              
+            <li><a href="/page/41,25715,376.html" onClick="countNavigationAction ('HomeFeatureLink-JustForMoms_help')">Just for Moms: Free Help</a></li>              
+<!--            <li><a href="/page/44,0,382.html" onClick="countNavigationAction ('HomeFeatureLink-NaloxoneKit')">Free Naloxone Kits</a></li>               -->
+            <!--<li><a href="/page/41,0,74.html" onClick="countNavigationAction ('HomeFeatureLink-EarlyIntervention')">Babies with Health Needs?</a></li>-->
+<!--            <li><a href="/page/43,1161,91,214.html" onClick="countNavigationAction ('HomeFeatureLink-KnowYourNumbers')">Your Four Health Numbers</a></li>-->
+            <!--            <li><a href="https://odfree.org/get-naloxone/" target="_blank" onClick="gtag('event', 'select_content', {'content_type':'Navigation', 'content_id':'HomeFeatureLink-NaloxoneKit'});">Opioid Overdose Kit</a></li>-->
+            <!--             <li><a href="https://www.mmcp.ms.gov/" onClick="gtag('event', 'select_content', {'content_type':'Navigation', 'content_id':'HomeFeatureLink-Medical Cannabis'};">Medical Cannabis</a></li> -->
+            <li><a href="/page/14,0,420.html" onClick="countNavigationAction ('HomeFeatureLink-COVID-19')">COVID-19</a></li> 
+            </ul>
+      </div>
+
+      <div class="box secondBox">
+         <p>POPULAR TOPICS</p>
+         <ul>
+             <li><a href="/page/31,0,109.html">Birth and Death Certificates</a></li>
+             <li><a href="/page/23,0,148.html">Boil-Water Notices</a></li>
+             <li><a href="/page/30,0,183.html">Child Care Facilities/Violations</a></li>
+<!--            <li><a href="/page/14,0,420.html">COVID-19</a></li>              -->
+             <li><a href="/page/30,0,77.html">Food Permits and Regulations</a></li>
+            <li><a href="/page/14,0,71.html">Immunizations and Exemptions</a></li>
+             <li><a href="/page/30,0,82,353.html">License Renewal</a></li>
+             <li><a href="https://www.mmcp.ms.gov/">Medical Cannabis</a></li>
+             <li><a href="https://msdh.ms.gov/page/43,1911,231,203.html">Restaurant Inspections</a></li>
+             <li><a href="/page/31,0,109.html" title="Birth and death certificates, marriage and divorce records">Vital Records</a></li>
+            <li><a href="/page/31.html">Vital Statistics / Disease Data</a></li>
+         </ul>
+      </div>
+
+      <div class="box thirdBox">
+         <p><a href="/page/43.html">HEALTHY LIVING</a></p>
+         <ul>
+             <li><a href="/page/43,0,278.html">How to Get Started</a></li>
+             <li><a href="/page/43,0,213.html">Diet and Nutrition</a></li>
+             <li><a href="/page/43,0,289.html">Obesity</a></li>
+             <li><a href="/page/43,0,270.html">Physical Activity</a></li>
+             <li><a href="/page/41,0,376.html">Healthy Pregnancy</a></li>
+             <li><a href="/page/43,0,91.html" title="Cancer, Diabetes, Heart Disease, and more">Chronic Diseases</a></li>
+             <li><a href="/page/43,0,94,611.html">Secondhand Smoke</a></li>
+             <li><a href="/page/43,1774,94.html" title="Call 1-800-QUIT-NOW for free help quitting">Quitting Tobacco</a></li>
+             <li><a href="/page/43.html" class="moreLink">More</a></li>
+         </ul>
+      </div>
+      <div class="box">
+         <p><a href="/page/23.html">NEWS AND EVENTS</a></p>
+         <ul>
+             <li><a href="/page/23.html">News and Alerts</a></li>
+             <li><a href="/page/23,1121,137.html">Meetings and Calendars</a></li>
+             <li><a href="/page/23,0,221.html">Events</a></li>
+<!--             <li><a href="/page/29,0,282.html">Newsletter</a></li>-->
+             <li><a href="/page/23,0,272.html">What's New on the Website</a></li>
+         </ul>
+
+         <script type="text/javascript" src="msdhsite/theme/home_page_news.js"></script>
+      </div>
+
+      <div class="clear"></div>
+
+   <div class="appointmentBox appointmentBox_desktop">Schedule an appointment for services: <strong>855&#8209;767&#8209;0170</strong></div>
+
+<!--
+   <div class="banner-promo" style="margin-left:10px;">
+      <div class="banner-text">
+      <h2 style="font-family:Noto Sans, Calibri, sans-serif; font-size:20px; text-transform:uppercase; margin-top:0px">EMS Week, May 19&ndash;25</h2>
+         <p>Join MSDH State Health Officer Dr. Dan Edney in wishing members of emergency medical services teams a Happy EMS Week and in celebrating 50 years of service in Mississippi. We thank EMS professionals for their vigilance and expertise in providing lifesaving care 24 hours a day, seven days a week, dramatically improving the survival and recovery rate of those in need of urgent care due to sudden illness or injury. <a href="https://msdh.ms.gov/page/23,28765,221.html">Celebrate with us on Tuesday &rarr;</a></p>
+      </div>
+      <iframe width="560" height="315" class="flexibleFrame"  id="banner-video" src="https://www.youtube.com/embed/98_4h2_xd9U?si=PIwgAENhmME6DSRu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+   <div style="clear:both;height:10px"></div>
+-->
+
+<script>
+   let deadline = new Date ('2024, 4, 28');
+   let today = new Date ();
+   //if (today > deadline) document.getElementById ("banner-promo").style.display="none";
+</script>
+
+<!--
+   <div id="signupBorder">
+       <div id="signup">
+        <span id="signupCaption"><label for="signupEmail">Sign up for public health updates:&nbsp;</label></span>
+         <form accept-charset="UTF-8" action="https://public.govdelivery.com/accounts/MSDH/subscribers/qualify" method="post" target="_blank" style="margin: 0; padding: 0; display: inline">
+            <input type="hidden" name="subscription_type" value="email"><input name="utf8" type="hidden" value="Ã¢Åâ" /><input name="authenticity_token" type="hidden" value="0UvZ37BnipaneeksDYXWQhivYYYhUQ6pD5rvh5MDLQo=" >
+            <input id="signupEmail" name="email" type="email" placeholder="e-mail address" title="Your e-mail address" size="30">&nbsp;<button id="signupButton" type="submit" name="commit" title="Submit your e-mail address" onClick="countPromotionAction ()'NewsletterSignup-home_page');"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"  style="fill:#ffffff;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button>
+         </form>
+       </div>
+   </div>
+-->
+
+
+
+
+      <footer id="footer">
+         <div class="box firstBox">
+            <p>AGENCY</p>
+            <ul>
+               <li><a href="/page/19,0,378.html">About Us</a></li>
+               <li><a href="/page/19.html">Administration</a></li>
+               <li><a href="/page/19,0,124.html">Board of Health</a></li>
+               <li><a href="/page/19,0,166.html">County Offices</a></li>
+               <li><a href="/page/19,0,335.html">Institutional Review</a></li>
+               <li><a href="/page/19,0,123.html">Jobs</a></li>
+               <li><a href="/page/19,0,216.html">Legislation</a></li>
+               <li><a href="/page/19,0,166.html">Locations</a></li>
+               <li><a href="/page/14,0,188.html">Public Health Laboratory</a></li>
+               <li><a href="/page/19,0,205.html">RFPs/Grants</a></li>
+               <li><a href="/page/19.html" class="moreLink">More</a></li>
+            </ul>
+
+            <ul style="margin-top: 1em">
+               <li style="border-top :1px dotted #89a; width: 66%"></li>
+               <li><a href="/page/19,0,423.html">Employee Documents</a></li>
+               <li><a href="http://msdhweb/">Intranet</a></li>
+               <li><a href="https://msdh.ms.gov/ohit.er">OHIT+ER Service Center</a></li>
+               <li><a href="https://msdh.ms.gov/webmail">Webmail</a></li>
+            </ul>
+         </div>
+         <div class="box">
+            <p>INFORMATION</p>
+            <ul>
+               <li><a href="/page/23,1121,137.html">Calendar of Events</a></li>
+               <li><a href="/page/4,0,204.html">Contact Us</a></li>
+               <li><a href="/page/4,1473,204.html">Health Resources</a></li>
+               <li><a href="/page/4,0,204.html#hotlines" id="Hotlines">Hotlines</a></li>
+               <li><a href="/page/4,0,204.html">Locations</a></li>
+               <li><a href="/page/23,1121,137.html">Meetings</a></li>
+               <li><a href="/page/23.html">News</a></li>
+<!--               <li><a href="/page/29,0,282.html">Newsletter</a></li>-->
+               <li><a href="/page/4,0,204,1064.html">Non-Discrimination Notice</a></li>
+               <li><a href="/page/4,0,204.html">Phone Numbers</a></li>
+               <li><a href="https://www.cdc.gov/spanish/" lang="es">Espa&ntilde;ol</a></li>
+            </ul>
+         </div>
+         <div class="box thirdBox">
+            <p>I NEED A ...</p>
+            <ul>
+               <li><a href="/page/31,0,109,808.html">Birth Certificate</a></li>
+               <li><a href="/page/30,0,84,62.html">Certificate of Need</a></li>
+               <li><a href="/page/41,0,96.html">Children's Health Insurance</a></li>
+               <li><a href="/page/4,0,204,736.html">Complaint Form</a></li>
+               <li><a href="/page/30,0,206.html">Criminal History Check</a></li>
+               <li><a href="/page/31,0,109,809.html">Death Certificate</a></li>
+               <li><a href="/page/30,0,77.html#Permits">Food Permit</a></li>
+               <li><a href="/page/14,0,71,351.html">Immunization Record</a></li>
+               <li><a href="/page/44,455,111,304.html">J-1 Visa</a></li>
+               <li><a href="/page/30,0,82.html#Verification">License Verification</a></li>
+               <li><a href="/page/31,0,109,811.html">Marriage Record</a></li>
+               <li><a href="/page/30,0,82.html">Professional License</a></li>
+               <li><a href="/page/31,22709,427.html">Public Records/Data Request</a></li>
+               <li><a href="/page/30,0,78.html">Wastewater Application</a></li>
+            </ul>
+         </div>
+         <div class="box"> <!-- !!!!!!!!!!!!! -->
+            <p>PUBLICATIONS</p>
+            <ul>
+               <li><a href="/page/29,0,209.html">Annual Report</a></li>
+               <li><a href="/page/29,0,84.html">CON Weekly Reports</a></li>
+               <li><a href="/page/30,0,83,613.html">Health Facilities Directory</a></li>
+               <li><a href="/page/14,0,286.html">Mississippi Morbidity Reports</a></li>
+               <li><a href="/page/19,0,184.html">State Health Plan</a></li>
+               <li><a href="/page/29,0,209.html">Strategic Plan</a></li>
+               <li><a href="/page/29.html" class="moreLink">More</a></li>
+            </ul>
+         </div>
+         <div class="clear"></div>
+      </footer>
+
+      <div id="contact">Mississippi State Department of Health <span>&bull;</span> 570 East Woodrow Wilson Drive <span>&bull;</span> Jackson, MS 39216 <span>&bull;</span> 866&#8209;HLTHY4U
+         <div id="connectIconsLower"><a href="http://www.Facebook.com/HealthyMS" target="_blank"><img src="/msdhsite/theme/iconFacebook.png" alt="Facebook" /></a><a href="https://twitter.com/msdh" target="_blank"><img src="/msdhsite/theme/iconTwitter.png" alt="Twitter" /></a><a href="https://www.instagram.com/healthy.ms/" target="_blank"><img src="/msdhsite/theme/iconInstagram_light.png" alt="Instagram" /></a><a href="https://msdh.ms.gov/msdhsite/rssFeed.xml" target="_blank"><img src="/msdhsite/theme/iconRSS.png" alt="RSS" /></a></div>
+      <p><a href="/page/4,0,204.html">Contact and information</a></p>      
+      </div>
+
+
+   </div>
+
+    <div style="text-align: center; margin-top: 10px"><a href="https://phaboard.org/about/" target="_blank"><img src="msdhsite/theme/PHAB_seal.png" alt="Accredited by the national Public Health Accreditation Board"></a></div>
+
+   <!-- GovDelivery Subscription Overlay -->
+   <!-- <script src='https://content.govdelivery.com/overlay/js/336.js'></script> --> <!-- omit this since we have jQuery already -->
+
+   <!--
+   <script type="text/javascript">
+   // conditionally load subscription overlay (annoyance reduction)
+   if(Math.random() < 0.2)
+   	{
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src = "https://content.govdelivery.com/overlay/js/336.js";
+          document.getElementsByTagName ("body") [0].appendChild (script);
+      }
+   </script>
+   -->
+
+   <!-- End GovDelivery Overlay -->
+
+
+<script>
+choose_variable_slide ();
+startSlideshow();
+
+
+var linksForSearch;
+
+// disable TAB key access to hidden slides. Slideshow will restore this as slides are made visible
+function Remove_tab_access_from_slides ()
+{
+   let slide_links = document.querySelectorAll ("#orbit-slider > a");
+   for (var i = 0; i < slide_links.length; i++)
+   {
+      slide_links[i].setAttribute ("tabindex", "-1"); 
+      slide_links[i].setAttribute ("aria-hidden", "true"); 
+   }
+}
+
+
+function Remove_tab_access_from (an_id)
+{
+    let anchors = document.getElementById (an_id).getElementsByTagName("a");
+    for (var i = 0; i < anchors.length; i++) { anchors[i].setAttribute ("tabindex", "-1");  }
+}
+
+
+function Restore_tab_access_to (an_id)
+{
+    let anchors = document.getElementById (an_id).getElementsByTagName("a");
+    for (var i = 0; i < anchors.length; i++) { anchors[i].removeAttribute ("tabindex");  }
+}
+
+
+function Remove_tab_access_from_menu_slides ()
+{
+    let menu_slides = document.getElementsByClassName ("menuSlide");
+    for (var m = 0; m < menu_slides.length; m++) { Remove_tab_access_from (menu_slides [m].id); }
+}
+
+
+   
+   function readHTML (a_url)
+    {
+        var request = new XMLHttpRequest();
+        request.open("GET", a_url, false); // blocking
+        request.send(null);
+        return request.responseText;
+   }
+
+
+   function linksIn (a_url)
+   {
+      var html = readHTML  (a_url);
+
+      html = html.replace (/<\/*strong>/g, ""); // these tags can fall within a link and cause it to be missed; remove them
+/*      html = html.replace (/href="\/msdhsite/g, 'href="https:\/\/msdh.ms.gov\/msdhsite'); */ // local link to absolute
+      var article = html;
+      if (html.indexOf ('id="article"') > 0) article = html.match (/id="art[\s\S]+-- end pageContent/m) [0];
+      
+      var links = article.match (/<a[^>]+href\s*=\s*"[^m#][^>]+[^<]+<\/a>/g); // omit mailto links (based on initial m)
+      links = links.filter (link => link.indexOf ("msdhsite/handlers/") < 0); // include only non-handler links (omit mail and print links)
+      return links;
+   }
+
+
+   function addPageToSearch (a_static_file_name)
+   {
+      var static_pages_prefix = "https://msdh.ms.gov/msdhsite/_static/";
+//      document.getElementById ("linksToSearch").innerHTML = linksIn (static_pages_prefix + a_static_file_name); 
+      linksForSearch = linksIn (static_pages_prefix + a_static_file_name); 
+   }
+
+
+function findItem () {
+   const maxLinksToDisplay = 10;
+   const ignoreWords = "in of to is it on no us at go an me as he she we be by or do if the for and but a i you they what how where who with";
+   var linksAlreadyFound = [];
+   var matchingLinks = [];
+   var numberFound = 0;
+   var resultDIV = document.getElementById ("searchResults");
+//   var resultHTML = '<p>Don\'t see your topic below?<span class="show-for-medium"> <a href="javascript:document.getElementById(\'search_form\').submit();" style="font-size:90%">SEARCH ENTIRE WEBSITE</a></span></p><ul class="links show-for-small-only"><li><a href="javascript:document.getElementById(\'search_form\').submit();" style="font-size:90%">SEARCH ENTIRE WEBSITE</a></li></ul><ul id="searchResultsList" class="links">';
+   var resultHTML = '<ul id="searchResultsList" onClick="countNavigationAction (\'HomeSearch_foundItemClick\')">';
+   var resultLinksHTML = "";
+   var firstLink = "";
+   var aString = document.getElementById ("SearchString").value.trim();
+   var words_matched = 0;
+   
+   document.getElementById ("searchIconLink").classList.remove ("activated");
+   
+   if (aString.length == 0) resultDIV.innerHTML = "";
+   
+   if (aString.length > 1)
+   {
+      // look through each  link on the page for a match;
+
+      var lcString = aString.toLowerCase();
+      var target_words = lcString.split (" ");
+      var is_a_number = (lcString == parseInt (lcString, 10));
+      var matching_link = { linkHref:"", linkText:"", matchScore: 0 }
+      var words_matched = 0;
+
+      // this query returns a nodeList, an array-like strucure
+      //document.querySelectorAll (".topicsPageLetterSection a").forEach (
+      
+      linksForSearch.forEach ( // RATS! my links list is an array of strings, not of HTML nodes!
+      	function (a)
+         {
+            let linkHref = a.match (/href\s*=\s*"([^"]+)"/) [1]; // capture url in parenthsized group 
+            let linkText = a.match (/>([^<]+)<\/a>/) [1];
+            
+//         	let linkHref = a.getAttribute ("href");
+   //      	let linkText = a.innerHTML;
+            let linkText_lc = linkText.toLowerCase();
+//            let linkHref_url = linkHref;
+//         	var linkHref_simple = linkHref.substring (0, linkHref.indexOf ("?")); // remove trailing params for URL matching
+//            if (linkHref_simple == "") linkHref_simple = linkHref;
+            
+            words_matched = 0;
+            target_words.forEach (
+               function (word) { if (word.length > 1 && ignoreWords.indexOf (word) < 1 && linkText_lc.indexOf (word) >= 0) words_matched++; } 
+            )
+            
+         	if (words_matched > 0)
+         	{
+         	   // Match! Has it been found already?
+         	   if (linksAlreadyFound.indexOf (linkHref) < 0)
+         	   {
+                  numberFound++;
+         	      linksAlreadyFound.push (linkHref);
+                  
+                  matching_link = { linkHref: linkHref, linkText: linkText, matchScore: words_matched };
+                  if (words_matched > 1) matchingLinks.unshift (matching_link); // promote to top of list
+                  if (words_matched == 1) matchingLinks.push (matching_link); // add to end
+/*
+                  if (words_matched > 1) resultHTML = '<li><a href="' + linkHref +'">' + linkText + '</a></li>' + resultHTML; // promote to top of list
+                  if (words_matched == 1) resultHTML += '<li><a href="' + linkHref +'">' + linkText + '</a></li>'; // add to end
+*/                  
+               }
+            }
+         }
+      );
+      
+      for (let i=0; i<matchingLinks.length && i < maxLinksToDisplay;i++)
+      {
+         let target = "";
+         if (matchingLinks[i].linkHref.indexOf ("msdh.ms.gov") < 0 && matchingLinks[i].linkHref.indexOf ("http") > 0) target = ' target="_blank"';
+         if (matchingLinks[i].linkHref.indexOf ("http") < 0) matchingLinks[i].linkHref = "/page/" +matchingLinks[i].linkHref;
+         resultLinksHTML += '<li><a href="' + matchingLinks[i].linkHref + '"' + target + '>' + matchingLinks[i].linkText + '</a></li>';
+      }
+      
+      resultHTML += resultLinksHTML + '</li></ul><p><a href="javascript:countNavigationAction (\'HomeSearch_moreButton\'); document.getElementById(\'search_form\').submit();" id="moreResultsButton" class="button">MORE RESULTS</a></p>';
+         
+     if (numberFound > 0) resultDIV.innerHTML= resultHTML; // display the links we found
+     
+     if (document.getElementById ("moreResultsButton") != null)
+     {
+      if (aString.length > 1) moreResultsButton.style.visibility = "visible"; else moreResultsButton.style.visibility = "hidden";
+     }
+   
+   } // check input length 
+} // findItem
+
+function checkForBlank ()
+{
+   var resultDIV = document.getElementById ("searchResults");
+   var search_for = document.getElementById ("SearchString").value.trim();
+   
+   if (search_for == "") resultDIV.innerHTML = "";
+}
+
+
+function firstWordOf (aString)
+{
+	var spaceAt = aString.indexOf (" ");
+   if (spaceAt > 4) // don't truncate if the first word is very short, as in "Form 264"
+   	return aString.substr (0, spaceAt);
+	else return aString.trim();
+}
+
+   Remove_tab_access_from_slides ()
+   Remove_tab_access_from_menu_slides ();
+   
+   addPageToSearch ("4,0,207.html"); // fetch our standard search page
+   
+</script>
+
+<!-- <script type="text/javascript" src="https://msdh.ms.gov/msdhsite/scripts/DynamicNotes.cfm"></script>--> <!-- enable this when it may be necessary (but remember that it slows dowm home page access) -->
+
+</body>
+</html>
+

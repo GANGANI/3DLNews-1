@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<title>NEC Front Row</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/layout.css">
+		<link rel="stylesheet" href="/css/forms.css">
+		<link rel="stylesheet" href="/css/game-list.css">
+		<link rel="stylesheet" href="/css/video.css">
+		<link rel="stylesheet" href="/css/control-room.css">
+				
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script>
+			var BASE_URL 	= '';
+			var GAMEID 		= '1240';
+			var SCHOOLID 	= '';
+			var SPORTID 	= '';
+		</script>
+		<script src="/js/game-list.js"></script>
+		<script src="/js/control-room.js"></script>
+		<script src="/js/filters.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151311603-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-151311603-1');
+		</script>
+	</head>
+	<body>
+	
+		<header>
+			<div class="nec-pack-header">
+				<div class="container">THE OFFICIAL VIDEO NETWORK OF THE NORTHEAST CONFERENCE</div>
+			</div>
+			<div class="nec-header">
+				<div class="container bg-white logo-container">
+					<div class="nec-logo-container">
+						<a class="logo" href="/"></a>
+					</div>
+					<div class="logos">
+						<div class="logos-container">
+							<a href="/schools/CCSU">
+										<img src="/assets/logos//nec/CCSU.png" alt="Central Connecticut" />
+									</a><a href="/schools/FDU">
+										<img src="/assets/logos//nec/FDU2.png" alt="FDU" />
+									</a><a href="/schools/LMC">
+										<img src="/assets/logos//nec/LMC.png" alt="Le Moyne" />
+									</a><a href="/schools/LIU">
+										<img src="/assets/logos//nec/LIU.png" alt="LIU" />
+									</a><a href="/schools/MC">
+										<img src="/assets/logos//nec/MC.png" alt="Merrimack" />
+									</a><a href="/schools/SHU">
+										<img src="/assets/logos//nec/SHU.png" alt="Sacred Heart" />
+									</a><a href="/schools/SFPA">
+										<img src="/assets/logos//nec/SFPA.png" alt="Saint Francis U" />
+									</a><a href="/schools/SC">
+										<img src="/assets/logos//nec/SC.png" alt="Stonehill" />
+									</a><a href="/schools/WC">
+										<img src="/assets/logos//nec/WC.png" alt="Wagner" />
+									</a>						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<div class="container">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="/schools">Schools</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="/live-schedule">Live Schedule</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="/on-demand">On Demand</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="/support">Support</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="/faq">FAQs</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" href="/control-room">Control Room</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header><div class="game-list">
+	<div class="game-filter">
+		<button rel="past">Past</button>
+		<button rel="today" class="selected">Today</button>
+		<button rel="future">Upcoming</button>
+	</div>
+	<div class="game-scroll-container">
+		<div class="game-loading-indicator">
+			<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+            <path d="M36 18c0-9.94-8.06-18-18-18">
+                <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 18 18"
+                    to="360 18 18"
+                    dur="1s"
+                    repeatCount="indefinite"/>
+            </path>
+        </g>
+    </g>
+</svg>
+		</div>
+		<div class="game-container"></div>
+	</div>
+	<div class="game-scroll-left">
+		<svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+			<path d="M20 30 L8 16 20 2" />
+		</svg>
+	</div>
+	<div class="game-scroll-right">
+		<svg id="i-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		    <path d="M12 30 L24 16 12 2" />
+		</svg>
+	</div>
+</div>
+
+<main role="main">
+	<div class="container">
+		<div class="video-container">
+			<div class="video-loading-indicator">
+				<svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+            <path d="M36 18c0-9.94-8.06-18-18-18">
+                <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 18 18"
+                    to="360 18 18"
+                    dur="1s"
+                    repeatCount="indefinite"/>
+            </path>
+        </g>
+    </g>
+</svg>
+			</div>
+			<div class="video-frame-container">
+									<div class="video-frame-empty">This video stream is not available yet.</div>
+							</div>
+		</div>
+		
+		<hr class="featurette-divider">
+	
+		
+		<div class="row featurette">
+							<div class="col col-lg-8">
+					<h2>Live Stats</h2>
+					<div class="section-container">
+						<iframe src="http://www.sidearmstats.com/francis/mbball/" width="100%" height="500px" frameborder="0"></iframe>
+					</div>
+				</div>
+										<div class="col-lg-4">
+					<a class="twitter-timeline" data-height="800" href="https://twitter.com/SFUathletics?ref_src=twsrc%5Etfw">Tweets by SFUathletics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+					</div>
+	</div>
+</main>
+
+		<footer>
+			<div class="container">
+				<p class="float-right"><a href="#">Back to top</a></p>
+	<!-- 			<p>&copy; 2024 Pack Network &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+				<p>&copy; 2024 Northeast Conference</p>
+			</div>
+		</footer>
+	</body>
+</html>

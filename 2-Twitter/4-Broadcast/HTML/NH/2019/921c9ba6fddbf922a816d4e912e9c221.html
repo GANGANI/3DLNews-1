@@ -1,0 +1,4186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<base href="https://secure3.convio.net/nhpr/site/" />
+
+<title>
+
+NHPR Donation Form - New Hampshire Public Radio
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="Keywords" content=" " />
+<meta name="Description" content="" />
+<meta name="Robots" content="index, follow" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../yui3/yui/yui-min.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/convio/modules.js?version=2.9.2"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript">
+var Y = YUI({base: '../yui3/',
+insertBefore: 'yui_marker_loader_css', // insert all YUI module css before customstyle so it can be overridden
+debug: false, 
+modules: getModules('../', 'convio', true)});
+</script><noscript>&nbsp;</noscript>
+
+
+<script type="text/javascript" src="../js/utils.js"></script><noscript>&nbsp;</noscript>
+
+<script type="text/javascript" src="../js/obs_comp_rollup.js"></script><noscript>&nbsp;</noscript>
+
+
+<link href="../css/themes/default.css" rel="stylesheet" type="text/css" />
+<link href="../css/themes/alphacube.css" rel="stylesheet" type="text/css"/>
+
+
+<link href="../css/UserGlobalStyle.css" rel="stylesheet" type="text/css" />
+
+
+<link href="../css/responsive/ResponsiveBase.css" rel="stylesheet" type="text/css" />
+
+
+<link href="../css/responsive/DonFormResponsive.css" rel="stylesheet" type="text/css" />
+
+
+
+<link href="../css/FormComponentsBehavior.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/FormComponentsBehavior.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/don_level_elements.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/don_premium_elements.js"></script><noscript>&nbsp;</noscript>
+<script type="text/javascript" src="../js/donations2.js"></script><noscript>&nbsp;</noscript>
+
+
+<link rel="stylesheet" type="text/css" id="yui_marker_loader_css" />
+<link href="../css/CustomStyle.css" rel="stylesheet" type="text/css" />
+<link href="../css/CustomWysiwygStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+<meta name="CnvHeaderVersion" content="v5.0" />
+
+
+<!-- GTM ecommerce snippet -->
+
+
+
+
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TCGPTWQ');</script>
+<!-- End Google Tag Manager -->
+
+
+ 
+
+<!-- GOOGLE FONTS - LATO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<style type="text/css">
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background: #F8F8F8;
+    font-size: 16px;
+}
+*, html, body, form, input, input.AddressBookButtons, input.Advocacy, input.btn, input.btnLg, input.btnMed, input.btnMini, input.btnSm, select, select.Advocacy, textarea, legend, ul, ol, li, option, table, tr, th, th.rfl_infoStatus, td, td.AlertListDescription, td.cstmBack, p, p.cstmBtnText, p.cstmFrame, p.cstmHeading, p.cstmText, p.cstmTitle, p.dividerHeading, p.scrollingText, span.cstmHeading, a, a.btn, a.btn:visited, a.cstmBtnText:hover, a.cstmBtnText:link, a.cstmBtnText:visited, #navList, .AdvocacyInstructions, .AdvocacyNSFix, .BlogHeader, .Button, .Divider, .FieldLabels, .FormBox, .FormBox06, .FormBoxHeader, .Hint, .Instructions, .Instructions, .ListItem0, .ListItem1, .NetscapeFix, .NoteText, .ObjTitle, .PhotoLinks, .Premiums, .ProgressBox, .ProgressBoxCurrent, .SectionHead, .SmallButton, .Smaller, .SmallerC, .TribBtnText1, .Upgrades, .WhatNext, .alphacube_content, .dialog_content, .dialog_title, .explicit, .fr_register_another, .paraBlueSansSmall, .smallBlack, .smallSans, .smallSansBold, .smallWhiteBoldSans, .smallWhiteSans, .smallestBlackSans {
+    font-family: "Lato", Arial, Helvetica, Verdana, sans-serif;
+}
+span {
+  font-family: "Lato",Arial, sans-serif !important;
+  font-size: 18px;
+}
+.header {
+    margin-bottom: 30px;
+}
+.donation-form-container.responsive .header img {
+    width: 100%;
+}
+.header-text {
+    text-align: center;
+}
+.img-responsive {
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+    width: 100%;
+}
+.auto-opt-in-warning-message {display:none;}
+div.donation-form-container.responsive {
+    background: #FFFFFF;
+    width: 750px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+div.responsive input[type="text"], div.responsive input[type="number"], div.responsive input[type="password"], div.responsive textarea {
+    border: 1px solid #d9d6cf;
+    padding: 9px 9px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    width: 250px;
+}
+div.responsive select {
+    border: 1px solid #d9d6cf;
+    padding: 0 25px 0 9px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+#employer_street_row input, #billing_addr_street1_row input, #billing_addr_street2_row input, #billing_addr_street3_row input, #billing_addr_country_row input.ui-autocomplete-input, #donor_addr_street1_row input, #donor_addr_street2_row input, #donor_addr_street3_row input, #donor_addr_country_row input.ui-autocomplete-input, #shipping_addr_street1_row input, #shipping_addr_street2_row input, #shipping_addr_street3_row input, #shipping_addr_country_row input.ui-autocomplete-input, #tribute_notify_recip_street1_row input, #tribute_notify_recip_street2_row input, #tribute_notify_recip_street3_row input, #tribute_notify_recip_country_row input.ui-autocomplete-input, #tribute_signature_row input, #tribute_message_closing_row input, div.employer-address-container input#employer_street {
+    width: 250px;
+}
+.form-progress-bar {
+    display: none;
+}
+label[for="donate-frequency-0"] {
+    margin-right: 20px;
+}
+div.donation-level-amount-container+div.donation-level-label-container, div.donation-level-label-input-container {
+    display: none;
+}
+.donate-buttons {
+    margin: 20px 0;
+}
+div.donation-level-container {
+    display: inline-block;
+}
+.donate-button, .donation-level-amount-container {
+    display: inline-block;
+    border: 1px solid #d9d6cf;
+    border-radius: 20px;
+    padding: 20px 25px;
+    box-shadow: none;
+    font-size: 18px;
+    background: #f8f8f8;
+    font-weight: 400;
+    min-width: 120px;
+    margin: 5px;
+    cursor: pointer;
+    content: '';
+}
+.donate-button:hover, .donation-level-amount-container:hover {
+    border: 1px solid #d3292f;
+    color: #d3292f;
+}
+.donate-button-selected, .donate-button-selected:hover {
+    background: #d3292f;
+    border: none;
+    color: #ffffff;
+}
+.gift-section-container>.form-content>.form-input-label-block {
+    display: none;
+}
+.gift-section-container fieldset>.radio-button-container {
+    display: inline-block;
+    padding: 20px 20px 0px 0px;
+    width: 33%;
+}
+.gift-section-container fieldset img, .gift-section-container fieldset input, .gift-section-container fieldset .form-input-label-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+.gift-section-container fieldset img {
+    border: none;
+    /* width: 45px; */
+    padding-right: 5px;
+    max-height: 60px;
+}
+div.form-input-label-block, div.donation-level-expanded-label {
+    display: block !important;
+}
+.gift-section-container fieldset label {
+    font-size: 12px;
+}
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    background-image: url("../images/content/pagebuilder/howweareending_dropdown.png");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    border: 1px solid #dedede;
+    border-radius: 0;
+    display: inline-block;
+    font-size: 14px;
+    height: 42px;
+    line-height: 40px;
+    outline: medium none;
+    padding: 0 24px 0 15px;
+    vertical-align: top;
+    width: 213px;
+}
+button#pstep_finish {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    background-color: #d3292f;
+    color: #fff;
+    border: 0 none;
+    border-radius: 20px;
+    display: block;
+    float: right;
+    font-weight: 500;
+    height: 48px;
+    line-height: 40px;
+    margin-top: 10px;
+    min-width: 200px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+div.payment-field-container span.payment-type-option.selected {
+    background-color: #d3292f;
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top, #d3292f 0%, #d3292f 100%) repeat scroll 0 0;
+    color: #fff;
+    background: -webkit-linear-gradient(top, #d3292f 0%, #d3292f 100%);
+}
+div.payment-field-container span.payment-type-option.selected a:link {
+    color: #fff;
+}
+div.responsive a:visited, div.responsive a:link {
+    color: #000;
+}
+div.payment-field-container span.internal-payment {
+    border: none;
+    border-radius: 0px;
+    background-color: #ffffff;
+}
+div.payment-field-container span.payment-type-option input {
+    display: inline;
+}
+div.payment-field-container span.payment-type-option, div.payment-field-container span.payment-type-option.selected {
+    display: block;
+    background: none;
+    padding-left: 0px;
+}
+div.payment-field-container span.payment-type-option label a:link, div.payment-field-container span.payment-type-option.selected label a:link {
+    color: #000000;
+    padding-left: 5px;
+    cursor: default;
+}
+div.payment-field-container span.payment-type-option:hover {
+    cursor: default;
+}
+div.payment-field-container span.payment-type-option input:hover {
+    cursor: pointer;
+}
+div.payment-field-container span.payment-type-option a.more_info_link:link {
+    color: #d3292f;
+    padding-left: 5px;
+}
+a.more_info_link:after {
+    content: "\00bb";
+    padding-left: 3px;
+}
+#responsive_payment_typepay_typeradio_row>.form-content {
+    width: 40%;
+    vertical-align: top;
+}
+.more_info_box {
+    width: 59%;
+    vertical-align: top;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #d3292f;
+}
+.more_info_box h3 {
+    margin-top: 0px;
+}
+div.responsive div.ErrorMessage.page-error>span.field-error-text {
+    width: 100%;
+}
+P, LI, OL, UL, TABLE, TR, TH, TD, .Explicit, div.responsive {
+    font-size: 18px!important;
+}
+.section-header-container {
+    border-top: 0;
+    margin-bottom: 20px;
+}
+.payment-type-element-container h3, h3#comment-header {
+    font-size: 27px;
+}
+#billing_first_name_row, #billing_last_name_row, #billing_addr_street1_row, #billing_addr_street2_row, #billing_addr_city_row, #billing_addr_state_row, #billing_addr_zip_row, #billing_addr_country_row, #donor_email_address_row, #donor_phone_row {
+    display: inline-block;
+}
+div.responsive div.form-checkbox label, label.custom-element-checkbox-label {
+    display: inline;
+    zoom: 1;
+    max-width: 800px;
+}
+.img-responsive.donation {
+    display: block;
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+}
+.donation-levels .donation-level-container {
+    margin-right: 10px;
+    width: 110px;
+}
+.monthly-radio span {
+    padding: 0 5px 0 5px;
+}
+span a.more-link {
+    font-size: 14px!important;
+    color: #da262e;
+    margin-right: 10px;
+}
+div.responsive a:visited, div.responsive a:link {
+    color: #da262e;
+}
+div.responsive a:hover {
+    color: #871f23;
+}
+.monthly-more-text {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    background-color: #d3292f;
+    border-radius: 20px;
+    color: #ffffff;
+    display: block;
+    padding: 20px;
+    vertical-align: top;
+    width: 59%;
+    display: block;
+    float: left;
+}
+.monthly-more-text h3 {
+    margin-top: 0;
+}
+.monthly-more-text.hide {
+    display: none;
+}
+div.form-row div.form-content {
+    width: 100%;
+}
+div.donation-level-input-container .donation-level-label-container, .donation-level-amount-container {
+    color: #000;
+    font: 400 18px/1 "Open Sans", Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+    background: #f8f8f8;
+    position: relative;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 2px solid #d9d6cf;
+}
+.donation-level-amount-container {
+    max-width: 106px!important;
+    min-width: 106px;
+    margin: 0;
+}
+div.donation-level-input-container.active .donation-level-label-container, div.donation-level-input-container:hover .donation-level-label-container, div.donation-level-input-container.active .donation-level-amount-container, div.donation-level-input-container:hover .donation-level-amount-container {
+    border: 2px solid #d3292f;
+    color: #d3292f;
+    background: #fff;
+}
+.donation-level-container:last-child div.donation-level-input-container {
+    background: transparent;
+    border: 0;
+    position: relative;
+}
+.donation-level-container .donation-level-input-container {
+    width: 100%;
+    display: block;
+}
+div.form-row .donation-level-container:last-child {
+    width: 190px;
+}
+div.responsive div.donation-level-user-entered input[type="text"] {
+    background: #f8f8f8;
+    border: 2px solid #d9d6cf;
+    border-radius: 20px;
+    box-shadow: none;
+    color: #4d4d4f;
+    font: 400 18px/54px "Open Sans", Arial, Helvetica, sans-serif;
+    height: 64px;
+    left: 0;
+    text-align: center;
+    min-width: 190px;
+    padding: 0 15px;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+div.responsive .active div.donation-level-user-entered input[type="text"] {
+    border: 2px solid #d3292f;
+    background: #fff;
+}
+section.donation-form *:focus {
+    outline: none;
+}
+div.donation-level-label-container {
+    margin: 0;
+    cursor: pointer;
+    line-height: 54px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div.donation-level-container-generic-repeat {
+    display: none;
+}
+div.donation-level-container {
+    float: left;
+    margin-bottom: 0;
+}
+.donation-level-user-entered ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    text-align: center;
+}
+.donation-level-user-entered ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+}
+.donation-level-user-entered :-ms-input-placeholder {
+    /* IE 10+ */
+    text-align: center;
+}
+.donation-level-user-entered :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+}
+.donate-options label {
+    font-size: 20px;
+    margin-right: 5px;
+}
+.donate-options .iradio_flat-red {
+    margin-bottom: 5px;
+}
+label[for=gifts_dropdown] {
+    font-size: 24px;
+}
+#payment_bank_container {
+    position: relative;
+}
+#payment_bank_container .form-row.bank-image-row {
+    max-width: 340px;
+    width: 100%;
+    top: 90px;
+    right: 0;
+    position: absolute;
+}
+#payment_bank_container .bank-image-row img {
+    width: 100%;
+    max-width: 340px;
+}
+/*style form fields*/
+
+#billing_first_name_row, #billing_last_name_row, #tribute_type_row, #tribute_honoree_first_name_row, #tribute_honoree_last_name_row, #tribute_notify_recip_street1_row, #tribute_notify_recip_street2_row, #tribute_notify_recip_state_row, #tribute_notify_recip_city_row, #tribute_notify_recip_zip_row, #tribute_notify_recip_country_row, #responsive_payment_typecc_number_row, #responsive_payment_typecc_cvv_row, #billing_addr_city_row {
+    width: 48.5%;
+    height: 90px;
+    float: left;
+    margin-right: 1.5%
+}
+#payment_bank_container .form-row {
+    width: 98.5%;
+}
+#payment_bank_container .form-row input[type=text] {
+    width: 50%;
+}
+#billing_addr_street1_row, #billing_addr_street2_row, #billing_addr_country_row, #donor_email_address_row, #donor_phone_row {
+    width: 98.5%;
+    height: 90px;
+    float: left;
+}
+#billing_addr_state_row, #billing_addr_zip_row {
+    width: 23.5%;
+    margin-right: 1.5%;
+    height: 90px;
+    float: left;
+}
+div.form-row div.form-content>select#billing_addr_state, div.form-row div.form-content>select#billing_addr_country {
+    width: 100%;
+}
+#employer_street_row input, #billing_addr_street1_row input, #billing_addr_street2_row input, #billing_addr_street3_row input, #billing_addr_country_row input.ui-autocomplete-input, #donor_addr_street1_row input, #donor_addr_street2_row input, #donor_addr_street3_row input, #donor_addr_country_row input.ui-autocomplete-input, #shipping_addr_street1_row input, #shipping_addr_street2_row input, #shipping_addr_street3_row input, #shipping_addr_country_row input.ui-autocomplete-input, #tribute_notify_recip_street1_row input, #tribute_notify_recip_street2_row input, #tribute_notify_recip_street3_row input, #tribute_notify_recip_country_row input.ui-autocomplete-input, #tribute_signature_row input, #tribute_message_closing_row input, div.employer-address-container input#employer_street, div.responsive input[type="text"], div.responsive input[type="number"], div.responsive input[type="password"], div.responsive textarea {
+    width: 100%;
+}
+#donor_email_opt_in_Row label {
+    width: 94%;
+    float: left;
+    display: inline-block;
+}
+#donor_email_opt_in_Row input#donor_email_opt_inname {
+    float: left;
+}
+#responsive_payment_typecc_number_row {
+    float: left;
+    width: 70%;
+}
+div.payment-field-container #responsive_payment_typecc_number_row input {
+    width: 100%;
+}
+#responsive_payment_typecc_type_row {
+    float: right;
+    width: 23%;
+    margin-top: 35px;
+}
+.date-input-container select {
+    width: 130px;
+}
+div.responsive input[type=radio]:checked+label:before, div.responsive input[type=radio]:checked+span label:before, div.responsive input[type=radio]:checked+.premium-selector-radio-option-description label:before {
+    background-color: #da262e;
+    border-color: #da262e;
+}
+div.responsive input[type=radio]+label:before, div.responsive input[type=radio]+span label:before, div.responsive input[type=radio]+.premium-selector-radio-option-description label:before {
+    border: 2px solid #c3c3c3;
+    border-radius: 13px;
+    box-shadow: 0 0 0 5px #fff inset;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    transition-duration: 0.25s;
+    transition-property: border-color, background-color;
+    width: 24px;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+div.responsive input[type=radio]+.premium-selector-radio-option-description label:before {
+    float: left;
+}
+div.responsive input[type="radio"]+.premium-selector-radio-option-description .premium-selector-config-option-container label::before {
+    content: none;
+}
+.premium-selector-config-option-container {
+    margin-left: 35px;
+}
+.form-radio-array ul li {
+    margin: 10px 0;
+}
+.donate-options input, input[type=radio] {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+input[type=checkbox] {
+    margin-top: 6px;
+    margin-right: 10px!important;
+    transform: scale(1.4, 1.4);
+    -moz-transform: scale(1.4, 1.4);
+    -ms-transform: scale(1.4, 1.4);
+    -webkit-transform: scale(1.4, 1.4);
+    -o-transform: scale(1.4, 1.4);
+}
+div.payment-field-container span.payment-type-option label a:link, div.payment-field-container span.payment-type-option.selected label a:link {
+    padding-left: 0;
+}
+div.responsive button#pstep_finish.step-button {
+    float: none;
+    height: 48px;
+    line-height: 40px;
+    margin: 10px auto;
+    min-width: 200px;
+    width: 100%;
+    font-size: 20px;
+    max-width: 450px;
+    letter-spacing: .02em;
+}
+#donation-footer {
+    width: 530px;
+    float: none;
+    margin: 40px auto 20px;
+    display: block;
+}
+#donation-footer img {
+    float: left;
+    margin-right: 20px;
+}
+#donation-footer .footer-text {
+    margin-top: 15px;
+    float: left;
+}
+label[for=additional_name_dropdown], label[for=comment_note_type_input] {
+    display: none;
+}
+div.responsive div.premium-selector-radio-option-description-img-and-text img, div.responsive div.premium-selector-option-description-img-and-text img {
+    float: right;
+    padding-left: 10px;
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%!important;
+    height: auto;
+}
+div.responsive div.premium-selector-radio-option-description {
+    width: 100%;
+}
+span.premium-selector-radio-option-short-description {
+    display: block;
+    margin-left: 34px;
+}
+#responsive_payment_typepay_typeradio_row>.form-content {
+    width: 100%;
+}
+div.responsive div.form-error {
+    padding: 0 4px;
+}
+div#temp-premium-message.hide-me, div#premium_selector_row.hide-me, div.premium-selector-radio-option-row.hide-me {
+    display: none;
+}
+div.responsive span.field-error-text {
+    font-size: 14px;
+}
+/*error message styling*/
+
+#billing_first_name_row.form-error, #billing_last_name_row.form-error, #tribute_type_row.form-error, #tribute_honoree_first_name_row.form-error, #tribute_honoree_last_name_row.form-error, #tribute_notify_recip_street1_row.form-error, #tribute_notify_recip_street2_row.form-error, #tribute_notify_recip_state_row.form-error, #tribute_notify_recip_city_row.form-error, #tribute_notify_recip_zip_row.form-error, #tribute_notify_recip_country_row.form-error, #responsive_payment_typecc_number_row.form-error, #responsive_payment_typecc_cvv_row.form-error, #billing_addr_city_row.form-error, #billing_addr_street1_row.form-error, #billing_addr_street2_row.form-error, #billing_addr_country_row.form-error, #donor_email_address_row.form-error, #donor_phone_row.form-error, #billing_addr_state_row.form-error, #billing_addr_zip_row.form-error {
+    height: 105px;
+}
+div.responsive span.field-error-text {
+    font-size: 14px;
+    margin: 0;
+}
+div.responsive div.ErrorMessage {
+    margin-bottom: 0;
+}
+div.responsive #premium_selector_radio_row_no_premium_available {
+    color: #da262e;
+    font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+    div.donation-form-container.responsive {
+        width: 100%;
+    }
+}
+@media (max-width: 735px) {
+    div.responsive .donation-level-container div.form-content {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    div.donation-level-input-container, div.generic-repeat-label-checkbox-container {
+        padding-bottom: 5px;
+    }
+}
+@media (max-width: 720px) {
+    #payment_bank_container .bank-image-row {
+        width: 100%;
+        top: 25px;
+        right: 0;
+        position: relative;
+    }
+}
+@media (max-width: 680px) {
+    #billing_first_name_row, #billing_last_name_row, #tribute_type_row, #tribute_honoree_first_name_row, #tribute_honoree_last_name_row, #tribute_notify_recip_street1_row, #tribute_notify_recip_street2_row, #tribute_notify_recip_state_row, #tribute_notify_recip_city_row, #tribute_notify_recip_zip_row, #tribute_notify_recip_country_row, #responsive_payment_typecc_number_row, #responsive_payment_typecc_cvv_row, #billing_addr_city_row {
+        width: 98.5%;
+        height: 90px;
+        float: left;
+        margin-right: 1.5%
+    }
+    #payment_bank_container .form-row {
+        width: 98.5%;
+    }
+    #billing_addr_street1_row, #billing_addr_street2_row, #billing_addr_country_row, #donor_email_address_row {
+        width: 98.5%;
+        height: 90px;
+        float: left;
+    }
+    #billing_addr_state_row, #billing_addr_zip_row {
+        width: 48.5%;
+        margin-right: 1.5%;
+        height: 90px;
+        float: left;
+    }
+    #donor_email_opt_in_Row label {
+        width: 94%;
+        float: left;
+        display: inline-block;
+    }
+    #donor_email_opt_in_Row input#donor_email_opt_inname {
+        float: left;
+    }
+    #responsive_payment_typecc_number_row {
+        float: left;
+        width: 100%;
+    }
+    div.payment-field-container #responsive_payment_typecc_number_row input {
+        width: 100%;
+    }
+    #responsive_payment_typecc_type_row {
+        float: right;
+        width: 100%;
+        margin-top: 0;
+    }
+    #payment_bank_container .bank-image-row img {
+        display: none!important;
+    }
+}
+@media (max-width: 600px) {
+    .monthly-more-text {
+        width: 100%;
+    }
+    div.donation-form-container.responsive {
+        padding: 25px 15px;
+    }
+}
+@media (max-width: 580px) {
+    .donate-options label {
+        width: 100%;
+        float: left;
+        display: block;
+        margin: 8px 0;
+    }
+    #billing_addr_state_row, #billing_addr_zip_row {
+        width: 98.5%;
+        margin-right: 1.5%;
+        height: 90px;
+        float: left;
+    }
+    #donor_email_opt_in_Row label {
+        width: 90%;
+    }
+    #donation-footer {
+        width: 100%;
+    }
+    #donation-footer img {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+    #donation-footer .footer-text {
+        text-align: center;
+        float: none;
+    }
+}
+@media (max-width: 480px) {
+    .donation-levels .donation-level-container {
+        margin-right: 5px;
+        width: 95px;
+    }
+}
+</style>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.optimizely.com/js/5642551983.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-916662-1', 'auto');
+  // Optimizely Universal Analytics Integration Code
+  window.optimizely = window.optimizely || [];
+  window.optimizely.push("activateUniversalAnalytics");
+     
+  ga('send', 'pageview');
+ 
+</script> 
+
+
+
+ 
+
+		
+</head>
+<body
+
+
+
+
+
+
+
+
+
+
+
+
+
+>	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCGPTWQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+ 
+<div class="page-content">
+
+
+
+
+
+
+
+
+
+<form name="process" id="ProcessForm" action="https://secure3.convio.net/nhpr/site/Donation2" method="post" onsubmit="return checkDoubleClick();" >
+
+<div class="donation-form-container responsive">
+<script type="text/javascript">
+<!--
+function reloadPage() {
+window.location.reload(true);
+}
+function testAjax() {
+
+var xmlHttp = null;
+// Opera 8.0+, Firefox, Chrome, Safari
+try {
+xmlHttp = new XMLHttpRequest();
+}catch (e){
+// Internet Explorer Browsers
+try{
+xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+}catch (e) {
+try{
+xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+}catch (e){
+return false;
+}
+}
+}
+
+xmlHttp.open('POST','AjaxHelper;jsessionid=00000000.app30122a?NONCE_TOKEN=D9FF6DC5482EBC9C237337E18832BB86', true);
+xmlHttp.send();
+
+}
+addOnLoadHandler(testAjax);
+// -->
+</script>
+
+
+<div class="donation-form-content">
+
+
+
+
+
+
+<input type="hidden" name="user_donation_amt" id="user_donation_amt" value="" />
+<input type="hidden" name="company_min_matching_amt" id="company_min_matching_amt" value="" />
+<input type="hidden" name="currency_locale" id="currency_locale" value="en_US" />
+
+
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<div class="header" style="text-align: center;">
+<p style="text-align: center;"><img src="../images/content/pagebuilder/M24_DonationHeader.png" border="0" alt="M24_DonationHeader.png" width="600" height="200" /></p>
+<h1 style="text-align: center;">Support the local journalism you rely on</h1>
+</div>
+<p>NHPR is rooted in New Hampshire, sustained by you! We are your local outlet to learn about what's happening in your community - as well as what's happening nationally and internationally. We are sustained by YOU, people who value local, independent news.</p>
+
+
+
+</div>
+</div>
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<script type="text/javascript">
+//ADD LABEL TO THE PAYPAL OPTION REPLACING IMAGE AND REMOVE DIVS FROM PAYMENT TYPES
+jQuery.noConflict();
+(function( $ ) {
+  $(document).ready(function(){  
+
+    $('input[value="ach"]').parent().addClass('checking-option');
+    $('input[value="credit"]').parent().addClass('credit-option');
+    $('input[value="paypal"]').parent().addClass('paypal-option');
+    $('label[for="responsive_payment_typepay_typeradiopaypal"] a').text('PayPal');
+    $('span.payment-type-option').unwrap();
+    $('.payment-type-selection-container.payment-field-container').append('<div class="payment-message">Why donate with your bank account? It\'s easy, secure and there are no credit card fees, so more of your gift goes directly to independent journalism!</div>');
+
+
+  });
+})(jQuery);
+</script>
+
+ 
+<script>
+jQuery.noConflict();
+(function($) {
+    $(document).ready(function() {
+        //ADD CLASS TO PRESELECT LEVEL
+        $('div.donation-level-input-container .donation-level-label-container:contains("preselect")').parent().parent().addClass('preselect-val').html(function() {
+            return $(this).html().replace('preselect', '');
+        });
+        $('.donate-options label').click(function() {
+            if ($(this).hasClass("monthly-radio")) {
+                console.log('monthly on reload new js');
+                $('.monthly-amt .preselect-val input[type="radio"]').trigger('click');
+                $('.donation-level-container.monthly-amt .preselect-val').addClass('active');
+
+            } else {
+                $('.onetime-amt .preselect-val input[type="radio"]').trigger('click');
+                $('.donation-level-container.onetime-amt .preselect-val').addClass('active');
+
+            }
+        });
+    });
+})(jQuery);
+</script>
+
+<!-- CHECK FOR INITIAL PAGE LOAD AND SET LEVEL -->
+
+<script>
+jQuery.noConflict();
+(function($) {
+    $(document).ready(function() {
+
+        setTimeout(function() {
+            if ($('#donate-monthly').is(':checked')) {
+                console.log('monthly on load new js');
+                $('.monthly-amt .preselect-val input[type="radio"]').trigger('click');
+                $('.donation-level-container.monthly-amt .preselect-val').addClass('active');
+
+            } else {
+                $('.onetime-amt .preselect-val input[type="radio"]').trigger('click');
+                $('.donation-level-container.onetime-amt .preselect-val').addClass('active');
+            }
+        }, 300);
+
+    });
+})(jQuery);
+</script>
+
+
+</div>
+</div>
+
+
+
+
+<h2 class="section-header-container">
+
+How would you like to donate?
+
+</h2>
+
+
+
+<input type="hidden" name="double_the_donation_company_idhidden" id="double_the_donation_company_idhidden" value="" />
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<div class="donate-options">
+
+<!--MONTHLY RADIO + MESSAGE TOGGLE --> 
+<input id="donate-monthly" name="frequency-option" type="radio" checked="checked" /> <label class="monthly-radio radio" for="donate-monthly">Monthly Sustainer Donation </label> 
+
+<!--ONETIME RADIO --> <input id="donate-once" name="frequency-option" type="radio" /><label class="one-time-radio radio" for="donate-once">One-Time Donation</label>
+
+</div>
+<div class="monthly-msg">
+Become a sustaining member of NHPR: your ongoing support helps local journalism thrive.
+</div>
+
+<style>
+.donate-options input {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+div.responsive .donate-options input[type="radio"] + label::before {
+  display: none;
+}
+
+.donate-options {
+    display: flex;
+    width: 100%;
+}
+.donate-options input + label {
+    width: 280px;
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background: #fff;
+    border: 3px solid #009abc;
+    color: #009abc;
+    border-radius: 5px;  
+}
+.donate-options input:checked + label {
+    background: #009abc;
+    color: #fff;
+}
+.donation-level-input-container.form-input {
+    padding: 0;
+}
+div.donation-level-input-container .donation-level-label-container, 
+.donation-level-amount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 3px solid #009abc;
+    padding: 0;
+    height: 56px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+div.donation-level-input-container.active .donation-level-label-container, 
+div.donation-level-input-container:hover .donation-level-label-container, 
+div.donation-level-input-container.active .donation-level-amount-container, 
+div.donation-level-input-container:hover .donation-level-amount-container {
+    border: 3px solid #009abc;
+    color: #fff;
+    background: #009abc;
+}
+div.form-row .donation-level-container.other-amt div.donation-level-input-container {
+    background: transparent;
+    border: 0;
+    position: relative;
+    height: 56px;
+}
+div.responsive div.donation-level-user-entered input[type="text"] {
+    background: #fff;
+    border: 3px solid #009abc;
+    padding: 0;
+    height: 56px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    top 0;
+    top: 0;
+    left: 0;
+}
+div.responsive .active div.donation-level-user-entered input[type="text"]{
+    background: #fff;
+    border: 3px solid #009abc;
+    color: #000;
+    padding-left: 30px;
+}
+div.responsive .active div.donation-level-user-entered:before{
+    content: '$';
+    position: absolute;
+    background: #009abc;
+    z-index: 1000;
+    color: #fff;
+    width: 40px;
+    display: flex;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    align-items: center;
+    justify-content: center;   
+    top: 0;
+    left: 0;
+}
+div.responsive div.donation-level-user-entered input[type="text"]:focus-visible {
+    outline: none;
+}
+.donation-level-user-entered ::-webkit-input-placeholder {
+    color: #000;
+    opacity: 1;
+}
+.donation-level-user-entered ::-moz-placeholder {
+    color: #000;
+    opacity: 1;
+}
+.donation-level-user-entered :-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+}
+.donation-level-user-entered :-moz-placeholder {
+    color: #000;
+    opacity: 1;
+}
+.active .donation-level-user-entered ::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.active .donation-level-user-entered ::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.active .donation-level-user-entered :-ms-input-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.active .donation-level-user-entered :-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+div.responsive .donation-level-container .form-content {
+    margin: 0;
+}
+.monthly-msg {
+    position: relative;
+    margin: 25px 0 35px 0;
+    padding: 0 0 0 50px;
+    max-width: 660px;
+}
+.monthly-msg:before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 37px;
+    position: absolute;
+    background: url(../images/content/pagebuilder/nhpr-monthly-text-heart.png ) no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 50%;
+    margin-top: -19.5px;
+}
+#additional_amount_row .form-content {
+    border: 3px solid #009abc;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+#level_standard_row .FormLabelText {
+    font-weight: 700;    
+    margin-bottom: 10px;
+    display: inline-block;
+}
+div.responsive #additional_amount_row .form-content {
+    border: 3px solid #009abc;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+/* PAYMENT TYPE UPDATES */
+#responsive_payment_typepay_typeradio_payment_types {
+    display: flex;
+}
+#responsive_payment_typepay_typeradio_row div.payment-type-selections > span {
+    border: 0;
+    margin-right: 10px;
+} 
+#responsive_payment_typepay_typeradio_row div.payment-type-selections > span {
+    padding: 0;
+    margin: 0;
+}
+div.responsive #responsive_payment_typepay_typeradio_payment_types label:before {
+    display: none;    
+}
+div.responsive #responsive_payment_typepay_typeradio_payment_types input[type=radio]+label {
+    width: 230px;
+    padding: 0;
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background: #fff;
+    border: 3px solid #009abc;
+    color: #009abc;
+    border-radius: 5px;  
+} 
+div.responsive #responsive_payment_typepay_typeradio_payment_types input[type=radio]:checked+label {
+    border: 3px solid #009abc;
+    color: #fff;
+    background: #009abc;
+}
+.payment-type-option.credit-option {
+    order: 2;
+}
+.payment-type-option.checking-option {
+    order: 1;
+}
+.payment-type-option.paypal-option {
+    order: 3;
+}
+div.payment-field-container span.payment-type-option.selected label a:link {
+    color: #fff;
+}
+button#pstep_finish {
+    border-radius: 5px;
+}
+.payment-message {
+    position: relative;
+    margin: 15px 0 35px 0;
+    padding: 0 0 0 40px;
+    max-width: 600px;
+}
+.payment-message:before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 42px;
+    position: absolute;
+    background: url(../images/content/pagebuilder/arrow-up-nhpr-payment.png) no-repeat;
+    background: url(../images/content/pagebuilder/arrow-up-donation-ach.png) no-repeat;
+    background-size: cover;
+    left: 0;
+    top: -14px
+}
+@media (max-width: 600px) {
+    .donate-options {
+        flex-wrap: wrap;
+    }
+    .donate-options input + label {
+        width: 100%;
+        margin: 0 0 10px!important;
+    }
+    div.responsive .other-amt div.donation-level-user-entered input[type="text"] {
+        height: 56px;
+    }
+    .donation-levels .donation-level-container, div.form-row .donation-level-container:last-child {
+        margin-right: 0;
+        width: 48.85%;
+     }
+}
+
+@media (max-width: 580px) {
+    .payment-type-element-container h3, h3#comment-header {
+        margin: 20px 0 10px;
+    }
+    #responsive_payment_typepay_typeradio_payment_types {
+        flex-direction: column;
+    }
+    div.responsive #responsive_payment_typepay_typeradio_payment_types input[type="radio"] + label {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+</style>
+
+</div>
+</div>
+
+
+
+<div id="level_standard_row">
+
+<div class="don-standard-levels form-row">
+<div class="levels-label">
+
+</div>
+
+<div id="level_standard_row" class="form-row form-donation-level">
+
+<div class="form-content">
+<span class="field-required"></span> <span class="aural-only">Field Is Required</span>
+
+<span class="FormLabelText">Enter A Gift Amount:</span> 
+
+
+<div class="donation-level-general-ask">
+
+</div>
+
+<div class="donation-levels">
+
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12436"
+value="12436"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12436" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$60 onetime
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12436expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12437"
+value="12437"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12437" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$100 onetime
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12437expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12438"
+value="12438"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12438" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$120 onetime preselect
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12438expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12439"
+value="12439"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12439" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$250 onetime
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12439expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12444"
+value="12444"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12444" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$1200 onetime
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12444expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12445"
+value="12445"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12445" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$5 monthly
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12445expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12447"
+value="12447"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12447" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$10 monthly
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12447expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12448"
+value="12448"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12448" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$13 monthly preselect
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12448expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12433"
+value="12433"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12433" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$23 monthly
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12433expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12434"
+value="12434"
+
+
+onclick="evalMatchingGift('');
+updateDonorCoverAmount('');"
+/>
+</div>
+
+<label for="level_standardexpanded12434" onclick="">
+
+
+
+<div class="donation-level-label-container">
+$100 monthly
+</div>
+
+
+</label>
+
+
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12434expandedsubmit" value="true" /> 
+</div>
+</div>
+<div class="donation-level-container">
+<div class="form-content">
+
+<div class="donation-level-input-container form-input">
+
+<div class="donation-level-label-input-container">
+<input type="radio" name="level_standardexpanded" id="level_standardexpanded12435"
+value="12435"
+
+
+onclick="evalMatchingGift(document.getElementById('level_standardexpanded12435amount').value);
+updateDonorCoverAmount(document.getElementById('level_standardexpanded12435amount').value);"
+/>
+</div>
+
+
+
+
+
+<div class="donation-level-user-entered">
+<label for="level_standardexpanded12435amount"><span class="aural-only">Enter amount</span></label>
+<input type="text" name="level_standardexpanded12435amount" id="level_standardexpanded12435amount" value="" size="12" maxlength="50"
+onfocus="var el = document.getElementById ('level_standardexpanded12435');if (el) el.click(); fire_obs_comp_event('level_standardexpanded12435amount', this, event);evalMatchingGift(value); "
+onchange="fire_obs_comp_event('level_standardexpanded12435amount', this, event);evalMatchingGift(value);"
+onkeyup="fire_obs_comp_event('level_standardexpanded12435amount', this, event);evalMatchingGift(value);"
+onblur="fire_obs_comp_event('level_standardexpanded12435amount', this);updateDonorCoverAmount(value);"
+/>
+
+
+</div>
+
+
+
+
+
+</div>
+
+<input type="hidden" name="level_standardexpandedsubmit" id="level_standard_12435expandedsubmit" value="true" /> 
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+Y.use("jquery-ui", function(Y) {
+jQuery(function(){
+// subscribe observables
+jQuery('div.donation-level-element-container').find('input[type="radio"]').each(function() {
+var syncAction = function(obj) {
+if (obj.is(':checked')) {
+obj.closest('div.donation-level-container').addClass('selected');
+}
+else {
+obj.closest('div.donation-level-container').removeClass('selected');
+};
+return arguments.callee;
+}(jQuery(this));
+jQuery(this).click(function() {
+jQuery('div.donation-level-container').removeClass('selected');
+syncAction(jQuery(this));
+});
+});
+});
+});
+</script><noscript>&nbsp;</noscript>
+</div>
+
+<div class="levels-gift-aid">
+
+</div>
+<input type="hidden" name="level_standardsubmit" id="level_standardsubmit" value="true" />
+<script type="text/javascript">
+function updateDonorCoverAmount(gift) {
+if (typeof updateAmount !== "undefined") {
+updateAmount(gift);
+}
+};
+function evalMatchingGift(gift) {
+
+}
+</script><noscript>&nbsp;</noscript>
+</div>
+<div class="donation-level-container-generic-repeat form-input">
+
+<div class="generic-repeat-label-checkbox-container">
+<input type="checkbox" name="level_standardauto_repeatname" id="level_standardauto_repeatname"
+
+onclick="fire_obs_comp_event('level_standardauto_repeat', this);"
+onkeypress="fire_obs_comp_event('level_standardauto_repeat', this);"
+/>
+
+<label for="level_standardauto_repeatname">
+Yes, automatically repeat this gift every month.
+</label>
+
+</div>
+<input type="hidden" name="level_standardauto_repeatsubmit" id="level_standardauto_repeatsubmit" value="true" />
+</div>
+<script type="text/javascript">
+// subscribe listeners to make an ajax call to the server to calculate the total amount
+Y.use('jquery-noconflict', function() {
+var fetchAmountFunc = function () {
+// find all the select, textarea, input, etc... and format them into key=val pairs.
+var params = jQuery('#level_standard_row :input').serialize();
+// parse the path and append the key/value pairs above to the url
+var url = 'https://secure3.convio.net/nhpr/site/Donation2?idb=179288730&level_standardajaxfetch=true&DONATION_LEVEL_ID_SELECTED=1&df_id=3780&mfc_pref=T&3780.donation=form1&level_standardtotalcalculateBtn=true';
+var index = url.indexOf("?");
+var path = url.substring(0, index);
+var args = url.substring(index+1, url.length);
+args += '&' + params;
+var recurringGiftTermsContainer = jQuery('#recurring_gift_terms_acceptance_message_container');
+if(recurringGiftTermsContainer && recurringGiftTermsContainer.length > 0) {
+jQuery.ajax(path, {
+data: args,
+success: function(data) {
+jQuery('#recurring_gift_terms_acceptance_message_container').trigger("recurringTermsChange");
+}
+});
+}
+};
+jQuery('#level_standard_row :input[type=text]').blur(function() {
+fetchAmountFunc();
+});
+jQuery('#level_standard_row input:checkbox, #level_standard_row input:radio').click(function() {
+fetchAmountFunc();
+});
+jQuery('#level_standard_row select').change(function() {
+fetchAmountFunc();
+});
+// call it on page load
+fetchAmountFunc();
+});
+</script><noscript>&nbsp;</noscript>
+</div>
+
+
+
+
+<div id="additional_amount_row" class="form-row form-text">
+
+<div class="form-content">
+
+<label for="additional_amountname">Additional Amount:</label>
+<div class="form-input">
+
+<input type="checkbox" name="additional_amountname" id="additional_amountname"
+
+onclick="fire_obs_comp_event('additional_amount', this);"
+onkeypress="fire_obs_comp_event('additional_amount', this);" />
+
+<label class="CheckboxLabel" for="additional_amountname">$25.00 </label>
+
+
+</div>
+</div>
+<input type="hidden" name="additional_amountsubmit" id="additional_amountsubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('additional_amount', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('additional_amount_row', _display);
+this.disable_submit_flag (_hidden);
+}
+comp.set = function (_value)
+{
+if (document.getElementById('additional_amountname')) {
+document.getElementById('additional_amountname').checked = _value;
+this.fireEvent();
+}
+}
+comp.get = function()
+{
+if (document.getElementById('additional_amountname'))
+return document.getElementById('additional_amountname').checked;
+}
+comp.clear = function()
+{
+this.set(false);
+}
+
+</script><noscript>&nbsp;</noscript>
+</div>
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<div id="temp-premium-message" class="hide-me">
+<div class="premium-selector-radio-option-row-user-specified-amount">Premiums are available with gifts as low as $5/month! Enter a gift amount to see the great premiums we have to offer.</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<h2 id="premium-heading" class="premium-heading">Choose a Thank-You Gift</h2>
+</div>
+</div>
+
+
+
+<div id="premium_selector_row" class="form-row ">
+
+<input type="hidden" name="premium_selectorsubmit" id="premium_selectorsubmit" value="true" />
+<script type="text/javascript">
+Y.use("jquery-ui", function(Y) {
+var donation_level_to_premium_map = new Object ();
+var premium_id_to_value_map = new Object ();
+var donation_level_value_to_level_id_map = new Object();
+var user_entered_level_id = 0;
+// user entered value rendered into the page via java ... 
+// presumably if user entered level is displayed on a previous page
+var previous_user_entered_value = 0;
+var user_selected_level_message_id = '-2';
+var orriginal_select_list;
+var add_premium_to_level = function(level_id, premium_id) {
+var premium_array = donation_level_to_premium_map[level_id];
+if (premium_array == undefined) {
+donation_level_to_premium_map[level_id] = [];
+donation_level_to_premium_map[level_id][0] = premium_id;
+} else {
+donation_level_to_premium_map[level_id].push(premium_id);
+}
+}
+var add_value_level_id_map = function(level_amount, level_id) {
+donation_level_value_to_level_id_map[level_amount] = level_id;
+}
+// find the donation level with the highest value that is still less than the provided amount
+var get_highest_value_level = function (amount) {
+amount = parseInt(amount);
+var highest_level_value = 0;
+var highest_level_id = -1;
+for (level_value in donation_level_value_to_level_id_map) {
+level_value = parseInt(level_value);
+if (amount >= level_value && level_value >= highest_level_value) {
+highest_level_id = donation_level_value_to_level_id_map[level_value];
+highest_level_value = level_value;
+}
+}
+return highest_level_id;
+}
+var set_user_entered_level_id = function(level_id) {
+user_entered_level_id = level_id;
+}
+var set_user_entered_value = function(value) {
+previous_user_entered_value = value;
+}
+var calculate_radio_premiums = function(level_id) {
+var valid_premium_ids = donation_level_to_premium_map[level_id];
+// if the selected level is the user entered amount level 
+if (level_id == user_entered_level_id) {
+var level_id_premiums_to_display = get_highest_value_level(previous_user_entered_value.toString());
+if (level_id_premiums_to_display < 0) {
+hide_premium_container();
+hide_no_premium_message();
+show_user_specified_amount_container();
+} else {
+hide_no_premium_message();
+hide_user_specified_amount_container();
+display_premiums(donation_level_to_premium_map[level_id_premiums_to_display]);
+apply_radio_option_premium_separator();
+show_premium_container();
+}
+} else {
+// if there are no premiums available, show no premium message
+if (valid_premium_ids === undefined || valid_premium_ids.length == 0) {
+hide_premium_container();
+hide_user_specified_amount_container();
+show_no_premium_message();
+} else {
+hide_no_premium_message();
+hide_user_specified_amount_container();
+display_premiums(valid_premium_ids);
+apply_radio_option_premium_separator();
+show_premium_container();
+}
+}
+}
+// this method expects a parsed currency string
+var configure_user_entered_premium_radio_list = function(amount) {
+var level_id_premiums_to_display = get_highest_value_level(amount);
+if (level_id_premiums_to_display < 0) {
+hide_premium_container();
+hide_no_premium_message();
+show_user_specified_amount_container();
+} else {
+hide_no_premium_message();
+hide_user_specified_amount_container();
+display_premiums(donation_level_to_premium_map[level_id_premiums_to_display]);
+apply_radio_option_premium_separator();
+show_premium_container();
+}
+}
+var calculate_select_premiums = function(level_id) {
+var valid_premium_ids = donation_level_to_premium_map[level_id];
+var level_id_message_to_show = -1;
+if (level_id == user_entered_level_id) {
+level_id_message_to_show = user_selected_level_message_id;
+}
+configure_premium_select_list(valid_premium_ids);
+hide_all_select_premium_messages();
+show_select_premium_message(level_id_message_to_show);
+jQuery('#premium_selector_premiumSelect').val(-1);
+}
+var display_select_premium_descriptions = function(premium_id) {
+hide_all_select_premium_messages();
+show_select_premium_message(premium_id);
+}
+var configure_premium_select_list = function(valid_premium_ids) {
+// remove current select list and replace with orrignal version
+jQuery('#premium_selector_premiumSelect').remove();
+var new_select_list = orriginal_select_list.clone(true, true);
+new_select_list.prependTo('#premium_selector_list_container_premium_selector');
+jQuery('#premium_selector_list_container_premium_selector');
+// hide and show option groups
+jQuery('#premium_selector_premiumSelect optgroup').each(function(){
+// get first child of optgroup ... all children should have the 
+// same premium value so we only need to check the first
+var optgroup_premium_value = jQuery(this).children()[0].value;
+var premium_id = calculate_premium_value_from_select_option(optgroup_premium_value);
+if (valid_premium_ids == undefined || jQuery.inArray(premium_id, valid_premium_ids) <= -1) {
+jQuery(this).remove();
+}
+});
+// hide and show options
+jQuery('#premium_selector_premiumSelect option').each(function(){
+var value = this.value;
+// extract premium ID from select option value
+var premium_id = calculate_premium_value_from_select_option(value);
+if (premium_id == 0 || premium_id == -1) {
+// do nothing
+} else if (valid_premium_ids == undefined || jQuery.inArray(premium_id, valid_premium_ids) <= -1) {
+jQuery(this).remove();
+}
+});
+// assign change listener
+jQuery('#premium_selector_premiumSelect').change(function(){
+display_select_premium_descriptions(calculate_premium_value_from_select_option(this.value));
+});
+}
+// this method expects a parsed currency string
+var configure_user_entered_premium_select_list = function(amount) {
+var level_id_premiums_to_display = get_highest_value_level(amount);
+var premiums_to_display = donation_level_to_premium_map[level_id_premiums_to_display]
+// remove current select list and replace with orrignal version
+jQuery('#premium_selector_premiumSelect').remove();
+var new_select_list = orriginal_select_list.clone(true, true);
+new_select_list.prependTo('#premium_selector_list_container_premium_selector');
+jQuery('#premium_selector_list_container_premium_selector');
+// enable applicable optgroups
+jQuery('#premium_selector_premiumSelect optgroup').each(function(){
+var optgroup_premium_value = jQuery(this).children()[0].value;
+var premium_id = calculate_premium_value_from_select_option(optgroup_premium_value);
+if (jQuery.inArray(premium_id, premiums_to_display) <= -1 ) {
+jQuery(this).remove();
+}
+});
+// enable applicable options
+jQuery('#premium_selector_premiumSelect option').each(function(){
+var value = this.value;
+// extract premium ID from select option value
+var premium_id = calculate_premium_value_from_select_option(value);
+if (premium_id == 0 || premium_id == -1) {
+// do nothing
+} else if (jQuery.inArray(premium_id, premiums_to_display) <= -1 ) {
+jQuery(this).remove();
+}
+});
+// assign change listener
+jQuery('#premium_selector_premiumSelect').change(function(){
+display_select_premium_descriptions(calculate_premium_value_from_select_option(this.value));
+});
+}
+var calculate_premium_value_from_select_option = function(select_option_value) {
+return select_option_value.split('.')[0];
+}
+var hide_all_select_premium_messages = function() {
+jQuery('.premium-selector-select-option-container').children('div').addClass('hidden');
+}
+var show_select_premium_message = function(premium_id) {
+jQuery('#premium_selector_option_row_' + premium_id).removeClass('hidden');
+}
+var show_no_premium_message = function() {
+jQuery('#premium_selector_radio_row_no_premium_available').removeClass('hidden');
+}
+var hide_no_premium_message = function() {
+jQuery('#premium_selector_radio_row_no_premium_available').addClass('hidden');
+}
+var hide_premium_container = function() {
+jQuery('#premium_selector_raio_row').addClass('hidden');
+}
+var show_premium_container = function() {
+jQuery('#premium_selector_raio_row').removeClass('hidden');
+}
+var show_user_specified_amount_container = function() {
+jQuery('#premium_selector_radio_row_user_specified_amount').removeClass('hidden');
+}
+var hide_user_specified_amount_container = function() {
+jQuery('#premium_selector_radio_row_user_specified_amount').addClass('hidden');
+}
+var apply_radio_option_premium_separator = function() {
+jQuery('.premium-selector-radio-option-row').not('.hidden').each(function(index) {
+if (index == '0') {
+jQuery(this).removeClass('premium-separator');
+} else {
+jQuery(this).addClass('premium-separator');
+}
+});
+}
+var display_premiums = function(valid_premium_ids) {
+jQuery('.premium-selector-radio-option-row').each(function(){
+var premium_selector_radio_option_row = jQuery(this);
+// retrieve the premium_id associated with this row
+var premium_id = get_premium_id_from_radio_option_row_id(premium_selector_radio_option_row.attr('id'));
+if (jQuery.inArray(premium_id, valid_premium_ids) > -1 || premium_id == 0) {
+premium_selector_radio_option_row.removeClass('hidden');
+} else {
+premium_selector_radio_option_row.addClass('hidden');
+}
+});
+}
+var get_premium_id_from_radio_option_row_id = function(radio_row_id) {
+var index_of_last_underscore = radio_row_id.lastIndexOf('_');
+return radio_row_id.slice(index_of_last_underscore + 1);
+}
+jQuery(function(){
+// registers level-to-premium relationships and level_value-to-premium
+add_premium_to_level('12436', '2850');
+add_value_level_id_map('6000', '12436');add_premium_to_level('12436', '2202');
+add_value_level_id_map('6000', '12436');add_premium_to_level('12437', '2850');
+add_value_level_id_map('10000', '12437');add_premium_to_level('12437', '2202');
+add_value_level_id_map('10000', '12437');add_premium_to_level('12438', '2850');
+add_value_level_id_map('12000', '12438');add_premium_to_level('12438', '2851');
+add_value_level_id_map('12000', '12438');add_premium_to_level('12438', '2202');
+add_value_level_id_map('12000', '12438');add_premium_to_level('12439', '2850');
+add_value_level_id_map('25000', '12439');add_premium_to_level('12439', '2851');
+add_value_level_id_map('25000', '12439');add_premium_to_level('12439', '2852');
+add_value_level_id_map('25000', '12439');add_premium_to_level('12439', '2853');
+add_value_level_id_map('25000', '12439');add_premium_to_level('12439', '2202');
+add_value_level_id_map('25000', '12439');add_premium_to_level('12444', '2850');
+add_value_level_id_map('120000', '12444');add_premium_to_level('12444', '2851');
+add_value_level_id_map('120000', '12444');add_premium_to_level('12444', '2852');
+add_value_level_id_map('120000', '12444');add_premium_to_level('12444', '2853');
+add_value_level_id_map('120000', '12444');add_premium_to_level('12444', '2202');
+add_value_level_id_map('120000', '12444');add_premium_to_level('12444', '2381');
+add_value_level_id_map('120000', '12444');add_premium_to_level('12445', '2850');
+add_value_level_id_map('500', '12445');add_premium_to_level('12445', '2202');
+add_value_level_id_map('500', '12445');add_premium_to_level('12447', '2850');
+add_value_level_id_map('1000', '12447');add_premium_to_level('12447', '2851');
+add_value_level_id_map('1000', '12447');add_premium_to_level('12447', '2202');
+add_value_level_id_map('1000', '12447');add_premium_to_level('12448', '2850');
+add_value_level_id_map('1300', '12448');add_premium_to_level('12448', '2851');
+add_value_level_id_map('1300', '12448');add_premium_to_level('12448', '2852');
+add_value_level_id_map('1300', '12448');add_premium_to_level('12448', '2853');
+add_value_level_id_map('1300', '12448');add_premium_to_level('12448', '2202');
+add_value_level_id_map('1300', '12448');add_premium_to_level('12433', '2850');
+add_value_level_id_map('2300', '12433');add_premium_to_level('12433', '2851');
+add_value_level_id_map('2300', '12433');add_premium_to_level('12433', '2852');
+add_value_level_id_map('2300', '12433');add_premium_to_level('12433', '2853');
+add_value_level_id_map('2300', '12433');add_premium_to_level('12433', '2202');
+add_value_level_id_map('2300', '12433');add_premium_to_level('12433', '2381');
+add_value_level_id_map('2300', '12433');add_premium_to_level('12434', '2850');
+add_value_level_id_map('10000', '12434');add_premium_to_level('12434', '2851');
+add_value_level_id_map('10000', '12434');add_premium_to_level('12434', '2852');
+add_value_level_id_map('10000', '12434');add_premium_to_level('12434', '2853');
+add_value_level_id_map('10000', '12434');add_premium_to_level('12434', '2202');
+add_value_level_id_map('10000', '12434');add_premium_to_level('12434', '2381');
+add_value_level_id_map('10000', '12434');
+// register user entered level id
+setCurrencyContext ("$", ",", ".", 2);
+set_user_entered_level_id (12435);
+set_user_entered_value (-1);
+// clone full select list
+orriginal_select_list = jQuery('#premium_selector_premiumSelect').clone(true, true);
+
+calculate_radio_premiums(0);
+
+// subscribe click listeners for level selector radio buttons
+var selected_level_id = 0;
+jQuery('.donation-level-input-container input[type=radio]').click(function(){
+
+calculate_radio_premiums(this.value);
+
+});
+jQuery('.donation-level-user-entered input[type=text]').bind('keyup focus', function() {
+
+configure_user_entered_premium_radio_list(parseCurrency(this.value));
+
+});
+jQuery('.designated-giving-amount-container input[type=text], .contact-amount-container .amount-input-text, .contact-amount-display').bind('keyup focus click', function() {
+var designated_giving_total = 0;
+jQuery('.designated-giving-amount-container input[type=text], .contact-amount-container .amount-input-text').each(function(){
+parsedTotal = parseInt(this.value);
+if (!isNaN(parsedTotal) && jQuery(this).is(':visible') == true) {
+designated_giving_total = designated_giving_total + parseInt(this.value);
+}
+});
+
+configure_user_entered_premium_radio_list(parseCurrency(designated_giving_total.toString()));
+	 			
+});
+});
+});	
+</script><noscript>&nbsp;</noscript>
+
+<div id="premium_selector_raio_row" class="premium-selector-radio-container hidden">
+<div id="premium_selector_radio_option_row_0" class="premium-selector-radio-option-row " >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.0" value="0" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<label for="premium_selector.premiumRadio.0">
+No gift for me.
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+Please make 100% of my donation tax deductible
+</span>
+
+</div>
+
+
+</div>
+</div>
+<div id="premium_selector_radio_option_row_2381" class="premium-selector-radio-option-row Middle" >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.2381" value="2381" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<img class="premium-selector-option-image" src="../images/donation_icons/premium_images/1542417613.custom.png" alt="12-month NY Times digital subscription ($23/month)" height="89" width="150" />
+
+<label for="premium_selector.premiumRadio.2381">
+12-month NY Times digital subscription ($23/month)
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+1-yr unlimited digital access to NYTimes.com and NYTimes apps for smartphones and tablets. Anytime. Anywhere. (excludes the crossword and NYT Cooking) (fmv: $52)
+</span>
+
+</div>
+
+
+</div>
+</div>
+<div id="premium_selector_radio_option_row_2852" class="premium-selector-radio-option-row Middle" >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.2852" value="2852" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<img class="premium-selector-option-image" src="../images/donation_icons/premium_images/1721664330.custom.jpg" alt="Fall, Winter &amp; Spring Pint Glass Trio ($13/month) " height="150" width="117" />
+
+<label for="premium_selector.premiumRadio.2852">
+Fall, Winter &amp; Spring Pint Glass Trio ($13/month) 
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+Enjoy the NHPR fall, winter and spring pint glasses. Each are 16 ounces.
+</span>
+
+</div>
+
+
+<a class="premium-selector-more-info-link" title="More Information..." href="https://secure3.convio.net/nhpr/site/Donation2?idb=179288730&amp;DONATION_LEVEL_ID_SELECTED=1&amp;df_id=3780&amp;prem_id=2852&amp;mfc_pref=T&amp;mfc_popup=true&amp;3780.donation=premium-detail" target="_blank" onclick="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);" onkeypress="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);">
+More Information...
+</a>
+
+</div>
+</div>
+<div id="premium_selector_radio_option_row_2853" class="premium-selector-radio-option-row Middle" >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.2853" value="2853" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<img class="premium-selector-option-image" src="../images/donation_icons/premium_images/1794900724.custom.jpg" alt="NHPR Spring Pint Glass &amp; Tote Bag Combo ($13/month) " height="150" width="150" />
+
+<label for="premium_selector.premiumRadio.2853">
+NHPR Spring Pint Glass &amp; Tote Bag Combo ($13/month) 
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+Pint Glass/Tote Bag Combo for Spring 2024 
+</span>
+
+</div>
+
+
+<a class="premium-selector-more-info-link" title="More Information..." href="https://secure3.convio.net/nhpr/site/Donation2?idb=179288730&amp;DONATION_LEVEL_ID_SELECTED=1&amp;df_id=3780&amp;prem_id=2853&amp;mfc_pref=T&amp;mfc_popup=true&amp;3780.donation=premium-detail" target="_blank" onclick="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);" onkeypress="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);">
+More Information...
+</a>
+
+</div>
+</div>
+<div id="premium_selector_radio_option_row_2851" class="premium-selector-radio-option-row Middle" >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.2851" value="2851" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<img class="premium-selector-option-image" src="../images/donation_icons/premium_images/113758205.custom.jpg" alt="NHPR Tree Tote Bag ($10/month) " height="150" width="113" />
+
+<label for="premium_selector.premiumRadio.2851">
+NHPR Tree Tote Bag ($10/month) 
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+The NHPR tote bag is perfect for carrying groceries, books and just about anything else! Locally made in Bedford NH, this cotton tote is 19&quot; W x 16&quot; H.
+</span>
+
+</div>
+
+
+<a class="premium-selector-more-info-link" title="More Information..." href="https://secure3.convio.net/nhpr/site/Donation2?idb=179288730&amp;DONATION_LEVEL_ID_SELECTED=1&amp;df_id=3780&amp;prem_id=2851&amp;mfc_pref=T&amp;mfc_popup=true&amp;3780.donation=premium-detail" target="_blank" onclick="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);" onkeypress="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);">
+More Information...
+</a>
+
+</div>
+</div>
+<div id="premium_selector_radio_option_row_2850" class="premium-selector-radio-option-row Middle" >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.2850" value="2850" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<img class="premium-selector-option-image" src="../images/donation_icons/premium_images/2019759649.custom.jpg" alt="NHPR Spring Pint Glass ($5/month) " height="150" width="128" />
+
+<label for="premium_selector.premiumRadio.2850">
+NHPR Spring Pint Glass ($5/month) 
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+Prepare for spring with your very own 16 ounce NHPR pint glass! Sip on your favorite beverage while showcasing your love for local journalism. 
+</span>
+
+</div>
+
+
+<a class="premium-selector-more-info-link" title="More Information..." href="https://secure3.convio.net/nhpr/site/Donation2?idb=179288730&amp;DONATION_LEVEL_ID_SELECTED=1&amp;df_id=3780&amp;prem_id=2850&amp;mfc_pref=T&amp;mfc_popup=true&amp;3780.donation=premium-detail" target="_blank" onclick="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);" onkeypress="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);">
+More Information...
+</a>
+
+</div>
+</div>
+<div id="premium_selector_radio_option_row_2202" class="premium-selector-radio-option-row Last" >
+
+<input type="radio" name="premium_selector.premiumRadio" id="premium_selector.premiumRadio.2202" value="2202" class="premium-select-radio"  />
+<div class="premium-selector-radio-option-description">
+<div class="premium-selector-radio-option-description-img-and-text clearfix">
+
+<img class="premium-selector-option-image" src="../images/donation_icons/premium_images/1023067965.custom.jpg" alt="NHPR Dog Bowl ($5/month)" height="124" width="150" />
+
+<label for="premium_selector.premiumRadio.2202">
+NHPR Dog Bowl ($5/month)
+</label>
+
+<span class="premium-selector-radio-option-short-description">
+The NHPR dog bowl is for those dogs (or cats) on the go.  This collapsible bowl is perfect for everyday walks or weekend hikes. 5 1/2&quot; H x 7&quot; diameter.
+</span>
+
+</div>
+
+
+<a class="premium-selector-more-info-link" title="More Information..." href="https://secure3.convio.net/nhpr/site/Donation2?idb=179288730&amp;DONATION_LEVEL_ID_SELECTED=1&amp;df_id=3780&amp;prem_id=2202&amp;mfc_pref=T&amp;mfc_popup=true&amp;3780.donation=premium-detail" target="_blank" onclick="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);" onkeypress="return cv_new_win_from_link_handler(event, 'MoreInfo', 500, 400);">
+More Information...
+</a>
+
+</div>
+</div>
+
+</div>
+
+<div id="premium_selector_radio_row_no_premium_available" class="premium-selector-radio-container hidden">
+<div class="premium-selector-radio-option-row-no-premium-available">
+There are no premiums available for the selected level.
+</div>
+</div>
+
+<div id="premium_selector_radio_row_user_specified_amount" class="premium-selector-radio-container hidden">
+<div class="premium-selector-radio-option-row-user-specified-amount">
+Giving an amount that is at least as large as a fixed gift amount entitles you to any corresponding premium(s).
+</div>
+</div>
+
+</div>
+
+
+
+
+<h2 class="section-header-container">
+
+Your Information
+
+</h2>
+
+
+
+
+<div id="billing_first_name_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="billing_first_namename">First Name:</label>
+
+<input type="text" name="billing_first_namename" id="billing_first_namename"
+value=""
+maxlength="50"
+/>
+
+<input type="hidden" name="billing_first_namesubmit" id="billing_first_namesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_first_name', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_first_name_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+<div id="billing_last_name_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="billing_last_namename">Last Name:</label>
+
+<input type="text" name="billing_last_namename" id="billing_last_namename"
+value=""
+maxlength="50"
+/>
+
+<input type="hidden" name="billing_last_namesubmit" id="billing_last_namesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_last_name', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_last_name_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+<div id="billing_addr_street1_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="billing_addr_street1name">Street 1:</label>
+
+<input type="text" name="billing_addr_street1name" id="billing_addr_street1name"
+value=""
+maxlength="50"
+/>
+
+<input type="hidden" name="billing_addr_street1submit" id="billing_addr_street1submit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_addr_street1', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_street1_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+<div id="billing_addr_city_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="billing_addr_cityname">City:</label>
+
+<input type="text" name="billing_addr_cityname" id="billing_addr_cityname"
+value=""
+maxlength="50"
+/>
+
+<input type="hidden" name="billing_addr_citysubmit" id="billing_addr_citysubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_addr_city', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_city_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+<div id="billing_addr_state_row" class="form-row form-selectlist">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label class="FormLabel" for="billing_addr_state">State/Province:</label>
+<select name="billing_addr_state" id="billing_addr_state" size="1" 
+ onchange="fire_obs_comp_event('billing_addr_state', this)">
+<option ></option>
+<option value="AK" >AK - Alaska</option>
+<option value="AL" >AL - Alabama</option>
+<option value="AR" >AR - Arkansas</option>
+<option value="AZ" >AZ - Arizona</option>
+<option value="CA" >CA - California</option>
+<option value="CO" >CO - Colorado</option>
+<option value="CT" >CT - Connecticut</option>
+<option value="DC" >DC - District of Columbia</option>
+<option value="DE" >DE - Delaware</option>
+<option value="FL" >FL - Florida</option>
+<option value="GA" >GA - Georgia</option>
+<option value="HI" >HI - Hawaii</option>
+<option value="IA" >IA - Iowa</option>
+<option value="ID" >ID - Idaho</option>
+<option value="IL" >IL - Illinois</option>
+<option value="IN" >IN - Indiana</option>
+<option value="KS" >KS - Kansas</option>
+<option value="KY" >KY - Kentucky</option>
+<option value="LA" >LA - Louisiana</option>
+<option value="MA" >MA - Massachusetts</option>
+<option value="MD" >MD - Maryland</option>
+<option value="ME" >ME - Maine</option>
+<option value="MI" >MI - Michigan</option>
+<option value="MN" >MN - Minnesota</option>
+<option value="MO" >MO - Missouri</option>
+<option value="MS" >MS - Mississippi</option>
+<option value="MT" >MT - Montana</option>
+<option value="NC" >NC - North Carolina</option>
+<option value="ND" >ND - North Dakota</option>
+<option value="NE" >NE - Nebraska</option>
+<option selected="selected" value="NH" >NH - New Hampshire</option>
+<option value="NJ" >NJ - New Jersey</option>
+<option value="NM" >NM - New Mexico</option>
+<option value="NV" >NV - Nevada</option>
+<option value="NY" >NY - New York</option>
+<option value="OH" >OH - Ohio</option>
+<option value="OK" >OK - Oklahoma</option>
+<option value="OR" >OR - Oregon</option>
+<option value="PA" >PA - Pennsylvania</option>
+<option value="RI" >RI - Rhode Island</option>
+<option value="SC" >SC - South Carolina</option>
+<option value="SD" >SD - South Dakota</option>
+<option value="TN" >TN - Tennessee</option>
+<option value="TX" >TX - Texas</option>
+<option value="UT" >UT - Utah</option>
+<option value="VA" >VA - Virginia</option>
+<option value="VT" >VT - Vermont</option>
+<option value="WA" >WA - Washington</option>
+<option value="WI" >WI - Wisconsin</option>
+<option value="WV" >WV - West Virginia</option>
+<option value="WY" >WY - Wyoming</option>
+<option value="AS" >AS - American Samoa</option>
+<option value="FM" >FM - Federated States of Micronesia</option>
+<option value="GU" >GU - Guam</option>
+<option value="MH" >MH - Marshall Islands</option>
+<option value="MP" >MP - Northern Mariana Islands</option>
+<option value="PR" >PR - Puerto Rico</option>
+<option value="PW" >PW - Palau</option>
+<option value="VI" >VI - Virgin Islands</option>
+<option value="AA" >AA - Armed Forces Americas</option>
+<option value="AE" >AE - Armed Forces</option>
+<option value="AP" >AP - Armed Forces Pacific</option>
+<option value="AB" >AB - Alberta</option>
+<option value="BC" >BC - British Columbia</option>
+<option value="MB" >MB - Manitoba</option>
+<option value="NB" >NB - New Brunswick</option>
+<option value="NL" >NL - Newfoundland and Labrador</option>
+<option value="NS" >NS - Nova Scotia</option>
+<option value="NT" >NT - Northwest Territories</option>
+<option value="NU" >NU - Nunavut</option>
+<option value="ON" >ON - Ontario</option>
+<option value="PE" >PE - Prince Edward Island</option>
+<option value="QC" >QC - Quebec</option>
+<option value="SK" >SK - Saskatchewan</option>
+<option value="YT" >YT - Yukon</option>
+<option value="None" >None</option>
+
+</select>
+<script type="text/javascript">
+<!--
+var comp = new ObservableComponent('billing_addr_state', '');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_state_Row', _display);
+this.disable_submit_flag (_hidden);
+} 
+//-->
+</script>
+<noscript><br/>Required</noscript>
+
+<input type="hidden" name="billing_addr_statesubmit" id="billing_addr_statesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_addr_state', '');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_state_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+function billing_addr_state_listChanged(_evt)
+{
+var e = _evt ? _evt : event; // IE vs. Mozilla event model
+if (e) {
+var src = e.target ? e.target : e.srcElement; // IE vs. Mozilla event model
+fire_obs_comp_event('billing_addr_state', src);
+}
+}
+var el = document.getElementById('billing_addr_state');
+if (el) {
+Utils.addEvent (el, 'change', billing_addr_state_listChanged);
+}
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+
+<div id="billing_addr_zip_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="billing_addr_zipname">ZIP/Postal Code:</label>
+
+<input type="text" name="billing_addr_zipname" id="billing_addr_zipname"
+value=""
+maxlength="50"
+/>
+
+<input type="hidden" name="billing_addr_zipsubmit" id="billing_addr_zipsubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_addr_zip', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_zip_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+<div id="billing_addr_country_row" class="form-row form-selectlist">
+
+<div class="form-content">
+
+<label class="FormLabel" for="billing_addr_country">Country:</label>
+<select name="billing_addr_country" id="billing_addr_country" size="1" 
+ onchange="fire_obs_comp_event('billing_addr_country', this)">
+<option ></option>
+<option selected="selected" value="United States" >United States</option>
+<option value="Afghanistan" >Afghanistan</option>
+<option value="Aland Islands" >Aland Islands</option>
+<option value="Albania" >Albania</option>
+<option value="Algeria" >Algeria</option>
+<option value="American Samoa" >American Samoa</option>
+<option value="Andorra" >Andorra</option>
+<option value="Angola" >Angola</option>
+<option value="Anguilla" >Anguilla</option>
+<option value="Antarctica" >Antarctica</option>
+<option value="Antigua and Barbuda" >Antigua and Barbuda</option>
+<option value="Argentina" >Argentina</option>
+<option value="Armenia" >Armenia</option>
+<option value="Aruba" >Aruba</option>
+<option value="Australia" >Australia</option>
+<option value="Austria" >Austria</option>
+<option value="Azerbaijan" >Azerbaijan</option>
+<option value="Bahamas" >Bahamas</option>
+<option value="Bahrain" >Bahrain</option>
+<option value="Bangladesh" >Bangladesh</option>
+<option value="Barbados" >Barbados</option>
+<option value="Belarus" >Belarus</option>
+<option value="Belgium" >Belgium</option>
+<option value="Belize" >Belize</option>
+<option value="Benin" >Benin</option>
+<option value="Bermuda" >Bermuda</option>
+<option value="Bhutan" >Bhutan</option>
+<option value="Bolivarian Republic of Venezuela" >Bolivarian Republic of Venezuela</option>
+<option value="Bonaire, Sint Eustatios and Saba" >Bonaire, Sint Eustatios and Saba</option>
+<option value="Bosnia and Herzegovina" >Bosnia and Herzegovina</option>
+<option value="Botswana" >Botswana</option>
+<option value="Bouvet Island" >Bouvet Island</option>
+<option value="Brazil" >Brazil</option>
+<option value="British Indian Ocean Territory" >British Indian Ocean Territory</option>
+<option value="Brunei Darussalam" >Brunei Darussalam</option>
+<option value="Bulgaria" >Bulgaria</option>
+<option value="Burkina Faso" >Burkina Faso</option>
+<option value="Burundi" >Burundi</option>
+<option value="Cambodia" >Cambodia</option>
+<option value="Cameroon" >Cameroon</option>
+<option value="Canada" >Canada</option>
+<option value="Cape Verde" >Cape Verde</option>
+<option value="Cayman Islands" >Cayman Islands</option>
+<option value="Central African Republic" >Central African Republic</option>
+<option value="Chad" >Chad</option>
+<option value="Chile" >Chile</option>
+<option value="China" >China</option>
+<option value="Christmas Island" >Christmas Island</option>
+<option value="Cocos (Keeling) Islands" >Cocos (Keeling) Islands</option>
+<option value="Colombia" >Colombia</option>
+<option value="Comoros" >Comoros</option>
+<option value="Congo" >Congo</option>
+<option value="Cook Islands" >Cook Islands</option>
+<option value="Costa Rica" >Costa Rica</option>
+<option value="Cote D'Ivoire" >Cote D'Ivoire</option>
+<option value="Croatia" >Croatia</option>
+<option value="Cuba" >Cuba</option>
+<option value="Curacao" >Curacao</option>
+<option value="Cyprus" >Cyprus</option>
+<option value="Czech Republic" >Czech Republic</option>
+<option value="Democratic People's Republic of Korea" >Democratic People's Republic of Korea</option>
+<option value="The Democratic Republic of the Congo" >The Democratic Republic of the Congo</option>
+<option value="Denmark" >Denmark</option>
+<option value="Djibouti" >Djibouti</option>
+<option value="Dominica" >Dominica</option>
+<option value="Dominican Republic" >Dominican Republic</option>
+<option value="Ecuador" >Ecuador</option>
+<option value="Egypt" >Egypt</option>
+<option value="El Salvador" >El Salvador</option>
+<option value="Equatorial Guinea" >Equatorial Guinea</option>
+<option value="Eritrea" >Eritrea</option>
+<option value="Estonia" >Estonia</option>
+<option value="Ethiopia" >Ethiopia</option>
+<option value="Falkland Islands (Malvinas)" >Falkland Islands (Malvinas)</option>
+<option value="Faroe Islands" >Faroe Islands</option>
+<option value="Federated States of Micronesia" >Federated States of Micronesia</option>
+<option value="Fiji" >Fiji</option>
+<option value="Finland" >Finland</option>
+<option value="The Former Yugoslav Republic of Macedonia" >The Former Yugoslav Republic of Macedonia</option>
+<option value="France" >France</option>
+<option value="French Guiana" >French Guiana</option>
+<option value="French Polynesia" >French Polynesia</option>
+<option value="French Southern Territories" >French Southern Territories</option>
+<option value="Gabon" >Gabon</option>
+<option value="Gambia" >Gambia</option>
+<option value="Georgia" >Georgia</option>
+<option value="Germany" >Germany</option>
+<option value="Ghana" >Ghana</option>
+<option value="Gibraltar" >Gibraltar</option>
+<option value="Greece" >Greece</option>
+<option value="Greenland" >Greenland</option>
+<option value="Grenada" >Grenada</option>
+<option value="Guadeloupe" >Guadeloupe</option>
+<option value="Guam" >Guam</option>
+<option value="Guatemala" >Guatemala</option>
+<option value="Guernsey" >Guernsey</option>
+<option value="Guinea" >Guinea</option>
+<option value="Guinea-Bissau" >Guinea-Bissau</option>
+<option value="Guyana" >Guyana</option>
+<option value="Haiti" >Haiti</option>
+<option value="Heard Island and McDonald Islands" >Heard Island and McDonald Islands</option>
+<option value="Holy See (Vatican City State)" >Holy See (Vatican City State)</option>
+<option value="Honduras" >Honduras</option>
+<option value="Hong Kong" >Hong Kong</option>
+<option value="Hungary" >Hungary</option>
+<option value="Iceland" >Iceland</option>
+<option value="India" >India</option>
+<option value="Indonesia" >Indonesia</option>
+<option value="Iraq" >Iraq</option>
+<option value="Ireland" >Ireland</option>
+<option value="Islamic Republic of Iran" >Islamic Republic of Iran</option>
+<option value="Isle of Man" >Isle of Man</option>
+<option value="Israel" >Israel</option>
+<option value="Italy" >Italy</option>
+<option value="Jamaica" >Jamaica</option>
+<option value="Japan" >Japan</option>
+<option value="Jersey" >Jersey</option>
+<option value="Jordan" >Jordan</option>
+<option value="Kazakhstan" >Kazakhstan</option>
+<option value="Kenya" >Kenya</option>
+<option value="Kiribati" >Kiribati</option>
+<option value="Kuwait" >Kuwait</option>
+<option value="Kyrgyzstan" >Kyrgyzstan</option>
+<option value="Lao People's Democratic Republic" >Lao People's Democratic Republic</option>
+<option value="Latvia" >Latvia</option>
+<option value="Lebanon" >Lebanon</option>
+<option value="Lesotho" >Lesotho</option>
+<option value="Liberia" >Liberia</option>
+<option value="Libya" >Libya</option>
+<option value="Liechtenstein" >Liechtenstein</option>
+<option value="Lithuania" >Lithuania</option>
+<option value="Luxembourg" >Luxembourg</option>
+<option value="Macao" >Macao</option>
+<option value="Madagascar" >Madagascar</option>
+<option value="Malawi" >Malawi</option>
+<option value="Malaysia" >Malaysia</option>
+<option value="Maldives" >Maldives</option>
+<option value="Mali" >Mali</option>
+<option value="Malta" >Malta</option>
+<option value="Marshall Islands" >Marshall Islands</option>
+<option value="Martinique" >Martinique</option>
+<option value="Mauritania" >Mauritania</option>
+<option value="Mauritius" >Mauritius</option>
+<option value="Mayotte" >Mayotte</option>
+<option value="Mexico" >Mexico</option>
+<option value="Monaco" >Monaco</option>
+<option value="Mongolia" >Mongolia</option>
+<option value="Montenegro" >Montenegro</option>
+<option value="Montserrat" >Montserrat</option>
+<option value="Morocco" >Morocco</option>
+<option value="Mozambique" >Mozambique</option>
+<option value="Myanmar" >Myanmar</option>
+<option value="Namibia" >Namibia</option>
+<option value="Nauru" >Nauru</option>
+<option value="Nepal" >Nepal</option>
+<option value="Netherlands" >Netherlands</option>
+<option value="New Caledonia" >New Caledonia</option>
+<option value="New Zealand" >New Zealand</option>
+<option value="Nicaragua" >Nicaragua</option>
+<option value="Niger" >Niger</option>
+<option value="Nigeria" >Nigeria</option>
+<option value="Niue" >Niue</option>
+<option value="Norfolk Island" >Norfolk Island</option>
+<option value="Northern Mariana Islands" >Northern Mariana Islands</option>
+<option value="Norway" >Norway</option>
+<option value="Oman" >Oman</option>
+<option value="Pakistan" >Pakistan</option>
+<option value="Palau" >Palau</option>
+<option value="Palestinian Territory, Occupied" >Palestinian Territory, Occupied</option>
+<option value="Panama" >Panama</option>
+<option value="Papua New Guinea" >Papua New Guinea</option>
+<option value="Paraguay" >Paraguay</option>
+<option value="Peru" >Peru</option>
+<option value="Philippines" >Philippines</option>
+<option value="Pitcairn" >Pitcairn</option>
+<option value="Plurinational State of Bolivia" >Plurinational State of Bolivia</option>
+<option value="Poland" >Poland</option>
+<option value="Portugal" >Portugal</option>
+<option value="Puerto Rico" >Puerto Rico</option>
+<option value="Qatar" >Qatar</option>
+<option value="Republic of Korea" >Republic of Korea</option>
+<option value="Republic of Moldova" >Republic of Moldova</option>
+<option value="Reunion" >Reunion</option>
+<option value="Romania" >Romania</option>
+<option value="Russian Federation" >Russian Federation</option>
+<option value="Rwanda" >Rwanda</option>
+<option value="Saint Barthelemy" >Saint Barthelemy</option>
+<option value="Saint Helena, Ascension and Tristan da Cunha" >Saint Helena, Ascension and Tristan da Cunha</option>
+<option value="Saint Kitts and Nevis" >Saint Kitts and Nevis</option>
+<option value="Saint Lucia" >Saint Lucia</option>
+<option value="Saint Martin (French)" >Saint Martin (French)</option>
+<option value="Saint Pierre and Miquelon" >Saint Pierre and Miquelon</option>
+<option value="Saint Vincent and the Grenadines" >Saint Vincent and the Grenadines</option>
+<option value="Samoa" >Samoa</option>
+<option value="San Marino" >San Marino</option>
+<option value="Sao Tome and Principe" >Sao Tome and Principe</option>
+<option value="Saudi Arabia" >Saudi Arabia</option>
+<option value="Senegal" >Senegal</option>
+<option value="Serbia" >Serbia</option>
+<option value="Seychelles" >Seychelles</option>
+<option value="S. Georgia &amp; S. Sandwich Isls." >S. Georgia &amp; S. Sandwich Isls.</option>
+<option value="Sierra Leone" >Sierra Leone</option>
+<option value="Singapore" >Singapore</option>
+<option value="Sint Maarten (Dutch)" >Sint Maarten (Dutch)</option>
+<option value="Slovakia" >Slovakia</option>
+<option value="Slovenia" >Slovenia</option>
+<option value="Solomon Islands" >Solomon Islands</option>
+<option value="Somalia" >Somalia</option>
+<option value="South Africa" >South Africa</option>
+<option value="South Sudan" >South Sudan</option>
+<option value="Spain" >Spain</option>
+<option value="Sri Lanka" >Sri Lanka</option>
+<option value="Sudan" >Sudan</option>
+<option value="Suriname" >Suriname</option>
+<option value="Svalbard and Jan Mayen" >Svalbard and Jan Mayen</option>
+<option value="Swaziland" >Swaziland</option>
+<option value="Sweden" >Sweden</option>
+<option value="Switzerland" >Switzerland</option>
+<option value="Syrian Arab Republic" >Syrian Arab Republic</option>
+<option value="Taiwan, Province of China" >Taiwan, Province of China</option>
+<option value="Tajikistan" >Tajikistan</option>
+<option value="Thailand" >Thailand</option>
+<option value="Timor-Leste" >Timor-Leste</option>
+<option value="Togo" >Togo</option>
+<option value="Tokelau" >Tokelau</option>
+<option value="Tonga" >Tonga</option>
+<option value="Trinidad and Tobago" >Trinidad and Tobago</option>
+<option value="Tunisia" >Tunisia</option>
+<option value="Turkey" >Turkey</option>
+<option value="Turkmenistan" >Turkmenistan</option>
+<option value="Turks and Caicos Islands" >Turks and Caicos Islands</option>
+<option value="Tuvalu" >Tuvalu</option>
+<option value="Uganda" >Uganda</option>
+<option value="Ukraine" >Ukraine</option>
+<option value="United Arab Emirates" >United Arab Emirates</option>
+<option value="United Kingdom" >United Kingdom</option>
+<option value="United Republic of Tanzania" >United Republic of Tanzania</option>
+<option value="Uruguay" >Uruguay</option>
+<option value="USA Minor Outlying Islands" >USA Minor Outlying Islands</option>
+<option value="Uzbekistan" >Uzbekistan</option>
+<option value="Vanuatu" >Vanuatu</option>
+<option value="Viet Nam" >Viet Nam</option>
+<option value="Virgin Islands (British)" >Virgin Islands (British)</option>
+<option value="Virgin Islands (USA)" >Virgin Islands (USA)</option>
+<option value="Wallis and Futuna" >Wallis and Futuna</option>
+<option value="Western Sahara" >Western Sahara</option>
+<option value="Yemen" >Yemen</option>
+<option value="Zambia" >Zambia</option>
+<option value="Zimbabwe" >Zimbabwe</option>
+
+</select>
+<script type="text/javascript">
+<!--
+var comp = new ObservableComponent('billing_addr_country', '');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_country_Row', _display);
+this.disable_submit_flag (_hidden);
+} 
+//-->
+</script>
+<noscript><br/>Required</noscript>
+
+<input type="hidden" name="billing_addr_countrysubmit" id="billing_addr_countrysubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('billing_addr_country', '');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('billing_addr_country_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+function billing_addr_country_listChanged(_evt)
+{
+var e = _evt ? _evt : event; // IE vs. Mozilla event model
+if (e) {
+var src = e.target ? e.target : e.srcElement; // IE vs. Mozilla event model
+fire_obs_comp_event('billing_addr_country', src);
+}
+}
+var el = document.getElementById('billing_addr_country');
+if (el) {
+Utils.addEvent (el, 'change', billing_addr_country_listChanged);
+}
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+
+
+<div id="donor_phone_row" class="form-row form-text">
+
+<div class="form-content">
+
+<label for="donor_phonename">Phone Number:</label>
+
+<input type="text" name="donor_phonename" id="donor_phonename"
+value=""
+maxlength="50"
+/>
+
+<input type="hidden" name="donor_phonesubmit" id="donor_phonesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('donor_phone', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('donor_phone_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+<div id="donor_email_address_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="donor_email_addressname">Email Address:</label>
+
+<input type="text" name="donor_email_addressname" id="donor_email_addressname"
+value=""
+maxlength="255"
+/>
+
+<input type="hidden" name="donor_email_addresssubmit" id="donor_email_addresssubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('donor_email_address', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('donor_email_address_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+
+
+<div class="form-row form-checkbox" id="donor_email_opt_in_Row">
+
+<div class="form-content">
+
+<span class="check-box-form-label-text"></span>
+
+
+<input type="hidden" name="donor_email_opt_inname" id="donor_email_opt_inname" value="implicit" />
+<span class="auto-opt-in-warning-message">If you donate and have not already registered, you will receive periodic updates and communications from New Hampshire Public Radio.</span>
+
+
+<script type="text/javascript">
+var comp = new ObservableComponent ('donor_email_opt_in', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('donor_email_opt_in_Row', _display);
+this.disable_submit_flag (_hidden);
+}
+comp.set = function (_value)
+{
+if (document.getElementById('donor_email_opt_inname')) {
+document.getElementById('donor_email_opt_inname').checked = _value;
+this.fireEvent();
+}
+}
+comp.get = function()
+{
+if (document.getElementById('donor_email_opt_inname'))
+return document.getElementById('donor_email_opt_inname').checked;
+}
+comp.clear = function()
+{
+this.set(false);
+}
+
+ 
+</script><noscript>&nbsp;</noscript>
+<input type="hidden" name="donor_email_opt_insubmit" id="donor_email_opt_insubmit" value="true" />
+</div>
+</div>
+
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<script src="https://doublethedonation.com/api/js/ddplugin.js"></script>
+<link href="https://doublethedonation.com/api/css/ddplugin.css" rel="stylesheet"/>
+
+<p>Does your employer have a matching gift program? Please use the field below to find out.</p>
+<div id="dd-company-name-input"></div>
+
+<script>
+    var DDCONF = { API_KEY: "QmDSTsJeeZsBJBdy" };
+    var dtd_load = function () {
+        window.addEventListener("doublethedonation_company_id", function (event) {
+            document.querySelector('#double_the_donation_company_idhidden').value = event.detail || "";
+        });
+    };
+    if (
+        document.readyState === "complete" ||
+        (document.readyState !== "loading" && !document.documentElement.doScroll)
+    ) {
+        callback();
+    } else {
+        document.addEventListener("DOMContentLoaded", dtd_load);
+    }
+
+
+</script>
+
+</div>
+</div>
+
+
+
+
+<div class="payment-type-element-container">
+
+<div class="payment-type-selection-container payment-field-container">
+<h3>Payment Method:</h3>
+<div id="responsive_payment_typepay_typeradio_row" class="form-row">
+
+<div class="form-content">
+<div class="payment-type-selections" id="responsive_payment_typepay_typeradio_payment_types">
+<span class="internal-payment"><span class="payment-type-option selected"><input type="radio" name="responsive_payment_typepay_typeradio" id="responsive_payment_typepay_typeradiocredit"
+value="credit"
+
+checked="checked"
+onclick="fire_obs_comp_event('responsive_payment_typepay_typeradio', this);"
+onkeypress="fire_obs_comp_event('responsive_payment_typepay_typeradio', this);" /><label for="responsive_payment_typepay_typeradiocredit"><a href="javascript:void(0);" class="payment-type-label">Credit Card</a></label><script type="text/javascript">
+var comp = new ObservableRadioComponent ('responsive_payment_typepay_typeradio', 'name');
+</script><noscript>&nbsp;</noscript></span><span class="payment-type-option"><input type="radio" name="responsive_payment_typepay_typeradio" id="responsive_payment_typepay_typeradioach"
+value="ach"
+
+
+onclick="fire_obs_comp_event('responsive_payment_typepay_typeradio', this);"
+onkeypress="fire_obs_comp_event('responsive_payment_typepay_typeradio', this);" /><label for="responsive_payment_typepay_typeradioach"><a href="javascript:void(0);" class="payment-type-label">Checking Account</a></label><script type="text/javascript">
+var comp = new ObservableRadioComponent ('responsive_payment_typepay_typeradio', 'name');
+</script><noscript>&nbsp;</noscript></span></span>
+<span class="external-payment"></span>
+</div>
+<input type="hidden" name="responsive_payment_typepay_typeradiosubmit" id="responsive_payment_typepay_typeradiosubmit" value="true" />
+<script type="text/javascript">
+Y.use("jquery-ui", function(Y) {
+jQuery(function() {
+// subscribe observable for payment type options
+jQuery('.payment-type-option').each(function() {
+var syncAction = function(obj) {
+if (obj.hasClass('selected')) {
+var radioGroupName = obj.find('input').attr('name');
+obj.find('input').prop('checked', true);
+fire_obs_comp_event(radioGroupName, obj.find('input').get());
+}
+return arguments.callee;
+}(jQuery(this));
+jQuery(this).click(function() {
+jQuery('.payment-type-option').removeClass('selected');
+jQuery(this).addClass('selected');
+syncAction(jQuery(this));
+var selectedValue = jQuery(this).find('input').val();
+if (selectedValue == 'paypal' || selectedValue == 'amazon') {
+// open up a boxinator dialog
+jQuery(document).trigger('redirect-external');
+jQuery('#btn_next').click();
+}
+});
+});
+});
+});
+var comp = new ObservableRadioComponent ('responsive_payment_typepay_typeradio', 'name');
+comp.hide = function(_hidden)
+{ 
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typepay_typeradio_row', _display);
+this.disable_submit_flag (_hidden);
+}
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+</div>
+
+
+<div id="payment_cc_container" class="payment-field-container">
+<h3>Credit Card Information:</h3>
+<div id="responsive_payment_typecc_type_row" class="form-row form-radio-array">
+
+<div class="form-content">
+<fieldset>
+<legend>Credit Card Type:</legend>
+<ul class="radio-array-list">
+<li class="tender-row ">
+<img src="../images/discovercard_sm.gif" alt="Discover" name="responsive_payment_typecc_type_Discover" id="responsive_payment_typecc_type_Discover" />
+</li><li class="tender-row ">
+<img src="../images/amex_small.gif" alt="American Express" name="responsive_payment_typecc_type_American_Express" id="responsive_payment_typecc_type_American_Express" />
+</li><li class="tender-row ">
+<img src="../images/mastercd_small.gif" alt="MasterCard" name="responsive_payment_typecc_type_MasterCard" id="responsive_payment_typecc_type_MasterCard" />
+</li><li class="tender-row ">
+<img src="../images/visa_small.gif" alt="Visa" name="responsive_payment_typecc_type_Visa" id="responsive_payment_typecc_type_Visa" />
+</li>
+</ul>
+</fieldset>
+<input type="hidden" name="responsive_payment_typecc_typesubmit" id="responsive_payment_typecc_typesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableRadioComponent ('responsive_payment_typecc_type', 'name');
+comp.hide = function(_hidden)
+{ 
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typecc_type_row', _display);
+this.disable_submit_flag (_hidden);
+}
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+<div id="responsive_payment_typecc_number_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="responsive_payment_typecc_numbername">Credit Card Number:</label>
+
+<input type="text" name="responsive_payment_typecc_numbername" id="responsive_payment_typecc_numbername"
+value=""
+maxlength="22"
+autocomplete="off"/>
+
+<input type="hidden" name="responsive_payment_typecc_numbersubmit" id="responsive_payment_typecc_numbersubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('responsive_payment_typecc_number', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typecc_number_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+observe_component ('null', new ComponentDisplayer ('responsive_payment_typecc_number'));
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+<div id="responsive_payment_typecc_exp_date_row" class="form-row form-date">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="responsive_payment_typecc_exp_date_MONTH">
+<span class="label-text">Expiration Date:</span><span class="aural-only">Select month of credit card</span>
+</label>
+<label for="responsive_payment_typecc_exp_date_YEAR" ><span class="aural-only">Select Expiration Year</span></label>
+<div class="date-input-container">
+
+<fieldset class="cardExpGroup">
+<select name="responsive_payment_typecc_exp_date_MONTH" id="responsive_payment_typecc_exp_date_MONTH" onChange="fire_obs_comp_event('responsive_payment_typecc_exp_date_MONTH', this)">
+<option value="1" >01</option>
+<option value="2" >02</option>
+<option value="3" >03</option>
+<option value="4" >04</option>
+<option value="5" selected="selected">05</option>
+<option value="6" >06</option>
+<option value="7" >07</option>
+<option value="8" >08</option>
+<option value="9" >09</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+</select>
+<select name="responsive_payment_typecc_exp_date_YEAR" id="responsive_payment_typecc_exp_date_YEAR" onChange="fire_obs_comp_event('responsive_payment_typecc_exp_date_YEAR', this)">
+<option value="2024" selected="selected">2024</option>
+<option value="2025" >2025</option>
+<option value="2026" >2026</option>
+<option value="2027" >2027</option>
+<option value="2028" >2028</option>
+<option value="2029" >2029</option>
+<option value="2030" >2030</option>
+<option value="2031" >2031</option>
+<option value="2032" >2032</option>
+<option value="2033" >2033</option>
+<option value="2034" >2034</option>
+
+</select>
+</fieldset>
+<input type="hidden" name="responsive_payment_typecc_exp_date_DAY" id="responsive_payment_typecc_exp_date_DAY" value="1" />
+<script type="text/javascript">
+<!--
+var comp1 = new ObservableComponent ('responsive_payment_typecc_exp_date_MONTH', '');
+comp1.hide = function(_hidden) {
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typecc_exp_date_Row', _display);
+this.disable_submit_flag (_hidden);
+}
+var comp2 = new ObservableComponent ('responsive_payment_typecc_exp_date_YEAR', '');
+comp2.hide = function(_hidden) {
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typecc_exp_date_Row', _display);
+this.disable_submit_flag (_hidden); 
+}
+//--> 
+</script><noscript>&nbsp;</noscript>
+</div>
+<input type="hidden" name="responsive_payment_typecc_exp_datesubmit" id="responsive_payment_typecc_exp_datesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('responsive_payment_typecc_exp_date', 'input');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typecc_exp_date_row', _display);
+disable_submit_flag ('responsive_payment_typecc_exp_datesubmit', _hidden);
+}
+comp.disable = function(_disabled)
+{
+disable_element ('responsive_payment_typecc_exp_date_MONTH', _disabled);
+disable_element ('responsive_payment_typecc_exp_date_DAY', _disabled);
+disable_element ('responsive_payment_typecc_exp_date_YEAR', _disabled);
+disable_element ('responsive_payment_typecc_exp_date_HOUR12',_disabled);
+disable_element ('responsive_payment_typecc_exp_date_HOUR24',_disabled); //For UK, 24 hour clock used
+disable_element ('responsive_payment_typecc_exp_date_MINUTE',_disabled);
+disable_element ('responsive_payment_typecc_exp_date_AMPM', _disabled);
+}
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+
+
+</div>
+
+
+<div id="payment_bank_container" class="payment-field-container">
+<h3>Checking Account Information:</h3>
+<div id="responsive_payment_typerouting_number_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="responsive_payment_typerouting_numbername">Bank Routing Number:</label>
+<a href="http://help.convio.net/site/PageServer?s_site=nhpr&amp;pagename=User_Donation_ACH" class="HelpLink"
+title="What is this? Opens new window.">What is this?</a>
+<input type="text" name="responsive_payment_typerouting_numbername" id="responsive_payment_typerouting_numbername"
+value="" size="20"
+maxlength="20"
+onchange="fire_obs_comp_event('responsive_payment_typerouting_number', this);"
+
+autocomplete="off" />
+<input type="hidden" name="responsive_payment_typerouting_numbersubmit" id="responsive_payment_typerouting_numbersubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('responsive_payment_typerouting_number', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typerouting_number_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+<div id="responsive_payment_typebank_account_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="responsive_payment_typebank_accountname">Bank Account Number:</label>
+
+<input type="text" name="responsive_payment_typebank_accountname" id="responsive_payment_typebank_accountname"
+value=""
+maxlength="20"
+autocomplete="off"/>
+
+<input type="hidden" name="responsive_payment_typebank_accountsubmit" id="responsive_payment_typebank_accountsubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('responsive_payment_typebank_account', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typebank_account_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+observe_component ('null', new ComponentDisplayer ('responsive_payment_typebank_account'));
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+<div id="responsive_payment_typeverify_bank_account_row" class="form-row form-text">
+
+<div class="form-content">
+<span class="field-required"></span>
+<label for="responsive_payment_typeverify_bank_accountname">Verify Bank Account Number:</label>
+
+<input type="text" name="responsive_payment_typeverify_bank_accountname" id="responsive_payment_typeverify_bank_accountname"
+value=""
+maxlength="20"
+autocomplete="off"/>
+
+<input type="hidden" name="responsive_payment_typeverify_bank_accountsubmit" id="responsive_payment_typeverify_bank_accountsubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('responsive_payment_typeverify_bank_account', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typeverify_bank_account_row', _display);
+this.disable_submit_flag (_hidden);
+}
+
+
+observe_component ('null', new ComponentDisplayer ('responsive_payment_typeverify_bank_account'));
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div><div id="responsive_payment_type.account_type_row" class="form-row form-radio-array">
+
+<div class="form-content">
+<fieldset>
+<legend><span class="field-required"></span>&nbsp;Account Type:</legend>
+<ul class="radio-array-list">
+<li>
+<input type="radio" name="responsive_payment_type.account_type" id="responsive_payment_type.account_type_responsive_payment_typeaccount_type_checking" value="CHECKING"  
+onclick="fire_obs_comp_event('responsive_payment_type.account_type', this);" />
+<span class="radio-label"> 
+<label for="responsive_payment_type.account_type_responsive_payment_typeaccount_type_checking" >Checking</label>
+</span>
+</li><li>
+<input type="radio" name="responsive_payment_type.account_type" id="responsive_payment_type.account_type_responsive_payment_typeaccount_type_savings" value="SAVINGS"  
+onclick="fire_obs_comp_event('responsive_payment_type.account_type', this);" />
+<span class="radio-label"> 
+<label for="responsive_payment_type.account_type_responsive_payment_typeaccount_type_savings" >Savings</label>
+</span>
+</li>
+</ul>
+</fieldset>
+<input type="hidden" name="responsive_payment_type.account_typesubmit" id="responsive_payment_type.account_typesubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableRadioComponent ('responsive_payment_type.account_type', 'name');
+comp.hide = function(_hidden)
+{ 
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_type.account_type_row', _display);
+this.disable_submit_flag (_hidden);
+}
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+<div id="responsive_payment_typeach_confirm_row" class="form-row form-checkbox">
+
+<div class="form-content">
+<span class="field-required"></span>
+
+<input type="checkbox" name="responsive_payment_typeach_confirmname" id="responsive_payment_typeach_confirmname"
+
+onclick="fire_obs_comp_event('responsive_payment_typeach_confirm', this);" />
+<label for="responsive_payment_typeach_confirmname">By checking this option, I agree to use my bank account as a payment method and authorize this organization to debit my bank account to fulfill my donation commitment.</label>
+<input type="hidden" name="responsive_payment_typeach_confirmsubmit" id="responsive_payment_typeach_confirmsubmit" value="true" />
+<script type="text/javascript">
+var comp = new ObservableComponent ('responsive_payment_typeach_confirm', 'name');
+comp.hide = function(_hidden)
+{
+var _display = _hidden ? 'none' : '';
+set_display ('responsive_payment_typeach_confirm_row', _display);
+this.disable_submit_flag (_hidden);
+}
+comp.set = function (_value)
+{
+if (document.getElementById('responsive_payment_typeach_confirmname')) {
+document.getElementById('responsive_payment_typeach_confirmname').checked = _value;
+this.fireEvent();
+}
+}
+comp.get = function()
+{
+if (document.getElementById('responsive_payment_typeach_confirmname')) {
+return document.getElementById('responsive_payment_typeach_confirmname').checked;
+}
+}
+comp.clear = function()
+{
+this.set(false);
+}
+
+observe_component ('null', new ComponentEnabler ('responsive_payment_typeach_confirm'));
+
+
+</script><noscript>&nbsp;</noscript>
+</div>
+</div>
+</div>
+
+
+<div id="payment_check_container" class="payment-field-container">
+<h3>Check Information</h3>
+
+</div>
+
+<input type="hidden" name="responsive_payment_typesubmit" id="responsive_payment_typesubmit" value="true" />
+<script type="text/javascript">
+function PaymentObserver()
+{
+this.observe = function(_event)
+{
+var sVal = _event.component.get();
+switch (sVal)
+{
+case 'check':
+hide_element('payment_cc_container');
+hide_element('payment_bank_container');
+show_element('payment_check_container');
+break;
+case 'credit':
+hide_element('payment_bank_container');
+hide_element('payment_check_container');
+show_element('payment_cc_container');
+break;
+case 'ach':
+hide_element('payment_cc_container');
+hide_element('payment_check_container');
+show_element('payment_bank_container');
+break;
+case 'paypal':
+case 'amazon':
+case 'mobilepay':
+default:
+// hide all
+hide_element('payment_bank_container');
+hide_element('payment_cc_container');
+hide_element('payment_check_container');
+break;
+}
+}
+}
+// Set the observer to show/hide the relevant fields
+observe_component ('responsive_payment_typepay_typeradio', new PaymentObserver());
+</script><noscript>&nbsp;</noscript>
+</div>
+
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<div class="bank-image"><img src="../images/content/pagebuilder/banksample.png" alt="bank sample image"  border="0"  /></div>
+</div>
+</div>
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<h5 id="comment-header" style="margin-bottom: 0;">Why are you supporting NHPR today?<br />(your comment may be read on the air along with your first name and town)</h5>
+</div>
+</div>
+
+
+
+
+<div class="custom-field-container form-row ">
+
+
+<div class="form-content">
+
+
+<div class="form-input-label-block">
+
+
+<label for="comment_note_type_input">Additional comments:</label>
+
+
+</div>
+
+<input type="text" name="comment_note_type_input" id="comment_note_type_input" value="" maxlength="255" />
+
+<input type="hidden" name="comment_note_typesubmit" id="comment_note_typesubmit" value="true" />
+</div>
+</div>
+
+
+
+<div class="button-container clearfix">
+<div class="button-sub-container">
+
+<button class="step-button action-button finish-step" type="submit" id="pstep_finish" name="pstep_finish" value="Submit Donation &gt;">Submit Donation &gt;</button>
+
+
+
+
+</div>
+</div>
+<input type="hidden" name="idb" id="idb" value="179288730" />
+<input type="hidden" name="DONATION_LEVEL_ID_SELECTED" id="DONATION_LEVEL_ID_SELECTED" value="1" />
+<input type="hidden" name="df_id" id="df_id" value="3780" />
+<input type="hidden" name="mfc_pref" id="mfc_pref" value="T" />
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<p>Already a monthly Sustainer? Visit the <a href="http://nhpr.convio.net/site/PageNavigator/homepage.html">Gift Service Center</a> to make changes.</p>
+<div id="donation-footer">
+<div class="footer-logo"><img src="../images/content/pagebuilder/10947.jpg" border="0" alt="newlogo1.jpg" /></div>
+<div class="footer-text">Have a question or want to donate by phone?<br /> Call us at 1-800-639-4131 or <a href="https://www.nhpr.org/contact-nhpr" target="_blank">Contact Us</a>.</div>
+<div class="charity-logo"><a href="https://www.charitynavigator.org/ein/020338667"><img src="../images/content/pagebuilder/140x70.jpg" border="0" alt="Charity Navigator" align="right" /></a></div>
+<style type="text/css"><!--
+#donation-footer {
+    width: 690px;
+    float: none;
+    margin: 40px auto 20px;
+    display: block;
+    padding-bottom:20px;
+}
+#donation-footer img {
+    float: left;
+    margin: 0 10px;
+}
+@media screen and (max-width: 700px) {
+    #donation-footer {
+        width: 100%!important;
+    }
+    #donation-footer img {
+        display:block!important;
+        float:none!important;
+        padding:10px 0;
+    }
+    #donation-footer .footer-text {
+        margin-bottom: 15px;
+        margin-top:0px
+        text-align:left!important;
+    }
+    #donation-footer .charity-logo {
+        padding-left:20px;
+    }
+}
+--></style>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="form-row">
+<div class="html-caption-container">
+<style>
+body {
+    background: #fff;
+    font-size: 16px;
+}
+div.donation-form-container.responsive {
+    border: 0;
+}
+div.donation-level-container.hide-me {
+    display: none;
+}
+.premium-selector-radio-option-description-img-and-text .premium-hide {
+    position: absolute;
+    left: -9999px;
+}
+div.donation-level-container.one-time-level.hide-me, div.donation-level-container.monthly-level.hide-me, div.responsive div.premium-selector-radio-option-row.hide-me {
+    display: none;
+}
+
+div#responsive_payment_typepay_typeradio_payment_types.payment-type-selections span.payment-type-option.hide-me {
+    display:none;
+}
+div.payment-field-container div.payment-type-selections>span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    margin-right: auto;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border: none;
+}
+div.form-row div.form-content.checkbox-item {
+    display: flex;    
+}
+div.responsive div.form-row div.form-content.checkbox-item span.field-required {    
+    width: 9px !important;
+    background-size: cover;
+    margin-right: 5px;
+    min-width: 9px;
+}
+.custom-element-checkbox-label, .checkbox-custom-label {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    cursor: pointer;
+    padding-left: 30px;
+}
+.checkbox-custom+.custom-element-checkbox-label:before, .checkbox-custom+.checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border-radius: 0;
+    border: 2px solid #c3c3c3;
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    margin-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.checkbox-custom:checked+.custom-element-checkbox-label:after, .checkbox-custom:checked+.checkbox-custom-label:after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 4px;
+    background: url(../images/content/pagebuilder/check-solid-red.png);
+    background-size: cover;
+}
+.checkbox-custom:checked+.custom-element-checkbox-label:before, .checkbox-custom:checked+.checkbox-custom-label:before {
+    content: '';
+    border: 3px solid #da262e;
+}
+.checkbox-custom {
+    position: absolute;
+    visibility: hidden;
+    left: -100000em;
+}
+#responsive_payment_type\.account_type_row ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+#responsive_payment_type\.account_type_row ul li {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    #ProcessForm #donation-footer {
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.donation-form-container.responsive {
+        margin: 0;
+    }
+}
+@media (max-width: 600px) {
+    .section-header-container,
+    h2#premium-heading, 
+    .payment-type-element-container h3 {
+        font-size: 24px;
+        margin-bottom: 10px
+    }
+    .donate-options label {
+        font-size: 20px;
+    }
+    div.donation-level-input-container .donation-level-label-container {
+        padding: 16px 0;
+    }
+    .donate-options label.monthly-radio.radio {
+        margin-bottom: 0
+    }
+    div.responsive div.donation-level-user-entered input[type="text"] {
+        height: 54px;
+    }
+    div.responsive #additional_amount_row {
+        margin-top: 15px;
+    }
+    h3#comment-header {
+        font-size: 21px;
+    }
+}
+@media (max-width: 480px) {
+    div.responsive button#pstep_finish.step-button {
+        font-size: 18px;
+        height: auto;
+        line-height: 1.2;
+        padding: 10px;
+    }
+}
+</style>
+
+
+ <!-- RELOAD PAGE TEST AND CODE FOR ERROR PAGE -->
+
+
+
+<script type="text/javascript">
+jQuery.noConflict();
+(function($) {
+
+
+    var hiddenValue = $('.premium-selector-radio-option-description-img-and-text label span').text();
+    console.log(hiddenValue);
+
+    //ADD ACTIVE TO SELECTED LEVEL
+    $('.donation-level-input-container input:checked').parent().parent().addClass('active');
+
+    //Monthly giving more information  
+    $("a.more-link").click(function(e) {
+        e.preventDefault();
+        $(".monthly-more-text").slideToggle("slow");
+    });
+
+    //ADD CLASS TO CHECKBOX AND RADIO CONTAINERS
+    $('input[type="checkbox"]').parent().addClass('checkbox-item');
+    $('input[type="checkbox"]').addClass('checkbox-custom');
+    $('.checkbox-item label').addClass('checkbox-custom-label');
+
+    //ADD CLASSES TO DONATE BUTTONS 
+    $('.donation-level-input-container input:checked').parent().parent().addClass('active');
+
+    //REMOVE TEXT FROM DONATION LEVEL BUTTONS AND ADD SPAN WITH CLASS 
+    $('div.donation-level-input-container .donation-level-label-container:contains("onetime")').wrapInner('<span class="one-time"></span>').html(function() {
+        return $(this).html().replace('onetime', '');
+    });
+    $('div.donation-level-input-container .donation-level-label-container:contains("monthly")').wrapInner('<span class="per-month"></span>').html(function() {
+        return $(this).html().replace('monthly', '/mo');
+    });
+
+    //
+    $('.premium-selector-radio-option-description-img-and-text label').html(function(i, h) {
+        return h.replace(/(\(.+\))/g, '<span class="premium-hide">$1</span>');
+    });
+
+    //ADD CLASSES TO DONATION OPTIONS 
+    $('div.donation-level-container label .per-month').parent().parent().parent().parent().parent().addClass('monthly-amt');
+    $('div.donation-level-container label .one-time').parent().parent().parent().parent().parent().addClass('onetime-amt');
+    $('.donation-level-user-entered').parent().parent().parent().addClass('other-amt');
+    $('div.other-amt input[type=text]').addClass("don-other");
+    $('.monthly-amt input[type="radio"]').addClass("don-radio");
+    $('.onetime-amt input[type="radio"]').addClass("don-radio");
+    $('div.other-amt input[type=radio]').addClass("other-radio");
+
+    //CHECK FOR ACTIVE FREQUENCY OPTION
+    if ($('#donate-monthly').is(':checked')) {
+        $('.donation-level-container.onetime-amt').addClass('hide-me');
+        $('.donation-level-container.monthly-amt').removeClass('hide-me');
+        $('#level_standardauto_repeatname').prop('checked', 'checked');
+        $('#responsive_payment_typepay_typeradiopaypal').parent().addClass('hide-me');
+
+    } else {
+        $('.donation-level-container.onetime-amt').removeClass('hide-me');
+        $('.donation-level-container.monthly-amt').addClass('hide-me');
+        $('#level_standardauto_repeatname').prop('checked', false);
+        $('#responsive_payment_typepay_typeradiopaypal').parent().removeClass('hide-me');
+    }
+
+    $('.donate-options label').click(function() {
+    $('.donation-level-user-entered input[type="text"]').val('');
+    $('.donation-level-input-container').removeClass('active')
+    $('#temp-premium-message').addClass('hide-me');
+    $('#premium_selector_row').removeClass('hide-me'); 
+    $('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month"), .premium-selector-radio-option-description label span:contains("$13/month"), .premium-selector-radio-option-description label span:contains("$15/month"), .premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().removeClass('hide-me');  
+
+        if ($(this).hasClass("monthly-radio")) {
+            console.log('monthly clicked');
+            $('.donation-level-container.onetime-amt').addClass('hide-me');
+            $('.donation-level-container.monthly-amt').removeClass('hide-me');
+            $('.onetime-amt input[type="radio"]').prop('checked', false);
+            $('.onetime-amt .donation-level-input-container').removeClass('active');
+            $('input#level_standardauto_repeatname').prop('checked', true);
+            $('#responsive_payment_typepay_typeradiopaypal').parent().addClass('hide-me');
+
+        } else {
+            console.log('one-time clicked')
+            $('.donation-level-container.onetime-amt').removeClass('hide-me');
+            $('.donation-level-container.monthly-amt').addClass('hide-me');
+            $('.monthly-amt input[type="radio"]').prop('checked', false);
+            $('.monthly-amt .donation-level-input-container').removeClass('active');
+            $('input#level_standardauto_repeatname').prop('checked', false);
+            $('#responsive_payment_typepay_typeradiopaypal').parent().removeClass('hide-me');
+        }
+    });
+
+    $('.donation-level-user-entered input[type="text"]').on('blur', function() {
+      console.log('changed user amt');
+      var textAmt = ($(this).val());
+      var userAmt = parseFloat(textAmt.replace(/[^\d\.]/, ''));
+
+      console.log(userAmt);
+      if (!$('#level_standardauto_repeatname').is(':checked')) {
+        if (userAmt < 5) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+        } else if (userAmt > 4 && userAmt < 60) {
+					$('#premium_selector_row').addClass('hide-me');
+          setTimeout(function(){ 
+              console.log("Hello"); 
+              $('#premium_selector_radio_option_row_0 input[type="radio"]').attr('checked','checked');
+          }, 3000);
+          $('.premium-selector-radio-option-description label span:contains("$5/month"), .premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month"), .premium-selector-radio-option-description label span:contains("$13/month"), .premium-selector-radio-option-description label span:contains("$15/month"), .premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+        } else if (userAmt > 59.99 && userAmt < 96) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month"), .premium-selector-radio-option-description label span:contains("$13/month"), .premium-selector-radio-option-description label span:contains("$15/month"), .premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month")")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 95.99 && userAmt < 120) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$10/month"), .premium-selector-radio-option-description label span:contains("$13/month"), .premium-selector-radio-option-description label span:contains("$15/month"), .premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month")")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 119.99 && userAmt < 156) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$13/month"), .premium-selector-radio-option-description label span:contains("$15/month"), .premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 155.99 && userAmt < 180) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$15/month"), .premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")"),.premium-selector-radio-option-description label span:contains("$13/month")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 179.99 && userAmt < 216) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$18/month"), .premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")"),.premium-selector-radio-option-description label span:contains("$13/month"),.premium-selector-radio-option-description label span:contains("$15/month")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 215.99 && userAmt < 240) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$20/month"), .premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")"),.premium-selector-radio-option-description label span:contains("$13/month"),.premium-selector-radio-option-description label span:contains("$15/month"),.premium-selector-radio-option-description label span:contains("$18/month")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 239.99 && userAmt < 276) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$23/month"), .premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")"),.premium-selector-radio-option-description label span:contains("$13/month"),.premium-selector-radio-option-description label span:contains("$15/month"),.premium-selector-radio-option-description label span:contains("$18/month"),.premium-selector-radio-option-description label span:contains("$20/month")').parent().parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 275.99 && userAmt < 1200) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+          $('.premium-selector-radio-option-description label span:contains("$100/month")').parent().parent().parent().parent().addClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")"),.premium-selector-radio-option-description label span:contains("$13/month"),.premium-selector-radio-option-description label span:contains("$15/month"),.premium-selector-radio-option-description label span:contains("$18/month"),.premium-selector-radio-option-description label span:contains("$20/month"),.premium-selector-radio-option-description label span:contains("$23/month")').parent().parent().parent().removeClass('hide-me');
+        } else if (userAmt > 1199.99) {
+          $('#temp-premium-message').addClass('hide-me');
+          $('#premium_selector_row').removeClass('hide-me');
+					$('.premium-selector-radio-option-description label span:contains("$5/month"),.premium-selector-radio-option-description label span:contains("$8/month"), .premium-selector-radio-option-description label span:contains("$10/month")"),.premium-selector-radio-option-description label span:contains("$13/month"),.premium-selector-radio-option-description label span:contains("$15/month"),.premium-selector-radio-option-description label span:contains("$18/month"),.premium-selector-radio-option-description label span:contains("$20/month"),.premium-selector-radio-option-description label span:contains("$23/month"),.premium-selector-radio-option-description label span:contains("$100/month').parent().parent().parent().parent().removeClass('hide-me');
+        }
+      } else {
+        console.log('monthly gift');
+      }
+
+    });
+
+
+    //Placeholder text for user entered/other amount  
+    $('.donation-level-user-entered input').attr('placeholder', '$ Other amount');
+
+    //Add class to selected donation level
+    $('div.donation-level-input-container').click(function() {
+        $('div.premium-selector-radio-option-row.hide-me').removeClass('hide-me');
+        $("div.donation-level-input-container.active").removeClass("active");
+        $('#premium_selector_row').removeClass('hide-me');
+        $(this).addClass('active');
+        $('.premium-selector-radio-option-description label:contains("$10/month"), .premium-selector-radio-option-description label:contains("$15/month"), .premium-selector-radio-option-description label:contains("$20/month"), .premium-selector-radio-option-description label:contains("$100/month")').parent().parent().parent().removeClass('hide-me');
+        if (!$('.donation-level-user-entered').parent().hasClass('active')) {
+            $('.donation-level-user-entered input[type="text"]').val('');
+        }
+    });
+
+    //move bank routing image and add class
+    $('.bank-image').parent().parent().addClass('bank-image-row').insertAfter('#responsive_payment_typeach_confirm_row');  
+
+})(jQuery);
+</script>  
+
+<!-- NEW CUSTOM BUTTON SCRIPTS FFP 5.19.2023 -->
+<script type="text/javascript">
+
+jQuery.noConflict();
+(function( $ ) {
+  //ADD FREQUENCY AND AMOUNT TO DONATE BUTTON
+
+  function getDonationVal() {
+    setTimeout(function() {
+      console.log('function triggered!');
+      if ($("input.other-radio").is(":checked")) {
+        var donVal = parseFloat($(".don-other").val().replace(/[^0-9\.]+/g, "")).toFixed(2);
+        $(".don-other").on("change keyup", function() {
+          var donVal = parseFloat($(".don-other").val().replace(/[^0-9\.]+/g, "")).toFixed(2);
+          console.log("other");
+        });
+      } else {
+        var donVal = parseFloat($(".don-radio:checked").closest(".donation-level-input-container").find(".donation-level-label-container").text().replace(/[^0-9\.]+/g, ""));
+        var donVal = Number(donVal).toFixed(2);
+      }
+        
+      var donVal = Number(donVal).toFixed(2);
+      if (isNaN(donVal)) {
+          if ($('#level_standardauto_repeatname').prop("checked")) {
+            $("#pstep_finish").html("Donate Monthly");
+          } else {
+            $("#pstep_finish").html("Donate One-Time");
+          }
+        } else {
+          if ($('#level_standardauto_repeatname').prop("checked")) {
+            $("#pstep_finish").html("Donate $" + donVal + " Monthly");
+          } else {
+            $("#pstep_finish").html("Donate $" + donVal + " One-Time");
+          }
+        }
+      console.log(donVal);
+    }, 500);
+  }
+  $('.donate-options label').click(getDonationVal);
+  $('[name^="level"]').change(getDonationVal);
+  $('.donation-level-user-entered input.don-other').keyup(getDonationVal);
+  $('.donate-options input[name="donate-frequency"]').click(getDonationVal);
+  getDonationVal()
+})(jQuery);
+
+</script>
+ <script type="text/javascript">// <![CDATA[
+jQuery.noConflict();
+(function( $ ) {
+$(document).ready(function(){
+  $('#additional_amount_row .CheckboxLabel').text('Yes, I\'ll pitch in an extra single gift of $25 to help support NHPR\'s election coverage in 2024.');
+});
+})(jQuery);
+// ]]></script>
+<style type="text/css"><!--
+div.responsive #additional_amount_row {
+    margin-top: 30px;
+}
+#additional_amount_row .form-content {
+    border: 3px solid #da262e;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+div.responsive #additional_amount_row .form-content > label[for="additional_amountname"] {
+    display: none;
+}
+div.responsive #additional_amount_row input#additional_amountname:checked + .CheckboxLabel::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    left: 3px;
+    background: url(../images/content/pagebuilder/check-solid-red.png);
+        background-size: auto;
+    background-size: contain;
+}
+div.responsive #additional_amount_row input#additional_amountname:checked + .CheckboxLabel:before {
+    content: '';
+    border: 3px solid #da262e;
+}
+div.responsive #additional_amount_row input#additional_amountname + .CheckboxLabel:before {
+    content: '';
+    background: #fff;
+    border-radius: 0;
+    border: 3px solid #c3c3c3;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    box-sizing: border-box;
+}
+div.responsive #additional_amount_row .CheckboxLabel {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    cursor: pointer;
+    padding-left: 39px;
+    line-height: 32px;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+div.responsive #additional_amount_row  input#additional_amountname  {
+    left: -9999px;
+    position: absolute !important;
+    text-indent: -9999px;
+}
+--></style>
+ 
+<!-- PRESELECT CHECKING ACCOUNT --> 
+<script type="text/javascript">
+jQuery.noConflict();
+(function( $ ) {
+$(document).ready(function(){
+     $(document).ready(function(){
+          $(".payment-type-label").text(function () {
+              return $(this).text().replace("Checking Account", "Checking \(Recommended\)");
+          }); 
+     });
+     setTimeout(function(){ 
+               
+        if ($('input[name="responsive_payment_typepay_typeradio"]:checked').length) {
+            $('#responsive_payment_typepay_typeradioach').click(); // default to checking 
+        }
+     }, 800);
+  });
+})(jQuery);
+</script>
+
+
+<style type="text/css"><!--
+div.responsive input[type="radio"] + .premium-selector-radio-option-description .premium-selector-config-option-container label::before{content:none;}
+.premium-selector-config-option-container{margin-left: 35px;}
+--></style>
+
+<script>
+jQuery.noConflict();
+(function( $ ) {
+  //ADD CLASS TO SERVICE FEE ELECTION ROW
+
+  function getDonationVal() {
+    setTimeout(function() {
+      console.log('function triggered!');
+      if ($("input.other-radio").is(":checked")) {
+        var donVal = parseFloat($(".don-other").val().replace(/[^0-9\.]+/g, "")).toFixed(2);
+        $(".don-other").on("change keyup", function() {
+          var donVal = parseFloat($(".don-other").val().replace(/[^0-9\.]+/g, "")).toFixed(2);
+          console.log("other");
+        });
+      } else {
+        var donVal = parseFloat($(".don-radio:checked").closest(".donation-level-input-container").find(".donation-level-label-container").text().replace(/[^0-9\.]+/g, ""));
+        var donVal = Number(donVal).toFixed(2);
+      }
+        
+      var donVal = Number(donVal).toFixed(2);
+      if (isNaN(donVal)) {
+          if ($('#level_standardauto_repeatname').prop("checked")) {
+            $("#pstep_finish").html("Donate Monthly");
+          } else {
+            $("#pstep_finish").html("Donate One-Time");
+          }
+        } else {
+          if ($('#level_standardauto_repeatname').prop("checked")) {
+            $("#pstep_finish").html("Donate $" + donVal + " Monthly");
+          } else {
+            $("#pstep_finish").html("Donate $" + donVal + " One-Time");
+          }
+        }
+      console.log(donVal);
+    }, 500);
+  }
+  $('[name^="level"]').change(getDonationVal);
+  $('.donation-level-user-entered input.don-other').keyup(getDonationVal);
+  $('#gift-type-row .gift-type-btn').click(getDonationVal);
+  getDonationVal()
+})(jQuery);
+
+</script>
+
+
+</div>
+</div>
+
+
+
+</div>
+ 
+<input type="hidden" name="3780.donation" id="3780.donation" value="form1" />
+ 
+</div>
+<script type="text/javascript">
+var submitted = false;
+function checkDoubleClick()
+{
+var elCheck = '';
+if (elCheck == 'el') {
+alert ('Form submission is not enabled when previewing an individual data element.');
+return false;
+} else if (submitted) {
+alert('You have already submitted this payment. Please wait....');
+return false;
+} else {
+submitted = true;
+return true;
+}
+}
+</script><noscript>&nbsp;</noscript>
+
+</form>
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>oEmbed Demo View</title>
+<link rel="alternate" type="application/json+oembed" href="//embed.sendtonews.com/services/oembed?url=https://embed.sendtonews.com/oembed/?SC=mVWkix6tjL-393604-6378&amp;sound=click&amp;offsetx=0&amp;offsety=0&amp;floatwidth=540&amp;floatposition=bottom-right&format=json&float=on" title="SendtoNews Video Player" />
+<style>
+	body
+	{
+		margin: 0;
+	}
+	#pageCover
+	{
+		padding-top: calc(100% / 16 * 9);
+		position: relative;
+		background: black;
+	}
+	#sorry
+	{
+		font-family: sans-serif;
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<div id="pageCover">
+		<div id="sorry">
+			<p>Unable to embed the video player.</p>
+			<p>Please contact your SendtoNews Publisher Success Agent<br>for details on how to use SendtoNews players with oEmbed.</p>
+		</div>
+	</div>
+	<script>
+		if(window === window.top)
+		{
+			var htmlDecoder = document.createElement('div');
+			var pageCover = document.getElementById('pageCover');
+			var replacement = document.createDocumentFragment();
+			var div = document.createElement('div');
+			div.className = 's2nFriendlyFrame k-mVWkix6tjL-393604-6378';
+			div.setAttribute('data-type','float');
+			var script = document.createElement('script');
+			htmlDecoder.innerHTML = 'https://embed.sendtonews.com/player4/embedcode.js?SC=mVWkix6tjL-393604-6378&amp;sound=click&amp;offsetx=0&amp;offsety=0&amp;floatwidth=540&amp;floatposition=bottom-right&format=json&float=on';
+			script.src = htmlDecoder.innerText;
+			script.setAttribute('data-type','s2nScript');
+			replacement.appendChild(div);
+			replacement.appendChild(script);
+			pageCover.parentElement.replaceChild(replacement,pageCover);
+		}
+	</script>
+</body>
+</html>

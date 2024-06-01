@@ -1,0 +1,1146 @@
+
+
+
+<!DOCTYPE html>
+<html class="js no-touchevents" lang="en">
+
+<head>
+    <meta charset="utf-8">
+	
+		<base href="/cirrusencore/" />
+	
+		
+
+		<script>
+			var pColorTitle='4F7FF7';
+			var ckColor = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pColorTitle);
+			if(ckColor){
+				var pColorTitle='4F7FF7';
+			}else{
+				var pColorTitle='4F7FF7';
+			} 
+			var allowHTTPS=true;
+			var playSessionID = "F90940DF-CF1C-7038-6B874A2694927053";
+			var mobilePlayer = false;
+			var mobilePlayerNew = false;
+			var privateLabel = false;
+			
+			var centralSvrPrefixURL = "https://radio.securenetsystems.net/";
+			var adnSvrPrefixURL = "https://ssiadnweb.securenetsystems.net/";
+
+			var launchFrom = "";
+			var enableCirrusOmni = false;
+
+			var stationSlogan = "Your Friend in Southern Minnesota ";
+			var cdnRfPrefixURL = "https://cdnrf.securenetsystems.net/file_radio/";
+			
+				var playerBgImg = "";//
+			
+			var geoCTCode = "LK";
+			var geoDMACode = "0";
+			var geoLocLat = "6.9047";
+			var geoLocLon = "79.9638";
+			var cGeoLocationLevel = "5";
+			var clientIPAddr = "112.134.171.20";
+
+			var playerAdvertisingMode = "SEQ";
+			var sPrerollSkipSecs="";
+			var bannerRotationFqcy = 60;
+			var definedBannerTypes = "M,D,N,E";
+			var sLocaFillOnAdnFail = false;
+			var sTerrFillOnLocalFail = true;
+			var sBedFillOnAllFail = false;
+			var sBedFillFileName = "COMMERCIAL-BREAK-BACKGROUNDER.m4a";
+			var sTspStnId = "SECURENET41";
+			var sGenre = "S41";
+			var logVPAID = false;
+			var vastAbortTimer;
+
+			var royaltyMarkProgram = 30;
+			var royaltyMarkAd = 90;
+
+			var adBlockerPresent = false;
+
+			
+			var prerollApp = new Array();
+			
+					
+					prerollApp.push("player-check-ab");
+					
+				
+					var prerollRemarks=false;
+				
+					var prerollStation=false;
+				
+					var prerollLogin=false;	
+				
+					var prerollMobile=false;	
+				
+					var prerollSocials=false;	
+				
+					var prerollDemographics=false;
+				
+					var prerollBanner=false;	
+				
+			var checkIEModernUI = false;
+
+			var playerAppOnDemand = true;
+			var playerAppHome = false;
+			var playerAppContact = true;
+			var playerAppFacebook = true;
+			var playerAppTwitter = false;
+			var playerAppYouTube = false;
+			var playerAppsYouTubeUserName = "";
+			var youtubeUserType = "U";
+			var playerAppUstream = false;
+			var playerAppsUstreamCid = "";
+			var playerAppFacebookLive = false;
+			var playerAppFacebookLiveSrc = '';
+			var playerAppOtherStations = true;
+			var playerAppShareThis = true;
+			var playerAppNews = false;
+			var playerAppNewsSrc = "https://news.yahoo.com/rss/mostviewed";
+			var playerAppScrollingText = true;
+			var playerAppScrollingTextSrc = "https://news.yahoo.com/rss/mostviewed";
+			var playerAppSports = true;
+			var playerAppSportsSrc = "http://sports.espn.go.com/espn/rss/news";
+			var playerAppStocks = false;
+			var playerAppStocksSrc = "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml";
+			var playerAppEntertainment = true;
+			var playerAppEntertainmentSrc = "https://syndication.eonline.com/syndication/feeds/rssfeeds/answer.xml";
+			var playerAppWeather = true;
+			var playerAppFlight = false;
+			var playerAppYelp = false;
+			var playerAppDeals = false;
+			var playerAppPolls = false;
+			var playerAppSongRequest = true;
+			var playerAppChat = false;
+			var chatChannel = "0260931143";
+			var playerAppGames = false;
+			var playerAppWobot = false;
+			var playerAppWobotSrc = "http://www.wobot.tv/rss/";
+			var playerAppPlaylist = true;
+			var playerAppLyrics = true;
+			var playerAppSendToMobile = true;
+			var playerAppHelp = true;
+			var fbComments=true;
+			var fbCommentsMin=true;
+			
+			var playerAutoStartApp = "";
+			var playerAutoStartChannel = "";
+			var playerAutoStartShow = "";
+			var playerAutoStartPodcast = "";
+			var listenSessionTimeout = 0;
+			var playerAppTimeout = false;
+
+			var dspAlbumArt = false;
+			var dftAlbumArt = "https://radio.securenetsystems.net/images/album-art.png";
+			var dspBuyMediaButton = false;
+			var dspMediaRate = false;
+
+			var dspMenuIcon = true;
+			var playerMenuAutoOpen = false;
+
+			var stationCallSign = "KNUJ";
+
+			var polling = new Object();
+			polling.enabled = true;
+			polling.active = false;
+			polling.adInsert = true;
+			
+			var adnPrebidEnable = true;
+			
+		
+			var adnPrebidFloor = 0.00;			
+			var adnPrebidLimit = 0;		;
+			var adnPrebidTimeout = 8000;		
+			var adnPrebidObj = new Object();
+			var adnImpCntObj = new Object();
+			
+						adnPrebidObj[0]=new Object();
+						adnPrebidObj[0].externalProvider='ADNLIJ';
+						adnPrebidObj[0].cID="0AA4A30A-E41E-9551-8692E8AD024DE4FC";
+						adnPrebidObj[0].cIDn=27703;
+						adnPrebidObj[0].cType="PBB";
+						adnPrebidObj[0].aType="M";
+						adnPrebidObj[0].aHsize="300";
+						adnPrebidObj[0].aVsize="250";
+						adnPrebidObj[0].soAdNetBRF=0;
+						adnPrebidObj[0].soAdNetPBF=-1;
+						adnPrebidObj[0].caCode="{\"bidder\": \"sovrn\", \"params\": {\"tagid\": \"402693\"}}";
+						adnPrebidObj[0].pC=0.00;
+						adnPrebidObj[0].eD=0;
+						adnPrebidObj[0].mI=-1;
+						adnPrebidObj[0].lastRequest=0;
+						adnPrebidObj[0].totalRequest=0;
+						
+						adnPrebidObj[1]=new Object();
+						adnPrebidObj[1].externalProvider='ADNLIJ';
+						adnPrebidObj[1].cID="0AF643E8-AABF-2B60-CA701A2788C5343F";
+						adnPrebidObj[1].cIDn=27704;
+						adnPrebidObj[1].cType="PBB";
+						adnPrebidObj[1].aType="D";
+						adnPrebidObj[1].aHsize="728";
+						adnPrebidObj[1].aVsize="90";
+						adnPrebidObj[1].soAdNetBRF=0;
+						adnPrebidObj[1].soAdNetPBF=-1;
+						adnPrebidObj[1].caCode="{\"bidder\": \"sovrn\", \"params\": {\"tagid\": \"402694\"}}";
+						adnPrebidObj[1].pC=0.00;
+						adnPrebidObj[1].eD=0;
+						adnPrebidObj[1].mI=-1;
+						adnPrebidObj[1].lastRequest=0;
+						adnPrebidObj[1].totalRequest=0;
+						
+						adnPrebidObj[2]=new Object();
+						adnPrebidObj[2].externalProvider='ADNAPN';
+						adnPrebidObj[2].cID="1892949C-CADF-EFA8-E80DC4E7E3D41769";
+						adnPrebidObj[2].cIDn=27723;
+						adnPrebidObj[2].cType="PBB";
+						adnPrebidObj[2].aType="M";
+						adnPrebidObj[2].aHsize="300";
+						adnPrebidObj[2].aVsize="250";
+						adnPrebidObj[2].soAdNetBRF=0;
+						adnPrebidObj[2].soAdNetPBF=-1;
+						adnPrebidObj[2].caCode="{\"bidder\": \"appnexus\",\"params\": {\"placementId\": \"6978609\"}}";
+						adnPrebidObj[2].pC=0.00;
+						adnPrebidObj[2].eD=0;
+						adnPrebidObj[2].mI=-1;
+						adnPrebidObj[2].lastRequest=0;
+						adnPrebidObj[2].totalRequest=0;
+						
+						adnPrebidObj[3]=new Object();
+						adnPrebidObj[3].externalProvider='ADNAPN';
+						adnPrebidObj[3].cID="18FE65F4-938C-6AB8-5FB8A35B36B895B6";
+						adnPrebidObj[3].cIDn=27724;
+						adnPrebidObj[3].cType="PBB";
+						adnPrebidObj[3].aType="D";
+						adnPrebidObj[3].aHsize="728";
+						adnPrebidObj[3].aVsize="90";
+						adnPrebidObj[3].soAdNetBRF=0;
+						adnPrebidObj[3].soAdNetPBF=-1;
+						adnPrebidObj[3].caCode="{\"bidder\": \"appnexus\",\"params\": {\"placementId\": \"6978610\"}}";
+						adnPrebidObj[3].pC=0.00;
+						adnPrebidObj[3].eD=0;
+						adnPrebidObj[3].mI=-1;
+						adnPrebidObj[3].lastRequest=0;
+						adnPrebidObj[3].totalRequest=0;
+						
+						adnPrebidObj[4]=new Object();
+						adnPrebidObj[4].externalProvider='ADNCON';
+						adnPrebidObj[4].cID="4AE68A72-D283-0A54-8C9FC1D3AD335513";
+						adnPrebidObj[4].cIDn=31848;
+						adnPrebidObj[4].cType="PBB";
+						adnPrebidObj[4].aType="M";
+						adnPrebidObj[4].aHsize="300";
+						adnPrebidObj[4].aVsize="250";
+						adnPrebidObj[4].soAdNetBRF=0;
+						adnPrebidObj[4].soAdNetPBF=-1;
+						adnPrebidObj[4].caCode="{\"bidder\": \"conversant\", \"params\": {\"site_id\": \"108556\"}}";
+						adnPrebidObj[4].pC=0.00;
+						adnPrebidObj[4].eD=0;
+						adnPrebidObj[4].mI=-1;
+						adnPrebidObj[4].lastRequest=0;
+						adnPrebidObj[4].totalRequest=0;
+						
+						adnPrebidObj[5]=new Object();
+						adnPrebidObj[5].externalProvider='ADNCON';
+						adnPrebidObj[5].cID="4B83BBD0-B2F3-3496-EBBCE185E82580C3";
+						adnPrebidObj[5].cIDn=31849;
+						adnPrebidObj[5].cType="PBB";
+						adnPrebidObj[5].aType="D";
+						adnPrebidObj[5].aHsize="728";
+						adnPrebidObj[5].aVsize="90";
+						adnPrebidObj[5].soAdNetBRF=0;
+						adnPrebidObj[5].soAdNetPBF=-1;
+						adnPrebidObj[5].caCode="{\"bidder\": \"conversant\", \"params\": {\"site_id\": \"108556\"}}";
+						adnPrebidObj[5].pC=0.00;
+						adnPrebidObj[5].eD=0;
+						adnPrebidObj[5].mI=-1;
+						adnPrebidObj[5].lastRequest=0;
+						adnPrebidObj[5].totalRequest=0;
+						
+						adnPrebidObj[6]=new Object();
+						adnPrebidObj[6].externalProvider='ADNSON';
+						adnPrebidObj[6].cID="B0DDF0A5-A5EA-95E7-F557924B5096D917";
+						adnPrebidObj[6].cIDn=43161;
+						adnPrebidObj[6].cType="PBB";
+						adnPrebidObj[6].aType="M";
+						adnPrebidObj[6].aHsize="300";
+						adnPrebidObj[6].aVsize="250";
+						adnPrebidObj[6].soAdNetBRF=0;
+						adnPrebidObj[6].soAdNetPBF=-1;
+						adnPrebidObj[6].caCode="{\"bidder\": \"sonobi\",\"params\": {\"placement_id\": \"d60f224a9238144280f0\"}}";
+						adnPrebidObj[6].pC=0.00;
+						adnPrebidObj[6].eD=0;
+						adnPrebidObj[6].mI=-1;
+						adnPrebidObj[6].lastRequest=0;
+						adnPrebidObj[6].totalRequest=0;
+						
+						adnPrebidObj[7]=new Object();
+						adnPrebidObj[7].externalProvider='ADNSON';
+						adnPrebidObj[7].cID="B23621ED-AAE7-3898-A2050CB22B78100E";
+						adnPrebidObj[7].cIDn=43162;
+						adnPrebidObj[7].cType="PBB";
+						adnPrebidObj[7].aType="D";
+						adnPrebidObj[7].aHsize="728";
+						adnPrebidObj[7].aVsize="90";
+						adnPrebidObj[7].soAdNetBRF=0;
+						adnPrebidObj[7].soAdNetPBF=-1;
+						adnPrebidObj[7].caCode="{\"bidder\": \"sonobi\",\"params\": {\"placement_id\": \"365bf62d0396983751e6\"}}";
+						adnPrebidObj[7].pC=0.00;
+						adnPrebidObj[7].eD=0;
+						adnPrebidObj[7].mI=-1;
+						adnPrebidObj[7].lastRequest=0;
+						adnPrebidObj[7].totalRequest=0;
+						
+						adnPrebidObj[8]=new Object();
+						adnPrebidObj[8].externalProvider='ADNDIS';
+						adnPrebidObj[8].cID="10BCA8B0-3D16-4F50-90E519B36AEF3C91";
+						adnPrebidObj[8].cIDn=58474;
+						adnPrebidObj[8].cType="PBB";
+						adnPrebidObj[8].aType="M";
+						adnPrebidObj[8].aHsize="300";
+						adnPrebidObj[8].aVsize="250";
+						adnPrebidObj[8].soAdNetBRF=0;
+						adnPrebidObj[8].soAdNetPBF=-1;
+						adnPrebidObj[8].caCode="{\"bidder\": \"sharethrough\", \"params\": {\"pkey\": \"rdaXLlICSi7Svg04SAYrA0KO\", \"iframe\": false}}";
+						adnPrebidObj[8].pC=0.00;
+						adnPrebidObj[8].eD=0;
+						adnPrebidObj[8].mI=-1;
+						adnPrebidObj[8].lastRequest=0;
+						adnPrebidObj[8].totalRequest=0;
+						
+						adnPrebidObj[9]=new Object();
+						adnPrebidObj[9].externalProvider='ADNDIS';
+						adnPrebidObj[9].cID="520C68CF-F5E4-4766-883780363CA591FC";
+						adnPrebidObj[9].cIDn=58475;
+						adnPrebidObj[9].cType="PBB";
+						adnPrebidObj[9].aType="D";
+						adnPrebidObj[9].aHsize="728";
+						adnPrebidObj[9].aVsize="90";
+						adnPrebidObj[9].soAdNetBRF=0;
+						adnPrebidObj[9].soAdNetPBF=-1;
+						adnPrebidObj[9].caCode="{\"bidder\": \"sharethrough\", \"params\": {\"pkey\": \"zuySZri0LpJREjmwXL6xOXNF\", \"iframe\": false}}";
+						adnPrebidObj[9].pC=0.00;
+						adnPrebidObj[9].eD=0;
+						adnPrebidObj[9].mI=-1;
+						adnPrebidObj[9].lastRequest=0;
+						adnPrebidObj[9].totalRequest=0;
+						
+					
+
+
+			var adnPrebidTypes = new Object();
+			adnPrebidTypes['M']=new Object();
+			adnPrebidTypes['M'].floorNbRequest=0;
+			adnPrebidTypes['M'].floorList='0.00';
+			adnPrebidTypes['D']=new Object();
+			adnPrebidTypes['D'].floorNbRequest=0;
+			adnPrebidTypes['D'].floorList='0.00';
+			adnPrebidTypes['V']=new Object();//FV
+			adnPrebidTypes['V'].floorNbRequest=0;
+			adnPrebidTypes['V'].floorList='0.00';
+			adnPrebidTypes['H']=new Object();//FH
+			adnPrebidTypes['H'].floorNbRequest=0;
+			adnPrebidTypes['H'].floorList='0.00';
+			var sAdNetPFR=0;
+			
+			
+				var otherStations = new Object();
+				
+						otherStations["1"] = new Array("KNUJ","https://streamdb3web.securenetsystems.net");
+					
+						otherStations["2"] = new Array("KNUJFM","https://streamdb3web.securenetsystems.net");
+					
+				var otherStationsCount = 2;
+			
+				
+				// var streamProvider = "http";
+				var streamProvider = "http";
+
+				
+				
+				
+				var streamSRC = "https://ice23.securenetsystems.net/KNUJ?playSessionID=F90940DF-CF1C-7038-6B874A2694927053";
+				var streamSRC_b = "https://ice23.securenetsystems.net/KNUJ?playSessionID=F90940DF-CF1C-7038-6B874A2694927053";
+				var encoderType = "ACP";
+				var playlistType = "";
+				primary = "html5";
+				
+				
+
+				var liveStreamEnable = true;
+				var streamRoot = "https://ice23.securenetsystems.net/media";
+				var liveStreamStart = true;
+				var blackout = new Object();
+				blackout.active = 0;
+				blackout.type = "";
+				blackout.app = "";
+				blackout.nextCheck = 86580000;
+				blackout.resumeTime = "Friday, 5/31/2024 8:47 PM EDT";
+
+				var rejoinPriority = "PGM";
+				var enforceRejoinPriority = true;
+
+				var persistAlbumArt = true;
+
+				
+				var xmlODUrl = "";
+				var onDemandQueue = new Object();
+
+				var onDemandFileCount = 15;
+				var onDemandAutoStart = false;
+				
+					var autoPlayPodcast ="";	
+				
+				var onDemandFill = new Object();
+				onDemandFill.enabled = true;
+				onDemandFill.active = false;
+				
+
+						onDemandQueue[0]=new Object();
+						onDemandQueue[0].fileId=2459288;
+						// onDemandQueue[0].fileName="All-Natural-Filzen-Show-2024-05-24.m4a";
+						onDemandQueue[0].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"All-Natural-Filzen-Show-2024-05-24.m4a";
+						onDemandQueue[0].fileDsp="All-Natural-Filzen-Show-2024-05-24";
+						onDemandQueue[0].duration="7198.835";
+						onDemandQueue[0].coverArt="";
+						onDemandQueue[0].title="All Natural Filzen Show";
+						onDemandQueue[0].artist="";
+						onDemandQueue[0].album="";
+						onDemandQueue[0].video=false;
+						onDemandQueue[0].modal=false;
+					
+
+						onDemandQueue[1]=new Object();
+						onDemandQueue[1].fileId=2459633;
+						// onDemandQueue[1].fileName="Dinner-Bell-Hour-2024-05-24.m4a";
+						onDemandQueue[1].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Dinner-Bell-Hour-2024-05-24.m4a";
+						onDemandQueue[1].fileDsp="Dinner-Bell-Hour-2024-05-24";
+						onDemandQueue[1].duration="3000.388";
+						onDemandQueue[1].coverArt="";
+						onDemandQueue[1].title="Dinner Bell Hour";
+						onDemandQueue[1].artist="Tom Wheeler";
+						onDemandQueue[1].album="";
+						onDemandQueue[1].video=false;
+						onDemandQueue[1].modal=false;
+					
+
+						onDemandQueue[2]=new Object();
+						onDemandQueue[2].fileId=2459824;
+						// onDemandQueue[2].fileName="Ole-Express-2024-05-24.m4a";
+						onDemandQueue[2].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Ole-Express-2024-05-24.m4a";
+						onDemandQueue[2].fileDsp="Ole-Express-2024-05-24";
+						onDemandQueue[2].duration="7198.882";
+						onDemandQueue[2].coverArt="";
+						onDemandQueue[2].title="Ole Express";
+						onDemandQueue[2].artist="Todd Olson";
+						onDemandQueue[2].album="";
+						onDemandQueue[2].video=false;
+						onDemandQueue[2].modal=false;
+					
+
+						onDemandQueue[3]=new Object();
+						onDemandQueue[3].fileId=2461551;
+						// onDemandQueue[3].fileName="All-Natural-Filzen-Show-2024-05-27.m4a";
+						onDemandQueue[3].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"All-Natural-Filzen-Show-2024-05-27.m4a";
+						onDemandQueue[3].fileDsp="All-Natural-Filzen-Show-2024-05-27";
+						onDemandQueue[3].duration="7199.485";
+						onDemandQueue[3].coverArt="";
+						onDemandQueue[3].title="All Natural Filzen Show";
+						onDemandQueue[3].artist="";
+						onDemandQueue[3].album="";
+						onDemandQueue[3].video=false;
+						onDemandQueue[3].modal=false;
+					
+
+						onDemandQueue[4]=new Object();
+						onDemandQueue[4].fileId=2461851;
+						// onDemandQueue[4].fileName="Dinner-Bell-Hour-2024-05-27.m4a";
+						onDemandQueue[4].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Dinner-Bell-Hour-2024-05-27.m4a";
+						onDemandQueue[4].fileDsp="Dinner-Bell-Hour-2024-05-27";
+						onDemandQueue[4].duration="3000.388";
+						onDemandQueue[4].coverArt="";
+						onDemandQueue[4].title="Dinner Bell Hour";
+						onDemandQueue[4].artist="Tom Wheeler";
+						onDemandQueue[4].album="";
+						onDemandQueue[4].video=false;
+						onDemandQueue[4].modal=false;
+					
+
+						onDemandQueue[5]=new Object();
+						onDemandQueue[5].fileId=2462013;
+						// onDemandQueue[5].fileName="Ole-Express-2024-05-27.m4a";
+						onDemandQueue[5].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Ole-Express-2024-05-27.m4a";
+						onDemandQueue[5].fileDsp="Ole-Express-2024-05-27";
+						onDemandQueue[5].duration="7200.600";
+						onDemandQueue[5].coverArt="";
+						onDemandQueue[5].title="Ole Express";
+						onDemandQueue[5].artist="Todd Olson";
+						onDemandQueue[5].album="";
+						onDemandQueue[5].video=false;
+						onDemandQueue[5].modal=false;
+					
+
+						onDemandQueue[6]=new Object();
+						onDemandQueue[6].fileId=2462481;
+						// onDemandQueue[6].fileName="All-Natural-Filzen-Show-2024-05-28.m4a";
+						onDemandQueue[6].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"All-Natural-Filzen-Show-2024-05-28.m4a";
+						onDemandQueue[6].fileDsp="All-Natural-Filzen-Show-2024-05-28";
+						onDemandQueue[6].duration="7199.718";
+						onDemandQueue[6].coverArt="";
+						onDemandQueue[6].title="All Natural Filzen Show";
+						onDemandQueue[6].artist="";
+						onDemandQueue[6].album="";
+						onDemandQueue[6].video=false;
+						onDemandQueue[6].modal=false;
+					
+
+						onDemandQueue[7]=new Object();
+						onDemandQueue[7].fileId=2462812;
+						// onDemandQueue[7].fileName="Dinner-Bell-Hour-2024-05-28.m4a";
+						onDemandQueue[7].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Dinner-Bell-Hour-2024-05-28.m4a";
+						onDemandQueue[7].fileDsp="Dinner-Bell-Hour-2024-05-28";
+						onDemandQueue[7].duration="3000.063";
+						onDemandQueue[7].coverArt="";
+						onDemandQueue[7].title="Dinner Bell Hour";
+						onDemandQueue[7].artist="Tom Wheeler";
+						onDemandQueue[7].album="";
+						onDemandQueue[7].video=false;
+						onDemandQueue[7].modal=false;
+					
+
+						onDemandQueue[8]=new Object();
+						onDemandQueue[8].fileId=2463012;
+						// onDemandQueue[8].fileName="Ole-Express-2024-05-28.m4a";
+						onDemandQueue[8].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Ole-Express-2024-05-28.m4a";
+						onDemandQueue[8].fileDsp="Ole-Express-2024-05-28";
+						onDemandQueue[8].duration="7199.393";
+						onDemandQueue[8].coverArt="";
+						onDemandQueue[8].title="Ole Express";
+						onDemandQueue[8].artist="Todd Olson";
+						onDemandQueue[8].album="";
+						onDemandQueue[8].video=false;
+						onDemandQueue[8].modal=false;
+					
+
+						onDemandQueue[9]=new Object();
+						onDemandQueue[9].fileId=2463516;
+						// onDemandQueue[9].fileName="All-Natural-Filzen-Show-2024-05-29.m4a";
+						onDemandQueue[9].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"All-Natural-Filzen-Show-2024-05-29.m4a";
+						onDemandQueue[9].fileDsp="All-Natural-Filzen-Show-2024-05-29";
+						onDemandQueue[9].duration="7195.770";
+						onDemandQueue[9].coverArt="";
+						onDemandQueue[9].title="All Natural Filzen Show";
+						onDemandQueue[9].artist="";
+						onDemandQueue[9].album="";
+						onDemandQueue[9].video=false;
+						onDemandQueue[9].modal=false;
+					
+
+						onDemandQueue[10]=new Object();
+						onDemandQueue[10].fileId=2463843;
+						// onDemandQueue[10].fileName="Dinner-Bell-Hour-2024-05-29.m4a";
+						onDemandQueue[10].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Dinner-Bell-Hour-2024-05-29.m4a";
+						onDemandQueue[10].fileDsp="Dinner-Bell-Hour-2024-05-29";
+						onDemandQueue[10].duration="3000.528";
+						onDemandQueue[10].coverArt="";
+						onDemandQueue[10].title="Dinner Bell Hour";
+						onDemandQueue[10].artist="Tom Wheeler";
+						onDemandQueue[10].album="";
+						onDemandQueue[10].video=false;
+						onDemandQueue[10].modal=false;
+					
+
+						onDemandQueue[11]=new Object();
+						onDemandQueue[11].fileId=2464031;
+						// onDemandQueue[11].fileName="Ole-Express-2024-05-29.m4a";
+						onDemandQueue[11].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Ole-Express-2024-05-29.m4a";
+						onDemandQueue[11].fileDsp="Ole-Express-2024-05-29";
+						onDemandQueue[11].duration="7199.300";
+						onDemandQueue[11].coverArt="";
+						onDemandQueue[11].title="Ole Express";
+						onDemandQueue[11].artist="Todd Olson";
+						onDemandQueue[11].album="";
+						onDemandQueue[11].video=false;
+						onDemandQueue[11].modal=false;
+					
+
+						onDemandQueue[12]=new Object();
+						onDemandQueue[12].fileId=2464542;
+						// onDemandQueue[12].fileName="All-Natural-Filzen-Show-2024-05-30.m4a";
+						onDemandQueue[12].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"All-Natural-Filzen-Show-2024-05-30.m4a";
+						onDemandQueue[12].fileDsp="All-Natural-Filzen-Show-2024-05-30";
+						onDemandQueue[12].duration="7198.510";
+						onDemandQueue[12].coverArt="";
+						onDemandQueue[12].title="All Natural Filzen Show";
+						onDemandQueue[12].artist="";
+						onDemandQueue[12].album="";
+						onDemandQueue[12].video=false;
+						onDemandQueue[12].modal=false;
+					
+
+						onDemandQueue[13]=new Object();
+						onDemandQueue[13].fileId=2464871;
+						// onDemandQueue[13].fileName="Dinner-Bell-Hour-2024-05-30.m4a";
+						onDemandQueue[13].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Dinner-Bell-Hour-2024-05-30.m4a";
+						onDemandQueue[13].fileDsp="Dinner-Bell-Hour-2024-05-30";
+						onDemandQueue[13].duration="3000.110";
+						onDemandQueue[13].coverArt="";
+						onDemandQueue[13].title="Dinner Bell Hour";
+						onDemandQueue[13].artist="Tom Wheeler";
+						onDemandQueue[13].album="";
+						onDemandQueue[13].video=false;
+						onDemandQueue[13].modal=false;
+					
+
+						onDemandQueue[14]=new Object();
+						onDemandQueue[14].fileId=2465061;
+						// onDemandQueue[14].fileName="Ole-Express-2024-05-30.m4a";
+						onDemandQueue[14].fileName=streamRoot+"/"+stationCallSign+"/ondemand/"+"Ole-Express-2024-05-30.m4a";
+						onDemandQueue[14].fileDsp="Ole-Express-2024-05-30";
+						onDemandQueue[14].duration="7200.322";
+						onDemandQueue[14].coverArt="";
+						onDemandQueue[14].title="Ole Express";
+						onDemandQueue[14].artist="Todd Olson";
+						onDemandQueue[14].album="";
+						onDemandQueue[14].video=false;
+						onDemandQueue[14].modal=false;
+					
+					
+					var d = new Date();
+					var localServerTSoffset = d.getTime()+d.getTimezoneOffset()*60000 - Date.parse("31 May 2024 00:44:32");
+				
+
+				
+					var nielsenEnabled = true;
+				
+			var enableStream = true;
+
+			
+			
+					
+				var streamSrcDB = 'https://ice23.securenetsystems.net/KNUJ';
+				var streamSrcFlv = 'https://ice23.securenetsystems.net/KNUJ';
+			
+			
+			var streamSrcPlay=streamSrcDB.replace("?type=.flv","")+'?playSessionID=F90940DF-CF1C-7038-6B874A2694927053';
+			var streamSrcAac = streamSrcDB+(streamSrcDB.indexOf("?")==-1?"?":"&")+"playSessionID=F90940DF-CF1C-7038-6B874A2694927053";		//streamSrcDB.replace("?type=.flv","");
+			var streamSrcMp3 = streamSrcDB.replace("type=.flv","type=.mp3");
+			var bDRC=false;
+			var sessionDebugLog=false;
+			var sessionDebugLogSent=0;
+			var ne_enable=false;
+			var ne_enable_time=15;
+			var enableURLRewrite=false;
+			var enableURLStation=false;
+			var autoPlay=true;
+			var adnModePrebid=1;
+			var adnModeWaterfall=1;
+			var stationCallUrl="https://streamdb3web.securenetsystems.net";
+			var playlistHistoryXMLurl = "https://streamdb3web.securenetsystems.net/player_status_update/KNUJ_history.xml";
+			var streamErrorRetryDelay=0;
+			var embedEnable=true;
+			var fontcolorMain='#333333';
+			var useLargeB=true;
+			
+			var embedOpened=false;
+			var embedOpenedApp='';
+			var embedOpenedArtist="";
+			var embedOpenedAlbum="";
+			var embedOpenedSong="";
+
+
+			if(embedOpened==true){
+				autoPlay=false;
+			}
+			var dvlpm=false;
+			var viewMode='list';
+			var enableRadioStats=''; 
+			
+				var prebidSplit=1;
+					
+					var tagRotationOffset = 0;
+				
+			
+			var maxRotationWhenMin=-1;
+			var crtRotationWhenMin=0;
+			
+			
+			var revcontent_file='1';
+			var disableSaambaa=1;
+			var newPlayerBanner='false';
+			
+				var bannerMaxRotation=999;
+				
+			var minimizedRotate="1";
+		
+		</script>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>Your Friend in Southern Minnesota </title>
+			<meta name='ir-site-verification-token' value='-923417589' />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+			<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+			<META HTTP-EQUIV="EXPIRES" CONTENT="0" />
+			<meta name="distribution" content="Global" />
+			<meta name="robots" content="FOLLOW,INDEX" />
+			
+			
+				<meta property="og:title" content="KNUJ" />
+				<meta property="og:description" content="Listen to our station on your computer or mobile device!" />
+				<meta property="og:image" content="https://cdnrf.securenetsystems.net/file_radio/stations_large/KNUJ/v5/logo.png" />
+			
+				<link REL="SHORTCUT ICON" HREF="images/ssiicon.ico">
+						
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
+	
+		<link async rel="stylesheet" href="css/icon.css?v=24.05.22">
+		<link async rel="stylesheet" href="css/v8.css?v=24.05.22">
+		<link async rel="stylesheet" href="css/font-awesome.min.css?v=24.05.22">
+	
+	<style>
+	.colorMainBkg{
+		background-color:#ffffff!important;
+	}
+	.themeBgColor80{
+		background-color:rgba(0,0,0,0.8);
+	}
+	.themeBgColor70{
+		background-color:rgba(0,0,0,0.7);
+	}
+	.themeBgColor60{
+		background-color:rgba(0,0,0,0.6);
+	}
+	.themeBgColor20{
+		background-color:rgba(0,0,0,0.2);
+	}
+	.themeBgColor05{
+		background-color:rgba(0,0,0,0.05);
+	}
+	.themeBgColor04{
+		background-color:rgba(0,0,0,0.04);
+	}
+	.themeBorderColor70{
+		border-left-color:rgba(0,0,0,0.7)!important;
+	}
+	.themeBorderColor45Up{
+		border-bottom-color:rgba(0,0,0,0.45)!important;
+	}
+	.themeBorderColor45Down{
+		border-top-color:rgba(0,0,0,0.45)!important;
+	}
+	.themeBorderColor70Up{
+		border-bottom-color:rgba(0,0,0,0.7)!important;
+	}
+	.themeBorderColor70Down{
+		border-top-color:rgba(0,0,0,0.7)!important;
+	}
+	.themeFontColorLight{
+		color:#FFFFFF!important;
+	}
+	a,
+	.themeFontColorDark{
+		color:#333333;
+		text-decoration:none;
+	}
+	.themeFontColorDarkL{
+		color:#575757;
+		color:#333333;
+		opacity:0.9;
+	}
+	.themeFontColorDarkIcon{
+		color:#5F5F5F;
+		color:#333333;
+		opacity:0.8;
+	}
+	.cellBkgColor{
+		background-color:#ffffff!important;
+	}
+	.transportBgColor20{
+		background-color:rgba(0,0,0,0.2);
+	}
+	.transportBgColor05{
+		background-color:rgba(0,0,0,0.05);
+	}
+	.transportBorderColor70{
+		border-left-color:rgba(0,0,0,0.7)!important;
+	}
+	.transportBgColor70{
+		background-color:rgba(0,0,0,0.7);
+	}
+	.themeFontColorDarkGrey{
+		color:#575757;
+	}
+	.prerollMobileApp #mainPageWhite,
+	.prerollMobileApp #mainPage,
+	.prerollMobileApp .bodyDiv,
+	.prerollMobileApp .prerollApp{
+		min-width:100%!important;
+		max-width:100%!important;
+	}
+	.prerollMobileApp .bodyDiv{
+		padding-left:20px!important;
+		padding-right:20px!important;
+	}
+	</style>
+	
+</head>
+<body class="preRollinProgress">
+
+	
+		<script type="text/javascript" id="ssi_Script" src="scripts/ads/prebid.js?6991"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXWS79MF5F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YXWS79MF5F');
+</script>
+
+
+
+
+<div id="mainPageWhite" class="colorMainBkg"> 
+<div id="mainPage" class="themeBgColor04" >
+<div class="aboveBanner colorMainBkg">
+	<div class="aboveBannerContent themeBgColor04" ></div>
+</div>
+<div class="headerDiv themeBgColor80">
+	<div class="menuButton" tabindex="0" role="button"  aria-pressed="false" title="Open menu" aria-label="Open menu"><div class="menuButtonClose"><span class="close thick pointy"></span></div><div class="menuButtonLine"></div><div class="menuButtonLine"></div><div class="menuButtonLine"></div></div>
+	<div class="stationSlogan themeFontColorLight"><div class="topBarLogo"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/KNUJ/v5/logo.png?cb=20240530204432" alt="KNUJ Logo"></div><h1>Your Friend in Southern Minnesota </h1></div>
+	<div class="viewMode"><div onclick="setViewMode('list')" title="List view" aria-label="List view" role="button"  aria-pressed="true" tabindex="0" class="viewModeList themeFontColorLight viewModeSel"><i class="fa fa-align-justify" aria-hidden="true"></i></div><div onclick="setViewMode('grid')" tabindex="0" title="Grid view" aria-label="Grid view" role="button"  aria-pressed="false" class="viewModeGrid themeFontColorLight"><i class="fa fa-th" aria-hidden="true"></i></div></div>
+	<div class="headerMenuList themeFontColorLight"><div class="songSearch"><div class="searchInputDiv"><div style="width:212px;min-width:210px;overflow:hidden;float:right"><input type="text" name="searchbySong" aria-label="Search song" class="themeFontColorDark" placeholder="Title, artist or album" value="" id="searchbySong" /><button id="searchButtonSong" title="Search song"><i class="fa fa-search themeFontColorDarkL" aria-hidden="true"></i></button><button id="searchButtonClose" title="Close search area"><i class="fa fa-times themeFontColorDarkL" aria-hidden="true"></i></button></div></div> <label class="songSearchAction" for="searchbySong"><i class="fa fa-search" aria-hidden="true"></i> Song search</label></div><div class="podcastSearch"><input type="text" name="searchby" aria-label="Search podcast" class="themeFontColorDark" placeholder="Search podcasts" value="" id="searchby" /><button id="searchButton" title="Search podcast"><i class="fa fa-search themeFontColorDarkL" aria-hidden="true"></i></button></div><a href="javascript:void(0)" class="themeFontColorLight" role="button" onclick="openApp('other-stations')" title="View Other Stations">Other Stations</a> <strong>&middot;</strong> <a href="javascript:void(1)" role="button" onclick="loadPodcast()" class="startPodcast themeFontColorLight" title="Go to Podcasts">Podcasts</a><a href="javascript:void(2)" role="button" onclick="closePodcast()" class="stopPodcast themeFontColorLight" title="Return to live stream">Live stream</a></div>
+</div>
+<div class="appsMenuDiv" tabindex="-1" role="navigation">
+	<div class="appsMenuCol1 themeBgColor70" role="nav">
+		<div title="Contact information" class="appsMenuLineCol1 themeFontColorLight" tabindex="0" role="link" onclick="openApp('contact')"><div class="appIconList"><i class="fa fa-address-card-o themeFontColorLight" aria-hidden="true"></i></div><span>Contact information</span></div> <div title="Facebook" class="appsMenuLineCol1 themeFontColorLight" tabindex="0" role="link" onclick="openApp('facebook')"><div class="appIconList"><i class="fa fa-facebook themeFontColorLight" aria-hidden="true"></i></div><span>Facebook</span></div> 
+		
+		<div class="appsMenuSeparator"></div>
+		<div title="Send player to mobile" class="appsMenuLineCol1 themeFontColorLight" tabindex="0" role="link" onclick="openApp('send-to-mobile')"><div class="appIconList"><i class="icon-send-to-mobile themeFontColorLight" aria-hidden="true"></i></div><span>Send player to mobile</span></div> <div title="Podcasts" class="appsMenuLineCol1 themeFontColorLight" tabindex="0" role="link" onclick="loadPodcast()"><div class="appIconList"><i class="fa fa-podcast themeFontColorLight" aria-hidden="true"></i></div><span>Podcasts</span></div> 
+	</div>
+	<div class="appsMenuCol2 themeBgColor60">
+		<div title="Sports" class="appsMenuLineCol2 themeFontColorLight" tabindex="0" role="link" onclick="openApp('sports')"><div class="appIconList"><i class="icon-sports themeFontColorLight" aria-hidden="true"></i></div><span>Sports</span></div> <div title="Entertainment" class="appsMenuLineCol2 themeFontColorLight" tabindex="0" role="link" onclick="openApp('entertainment')"><div class="appIconList"><i class="icon-entertainment-news themeFontColorLight" aria-hidden="true"></i></div><span>Entertainment</span></div> <div title="Weather" class="appsMenuLineCol2 themeFontColorLight" tabindex="0" role="link" onclick="openApp('weather')"><div class="appIconList"><i class="fa fa-thermometer-empty themeFontColorLight" aria-hidden="true"></i></div><span>Weather</span></div> <div title="Song request" class="appsMenuLineCol2 themeFontColorLight" tabindex="0" role="link" onclick="openApp('request')"><div class="appIconList"><i class="fa fa-bullhorn themeFontColorLight" aria-hidden="true"></i></div><span>Song request</span></div> <div title="Privacy" class="appsMenuLineCol2 themeFontColorLight" tabindex="0" role="link" onclick="openApp('help')"><div class="appIconList"><i class="fa fa-question-circle themeFontColorLight" aria-hidden="true"></i></div><span>Privacy Policy</span></div>
+		
+		
+	</div>
+	<div class="appsMenuCol3 themeBgColor20">
+		<div class="appsMenuShare">
+		 
+		<!-- AddThis Button BEGIN -->
+						<div class="shareThis addthis_toolbox addthis_default_style addthis_32x32_style">
+						<a class="addthis_button_preferred_1" role="button" tabindex="0"></a>
+						<a class="addthis_button_preferred_2" role="button" tabindex="0"></a>
+						<a class="addthis_button_preferred_3" role="button" tabindex="0"></a>
+						<a class="addthis_button_preferred_4" role="button" tabindex="0"></a>
+						<a class="addthis_button_compact" role="button" tabindex="0"></a>
+						<a class="addthis_counter addthis_bubble_style" role="button" tabindex="0"></a>
+						</div>
+						<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-502552987eaa3f3d"></script>
+						<!-- AddThis Button END -->
+						
+		</div>
+		<div class="appsMenuBanner"><div id="menubannerM"></div></div>
+		<a href="https://cir.st" target="_blank" class="copyright themeFontColorLight">Cirrus&reg; Encore Streaming Player<span class="openNewWindowSpan"> Opens a new window</span></a>
+	</div>
+	<br style="clear:both;height:0px;font-size:0px;line-height:0px"/>
+</div>
+<div class="appContentDiv cellBkgColor" >
+	<div class="appContentRightBanner"><div id="appbannerM"></div></div>
+	<div id="appContentAjax"  tabindex="-1">
+		<div class="appContentTitle themeFontColorDark"><i class="fa themeFontColorDark" aria-hidden="true"></i><span role="heading"></span></div>
+		<div class="appContentText themeFontColorDark"></div>
+	</div>
+	<div class="appContentBottomBanner"><div id="appbannerD"></div></div>
+</div>
+<div class="bodyDiv" role="main">
+	
+		
+		<div class="mediaplayerArea" id="vastplayerArea"><div id="vastplayer"></div>
+			<div class="bannerPrerollArea" style="display:none;">
+				<div class="bannerMainContent cellBkgColor">
+					<div class="bannerSlogan">
+						<div class="bannerSloganTitle themeFontColorDark">Your Friend in Southern Minnesota </div>
+						<div class="bannerSloganSubTitle themeFontColorDark">Thanks for listening!</div>
+					</div>
+					<div id="pbannerM"></div>
+					<div id="pbannerD"></div>
+				</div>
+			</div>
+			<div class="vastControl cellBkgColor">
+				<div class="playerLogo themeBgColor70"><div style="position:relative;width:210px;height:85px;"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/KNUJ/v5/logo.png?cb=20240530204432" alt="KNUJ logo"></div></div>
+				<div class="songDetail">
+				<div class="songPlaying themeFontColorDark"><div class="playButton transportBorderColor70" tabindex="0" role="button" title="Play" aria-label="Play"></div><div class="pauseButton" tabindex="0"  role="button" title="Pause" aria-label="Pause"><div class="pauseButtonBar transportBgColor70"></div><div class="pauseButtonBar transportBgColor70"></div></div></div>
+				</div>
+				<div class="volumeControl themeFontColorDark"><i class="fa fa-volume-up"  tabindex="0" role="link" aria-pressed="false" title="Mute / unmute" aria-label="Mute / unmute"></i><div class="volumeTrack transportBgColor05" tabindex="0" role="button" title="Set volume" aria-label="Set volume"><div class="volumePosition transportBgColor20"></div></div></div>
+				<div class="progressBar">
+					<div class="progressTime themeFontColorDark"></div>
+					<div class="songDuration themeFontColorDark"></div>
+					<div class="progressLine transportBgColor05"><div class="timerAreaProgress transportBgColor20"></div></div>
+				</div>
+			</div>
+		</div>
+	<div class="menuDiv cellBkgColor">
+		<div class="playerLogo themeBgColor70"><div style="position:relative;width:210px;height:85px;"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/KNUJ/v5/logo.png?cb=20240530204432" alt="KNUJ logo"></div></div>
+		<div class="menuList">
+			
+		</div>
+	</div>
+	<div class="playlistSongArea">
+		<div class="songLine upNextSong cellBkgColor" role="article">
+			<img class="songCover" src="https://radio.securenetsystems.net/images/album-art.png" alt="Cover" tabindex="0" role="button" title="Expand"/>
+			<div class="songDetail">
+				<h2 class="songTitle themeFontColorDark" style="display:none"></h2>
+				<h3 class="songArtist themeFontColorDark" style="display:none"></h3>
+				<h4 class="songAlbum themeFontColorDark" style="display:none"></h4>
+				<div class="songShare">
+					<div class="songShareLink shareButton themeFontColorDark" role="button" tabindex="0"><i class="fa fa-share-alt themeFontColorDarkIcon" aria-hidden="true"></i>Share
+					<div class="songShareList">
+						<div class="songShareFacebook" tabindex="0" role="link" onclick="shareApp($(this),'facebook','live')"  aria-label="Share on facebook" title="Share on facebook"><i class="fa fa-facebook themeFontColorDarkIcon" aria-hidden="true"></i></div>
+						<div class="songShareTwitter" tabindex="0" role="link" onclick="shareApp($(this),'twitter','live')" aria-label="Share on X" title="Share on X"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i></div>
+						<!--div class="songShareGoogle" onclick="shareApp($(this),'google','live')"><i class="fa fa-google-plus themeFontColorDarkIcon" aria-hidden="true"></i></div-->
+						
+					</div></div>
+					<!--div class="lyricsButton songShareLink themeFontColorDark" ><i class="fa fa-align-justify themeFontColorDarkIcon" aria-hidden="true"></i>Lyrics</div--> <div class="songFactsButton songShareLink themeFontColorDark" role="link"  tabindex="0" style="margin-top:-2px"><i class="fa fa-info-circle themeFontColorDarkIcon"  aria-hidden="true"></i>Songfacts<sup style="font-size:12px">&reg;</sup></div>
+					
+				</div>
+				<div class="songApps">
+					
+					<div data-appname="artistbio" tabindex="0" role="link" class="songAppsLink songArtistBio themeFontColorDark"><i class="fa fa-user themeFontColorDarkIcon" aria-hidden="true"></i>Artist Bio</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistFb themeFontColorDark"><i class="fa fa-facebook-official themeFontColorDarkIcon" aria-hidden="true"></i>Facebook<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistTw themeFontColorDark"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i>X<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistWeb themeFontColorDark"><i class="fa fa-globe themeFontColorDarkIcon" aria-hidden="true"></i>Website<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<div data-appname="artistevents" tabindex="0" role="link" class="songAppsLink songArtistEv themeFontColorDark"><i class="fa fa-calendar themeFontColorDarkIcon" aria-hidden="true"></i>Events</div>
+					<div data-appname="artistcd" tabindex="0" role="link" class="songAppsLink songArtistCD themeFontColorDark"><i class="fa fa-music themeFontColorDarkIcon" aria-hidden="true"></i>Discography</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistVid themeFontColorDark"><i class="fa fa-youtube-play themeFontColorDarkIcon" aria-hidden="true"></i>Videos<span class="openNewWindowSpan"> Opens a new window</span></a>
+					
+				</div>
+				
+				<div class="songPlaying themeFontColorDark"><span>Up next in </span><span class="nextUpIn">0:12</span></div>
+				
+			</div>
+			<div class="upNextSongOverlay"></div>
+			<div class="expandSong" onclick="$(this).parent().find('.songCover').click()"  role="link" tabindex="0" title="Expand" aria-label="Expand"></div>
+		</div>
+		
+		<div class="songLine songLineOnNow cellBkgColor" role="article">
+			<img class="songCover" src="https://radio.securenetsystems.net/images/album-art.png" alt="Cover" tabindex="0" role="button" title="Expand"/>
+			<div class="songDetail">
+				<h2 class="songTitle themeFontColorDark" style="display:none"></h2>
+				<h3 class="songArtist themeFontColorDark" style="display:none"></h3>
+				<h4 class="songAlbum themeFontColorDark" style="display:none"></h4>
+				<div class="songShare">
+					<div class="songShareLink shareButton themeFontColorDark" tabindex="0" role="button"><i class="fa fa-share-alt themeFontColorDarkIcon" aria-hidden="true"></i>Share
+					<div class="songShareList">
+						<div class="songShareFacebook" tabindex="0" role="link" onclick="shareApp($(this),'facebook','live')" aria-label="Share on facebook" title="Share on facebook"><i class="fa fa-facebook themeFontColorDarkIcon" aria-hidden="true"></i></div>
+						<div class="songShareTwitter" tabindex="0" role="link" onclick="shareApp($(this),'twitter','live')" aria-label="Share on X" title="Share on X"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i></div>
+						<!--div class="songShareGoogle" onclick="shareApp($(this),'google','live')"><i class="fa fa-google-plus themeFontColorDarkIcon" aria-hidden="true"></i></div-->
+						
+					</div></div>
+					<!--div class="lyricsButton songShareLink themeFontColorDark"><i class="fa fa-align-justify themeFontColorDarkIcon" aria-hidden="true"></i>Lyrics</div--> <div class="songFactsButton songShareLink themeFontColorDark" role="link" tabindex="0" style="margin-top:-2px" ><i class="fa fa-info-circle themeFontColorDarkIcon" aria-hidden="true"></i>Songfacts<sup style="font-size:12px">&reg;</sup></div>
+					
+				</div>
+				<div class="songApps">
+					
+					<div data-appname="artistbio" tabindex="0" role="link" class="songAppsLink songArtistBio themeFontColorDark"><i class="fa fa-user themeFontColorDarkIcon" aria-hidden="true"></i>Artist Bio</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistFb themeFontColorDark"><i class="fa fa-facebook-official themeFontColorDarkIcon" aria-hidden="true"></i>Facebook<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistTw themeFontColorDark"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i>X<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistWeb themeFontColorDark"><i class="fa fa-globe themeFontColorDarkIcon" aria-hidden="true"></i>Website<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<div data-appname="artistevents" tabindex="0" role="link" class="songAppsLink songArtistEv themeFontColorDark"><i class="fa fa-calendar themeFontColorDarkIcon" aria-hidden="true"></i>Events</div>
+					<div data-appname="artistcd" tabindex="0" role="link" class="songAppsLink songArtistCD themeFontColorDark"><i class="fa fa-music themeFontColorDarkIcon" aria-hidden="true"></i>Discography</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistVid themeFontColorDark"><i class="fa fa-youtube-play themeFontColorDarkIcon" aria-hidden="true"></i>Videos<span class="openNewWindowSpan"> Opens a new window</span></a>
+					
+				</div>
+				<div class="progressBar">
+					<div class="progressTime themeFontColorDark"></div>
+					<div class="songDuration themeFontColorDark"></div>
+					<div class="progressLine transportBgColor05"><div class="timerAreaProgress transportBgColor20"></div></div>
+				</div>
+				<div class="songPlaying themeFontColorDark"><span>On now</span><div class="playButton transportBorderColor70" role="button" tabindex="0" aria-label="Play" title="Play"></div><div class="pauseButton" tabindex="0" role="button"  title="Pause" aria-label="Pause"><div class="pauseButtonBar transportBgColor70"></div><div class="pauseButtonBar transportBgColor70"></div></div></div>
+				
+			</div>
+			<div class="volumeControl themeFontColorDark"><i class="fa fa-volume-up"  tabindex="0" role="button" title="Mute / unmute" aria-label="Mute / unmute"></i><div class="volumeTrack transportBgColor05" tabindex="0" role="button" title="Set volume" aria-label="Set volume"><div class="volumePosition transportBgColor20"></div></div></div>
+			<div class="expandSong" onclick="$(this).parent().find('.songCover').click()" tabindex="0" role="link" title="Expand" aria-label="Expand"></div>	
+		</div>
+		<div class="bannerMainArea cellBkgColor">
+			<div class="bannerMainContent cellBkgColor">
+				<div class="bannerSlogan">
+					<div class="bannerSloganTitle themeFontColorDark">Your Friend in Southern Minnesota </div>
+					<div class="bannerSloganSubTitle themeFontColorDark">Thanks for listening!</div>
+				</div>
+				<div class="bannerSong">
+					<img class="songCover songClick" src="https://radio.securenetsystems.net/images/album-art.png" alt="Cover"/>
+					<div class="songDetail">
+						<h2 class="songTitle themeFontColorDark songClick" ></h2>
+						<h3 class="songArtist themeFontColorDark songClick"></h3>
+						<h4 class="songAlbum themeFontColorDark songClick"></h4>
+						<div class="progressBar">
+							<div class="progressTime themeFontColorDark"></div>
+							<div class="songDuration themeFontColorDark"></div>
+							<div class="progressLine transportBgColor05"><div class="timerAreaProgress transportBgColor20"></div></div>
+						</div>
+						<div class="songPlaying themeFontColorDark"><span>On now</span><div class="playButton transportBorderColor70" role="button" tabindex="0" title="Play" aria-label="Play"></div><div class="pauseButton" tabindex="0" role="button" title="Pause" aria-label="Pause"><div class="pauseButtonBar transportBgColor70"></div><div class="pauseButtonBar transportBgColor70"></div></div></div>
+					</div>
+					<div class="volumeControl themeFontColorDark"><i class="fa fa-volume-up" tabindex="0" role="button" title="Mute / unmute" aria-level="Mute / unmute"></i><div class="volumeTrack transportBgColor05" tabindex="0" role="button" title="Set volume" aria-label="Set volume"><div class="volumePosition transportBgColor20"></div></div></div>
+				
+				</div>
+				<div id="bannerM"></div>
+				<div id="bannerD"></div>
+			</div>
+		</div>
+		<div class="afterbannerMainArea colorMainBkg"><div class="aboveBannerContent themeBgColor04"></div></div>
+			
+	</div>
+	<div class="podcastSongArea" style="display:none">
+		
+	</div>
+	<div class="searchSongArea" style="display:none">
+		
+	</div>
+</div>
+<div class="bottomBar themeBgColor80 themeFontColorLight"><div class="scrollingText"></div></div>
+<div class="mediaplayerSection">
+	<div id="mediaplayer"></div>
+	<div id="videoplayer"></div>
+</div>
+</div>
+</div>
+<div id="debugDiv"></div>
+		
+<script language="javascript">
+
+</script>	
+<script src="js/prebid.js?v=4.411"></script>
+<script src="js/bowser.min.js?v=24.05.22"></script>
+<script src="js/jquery.min.js?v=24.05.22"></script>
+<script src="/cirruscore/cirruscore_v2.js?v=1.1"></script>
+<script src="js/html5vast.js"></script>
+<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+
+<script src="js/v8.min.js?v=24.05.22"></script>
+
+							
+
+							<div id="adblockWrapper"></div>
+							<script>
+								function getQueryVariable(variable){
+							       var query = window.location.search.substring(1);
+							       var vars = query.split("&");
+							       for (var i=0;i<vars.length;i++) {
+							               var pair = vars[i].split("=");
+							               if(pair[0] == variable){return pair[1];}
+							       }
+							       return(false);
+								}
+
+								function aS1pEpjGWDJsCjTkgRk9jh99om6Vn7a810tE3oXZPUeGDVj8RKJGXOBspuynfSNmoqtrB82w6lyPeML29Yqt1D469wcuSOr4oPOCNWbLTAqtmCqLT9TkTjGykSdYmM9Ex6u2aSzel4tx0jwBvvPYfebaMHNonUBabJDicmYQinSeS6AIFHcuu(){
+									//console.log(window.iExistNew);
+									if(window.iExist === undefined){
+										console.log("ad blocker detected");
+										$("#adblockWrapper").css("display","block");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\"  style=\"max-width:95%\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb3web.securenetsystems.net/cirrusencore/index.cfm?stationCallSign=KNUJ&&retry=true&playSessionID=F90940DF-CF1C-7038-6B874A2694927053");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "img/blockdetected.jpg");
+											enableStream=false;
+											stopPlayer();
+										}
+									}else if(window.iExist!='6991'){
+										//console.log("ad blocker detected");
+										$("#adblockWrapper").css("display","block");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\"  style=\"max-width:95%\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb3web.securenetsystems.net/cirrusencore/index.cfm?stationCallSign=KNUJ&&retry=true&playSessionID=F90940DF-CF1C-7038-6B874A2694927053");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "img/blockdetected.jpg");
+											enableStream=false;
+											stopPlayer();
+										}
+									}else{
+										$.ajax('scripts/ads/prebid.js?v=1.32')
+										.fail(function(d){
+											allowPrebid=false;
+											//console.log("ad blocker detected");
+											$("#adblockWrapper").css("display","block");
+											//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+											adBlockerPresent = true;
+											$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\"  style=\"max-width:95%\"></a>");
+											var retryVar = getQueryVariable("retry");
+											if(!retryVar){
+												setTimeout(function(){
+													window.location.replace("https://streamdb3web.securenetsystems.net/cirrusencore/index.cfm?stationCallSign=KNUJ&&retry=true&playSessionID=F90940DF-CF1C-7038-6B874A2694927053");
+												}, 500000);
+											}else{
+												$("#blockImage").attr("src", "img/blockdetected.jpg");
+												enableStream=false;
+												stopPlayer();
+											}
+										});
+										adBlockerPresent = false;
+										//console.log("ad blocker NOT detected");
+										$("#adblockWrapper").hide();
+									}
+								}
+
+								if(playerAdvertisingMode=="ADN" || playerAdvertisingMode=="SEQ"){
+									setTimeout(function(){
+										aS1pEpjGWDJsCjTkgRk9jh99om6Vn7a810tE3oXZPUeGDVj8RKJGXOBspuynfSNmoqtrB82w6lyPeML29Yqt1D469wcuSOr4oPOCNWbLTAqtmCqLT9TkTjGykSdYmM9Ex6u2aSzel4tx0jwBvvPYfebaMHNonUBabJDicmYQinSeS6AIFHcuu();
+									}, 500);
+								}
+								var stopPlayerRetry=0;
+								function stopPlayer(){
+									//console.log('A:'+typeof(cirrusP));
+									if(typeof(cirrusP)!='undefined'){
+										//cirrusP.stop();
+									}
+									
+									preRollinProgress=true;
+									//$('body').addClass('preRollinProgress');
+									if(typeof(cirrusP)!='undefined'){
+										//cirrusP.stop();
+									}
+									stopPlayerRetry=stopPlayerRetry+1;
+									if(stopPlayerRetry<10){
+										setTimeout("stopPlayer()",200);
+									}
+								}
+							</script>
+
+		
+<div class="cookieBanner themeFontColorDark" style="font-family:arial;display:none;position:fixed;bottom:0px;left:0px;width:100%;min-height:70px;background:#cdcdcd;z-index:9"><div style="max-width:1100px;margin:0 auto;margin-top:20px;margin-bottom:20px;"><div style="float:right;width:200px;height:100%;text-align:right;"><input type="button" name="cookieButton" class="cookieButton" onclick="acceptCookies()" title="Accept cookies" value="Close"/><br><a href="javascript:void(0)" onclick="openApp('cookies')" class="themeFontColorDark">cookie policy &raquo;</a></div>Securenet Systems uses cookies for the purposes of statistical analysis, improving the friendliness and usability of our website, tailoring content to your interests and engaging with social media. By visiting and using our website, you consent to our use of cookies as described in our cookie policy.</div></div>
+<script language="javascript">
+$(document).ready(function(){
+
+	if(bowser.msie && encoderType=='ACP'){
+		if(parseInt(bowser.version)<=11){
+			$('#mainPageWhite').css('display','none');
+			$('.mediaplayerSection').remove();
+			$('body').append('<div style="font-family:Arial;position:fixed;top:0px;left:0px;right:0px;bottom:0px;text-align:center;font-size:22px;color:#ffffff;background-color:#3e3e3e;"><table border="0" style="width:100%;height:100%;border:0px;"><tr><td valign="middle" align="center">This program cannot be streamed in Internet Explorer 11.<br> Please use an alternate browser such as Edge, Chrome, or Firefox</td></tr></table></div>');
+		};
+	}
+});
+</script>
+
+	<div id="stationBlackoutMessage" style="display:none"></div>  
+
+</body>
+</html>	

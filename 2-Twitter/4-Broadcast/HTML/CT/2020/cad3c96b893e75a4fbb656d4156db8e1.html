@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html id="ie7" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Tom Hill Radio | Host of Talk of the Town, airing 10 am to noon on WATR 1320 am and at WATR.com</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://tomhillradio.com/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://s2.wp.com/wp-content/themes/pub/chateau/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=1690'
+					+ '&is_singular=';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly90b21oaWxscmFkaW8uY29t"
+		+ "&wpcomid=45364620"
+		+ "&time=1716452038";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s.pubmine.com' />
+<link rel='dns-prefetch' href='//x.bidswitch.net' />
+<link rel='dns-prefetch' href='//static.criteo.net' />
+<link rel='dns-prefetch' href='//ib.adnxs.com' />
+<link rel='dns-prefetch' href='//aax.amazon-adsystem.com' />
+<link rel='dns-prefetch' href='//bidder.criteo.com' />
+<link rel='dns-prefetch' href='//cas.criteo.com' />
+<link rel='dns-prefetch' href='//gum.criteo.com' />
+<link rel='dns-prefetch' href='//ads.pubmatic.com' />
+<link rel='dns-prefetch' href='//gads.pubmatic.com' />
+<link rel='dns-prefetch' href='//tpc.googlesyndication.com' />
+<link rel='dns-prefetch' href='//ad.doubleclick.net' />
+<link rel='dns-prefetch' href='//googleads.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//www.googletagservices.com' />
+<link rel='dns-prefetch' href='//cdn.switchadhub.com' />
+<link rel='dns-prefetch' href='//delivery.g.switchadhub.com' />
+<link rel='dns-prefetch' href='//delivery.swid.switchadhub.com' />
+<link rel='dns-prefetch' href='//a.teads.tv' />
+<link rel='dns-prefetch' href='//prebid.media.net' />
+<link rel='dns-prefetch' href='//adserver-us.adtech.advertising.com' />
+<link rel='dns-prefetch' href='//fastlane.rubiconproject.com' />
+<link rel='dns-prefetch' href='//prebid-server.rubiconproject.com' />
+<link rel='dns-prefetch' href='//hb-api.omnitagjs.com' />
+<link rel='dns-prefetch' href='//mtrx.go.sonobi.com' />
+<link rel='dns-prefetch' href='//apex.go.sonobi.com' />
+<link rel='dns-prefetch' href='//u.openx.net' />
+<link rel="alternate" type="application/rss+xml" title="Tom Hill Radio &raquo; Feed" href="https://tomhillradio.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Tom Hill Radio &raquo; Comments Feed" href="https://tomhillradio.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1710334132i&ver=6.6-alpha-58167"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJyFzEESwiAMheELicHa6c7xLClkEA2EMaGMt7euXLhw/b73w2guSDWqBitLco17ylVhyDNiVEgsK/IxqB7gnw03NMLutunHl/7VOSYyBer7Ko9MjnGAUWm83xXUXkyfwLVcTss8zcvZe39/A2ZdPnM=&cssminify=yes' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/wp-content/plugins/gutenberg-core/v18.3.0/build/block-library/style.css?m=1715382909i&cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.wp-block-cover__image-background.has-parallax {
+	background-size: cover;
+}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s2.wp.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpoZmFkYGRuZGmQBAHPvL0Y=&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-6-1' href='https://s2.wp.com/_static/??-eJyVjEEOwiAQAD/ksgGN4sH4Fko3hJYCYZea/r49mF6Nx0lmBj8VfMlCWbCmHmJmDP3AgVqAIRU/M04k1fkZkttKFwgtjsiyJVKe+YL/LJqTmAP/yH35ZkZpqzRwXGoiaLSqG46R5TTgHL2Xl75bba/GPB/TDthVT3U=&cssminify=yes' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='https://s2.wp.com/_static/??-eJx9jcEKg0AMRH+oaVhorR7Eb9E16IpZg8min2889FZ6GYbhPQYPgbhlo2zIBWQtU8qKcdvJd5be0AmmMfW0Ejv2jKoP/K0daZzIXNdvB6PzvyJ+A8MgO6mCJ6fCYLN/6e113IZXU9WfUL/DcgHSTkDo&cssminify=yes' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-10-1' href='https://s2.wp.com/_static/??-eJyNjUEKwjAQRS9kHNuK6EI8SzqOaTSZCcmE0tu36kJEKO7+g/f4MCaDwkqsoANFKpBqDzhYJVuh6BRoi6VsYF30jG/ZjAkl/pMsClxtfvy4sZoUqvNcwJGYIGjVC3+BuQXr81qaqQ/iluleTx98Rpd4bvanQ9u03e54nwE+FWCm&cssminify=yes' type='text/css' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='print-css-11-1' href='https://s1.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035i&cssminify=yes' type='text/css' media='print' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-14-1' href='https://s2.wp.com/wp-content/themes/h4/global.css?m=1420737423i&cssminify=yes' type='text/css' media='all' />
+<script type="text/javascript" id="media-video-jwt-bridge-js-extra">
+/* <![CDATA[ */
+var videopressAjax = {"ajaxUrl":"https:\/\/tomhillwatr.wordpress.com\/wp-admin\/admin-ajax.php","bridgeUrl":"\/wp-content\/mu-plugins\/jetpack-plugin\/moon\/jetpack_vendor\/automattic\/jetpack-videopress\/build\/lib\/token-bridge.js","post_id":"1690"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpcom-actionbar-placeholder-js-extra">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"45364620","postID":"0","siteURL":"https:\/\/tomhillradio.com","xhrURL":"https:\/\/tomhillradio.com\/wp-admin\/admin-ajax.php","nonce":"85703cf2a3","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s0.wp.com/_static/??-eJxdTlsKAjEMvJAx6grqh3gU6SOWrm1SmnbV27uCCvo1zIOZwVsBJ9yIG46KWWxMBF2pmjBrEPkiy1EX+JurqUGpcn/8e7lDST1EVhypFeOubz5XC3+080TspaLpTbJpLbpveoqepFRSRdtj8piixSZXYrA1+kD/izZJ+G7epHrjFVwyqqSvqy4XnDYvABaG4EudK075uN6tdodh2G734xMMTWFO'></script>
+<script type="text/javascript" id="rlt-proxy-js-after">
+/* <![CDATA[ */
+	window.addEventListener( 'DOMContentLoaded', function() {
+		rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+	} );
+/* ]]> */
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://tomhillwatr.wordpress.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/34lpq' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tom Hill Radio" />
+<meta property="og:description" content="Host of Talk of the Town, airing 10 am to noon on WATR 1320 am and at WATR.com" />
+<meta property="og:url" content="https://tomhillradio.com/" />
+<meta property="og:site_name" content="Tom Hill Radio" />
+<meta property="og:image" content="https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=200" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel='openid.server' href='https://tomhillradio.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://tomhillradio.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://tomhillradio.com/osd.xml" title="Tom Hill Radio" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#3b5661" />
+
+		<style type="text/css">
+		#menu li,
+		.post-date em,
+		.sticky .entry-format,
+		.more-posts .sticky h2.entry-format,
+		.more-posts h2.entry-format,
+		#comments h3 span {
+			background-color: #3b5661;
+		}
+
+		#menu a {
+			border-color: #3b5661		}
+		</style>
+		<style type="text/css">
+		#menu li,
+		.sticky .entry-format,
+		.more-posts .sticky h2.entry-format,
+		.more-posts h2.entry-format,
+		#comments h3 span {
+			background-color: transparent;
+		}
+
+		#menu a {
+			border-color: transparent;
+		}
+		</style>
+	<style>
+		#page {
+			border-color: #00bdc4;
+		}
+		#main-title #site-title a:hover,
+		.post-title h1,
+		.post-title h1 a,
+		.post-extras .post-edit-link,
+		.post-entry a,
+		.post-entry .more-link:hover,
+		#author-description a,
+		.more-posts .page-title em,
+		#more-posts-inner a:hover,
+		#comments li a:hover,
+		.comment-text p a,
+		.comment-text .reply-link a:hover,
+		#comments li.byuser .comment-author,
+		#comments #respond h3,
+		.sidebar-widget a:active,
+		#calendar_wrap table td a,
+		#nav-below a:active,
+		#error404 a:hover,
+		#menu .current-menu-item > a,
+		#menu .current_page_item > a,
+		#comment-nav-above a,
+		#comment-nav-below a,
+		.comment-text table a {
+			color: #00bdc4;
+		}
+	</style>
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Tom Hill Radio" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Host of Talk of the Town, airing 10 am to noon on WATR 1320 am and at WATR.com" /><meta name="description" content="Host of Talk of the Town, airing 10 am to noon on WATR 1320 am and at WATR.com" />
+		<style type="text/css">
+					#site-title a,
+			#site-description {
+				color: #00bdc4 !important;
+			}
+			</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #3b5661; background-image: url("https://tomhillwatr.files.wordpress.com/2013/06/amazing-background-1.png"); background-position: center top; background-size: auto; background-repeat: repeat-y; background-attachment: fixed; }
+</style>
+	<script type="text/javascript">
+/* <![CDATA[ */
+var wa_smart = { 'network_id': 3905, 'site_id': 474853, 'page_id': 1572546, 'blog_id': 45364620, 'post_id': null, 'theme': 'pub/chateau', 'target': 'wp_blog_id=45364620;language=en;adflow=true', '_': { 'title': 'Advertisement', 'privacy_settings': 'Privacy Settings' }, 'inline': { 'format_id': 110354, 'max_slots': 20, 'max_blaze_slots': 20, 'enabled': false, 'adflow_enabled': true } }; wa_smart.cmd = [];
+/* ]]> */
+</script>
+		<script type="text/javascript">
+		function __ATA_CC() {var v = document.cookie.match('(^|;) ?personalized-ads-consent=([^;]*)(;|$)');return v ? 1 : 0;}
+		var __ATA_PP = { 'pt': 0, 'ht': 0, 'tn': 'chateau', 'uloggedin': 0, 'amp': false, 'consent': __ATA_CC(), 'gdpr_applies': false, 'ad': { 'label': { 'text': 'Advertisements' }, 'reportAd': { 'text': 'Report this ad' } }, 'disabled_slot_formats': [], 'siteid': 8982, 'blogid': 45364620 };
+		var __ATA = __ATA || {};
+		__ATA.cmd = __ATA.cmd || [];
+		__ATA.criteo = __ATA.criteo || {};
+		__ATA.criteo.cmd = __ATA.criteo.cmd || [];
+		</script>
+		<script type="text/javascript">
+		(function(){var g=Date.now||function(){return+new Date};function h(a,b){a:{for(var c=a.length,d="string"==typeof a?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a)){b=e;break a}b=-1}return 0>b?null:"string"==typeof a?a.charAt(b):a[b]};function k(a,b,c){c=null!=c?"="+encodeURIComponent(String(c)):"";if(b+=c){c=a.indexOf("#");0>c&&(c=a.length);var d=a.indexOf("?");if(0>d||d>c){d=c;var e=""}else e=a.substring(d+1,c);a=[a.substr(0,d),e,a.substr(c)];c=a[1];a[1]=b?c?c+"&"+b:b:c;a=a[0]+(a[1]?"?"+a[1]:"")+a[2]}return a};var l=0;function m(a,b){var c=document.createElement("script");c.src=a;c.onload=function(){b&&b(void 0)};c.onerror=function(){b&&b("error")};a=document.getElementsByTagName("head");var d;a&&0!==a.length?d=a[0]:d=document.documentElement;d.appendChild(c)}function n(a){var b=void 0===b?document.cookie:b;return(b=h(b.split("; "),function(c){return-1!=c.indexOf(a+"=")}))?b.split("=")[1]:""}function p(a){return"string"==typeof a&&0<a.length}
+		function r(a,b,c){b=void 0===b?"":b;c=void 0===c?".":c;var d=[];Object.keys(a).forEach(function(e){var f=a[e],q=typeof f;"object"==q&&null!=f||"function"==q?d.push(r(f,b+e+c)):null!==f&&void 0!==f&&(e=encodeURIComponent(b+e),d.push(e+"="+encodeURIComponent(f)))});return d.filter(p).join("&")}function t(a,b){a||((window.__ATA||{}).config=b.c,m(b.url))}var u=Math.floor(1E13*Math.random()),v=window.__ATA||{};window.__ATA=v;window.__ATA.cmd=v.cmd||[];v.rid=u;v.createdAt=g();var w=window.__ATA||{},x="s.pubmine.com";
+		w&&w.serverDomain&&(x=w.serverDomain);var y="//"+x+"/conf",z=window.top===window,A=window.__ATA_PP&&window.__ATA_PP.gdpr_applies,B="boolean"===typeof A?Number(A):null,C=window.__ATA_PP||null,D=z?document.referrer?document.referrer:null:null,E=z?window.location.href:document.referrer?document.referrer:null,F,G=n("__ATA_tuuid");F=G?G:null;var H=window.innerWidth+"x"+window.innerHeight,I=n("usprivacy"),J=r({gdpr:B,pp:C,rid:u,src:D,ref:E,tuuid:F,vp:H,us_privacy:I?I:null},"",".");
+		(function(a){var b=void 0===b?"cb":b;l++;var c="callback__"+g().toString(36)+"_"+l.toString(36);a=k(a,b,c);window[c]=function(d){t(void 0,d)};m(a,function(d){d&&t(d)})})(y+"?"+J);}).call(this);
+		</script>	<script>
+		var sas_fallback = sas_fallback || [];
+		sas_fallback.push(
+			{ tag: "&lt;div id=&quot;atatags-26942-664efac6a5258&quot;&gt;&lt;/div&gt;&lt;script&gt;__ATA.cmd.push(function() {__ATA.initDynamicSlot({id: \'atatags-26942-664efac6a5258\',location: 120,formFactor: \'001\',label: {text: \'Advertisements\',},creative: {reportAd: {text: \'Report this ad\',},privacySettings: {text: \'Privacy\',}}});});&lt;/script&gt;", type: 'belowpost' },
+			{ tag: "&lt;div id=&quot;atatags-26942-{{unique_id}}&quot;&gt;&lt;/div&gt;&lt;script&gt;__ATA.cmd.push(function() {__ATA.initDynamicSlot({id: \'atatags-26942-{{unique_id}}\',location: 310,formFactor: \'001\',label: {text: \'Advertisements\',},creative: {reportAd: {text: \'Report this ad\',},privacySettings: {text: \'Privacy\',}}});});&lt;/script&gt;", type: 'inline' }
+		);
+	</script>		<script type="text/javascript">
+
+			window.doNotSellCallback = function() {
+
+				var linkElements = [
+					'a[href="https://wordpress.com/?ref=footer_blog"]',
+					'a[href="https://wordpress.com/?ref=footer_website"]',
+					'a[href="https://wordpress.com/?ref=vertical_footer"]',
+					'a[href^="https://wordpress.com/?ref=footer_segment_"]',
+				].join(',');
+
+				var dnsLink = document.createElement( 'a' );
+				dnsLink.href = 'https://wordpress.com/advertising-program-optout/';
+				dnsLink.classList.add( 'do-not-sell-link' );
+				dnsLink.rel = 'nofollow';
+				dnsLink.style.marginLeft = '0.5em';
+				dnsLink.textContent = 'Do Not Sell or Share My Personal Information';
+
+				var creditLinks = document.querySelectorAll( linkElements );
+
+				if ( 0 === creditLinks.length ) {
+					return false;
+				}
+
+				Array.prototype.forEach.call( creditLinks, function( el ) {
+					el.insertAdjacentElement( 'afterend', dnsLink );
+				});
+
+				return true;
+			};
+
+		</script>
+		<style type="text/css" id="custom-colors-css">	#menu li {
+		background: transparent;
+	}
+	#menu a {
+		border-color: transparent;
+	}
+	#search #s {
+		background: #fff;
+	}
+#menu a { color: #BABABA;}
+#menu ul ul a,#menu ul ul a:hover,#page #menu a:hover, .post-entry a:hover, .post-extras .post-edit-link:hover { color: #7F7F7F;}
+#main-title #site-title a, #more-posts-inner a { color: #FFFFFF;}
+.sticky .entry-format, .more-posts .sticky h2.entry-format, .more-posts h2.entry-format, .featured { color: #FFFFFF;}
+.post-date { color: #D1D1D1;}
+#page #menu a:hover, .post-entry a:hover, .post-extras .post-edit-link:hover { color: #FFFFFF;}
+a.entry-format-link, a.entry-format-link:visited { color: #D1D1D1;}
+.post-extras a:hover { color: #D1D1D1;}
+#comments h3 { color: #D1D1D1;}
+#comments li.pingback a,.comment-text p a:hover { color: #D1D1D1;}
+.comment-text .reply-link a { color: #D1D1D1;}
+.comment-author,.comment-author a { color: #D1D1D1;}
+#comments #reply-title a, #comment-nav-above a, #comment-nav-below a, .comment-text table a { color: #D1D1D1;}
+.comment-text p a:hover { color: #D1D1D1;}
+.post-entry .more-link { color: #D1D1D1;}
+.post-info a:hover { color: #D1D1D1;}
+.sidebar-widget a:hover { color: #D1D1D1;}
+.sidebar-widget { color: #D1D1D1;}
+.featured a { color: #D1D1D1;}
+#main-title #site-description { color: #BABABA;}
+.post-info { color: #BABABA;}
+.post-date span { color: #D1D1D1;}
+.post-info .post-com-count a { color: #BABABA;}
+#main-image { border-color: #ddd;}
+#main-image { border-color: rgba( 221, 221, 221, 0.3 );}
+#main-image img { border-color: #ddd;}
+#main-image img { border-color: rgba( 221, 221, 221, 0.3 );}
+.post-title h1 { border-color: #ddd;}
+.post-title h1 { border-color: rgba( 221, 221, 221, 0.3 );}
+#content,.content-sidebar #content { border-color: #ddd;}
+#content,.content-sidebar #content { border-color: rgba( 221, 221, 221, 0.3 );}
+.sidebar-widget li { border-color: #ddd;}
+.sidebar-widget li { border-color: rgba( 221, 221, 221, 0.3 );}
+.more-posts .page-title, .more-posts .notice { border-color: #ddd;}
+.more-posts .page-title, .more-posts .notice { border-color: rgba( 221, 221, 221, 0.3 );}
+#more-posts-inner span { border-color: #ddd;}
+#more-posts-inner span { border-color: rgba( 221, 221, 221, 0.3 );}
+#menu .current-menu-item > a, #menu .current_page_item > a, #menu .current-menu-ancestor > a { border-top-color: #ddd;}
+#menu .current-menu-item > a, #menu .current_page_item > a, #menu .current-menu-ancestor > a { border-top-color: rgba( 221, 221, 221, 0.3 );}
+.single .post { border-color: #ddd;}
+.single .post { border-color: rgba( 221, 221, 221, 0.3 );}
+.post-extras strong { border-color: #ddd;}
+.post-extras strong { border-color: rgba( 221, 221, 221, 0.3 );}
+.comment-text { border-color: #ddd;}
+.comment-text { border-color: rgba( 221, 221, 221, 0.3 );}
+#comments li { border-color: #ddd;}
+#comments li { border-color: rgba( 221, 221, 221, 0.3 );}
+.post-entry { color: #FFFFFF;}
+.sidebar-widget a { color: #FFFFFF;}
+.post-extras { color: #FFFFFF;}
+.post-extras p a { color: #FFFFFF;}
+#more-posts-inner article { color: #D1D1D1;}
+.comment-text p { color: #D1D1D1;}
+#menu .current-menu-item > a, #menu .current_page_item > a, #menu .current-menu-ancestor > a { border-bottom-color: #ccc;}
+#menu .current-menu-item > a, #menu .current_page_item > a, #menu .current-menu-ancestor > a { border-bottom-color: rgba( 204, 204, 204, 0.3 );}
+#comments #respond h3 { border-color: #ccc;}
+#comments #respond h3 { border-color: rgba( 204, 204, 204, 0.3 );}
+#comments h3 { border-bottom: #ccc;}
+#comments h3 { border-bottom: rgba( 204, 204, 204, 0.3 );}
+.sidebar-widget li  { color: #FFFFFF;}
+.wp-caption .wp-caption-text:before,.wp-caption .wp-caption-text, .gallery-caption { color: #D1D1D1;}
+.more-posts .page-title, .more-posts .notice { color: #D1D1D1;}
+#comments li.pingback .comment-text .edit-comment a { color: #D1D1D1;}
+#copyright a { color: #919191;}
+#page { background-image: #3b5661;}
+.sticky .entry-format, .more-posts .sticky h2.entry-format, .more-posts h2.entry-format, .featured { background-color: #3b5661;}
+.post-date em { background-color: #3b5661;}
+#main-image { border-color: #3b5661;}
+#main-image { border-color: rgba( 59, 86, 97, 0.1 );}
+.post-info a { color: #D6D2B2;}
+.sidebar-widget h1 { color: #D6D2B2;}
+.sidebar-widget h1, #subscribe-item h1 { color: #D6D2B2;}
+.post-entry h3, #comments .comment-text h3 { color: #D6D2B2;}
+.post-entry blockquote p, .comment-text blockquote p { color: #D6D2B2;}
+#main-title #site-title a:hover { color: #F9C2C2;}
+.post-title h1,.post-title h1 a { color: #F9C2C2;}
+#page { border-color: #990000;}
+.more-posts .page-title em { color: #F9C2C2;}
+.sidebar-widget a:active { color: #F9C2C2;}
+#page .post-edit-link a { color: #F9C2C2;}
+#menu .current-menu-item > a, #menu .current_page_item > a, #menu .current-menu-ancestor > a { color: #F9C2C2;}
+.post-title h1, .post-entry a, .post-extras .post-edit-link, #more-posts-inner a:hover { color: #F9C2C2;}
+#comments #respond h3 { color: #F9C2C2;}
+#nav-below a:active { color: #990000;}
+.comment-author a:hover { color: #F9C2C2;}
+.comment-text p a { color: #F9C2C2;}
+.post-entry .more-link:hover { color: #F9C2C2;}
+#comments li a:hover { color: #F9C2C2;}
+</style>
+<link rel="icon" href="https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=180" />
+<meta name="msapplication-TileImage" content="https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=270" />
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_gat._anonymizeIp']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script>
+</head>
+
+<body class="home blog custom-background customizer-styles-applied two-column content-sidebar jetpack-reblog-enabled">
+<div id="page" class="hfeed">
+		<div id="page-inner">
+		<header id="branding" role="banner">
+			<nav id="menu" role="navigation">
+				<ul class="menu clear-fix">
+<li class="page_item page-item-1"><a href="https://tomhillradio.com/about/">About Tom Hill III</a></li>
+<li class="page_item page-item-440"><a href="https://tomhillradio.com/tom-hill-iii-interviews-governor-malloy/">Tom Hill III interviews Governor Malloy</a></li>
+</ul>
+			</nav><!-- end #menu -->
+
+			<div id="main-title">
+				<hgroup>
+					<h1 id="site-title"><a href="https://tomhillradio.com/" title="Tom Hill Radio" rel="home">Tom Hill Radio</a></h1>
+												<h2 id="site-description">~ Host of Talk of the Town, airing 10 am to noon on WATR 1320 am and at WATR.com</h2>
+									</hgroup>
+			</div><!-- end #main-title -->
+
+							<div id="search">
+					
+<form method="get" action="https://tomhillradio.com//" >
+	<div>
+		<label for="s" class="assistive-text">Search:</label>
+		<input type="text" value="Search&hellip;" name="s" id="s" onfocus="this.value=''" />
+		<input type="submit" name="search" value="Go" />
+	</div>
+</form>
+				</div><!-- end #search -->
+			
+			<div id="main-image">
+							<a href="https://tomhillradio.com/">
+													<img src="https://tomhillradio.com/wp-content/uploads/2013/02/cropped-radio_00357749.jpg" width="960" height="260" alt="Tom Hill Radio" title="Tom Hill Radio" />
+									</a>
+						</div><!-- end #main-image -->
+		</header><!-- #branding -->
+		<div id="main" class="clear-fix">
+<div id="primary">
+	<div id="content" class="clear-fix" role="main">
+
+	<article id="post-1690" class="post-1690 post type-post status-publish format-standard hentry category-watr tag-tom-chute tag-watr">
+	<header class="post-title">
+								<h1><a href="https://tomhillradio.com/2023/08/11/thank-you-congratulations/" rel="bookmark">Thank You &amp;&nbsp;Congratulations</a></h1>								<a href="https://tomhillradio.com/2023/08/11/thank-you-congratulations/" class="post-permalink">		<p class="post-date">
+			<strong>11</strong>
+			<em>Friday</em>
+			<span>Aug 2023</span>
+		</p>
+	</a>
+	<div class="post-info clear-fix">
+		<p>
+			Posted <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://tomhillradio.com/author/tomhillradio/" title="View all posts by tomhillradio" rel="author">tomhillradio</a></span></span> in <a href="https://tomhillradio.com/tag/watr/" rel="category tag">WATR</a>		</p>
+		<p class="post-com-count">
+			<strong>&asymp; <span>Comments Off<span class="screen-reader-text"> on Thank You &amp;&nbsp;Congratulations</span></span></strong>
+		</p>
+	</div><!-- end .post-info -->
+						</header><!-- end .post-title -->
+	<div class="post-content clear-fix">
+
+			<div class="post-extras">
+				<p><strong>Tags</strong></p><p><a href="https://tomhillradio.com/tag/tom-chute/" rel="tag">Tom Chute</a>, <a href="https://tomhillradio.com/tag/watr/" rel="tag">WATR</a></p>	</div><!-- end .post-extras -->
+
+		<div class="post-entry">
+			
+<p>I would like to thank Tom Chute general manager, and morning drive host from <a href="http://watr.com">watr.com</a> and owner/partner, Dave Webster, for allowing me to be the “interim host”  of talk of the town for the last six months. Also, the callers &amp; active listeners  in the audience were very gracious in their support of the program .</p>
+
+
+
+<p>My lead sponsors, the Savings Bank of Danbury: with three branches in greater Waterbury and the Blasius Automotive Group: with 14 dealerships in CT &amp; MA gave us the financial horsepower to deliver daily a credible LIVE program. </p>
+
+
+
+<p>I hope to be back with some sort of interesting programming in mid September. Also, would like to congratulate Tom Chute on his retirement at the end of September.  I’ve had the pleasure working with Tom for the last 35 years and he’s a Top Shelf Pro &amp; everything he does.</p>
+
+
+
+<p>Most Sincerely </p>
+
+
+
+<p>Tom Hill III, CCIM/SIOR</p>
+			<div id="atatags-26942-664efac6aa515"></div>
+			
+			<script>
+				__ATA.cmd.push(function() {
+					__ATA.initDynamicSlot({
+						id: 'atatags-26942-664efac6aa515',
+						location: 120,
+						formFactor: '001',
+						label: {
+							text: 'Advertisements',
+						},
+						creative: {
+							reportAd: {
+								text: 'Report this ad',
+							},
+							privacySettings: {
+								text: 'Privacy',
+								
+							}
+						}
+					});
+				});
+			</script>					</div><!-- end .post-entry -->
+
+	</div><!-- end .post-content -->
+</article><!-- #post-1690 -->
+				<div class="more-posts">
+					<h2 class="notice">Previous articles</h2>
+					<div id="more-posts-inner">
+						<div class="clear-fix"><article id="post-1685" class="post-1685 post type-post status-publish format-standard hentry category-real-estate category-talk-of-the-town category-watr">
+	<header>
+				<h1><a href="https://tomhillradio.com/2023/03/30/paul-lavoie-cmo-interview/" rel="bookmark">Paul Lavoie CMO&nbsp;interview</a></h1>
+	</header>
+	<span>March 30, 2023</span>
+	<p>Paul Lavoie CMO of Ct.  visited WATR’s Talk of the Town to discuss the state of manufacturing currently across the state. </p>
+<p><a href="https://tomhillradio.com/2023/03/30/paul-lavoie-cmo-interview/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+</article><!-- #post-1685 -->
+<article id="post-1655" class="post-1655 post type-post status-publish format-image hentry category-sales tag-i-sell-lease-farms-land tag-land-ho post_format-post-format-image">
+	<header>
+					<p><a class="entry-format-link" href="https://tomhillradio.com/type/image/" title="All Image posts">Image</a></p>
+				<h1><a href="https://tomhillradio.com/2023/02/09/land-ho/" rel="bookmark">Land Ho!</a></h1>
+	</header>
+	<span>February 9, 2023</span>
+	<p>Land Ho! I sell/lease farms &amp; land.</p>
+<p><a href="https://tomhillradio.com/2023/02/09/land-ho/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+</article><!-- #post-1655 -->
+</div><!-- end clear-fix --><div class="clear-fix"><article id="post-1648" class="post-1648 post type-post status-publish format-standard hentry category-real-estate tag-tom-hills-commercial-real-estate-hour tag-watr">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/04/14/tom-hills-commercial-real-estate-hour-4-14-22/" rel="bookmark">Tom Hill’s Commercial Real Estate Hour&nbsp;4/14/22</a></h1>
+	</header>
+	<span>April 14, 2022</span>
+	<p>I was honored to have my dear friend and expert lender Ralph Richard from SBD,  who is a repeat guest, and I don’t know how he did this but he brought Catherine Marx who is the head of small business administration “SBA“ for all of CT. </p>
+<p><a href="https://tomhillradio.com/2022/04/14/tom-hills-commercial-real-estate-hour-4-14-22/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+</article><!-- #post-1648 -->
+<article id="post-1641" class="post-1641 post type-post status-publish format-standard hentry category-real-estate tag-tom-hills-commercial-real-estate-hour tag-watr">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/04/12/tom-hills-commercial-real-estate-hour-4-12-22/" rel="bookmark">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;4/12/22</a></h1>
+	</header>
+	<span>April 12, 2022</span>
+	<p>this features Stephani Hayes from SBD, she is an amazingly talented experienced commercial real estate lender and she brought with her Rob Nocera who is the executive Director of the Waterbury housing fund. </p>
+<p><a href="https://tomhillradio.com/2022/04/12/tom-hills-commercial-real-estate-hour-4-12-22/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+</article><!-- #post-1641 -->
+</div><!-- end clear-fix --><div class="clear-fix"><article id="post-1632" class="post-1632 post type-post status-publish format-standard hentry category-uncategorized">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/04/04/tom-hills-commercial-real-estate-hour-3-30-22/" rel="bookmark">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;3/30/22</a></h1>
+	</header>
+	<span>April 4, 2022</span>
+	<p>Guests Ron Pugliese, president of the Naugatuck Economic Development Corp.; and John McKenna of the Republican-American</p>
+</article><!-- #post-1632 -->
+<article id="post-1625" class="post-1625 post type-post status-publish format-standard hentry category-uncategorized">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/03/04/tom-hills-commercial-real-estate-hour-3-2-22/" rel="bookmark">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;3/2/22</a></h1>
+	</header>
+	<span>March 4, 2022</span>
+	<p>Guests Brian Berkson from Heartland credit card payment systems and Ralph Richard, senior commercial real estate lender at Savings Bank &hellip;</p>
+<p><a href="https://tomhillradio.com/2022/03/04/tom-hills-commercial-real-estate-hour-3-2-22/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+</article><!-- #post-1625 -->
+</div><!-- end clear-fix --><div class="clear-fix"><article id="post-1614" class="post-1614 post type-post status-publish format-standard hentry category-uncategorized">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/02/03/tom-hills-commercial-real-estate-hour/" rel="bookmark">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;2/2/22</a></h1>
+	</header>
+	<span>February 3, 2022</span>
+	<p>Interview with Attorney Ross Fingold, CRE expert</p>
+</article><!-- #post-1614 -->
+<article id="post-1608" class="post-1608 post type-post status-publish format-standard hentry category-commercial-real-estate">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/02/01/tom-hills-commercial-real-estate-hour-1-19-22/" rel="bookmark">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;1/19/22</a></h1>
+	</header>
+	<span>February 1, 2022</span>
+	<p>Interview with Stephanie Hayes, commercial lender at Savings Bank of Danbury.</p>
+</article><!-- #post-1608 -->
+</div><!-- end clear-fix --><div class="clear-fix"><article id="post-1602" class="post-1602 post type-post status-publish format-standard hentry category-commercial-real-estate">
+	<header>
+				<h1><a href="https://tomhillradio.com/2022/02/01/tom-hills-commerical-real-estate-hour-1-5-22/" rel="bookmark">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;1/5/22</a></h1>
+	</header>
+	<span>February 1, 2022</span>
+	<p>Interview with Rich Evans, Community Investment Corp.</p>
+</article><!-- #post-1602 -->
+</div><!-- end clear-fix -->					</div><!-- more-posts-inner -->
+				</div><!-- more-posts -->
+	
+			<nav id="nav-below" class="clear-fix">
+
+			<div class="nav-previous"><a href="https://tomhillradio.com/page/2/" >&larr; Older posts</a></div>
+			<div class="nav-next"></div>
+		</nav><!-- #nav-below -->
+	
+	</div><!-- end #content -->
+</div><!-- end #primary -->
+
+	<div id="secondary" class="widget-area" role="complementary">
+		
+		<aside id="media_image-2" class="sidebar-widget widget_media_image"><h1 class="widget-title">Tom Hill</h1><style>.widget.widget_media_image { overflow: hidden; }.widget.widget_media_image img { height: auto; max-width: 100%; }</style><img width="529" height="353" src="https://tomhillradio.com/wp-content/uploads/2020/10/tom-hill_watr-sign-6947.jpg" class="image wp-image-1484 alignnone attachment-full size-full" alt="" decoding="async" loading="lazy" style="max-width: 100%; height: auto;" data-attachment-id="1484" data-permalink="https://tomhillradio.com/tom-hill_watr-sign-6947/" data-orig-file="https://tomhillradio.com/wp-content/uploads/2020/10/tom-hill_watr-sign-6947.jpg" data-orig-size="5427,3618" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;5.6&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark II&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1597669326&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;43&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.008&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Tom Hill_WATR Sign 6947" data-image-description="" data-image-caption="" data-medium-file="https://tomhillradio.com/wp-content/uploads/2020/10/tom-hill_watr-sign-6947.jpg?w=300" data-large-file="https://tomhillradio.com/wp-content/uploads/2020/10/tom-hill_watr-sign-6947.jpg?w=529" /></aside><aside id="text-2" class="sidebar-widget widget_text"><h1 class="widget-title">Info about Tom and Hill&#8217;s Gallery</h1>			<div class="textwidget"><div id="m_8425877793932548464AppleMailSignature">We do consider guests:</div>
+<div id="m_8425877793932548464AppleMailSignature"><a href="tel:%28203%29%20755-4455" target="_blank" rel="noopener">203-755-4455</a></div>
+<div id="m_8425877793932548464AppleMailSignature"> .</div>
+<div id="m_8425877793932548464AppleMailSignature">Recording Artists can submit CD&#8217;s for consideration by mail to:</div>
+<div>.</div>
+<div id="m_8425877793932548464AppleMailSignature">Hill&#8217;s Gallery</div>
+<div id="m_8425877793932548464AppleMailSignature">c/o WATR 1320 AM</div>
+<div id="m_8425877793932548464AppleMailSignature">One Broadcast Lane</div>
+<div id="m_8425877793932548464AppleMailSignature">Waterbury Ct 06706</div>
+<div id="m_8425877793932548464AppleMailSignature"> .</div>
+<div id="m_8425877793932548464AppleMailSignature">We do consider Sponsor&#8217;s</div>
+<div id="m_8425877793932548464AppleMailSignature">For Hill&#8217;s Gallery &amp;</div>
+<div id="m_8425877793932548464AppleMailSignature">Across the entire spectrum of WATR 1320 Am. Call Tom @</div>
+<div id="m_8425877793932548464AppleMailSignature">203-755-HILL (4455)</div>
+<div id="m_8425877793932548464AppleMailSignature"> .</div>
+<div id="m_8425877793932548464AppleMailSignature">Sports:</div>
+<div id="m_8425877793932548464AppleMailSignature">Tom is Color Commentator at Lime Rock Park. World Class</div>
+<div id="m_8425877793932548464AppleMailSignature">Sports Car Racing.</div>
+<div id="m_8425877793932548464AppleMailSignature"><a href="http://www.limerock.com" target="_blank" rel="noopener">www.limerock.com</a></div>
+<div id="m_8425877793932548464AppleMailSignature">He is also &#8220;The Voice&#8221; of the Griskus Triathlon Series and calls many</div>
+<div id="m_8425877793932548464AppleMailSignature">Road races &amp; once called</div>
+<div id="m_8425877793932548464AppleMailSignature">The Parachute Jumping extravaganza for 75th anniversary of the Ciazzo family&#8217;s Frankie&#8217;s Hot Dog Chain!</div>
+<div id="m_8425877793932548464AppleMailSignature"> .</div>
+<div id="m_8425877793932548464AppleMailSignature">Guest Speaker &amp; Emcee: Entertaining &amp; some say &#8220;comical&#8221; too! You pick from above subjects or request considered.</div>
+<div id="m_8425877793932548464AppleMailSignature"></div>
+</div>
+		</aside><aside id="widget_contact_info-2" class="sidebar-widget widget_contact_info"><h1 class="widget-title">Tom Hill</h1><div itemscope itemtype="http://schema.org/LocalBusiness"><div class="confit-address" itemscope itemtype="http://schema.org/PostalAddress" itemprop="address"><a href="https://maps.google.com/maps?z=16&#038;q=hill%27s%2Bgallery%2Bc%2Fo%2Bwatr%2Bone%2Bbroadcast%2Blane%2Bwaterbury%2C%2Bct%2B06706%2Bsales%40tomhill.com" target="_blank" rel="noopener noreferrer">Hill&#039;s Gallery<br/>c/o WATR<br/>One Broadcast Lane<br/>Waterbury, CT  06706<br/>sales@tomhill.com</a></div><div class="confit-phone"><span itemprop="telephone">203-755-4455</span></div><div class="confit-hours" itemprop="openingHours">anytime</div></div></aside><aside id="linkcat-1356" class="sidebar-widget widget_links"><h1 class="widget-title">Blogroll</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="https://www.facebook.com/tom.hilliii">Tom Hill III Facebook page</a></li>
+<li><a href="http://www.tomhill.com/index.html" rel="me noopener" title="Tom Hill’s web site" target="_blank">Tom Hill Realty &amp; Investment, LLC</a></li>
+<li><a href="https://www.facebook.com/TomHillRealtyInvestment/">Tom Hill Realty and Investment Facebook page</a></li>
+<li><a href="https://twitter.com/Tom_Hill_III">Tom Hill Realty Twitter</a></li>
+<li><a href="http://www.watr.com" title="WATR Radio, Home of Tim Hill&#8217;s Special Edition Saturday">WATR 1320 AM</a></li>
+
+	</ul>
+</aside>
+
+		<aside id="recent-posts-2" class="sidebar-widget widget_recent_entries">
+		<h1 class="widget-title">Recent Posts</h1>
+		<ul>
+											<li>
+					<a href="https://tomhillradio.com/2023/08/11/thank-you-congratulations/">Thank You &amp;&nbsp;Congratulations</a>
+									</li>
+											<li>
+					<a href="https://tomhillradio.com/2023/03/30/paul-lavoie-cmo-interview/">Paul Lavoie CMO&nbsp;interview</a>
+									</li>
+											<li>
+					<a href="https://tomhillradio.com/2023/02/09/land-ho/">Land Ho!</a>
+									</li>
+											<li>
+					<a href="https://tomhillradio.com/2022/04/14/tom-hills-commercial-real-estate-hour-4-14-22/">Tom Hill’s Commercial Real Estate Hour&nbsp;4/14/22</a>
+									</li>
+											<li>
+					<a href="https://tomhillradio.com/2022/04/12/tom-hills-commercial-real-estate-hour-4-12-22/">Tom Hill&#8217;s Commercial Real Estate Hour&nbsp;4/12/22</a>
+									</li>
+					</ul>
+
+		</aside><aside id="archives-2" class="sidebar-widget widget_archive"><h1 class="widget-title">Archives</h1>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+		<select id="archives-dropdown-2" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://tomhillradio.com/2023/08/'> August 2023 </option>
+	<option value='https://tomhillradio.com/2023/03/'> March 2023 </option>
+	<option value='https://tomhillradio.com/2023/02/'> February 2023 </option>
+	<option value='https://tomhillradio.com/2022/04/'> April 2022 </option>
+	<option value='https://tomhillradio.com/2022/03/'> March 2022 </option>
+	<option value='https://tomhillradio.com/2022/02/'> February 2022 </option>
+	<option value='https://tomhillradio.com/2021/11/'> November 2021 </option>
+	<option value='https://tomhillradio.com/2021/07/'> July 2021 </option>
+	<option value='https://tomhillradio.com/2021/06/'> June 2021 </option>
+	<option value='https://tomhillradio.com/2021/05/'> May 2021 </option>
+	<option value='https://tomhillradio.com/2021/04/'> April 2021 </option>
+	<option value='https://tomhillradio.com/2021/03/'> March 2021 </option>
+	<option value='https://tomhillradio.com/2021/02/'> February 2021 </option>
+	<option value='https://tomhillradio.com/2021/01/'> January 2021 </option>
+	<option value='https://tomhillradio.com/2020/11/'> November 2020 </option>
+	<option value='https://tomhillradio.com/2020/10/'> October 2020 </option>
+	<option value='https://tomhillradio.com/2020/08/'> August 2020 </option>
+	<option value='https://tomhillradio.com/2020/06/'> June 2020 </option>
+	<option value='https://tomhillradio.com/2020/05/'> May 2020 </option>
+	<option value='https://tomhillradio.com/2020/04/'> April 2020 </option>
+	<option value='https://tomhillradio.com/2020/03/'> March 2020 </option>
+	<option value='https://tomhillradio.com/2020/02/'> February 2020 </option>
+	<option value='https://tomhillradio.com/2019/12/'> December 2019 </option>
+	<option value='https://tomhillradio.com/2019/11/'> November 2019 </option>
+	<option value='https://tomhillradio.com/2019/10/'> October 2019 </option>
+	<option value='https://tomhillradio.com/2019/08/'> August 2019 </option>
+	<option value='https://tomhillradio.com/2019/07/'> July 2019 </option>
+	<option value='https://tomhillradio.com/2019/06/'> June 2019 </option>
+	<option value='https://tomhillradio.com/2019/05/'> May 2019 </option>
+	<option value='https://tomhillradio.com/2019/04/'> April 2019 </option>
+	<option value='https://tomhillradio.com/2019/03/'> March 2019 </option>
+	<option value='https://tomhillradio.com/2019/02/'> February 2019 </option>
+	<option value='https://tomhillradio.com/2019/01/'> January 2019 </option>
+	<option value='https://tomhillradio.com/2018/12/'> December 2018 </option>
+	<option value='https://tomhillradio.com/2018/11/'> November 2018 </option>
+	<option value='https://tomhillradio.com/2018/10/'> October 2018 </option>
+	<option value='https://tomhillradio.com/2018/09/'> September 2018 </option>
+	<option value='https://tomhillradio.com/2018/07/'> July 2018 </option>
+	<option value='https://tomhillradio.com/2018/05/'> May 2018 </option>
+	<option value='https://tomhillradio.com/2018/04/'> April 2018 </option>
+	<option value='https://tomhillradio.com/2018/03/'> March 2018 </option>
+	<option value='https://tomhillradio.com/2018/02/'> February 2018 </option>
+	<option value='https://tomhillradio.com/2018/01/'> January 2018 </option>
+	<option value='https://tomhillradio.com/2017/12/'> December 2017 </option>
+	<option value='https://tomhillradio.com/2017/07/'> July 2017 </option>
+	<option value='https://tomhillradio.com/2017/05/'> May 2017 </option>
+	<option value='https://tomhillradio.com/2017/04/'> April 2017 </option>
+	<option value='https://tomhillradio.com/2017/01/'> January 2017 </option>
+	<option value='https://tomhillradio.com/2016/12/'> December 2016 </option>
+	<option value='https://tomhillradio.com/2016/11/'> November 2016 </option>
+	<option value='https://tomhillradio.com/2016/10/'> October 2016 </option>
+	<option value='https://tomhillradio.com/2016/09/'> September 2016 </option>
+	<option value='https://tomhillradio.com/2016/08/'> August 2016 </option>
+	<option value='https://tomhillradio.com/2016/06/'> June 2016 </option>
+	<option value='https://tomhillradio.com/2016/04/'> April 2016 </option>
+	<option value='https://tomhillradio.com/2016/03/'> March 2016 </option>
+	<option value='https://tomhillradio.com/2015/11/'> November 2015 </option>
+	<option value='https://tomhillradio.com/2015/10/'> October 2015 </option>
+	<option value='https://tomhillradio.com/2015/09/'> September 2015 </option>
+	<option value='https://tomhillradio.com/2015/07/'> July 2015 </option>
+	<option value='https://tomhillradio.com/2015/06/'> June 2015 </option>
+	<option value='https://tomhillradio.com/2015/04/'> April 2015 </option>
+	<option value='https://tomhillradio.com/2015/02/'> February 2015 </option>
+	<option value='https://tomhillradio.com/2015/01/'> January 2015 </option>
+	<option value='https://tomhillradio.com/2014/12/'> December 2014 </option>
+	<option value='https://tomhillradio.com/2014/10/'> October 2014 </option>
+	<option value='https://tomhillradio.com/2014/09/'> September 2014 </option>
+	<option value='https://tomhillradio.com/2014/07/'> July 2014 </option>
+	<option value='https://tomhillradio.com/2014/05/'> May 2014 </option>
+	<option value='https://tomhillradio.com/2014/04/'> April 2014 </option>
+	<option value='https://tomhillradio.com/2014/03/'> March 2014 </option>
+	<option value='https://tomhillradio.com/2014/02/'> February 2014 </option>
+	<option value='https://tomhillradio.com/2014/01/'> January 2014 </option>
+	<option value='https://tomhillradio.com/2013/12/'> December 2013 </option>
+	<option value='https://tomhillradio.com/2013/11/'> November 2013 </option>
+	<option value='https://tomhillradio.com/2013/10/'> October 2013 </option>
+	<option value='https://tomhillradio.com/2013/09/'> September 2013 </option>
+	<option value='https://tomhillradio.com/2013/08/'> August 2013 </option>
+	<option value='https://tomhillradio.com/2013/07/'> July 2013 </option>
+	<option value='https://tomhillradio.com/2013/06/'> June 2013 </option>
+	<option value='https://tomhillradio.com/2013/05/'> May 2013 </option>
+	<option value='https://tomhillradio.com/2013/04/'> April 2013 </option>
+	<option value='https://tomhillradio.com/2013/03/'> March 2013 </option>
+	<option value='https://tomhillradio.com/2013/02/'> February 2013 </option>
+	<option value='https://tomhillradio.com/2012/04/'> April 2012 </option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-2" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+
+/* ]]> */
+</script>
+</aside><aside id="categories-2" class="sidebar-widget widget_categories"><h1 class="widget-title">Categories</h1><form action="https://tomhillradio.com" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform'>
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="174019785">Afforcable Care Act</option>
+	<option class="level-0" value="29185930">Affordable Care Act</option>
+	<option class="level-0" value="87873">Auto Racing</option>
+	<option class="level-0" value="1917">Beer</option>
+	<option class="level-0" value="178">Books</option>
+	<option class="level-0" value="54749">Career planning</option>
+	<option class="level-0" value="9954">Charity</option>
+	<option class="level-0" value="60530">Commercial Real Estate</option>
+	<option class="level-0" value="42298109">Connecticut Business</option>
+	<option class="level-0" value="174019926">CT Environment</option>
+	<option class="level-0" value="40061231">CT Government</option>
+	<option class="level-0" value="26774817">CT Restaurants</option>
+	<option class="level-0" value="4020178">David Hill</option>
+	<option class="level-0" value="157484737">Dr. McHugh</option>
+	<option class="level-0" value="1342">Education</option>
+	<option class="level-0" value="5189">Fitness</option>
+	<option class="level-0" value="1460">Healthcare</option>
+	<option class="level-0" value="9705">Investments</option>
+	<option class="level-0" value="18">Music</option>
+	<option class="level-0" value="1284170">Naugatuck</option>
+	<option class="level-0" value="328747">podiatry</option>
+	<option class="level-0" value="4526735">politics</option>
+	<option class="level-0" value="583">RAcing</option>
+	<option class="level-0" value="3225">Real Estate</option>
+	<option class="level-0" value="1675">Running</option>
+	<option class="level-0" value="7094">Sales</option>
+	<option class="level-0" value="140763611">Special Edition Saturday &#8211; WATR 1320am</option>
+	<option class="level-0" value="13140">Talk of the Town</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="1284165">Waterbury</option>
+	<option class="level-0" value="363559">Watertown</option>
+	<option class="level-0" value="5968771">WATR</option>
+</select>
+</form><script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+
+/* ]]> */
+</script>
+</aside><aside id="meta-2" class="sidebar-widget widget_meta"><h1 class="widget-title">Meta</h1>
+		<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://tomhillwatr.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://tomhillradio.com/feed/">Entries feed</a></li>
+			<li><a href="https://tomhillradio.com/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>
+		</ul>
+
+		</aside><aside id="search-2" class="sidebar-widget widget_search">
+<form method="get" action="https://tomhillradio.com//" >
+	<div>
+		<label for="s" class="assistive-text">Search:</label>
+		<input type="text" value="Search&hellip;" name="s" id="s" onfocus="this.value=''" />
+		<input type="submit" name="search" value="Go" />
+	</div>
+</form>
+</aside>			<div id="atatags-286348-664efac6bc327"></div>
+			
+			<script>
+				__ATA.cmd.push(function() {
+					__ATA.initDynamicSlot({
+						id: 'atatags-286348-664efac6bc327',
+						location: 140,
+						formFactor: '003',
+						label: {
+							text: 'Advertisements',
+						},
+						creative: {
+							reportAd: {
+								text: 'Report this ad',
+							},
+							privacySettings: {
+								text: 'Privacy',
+								
+							}
+						}
+					});
+				});
+			</script>
+	</div><!-- #secondary .widget-area -->
+
+
+		</div><!-- end #main -->
+	</div><!-- end #page-inner -->
+
+	<footer id="colophon" role="contentinfo">
+		<div id="footer">
+			<div id="footer-inner">
+				<div id="footer-inner-inner">
+					
+
+<div id="footer-widgets-holder">
+	<div id="footer-widgets" class="clear-fix">
+		<div class="footer-widget-item">
+			<aside id="block-4" class="footer-widget widget_block">
+<h2 class="wp-block-heading">Contact Tom</h2>
+</aside><aside id="block-3" class="footer-widget widget_block">
+<div itemprop="location" itemscope itemtype="http://schema.org/Organization" class="wp-block-jetpack-contact-info">
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="wp-block-jetpack-address" ><a href="https://www.google.com/maps/search/Tom+Hill/WATR,One Broadcast Lane,+Waterbury ,+CT,+06706" target="_blank" rel="noopener noreferrer" title="Open address in Google Maps"><div itemprop="streetAddress" class="jetpack-address__address jetpack-address__address1">Tom Hill/WATR</div><div itemprop="streetAddress" class="jetpack-address__address jetpack-address__address2">One Broadcast Lane</div><div><span itemprop="addressLocality" class="jetpack-address__city">Waterbury </span>, <span itemprop="addressRegion" class="jetpack-address__region">CT</span> <span itemprop="postalCode" class="jetpack-address__postal">06706</span></div></a></div>
+
+
+
+<div class="wp-block-jetpack-email"><a itemprop="email" href="mailto:sales@tomhill.com">sales@tomhill.com</a></div>
+
+
+
+<div class="wp-block-jetpack-phone"><span itemprop="telephone"><a href="tel:2037554455">(203) 755-4455</a></span></div>
+</div>
+</aside>		</div>
+		<div class="footer-widget-item">
+					</div>
+		<div class="footer-widget-item">
+					</div>
+		<div class="footer-widget-item">
+					</div>
+	</div><!-- end #footer-widgets -->
+</div><!-- end #footer-widgets-holder -->
+				</div><!-- end #footer-inner-inner -->
+			</div><!-- end #footer-inner -->
+		</div>
+		<div id="copyright">
+			<div id="copyright-inner">
+					<div id="copyright-inner-inner">
+					<p>
+						<a href="https://wordpress.com/?ref=footer_custom_svg" title="Create a website or blog at WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Create a website or blog at WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor” fill-rule="evenodd"></path>
+			</svg></a>
+							</p>
+				</div><!-- end #copyright-inner-inner -->
+			</div><!-- end #copyright-inner -->
+		</div><!-- end #copyright -->
+	</footer><!-- end #footer -->
+
+	<!--  -->
+<script type="text/javascript" src="//0.gravatar.com/js/hovercards/hovercards.min.js?ver=2024214d47d929f88574eb4a47e5b1778b683b87e7f6078bb6a33f34c1178752e83406" id="grofiles-cards-js"></script>
+<script type="text/javascript" id="wpgroho-js-extra">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile': 'Edit your profile',
+							'View profile': 'View profile',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.': 'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	</div>
+		<!-- CCPA [start] -->
+		<script type="text/javascript">
+			( function () {
+
+				var setupPrivacy = function() {
+
+					// Minimal Mozilla Cookie library
+					// https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
+					var cookieLib = window.cookieLib = {getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(e,o,n,t,r,i){if(!e||/^(?:expires|max\-age|path|domain|secure)$/i.test(e))return!1;var c="";if(n)switch(n.constructor){case Number:c=n===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+n;break;case String:c="; expires="+n;break;case Date:c="; expires="+n.toUTCString()}return"rootDomain"!==r&&".rootDomain"!==r||(r=(".rootDomain"===r?".":"")+document.location.hostname.split(".").slice(-2).join(".")),document.cookie=encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(t?"; path="+t:"")+(i?"; secure":""),!0}};
+
+					// Implement IAB USP API.
+					window.__uspapi = function( command, version, callback ) {
+
+						// Validate callback.
+						if ( typeof callback !== 'function' ) {
+							return;
+						}
+
+						// Validate the given command.
+						if ( command !== 'getUSPData' || version !== 1 ) {
+							callback( null, false );
+							return;
+						}
+
+						// Check for GPC. If set, override any stored cookie.
+						if ( navigator.globalPrivacyControl ) {
+							callback( { version: 1, uspString: '1YYN' }, true );
+							return;
+						}
+
+						// Check for cookie.
+						var consent = cookieLib.getItem( 'usprivacy' );
+
+						// Invalid cookie.
+						if ( null === consent ) {
+							callback( null, false );
+							return;
+						}
+
+						// Everything checks out. Fire the provided callback with the consent data.
+						callback( { version: 1, uspString: consent }, true );
+					};
+
+					// Initialization.
+					document.addEventListener( 'DOMContentLoaded', function() {
+
+						// Internal functions.
+						var setDefaultOptInCookie = function() {
+							var value = '1YNN';
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'usprivacy', value, 365 * 24 * 60 * 60, '/', domain );
+						};
+
+						var setDefaultOptOutCookie = function() {
+							var value = '1YYN';
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'usprivacy', value, 24 * 60 * 60, '/', domain );
+						};
+
+						var setDefaultNotApplicableCookie = function() {
+							var value = '1---';
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'usprivacy', value, 24 * 60 * 60, '/', domain );
+						};
+
+						var setCcpaAppliesCookie = function( applies ) {
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'ccpa_applies', applies, 24 * 60 * 60, '/', domain );
+						}
+
+						var maybeCallDoNotSellCallback = function() {
+							if ( 'function' === typeof window.doNotSellCallback ) {
+								return window.doNotSellCallback();
+							}
+
+							return false;
+						}
+
+						// Look for usprivacy cookie first.
+						var usprivacyCookie = cookieLib.getItem( 'usprivacy' );
+
+						// Found a usprivacy cookie.
+						if ( null !== usprivacyCookie ) {
+
+							// If the cookie indicates that CCPA does not apply, then bail.
+							if ( '1---' === usprivacyCookie ) {
+								return;
+							}
+
+							// CCPA applies, so call our callback to add Do Not Sell link to the page.
+							maybeCallDoNotSellCallback();
+
+							// We're all done, no more processing needed.
+							return;
+						}
+
+						// We don't have a usprivacy cookie, so check to see if we have a CCPA applies cookie.
+						var ccpaCookie = cookieLib.getItem( 'ccpa_applies' );
+
+						// No CCPA applies cookie found, so we'll need to geolocate if this visitor is from California.
+						// This needs to happen client side because we do not have region geo data in our $SERVER headers,
+						// only country data -- therefore we can't vary cache on the region.
+						if ( null === ccpaCookie ) {
+
+							var request = new XMLHttpRequest();
+							request.open( 'GET', 'https://public-api.wordpress.com/geo/', true );
+
+							request.onreadystatechange = function () {
+								if ( 4 === this.readyState ) {
+									if ( 200 === this.status ) {
+
+										// Got a geo response. Parse out the region data.
+										var data = JSON.parse( this.response );
+										var region      = data.region ? data.region.toLowerCase() : '';
+										var ccpa_applies = ['california', 'colorado', 'connecticut', 'delaware', 'indiana', 'iowa', 'montana', 'new jersey', 'oregon', 'tennessee', 'texas', 'utah', 'virginia'].indexOf( region ) > -1;
+										// Set CCPA applies cookie. This keeps us from having to make a geo request too frequently.
+										setCcpaAppliesCookie( ccpa_applies );
+
+										// Check if CCPA applies to set the proper usprivacy cookie.
+										if ( ccpa_applies ) {
+											if ( maybeCallDoNotSellCallback() ) {
+												// Do Not Sell link added, so set default opt-in.
+												setDefaultOptInCookie();
+											} else {
+												// Failed showing Do Not Sell link as required, so default to opt-OUT just to be safe.
+												setDefaultOptOutCookie();
+											}
+										} else {
+											// CCPA does not apply.
+											setDefaultNotApplicableCookie();
+										}
+									} else {
+										// Could not geo, so let's assume for now that CCPA applies to be safe.
+										setCcpaAppliesCookie( true );
+										if ( maybeCallDoNotSellCallback() ) {
+											// Do Not Sell link added, so set default opt-in.
+											setDefaultOptInCookie();
+										} else {
+											// Failed showing Do Not Sell link as required, so default to opt-OUT just to be safe.
+											setDefaultOptOutCookie();
+										}
+									}
+								}
+							};
+
+							// Send the geo request.
+							request.send();
+						} else {
+							// We found a CCPA applies cookie.
+							if ( ccpaCookie === 'true' ) {
+								if ( maybeCallDoNotSellCallback() ) {
+									// Do Not Sell link added, so set default opt-in.
+									setDefaultOptInCookie();
+								} else {
+									// Failed showing Do Not Sell link as required, so default to opt-OUT just to be safe.
+									setDefaultOptOutCookie();
+								}
+							} else {
+								// CCPA does not apply.
+								setDefaultNotApplicableCookie();
+							}
+						}
+					} );
+				};
+
+				// Kickoff initialization.
+				if ( window.defQueue && defQueue.isLOHP && defQueue.isLOHP === 2020 ) {
+					defQueue.items.push( setupPrivacy );
+				} else {
+					setupPrivacy();
+				}
+
+			} )();
+		</script>
+
+		<!-- CCPA [end] -->
+		<div class="widget widget_eu_cookie_law_widget">
+<div
+	class="hide-on-button ads-active"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+	style="display: none"
+>
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept" />
+
+		Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br />
+To find out more, including how to control cookies, see here:
+				<a href="https://automattic.com/cookies/" rel="nofollow">
+			Cookie Policy		</a>
+ </form>
+</div>
+</div>	<div id="actionbar" style="display: none;"
+			class="actnbr-pub-chateau actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="https://tomhillradio.com">
+				<img alt='' src='https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=50' srcset='https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=50 1x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=75 1.5x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=100 2x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=150 3x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=200 4x' class='avatar avatar-50' height='50' width='50' />				Tom Hill Radio			</a>
+		</li>
+										<div class="actnbr-message no-display"></div>
+									<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" style="display: none;">
+																						<div class="actnbr-follow-count">Join 33 other subscribers</div>
+																					<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="45364620" />
+										<input type="hidden" name="source" value="https://tomhillradio.com/" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="14dedcac73" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Ftomhillradio.com%252F2023%252F08%252F11%252Fthank-you-congratulations%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://tomhillradio.com">
+				<img alt='' src='https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=50' srcset='https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=50 1x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=75 1.5x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=100 2x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=150 3x, https://tomhillradio.com/wp-content/uploads/2023/02/cropped-tom-hill-ad-blue.png?w=200 4x' class='avatar avatar-50' height='50' width='50' />				Tom Hill Radio			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://tomhillwatr.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Ftomhillwatr.wordpress.com%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Ftomhillradio.com%252F2023%252F08%252F11%252Fthank-you-congratulations%252F">Log in</a></li>
+																	<li class="flb-report">
+										<a href="https://wordpress.com/abuse/?report_url=https://tomhillradio.com" target="_blank" rel="noopener noreferrer">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/feeds/7748010">
+											View site in Reader										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20240115";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+	<script crossorigin='anonymous' type='text/javascript'  src='https://s1.wp.com/_static/??/wp-content/blog-plugins/wordads-classes/js/watl.js,/wp-content/mu-plugins/widgets/eu-cookie-law/templates/eu-cookie-law.js?m=1715723159j'></script>
+
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?67" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'45364620','blog_tz':'-4','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'45364620','v':'wpcom','tz':'-4','user_id':'0','subd':'tomhillwatr'}]);
+		_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWtpP0NsWnVkPS9sL0ViLndld3BsSjRjQ0FmMWk0bjhwYkI9bVh4bTM3ZU5oUj1jenJXRnImREVuP01FZS1Vd0FqfE0mY2lfUjIwd2tdRXxqZi5mYyUvZnw4RF1dVD1tW0kwcVozViZURC1CVlZMcTEsLUxWcnhSW09KQzA2eHlZSm1pb1k1Lz9Ublp1ZlhtS3ElZHlmckcwSzhOSGZremtKcVByTUI2ai9CZ0JyZmRDRURFWjNXM28mU3hYLG4rZXl4ZTZnd1oxWGk0b0ZWLFhkZkJmenRSZyZ0VmVqMlhnaz92LyYzbG52LUMvVG8ycDBIX1EvTGJ0N192ZzQ0LWZ0Nw=='}]);
+_stq.push([ 'clickTrackerInit', '45364620', '0' ]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></div><!-- end #page -->
+</body>
+</html>

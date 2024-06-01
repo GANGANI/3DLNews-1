@@ -1,0 +1,1341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			<base href="/ce/">
+		
+		<!-- -->
+			<script type="text/javascript">
+				
+		var stationCallSign = 'KARP';
+		var geoCTCode = 'LK';
+		
+			var hasDCS=1;
+		
+		var pColorTitle='FB8A38';
+		var ckColor = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pColorTitle);
+		if(ckColor){
+			var pColorTitle='FB8A38';
+		}else{
+			var pColorTitle='FB8A38';
+		} 
+		var pColorSubtitle='FB8A38';
+		var ckColor = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pColorSubtitle);
+		if(ckColor){
+			var pColorSubtitle='FB8A38';
+		}else{
+			var pColorSubtitle='FB8A38';
+		} 
+		var pColorText='FB8A38';
+		var ckColor = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pColorText);
+		if(ckColor){
+			var pColorText='FB8A38';
+		}else{
+			var pColorText='FB8A38';
+		} 
+		var playerWidget='';
+		var playerWidgetParent='';
+		
+		var playerLogo='https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/v5/logo.png';
+
+		var enableStream = true;
+
+		var autoStart=true;
+		var mobileAppStore=false;
+		var mobileNoPlay=false;
+		
+			var hideTransportVolume=0;
+		
+		var playSessionID = "FF6360F8-979A-D5C4-2641C5477068AA98";
+
+		var centralSvrPrefixURL = "https://radio.securenetsystems.net/";
+		var adnSvrPrefixURL = "https://ssiadnweb.securenetsystems.net/";
+		var bannerRotateSongEnd= false;
+
+
+		var encoderType = "ACP";
+		var streamSrcDB = 'https://ice23.securenetsystems.net/KARP';
+		var streamSrcPlay=streamSrcDB.replace("?type=.flv","")+'?playSessionID=FF6360F8-979A-D5C4-2641C5477068AA98';
+		var streamSrcFlv = 'https://ice23.securenetsystems.net/KARP';
+		var streamSrcAac = streamSrcDB+(streamSrcDB.indexOf("?")==-1?"?":"&")+"playSessionID=FF6360F8-979A-D5C4-2641C5477068AA98";		//streamSrcDB.replace("?type=.flv","");
+		var streamSrcMp3 = streamSrcDB.replace("type=.flv","type=.mp3");
+		var playlistHistoryXMLurl = "https://streamdb6web.securenetsystems.net/player_status_update/KARP_history.xml";
+		var enableURLRewrite=false;
+
+		
+		var xmlODUrl = '';
+		var onDemandQueue = new Object();
+		var onDemandFileCount = 15;
+
+		
+		var streamRoot = "https://ice23.securenetsystems.net/media";
+			
+				onDemandQueue[0] = new Object();
+				onDemandQueue[0].fileId = 2465244;
+				onDemandQueue[0].filetype = 'AUD';
+				
+					onDemandQueue[0].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"GSLSOftMay30.m4a";
+					onDemandQueue[0].fileDsp = "GSLSOftMay30";
+					onDemandQueue[0].duration = "14400.922";
+					onDemandQueue[0].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2465244/50430.jpg";
+					onDemandQueue[0].title="Softball-GSL vs Spectrum";
+					onDemandQueue[0].artist="KGLB Sports";
+					onDemandQueue[0].album="High School Sports";
+					onDemandQueue[0].video = false;
+					onDemandQueue[0].modal = false;
+					onDemandQueue[0].chID = '';
+					onDemandQueue[0].shID = '';
+				
+				onDemandQueue[1] = new Object();
+				onDemandQueue[1].fileId = 2465230;
+				onDemandQueue[1].filetype = 'AUD';
+				
+					onDemandQueue[1].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"HutchSoftMay30.m4a";
+					onDemandQueue[1].fileDsp = "HutchSoftMay30";
+					onDemandQueue[1].duration = "14401.015";
+					onDemandQueue[1].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2465230/50428.jpg";
+					onDemandQueue[1].title="Hutchinson Section Softball";
+					onDemandQueue[1].artist="KDUZ Sports";
+					onDemandQueue[1].album="High School Sports";
+					onDemandQueue[1].video = false;
+					onDemandQueue[1].modal = false;
+					onDemandQueue[1].chID = '';
+					onDemandQueue[1].shID = '';
+				
+				onDemandQueue[2] = new Object();
+				onDemandQueue[2].fileId = 2465166;
+				onDemandQueue[2].filetype = 'AUD';
+				
+					onDemandQueue[2].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"JakeandBower.m4a";
+					onDemandQueue[2].fileDsp = "JakeandBower";
+					onDemandQueue[2].duration = "8101.023";
+					onDemandQueue[2].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2465166/41981.jpg";
+					onDemandQueue[2].title="The Jake and Bower Show";
+					onDemandQueue[2].artist="KDUZ";
+					onDemandQueue[2].album="4-6 pm";
+					onDemandQueue[2].video = false;
+					onDemandQueue[2].modal = false;
+					onDemandQueue[2].chID = '';
+					onDemandQueue[2].shID = '';
+				
+				onDemandQueue[3] = new Object();
+				onDemandQueue[3].fileId = 2464746;
+				onDemandQueue[3].filetype = 'AUD';
+				
+					onDemandQueue[3].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"MN-Mornings-KARP.m4a";
+					onDemandQueue[3].fileDsp = "MN-Mornings-KARP";
+					onDemandQueue[3].duration = "14401.015";
+					onDemandQueue[3].coverArt="";
+					onDemandQueue[3].title="MN Mornings KARP";
+					onDemandQueue[3].artist="";
+					onDemandQueue[3].album="";
+					onDemandQueue[3].video = false;
+					onDemandQueue[3].modal = false;
+					onDemandQueue[3].chID = '';
+					onDemandQueue[3].shID = '';
+				
+				onDemandQueue[4] = new Object();
+				onDemandQueue[4].fileId = 2463186;
+				onDemandQueue[4].filetype = 'AUD';
+				
+					onDemandQueue[4].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"HutchRocoriMay28.m4a";
+					onDemandQueue[4].fileDsp = "HutchRocoriMay28";
+					onDemandQueue[4].duration = "14401.015";
+					onDemandQueue[4].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2463186/50416.jpg";
+					onDemandQueue[4].title="Softball-Hutchinson vs Rocori";
+					onDemandQueue[4].artist="KDUZ Sports";
+					onDemandQueue[4].album="High School Sports";
+					onDemandQueue[4].video = false;
+					onDemandQueue[4].modal = false;
+					onDemandQueue[4].chID = '';
+					onDemandQueue[4].shID = '';
+				
+				onDemandQueue[5] = new Object();
+				onDemandQueue[5].fileId = 2459764;
+				onDemandQueue[5].filetype = 'AUD';
+				
+					onDemandQueue[5].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"KGLBTalks.m4a";
+					onDemandQueue[5].fileDsp = "KGLBTalks";
+					onDemandQueue[5].duration = "7500.880";
+					onDemandQueue[5].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2459764/41539.png";
+					onDemandQueue[5].title="Glencoe Talk, NYA Talk, and Sibley Talk";
+					onDemandQueue[5].artist="KGLB";
+					onDemandQueue[5].album="Weekly Program";
+					onDemandQueue[5].video = false;
+					onDemandQueue[5].modal = false;
+					onDemandQueue[5].chID = '';
+					onDemandQueue[5].shID = '';
+				
+				onDemandQueue[6] = new Object();
+				onDemandQueue[6].fileId = 2459340;
+				onDemandQueue[6].filetype = 'AUD';
+				
+					onDemandQueue[6].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"MNScorefeedBlitz.m4a";
+					onDemandQueue[6].fileDsp = "MNScorefeedBlitz";
+					onDemandQueue[6].duration = "1501.123";
+					onDemandQueue[6].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2459340/45182.jpg";
+					onDemandQueue[6].title="The MN Scorefeed Blitz";
+					onDemandQueue[6].artist="Chad Greenway and Joel Niemeyer";
+					onDemandQueue[6].album="The MN Scorefeed Blitz, latest episode";
+					onDemandQueue[6].video = false;
+					onDemandQueue[6].modal = false;
+					onDemandQueue[6].chID = '';
+					onDemandQueue[6].shID = '';
+				
+				onDemandQueue[7] = new Object();
+				onDemandQueue[7].fileId = 2459023;
+				onDemandQueue[7].filetype = 'AUD';
+				
+					onDemandQueue[7].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"YAMayerMay23.m4a";
+					onDemandQueue[7].fileDsp = "YAMayerMay23";
+					onDemandQueue[7].duration = "14393.213";
+					onDemandQueue[7].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2459023/50386.jpg";
+					onDemandQueue[7].title="CRVL Baseball-Young America vs Mayer";
+					onDemandQueue[7].artist="KGLB Sports";
+					onDemandQueue[7].album="Amateur Baseball";
+					onDemandQueue[7].video = false;
+					onDemandQueue[7].modal = false;
+					onDemandQueue[7].chID = '';
+					onDemandQueue[7].shID = '';
+				
+				onDemandQueue[8] = new Object();
+				onDemandQueue[8].fileId = 2458929;
+				onDemandQueue[8].filetype = 'AUD';
+				
+					onDemandQueue[8].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"HutchAlexMay23.m4a";
+					onDemandQueue[8].fileDsp = "HutchAlexMay23";
+					onDemandQueue[8].duration = "14401.015";
+					onDemandQueue[8].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2458929/50384.jpg";
+					onDemandQueue[8].title="Softball-Hutchinson vs Alexandria";
+					onDemandQueue[8].artist="KDUZ Sports";
+					onDemandQueue[8].album="High School Sports";
+					onDemandQueue[8].video = false;
+					onDemandQueue[8].modal = false;
+					onDemandQueue[8].chID = '';
+					onDemandQueue[8].shID = '';
+				
+				onDemandQueue[9] = new Object();
+				onDemandQueue[9].fileId = 2458905;
+				onDemandQueue[9].filetype = 'AUD';
+				
+					onDemandQueue[9].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"GSLWMMay23.m4a";
+					onDemandQueue[9].fileDsp = "GSLWMMay23";
+					onDemandQueue[9].duration = "12600.772";
+					onDemandQueue[9].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2458905/50385.jpg";
+					onDemandQueue[9].title="Baseball-GSL vs WM";
+					onDemandQueue[9].artist="KGLB Sports";
+					onDemandQueue[9].album="High School Sports";
+					onDemandQueue[9].video = false;
+					onDemandQueue[9].modal = false;
+					onDemandQueue[9].chID = '';
+					onDemandQueue[9].shID = '';
+				
+				onDemandQueue[10] = new Object();
+				onDemandQueue[10].fileId = 2457872;
+				onDemandQueue[10].filetype = 'AUD';
+				
+					onDemandQueue[10].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"HutchDLMay22.m4a";
+					onDemandQueue[10].fileDsp = "HutchDLMay22";
+					onDemandQueue[10].duration = "14400.968";
+					onDemandQueue[10].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2457872/50360.jpg";
+					onDemandQueue[10].title="Softball-Hutchinson vs Detroit Lakes";
+					onDemandQueue[10].artist="KDUZ Sports";
+					onDemandQueue[10].album="High School Sports";
+					onDemandQueue[10].video = false;
+					onDemandQueue[10].modal = false;
+					onDemandQueue[10].chID = '';
+					onDemandQueue[10].shID = '';
+				
+				onDemandQueue[11] = new Object();
+				onDemandQueue[11].fileId = 2460442;
+				onDemandQueue[11].filetype = 'AUD';
+				
+					onDemandQueue[11].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"ASROct9.m4a";
+					onDemandQueue[11].fileDsp = "ASROct9";
+					onDemandQueue[11].duration = "3600.997";
+					onDemandQueue[11].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2460442/38694.png";
+					onDemandQueue[11].title="The Area Sports Roundup";
+					onDemandQueue[11].artist="KDUZ Sports";
+					onDemandQueue[11].album="ASR";
+					onDemandQueue[11].video = false;
+					onDemandQueue[11].modal = false;
+					onDemandQueue[11].chID = '';
+					onDemandQueue[11].shID = '';
+				
+				onDemandQueue[12] = new Object();
+				onDemandQueue[12].fileId = 2464361;
+				onDemandQueue[12].filetype = 'AUD';
+				
+					onDemandQueue[12].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"KARP-Overnight.m4a";
+					onDemandQueue[12].fileDsp = "KARP-Overnight";
+					onDemandQueue[12].duration = "14401.015";
+					onDemandQueue[12].coverArt="";
+					onDemandQueue[12].title="KARP Overnight";
+					onDemandQueue[12].artist="";
+					onDemandQueue[12].album="";
+					onDemandQueue[12].video = false;
+					onDemandQueue[12].modal = false;
+					onDemandQueue[12].chID = '';
+					onDemandQueue[12].shID = '';
+				
+				onDemandQueue[13] = new Object();
+				onDemandQueue[13].fileId = 2464366;
+				onDemandQueue[13].filetype = 'AUD';
+				
+					onDemandQueue[13].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"Overnights.m4a";
+					onDemandQueue[13].fileDsp = "Overnights";
+					onDemandQueue[13].duration = "14401.015";
+					onDemandQueue[13].coverArt="";
+					onDemandQueue[13].title="Classic Hits KDUZ";
+					onDemandQueue[13].artist="KDUZ ";
+					onDemandQueue[13].album="More Music Less Talk";
+					onDemandQueue[13].video = false;
+					onDemandQueue[13].modal = false;
+					onDemandQueue[13].chID = '';
+					onDemandQueue[13].shID = '';
+				
+				onDemandQueue[14] = new Object();
+				onDemandQueue[14].fileId = 2464392;
+				onDemandQueue[14].filetype = 'AUD';
+				
+					onDemandQueue[14].fileName = streamRoot+"/"+stationCallSign+"/ondemand/"+"Devos.m4a";
+					onDemandQueue[14].fileDsp = "Devos";
+					onDemandQueue[14].duration = "901.027";
+					onDemandQueue[14].coverArt="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/podcasts/2464392/42332.jpg";
+					onDemandQueue[14].title="Daily Devotionals";
+					onDemandQueue[14].artist="KDUZ";
+					onDemandQueue[14].album="Hutchinson Ministerial Association";
+					onDemandQueue[14].video = false;
+					onDemandQueue[14].modal = false;
+					onDemandQueue[14].chID = '';
+					onDemandQueue[14].shID = '';
+				
+			</script>
+		
+		<script>
+			var liveStreamEnable = true;
+			var liveStreamStart = true;
+			var stationSlogan = "Today's Best Country";
+			var polling = new Object();
+			polling.enabled = true;
+			polling.active = true;
+			polling.adInsert = true;
+				
+					
+					
+					
+					var d = new Date();
+					var localServerTSoffset = d.getTime()+d.getTimezoneOffset()*60000 - Date.parse("31 May 2024 03:41:09");
+				
+
+			
+			
+				var otherStations = new Object();
+				
+						otherStations["1"] = new Array("KARP","https://streamdb6web.securenetsystems.net");
+					
+						otherStations["2"] = new Array("KDUZ","https://streamdb6web.securenetsystems.net");
+					
+				var otherStationsCount = 2;
+			
+			
+
+			var rejoinPriority = "PGM";
+			var enforceRejoinPriority = true;
+			var persistAlbumArt = true;
+
+			var blackout = new Object();
+			
+				blackout.active = 0;
+				blackout.type = "";
+				blackout.app = "";
+				blackout.nextCheck = 86408000;
+				blackout.resumeTime = "Friday, 5/31/2024 11:41 PM EDT";
+				
+					var nielsenEnabled = true;
+				
+			
+			var onDemandAutoStart = false;
+			var onDemandFill = new Object();
+				onDemandFill.enabled = true;
+				onDemandFill.active = false;
+			var playerAdvertisingMode = "SEQ";
+			var sPrerollSkipSecs="";
+			var bannerRotationFqcy = 60;
+			var definedBannerTypes = "M,D";
+			var ne_enable=false;
+			var ne_enable_time=15;
+			var sLocaFillOnAdnFail = false;
+			var sTerrFillOnLocalFail = true;
+			var sBedFillOnAllFail = false;
+			var sBedFillFileName = "COMMERCIAL-BREAK-BACKGROUNDER.m4a";
+			var sTspStnId = "";
+			var sGenre = "COM";
+
+			var geoCTCode = "LK";
+			var geoDMACode = "0";
+			var cGeoLocationLevel = "5";
+			var geoLocLat = "6.9047";
+			var geoLocLon = "79.9638";
+			var clientIPAddr = "112.134.171.20";
+			var geoGmtoffset = 5;
+			var geoIsmetricsystem = true;
+
+			var dspAlbumArt = true;
+			var dftAlbumArt = "https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/v5/album-art-default.png";
+			var dspMediaRate = false;
+			var dspSongData=true;
+
+			var playerAppsYouTubeUserName = "KDUZMediactive";
+
+			var playerAppOnDemand = true;
+			var playerAppHome = false;
+			var playerAppContact = true;
+			var playerAppFacebook = true;
+			var playerAppTwitter = false;
+			var playerAppYouTube = true;
+			var playerAppsYouTubeUserName = "KDUZMediactive";
+			var youtubeUserType = "U";
+			var playerAppUstream = false;
+			var playerAppsUstreamCid = "";
+			var playerAppOtherStations = true;
+			var playerAppShareThis = true;
+
+			var playerAppNews = true;
+			var playerAppNewsSrc = "https://news.yahoo.com/rss/mostviewed";
+			var playerAppSports = true;
+			var playerAppSportsSrc = "http://sports.espn.go.com/espn/rss/news";
+			var playerAppStocks = false;
+			var playerAppStocksSrc = "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml";
+			var playerAppEntertainment = true;
+			var playerAppEntertainmentSrc = "http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml";
+			var playerAppWeather = true;
+			var playerAppFlight = false;
+			var playerAppYelp = false;
+
+			var playerAppDeals = false;
+			var playerAppPolls = false;
+			var playerAppSongRequest = true;
+
+			var playerAppChat = false;
+			var chatChannel = "3761470855";
+			var playerAppGames = false;
+
+			var playerAppWobot = false;
+			var playerAppWobotSrc = "http://www.wobot.tv/rss/";
+			var playerAppPlaylist = true;
+			var playerAppLyrics = true;
+			var playerAppSendToMobile = true;
+			var playerAppHelp = true;
+			var fbComments=true;
+			var fbCommentsMin=true;
+			var bullhornStart= 0;
+			var fadeDuration=500;
+			var listenSessionTimeout = 0;
+			var playerAppTimeout = false;
+			var playerMenuAutoOpen = false;
+			var streamErrorRetryDelay=15;
+
+			
+			var prerollApp = new Array();
+			var launchFrom = "";
+			var adBlockerPresent = false;
+			
+				
+				prerollApp.push("player-check-ab");
+				
+			
+			var playlistVertical=false;
+			var stationCallUrl="https://streamdb6web.securenetsystems.net";
+			var fullPlayerURL='http://streamdb6web.securenetsystems.net/cirrusencore/KARP&playSessionID=FF6360F8-979A-D5C4-2641C5477068AA98&launchFrom=bar';
+			var adnPrebidEnable = true;
+			
+			
+			var adnPrebidFloor = 0.00;			
+			var adnPrebidLimit = 0;		;
+			var adnPrebidTimeout = 8000;		
+			var adnPrebidObj = new Object();
+			var adnImpCntObj = new Object();
+			
+						adnPrebidObj[0]=new Object();
+						adnPrebidObj[0].externalProvider='ADNLIJ';
+						adnPrebidObj[0].cID="0AA4A30A-E41E-9551-8692E8AD024DE4FC";
+						adnPrebidObj[0].cIDn=27703;
+						adnPrebidObj[0].cType="PBB";
+						adnPrebidObj[0].aType="M";
+						adnPrebidObj[0].aHsize="300";
+						adnPrebidObj[0].aVsize="250";
+						adnPrebidObj[0].soAdNetBRF=0;
+						adnPrebidObj[0].soAdNetPBF=-1;
+						adnPrebidObj[0].caCode="{\"bidder\": \"sovrn\", \"params\": {\"tagid\": \"402693\"}}";
+						adnPrebidObj[0].pC=0.00;
+						adnPrebidObj[0].eD=0;
+						adnPrebidObj[0].mI=-1;
+						adnPrebidObj[0].lastRequest=0;
+						adnPrebidObj[0].totalRequest=0;
+						
+						adnPrebidObj[1]=new Object();
+						adnPrebidObj[1].externalProvider='ADNLIJ';
+						adnPrebidObj[1].cID="0AF643E8-AABF-2B60-CA701A2788C5343F";
+						adnPrebidObj[1].cIDn=27704;
+						adnPrebidObj[1].cType="PBB";
+						adnPrebidObj[1].aType="D";
+						adnPrebidObj[1].aHsize="728";
+						adnPrebidObj[1].aVsize="90";
+						adnPrebidObj[1].soAdNetBRF=0;
+						adnPrebidObj[1].soAdNetPBF=-1;
+						adnPrebidObj[1].caCode="{\"bidder\": \"sovrn\", \"params\": {\"tagid\": \"402694\"}}";
+						adnPrebidObj[1].pC=0.00;
+						adnPrebidObj[1].eD=0;
+						adnPrebidObj[1].mI=-1;
+						adnPrebidObj[1].lastRequest=0;
+						adnPrebidObj[1].totalRequest=0;
+						
+						adnPrebidObj[2]=new Object();
+						adnPrebidObj[2].externalProvider='ADNAPN';
+						adnPrebidObj[2].cID="1892949C-CADF-EFA8-E80DC4E7E3D41769";
+						adnPrebidObj[2].cIDn=27723;
+						adnPrebidObj[2].cType="PBB";
+						adnPrebidObj[2].aType="M";
+						adnPrebidObj[2].aHsize="300";
+						adnPrebidObj[2].aVsize="250";
+						adnPrebidObj[2].soAdNetBRF=0;
+						adnPrebidObj[2].soAdNetPBF=-1;
+						adnPrebidObj[2].caCode="{\"bidder\": \"appnexus\",\"params\": {\"placementId\": \"6978609\"}}";
+						adnPrebidObj[2].pC=0.00;
+						adnPrebidObj[2].eD=0;
+						adnPrebidObj[2].mI=-1;
+						adnPrebidObj[2].lastRequest=0;
+						adnPrebidObj[2].totalRequest=0;
+						
+						adnPrebidObj[3]=new Object();
+						adnPrebidObj[3].externalProvider='ADNAPN';
+						adnPrebidObj[3].cID="18FE65F4-938C-6AB8-5FB8A35B36B895B6";
+						adnPrebidObj[3].cIDn=27724;
+						adnPrebidObj[3].cType="PBB";
+						adnPrebidObj[3].aType="D";
+						adnPrebidObj[3].aHsize="728";
+						adnPrebidObj[3].aVsize="90";
+						adnPrebidObj[3].soAdNetBRF=0;
+						adnPrebidObj[3].soAdNetPBF=-1;
+						adnPrebidObj[3].caCode="{\"bidder\": \"appnexus\",\"params\": {\"placementId\": \"6978610\"}}";
+						adnPrebidObj[3].pC=0.00;
+						adnPrebidObj[3].eD=0;
+						adnPrebidObj[3].mI=-1;
+						adnPrebidObj[3].lastRequest=0;
+						adnPrebidObj[3].totalRequest=0;
+						
+						adnPrebidObj[4]=new Object();
+						adnPrebidObj[4].externalProvider='ADNCON';
+						adnPrebidObj[4].cID="4AE68A72-D283-0A54-8C9FC1D3AD335513";
+						adnPrebidObj[4].cIDn=31848;
+						adnPrebidObj[4].cType="PBB";
+						adnPrebidObj[4].aType="M";
+						adnPrebidObj[4].aHsize="300";
+						adnPrebidObj[4].aVsize="250";
+						adnPrebidObj[4].soAdNetBRF=0;
+						adnPrebidObj[4].soAdNetPBF=-1;
+						adnPrebidObj[4].caCode="{\"bidder\": \"conversant\", \"params\": {\"site_id\": \"108556\"}}";
+						adnPrebidObj[4].pC=0.00;
+						adnPrebidObj[4].eD=0;
+						adnPrebidObj[4].mI=-1;
+						adnPrebidObj[4].lastRequest=0;
+						adnPrebidObj[4].totalRequest=0;
+						
+						adnPrebidObj[5]=new Object();
+						adnPrebidObj[5].externalProvider='ADNCON';
+						adnPrebidObj[5].cID="4B83BBD0-B2F3-3496-EBBCE185E82580C3";
+						adnPrebidObj[5].cIDn=31849;
+						adnPrebidObj[5].cType="PBB";
+						adnPrebidObj[5].aType="D";
+						adnPrebidObj[5].aHsize="728";
+						adnPrebidObj[5].aVsize="90";
+						adnPrebidObj[5].soAdNetBRF=0;
+						adnPrebidObj[5].soAdNetPBF=-1;
+						adnPrebidObj[5].caCode="{\"bidder\": \"conversant\", \"params\": {\"site_id\": \"108556\"}}";
+						adnPrebidObj[5].pC=0.00;
+						adnPrebidObj[5].eD=0;
+						adnPrebidObj[5].mI=-1;
+						adnPrebidObj[5].lastRequest=0;
+						adnPrebidObj[5].totalRequest=0;
+						
+						adnPrebidObj[6]=new Object();
+						adnPrebidObj[6].externalProvider='ADNSON';
+						adnPrebidObj[6].cID="B0DDF0A5-A5EA-95E7-F557924B5096D917";
+						adnPrebidObj[6].cIDn=43161;
+						adnPrebidObj[6].cType="PBB";
+						adnPrebidObj[6].aType="M";
+						adnPrebidObj[6].aHsize="300";
+						adnPrebidObj[6].aVsize="250";
+						adnPrebidObj[6].soAdNetBRF=0;
+						adnPrebidObj[6].soAdNetPBF=-1;
+						adnPrebidObj[6].caCode="{\"bidder\": \"sonobi\",\"params\": {\"placement_id\": \"d60f224a9238144280f0\"}}";
+						adnPrebidObj[6].pC=0.00;
+						adnPrebidObj[6].eD=0;
+						adnPrebidObj[6].mI=-1;
+						adnPrebidObj[6].lastRequest=0;
+						adnPrebidObj[6].totalRequest=0;
+						
+						adnPrebidObj[7]=new Object();
+						adnPrebidObj[7].externalProvider='ADNSON';
+						adnPrebidObj[7].cID="B23621ED-AAE7-3898-A2050CB22B78100E";
+						adnPrebidObj[7].cIDn=43162;
+						adnPrebidObj[7].cType="PBB";
+						adnPrebidObj[7].aType="D";
+						adnPrebidObj[7].aHsize="728";
+						adnPrebidObj[7].aVsize="90";
+						adnPrebidObj[7].soAdNetBRF=0;
+						adnPrebidObj[7].soAdNetPBF=-1;
+						adnPrebidObj[7].caCode="{\"bidder\": \"sonobi\",\"params\": {\"placement_id\": \"365bf62d0396983751e6\"}}";
+						adnPrebidObj[7].pC=0.00;
+						adnPrebidObj[7].eD=0;
+						adnPrebidObj[7].mI=-1;
+						adnPrebidObj[7].lastRequest=0;
+						adnPrebidObj[7].totalRequest=0;
+						
+						adnPrebidObj[8]=new Object();
+						adnPrebidObj[8].externalProvider='ADNDIS';
+						adnPrebidObj[8].cID="10BCA8B0-3D16-4F50-90E519B36AEF3C91";
+						adnPrebidObj[8].cIDn=58474;
+						adnPrebidObj[8].cType="PBB";
+						adnPrebidObj[8].aType="M";
+						adnPrebidObj[8].aHsize="300";
+						adnPrebidObj[8].aVsize="250";
+						adnPrebidObj[8].soAdNetBRF=0;
+						adnPrebidObj[8].soAdNetPBF=-1;
+						adnPrebidObj[8].caCode="{\"bidder\": \"sharethrough\", \"params\": {\"pkey\": \"rdaXLlICSi7Svg04SAYrA0KO\", \"iframe\": false}}";
+						adnPrebidObj[8].pC=0.00;
+						adnPrebidObj[8].eD=0;
+						adnPrebidObj[8].mI=-1;
+						adnPrebidObj[8].lastRequest=0;
+						adnPrebidObj[8].totalRequest=0;
+						
+						adnPrebidObj[9]=new Object();
+						adnPrebidObj[9].externalProvider='ADNDIS';
+						adnPrebidObj[9].cID="520C68CF-F5E4-4766-883780363CA591FC";
+						adnPrebidObj[9].cIDn=58475;
+						adnPrebidObj[9].cType="PBB";
+						adnPrebidObj[9].aType="D";
+						adnPrebidObj[9].aHsize="728";
+						adnPrebidObj[9].aVsize="90";
+						adnPrebidObj[9].soAdNetBRF=0;
+						adnPrebidObj[9].soAdNetPBF=-1;
+						adnPrebidObj[9].caCode="{\"bidder\": \"sharethrough\", \"params\": {\"pkey\": \"zuySZri0LpJREjmwXL6xOXNF\", \"iframe\": false}}";
+						adnPrebidObj[9].pC=0.00;
+						adnPrebidObj[9].eD=0;
+						adnPrebidObj[9].mI=-1;
+						adnPrebidObj[9].lastRequest=0;
+						adnPrebidObj[9].totalRequest=0;
+						
+			var adnPrebidTypes = new Object();
+			adnPrebidTypes['M']=new Object();
+			adnPrebidTypes['M'].floorNbRequest=0;
+			adnPrebidTypes['M'].floorList='0.00';
+			adnPrebidTypes['D']=new Object();
+			adnPrebidTypes['D'].floorNbRequest=0;
+			adnPrebidTypes['D'].floorList='0.00';
+			var bDRC=false;
+			var sessionDebugLog=false;
+			var sessionDebugLogSent=0;
+			var adnModePrebid=1;
+			var adnModeWaterfall=1;
+			var sAdNetPFR=0;
+			
+					var playerAutoStartApp = "";
+				
+			var playerAutoStartChannel = "";
+			var playerAutoStartShow = "";
+			var playerAutoStartPodcast = "";
+			var embedEnable=true;
+			
+				var prebidSplit=1;
+					
+					var tagRotationOffset = 0;
+				
+			
+			var maxRotationWhenMin=-1;
+			var crtRotationWhenMin=0;
+			var enableRadioStats='';
+			
+				var bannerMaxRotation=999;
+				
+			var minimizedRotate="1";
+		</script>
+
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+			<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+			<META HTTP-EQUIV="EXPIRES" CONTENT="0" />
+			<meta name="distribution" content="Global" />
+			<meta name="robots" content="FOLLOW,INDEX" />
+			
+			
+				<meta property="og:title" content="KARP" />
+				<meta property="og:description" content="Listen to our station on your computer or mobile device!" />
+				<meta property="og:image" content="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/v5/logo.png" />
+			
+				<link REL="SHORTCUT ICON" HREF="images/ssiicon.ico">	
+				
+			
+
+			<title>Today's Best Country</title>
+			<meta name='ir-site-verification-token' value='-923417589' />
+		
+
+		<link href="css/player.css?v=1.5" rel="stylesheet" media="screen">
+		<link async rel="stylesheet" href="css/font-awesome.min.css?v=23.11.18">
+		<style type="text/css">
+			#mediaPlayer{margin-left:-700px;}
+
+			
+			.pColorTitle{
+				color:#FB8A38;
+
+			}
+			.pColorTitleImp{
+				color:#FB8A38!important;
+
+			}
+			.pColorTitleBkg{
+				background-color:#FB8A38;
+
+			}
+			.pColorTitleBrd{
+				border-color:#FB8A38;
+
+			}
+			.pColorSubtitle{
+				color:#FB8A38;
+			}
+			.pColorText{
+				color:#FB8A38;
+			}
+			a {
+				text-decoration:none;
+				color:#FB8A38;
+			}
+			
+		</style>
+
+		
+		
+	</head>
+
+	<body class="">
+		
+		
+			<script type="text/javascript" id="ssi_Script" src="scripts/ads/prebid.js?9731"></script>
+		
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWRR3EGNS3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XWRR3EGNS3');
+</script>
+
+
+
+
+		<div id="bodyDiv" class="bodyDiv">
+		<div id="widget-close-button" class="pColorTitle pColorTitleBrd" title="Close widget" tabindex="0"  role="button" title="Close widget" aria-label="Close widget" onClick="closeplayerWidget();">&#10006;&#xFE0E;</div>
+
+	<!--background image-->
+	<img id="srcimg_preloaded" src="img/spacer.gif" alt="cover" class="blurCover_preload_img lastCover"/>
+	<img id="srcimg" src="img/spacer.gif" alt="cover" class="blurCover_img lastCover"/>
+	<img id="srcimgSelectedSong" src="img/spacer.gif" alt="cover" class="blurCoverSelectedSong"/>
+	<div height="100%" width="100%" id="blurCover_preload" role="img" aria-label="blur cover" class="blurCover_preload"></div>
+	<div height="100%" width="100%" id="blurCover" class="blurCover" role="img" aria-label="blur cover"></div>
+	<div height="217" width="100%" id="blurCoverFixedBanner" class="blurCoverFixedBanner"></div>
+	<div class="CoverSelectedSong">
+		<div height="100%" width="100%" id="blurCoverSelectedSong" class="blurCoverSelectedSong"  role="image" aria-label="Background 2"></div>
+		<div height="100%" width="100%" id="blurCoverSelectedSong2" class="blurCoverSelectedSong2"  role="image" aria-label="Background 1"></div>
+	</div>
+	
+	<div id="topBar" class="topBar">
+
+		<div class="menuArea">
+			<div class="player_apps">
+				<div id="menuButton" tabindex="0"  role="button" title="Player Apps" aria-label="Player Apps"><canvas height="27" width="49" id="play_down" class="play_down"></canvas>
+				<p class="pColorTitle">Player Apps</p>
+				</div>
+				<div id="menuMainArea">
+					<div id="menuMainContentBlack">
+					<div id="menuMainContent">
+						<!-- player menu apps -->
+
+						
+<div id="menuAppsSection">
+
+
+				<div class="menuLineHelp"><img src="img/icons/menu/help.png"  id="menu_help" width="50" class="menuIcon" title="Problems streaming? Click here for common answers." tabindex="0"  role="button" onClick="startApp('help');" /></div>
+
+		
+<div class="menuAppsSectionCol">
+		
+
+				<div class="menuHeader pColorTitle">Station info</div>
+				<div class="menuLine pColorTitle" tabindex="0"  role="button" title="Contact information" aria-label="Contact information" onClick="startApp('contact');"><img src="img/icons/menu30/contact.png"  id="menu_contact" width="30" class="menuIcon" alt="Contact information" title="Contact information" />Contact information</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Facebook" aria-label="Facebook" onClick="startApp('facebook');"><img src="img/icons/menu30/facebook.png"  id="menu_facebook" width="30" class="menuIcon" alt="Facebook" title="Facebook" />Facebook</div> <a href="https://youtube.com/@KDUZMediactive" target="_blank" title="YouTube" style="display:block;line-height:30px;" class="menuLine pColorTitle"><img src="img/icons/menu30/youtube.png" id="menu_youtubee" width="30" class="menuIcon" alt="YouTube" title="YouTube" />YouTube</a> 
+		
+				<div class="menuHeader">&nbsp;</div>
+
+		
+
+				<div class="menuHeader pColorTitle">Streams</div>
+				<div class="menuLine pColorTitle" tabindex="0"  role="button" title="Send player to mobile phone" aria-label="Send player to mobile phone" onClick="startApp('send-to-mobile');"><img src="img/icons/menu30/send-to-mobile.png"  id="menu_sendtomobile" width="30" class="menuIcon" alt="Send player to mobile phone" title="Send player to mobile phone" />Send player to mobile phone</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Other radio stations" aria-label="Other radio stations" onClick="startApp('other-stations');"><img src="img/icons/menu30/other-stations.png"  id="menu_otherstations" width="30" class="menuIcon" alt="Other radio stations" title="Other radio stations" />Other radio stations</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Podcasts" aria-label="Podcasts" onClick="startApp('on-demand',-1);"><img src="img/icons/menu30/podcast.png"  id="menu_ondemand" width="30" class="menuIcon" alt="Podcasts" title="Podcasts" /><span class="odSecName">Podcasts</span></div> 
+</div>
+
+
+
+<div class="menuAppsSectionCol">
+				
+
+						<div class="menuHeader pColorTitle">Player apps</div>
+						<div class="menuLine pColorTitle" tabindex="0"  role="button" title="News" aria-label="News" onClick="startApp('news');"><img src="img/icons/menu30/news.png"  id="menu_news" width="30" class="menuIcon" alt="News" title="News" />News</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Sports" aria-label="Sports" onClick="startApp('sports');"><img src="img/icons/menu30/sports.png"  id="menu_sports" width="30" class="menuIcon" alt="Sports" title="Sports" />Sports</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Entertainment" aria-label="Entertainment" onClick="startApp('entertainment');"><img src="img/icons/menu30/entertainment-news.png"  id="menu_entertainment" width="30" class="menuIcon" alt="Entertainment" title="Entertainment" />Entertainment</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Weather" aria-label="Weather" onClick="startApp('weather');"><img src="img/icons/menu30/weather.png" id="menu_weather"  width="30" class="menuIcon" alt="Weather" title="Weather" />Weather</div> <div class="menuLine pColorTitle" tabindex="0"  role="button" title="Song request" aria-label="Song request" onClick="startApp('request');"><img src="img/icons/menu30/song-request.png"  id="menu_request" width="30" class="menuIcon" alt="Song request" title="Song request" />Song request</div> 
+</div>
+</div>
+
+
+						<!--END: player menu apps -->
+						<br style="clear:both;" />
+						
+							<div class="shareBox">
+								<div class="shareTitle pColorTitle">Share</div>
+								<!-- AddThis Button BEGIN -->
+								<div class="shareIcons addthis_toolbox addthis_default_style addthis_32x32_style">
+								<a class="addthis_button_preferred_1" role="button" tabindex="0"></a>
+								<a class="addthis_button_preferred_2" role="button" tabindex="0"></a>
+								<a class="addthis_button_preferred_3" role="button" tabindex="0"></a>
+								<a class="addthis_button_preferred_4" role="button" tabindex="0"></a>
+								<a class="addthis_button_compact" role="button" tabindex="0"></a>
+								<a class="addthis_counter addthis_bubble_style" role="button" tabindex="0"></a>
+								</div>
+								<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-502552987eaa3f3d"></script>
+								<!-- AddThis Button END -->
+							</div>
+						
+
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="payPrevNextOnDemand">
+			<div id="payPrevOnDemand" onclick="playOnDemandPrev()" style="cursor:pointer;position:absolute;top:0px;left:0px;margin-left:0px;width:25px;" tabindex="0"  role="button" title="play previous podcast"><div class="arrowLeftBar pColorTitleBkg"></div><div class="arrowLeft" style="border-right:10px solid #FB8A38; "></div></div>
+			<div id="payNextOnDemand" onclick="playOnDemandNext()" style="cursor:pointer;position:absolute;top:0px;left:0px;margin-left:96px;width:25px;" tabindex="0"  role="button" title="play next podcast"><div class="arrowRight" style="border-left:10px solid #FB8A38; "></div><div class="arrowLeftBar pColorTitleBkg"></div></div>
+		</div>
+		
+		<div class="playerArea">
+			<h1 style="display:none">Today's Best Country</h1>
+			<div id="bannerE" class="bannerNotActive bannerE"></div>
+			<div class="playerAreaWp">
+			<div id="playerMain">
+				
+				<div class="playB">
+					<canvas height="62" width="62" id="playCircleOut" class="playCircleOut"></canvas>
+					<canvas height="62" width="62" id="playCircle" class="playCircle"></canvas>
+					<canvas height="27" width="25" id="playButton" class="playButton" role="button" aria-label="Play" tabindex="0"></canvas>
+				</div>
+				<div id="volume" aria-label="Volume" role="button" tabindex="0">
+					<div id="progressControl">
+						<div id="progressBullet"></div>
+						<div class="progressLine"></div>
+
+					</div>
+					<canvas height="19" width="26" id="volumeIcon" class="volumeIcon"></canvas>
+					<div id="volumeControl">
+						<div id="volumeBullet" class="pColorTitleBkg"></div>
+						<div class="volumeLine pColorTitleBkg"></div>
+
+					</div>
+				</div>
+				<div id="songLength" class="songLength pColorTitle"></div>
+			</div>
+			<div id="songDetThumb"></div>
+			<div class="songDet"><span id="songTitle" class="pColorTitle" role="heading"></span><br><span id="songArtist" class="pColorTitle"></span><br><span id="songAlbum" class="pColorTitle"></span><span id="programStartTS"></span></div>
+			</div>
+		</div>
+
+	</div>
+	<div class="nextPlay">
+			<div class="nextPlayP">
+				<div id="nextPlayContent">
+
+					<div id="nextCover" role="image" aria-label="Next up"></div><div id="nextUpInLine">Next up in <span id="nextUpIn"></span></div>
+					<span id="nextTitle"><span></span><canvas id="nextTitleCanvas" width="160" height="24"></canvas></span>
+					<span id="nextArtist"><span></span><canvas id="nextArtistCanvas" width="160" height="24"></canvas></span>
+					<span id="nextAlbum"></span>
+				</div>
+			</div>
+		</div>
+	
+	<!-- ustream -->
+		
+		<!-- END: ustream -->
+	
+	<div id="mainSectionApps">
+				
+					<div id="player-apps" class="player-apps">
+						
+						<div id="player-apps-close-button" title="Close player app" onClick="closeApp();" tabindex="0"  role="button">&#10006;</div>
+						
+						<div id="appContentAjax">
+
+						</div>
+					</div>
+					
+				<!-- player apps -->
+				<!--cfinclude template="player_apps.cfm"-->
+				<!-- END: player apps -->
+		<!--div id="mainSectionBanner">
+			<script type='text/javascript'>
+						<!--//<![CDATA[
+						   document.MAX_ct0 ='';
+						   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+						   var m3_r = Math.floor(Math.random()*99999999999);
+						   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+						   document.write ("zoneid=193125");document.write("&amp;nodis=1");
+						   document.write ('&amp;cb=' + m3_r);
+						   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+						   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+						   document.write ("&amp;loc=" + escape(window.location));
+						   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+						   if (document.context) document.write ("&context=" + escape(document.context));
+						   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+						       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+						   }
+						   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+						   document.write ("'></scr"+"ipt>");
+				//]]>--></script>
+		</div-->
+	</div>
+
+	<div id="mainSection" class="mainSection">
+
+		<div class="col1">
+			<div class="logoMain">
+				<img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/KARP/v5/logo.png" class="img-responsive" alt="KARP" title="Cirrus player" >
+			</div>
+			<div id="bannerM_EXTRA" class="bannerM_EXTRA"></div>
+			
+<div id="top-menu-wrapper" class="top-menu-wrapper tS">
+
+	<div class="menuScreens">
+	<div class="menuScreen"></div>
+	</div>
+	<div class="menuScreensPag"></div>
+</div>
+
+
+		</div>
+		<div class="col2 coverColumn"><div id="bannerN" class="bannerNotActive bannerN"></div>
+		
+		
+		<div id="songCover" role="img" aria-label="song cover" >
+
+		
+		
+	<!--top bar--></div></div>
+		<div class="col3">
+			<div class="rightContentColumn">
+				<div id="bannerD_EXTRA" class="bannerD_EXTRA"></div>
+				
+				<div class="rightCol2">
+					<!--img src="img/cover2.jpg"  title="Cover2" /-->
+					<div id="bannerM"></div>
+				</div>
+			</div>
+		</div>
+		<br class="clearBoth"/>
+	</div>
+	<div id="bannerD"></div>
+	<div class="playlistSection">
+
+		<div id="playlistHistoryDrag">
+			<div class="playlistHistory" id="playlistHistory">
+				<div id="dragHelpMessage" class="pColorTitle pColorTitleBrd">Click and drag to view older playlist songs.<i class="pColorTitleBrd"></i></div>
+				<div id="dragHelp" class="pColorTitle pColorTitleBrd"><div class="arrLeft"><span>&larr;</span></div> <div class="arrDott">&bull;</div> <div class="arrRight"><span>&rarr;</span></div></div>
+			</div>
+		</div>
+	</div>
+	
+	<!--div id="overBlur"></div-->
+	<div class="mediaplayerSection">
+		<div id="mediaplayer"></div>
+	</div>
+	<div class="mediaplayerSectionOD">
+		<div id="mediaplayerOD"></div>
+	</div>
+	<div id="bannerM_APP"></div>
+	<div id="bannerD_APP"></div>
+</div>
+<div id="impressionDiv"></div>
+
+
+
+		
+		
+	
+<script src="js/jquery.min.js"></script>
+
+
+		
+							
+
+							<div id="adblockWrapper"></div>
+							<script>
+								function getQueryVariable(variable){
+							       var query = window.location.search.substring(1);
+							       var vars = query.split("&");
+							       for (var i=0;i<vars.length;i++) {
+							               var pair = vars[i].split("=");
+							               if(pair[0] == variable){return pair[1];}
+							       }
+							       return(false);
+								}
+
+								function a5okIbtjsqA6cRcjdD0xtZKeiClSxe8YjMrm92p4Zpe6SlDyVc66uCJUTscqJGtlTgyYXlMjeTpU1WgPHKcKq1w02idNojmQzFckCiqFTd2GDlvDV2naUBLrTCb5nRwlTRSFzjcXN5Sp2UEnHpvgFKRWHhIPWxjicsX8pweuTwceIV200OuV6(){
+									if(window.iExist === undefined){
+										//console.log("ad blocker detected");
+										$("#adblockWrapper").css("display","block");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\" style=\"max-width:95%\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb6web.securenetsystems.net/ce/index.cfm?stationCallSign=KARP&&retry=true&playSessionID=FF6360F8-979A-D5C4-2641C5477068AA98");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "img/blockdetected.jpg");
+											enableStream=false;
+											stopPlayer();
+										}
+									}else if(window.iExist!='9731'){
+										//console.log("ad blocker detected");
+										$("#adblockWrapper").css("display","block");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\" style=\"max-width:95%\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb6web.securenetsystems.net/ce/index.cfm?stationCallSign=KARP&&retry=true&playSessionID=FF6360F8-979A-D5C4-2641C5477068AA98");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "img/blockdetected.jpg");
+											enableStream=false;
+											stopPlayer();
+										}
+									}else{
+										$.ajax('scripts/ads/prebid.js?v=1.32')
+										.fail(function(d){
+											allowPrebid=false;
+											//console.log("ad blocker detected");
+											$("#adblockWrapper").css("display","block");
+											//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+											adBlockerPresent = true;
+											$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\"  style=\"max-width:95%\"></a>");
+											var retryVar = getQueryVariable("retry");
+											if(!retryVar){
+												setTimeout(function(){
+													window.location.replace("https://streamdb6web.securenetsystems.net/ce/index.cfm?stationCallSign=KARP&&retry=true&playSessionID=FF6360F8-979A-D5C4-2641C5477068AA98");
+												}, 500000);
+											}else{
+												$("#blockImage").attr("src", "img/blockdetected.jpg");
+												enableStream=false;
+												stopPlayer();
+											}
+										});
+										adBlockerPresent = false;
+										//console.log("ad blocker NOT detected");
+										$("#adblockWrapper").hide();
+									}
+								}
+
+								if(playerAdvertisingMode=="ADN" || playerAdvertisingMode=="SEQ"){
+									setTimeout(function(){
+										a5okIbtjsqA6cRcjdD0xtZKeiClSxe8YjMrm92p4Zpe6SlDyVc66uCJUTscqJGtlTgyYXlMjeTpU1WgPHKcKq1w02idNojmQzFckCiqFTd2GDlvDV2naUBLrTCb5nRwlTRSFzjcXN5Sp2UEnHpvgFKRWHhIPWxjicsX8pweuTwceIV200OuV6();
+									}, 500);
+								}
+								var stopPlayerRetry=0;
+								function stopPlayer(){
+									cirrusPlayer.stop();
+									$("#mediaplayer").remove();
+									$("#topBar").html('');
+									$(".nextPlay").remove();
+									$(".playlistSection").remove();
+									$(".col2").html('');
+									$(".col3").html('');
+									$("#top-menu-wrapper").remove();
+									$(".mediaplayerSection").remove();
+									cirrusPlayer.stop();
+									stopPlayerRetry=stopPlayerRetry+1;
+									if(stopPlayerRetry<10){
+										setTimeout("stopPlayer()",200);
+									}
+								}
+							</script>
+
+		
+
+				
+				
+<!--/banners for menu-->
+	<div id="media-icons" class="pColorTitleImp">
+			
+				<div class="overLabel pColorTitleImp">Share:</div>
+				<img src="img/icons/menu20/facebook.png" alt="facebook" height="20" width="20" class="menuIcon" id="media-icons-facebook3" border="0" title="Share this song on Facebook" tabindex="0"  role="button" onClick="socialShare('facebook');" />
+				<img id="media-icons-twitter3" src="img/icons/menu20/twitter.png" alt="twitter" class="menuIcon" height="20" width="20" border="0" title="Tweet this song" tabindex="0"  role="button" onClick="socialShare('twitter');" /></a>
+			
+				<div class="overLabel">
+			<!--a href="#" id="media-icons-lyrics" title="View song lyrics" class="pColorTitleImp" onClick="startApp('lyrics');return false;" />Lyrics</a> | --> 
+				</div>
+			
+	</div>
+
+
+
+		<!-- Scripts -->
+		<script src="js/bowser.min.js"></script>
+		<script type="text/javascript" src="js/prebid.js?v=4.411"></script>
+		<script type="text/javascript">
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		var preBidCounter = 0; 
+		var waterfallCounter = 0;
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+		/* JUST FOR DIAGNOSTICS - DELETE IN PRODUCTION CODE */
+	</script>
+		
+		<script src="/cirruscore/cirruscore_v2.js"></script>
+		<script src="js/html5vast.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript">$(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});</script>
+		<script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+<script type="text/javascript" src="js/ifvisible.min.js"></script>
+<script type="text/javascript" src="js/new_player.min.js?cb=20240530234109"></script>			
+		
+		<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+		<script type="text/javascript">
+			var cirrusPlayer;
+			var cirrusPlayerState;
+			var elapsedTimer;
+			var elapsedTime = 0;
+			var streamUrl;
+			var thisBrowser;
+			var isMobileDevice=0;
+			var playerIsReady=0;
+			var encoderTypePlayer=encoderType; 
+			if(bowser.android){
+				thisBrowser = "android";
+
+				streamUrl = streamSrcPlay;
+				autoStart=true;
+				isMobileDevice=1;
+				$("#volume").css("display","none");
+				$(".playerArea").addClass("iosPlayerArea");
+				//$(".overlayPageIOS").remove();
+			}else if((bowser.ios) || (bowser.windowsphone)){
+				if(bowser.ios) thisBrowser = "ios";
+				if(bowser.windowsphone) thisBrowser = "windowsphone";
+
+				streamUrl = streamSrcPlay;
+				autoStart=true;
+				isMobileDevice=1;
+				$("#volume").css("display","none");
+				$(".playerArea").addClass("iosPlayerArea");
+				//$(".overlayPageAndroid").remove();
+			}else if((bowser.chrome) || (bowser.msedge) || (bowser.safari)){
+				if(bowser.chrome) thisBrowser = "chrome";
+				if(bowser.msedge) thisBrowser = "msedge";
+				if(bowser.safari) thisBrowser = "safari";
+
+				streamUrl = streamSrcPlay;
+				//hideTransportVolume=0;
+			}else if((bowser.firefox) || (bowser.msie)){
+				if(bowser.firefox) thisBrowser = "firefox";
+				if(bowser.msie) thisBrowser = "msie";
+				if(encoderType=="ACP" && thisBrowser== "msie"){
+					//$(document).load('jwplayer7/jwplayer.flash.swf', function() {});
+				}
+				streamUrl = (encoderType=="ACP"?streamSrcAac:streamSrcPlay);
+				if(navigator.platform.indexOf('Mac')>=0 || encoderType=="ACP")
+				{
+					var hasFlash = false;
+						try {
+							hasFlash = Boolean(new ActiveXObject('ShockwaveFlash.ShockwaveFlash'));
+							
+						} catch(exception) {
+							hasFlash = ('undefined' != typeof navigator.mimeTypes['application/x-shockwave-flash']);
+						}
+					if(hasFlash==false){	
+						if(thisBrowser== "msie"){
+							
+						}else{
+						streamUrl = streamSrcPlay;
+						encoderTypePlayer='MP3';
+						}
+						
+					}else{
+						if(thisBrowser=="firefox" && parseInt(bowser.version)>50){
+							streamUrl = streamSrcPlay;
+							encoderTypePlayer='MP3';
+						}
+					}	
+				}
+				//hideTransportVolume=0;
+			}
+			if (location.protocol === 'https:') {
+				streamUrl=streamUrl.replace('http:','https:');
+				playerLogo=playerLogo.replace('http:','https:');
+				centralSvrPrefixURL =centralSvrPrefixURL .replace('http:','https:');
+				streamRoot=streamRoot.replace('http:','https:');
+				dftAlbumArt=dftAlbumArt.replace('http:','https:');
+			}
+			/*var playerIsInit=0;
+			$(document).ready(function(){
+				if(prerollApp.length>0){
+					playerIsInit=0;
+				}else{
+					playerIsInit=1;
+					initPlayer();
+					if(isMobileDevice==1){
+						setTimeout("startPlayerIOS()",1000);
+					}
+				}
+			});
+			*/
+			//alert(encoderTypePlayer+":"+streamUrl); 
+			function initPlayer(ast){
+				
+				cirrusPlayer = new CirrusPlayer("mediaplayer","mediaplayerOD", "assets/silence.m4a", thisBrowser, encoderTypePlayer);
+
+				/* Attach event listeners */
+				$(document).on("playerError", function(event){/*console.log("playerError: " + event.message);*/showOndemandWhenError()});
+				$(document).on("playerReady", function(){
+
+					playerIsReady=1;
+					if(playerisDestroyed!=1){
+
+						//clearInterval(elapsedTimer);
+						//$("#elapsedTime").html("0 secs");
+						//console.log("playerReady");
+
+						liveStream=true;
+						
+							if(ast==1){
+								//cirrusPlayer.play(streamUrl);
+							}
+						
+						//loadCurrentPlay();
+						//setTimeout("getNowPlaying()",500);
+						cirrusPlayer.volume(mPlayerSavedVol);
+						if(isMobileDevice==0){
+							setBullhornCampaign();
+						}
+						if(isMobileDevice==1){
+							//if(thisBrowser=='android'){startPlayerIOS();}
+							
+
+						}
+					}
+
+				});
+				$(document).on("playerIsBuffering", function(){cirrusPlayerState='BUFFERING';stopIfonDemand();/*console.log("playerIsBuffering:"+Date());*/});
+				$(document).on("playerIsPlaying", function(){
+					cirrusPlayerState='PLAYING';
+					stopIfonDemand();
+					//alert("playerIsPlaying:"+Date());
+				});
+				$(document).on("playerIsPaused", function(){
+					cirrusPlayerState='PAUSED';
+					//console.log("playerIsPaused");
+					doNielsenEvents('pause');
+				});
+				$(document).on("playerMeta", function(event){
+
+					doNielsenEvents('meta');
+				});
+				$(document).on("playerOnComplete", function(){
+					cirrusPlayerState='COMPLETED';
+					if(audioAddPlay==true || mediaAddPlay==true){
+
+						onDemandComplete();
+					}
+					//console.log("playerOnComplete");
+				});
+				/* END: Attach event listeners */
+				//cirrusPlayer.play('http://ice1.securenetsystems.net/DEMOSTN');
+			}
+			function startPlayerIOS(){
+				currentStatus='pause';
+				liveStream=true;
+
+				//cirrusPlayer.stop();
+				if(hideTransportVolume==0){
+					drawPlayButton('playButton');
+				}
+				//cirrusPlayer.play(streamUrl);
+				//loadCurrentPlay(); 
+				//cirrusPlayer.stop();
+				//setTimeout("getNowPlaying()",500);
+				//load jwplayer if there is any ondemand video
+				var ondemandvideo=-1;
+				//$("#playButton").click();
+				for(var i=0;i<onDemandFileCount;i++){
+					if(onDemandQueue[i].video == true){
+						ondemandvideo=i;
+					}
+				}
+				/*
+				if(cirrusPlayer.isJwPlayer==false){//ondemandvideo!=-1 &&
+					$.getScript("jwplayer7/jwplayer.js", function(data, textStatus, jqxhr){
+
+					loadJwPlayerFile=1
+					jwplayer.key="or1lsj+iDdxvX1tGiuDhIxwfs+AE1pW/SGRc2A==";
+						onDemandPlayerOD=jwplayer("mediaplayerOD").setup({
+							width: 600,
+							height: 400,
+							controls:false,
+							autostart: false,
+							file:onDemandQueue[ondemandvideo].fileName,
+							type: "mp4"
+						});
+						onDemandPlayerLoaded=1;
+					});
+				}*/
+			}
+		</script>
+		
+<div id="debugDiv"></div>
+<div class="cookieBanner" style="font-family:arial;display:none;position:fixed;bottom:0px;left:0px;width:100%;min-height:70px;background:#cdcdcd;color:#000000!important;z-index:12"><div style="color:#000000!important;max-width:1100px;margin:20px auto;padding-left:10px;padding-right:10px;"><div style="float:right;width:200px;height:100%;text-align:right;" class="cookieButtons"><input type="button" style="width:150px;background-color: rgba(0,0,0,0.6);	padding: 5px 0px 5px 0px;color:#fff;text-align:center;border-radius: 6px;margin:0px 0px 10px 0px;	border:0px;	font-weight:600;cursor:pointer;" name="cookieButton" id="cookieButton" onclick="acceptCookies()" value="Close"/><span class="cookieLine"><br></span><a href="javascript:void()" onclick="startApp('cookies')" tabindex="0" role="button" title="cookie policy">cookie policy &raquo;</a></div>Securenet Systems uses cookies for the purposes of statistical analysis, improving the friendliness and usability of our website, tailoring content to your interests and engaging with social media. By visiting and using our website, you consent to our use of cookies as described in our cookie policy.</div></div>
+<script language="javascript">
+$(document).ready(function(){
+
+	if(bowser.msie && encoderType=='ACP'){
+		if(parseInt(bowser.version)<=11){
+			$('#bodyDiv').css('display','none');
+			$('.mediaplayerSection').remove();
+			$('.mediaplayerSectionOD').remove();
+			$('#mediaplayer').remove();
+			$('#mediaplayerOD').remove();
+			$('body').append('<div style="font-family:Arial;position:fixed;top:0px;left:0px;right:0px;bottom:0px;text-align:center;font-size:22px;color:#ffffff;background-color:#3e3e3e;"><table border="0" style="width:100%;height:100%;border:0px;"><tr><td valign="middle" align="center">This program cannot be streamed in Internet Explorer 11.<br> Please use an alternate browser such as Edge, Chrome, or Firefox</td></tr></table></div>');
+		};
+	}
+});
+</script>
+
+	<div id="stationBlackoutMessage" style="display:none"></div>  
+
+	</body>

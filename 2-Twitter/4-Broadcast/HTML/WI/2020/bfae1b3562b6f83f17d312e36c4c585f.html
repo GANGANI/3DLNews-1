@@ -1,0 +1,831 @@
+
+
+
+<!DOCTYPE html>
+<html class="js no-touchevents" lang="en">
+
+<head>
+    <meta charset="utf-8">
+	
+		<base href="/cirruscontent/" />
+	
+		
+
+		<script>
+		
+			var pColorTitle='4F7FF7';
+			var ckColor = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pColorTitle);
+			if(ckColor){
+				var pColorTitle='4F7FF7';
+			}else{
+				var pColorTitle='4F7FF7';
+			} 
+			var allowHTTPS=true;
+			var playSessionID = "06F7D98F-BAE1-B668-5764AE60488736BF";
+			var mobilePlayer = false;
+			var mobilePlayerNew = false;
+			var privateLabel = false;
+			
+			var centralSvrPrefixURL = "https://radio.securenetsystems.net/";
+			var adnSvrPrefixURL = "https://ssiadnweb.securenetsystems.net/";
+
+			var launchFrom = "";
+			var enableCirrusOmni = false;
+
+			var stationSlogan = "THE ROCK STATION";
+			var cdnRfPrefixURL = "https://cdnrf.securenetsystems.net/file_radio/";
+			
+				var playerBgImg = "//cdnrf.securenetsystems.net/file_radio/v8/skins/mixer2.png";//
+			
+			var geoCTCode = "LK";
+			var geoDMACode = "0";
+			var geoLocLat = "6.9047";
+			var geoLocLon = "79.9638";
+			var cGeoLocationLevel = "5";
+			var clientIPAddr = "112.134.171.20";
+
+			var playerAdvertisingMode = "STN";
+			var sPrerollSkipSecs="";
+			var bannerRotationFqcy = 60;
+			var definedBannerTypes = "M,D,N,E";
+			var sLocaFillOnAdnFail = false;
+			var sTerrFillOnLocalFail = true;
+			var sBedFillOnAllFail = false;
+			var sBedFillFileName = "COMMERCIAL-BREAK-BACKGROUNDER.m4a";
+			var sTspStnId = "";
+			var sGenre = "RCK";
+			var logVPAID = false;
+			var vastAbortTimer;
+
+			var royaltyMarkProgram = 30;
+			var royaltyMarkAd = 90;
+
+			var adBlockerPresent = false;
+
+			
+			var prerollApp = new Array();
+			
+					
+					prerollApp.push("player-check-ab");
+					
+				
+					var prerollRemarks=true;
+				
+					var prerollStation=false;
+				
+					var prerollLogin=false;	
+				
+					var prerollMobile=false;	
+				
+					var prerollSocials=false;	
+				
+					var prerollDemographics=false;
+				
+					var prerollBanner=false;	
+				
+			var checkIEModernUI = false;
+
+			var playerAppOnDemand = false;
+			var playerAppHome = false;
+			var playerAppContact = true;
+			var playerAppFacebook = false;
+			var playerAppTwitter = false;
+			var playerAppYouTube = false;
+			var playerAppsYouTubeUserName = "";
+			var youtubeUserType = "U";
+			var playerAppUstream = false;
+			var playerAppsUstreamCid = "";
+			var playerAppFacebookLive = false;
+			var playerAppFacebookLiveSrc = '';
+			var playerAppOtherStations = false;
+			var playerAppShareThis = true;
+			var playerAppNews = true;
+			var playerAppNewsSrc = "https://news.yahoo.com/rss/mostviewed";
+			var playerAppScrollingText = true;
+			var playerAppScrollingTextSrc = "https://news.yahoo.com/rss/mostviewed";
+			var playerAppSports = true;
+			var playerAppSportsSrc = "http://sports.espn.go.com/espn/rss/news";
+			var playerAppStocks = false;
+			var playerAppStocksSrc = "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml";
+			var playerAppEntertainment = true;
+			var playerAppEntertainmentSrc = "https://www.tmz.com/rss.xml";
+			var playerAppWeather = false;
+			var playerAppFlight = false;
+			var playerAppYelp = false;
+			var playerAppDeals = false;
+			var playerAppPolls = false;
+			var playerAppSongRequest = false;
+			var playerAppChat = false;
+			var chatChannel = "48154602157";
+			var playerAppGames = false;
+			var playerAppWobot = false;
+			var playerAppWobotSrc = "http://www.wobot.tv/rss/";
+			var playerAppPlaylist = false;
+			var playerAppLyrics = true;
+			var playerAppSendToMobile = true;
+			var playerAppHelp = true;
+			var fbComments=false;
+			var fbCommentsMin=false;
+			var playerAutoStartApp = "pAppOtherStations";
+			var playerAutoStartChannel = "";
+			var playerAutoStartShow = "";
+			var playerAutoStartPodcast = "";
+			var listenSessionTimeout = 0;
+			var playerAppTimeout = false;
+
+			var dspAlbumArt = true;
+			var dftAlbumArt = "https://cdnrf.securenetsystems.net/file_radio/stations_large/WOWN/v5/album-art-default.png";
+			var dspBuyMediaButton = false;
+			var dspMediaRate = false;
+
+			var dspMenuIcon = true;
+			var playerMenuAutoOpen = false;
+
+			var stationCallSign = "WOWN";
+
+			var polling = new Object();
+			polling.enabled = false;
+			polling.active = false;
+			polling.adInsert = false;
+			
+			var adnPrebidEnable = false;
+			
+
+			var adnPrebidFloor = 0.00;			
+			var adnPrebidLimit = 0;		;
+			var adnPrebidTimeout = 8000;		
+			var adnPrebidObj = new Object();
+			var adnImpCntObj = new Object();
+			
+					
+
+
+			var adnPrebidTypes = new Object();
+			adnPrebidTypes['M']=new Object();
+			adnPrebidTypes['M'].floorNbRequest=0;
+			adnPrebidTypes['M'].floorList='0.00';
+			adnPrebidTypes['D']=new Object();
+			adnPrebidTypes['D'].floorNbRequest=0;
+			adnPrebidTypes['D'].floorList='0.00';
+			adnPrebidTypes['V']=new Object();//FV
+			adnPrebidTypes['V'].floorNbRequest=0;
+			adnPrebidTypes['V'].floorList='0.00';
+			adnPrebidTypes['H']=new Object();//FH
+			adnPrebidTypes['H'].floorNbRequest=0;
+			adnPrebidTypes['H'].floorList='0.00';
+			var sAdNetPFR=0;
+			
+			
+				
+			
+				var encoderType = "ACP";
+				var blackout = new Object();
+				blackout.nextCheck	=9999999;	
+				var onDemandAutoStart =false;
+				var liveStreamEnable = true;				
+			
+					
+					var d = new Date();
+					var localServerTSoffset = d.getTime()+d.getTimezoneOffset()*60000 - Date.parse("31 May 2024 07:13:55");
+				
+
+				
+					var nielsenEnabled = true;
+				
+			var enableStream = false;
+
+			
+			
+					
+				var streamSrcDB = 'https://ice25.securenetsystems.net/WOWN';
+				var streamSrcFlv = 'https://ice25.securenetsystems.net/WOWN';
+			
+			
+			var streamSrcPlay=streamSrcDB.replace("?type=.flv","")+'?playSessionID=06F7D98F-BAE1-B668-5764AE60488736BF';
+			var streamSrcAac = streamSrcDB+(streamSrcDB.indexOf("?")==-1?"?":"&")+"playSessionID=06F7D98F-BAE1-B668-5764AE60488736BF";		//streamSrcDB.replace("?type=.flv","");
+			var streamSrcMp3 = streamSrcDB.replace("type=.flv","type=.mp3");
+			var bDRC=false;
+			var sessionDebugLog=false;
+			var sessionDebugLogSent=0;
+			var ne_enable=false;
+			var ne_enable_time=15;
+			var enableURLRewrite=false;
+			var enableURLStation=false;
+			var autoPlay=true;
+			var adnModePrebid=1;
+			var adnModeWaterfall=1;
+			var stationCallUrl="https://streamdb4web.securenetsystems.net";
+			var playlistHistoryXMLurl = "https://streamdb4web.securenetsystems.net/player_status_update/WOWN_history.xml";
+			var streamErrorRetryDelay=0;
+			var embedEnable=true;
+			var fontcolorMain='#fff700';
+			var useLargeB=true;
+			
+			var embedOpened=false;
+			var embedOpenedApp='';
+			var embedOpenedArtist="";
+			var embedOpenedAlbum="";
+			var embedOpenedSong="";
+
+
+			if(embedOpened==true){
+				autoPlay=false;
+			}
+			var dvlpm=false;
+			var viewMode='list';
+			var enableRadioStats='false'; 
+			
+				var tagRotationOffset = 0;
+				var prebidSplit=1;
+			
+			
+			var maxRotationWhenMin=-1;
+			var crtRotationWhenMin=0;
+			
+			
+			var useSettingsTheme=false;
+			var useSettingsColors=true;
+			var infoBoxesPosition='bottom';
+			var colorCells='#ffffff';
+			var feedsList=new Array();
+			feedsList['NWS']=new Array();
+			feedsList['SPT']=new Array();
+			feedsList['Ent']=new Array();
+			
+					
+					if(typeof(feedsList['Ent'])=='undefined'){
+						feedsList['Ent']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="Entertainment Tonight";
+					feedEntry['url']="https://feeds.feedburner.com/EtsBreakingNews";
+					feedsList['Ent'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['Ent'])=='undefined'){
+						feedsList['Ent']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="Inside Edition";
+					feedEntry['url']="https://www.insideedition.com/entertainment/rss";
+					feedsList['Ent'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['Ent'])=='undefined'){
+						feedsList['Ent']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="TIME";
+					feedEntry['url']="https://feeds2.feedburner.com/time/entertainment";
+					feedsList['Ent'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['NWS'])=='undefined'){
+						feedsList['NWS']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="MarketWatch";
+					feedEntry['url']="https://feeds.marketwatch.com/marketwatch/topstories";
+					feedsList['NWS'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['NWS'])=='undefined'){
+						feedsList['NWS']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="The Guardian";
+					feedEntry['url']="https://www.theguardian.com/us/rss";
+					feedsList['NWS'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['NWS'])=='undefined'){
+						feedsList['NWS']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="Yahoo";
+					feedEntry['url']="https://news.yahoo.com/rss/mostviewed";
+					feedsList['NWS'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['SPT'])=='undefined'){
+						feedsList['SPT']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="ESPN";
+					feedEntry['url']="https://www.espn.com/espn/rss/news";
+					feedsList['SPT'].push(feedEntry);
+				
+					
+					if(typeof(feedsList['SPT'])=='undefined'){
+						feedsList['SPT']=new Array();
+					}
+					var feedEntry=new Array();
+					feedEntry['name']="Yahoo";
+					feedEntry['url']="https://sports.yahoo.com/rss";
+					feedsList['SPT'].push(feedEntry);
+				
+			var revcontent_file='1';
+			var disableSaambaa=1;
+			var newPlayerBanner='false';
+			
+				var bannerMaxRotation=999999; 
+					
+			var minimizedRotate="1";
+		
+		</script>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>THE ROCK STATION</title>
+			<meta name='ir-site-verification-token' value='-923417589' />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+			<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+			<META HTTP-EQUIV="EXPIRES" CONTENT="0" />
+			<meta name="distribution" content="Global" />
+			<meta name="robots" content="FOLLOW,INDEX" />
+			
+			
+				<meta property="og:title" content="WOWN" />
+				<meta property="og:description" content="Listen to our station on your computer or mobile device!" />
+				<meta property="og:image" content="https://cdnrf.securenetsystems.net/file_radio/stations_large/WOWN/v5/logo.png" />
+			
+				<link REL="SHORTCUT ICON" HREF="images/ssiicon.ico">
+				
+			
+		
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
+	<link async rel="stylesheet" href="css/icon.css?v=24.05.22">
+	<link async rel="stylesheet" href="css/v9.css?v=24.05.22">
+	<link async rel="stylesheet" href="css/font-awesome.min.css?v=24.05.22"> 
+	<style>
+	.colorMainBkg{
+		background-color:#000000!important;
+	}
+	.themeBgColor80{
+		background-color:rgba(247,8,8,0.8);
+	}
+	.themeBgColor70{
+		background-color:rgba(247,8,8,0.7);
+	}
+	.themeBgColor60{
+		background-color:rgba(247,8,8,0.6);
+	}
+	.themeBgColor20{
+		background-color:rgba(247,8,8,0.2);
+	}
+	.themeBgColor05{
+		background-color:rgba(247,8,8,0.05);
+	}
+	.themeBgColor04{
+		background-color:rgba(247,8,8,0.04);
+	}
+	.themeBorderColor70{
+		border-left-color:rgba(247,8,8,0.7)!important;
+	}
+	.themeBorderColor45Up{
+		border-bottom-color:rgba(255,247,0,0.45);
+	}
+	.themeBorderColor45Down{
+		border-top-color:rgba(255,247,0,0.45);
+	}
+	.themeBorderColor70Up{
+		border-bottom-color:rgba(255,247,0,0.7);
+	}
+	.themeBorderColor70Down{
+		border-top-color:rgba(255,247,0,0.7);
+	}
+	.themeFontColorLight{
+		color:#ffffff!important;
+	}
+	a,
+	.themeFontColorDark{
+		color:#fff700;
+		text-decoration:none;
+	}
+	.themeFontColorDarkL{
+		color:#575757;
+		color:#fff700;
+		opacity:0.9;
+	}
+	.themeFontColorDarkIcon{
+		color:#5F5F5F;
+		color:#fff700;
+		opacity:0.8;
+	}
+	.cellBkgColor{
+		background-color:#ffffff!important;
+	}
+	.cellBoxTxtColor{
+		color:#ffffff!important;
+	}
+	.cellBoxBkgColor{
+		background-color:#fff700!important;
+	}
+	.transportBgColor20{
+		background-color:rgba(255,247,0,0.2);
+	}
+	.headerDiv .transportBgColor20{
+		background-color:#ffffff;
+	}
+	.transportBgColor05{
+		background-color:rgba(255,247,0,0.05);
+	}
+	.headerDiv .transportBgColor05{
+		background-color:rgba(255,255,255,0.55);
+	}
+	.transportBorderColor70{
+		border-left-color:rgba(255,247,0,0.7)!important;
+	}
+	.headerDiv .transportBorderColor70{
+		border-left-color:#ffffff!important;
+	}
+	.transportBgColor70{
+		background-color:rgba(255,247,0,0.7);
+	}
+	.headerDiv .transportBgColor70{
+		background-color:#ffffff;
+	}
+	.themeFontColorDarkGrey{
+		color:#575757;
+	}
+	.prerollMobileApp #mainPageWhite,
+	.prerollMobileApp #mainPage,
+	.prerollMobileApp .bodyDiv,
+	.prerollMobileApp .prerollApp{
+		min-width:100%!important;
+		max-width:100%!important;
+	}
+	.prerollMobileApp .bodyDiv{
+		padding-left:20px!important;
+		padding-right:20px!important;
+	}
+	.prerollMobileApp .playlistSongArea{
+		display:none;
+	}
+	
+	#appContentAjax:focus{
+		border:1px solid #ffffff;
+	}
+        
+	</style>
+	
+</head>
+	
+<body class="preRollinProgress ib_bottom ">
+
+		<script type="text/javascript" id="ssi_Script" src="scripts/ads/prebid.js?8031"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WF0X82N3TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WF0X82N3TF');
+</script>
+
+
+
+
+<div id="mainPageWhite" class="colorMainBkg" style="background-image:url('//cdnrf.securenetsystems.net/file_radio/v8/skins/mixer2.png');">
+<div id="mainPageBkg1"></div> 
+<div id="mainPageBkg"></div> 
+<div id="mainPage" class="themeBgColor04">
+
+<div class="headerDiv themeBgColor80">
+	<div class="menuButton" tabindex="0" role="button" aria-pressed="false" title="Open menu" aria-label="Open menu"><div class="menuButtonClose"><span class="close thick pointy"></span></div><div class="menuButtonLine"></div><div class="menuButtonLine"></div><div class="menuButtonLine"></div></div>
+	<div class="stationSlogan themeFontColorLight"><div class="topBarLogo"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/WOWN/v5/logo.png?cb=20240531031355" alt="Logo"></div><h1 id="sloganTitle">THE ROCK STATION</h1><span id="currentSongHeaderTitle">THE ROCK STATION</span></div>
+	<div class="headerMenuList themeFontColorLight"><div class="podcastSearch"><input type="text" name="searchby" class="themeFontColorDark" placeholder="Search podcasts" value="" id="searchby" /><button id="searchButton"><i class="fa fa-search themeFontColorDarkL" aria-hidden="true"></i></button></div></div>
+</div>
+<div class="appsMenuDiv cellBkgColor" tabindex="-1" role="dialog" aria-modal="true">
+	
+	<div class="mainRightMenu " role="navigation">
+		
+			
+		
+	</div>
+	
+	<div class="appsMenuCol1">
+		<div title="Contact information" class="appsMenuLineCol1 themeFontColorDark" tabindex="0" role="link" onclick="openApp('contact')"><div class="appIconList"><i class="fa fa-address-card-o themeFontColorDark" aria-hidden="true"></i></div><span>Contact information</span></div> 
+			<div class="appsMenuSeparator"></div>
+		
+		<div title="Recently played" class="appsMenuLineCol1 themeFontColorDark" tabindex="0" role="link" onclick="openApp('playlist')"><div class="appIconList"><i class="fa fa-list themeFontColorDark" aria-hidden="true"></i></div><span>Recently played</span></div>
+		<div title="Send player to mobile" class="appsMenuLineCol1 themeFontColorDark" tabindex="0" role="link" onclick="openApp('send-to-mobile')"><div class="appIconList"><i class="icon-send-to-mobile themeFontColorDark" aria-hidden="true"></i></div><span>Send player to mobile</span></div> 
+	</div>
+	<div class="appsMenuCol2">
+		<div title="News" class="appsMenuLineCol2 themeFontColorDark" tabindex="0" role="link" onclick="openApp('news')"><div class="appIconList"><i class="fa fa-list-alt themeFontColorDark" aria-hidden="true"></i></div><span>News</span></div> <div title="Sports" class="appsMenuLineCol2 themeFontColorDark" tabindex="0" role="link" onclick="openApp('sports')"><div class="appIconList"><i class="icon-sports themeFontColorDark" aria-hidden="true"></i></div><span>Sports</span></div> <div title="Entertainment" class="appsMenuLineCol2 themeFontColorDark" tabindex="0" role="link" onclick="openApp('entertainment')"><div class="appIconList"><i class="icon-entertainment-news themeFontColorDark" aria-hidden="true"></i></div><span>Entertainment</span></div> <div title="Privacy" class="appsMenuLineCol2 themeFontColorDark" tabindex="0" role="link" onclick="openApp('help')"><div class="appIconList"><i class="fa fa-question-circle themeFontColorDark" aria-hidden="true"></i></div><span>Privacy Policy</span></div>
+		
+		
+	
+		<div class="appsMenuShare">
+		 
+		<!-- AddThis Button BEGIN -->
+						<div class="shareThis addthis_toolbox addthis_default_style addthis_32x32_style">
+						<a class="addthis_button_preferred_1" role="button" tabindex="0"></a>
+						<a class="addthis_button_preferred_2" role="button" tabindex="0"></a>
+						<a class="addthis_button_preferred_3" role="button" tabindex="0"></a>
+						<a class="addthis_button_preferred_4" role="button" tabindex="0"></a>
+						<a class="addthis_button_compact" role="button" tabindex="0"></a>
+						<a class="addthis_counter addthis_bubble_style" role="button" tabindex="0"></a>
+						</div>
+						<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-502552987eaa3f3d"></script>
+						<!-- AddThis Button END -->
+						
+		</div>
+		
+		
+	</div>
+	
+	<br style="clear:both;height:0px;font-size:0px;line-height:0px"/>
+	<a href="https://cir.st" target="_blank" class="copyright themeFontColorDark">Cirrus&reg; Content Streaming Player<span class="openNewWindowSpan"> Opens a new window</span></a>
+</div>
+<div class="appContentDiv cellBkgColor">
+	
+	<div id="appContentAjax"  tabindex="-1">
+		<div class="appContentTitle themeFontColorDark"><i class="fa themeFontColorDark" aria-hidden="true"></i><span role="heading"></span></div>
+		<div class="appContentText themeFontColorDark"></div>
+	</div>
+	
+</div>
+<div class="mainTopBanner"><div id="bannerD"></div></div>
+	<div class="mainRightBanner"><div id="bannerM"></div></div>
+<div class="bodyDiv" role="main">
+	
+		<div id="playerAppsRemarks" class="prerollApp cellBkgColor">
+				<div>
+					<div class="prerollHeader themeFontColorDark">Welcome to our Internet stream!</div>
+					<div class="prerollContent themeFontColorDark">
+						<p>This station is not streaming to your geographic area at the moment. You can interact with most of the player features, but will not be able to hear the audio stream. Please check back later, or contact the station if you have questions.</p>
+						
+						<div class="prerollAppRow">
+
+							<input type="button" class="inpBtnS" value="Continue" onClick="prerollRemarksComplete=1;loadPrerollApps();$('#playerAppsRemarks').css('display','none');">
+						</div>
+					</div>
+					<div id="demographicsFormErr" class="themeFontColorDark"></div>
+				</div>
+			</div>
+	
+		
+		<div class="mediaplayerArea" id="vastplayerArea"><div id="vastplayer"></div>
+			<div class="bannerPrerollArea" style="display:none;">
+				<div class="bannerMainContent">
+					<div class="bannerSlogan">
+						<div class="bannerSloganTitle themeFontColorDark">THE ROCK STATION</div>
+						<div class="bannerSloganSubTitle themeFontColorDark">Thanks for listening!</div>
+					</div>
+					<div id="pbannerM"></div>
+					<div id="pbannerD"></div>
+				</div>
+			</div>
+			<div class="vastControl cellBkgColor">
+				<div class="playerLogo themeBgColor70"><div style="position:relative;width:210px;height:85px;"><img src="https://cdnrf.securenetsystems.net/file_radio/stations_large/WOWN/v5/logo.png?cb=20240531031355" alt="Logo"></div></div>
+				<div class="songDetail">
+				<div class="songPlaying themeFontColorDark"><div class="playButton transportBorderColor70" tabindex="0" role="button" title="Play" aria-label="Play"></div><div class="pauseButton" tabindex="0" role="button" title="Pause" aria-label="Pause"><div class="pauseButtonBar transportBgColor70"></div><div class="pauseButtonBar transportBgColor70"></div></div></div>
+				</div>
+				<div class="volumeControl themeFontColorDark"><i class="fa fa-volume-up"  tabindex="0" role="button" title="Mute / unmute" aria-label="Mute / unmute"></i><div class="volumeTrack transportBgColor05"  tabindex="0" role="button" title="Set volume" aria-label="Set volume"><div class="volumePosition transportBgColor20"></div></div></div>
+				<div class="progressBar">
+					<div class="progressTime themeFontColorDark"></div>
+					<div class="songDuration themeFontColorDark"></div>
+					<div class="progressLine transportBgColor05"><div class="timerAreaProgress transportBgColor20"></div></div>
+				</div>
+			</div>
+		</div>
+	
+	
+	
+	<div class="playlistSongArea">
+		
+		<div class="songLine upNextSong cellBkgColor">
+			<img class="songCover" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/WOWN/v5/album-art-default.png" alt="Cover" title="Expand" crossOrigin=''/>
+			<div class="songDetail">
+				<h2 class="songTitle themeFontColorDark" ></h2>
+				<h3 class="songArtist themeFontColorDark" ></h3>
+				<h4 class="songAlbum themeFontColorDark" ></h4>
+				<!--div class="aditionalInfos"-->
+				<div class="songShare">
+					<div class="songShareFacebook songShareLink themeFontColorDark" tabindex="0" role="link" onclick="shareApp($(this),'facebook','live')"><i class="fa fa-facebook themeFontColorDarkIcon" aria-hidden="true"></i> Share on facebook</div>
+					<div class="songShareTwitter songShareLink themeFontColorDark" tabindex="0" role="link" onclick="shareApp($(this),'twitter','live')"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i> Share on X</div>
+						<!--div class="songShareGoogle" onclick="shareApp($(this),'google','live')"><i class="fa fa-google-plus themeFontColorDarkIcon" aria-hidden="true"></i></div-->
+						
+					
+					<!--div class="lyricsButton songShareLink themeFontColorDark" ><i class="fa fa-align-justify themeFontColorDarkIcon" aria-hidden="true"></i>Lyrics</div--> <div class="songFactsButton songShareLink themeFontColorDark" tabindex="0" role="link" style="margin-top:-2px"><i class="fa fa-info-circle themeFontColorDarkIcon"  aria-hidden="true"></i>Songfacts<sup style="font-size:12px">&reg;</sup></div>
+					
+				</div>
+				<div class="songApps">
+					<div data-appname="artistbio" tabindex="0" role="link" class="songAppsLink songArtistBio themeFontColorDark"><i class="fa fa-user themeFontColorDarkIcon" aria-hidden="true"></i>Artist Bio</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistFb themeFontColorDark"><i class="fa fa-facebook-official themeFontColorDarkIcon" aria-hidden="true"></i>Facebook<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistTw themeFontColorDark"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i>X<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistWeb themeFontColorDark"><i class="fa fa-globe themeFontColorDarkIcon" aria-hidden="true"></i>Website<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<div data-appname="artistevents" tabindex="0" role="link" class="songAppsLink songArtistEv themeFontColorDark"><i class="fa fa-calendar themeFontColorDarkIcon" aria-hidden="true"></i>Events</div>
+					<div data-appname="artistcd" tabindex="0" role="link" class="songAppsLink songArtistCD themeFontColorDark"><i class="fa fa-music themeFontColorDarkIcon" aria-hidden="true"></i>Discography</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistVid themeFontColorDark"><i class="fa fa-youtube-play themeFontColorDarkIcon" aria-hidden="true"></i>Videos<span class="openNewWindowSpan"> Opens a new window</span></a>
+				</div>
+				<!--/div-->
+				<div class="songPlaying themeFontColorDark"><span>Up next in </span><span class="nextUpIn">0:12</span></div>
+				<div class="songRateContent aditionalInfos"></div>
+			</div>
+			<div class="upNextSongOverlay"></div>
+			<div class="expandSong" tabindex="0" role="link" onclick="$(this).parent().find('.songCover').click()" aria-label="Expand" title="Expand"></div>
+		</div>
+		
+		<div class="songLine songLineOnNow cellBkgColor"> 
+			<img class="songCover" src="https://cdnrf.securenetsystems.net/file_radio/stations_large/WOWN/v5/album-art-default.png" alt="Cover" title="Expand" crossOrigin=''/>
+			<div class="songDetail">
+				<h2 class="songTitle themeFontColorDark" ></h2>
+				<h3 class="songArtist themeFontColorDark" ></h3>
+				<h4 class="songAlbum themeFontColorDark" ></h4>
+				<!--div class="aditionalInfos"-->
+				<div class="songShare">
+					<div class="songShareFacebook songShareLink themeFontColorDark" tabindex="0" role="link" onclick="shareApp($(this),'facebook','live')"><i class="fa fa-facebook themeFontColorDarkIcon" aria-hidden="true"></i> Share on facebook</div>
+					<div class="songShareTwitter songShareLink themeFontColorDark" tabindex="0" role="link" onclick="shareApp($(this),'twitter','live')"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i> Share on X</div>
+						<!--div class="songShareGoogle" onclick="shareApp($(this),'google','live')"><i class="fa fa-google-plus themeFontColorDarkIcon" aria-hidden="true"></i></div-->
+						
+					
+					<!--div class="lyricsButton songShareLink themeFontColorDark" ><i class="fa fa-align-justify themeFontColorDarkIcon" aria-hidden="true"></i>Lyrics</div--> <div class="songFactsButton songShareLink themeFontColorDark" tabindex="0" role="link" style="margin-top:-2px"><i class="fa fa-info-circle themeFontColorDarkIcon"  aria-hidden="true"></i>Songfacts<sup style="font-size:12px">&reg;</sup></div>
+					
+				</div>
+				<div class="songApps">
+					<div data-appname="artistbio" tabindex="0" role="link" class="songAppsLink songArtistBio themeFontColorDark"><i class="fa fa-user themeFontColorDarkIcon" aria-hidden="true"></i>Artist Bio</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistFb themeFontColorDark"><i class="fa fa-facebook-official themeFontColorDarkIcon" aria-hidden="true"></i>Facebook<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistTw themeFontColorDark"><i class="icon-logo-x themeFontColorDarkIcon" aria-hidden="true"></i>X<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistWeb themeFontColorDark"><i class="fa fa-globe themeFontColorDarkIcon" aria-hidden="true"></i>Website<span class="openNewWindowSpan"> Opens a new window</span></a>
+					<div data-appname="artistevents" tabindex="0" role="link" class="songAppsLink songArtistEv themeFontColorDark"><i class="fa fa-calendar themeFontColorDarkIcon" aria-hidden="true"></i>Events</div>
+					<div data-appname="artistcd" tabindex="0" role="link" class="songAppsLink songArtistCD themeFontColorDark"><i class="fa fa-music themeFontColorDarkIcon" aria-hidden="true"></i>Discography</div>
+					<a href="" target="_blank" data-url="" data-appname="webpage" role="button" tabindex="0" class="songAppsLink songArtistVid themeFontColorDark"><i class="fa fa-youtube-play themeFontColorDarkIcon" aria-hidden="true"></i>Videos<span class="openNewWindowSpan"> Opens a new window</span></a>
+				</div>
+				<!--/div-->
+				<div class="progressBar">
+					<div class="progressTime themeFontColorDark"></div>
+					<div class="songDuration themeFontColorDark"></div>
+					<div class="progressLine transportBgColor05"><div class="timerAreaProgress transportBgColor20"></div></div>
+				</div>
+				<div class="songPlaying themeFontColorDark"><span>On now</span><div class="playButton transportBorderColor70" tabindex="0" role="button" title="Play" aria-label="Play"></div><div class="pauseButton"   tabindex="0" role="button" title="Pause" aria-label="Pause"><div class="pauseButtonBar transportBgColor70"></div><div class="pauseButtonBar transportBgColor70"></div></div></div>
+				<div class="songRateContent aditionalInfos"></div>
+			</div>
+			<div class="volumeControl themeFontColorDark"><i class="fa fa-volume-up" tabindex="0" role="button" title="Mute / unmute" aria-label="Mute / unmute"></i><div class="volumeTrack transportBgColor05"  tabindex="0" role="button" title="Set volume" aria-label="Set volume"><div class="volumePosition transportBgColor20"></div></div></div>
+			<div class="expandSong" tabindex="0" role="link" onclick="$(this).parent().find('.songCover').click()" aria-label="Expand" title="Expand"></div>	
+		</div>
+			
+	</div>
+	
+	<div class="podcastSongArea" style="display:none">
+		
+	</div>
+	<div class="searchSongArea" style="display:none">
+		
+	</div>
+</div>
+<div class="mediaplayerSection">
+	<div id="mediaplayer"></div>
+	<div id="videoplayer"></div>
+</div>
+</div>
+</div>
+<div id="debugDiv"></div>
+		
+<script language="javascript">
+
+</script>	
+<script src="js/prebid.js?v=4.411"></script>
+<script src="js/bowser.min.js?v=24.05.22"></script>
+<script src="js/jquery.min.js?v=24.05.22"></script>
+<script src="/cirruscore/cirruscore_v2.js"></script>
+<script src="js/html5vast.js"></script>
+<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="js/color.js"></script>
+
+<script src="js/v9.min.js?v=24.05.22"></script>
+
+							
+
+							<div id="adblockWrapper"></div>
+							<script>
+								function getQueryVariable(variable){
+							       var query = window.location.search.substring(1);
+							       var vars = query.split("&");
+							       for (var i=0;i<vars.length;i++) {
+							               var pair = vars[i].split("=");
+							               if(pair[0] == variable){return pair[1];}
+							       }
+							       return(false);
+								}
+
+								function aDSM1M8g6w5z4sQCN5eLsRmFAqEtOP0UgSfWercNwbxQMRaxS7MHb5zzZ7DVQ3CECMXg0PI9CcuBvTjvX6NSdpr18gB2LMfLoDUUq4isF3iSmV8VCZtOub9rgv0DugdCDNVh89OreTFj8FMOl5kytkx7NWUi0Z0bYpbYmR3tXTFfsR1e6JdOZ(){
+									if(window.iExist === undefined){
+										//console.log("ad blocker detected");
+										$("#adblockWrapper").css("display","block");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\" style=\"max-width:95%\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb4web.securenetsystems.net/cirruscontent/index.cfm?stationCallSign=WOWN&retry=true&playSessionID=06F7D98F-BAE1-B668-5764AE60488736BF");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "img/blockdetected.jpg");
+											enableStream=false;
+											stopPlayer();
+										}
+									}else if(window.iExist!='8031'){
+										//console.log("ad blocker detected.");
+										$("#adblockWrapper").css("display","block");
+										//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+										adBlockerPresent = true;
+										$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\"></a>");
+										var retryVar = getQueryVariable("retry");
+										if(!retryVar){
+											setTimeout(function(){
+												window.location.replace("https://streamdb4web.securenetsystems.net/cirruscontent/index.cfm?stationCallSign=WOWN&retry=true&playSessionID=06F7D98F-BAE1-B668-5764AE60488736BF");
+											}, 500000);
+										}else{
+											$("#blockImage").attr("src", "img/blockdetected.jpg");
+											enableStream=false;
+											stopPlayer();
+										}
+									}else{
+										$.ajax('scripts/ads/prebid.js?v=1.32')
+										.fail(function(d){
+											allowPrebid=false;
+											//console.log("ad blocker detected");
+											$("#adblockWrapper").css("display","block");
+											//ga('send', 'event', 'Player Event', 'Ad Blocker', 'Ad Blocker Detected', 1);
+
+											adBlockerPresent = true;
+											$("#adblockWrapper").html("<a href=\"javascript:window.location.reload()\" style=\"margin:0px; transform: translate(-50%, -50%);\"><img id=\"blockImage\" src=\"img/blockdetected.jpg\"></a>");
+											var retryVar = getQueryVariable("retry");
+											if(!retryVar){
+												setTimeout(function(){
+													window.location.replace("https://streamdb4web.securenetsystems.net/cirruscontent/index.cfm?stationCallSign=WOWN&retry=true&playSessionID=06F7D98F-BAE1-B668-5764AE60488736BF");
+												}, 500000);
+											}else{
+												$("#blockImage").attr("src", "img/blockdetected.jpg");
+												enableStream=false;
+												stopPlayer();
+											}
+										});
+										adBlockerPresent = false;
+										//console.log("ad blocker NOT detected");
+										$("#adblockWrapper").hide();
+									}
+								}
+
+								if(playerAdvertisingMode=="ADN" || playerAdvertisingMode=="SEQ"){
+									setTimeout(function(){
+										aDSM1M8g6w5z4sQCN5eLsRmFAqEtOP0UgSfWercNwbxQMRaxS7MHb5zzZ7DVQ3CECMXg0PI9CcuBvTjvX6NSdpr18gB2LMfLoDUUq4isF3iSmV8VCZtOub9rgv0DugdCDNVh89OreTFj8FMOl5kytkx7NWUi0Z0bYpbYmR3tXTFfsR1e6JdOZ();
+									}, 500);
+								}
+								var stopPlayerRetry=0;
+								function stopPlayer(){
+									//console.log('A:'+typeof(cirrusP));
+									if(typeof(cirrusP)!='undefined'){
+										//cirrusP.stop();
+									}
+									
+									preRollinProgress=true;
+									//$('body').addClass('preRollinProgress');
+									if(typeof(cirrusP)!='undefined'){
+										//cirrusP.stop();
+									}
+									stopPlayerRetry=stopPlayerRetry+1;
+									if(stopPlayerRetry<10){
+										setTimeout("stopPlayer()",200);
+									}
+								}
+							</script>
+
+		
+<div class="cookieBanner themeFontColorDark" style="font-family:arial;display:none;position:fixed;bottom:0px;left:0px;width:100%;min-height:70px;background:#cdcdcd;z-index:12"><div style="max-width:1100px;margin:0 auto;margin-top:20px;margin-bottom:20px;"><div style="float:right;width:200px;height:100%;text-align:right;"><input type="button" style="width:150px;background-color: rgba(0,0,0,0.6);	padding: 5px 0px 5px 0px;color:#fff;text-align:center;border-radius: 6px;margin:0px 0px 10px 0px;	border:0px;	font-weight:600;cursor:pointer;" name="cookieButton" id="cookieButton" onclick="acceptCookies()" value="Close"/><br><a href="javascript:void()" onclick="openApp('cookies')" class="themeFontColorDark">cookie policy &raquo;</a></div>Securenet Systems uses cookies for the purposes of statistical analysis, improving the friendliness and usability of our website, tailoring content to your interests and engaging with social media. By visiting and using our website, you consent to our use of cookies as described in our cookie policy.</div></div>
+<script language="javascript">
+$(document).ready(function(){
+
+	if(bowser.msie && encoderType=='ACP'){
+		if(parseInt(bowser.version)<=11){
+			$('#mainPageWhite').css('display','none');
+			$('.mediaplayerSection').remove();
+			$('body').append('<div style="font-family:Arial;position:fixed;top:0px;left:0px;right:0px;bottom:0px;text-align:center;font-size:22px;color:#ffffff;background-color:#3e3e3e;"><table border="0" style="width:100%;height:100%;border:0px;"><tr><td valign="middle" align="center">This program cannot be streamed in Internet Explorer 11.<br> Please use an alternate browser such as Edge, Chrome, or Firefox</td></tr></table></div>');
+		};
+	}
+});
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1055347551900003',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+	<div id="stationBlackoutMessage" style="display:none"></div>  
+
+</body>
+</html>	

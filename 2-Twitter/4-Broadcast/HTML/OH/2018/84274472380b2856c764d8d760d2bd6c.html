@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+	<!--<link rel="stylesheet" type="text/css" href="http://www.opusip.co.uk/wp-content/themes/modena/style.css" media="screen" />-->
+	<link rel="stylesheet" type="text/css" href="http://www.c6671466.myzen.co.uk/wp-content/themes/modena/style.css" media="screen" />
+
+
+
+<!--	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+-->
+
+
+    <link rel="pingback" href="http://www.opusip.co.uk/xmlrpc.php" />
+
+
+
+    <title>Coroner identifies man killed in fast-moving New Castle house fire &#8211; WKBN.com &#8211; OPUS IP</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="OPUS IP &raquo; Feed" href="https://www.opusip.co.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="OPUS IP &raquo; Comments Feed" href="https://www.opusip.co.uk/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/www.opusip.co.uk\/wp-includes\/js\/wp-emoji.js","twemoji":"http:\/\/www.opusip.co.uk\/wp-includes\/js\/twemoji.js"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='ctf_styles-css'  href='http://www.opusip.co.uk/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='page-list-style-css'  href='http://www.opusip.co.uk/wp-content/plugins/page-list/css/page-list.css' type='text/css' media='all' />
+<link rel='stylesheet' id='media-queries-css'  href='http://www.opusip.co.uk/wp-content/themes/modena/css/media-queries.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://www.opusip.co.uk/wp-includes/css/dashicons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dry_awp_theme_style-css'  href='http://www.opusip.co.uk/wp-content/plugins/advanced-wp-columns/assets/css/awp-columns.css' type='text/css' media='all' />
+<style id='dry_awp_theme_style-inline-css' type='text/css'>
+@media screen and (max-width: 1024px) {	.csColumn {		clear: both !important;		float: none !important;		text-align: center !important;		margin-left:  10% !important;		margin-right: 10% !important;		width: 80% !important;	}	.csColumnGap {		display: none !important;	}}
+</style>
+<link rel='stylesheet' id='wpzoom-custom-css'  href='http://www.opusip.co.uk/wp-content/themes/modena/custom.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-includes/js/jquery/jquery-migrate.js'></script>
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-content/themes/modena/js/init.js'></script>
+<link rel='https://api.w.org/' href='https://www.opusip.co.uk/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.opusip.co.uk/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.opusip.co.uk/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='New Life for Old Classics, as Their Copyrights Run Out &#8211; The New York Times' href='https://www.opusip.co.uk/2018/12/29/copyright-extension-literature-public-domain-html/' />
+<link rel='next' title='TI wins case against Malaysian firm &#8211; The Hindu' href='https://www.opusip.co.uk/2018/12/29/article25862217-ece/' />
+<meta name="generator" content="WordPress 5.4.13" />
+<link rel='shortlink' href='https://www.opusip.co.uk/?p=55035' />
+<link rel="alternate" type="application/json+oembed" href="https://www.opusip.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.opusip.co.uk%2F2018%2F12%2F29%2F1678997872%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.opusip.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.opusip.co.uk%2F2018%2F12%2F29%2F1678997872%2F&#038;format=xml" />
+<link type="text/css" rel="stylesheet" href="https://www.opusip.co.uk/wp-content/plugins/category-specific-rss-feed-menu/wp_cat_rss_style.css" />
+<link rel="canonical" href="https://www.opusip.co.uk/2018/12/29/1678997872/" />
+<!-- WPZOOM Theme / Framework -->
+<meta name="generator" content="Modena 1.1.0" />
+<meta name="generator" content="WPZOOM Framework 1.7.0" />
+<style type="text/css">@import url("https://fonts.googleapis.com/css?family=Open+Sans:r,i,b,bi|Open+Sans:r,i,b,bi|Open+Sans:r,i,b,bi|Open+Sans:r,i,b,bi");
+body{font-family: 'Open Sans';}#logo{font-family: 'Open Sans';}.title-post-single{font-family: 'Open Sans';}.title-widget{font-family: 'Open Sans';}</style>
+<link rel="icon" href="https://www.opusip.co.uk/wp-content/uploads/2016/08/cropped-opus-favicon-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.opusip.co.uk/wp-content/uploads/2016/08/cropped-opus-favicon-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.opusip.co.uk/wp-content/uploads/2016/08/cropped-opus-favicon-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.opusip.co.uk/wp-content/uploads/2016/08/cropped-opus-favicon-1-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			p { 
+font-family: "Segoe UI";
+font-size:15px; 
+} 		</style>
+		
+
+<!-- typekit install fonts
+<script>
+
+  (function(d) {
+
+    var config = {
+
+      kitId: 'yte8hca',
+
+      scriptTimeout: 3000,
+
+      async: true
+
+    },
+
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+
+  })(document);
+
+</script>
+-->
+
+
+</head>
+
+<body class="post-template-default single single-post postid-55035 single-format-standard">
+
+
+
+<div id="container">
+
+
+
+	<header>
+
+
+
+		<div class="wrapper wrapper-header">
+
+
+
+			<div id="logo">
+
+
+
+				
+
+
+				<a href="https://www.opusip.co.uk" title="Premier Patent Agency/Attorney &amp; Other IP/Intellectual Property Services in Manchester, Stockport, and the UK North-West">
+
+					
+						<img src="http://www.opusip.co.uk/wp-content/uploads/2016/10/opus-ip-main-logo-small-379x77-1.png" alt="OPUS IP" />
+
+					
+				</a>
+
+
+
+				
+
+
+			</div><!-- end #logo -->
+
+
+
+			
+			<ul class="wpzoom-contacts">
+			
+			<!--JCD AMEND TO SHOW SEARCH BAR:-->
+			
+			<form method="get" id="searchform" action="https://www.opusip.co.uk/">
+			<fieldset>
+			<table>
+			<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  			<tr>
+    			<td><input type="text" onblur="if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" value="Search" name="s" id="setop" /></td>
+    			<td><input type="submit" id="searchsubmit" value="Search" /></td>
+			</tr>
+			</table>
+			</fieldset>
+			</form>
+
+			<!--END AMEND-->
+
+
+
+				
+				
+				
+
+
+			</ul><!-- .wpzoom-contacts -->
+
+			
+
+
+			<div class="cleaner">&nbsp;</div>
+
+
+
+		</div><!-- .wrapper .wrapper-header-->
+
+
+
+	</header>
+
+
+
+	<nav id="nav-main-menu">
+
+
+
+		<div class="wrapper wrapper-menu">
+
+
+
+			<a class="btn_menu" id="toggle-main" href="#"></a>
+
+
+
+			<ul id="menu-main" class="dropdown"><li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5"><a href="http://www.opusip.co.uk">Home</a></li>
+<li id="menu-item-1056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1056"><a href="#">ABOUT OPUS IP</a>
+<ul class="sub-menu">
+	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="https://www.opusip.co.uk/intellect/">INTELLECT</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="https://www.opusip.co.uk/practicality/">PRACTICALITY</a></li>
+</ul>
+</li>
+<li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-213"><a href="#">PROTECTION</a>
+<ul class="sub-menu">
+	<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="https://www.opusip.co.uk/patent/">PATENTS</a></li>
+	<li id="menu-item-1659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1659"><a href="https://www.opusip.co.uk/filing-a-patent-application/">FILING A PATENT APPLICATION</a></li>
+	<li id="menu-item-219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="https://www.opusip.co.uk/registered-designs/">REGISTERED DESIGNS</a></li>
+	<li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-223"><a href="https://www.opusip.co.uk/registered-trademarks/">REGISTERED TRADEMARKS</a></li>
+	<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="https://www.opusip.co.uk/copyright/">COPYRIGHT</a></li>
+</ul>
+</li>
+<li id="menu-item-333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-333"><a href="#">IP OFFICES</a>
+<ul class="sub-menu">
+	<li id="menu-item-1684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1684"><a target="_blank" rel="noopener noreferrer" href="http://www.ipo.gov.uk">UKIPO</a>
+	<ul class="sub-menu">
+		<li id="menu-item-4435" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4435"><a href="https://www.opusip.co.uk/category/ukipo-news-updates/">NEWS/UPDATES</a></li>
+		<li id="menu-item-4436" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4436"><a href="#">RECENT HEARINGS</a>
+		<ul class="sub-menu">
+			<li id="menu-item-4438" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4438"><a href="https://www.opusip.co.uk/category/patent-content/recent-patent-hearings/">PATENTS</a></li>
+			<li id="menu-item-4439" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4439"><a href="https://www.opusip.co.uk/category/recent-trademark-hearings/">TRADEMARKS</a></li>
+			<li id="menu-item-4437" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4437"><a href="https://www.opusip.co.uk/category/recent-design-hearings/">DESIGNS</a></li>
+		</ul>
+</li>
+		<li id="menu-item-4943" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4943"><a href="https://www.opusip.co.uk/category/uk-high-court-decisions/">UK PATENTS COURT DECISIONS</a></li>
+		<li id="menu-item-4944" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4944"><a href="https://www.opusip.co.uk/category/uk-intellectual-property-enterprise-court-decisions/">UK IPEC DECISIONS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1685"><a target="_blank" rel="noopener noreferrer" href="http://www.epo.org">EPO</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3381" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3381"><a href="#">NEWS/UPDATES</a>
+		<ul class="sub-menu">
+			<li id="menu-item-3730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3730"><a href="https://www.opusip.co.uk/category/patent-content/epo-general/">EPO GENERAL</a></li>
+			<li id="menu-item-3729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3729"><a href="https://www.opusip.co.uk/category/patent-content/epo-fees/">EPO FEES</a></li>
+			<li id="menu-item-3732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3732"><a href="https://www.opusip.co.uk/category/patent-content/epo-official-journal/">EPO OFFICIAL JOURNAL</a></li>
+			<li id="menu-item-3733" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3733"><a href="https://www.opusip.co.uk/category/patent-content/epo-online-services/">EPO ONLINE SERVICES</a></li>
+			<li id="menu-item-3734" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3734"><a href="https://www.opusip.co.uk/category/patent-content/epo-searching/">EPO SEARCHING</a></li>
+		</ul>
+</li>
+		<li id="menu-item-3382" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3382"><a href="#">APPEAL DECISIONS</a>
+		<ul class="sub-menu">
+			<li id="menu-item-3747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3747"><a href="https://www.opusip.co.uk/category/patent-content/epo-g-2010-2019/">G/XX DECISIONS 2010-2019</a></li>
+			<li id="menu-item-24295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24295"><a href="https://www.opusip.co.uk/category/patent-content/epo-g-2000-2009/">G/XX DECISIONS 2000-2009</a></li>
+			<li id="menu-item-15213" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15213"><a href="https://www.opusip.co.uk/category/patent-content/epo-g-1990-2000/">G/XX DECISIONS 1990-2000</a></li>
+			<li id="menu-item-15214" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15214"><a href="https://www.opusip.co.uk/category/patent-content/epo-g-pre1990/">G/XX DECISIONS PRE-1990</a></li>
+			<li id="menu-item-3749" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3749"><a href="https://www.opusip.co.uk/category/patent-content/epo-j-2010-2019/">J/XX APPEALS 2010-2019</a></li>
+			<li id="menu-item-15216" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15216"><a href="https://www.opusip.co.uk/category/patent-content/epo-j-2000-2009/">J/XX APPEALS 2000-2009</a></li>
+			<li id="menu-item-15215" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15215"><a href="https://www.opusip.co.uk/category/patent-content/epo-legal-1990-2000/">J/XX APPEALS 1990-2000</a></li>
+			<li id="menu-item-16510" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16510"><a href="https://www.opusip.co.uk/category/patent-content/epo-legal-pre-1990/">J/XX APPEALS PRE-1990</a></li>
+			<li id="menu-item-3756" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3756"><a href="https://www.opusip.co.uk/category/patent-content/epo-t-2010-2019/">T/XXXX APPEALS 2010-2019</a></li>
+			<li id="menu-item-15217" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15217"><a href="https://www.opusip.co.uk/category/patent-content/epo-t-2000-2009/">T/XXXX APPEALS 2000-2009</a></li>
+			<li id="menu-item-15218" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15218"><a href="https://www.opusip.co.uk/category/patent-content/epo-t-1990-1999/">T/XXXX APPEALS 1990-1999</a></li>
+			<li id="menu-item-15219" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15219"><a href="https://www.opusip.co.uk/category/patent-content/epo-t-pre-1990/">T/XXXX APPEALS pre-1990</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-1686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1686"><a target="_blank" rel="noopener noreferrer" href="http://www.wipo.int">WIPO &#8211; PCT/MADRID/HAGUE</a>
+	<ul class="sub-menu">
+		<li id="menu-item-4289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4289"><a href="#">NEWS/UPDATES</a>
+		<ul class="sub-menu">
+			<li id="menu-item-4294" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4294"><a href="https://www.opusip.co.uk/category/wipo-pct-newsletter/">PCT NEWSLETTER</a></li>
+			<li id="menu-item-4292" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4292"><a href="https://www.opusip.co.uk/category/wipo-patents-news/">PATENTS NEWS</a></li>
+			<li id="menu-item-4295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4295"><a href="https://www.opusip.co.uk/category/wipo-treaty-modifications/">TREATY MODIFICATIONS</a></li>
+			<li id="menu-item-4291" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4291"><a href="https://www.opusip.co.uk/category/wipo-madrid-system/">MADRID SYSTEM (TM)</a></li>
+			<li id="menu-item-4290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4290"><a href="https://www.opusip.co.uk/category/wipo-hague-system/">HAGUE SYSTEM (DESIGNS)</a></li>
+			<li id="menu-item-4296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4296"><a href="https://www.opusip.co.uk/category/wipo-patentscope-searching/">PATENTSCOPE/SEARCHING</a></li>
+		</ul>
+</li>
+		<li id="menu-item-1782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1782"><a href="https://www.opusip.co.uk/pct-countries-regions/">PCT COUNTRIES/REGIONS</a></li>
+		<li id="menu-item-1810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1810"><a href="https://www.opusip.co.uk/paris-not-pct-countries/">PARIS NOT PCT COUNTRIES</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1687"><a target="_blank" rel="noopener noreferrer" href="http://www.uspto.gov">USPTO</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3910"><a href="#">NEWS/UPDATES</a>
+		<ul class="sub-menu">
+			<li id="menu-item-3912" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3912"><a href="https://www.opusip.co.uk/category/uspto-general-news/">GENERAL</a></li>
+			<li id="menu-item-3913" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3913"><a href="https://www.opusip.co.uk/category/uspto-patent-news/">PATENTS</a></li>
+			<li id="menu-item-3914" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3914"><a href="https://www.opusip.co.uk/category/uspto-trademark-news/">TRADEMARKS</a></li>
+			<li id="menu-item-3911" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3911"><a href="https://www.opusip.co.uk/category/uspto-copyright-news/">COPYRIGHT</a></li>
+		</ul>
+</li>
+		<li id="menu-item-3909" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3909"><a href="https://www.opusip.co.uk/category/uspto-recent-cases/">USPTO RECENT CASES</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1688"><a target="_blank" rel="noopener noreferrer" href="https://euipo.europa.eu/ohimportal/en">EUIPO</a>
+	<ul class="sub-menu">
+		<li id="menu-item-4135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4135"><a href="#">NEWS/UPDATES</a>
+		<ul class="sub-menu">
+			<li id="menu-item-4132" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4132"><a href="https://www.opusip.co.uk/category/euipo-general-news/">EUIPO GENERAL NEWS</a></li>
+			<li id="menu-item-4133" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4133"><a href="https://www.opusip.co.uk/category/euipo-legal-news/">EUIPO LEGAL NEWS</a></li>
+			<li id="menu-item-4131" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4131"><a href="https://www.opusip.co.uk/category/euipo-designs-news/">EUIPO DESIGNS NEWS</a></li>
+			<li id="menu-item-4134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4134"><a href="https://www.opusip.co.uk/category/euipo-website-news/">EUIPO WEBSITE NEWS</a></li>
+		</ul>
+</li>
+		<li id="menu-item-1050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1050"><a target="_blank" rel="noopener noreferrer" href="https://euipo.europa.eu/eSearchCLW/">SEARCH CASES (EXTERNAL)</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-221"><a href="https://www.opusip.co.uk/links/">IP NEWS/LINKS</a>
+<ul class="sub-menu">
+	<li id="menu-item-17593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17593"><a href="https://www.opusip.co.uk/latest-news-summary/">LATEST NEWS SUMMARY</a></li>
+	<li id="menu-item-20187" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20187"><a href="http://www.opusip.co.uk/links/">LINKS TO IP RESOURCES</a></li>
+	<li id="menu-item-7987" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-7987"><a href="https://www.opusip.co.uk/category/global-ip-news/">GLOBAL IP NEWS</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1393" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1393"><a href="https://www.opusip.co.uk/category/global-ip-news/the-ipkat-blog/">The IPKat BLOG</a></li>
+		<li id="menu-item-1396" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1396"><a href="https://www.opusip.co.uk/category/global-ip-news/patent-news/">PATENT NEWS</a></li>
+		<li id="menu-item-1395" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1395"><a href="https://www.opusip.co.uk/category/global-ip-news/design-news/">DESIGN NEWS</a></li>
+		<li id="menu-item-7986" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7986"><a href="https://www.opusip.co.uk/category/global-ip-news/trademark-news/">TRADEMARK NEWS</a></li>
+		<li id="menu-item-1394" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1394"><a href="https://www.opusip.co.uk/category/global-ip-news/copyright-news/">COPYRIGHT NEWS</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-21121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21121"><a href="#">SITE</a>
+<ul class="sub-menu">
+	<li id="menu-item-7684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7684"><a href="https://www.opusip.co.uk/rss-feeds/">RSS FEEDS &amp; SITE HIERARCHY</a></li>
+	<li id="menu-item-17504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17504"><a href="https://www.opusip.co.uk/page-list/">COMPETE PAGE LIST</a></li>
+	<li id="menu-item-17508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17508"><a href="https://www.opusip.co.uk/post-list/">COMPLETE POST LIST</a></li>
+</ul>
+</li>
+<li id="menu-item-1804" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1804"><a href="http://www.opusip.co.uk/wp-login.php">LOG-IN</a></li>
+</ul>
+
+
+			<div class="cleaner">&nbsp;</div>
+
+
+
+		</div><!-- end .wrapper-menu -->
+
+
+
+	</nav><!-- end #nav-main-menu -->
+
+	<div id="main" class="normal-post">
+	
+		<div class="wrapper">
+		
+			<div class="wpzoom-column wpzoom-column-double wpzoom-column-content">
+			
+				<div id="content">
+				
+					<!--<div class="wpzoom-breadcrumbs">-->
+					<!--	<p class="crumbs"><a href="https://www.opusip.co.uk">Home</a> <span class="separator"> / </span> <a href="https://www.opusip.co.uk/category/global-ip-news/">GLOBAL IP NEWS</a> <span class="separator"> / </span> <a href="https://www.opusip.co.uk/category/global-ip-news/copyright-news/">COPYRIGHT NEWS</a> <span class="separator"> / </span> <span class="current">Coroner identifies man killed in fast-moving New Castle house fire &#8211; WKBN.com</span></p>-->
+					<!--</div>--><!-- end .wpzoom-breadcrumbs -->
+	
+										
+					<div class="post-meta-single">
+						<h1 class="title-post-single">Coroner identifies man killed in fast-moving New Castle house fire &#8211; WKBN.com</h1>
+						<p class="post-meta">
+							<time datetime="2018-12-29" pubdate>29th December 2018</time>																											</p><!-- post-meta -->
+					</div><!-- end .post-meta-single -->
+		
+					<div class="post-single">
+					
+
+						<p><a href="https://www.wkbn.com/news/local-news/authorities-fast-moving-new-castle-house-fire-kills-man-dog/1678997872" target="_blank">Coroner identifies man killed in fast-moving New Castle house fire</a>  WKBN.com</p>
+<p>The bodies were found shortly after firefighters extinguished the blaze.</p>
+						
+						<div class="cleaner">&nbsp;</div>
+						
+																		
+					</div><!-- .post-single -->
+	
+							
+										
+										
+					<div class="cleaner">&nbsp;</div>
+				
+				</div><!-- #content -->
+			
+			</div><!-- .wpzoom-column .wpzoom-column-double .wpzoom-column-content-->
+			
+			<aside class="wpzoom-column wpzoom-column-aside wpzoom-column-last">
+				<div class="wrapper-aside">
+				
+					
+ 
+					
+					<div class="cleaner">&nbsp;</div>
+				</div><!-- .wrapper-aside -->
+			</aside><!-- .wpzoom-column .wpzoom-column-aside .wpzoom-column-last -->
+			
+			<div class="cleaner">&nbsp;</div>
+
+		</div><!-- .wrapper -->
+
+	</div><!-- end #main -->
+
+	
+
+
+
+
+
+
+	<footer>
+
+
+
+	
+
+
+
+		<div class="wrapper wrapper-footer">
+
+
+
+		
+
+
+
+			
+
+
+			
+
+
+
+			<div class="column column-first">
+
+
+
+				
+
+
+
+				<div class="widget widget_text" id="text-2"><p class="title-widget">OPUS IP LIMITED</p>			<div class="textwidget"><p>Orchard House<br />
+41 Altrincham Road<br />
+Wilmslow<br />
+SK9 5NG<br />
+United Kingdom</p>
+<p><b>t.: +44 (0) 800 047 8107<br />
+e.: <a href="/cdn-cgi/l/email-protection#4e232f27220e213e3b3d273e602d21603b25"><span class="__cf_email__" data-cfemail="2f424e46436f405f5a5c465f014c40015a44">[email&#160;protected]</span></a></b></p>
+<p><a href="https://twitter.com/opusipuk"><img src="https://pbs.twimg.com/profile_images/786501742238265345/Aq3SaLiu_normal.jpg" alt="opusipuk" width="48" height="48"></a></p>
+<p><a href="https://www.google.com/maps/place/OPUS+IP+Limited/@53.326860,-2.244065,19z/data=!3m2!4b1!5s0x487bb362a9642b35:0x2de921852cbc39aa!4m5!3m4!1s0x487a4d78a5897057:0x535ed8c51035a309!8m2!3d-2.244065!4d-2.244065#:~:text=53.326860%2C%20%2D2.244065">CLICK FOR LOCATION <b>MAP</b></a></p>
+</div>
+		<div class="cleaner">&nbsp;</div></div>
+
+
+				
+
+
+
+				<div class="cleaner">&nbsp;</div>
+
+
+
+			</div><!-- end .column -->
+
+
+
+	
+
+
+
+			<div class="column column-second">
+
+
+
+				
+
+
+
+				<div class="widget widget_custom-twitter-feeds-widget" id="custom-twitter-feeds-widget-3"><p class="title-widget">OPUS IP On X (Formerly Twitter)&#8230;</p>
+<!-- Custom Twitter Feeds by Smash Balloon -->
+<div id="ctf" class=" ctf ctf-type-usertimeline ctf-feed-990771612  ctf-styles ctf-list ctf-regular-style"   data-ctfshortcode="[]"   data-ctfdisablelinks="false" data-ctflinktextcolor="#" data-header-size="small" data-feedid="990771612" data-postid="55035"  data-ctfneeded="4">
+            <div id="ctf" class="ctf">
+            <div class="ctf-error">
+                <div class="ctf-error-user">
+					Twitter feed is not available at the moment.                </div>
+            </div>
+        </div>
+		    <div class="ctf-tweets">
+   		    </div>
+    
+</div>
+<div class="cleaner">&nbsp;</div></div>
+
+
+				
+
+
+
+				<div class="cleaner">&nbsp;</div>
+
+
+
+			</div><!-- end .column -->
+
+
+
+	
+
+
+
+			<div class="column column-third">
+
+
+
+				
+
+
+
+				<div class="widget widget_rss" id="rss-2"><p class="title-widget"><a class="rsswidget" href="https://news.google.com/news/section?q=patents&#038;hl=en&#038;gl=uk&#038;output=rss"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="http://www.opusip.co.uk/wp-includes/images/rss.png" alt="RSS" /></a> <a class="rsswidget" href="https://news.google.com/search?q=patents&#038;hl=en-GB&#038;gl=GB&#038;ceid=GB:en">RECENT PATENT NEWS&#8230;</a></p><ul><li><a class='rsswidget' href='https://news.google.com/rss/articles/CBMiqAFodHRwczovL3d3dy5wYXRlbnRseWFwcGxlLmNvbS8yMDI0LzA1L2FuLWFwcGxlLXBhdGVudC1kZXNjcmliZXMtYS1tb3Rvcml6ZWQtYWRqdXN0YWJsZS1oZWFkYmFuZC1mb3ItYS1mdXR1cmUtdmVyc2lvbi1vZi12aXNpb24tcHJvLXRoYXQtdXRpbGl6ZXMtc2hhcGUtbWVtb3J5LWFsbG95Lmh0bWzSAQA?oc=5'>An Apple patent describes a Motorized Adjustable Headband for a future version of Vision Pro that utilizes Shape ... - Patently Apple</a></li><li><a class='rsswidget' href='https://news.google.com/rss/articles/CBMiTmh0dHBzOi8vbmV3cy5ibG9vbWJlcmdsYXcuY29tL2lwLWxhdy9jYXNlLXBhdGVudHMtb2J2aW91c25lc3MtcC10LWEtYi0zNS01MC01MtIBAA?oc=5'>Case: Patents/Obviousness (P.T.A.B.) - Bloomberg Law</a></li><li><a class='rsswidget' href='https://news.google.com/rss/articles/CBMiVmh0dHBzOi8vbmV3cy5ibG9vbWJlcmdsYXcuY29tL2lwLWxhdy9jYXNlLXBhdGVudHMtb2J2aW91c25lc3MtcC10LWEtYi04LTEwLTE4LTI0LTM3LTUx0gEA?oc=5'>Case: Patents/Obviousness (P.T.A.B.) - Bloomberg Law</a></li><li><a class='rsswidget' href='https://news.google.com/rss/articles/CBMiXmh0dHBzOi8vbmV3cy5ibG9vbWJlcmdsYXcuY29tL2lwLWxhdy9jYXNlLXBhdGVudHMtYW50aWNpcGF0aW9uLW9idmlvdXNuZXNzLXAtdC1hLWItNDYtNTItNTMtNTTSAQA?oc=5'>Case: Patents/Anticipation &amp; Obviousness (P.T.A.B.) - Bloomberg Law</a></li></ul><div class="cleaner">&nbsp;</div></div>
+
+
+				
+
+
+
+				<div class="cleaner">&nbsp;</div>
+
+
+
+			</div><!-- end .column -->
+
+
+
+	
+
+
+
+			<div class="column column-last">
+
+
+
+				
+
+
+
+				<div class="widget widget_rss" id="rss-3"><p class="title-widget"><a class="rsswidget" href="http://feeds.bbci.co.uk/news/business/rss.xml"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="http://www.opusip.co.uk/wp-includes/images/rss.png" alt="RSS" /></a> <a class="rsswidget" href="https://www.bbc.co.uk/news/business">UK BUSINESS NEWS&#8230;</a></p><ul><li><a class='rsswidget' href='https://www.bbc.com/news/articles/crggz000lz7o'>Labour and Tories confirm income tax squeeze</a></li><li><a class='rsswidget' href='https://www.bbc.com/news/articles/cy00e8lgynpo'>Queen could sell their catalogue to Sony for $1bn</a></li><li><a class='rsswidget' href='https://www.bbc.co.uk/news/business-45814459'>How the government raises and spends £1 trillion a year</a></li><li><a class='rsswidget' href='https://www.bbc.com/news/articles/cw55vxlyd29o'>Faisal Islam: Election tax row is a phony war</a></li></ul><div class="cleaner">&nbsp;</div></div>
+
+
+				
+
+
+
+				<div class="cleaner">&nbsp;</div>
+
+
+
+			</div><!-- end .column -->
+
+
+
+
+
+
+
+			<div class="cleaner">&nbsp;</div>
+
+
+
+		
+
+
+
+		</div><!-- end .wrapper -->
+
+
+
+
+
+
+
+	</footer>
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+	<div id="footer-copy">
+
+
+
+
+
+
+
+		<div class="wrapper wrapper-copy">
+
+
+
+
+
+			<p class="wpzoom">Designed by <a href="http://www.industrialaction.com" target="_blank">Industrial Action</a></p>
+
+
+			<p class="copyright">Copyright &copy; 2024 OPUS IP Limited. All Rights Reserved</p>
+
+			<u><a href="http://www.opusip.co.uk/legal-info/" style="color: rgb(0,0,0)">OPUS IP Limited: COMPANY &amp; OTHER LEGAL INFORMATION</a></u>
+
+
+			
+
+
+			<div class="cleaner">&nbsp;</div>
+
+
+
+
+
+
+
+		</div><!-- .wrapper .wrapper-copy -->
+
+
+
+
+
+
+
+	</div><!-- end #footer-copy -->
+
+
+
+
+
+
+
+</div><!-- end #container -->
+
+
+
+
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85342709-1', 'auto');
+  ga('send', 'pageview');
+
+</script><style type="text/css" data-ctf-style="990771612">.ctf-feed-990771612.ctf-regular-style .ctf-item, .ctf-feed-990771612 .ctf-header{border-bottom:1px solid #ddd!important;}.ctf-feed-990771612{width:100%!important;}</style><script type='text/javascript' src='http://www.opusip.co.uk/wp-includes/js/comment-reply.js'></script>
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-content/themes/modena/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-content/themes/modena/js/superfish.js'></script>
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-includes/js/wp-embed.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ctf = {"ajax_url":"https:\/\/www.opusip.co.uk\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.opusip.co.uk/wp-content/plugins/custom-twitter-feeds/js/ctf-scripts.min.js'></script>
+
+
+
+
+
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+  ga('create', 'UA-85342709-1', 'auto');
+
+  ga('send', 'pageview');
+
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

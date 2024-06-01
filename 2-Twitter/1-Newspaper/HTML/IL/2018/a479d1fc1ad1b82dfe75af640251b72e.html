@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta name="ulp-version" content="1.17.193">
+    
+    
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.93.29/css/main.cdn.min.css">
+    <style id="custom-styles-container">
+      
+        
+
+
+
+
+        
+          :root, .af-custom-form-container .af-form {
+    --primary-color: #ffe185;
+  }
+        
+      
+
+        
+          :root, .af-custom-form-container .af-form {
+    --button-font-color: #000000;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-border-color: #c9cace;
+    --social-button-border-color: #c9cace;
+    --radio-button-border-color: #c9cace;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-text-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --link-color: #635dff;
+  }
+        
+      
+
+        
+          :root {
+    --title-font-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --font-default-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --widget-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-color: #c9cace;
+  }
+        
+      
+
+        
+          :root {
+    --font-light-color: #65676e;
+  }
+        
+      
+
+        
+          :root {
+    --input-text-color: #000000;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-color: #c9cace;
+    --border-default-color: #c9cace;
+  }
+        
+      
+
+        
+          :root {
+    --input-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --icon-default-color: #65676e;
+  }
+        
+      
+
+        
+          :root {
+    --error-color: #d03c38;
+    --error-text-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --success-color: #13a688;
+  }
+        
+      
+
+        
+          :root {
+    --base-focus-color: #635dff;
+    --transparency-focus-color: rgba(99,93,255, 0.15);
+  }
+        
+      
+
+        
+          :root {
+    --base-hover-color: #000000;
+    --transparency-hover-color: rgba(0,0,0, var(--hover-transparency-value));
+  }
+        
+      
+
+        
+      
+
+
+
+
+        
+          @font-face {
+    font-family: 'ULP Custom';
+    font-style: normal;
+    font-weight: var(--font-default-weight);
+    src: local('ULP Custom'), url('https://fonts.googleapis.com/css?family=Roboto') format('woff');
+  }
+
+  body {
+    --font-family: 'ULP Custom', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+  }
+        
+      
+
+        
+          html, :root, .af-custom-form-container .af-form {
+    font-size: 16px;
+    --default-font-size: 16px;
+  }
+        
+      
+
+        
+          body {
+    --title-font-size: 1.5rem;
+    --title-font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c37aa580c {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c4ad5236e {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+  .ulp-passkey-benefit-heading {
+    font-size: 1.15rem;
+  }
+        
+      
+
+        
+          .c91192a5a, .ceb34b21e {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          body {
+    --ulp-label-font-size: 1rem;
+    --ulp-label-font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .cc5451e09, .c8861f699, [id^='ulp-container-'] a {
+    font-size: 0.875rem;
+    font-weight: var(--font-bold-weight) !important;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          :root {
+    --button-border-width: 1px;
+    --social-button-border-width: 1px;
+    --radio-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --button-border-radius: 0px;
+    --radio-border-radius: 0px;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --input-border-radius: 3px;
+  }
+        
+      
+
+        
+          :root {
+    --border-radius-outer: 0px;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-width: 0px;
+  }
+        
+      
+
+        
+          body {
+    --shadow-component-outer: none;
+  }
+        
+      
+
+
+
+
+        
+          
+      .c97e25c20 {
+        display: none;
+      }
+
+      body {
+        --header-title-spacing: 0;
+      }
+    
+        
+      
+
+        
+          
+      .c97e25c20 {
+        content: url('https://cdn.auth0.com/ulp/react-components/1.59/img/theme-generic/logo-generic.svg');
+      }
+    
+        
+      
+
+        
+          body {
+    --logo-height: 1px;
+  }
+  .c97e25c20 {
+    height: var(--logo-height);
+  }
+  
+        
+      
+
+        
+          
+    body {
+      --header-alignment: left;
+    }
+  
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          .c4f3e77cb {
+    --page-background-alignment: center;
+  }
+        
+      
+
+        
+          body {
+    --page-background-color: #ffffff;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+      
+    </style>
+    <style>
+    /* By default, hide features for javascript-disabled browsing */
+    /* We use !important to override any css with higher specificity */
+    /* It is also overriden by the styles in <noscript> in the header file */
+    .no-js {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
+  <noscript>
+    <style>
+      /* We use !important to override the default for js enabled */
+      /* If the display should be other than block, it should be defined specifically here */
+      .js-required { display: none !important; }
+      .no-js {
+        clip: auto;
+        clip-path: none;
+        height: auto;
+        overflow: auto;
+        position: static;
+        white-space: normal;
+        width: var(--prompt-width);
+      }
+    </style>
+  </noscript>
+    
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Log In to AviationWeek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap link, required for Font Awesome __>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Anwesome link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- Roboto link -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+   <script defer="defer">var digitalData = drupalSettings.adobeLaunchData;</script>
+  <script defer="defer" src="https://assets.adobedtm.com/launch-EN66949c464a2d42009f4632300c5f1f6b-staging.min.js"></script>
+  <script defer="defer">if (typeof _satellite !== 'undefined') {
+  for (var i in drupalSettings.adobeLaunchAction) {
+    _satellite.track(drupalSettings.adobeLaunchAction[i]);
+    }
+  }</script>
+</head>
+<style>
+
+	@media (min-width: 576px) { 
+		.grid-container {
+			display: grid;
+			grid-template-columns: 400px 1fr;
+			column-gap: 1rem;
+			}
+
+		.login-block { 
+			// padding: 3rem;
+            grid-row-start: 1;
+			grid-column-start: 1;
+			}
+		
+		.description-block { 
+			// padding: 4.25rem 3rem 3rem 3rem;
+            grid-row-start: 1;
+			grid-column-start: 2;
+			background-color: #D2E7F5;
+			}
+			
+		.issues-block {
+			background: #fff;
+			font-size: 1rem;
+			// padding: 0 0 1.5rem 2.5rem;
+			}
+
+		.auth0-login {
+			margin-top: 2rem;
+			}
+			
+		.auth0-login__form-elements {
+			display: flex;
+			flex-direction: column;
+			}
+		
+		.auth0-login__form-links {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			}
+			
+		.auth0-login__input:first-child {
+			margin-right: 1rem;
+			}
+			
+		.auth0-login__btn {
+			align-self: flex-end;
+			}
+			
+		.auth0-login__bottom {
+			padding: 2.5rem 0;
+			}
+		
+		}
+
+	body {
+		font-family:Roboto, sans-serif;
+		background-color: #ffffff;
+	}
+	
+	.login-block { 
+		// padding: 3rem;
+			}
+		
+	.description-block { 
+		padding: 4.25rem 3rem 3rem 3rem;
+		background-color: #D2E7F5;
+		}
+			
+	.issues-block {
+		padding: 0 0 1.5rem 0;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		}
+
+	.headline { 
+		font-size: 1.5rem;
+		font-weight: 700;
+		padding-bottom: 2rem;
+		}
+	
+	.description { 
+		font-size: 1rem;
+		font-weight 400;
+		line-height: 1.5;
+		padding-bottom: 2rem;
+		}
+		
+	.call-to-action { 
+		font-size: 1rem;
+		padding: 0 0 1.5rem 2.5rem;
+		}
+
+ 	  
+  
+  .auth0-login__btn {
+    align-self: center;
+  }
+
+
+
+  .btn {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0;
+  }
+
+  .button {
+    text-align: center;
+    border: 0;
+    text-transform: uppercase;
+    line-height: 1.25rem;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  .button--primary {
+    background-color: #FFE185;
+    color: #000;
+    font-size: 1rem;
+    letter-spacing: 1.33px;
+    padding: 1rem 2.5rem;
+  }
+
+  .button--primary:hover, .button--primary:focus {
+    background-color: #ffd452;
+  }
+
+  .button--secondary {
+    border: 1px solid #0D2C6B;
+    padding: .625rem 1.5rem;
+  }
+
+  .button--secondary:hover, .button--secondary:focus {
+    background: #0D2C6B;
+    color: #ffffff;
+  }
+
+  .icon--chevron-right {
+    display: inline-block;
+  }
+
+  a {
+    color: #4d85ba;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #0d2c6b;
+    text-decoration: none;
+  }
+
+  /* IE11 fix. See https://stackoverflow.com/questions/42764591/flex-direction-column-makes-flex-items-overlap-ie11/42764663 */
+  .col-md-8, .col-lg-6 {
+    flex: 0 0 auto;
+  }
+
+  /* JS triggered display elements */
+  .auth0-login__reset-box,
+  #error-message,
+  #success-message {
+    display: none;
+  }
+
+  #password-box,
+  #verificationCode-box,
+  #reset-link-box,
+  #btn-login,
+  #btn-passwordless-login {
+    display: none;
+  }
+
+</style>
+
+<body>
+	
+	<div class="grid-container">
+		
+		<div class="login-block">
+			
+				<div class="issues-block"><main class="_widget login">
+  <section class="c426b9b7f _prompt-box-outer cfe05ed04">
+    <div class="c68641318 ca7038ba0">
+      
+    
+      <div class="c9832ff24">
+        <header class="c4923dc65 c92d379e3">
+          <div title="Aviation Week Network" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+        
+          <img class="c97e25c20 cbd90fe6d" id="prompt-logo-center" src="https://aviationweek.com/themes/custom/particle/dist/app-drupal/assets/awn-logo-blue-red.svg" alt="Aviation Week Network">
+        
+          
+            <h1 class="c62cc29b3 c0648f1d5">Log In</h1>
+          
+        
+          <div class="c37aa580c c834af08e">
+            
+              <p class="c200dc34f c9fccab29">Log in with your existing username here.</p>
+            
+          </div>
+        </header>
+      
+        <div class="c4ad5236e ccd004786">
+          
+        
+          
+            
+              <form method="POST" class="c2b58bdfc c351c8d82" data-form-primary="true">
+                <input type="hidden" name="state" value="hKFo2SAxM1BxaGZSSi1wc2FmemJISTFQYzZvTXowX09zaG9nR6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEdRaExSQ0sxdGl6UVZJM0Q3VnNGRnU5THB6ZmhQSnhVo2NpZNkgUFotYTE3NnRBYmwxU3VUYnA5dTI1dVlhQzRXcXBXaGg">
+              
+                
+              
+                
+              
+                <div class="c5455e0d0 c8d6a96db">
+                  <div class="c16c34af2">
+                    
+                  
+                    
+                      
+                        <div class="input-wrapper _input-wrapper">
+                          <div class="c90eee5e9 c15f358b7 text cd178978c" data-action-text="" data-alternate-action-text="">
+                            <label class="c2985238f no-js c108b876e c34ad8331" for="username">
+                              Email address*
+                            </label>
+                          
+                            <input class="input ce00bcc88 cea6a46ba" inputMode="email" name="username" id="username" type="text" value="" required autoComplete="email" autoCapitalize="none" spellCheck="false" autoFocus>
+                          
+                            <div class="c2985238f js-required c108b876e c34ad8331" data-dynamic-label-for="username" aria-hidden="true">
+                              Email address*
+                            </div>
+                          </div>
+                        
+                          
+                        </div>
+                      
+                    
+                  
+                    
+                      <div class="input-wrapper _input-wrapper">
+                        <div class="c90eee5e9 c15f358b7 password c3983ad91" data-action-text="" data-alternate-action-text="">
+                          <label class="c2985238f no-js c108b876e c7d9e6045" for="password">
+                            Enter your password*
+                          </label>
+                        
+                          <input class="input ce00bcc88 cfc20964e" name="password" id="password" type="password" required autoComplete="current-password" autoCapitalize="none" spellCheck="false">
+                        
+                          <div class="c2985238f js-required c108b876e c7d9e6045" data-dynamic-label-for="password" aria-hidden="true">
+                            Enter your password*
+                          </div>
+                        
+                          
+                            <button type="button" class="c91192a5a ulp-button-icon cdb4306d0 _button-icon" data-action="toggle">
+                              <span aria-hidden="true" class="password-icon-tooltip show-password-tooltip">Show password</span>
+                            
+                              <span aria-hidden="true" class="password-icon-tooltip hide-password-tooltip hide">Hide password</span>
+                            
+                              <span class="screen-reader-only password-toggle-label" data-label="show-password">Show password</span>
+                            
+                              <span class="screen-reader-only password-toggle-label hide" data-label="hide-password">Hide password</span>
+                            
+                              <span class="c6f749da9 password js-required" aria-hidden="true"></span>
+                            </button>
+                          
+                        </div>
+                      
+                        
+                      </div>
+                    
+                  
+                    
+                  </div>
+                </div>
+              
+                
+                  
+                    <p class="c3ff3b5fc cf35095cd">
+                      
+                        <a class="c8861f699 c0814daff c24d8133e" href="/u/login/password-reset-start/Username-Password-Authentication?state=hKFo2SAxM1BxaGZSSi1wc2FmemJISTFQYzZvTXowX09zaG9nR6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEdRaExSQ0sxdGl6UVZJM0Q3VnNGRnU5THB6ZmhQSnhVo2NpZNkgUFotYTE3NnRBYmwxU3VUYnA5dTI1dVlhQzRXcXBXaGg">Forgot your password?</a>
+                      
+                    </p>
+                  
+                
+              
+                
+              
+                <div class="c53fe00e8">
+                  
+                    <button type="submit" name="action" value="default" class="c91192a5a c50deed59 cdb4306d0 c9ec81755 c18d716b8" data-action-button-primary="true">LOG IN</button>
+                  
+                </div>
+              </form>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        </div>
+      </div>
+    </div>
+  
+    
+  </section>
+</main>
+<script id="client-scripts">
+window.ulpFlags = {"enable_ulp_wcag_compliance":false};!function(){var e,t,n,r,E,y,S,C,F,A,a,i={exports:function(e,t){return"object"==typeof e.ulpFlags&&null!==e.ulpFlags?e.ulpFlags:{}}}.exports(window,document),o=((e={}).exports=function(n,a){var r={};function u(e,t){if(e.classList)return e.classList.add(t);var n=e.className.split(" ");-1===n.indexOf(t)&&(n.push(t),e.className=n.join(" "))}function i(e,t,n,r){return e.addEventListener(t,n,r)}function o(e){return"string"==typeof e}function c(e,t){return o(e)?a.querySelector(e):e.querySelector(t)}function l(e,t){if(e.classList)return e.classList.remove(t);var n=e.className.split(" "),r=n.indexOf(t);-1!==r&&(n.splice(r,1),e.className=n.join(" "))}function s(e,t){return e.getAttribute(t)}function f(e,t,n){return e.setAttribute(t,n)}var e=["text","number","email","password","tel","url"],t="select,textarea,"+e.map(function(e){return'input[type="'+e+'"]'}).join(",");return{addClass:u,toggleClass:function(e,t,n){if(!0===n||!1===n)return r=e,a=t,!0!==n?l(r,a):u(r,a);var r,a;if(e.classList)return e.classList.toggle(t);var i=e.className.split(" "),o=i.indexOf(t);-1!==o?i.splice(o,1):i.push(t),e.className=i.join(" ")},hasClass:function(e,t){return e.classList?e.classList.contains(t):-1!==e.className.split(" ").indexOf(t)},addClickListener:function(e,t){return i(e,"click",t)},addEventListener:i,getAttribute:s,hasAttribute:function(e,t){return e.hasAttribute(t)},getElementById:function(e){return a.getElementById(e)},getParent:function(e){return e.parentNode},isString:o,loadScript:function(e,t){var n=a.createElement("script");for(var r in t)r.startsWith("data-")?n.dataset[r.replace("data-","")]=t[r]:n[r]=t[r];n.src=e,a.body.appendChild(n)},removeScript:function(e){a.querySelectorAll('script[src="'+e+'"]').forEach(function(e){e.remove()})},poll:function(e){var i=e.interval||2e3,t=e.url||n.location.href,o=e.condition||function(){return!0},u=e.onSuccess||function(){},c=e.onError||function(){};return setTimeout(function r(){var a=new XMLHttpRequest;return a.open("GET",t),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var e="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(e)?u():setTimeout(r,i)}if(429!==a.status)return c({status:a.status,responseText:a.responseText});var t=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),n=t-(new Date).getTime();return setTimeout(r,i<n?n:i)},a.send()},i)},querySelector:c,querySelectorAll:function(e,t){var n=o(e)?a.querySelectorAll(e):e.querySelectorAll(t);return Array.prototype.slice.call(n)},removeClass:l,removeElement:function(e){return e.remove()},setAttribute:f,removeAttribute:function(e,t){return e.removeAttribute(t)},swapAttributes:function(e,t,n){var r=s(e,t),a=s(e,n);f(e,n,r),f(e,t,a)},setGlobalFlag:function(e,t){r[e]=!!t},getGlobalFlag:function(e){return!!r[e]},preventFormSubmit:function(e){e.stopPropagation(),e.preventDefault()},matchMedia:function(e){return"function"!=typeof n.matchMedia&&n.matchMedia(e).matches},dispatchEvent:function(e,t,n){var r;"function"!=typeof Event?(r=a.createEvent("Event")).initCustomEvent(t,n,!1):r=new Event(t,{bubbles:n}),e.dispatchEvent(r)},timeoutPromise:function(e,a){return new Promise(function(t,n){var r=setTimeout(function(){n(new Error("timeoutPromise: promise timed out"))},e);a.then(function(e){clearTimeout(r),t(e)},function(e){clearTimeout(r),n(e)})})},createMutationObserver:function(e){return"undefined"==typeof MutationObserver?null:new MutationObserver(e)},consoleWarn:function(){(console.warn||console.log).apply(console,arguments)},getConfigJson:function(e){try{var t=c(e);if(!t)return null;var n=t.value;return n?JSON.parse(n):null}catch(e){return null}},getCSSVariable:function(e){return getComputedStyle(a.documentElement).getPropertyValue(e)},setTimeout:setTimeout,globalWindow:n,SUPPORTED_INPUT_TYPES:e,ELEMENT_TYPE_SELECTOR:t,RUN_INIT:!0}},e.exports)(window,document),u=function(){var e={};function v(e){if(!("string"==typeof e||e instanceof String)){var t=typeof e;throw null===e?t="null":"object"===t&&(t=e.constructor.name),new TypeError("Expected a string but received a "+t)}}function m(e,t){var n,r;v(e),r="object"==typeof t?(n=t.min||0,t.max):(n=t,arguments[2]);var a=encodeURI(e).split(/%..|./).length-1;return n<=a&&(void 0===r||a<=r)}function h(e,t){for(var n in void 0===e&&(e={}),t)void 0===e[n]&&(e[n]=t[n]);return e}var g={require_tld:!0,allow_underscores:!1,allow_trailing_dot:!1,allow_numeric_tld:!1,allow_wildcard:!1,ignore_max_length:!1},t="(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])",n="("+t+"[.]){3}"+t,r=new RegExp("^"+n+"$"),a="(?:[0-9a-fA-F]{1,4})",i=new RegExp("^((?:"+a+":){7}(?:"+a+"|:)|(?:"+a+":){6}(?:"+n+"|:"+a+"|:)|(?:"+a+":){5}(?::"+n+"|(:"+a+"){1,2}|:)|(?:"+a+":){4}(?:(:"+a+"){0,1}:"+n+"|(:"+a+"){1,3}|:)|(?:"+a+":){3}(?:(:"+a+"){0,2}:"+n+"|(:"+a+"){1,4}|:)|(?:"+a+":){2}(?:(:"+a+"){0,3}:"+n+"|(:"+a+"){1,5}|:)|(?:"+a+":){1}(?:(:"+a+"){0,4}:"+n+"|(:"+a+"){1,6}|:)|(?::((?::"+a+"){0,5}:"+n+"|(?::"+a+"){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$");function b(e,t){return void 0===t&&(t=""),v(e),(t=String(t))?"4"===t?r.test(e):"6"===t&&i.test(e):b(e,4)||b(e,6)}var _={allow_display_name:!1,allow_underscores:!1,require_display_name:!1,allow_utf8_local_part:!0,require_tld:!0,blacklisted_chars:"",ignore_max_length:!1,host_blacklist:[],host_whitelist:[]},w=/^([^\x00-\x1F\x7F-\x9F\cX]+)</i,x=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i,E=/^[a-z\d]+$/,y=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i,S=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A1-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i,C=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i,F=254;function o(e,t){if(v(e),(t=h(t,_)).require_display_name||t.allow_display_name){var n=e.match(w);if(n){var r=n[1];if(e=e.replace(r,"").replace(/(^<|>$)/g,""),r.endsWith(" ")&&(r=r.slice(0,-1)),!function(e){var t=e.replace(/^"(.+)"$/,"$1");if(!t.trim())return!1;if(/[\.";<>]/.test(t)){if(t===e)return!1;if(t.split('"').length!==t.split('\\"').length)return!1}return!0}(r))return!1}else if(t.require_display_name)return!1}if(!t.ignore_max_length&&e.length>F)return!1;var a=e.split("@"),i=a.pop(),o=i.toLowerCase();if(t.host_blacklist.includes(o))return!1;if(0<t.host_whitelist.length&&!t.host_whitelist.includes(o))return!1;var u=a.join("@");if(t.domain_specific_validation&&("gmail.com"===o||"googlemail.com"===o)){var c=(u=u.toLowerCase()).split("+")[0];if(!m(c.replace(/\./g,""),{min:6,max:30}))return!1;for(var l=c.split("."),s=0;s<l.length;s++)if(!E.test(l[s]))return!1}if(!(!1!==t.ignore_max_length||m(u,{max:64})&&m(i,{max:254})))return!1;if(!function(e,t){v(e),(t=h(t,g)).allow_trailing_dot&&"."===e[e.length-1]&&(e=e.substring(0,e.length-1)),!0===t.allow_wildcard&&0===e.indexOf("*.")&&(e=e.substring(2));var n=e.split("."),r=n[n.length-1];if(t.require_tld){if(n.length<2)return!1;if(!t.allow_numeric_tld&&!/^([a-z\u00A1-\u00A8\u00AA-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]{2,}|xn[a-z0-9-]{2,})$/i.test(r))return!1;if(/\s/.test(r))return!1}return!(!t.allow_numeric_tld&&/^\d+$/.test(r))&&n.every(function(e){return!(63<e.length&&!t.ignore_max_length||!/^[a-z_\u00a1-\uffff0-9-]+$/i.test(e)||/[\uff01-\uff5e]/.test(e)||/^-|-$/.test(e)||!t.allow_underscores&&/_/.test(e))})}(i,{require_tld:t.require_tld,ignore_max_length:t.ignore_max_length,allow_underscores:t.allow_underscores})){if(!t.allow_ip_domain)return!1;if(!b(i)){if(!i.startsWith("[")||!i.endsWith("]"))return!1;var f=i.slice(1,-1);if(0===f.length||!b(f))return!1}}if('"'===u[0])return u=u.slice(1,u.length-1),t.allow_utf8_local_part?C.test(u):y.test(u);for(var d=t.allow_utf8_local_part?S:x,p=(l=u.split("."),0);p<l.length;p++)if(!d.test(l[p]))return!1;return!t.blacklisted_chars||-1===u.search(new RegExp("["+t.blacklisted_chars+"]+","g"))}return e.exports=function(e,t){return{ulpRequiredFunction:function(e,t){return!t||!!e.value},ulpEmailValidationFunction:function(e,t){return!t||!e.value||!!o(e.value)}}},e.exports}()(window,document);((t={}).exports=function(r,e,o,u,c,l,s,f,t){function d(e){"Escape"==e.c1bba7490&&document.activeElement.blur()}t.enable_ulp_wcag_compliance&&e("div.c90eee5e9.password").forEach(function(e){var a,i,t=r(e,"input"),n=r(e,'[data-action="toggle"]');o(e,(a=t,i=n,function(e){if(e.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){i.ariaChecked="false"===i.ariaChecked?"true":"false";var t=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");t&&s(t,"hide"),n&&s(n,"hide")}var r=f(a);"text"===a.type?c(r,"show"):l(r,"show")}})),u(n,"keyup",d)})},t.exports)(o.querySelector,o.querySelectorAll,o.addClickListener,o.addEventListener,o.addClass,o.removeClass,o.toggleClass,o.getParent,i),((n={}).exports=function(r,e,o,u,c,l,s,t){t.enable_ulp_wcag_compliance||e("div.c90eee5e9.password").forEach(function(e){var a,i,t=r(e,"input"),n=r(e,'[data-action="toggle"]');o(e,(a=t,i=n,function(e){if(e.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){var t=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");t&&l(t,"hide"),n&&l(n,"hide")}var r=s(a);"text"===a.type?u(r,"show"):c(r,"show")}}))})},n.exports)(o.querySelector,o.querySelectorAll,o.addClickListener,o.addClass,o.removeClass,o.toggleClass,o.getParent,i),{exports:function(e,r,a,t){var n=e(".c4fea6c2a"),i=e("#alert-trigger"),o=e(".ca530fb10"),u=e(".c0e6ad55a"),c=!1;i&&u&&n&&t(n,function(e){var t=e.target===i,n=u.contains(e.target);return t&&!c?(r(o,"show"),void(c=!0)):t&&c||c&&!n?(a(o,"show"),void(c=!1)):void 0})}}.exports(o.querySelector,o.addClass,o.removeClass,o.addClickListener),(E="recaptcha_v2",y="recaptcha_enterprise",S="hcaptcha",C="friendly_captcha",F="arkose",A="auth0_v2",(r={}).exports=function(i,o,a,u,c,l){var s=500,f=3,d=0,p=a("div[data-captcha-sitekey]"),t=a("div[data-captcha-sitekey] input");function v(){switch(g()){case E:return window.grecaptcha;case y:return window.grecaptcha.enterprise;case S:return window.hcaptcha;case C:return window.friendlyChallenge;case F:return window.arkose;case A:return window.turnstile}}function m(){return a(function(){switch(g()){case E:case y:return"#ulp-recaptcha";case S:return"#ulp-hcaptcha";case C:return"#ulp-friendly-captcha";case F:return"#ulp-arkose";case A:return"#ulp-auth0-v2-captcha"}}())}function h(){return p.getAttribute("data-captcha-lang")}function g(){return p.getAttribute("data-captcha-provider")}function b(){return p.getAttribute("data-captcha-sitekey")}function _(){return a('form[data-form-primary="true"]')}function w(e){return t.value=e}function x(){var e=v(),t=l("--ulp-captcha-widget-theme")||"light";if(g()===C){"dark"===t&&u(a(".frc-captcha"),"dark");var n=new e.WidgetInstance(m(),{sitekey:b(),language:h(),doneCallback:function(e){w(e)}})}else{var r={sitekey:b(),theme:t,"expired-callback":function(){w(""),u(p,"cef36f021"),e.reset(n)},callback:function(e){w(e),c(p,"cef36f021")}};g()===A&&(r.language=h(),r.retry="never",r["response-field"]=!1,r["error-callback"]=function(e){return fetch("https://www.cloudflarestatus.com/api/v2/summary.json").then(function(e){return e.json()}).then(function(e){for(var t=0;t<e.components.length;t++){var n=e.components[t];if("Turnstile"===n.name)return"operational"===n.status}return!1}).catch(function(e){return!1}).then(function(e){e&&d<f?(w(""),u(p,"cef36f021"),v().reset(n),d++):(w("BYPASS_CAPTCHA"),c(p,"cef36f021"))}),!0}),n=e.render(m(),r)}}p&&function(){var e="captchaCallback_"+Math.floor(1000001*Math.random()),t=g(),n={async:!0,defer:!0},r=function(e,t,n,r){switch(g()){case E:return"https://www.recaptcha.net/recaptcha/api.js?render=explicit&hl="+e+"&onload="+t;case y:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+e+"&onload="+t;case S:return"https://js.hcaptcha.com/1/api.js?render=explicit&hl="+e+"&onload="+t;case C:return"https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.14/widget.min.js";case F:return"https://"+n+".arkoselabs.com/v2/"+r+"/api.js";case A:return"https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload="+t}}(h(),e,p.getAttribute("data-captcha-client-subdomain"),b());if(t===F||t===A){n["data-callback"]=e,n.onerror=function(){if(d<f)return o(r),i(r,n),void d++;o(r),w("BYPASS_CAPTCHA")};var a=function(e){var t,n;t=e,n=function(e){setTimeout(function(){t.run()},s),e.preventDefault()},_().addEventListener("submit",n),t.setConfig({onCompleted:function(e){w(e.token),_().submit()},onError:function(e){return fetch("https://status.arkoselabs.com/api/v2/status.json").then(function(e){return e.json()}).then(function(e){var t=e.status.indicator;return"none"===t}).catch(function(e){return!1}).then(function(e){if(e&&d<f)return t.reset(),new Promise(function(e){setTimeout(function(){e(t.run())},s),d++});w("BYPASS_CAPTCHA"),_().removeEventListener("submit",n)})}})};t===A&&(a=function(){x()}),window[e]=a}else window[e]=function(){delete window[e],x()},t===C&&(u(m(),"frc-captcha"),n.onload=window[e]);i(r,n)}()},r.exports)(o.loadScript,o.removeScript,o.querySelector,o.addClass,o.removeClass,o.getCSSVariable),((a={}).exports=function(r,e,a,i,o,u,c,l,n,s,t){if(!t.enable_ulp_wcag_compliance){if(r("body._simple-labels"))return e(".c2985238f.no-js").forEach(function(e){o(e,"no-js")}),void e(".c2985238f.js-required").forEach(function(e){i(e,"hide")});e(".c90eee5e9:not(.cdf9f7190):not(disabled)").forEach(function(e){i(e,"c9bd31d62");var t,n=r(e,".input");n.value&&i(e,"c0779035e"),a(e,"change",f),a(n,"blur",f),a(n,"animationstart",d),t=n,c(function(){t.value&&l(t,"change",!0)},100)})}function f(e){var t=e.target,n=u(t);t.value||s(t,"data-autofilled")?i(n,"c0779035e"):o(n,"c0779035e")}function d(e){var t=e.target;"onAutoFillStart"===e.animationName&&(n(t,"data-autofilled",!0),l(e.target,"change",!0),a(t,"keyup",p,{once:!0}))}function p(e){var t=e.target;n(t,"data-autofilled","")}},a.exports)(o.querySelector,o.querySelectorAll,o.addEventListener,o.addClass,o.removeClass,o.getParent,o.setTimeout,o.dispatchEvent,o.setAttribute,o.getAttribute,i),{exports:function(e,t,n,r,a,i){function o(e){var t=n("submitted");r("submitted",!0),t?a(e):"apple"===i(e.target,"data-provider")&&setTimeout(function(){r("submitted",!1)},2e3)}var u=e("form");u&&u.forEach(function(e){t(e,"submit",o)})}}.exports(o.querySelectorAll,o.addEventListener,o.getGlobalFlag,o.setGlobalFlag,o.preventFormSubmit,o.getAttribute),{exports:function(n,e,r,a,i,o,u,c,l,t,s,f){if(f.enable_ulp_wcag_compliance){var d=e("[id^='ulp-container-']");if(d&&d.length){var p=t(x);if(p)for(var v=0;v<d.length;v++)p.observe(d[v],{childList:!0,subtree:!0})}x()}function m(e){var t=e.target,n=o(t);t.value||c(t,"data-autofilled")?a(n,"c0779035e"):i(n,"c0779035e")}function h(e){var t=e.target,n=o(t);a(n,"focus"),w(t,n)}function g(e){var t=e.target,n=o(t);i(n,"focus"),m(e),w(t,n)}function b(e){var t=e.target;l(t,"data-autofilled","")}function _(e){var t=e.target;"onAutoFillStart"===e.animationName&&(l(t,"data-autofilled",!0),dispatchEvent(e.target,"change",!0),r(t,"keyup",b,{once:!0}))}function w(e,t){e.value?a(t,"c0779035e"):i(t,"c0779035e")}function x(){e(".ulp-field").forEach(function(e){if(!u(e,"c9bd31d62")){var t=n(e,s);t&&(a(e,"c9bd31d62"),w(t,e),setTimeout(function(){w(t,e)},50),t===document.activeElement&&a(e,"focus"),r(t,"change",m),r(t,"focus",h),r(t,"blur",g),r(t,"animationstart",_))}})}}}.exports(o.querySelector,o.querySelectorAll,o.addEventListener,o.addClass,o.removeClass,o.getParent,o.hasClass,o.getAttribute,o.setAttribute,o.createMutationObserver,o.ELEMENT_TYPE_SELECTOR,i),{exports:function(n,e,r,a,i,o,u,t,c,l){if(!l.enable_ulp_wcag_compliance){var s=e("[id^='ulp-container-']");if(s&&s.length){var f=t(g);if(f)for(var d=0;d<s.length;d++)f.observe(s[d],{childList:!0,subtree:!0});g()}}function p(e){var t=e.target,n=o(t);t.value?a(n,"c0779035e"):i(n,"c0779035e")}function v(e){var t=e.target,n=o(t);a(n,"focus"),h(t,n)}function m(e){var t=e.target,n=o(t);i(n,"focus"),h(t,n)}function h(e,t){e.value?a(t,"c0779035e"):i(t,"c0779035e")}function g(){e("[id^='ulp-container-'] .ulp-field").forEach(function(e){if(!u(e,"c9bd31d62")){var t=n(e,c);t&&(a(e,"c9bd31d62"),h(t,e),setTimeout(function(){h(t,e)},50),t===document.activeElement&&a(e,"focus"),r(t,"change",p),r(t,"focus",v),r(t,"blur",m))}})}}}.exports(o.querySelector,o.querySelectorAll,o.addEventListener,o.addClass,o.removeClass,o.getParent,o.hasClass,o.createMutationObserver,o.ELEMENT_TYPE_SELECTOR,i),{exports:function(r,o,a,i,u,c,l,s,f,t,d,p,e,n,v){if(v.enable_ulp_wcag_compliance){var m=!1,h=e+',input[type="checkbox"]';return S(),[h,g,b,_,w,x,E,y,S]}function g(e){var t=u(e,"data-ulp-validation-function"),n=i(e);return{functionName:t,element:r(n,h),parent:n}}function b(e){var a=[],i=[];return o(e,"[data-ulp-validation-function]").forEach(function(e){var t=g(e),n=[];if(t.element){if("input"===t.element.tagName.toLowerCase()){var r=u(t.element,"type");"checkbox"!==r&&-1===p.indexOf(r)&&n.push("Unsupported input type: "+r)}}else n.push("Could not find element");f[t.functionName]||n.push("Could not find function with name: "+t.functionName),n.length?i=i.concat(n):a.push(e)}),i.length&&t(i.join("\r\n")),a}function _(e,t,n){var r=g(e),a=(0,f[r.functionName])(r.element,t,n);s(e,"ulp-validator-error",!a);var i=o(r.parent,".ulp-validator-error");return s(r.parent,"ulp-error",!!i.length),l(r.element,"c122d8f70")?a=!1:c(r.element,"aria-invalid",!a),a}function w(t){var n=g(t),e=(u(t,"data-ulp-validation-event-listeners")||"").replace(/\s/g,"").split(",").filter(function(e){return!!e});e.length&&e.forEach(function(e){a(n.element,e,function(){_(t,m,e)})})}function x(e,t,n){m=!0;var r=n.filter(function(e){return!_(e,m,"submit")});if(r.length){d(t);var a=g(r[0]);a.element.focus({preventScroll:!0}),a.parent.scrollIntoView({behavior:"smooth"})}else e.submit()}function E(){var t=r('form[data-form-primary="true"]'),n=b(t);0!==n.length&&(n.forEach(function(e){w(e)}),a(t,"submit",function(e){x(t,e,n)}))}function y(){if(n)for(var e in n)n.hasOwnProperty(e)&&(f[e]=n[e])}function S(){var e=r("form[data-disable-html-validations]");e&&(y(),c(e,"novalidate",""),E())}}}.exports(o.querySelector,o.querySelectorAll,o.addEventListener,o.getParent,o.getAttribute,o.setAttribute,o.hasClass,o.toggleClass,o.globalWindow,o.consoleWarn,o.preventFormSubmit,o.SUPPORTED_INPUT_TYPES,o.ELEMENT_TYPE_SELECTOR,u,i),{exports:function(r,o,a,i,u,c,l,t,s,f,e,n){if(!n.enable_ulp_wcag_compliance){var d=!1,p=e+',input[type="checkbox"]';return w(),[p,v,m,h,g,b,_,w]}function v(e){var t=u(e,"data-ulp-validation-function"),n=i(e);return{functionName:t,element:r(n,p),parent:n}}function m(e){var a=[],i=[];return o(e,"[data-ulp-validation-function]").forEach(function(e){var t=v(e),n=[];if(t.element){if("input"===t.element.tagName.toLowerCase()){var r=u(t.element,"type");"checkbox"!==r&&-1===f.indexOf(r)&&n.push("Unsupported input type: "+r)}}else n.push("Could not find element");l[t.functionName]||n.push("Could not find function with name: "+t.functionName),n.length?i=i.concat(n):a.push(e)}),i.length&&t(i.join("\r\n")),a}function h(e,t,n){var r=v(e),a=(0,l[r.functionName])(r.element,t,n);c(e,"ulp-validator-error",!a);var i=o(r.parent,".ulp-validator-error");return c(r.parent,"ulp-error",!!i.length),a}function g(t){var n=v(t),e=(u(t,"data-ulp-validation-event-listeners")||"").replace(/\s/g,"").split(",").filter(function(e){return!!e});e.length&&e.forEach(function(e){a(n.element,e,function(){h(t,d,e)})})}function b(e,t,n){d=!0;var r=n.filter(function(e){return!h(e,d,"submit")});if(r.length){s(t);var a=v(r[0]);a.element.focus({preventScroll:!0}),a.parent.scrollIntoView({behavior:"smooth"})}else e.submit()}function _(){var t=r('form[data-form-primary="true"]'),n=m(t);0!==n.length&&(n.forEach(function(e){g(e)}),a(t,"submit",function(e){b(t,e,n)}))}function w(){var e=o("[id^='ulp-container-']");e&&e.length&&_()}}}.exports(o.querySelector,o.querySelectorAll,o.addEventListener,o.getParent,o.getAttribute,o.toggleClass,o.globalWindow,o.consoleWarn,o.preventFormSubmit,o.SUPPORTED_INPUT_TYPES,o.ELEMENT_TYPE_SELECTOR,i),{exports:function(e,t,n){function r(n){t(n,"click",function(e){e.preventDefault();var t=document.createElement("input");t.name="action",t.type="hidden",t.value=n.value,n.form.appendChild(t),n.form.submit(),n.form.removeChild(t)})}function a(){e('form button[type="submit"][formnovalidate]').forEach(function(e){r(e)})}return n&&a(),[a,r]}}.exports(o.querySelectorAll,o.addEventListener,o.RUN_INIT)}();
+</script>
+<p class="call-to-action"><a href="mailto:usercare@aviationweek.com" target="_blank">Contact us</a> for assistance.</p>
+				<p class="call-to-action">Need a login? <a href="https://aviationweek.com/user/register" target="_blank">REGISTER</a>.
+				</p>
+				</div>
+			
+		</div>
+		
+		<div class="description-block">
+			<h2 class="headline">What's Inside&hellip;</h2>
+			<p class="description">Within AWIN, members will find a unique experience where content from across market sectors and brands come together with seamless user access and searchability. You’ll also get access to regular market briefings, a Knowledge Center with deeper analysis, videos, handbooks and podcasts as well as access to extensive company and program profiles. Customers needing more advanced fleet and forecasting modules can add this on and organizations looking to equip their full company or teams can easily expand users.</p>
+			<p class="description">Not already a subscriber or website registrant to any of the above? Learn more about Aviation Week Network’s comprehensive suite of publications and business intelligence resources. With unsurpassed editorial, data and analytical teams, only the Aviation Week network has the depth and breadth to provide the specific intelligence needed to grow your business.</p>
+			<a href="https://aviationweek.com/node/4133546" class="auth0-login__btn btn button button--blue--dark button--secondary">Learn More</a>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>

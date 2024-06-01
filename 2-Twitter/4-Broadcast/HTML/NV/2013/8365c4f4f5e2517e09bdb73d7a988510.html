@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Listen live</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta property="og:type" content="website"/>
+		        <meta property="og:site_name" content="Cumulus Radio Player"/>
+        <meta property="og:description" content="Cumulus Radio Player"/>
+        <meta http-equiv="Cache-Control" content="no-store,no-cache,must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+		<meta name="copyright" content="2024 Triton Digital"/>
+		<meta name="author" content="Triton Digital"/>
+		<meta name="keywords" content=""/>
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+		<script type="text/javascript" language="JavaScript" src="scripts/swfobject.js"></script>
+		<script type="text/javascript" language="JavaScript" src="scripts/player.js"></script>
+		<script type="text/javascript" language="JavaScript" src="scripts/swfmacmousewheel2.js"></script>
+		
+		<script type="text/javascript" language="JavaScript">
+			var params = {};
+			params.name = "Citadel";
+			params.bgcolor = "#ffffff";
+			params.wmode = "transparent";
+			params.menu = "false";
+			params.quality = "high";
+			params.allowScriptAccess = "always";
+			params.allowFullScreen = "true";
+			
+			var attributes = {};
+			attributes.id = "Citadel";
+			attributes.name = "Citadel";
+			
+			if (swfobject.hasFlashPlayerVersion("9.0.124"))
+			{
+				var flashvars = {};
+				flashvars.andoStationId = (swfobject.getQueryParamValue("sid")) ? swfobject.getQueryParamValue("sid") : 2929;
+				flashvars.callsign = (swfobject.getQueryParamValue("callsign")) ? swfobject.getQueryParamValue("callsign") : "";
+				flashvars.streamid = (swfobject.getQueryParamValue("streamid")) ? swfobject.getQueryParamValue("streamid") : 8493;
+				flashvars.mediaformat = (swfobject.getQueryParamValue("mediaformat")) ? swfobject.getQueryParamValue("mediaformat") : 21;
+				
+				swfobject.embedSWF("Citadel.swf", "player_app", "769", "393", "9.0.124", "scripts/expressInstall.swf", flashvars, params, attributes);
+				
+				if (swfmacmousewheel)
+					swfmacmousewheel.registerObject(attributes.id);
+			}
+			else
+			{
+
+				var flashvars = {};
+				flashvars.callsign = (swfobject.getQueryParamValue("callsign")) ? swfobject.getQueryParamValue("callsign") : "CITADEL";
+				flashvars.tryhd = "1";
+				
+			    swfobject.embedSWF("http://player.streamtheworld.com/_players/stw/v2/GenericLiveRadio.swf", "player_app", "304", "162", "8", "scripts/expressInstall.swf", flashvars, params, attributes);
+			}
+
+		</script>
+		<script language="JavaScript" type="text/javascript" src="http://player.cdn.targetspot.com/ts_embed_functions_as3.php"></script>
+		<script type="text/javascript" src="http://player.cdn.targetspot.com/static/js/lib/jquery_1_2_3.js"></script>
+	</head>
+	<body>
+		<script src="http://player.streamtheworld.com/_core/adexternal.php?type=bigbox" type="text/javascript" language="javascript"></script>
+		<div id="player_app"><a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" target="_blank"><img title="Get ADOBE Flash Player" alt="Get ADOBE Flash Player" src="http://player.streamtheworld.com/_core/assets/img/get_adobe_flash_player.jpg" border="0"/></a></div>
+		<div id="station_bigbox"></div>
+		<div id="targetspot_container">
+			<div id="targetspot_div"></div>
+		</div>
+		<iframe id="preroll_tracking_iframe" src="about:blank" scrolling="no" width="1" height="1" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+		<script src="http://lt.andomedia.com/ltflash.php" type="text/javascript"></script>
+		<script type="text/javascript" language="JavaScript">
+			function AndoStartTracking(andoStationId) {
+				//AndoTrack.AndoStartTracking(andoStationId);
+			}
+			function AndoEndTracking(andoStationId) {
+				//AndoTrack.AndoEndTracking();
+			}
+			function AndoPauseTracking() {
+				AndoTrack.AndoPauseTracking();
+			}
+			function AndoResumeTracking() {
+				AndoTrack.AndoResumeTracking();
+			}
+		</script>
+		
+	</body>
+</html>

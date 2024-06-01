@@ -1,0 +1,968 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta name="keywords" content="small business community, small business marketing, business directory, business listing, business networking, grow website traffic, social media marketing, improve SEO, business owners, entrepreneurs" /><meta name="keywords" content="small business consultants, business coaches, business mentors, local business, business services, local services, home services" /><meta name="keywords" /><meta name="description" content="Promote your business on oGoing Small Business Community Directory. Grow website traffic with social media marketing, improve SEO and do business networking with small business owners, local entrepreneurs and consultants. oGoing is great for marketing business products &amp;amp; services and attracting new customers. Connect with over 140,000 small business owners, suppliers, manufacturers, distributors, veteran business, startups, wholesalers and SMB professionals on the growing business community. Made for 35 million USA small businesses, and 350 million world businesses." /><meta name="msvalidate.01" content="7DB03310DC4F1A210A972A3522CA8EDA" /><title>
+	 Join oGoing B2B Community | B2B Marketing | Local Business Network 
+</title>
+    <!-- favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+    <!-- autocomplete css for autocomplete box -->
+    <link rel="Stylesheet" href="CSS/jquery.autocomplete.css" media="screen" />
+    <!-- Landing page CSS -->
+    <link rel="Stylesheet" href="CSS/landing.css" media="screen" />
+    <!-- Jquery widget theme -->
+    <link rel="Stylesheet" href="CSS/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+    <!-- Google analytics script -->
+    <script type="5e6f34ca26d0c12edfce2857-text/javascript" src="js/ga.js" language="javascript"></script>
+    <!-- Jquery framework script -->
+    <script src="js/modal/jquery.1.5.1.min.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <!-- Used for password strength -->
+    <script src="js/pwd_strength.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <!-- Jquery Timer Script -->
+    <script src="js/jquery.timer.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    
+    <link rel="Stylesheet" href="js/intro/engine/css/videolightbox.css" type="text/css" />
+    
+    <!-- It is used to video light box style-->
+    <link rel="Stylesheet" type="text/css" href="js/intro/engine/css/overlay-minimal.css" />
+    <!-- jquery tool script for used in video light box -->
+    <script src="js/intro/engine/js/jquery.tools.min.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <!-- It is used to for video playing for intro video  -->
+    <script src="js/intro/engine/js/swfobject.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <!-- make all links with the 'rel' attribute open overlays -->
+    <script src="js/intro/engine/js/videolightbox.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    
+    <!-- used for join ogoing page -->
+    <!-- Javascript framework script -->
+    <script src="js/modal/jquery.ui.core.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <script src="js/modal/jquery.ui.widget.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <script src="js/modal/jquery.ui.position.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <!-- It is used to autocomplete functionality -->
+    <script src="js/modal/jquery.ui.autocomplete.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <script src="js/Jn.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+    <script language="javascript" type="5e6f34ca26d0c12edfce2857-text/javascript">
+        $(document).ready(function () {
+            $(".Dwater").focus(function () { if ($(this).val() == this.defaultValue) { $(this).val(""); $(this).removeClass("Dwater"); } });
+            $(".Dwater").blur(function () { if ($.trim($(this).val()) == "") { $(this).val(this.defaultValue); $(this).addClass("Dwater"); } });
+
+            $("#hlnWhyJoin").click(function () { initAd(); openAd(); });
+            $(".reasClose").click(function () { closeAd(); });
+            var tg = 0;
+            $("[id$='_A6']").click(function () {
+
+                $("#header").css("position", "relative");
+                //        $("#signin_menu").css("display","block");
+                //$("#signin_menu").toggle(function () { });
+                //$("#signin_menu").slideToggle(500, function () { });
+                //css("display","block");        
+                if (!$("#signin_menu").is(":visible"))
+                    $("#signin_menu").fadeIn(300);
+                else
+                    $("#signin_menu").fadeOut(500);
+                if ($("#txtUname").length > 0)
+                    $("#txtUname").focus();
+                else if ($("[id$='_txtUname']").length > 0)
+                    $("[id$='_txtUname']").focus();
+
+                return false;
+                //        $("#signin_menu").toggle('slow', 
+                //            function () {
+                //                if ($(this).is(":visible"))
+                //                    $(this).slideUp();
+                //                else 
+                //                    $(this).slideDown(); 
+                //});            
+                if (tg == 0) {
+                    $(".menu ul").css("background-color", "#6DBDFA");
+                    $(".clsTop span").css("background-image", "url(images/slide_btn_up.png)");
+                    tg = 1;
+                }
+                else {
+                    $(".menu ul").css("height", "15px");
+                    $(".menu ul").css("background", "#FFF");
+                    $(".clsTop span").css("background-image", "url(images/slide_btn_down.png)"); tg = 0;
+                }
+
+            });
+        });
+        function CheckLocation(obj) {
+            $.ajax({
+                type: "POST",
+                async: true,
+                url: servUrl + "CheckWorldCitiesLike",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: "{ City : '" + $(".location").val() + "' }",
+                success: function (data) {
+                    if (data.d) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+
+
+                }
+            });
+        }
+        function onYouTubePlayerReady(playerId) {
+            ytplayer = document.getElementById("video_overlay");
+            ytplayer.setVolume(100);
+        }
+        /* it was used for show hint/tips for every fields */
+        /*$(document).ready(function () { prepareInputsForHints(); });*/
+        /*It was used to store previous written text in location field*/
+        var pretxt;
+        function valid(o, w) {
+            var r = { 'special': /[\W]/g };
+            o.value = o.value.replace(r[w], '');
+        }
+        /*It was used for Input hints for all fields */
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function () {
+                    oldonload();
+                    func();
+                }
+            }
+        }
+        /* Used to check all keypress keycodes. */
+        function GetKeyCode(evt) {
+            var keyCode;
+            if (evt.keyCode > 0) { keyCode = evt.keyCode; }
+            else if (typeof (evt.charCode) != "undefined") { keyCode = evt.charCode; }
+            //return keyCode;
+            var KEY = { UP: 38, DOWN: 40, DEL: 46, TAB: 9, RETURN: 13, ESC: 27, COMMA: 188, PAGEUP: 33, PAGEDOWN: 34, BACKSPACE: 8 };
+            switch (keyCode) {
+                case KEY.UP: return false; break;
+                case KEY.DOWN: return false; break;
+                case KEY.PAGEUP: return false; break;
+                case KEY.PAGEDOWN: return false; break;
+                    // matches also semicolon                                                                    
+                case KEY.COMMA: return false; break;
+                case KEY.TAB:
+                case KEY.RETURN: return false; break;
+                case KEY.ESC: return false; break;
+                case KEY.BACKSPACE: return true; break;
+                default: return true;
+            }
+            return true;
+        }
+        /** It was used for load hints */
+        function prepareInputsForHints() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                // test to see if the hint span exists first                
+                if (inputs[i].parentNode.getElementsByTagName("span")[0]) {
+                    // the span exists!  on focus, show the hint
+                    inputs[i].onfocus = function () {
+                        this.parentNode.getElementsByTagName("span")[0].style.display = "inline";
+                    }
+                    // when the cursor moves away from the field, hide the hint
+                    inputs[i].onblur = function () {
+                        this.parentNode.getElementsByTagName("span")[0].style.display = "none";
+                        // $('#txtConfirmPassword').css("top-margin", "0px");
+                    }
+                }
+            }
+            // repeat the same tests as above for selects
+            var selects = document.getElementsByTagName("select");
+            for (var k = 0; k < selects.length; k++) {
+                if (selects[k].parentNode.getElementsByTagName("span")[0]) {
+                    selects[k].onfocus = function () {
+                        this.parentNode.getElementsByTagName("span")[0].style.display = "inline";
+                    }
+                    selects[k].onblur = function () {
+                        this.parentNode.getElementsByTagName("span")[0].style.display = "none";
+                    }
+                }
+            }
+        }
+        /**** page load event for inputs ***/
+        //addLoadEvent(prepareInputsForHints);
+
+        function ValidateUserName(sender, args) {
+            var msg = args.Value.trim().toLowerCase();
+            if (msg == 'enter company name' || msg.indexOf('test') != -1 || msg.indexOf('http://') != -1 || msg == 'enter' || msg == 'company' || msg == 'name' || msg == 'enter company' || msg == 'company name') {
+                args.IsValid = false;
+                return;
+            }
+            args.IsValid = true;
+        }
+        function notAllowSpecialCharacter(evt) {
+
+            var txt = document.getElementById('txtFullName').value;
+
+            if (txt.length <= 7) {
+
+                if (txt.toLowerCase() == "http://") {
+                    var keycode = (evt.which) ? evt.which : event.keyCode
+                    if (keycode == 47) {
+
+                        //alert('First word should not be a http://');
+                        document.getElementById('txtFullName').value = "";
+                        return false;
+
+                    }
+                    //alert('First word should not be a http://')
+                    document.getElementById('txtFullName').value = "";
+                    document.getElementById('txtFullName').focus();
+                }
+
+            }
+
+        }
+
+    </script>
+    <style type="text/css">
+        .columnsNew {
+            display: inline;
+            float: left;
+            margin-left: 38px;
+            width: 92%;
+        }
+
+        .logoNew {
+            float: left;
+        }
+
+        .whyjoinNew {
+            background-position: 14% top !important;
+        }
+
+        .radiobuttonlist label {
+            padding-left: 5px;
+        }
+
+        p {
+            width: 100%;
+            float: left;
+            padding-bottom: 1.20em;
+        }
+
+        h1 {
+            width: 100%;
+            float: left;
+        }
+
+        h2 {
+            width: 100%;
+            float: left;
+        }
+
+        .dataList .messagebox_line {
+            margin: 0 17%;
+        }
+    </style>
+<link href="CSS/Businesses.css" rel="stylesheet" type="text/css" media="all" /><link href="App_Themes/oGoing/Checkbox.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/ColorPicker.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/default.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/jquery.cluetip.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/lgn.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/Ohlp.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/portal.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/ShowMessages.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/signupflow.css" type="text/css" rel="stylesheet" /><link href="App_Themes/oGoing/ui.tabs.css" type="text/css" rel="stylesheet" /></head>
+<body class="Custombody">
+    <!-- Start Alexa Certify Javascript -->
+    <script type="5e6f34ca26d0c12edfce2857-text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js" />
+    <script type="text/javascript">        _atrk_opts = { atrk_acct: "fQaVf1a0Or00i8", domain: "ogoing.com" }; atrk();</script>
+    <noscript>
+        <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=fQaVf1a0Or00i8" style="display: none"
+            height="1" width="1" alt="" />
+    </noscript>
+    <!-- End Alexa Certify Javascript -->
+    <form name="frmJoin" method="post" action="./" id="frmJoin">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTQ4ODE3NTg0DxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWAgIDD2QWAgIBD2QWBmYPZBYCAgEPFgIeB1Zpc2libGVoFhoCAg8WBB4EaHJlZgUbaHR0cHM6Ly93d3cub2dvaW5nLmNvbS9Ib21lHwFoZAIEDxYCHwFoZAIHDxYEHwIFMWh0dHBzOi8vd3d3Lm9nb2luZy5jb20vSW52aXRhdGlvbnMvZmluZF9vbl9vZ29pbmcfAWhkAgkPFgIfAWhkAgwPFgQfAgUXaHR0cHM6Ly93d3cub2dvaW5nLmNvbS8fAWhkAg8PFgIfAWhkAhEPFgIfAWhkAhMPFgIfAWhkAhUPFgQfAgUcaHR0cHM6Ly93d3cub2dvaW5nLmNvbS9JbmJveB8BaGQCGQ8WAh8BaGQCGw8WBB8CBSdodHRwczovL3d3dy5vZ29pbmcuY29tL2FjY291bnQvc2V0dGluZ3MfAWhkAh0PFgIfAWhkAiIPFgIfAWgWCAIDDxYEHwIFMmh0dHBzOi8vd3d3Lm9nb2luZy5jb20vSW52aXRhdGlvbnMvbWFuYWdlX2NvbnRhY3RzHwFoZAIFDxYEHwIFIGh0dHBzOi8vd3d3Lm9nb2luZy5jb20vYWR2ZXJ0aXNlHwFoZAIHDxYCHwIFIGh0dHBzOi8vd3d3Lm9nb2luZy5jb20vSGVscC5hc3B4ZAIJDw8WAh8BaGRkAgEPZBYCAgEPDxYCHghJbWFnZVVybAUmfi9JbWFnZXMvUG9ydGFsLzYzNDM3NjY3OTE1MTg0MDAwMC5wbmdkZAIRDw8WAh4EVGV4dAUPIMKpIDIwMjQgb0dvaW5nZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFFHVjSGVhZGVyTWVudSRjaGVja2VyBRV1Y0hlYWRlck1lbnUkaW1nTG9naW5xKhAZG1p5siJLViSjc0N8yp8WiQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E353350A" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+</div>
+        <div id="container">
+            <div id="coneSignUp">
+
+                
+
+<link href="CSS/uAddthis.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+    {
+        _::-moz-svg-foreign-content, :root .tp_link
+        {
+            margin-top: -14px;
+        }
+    }
+    
+    .lnkForgot
+    {
+        font-size: 11px;
+        text-decoration: underline;
+        color: #0088CC !important; /*line-height: 20px !important;*/
+        float: right !important;
+    }
+    .imgSignIn
+    {
+        background: none !important;
+        background-color: transparent !important;
+    }
+    input[type="image"]:focus
+    {
+        -moz-box-shadow: none !important;
+        border-color: transparent !important;
+        outline-color: none;
+        outline-style: none;
+        outline-width: medium;
+        background-color: transparent !important;
+        outline: 0px none;
+    }
+    .clssignin .sign_rt
+    {
+        float: right;
+        width: 165px;
+    }
+    .clssignin .sign_lft
+    {
+        float: left;
+        width: 180px;
+    }
+    .noti_bubble
+    {
+        position: absolute; /* This breaks the div from the normal HTML document. */
+        top: -5px;
+        right: 101px;
+        padding: 1px 2px 1px 2px;
+        background-color: #0088CC; /* you could use a background image if you'd like as well */
+        color: white;
+        font-weight: bold;
+        font-size: 1em; /* The following is CSS3, but isn't crucial for this technique to work. */ /* Keep in mind that if a browser doesn't support CSS3, it's fine! They just won't have rounded borders and won't have a box shadow effect. */ /* You can always use a background image to produce the same effect if you want to, and you can use both together so browsers without CSS3 still have the rounded/shadow look. */
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px gray;
+    }
+     .close{background-image:url(../images/close.png);height:10px;width:10px;top: 4px;right: 8px;cursor:pointer}
+</style>
+<script type="5e6f34ca26d0c12edfce2857-text/javascript" src="js/JsAddthis.js"></script>
+<div id="ucHeaderMenu_pnliheader" onkeypress="if (!window.__cfRLUnblockHandlers) return false; javascript:return WebForm_FireDefaultButton(event, &#39;ucHeaderMenu_imgLogin&#39;)" data-cf-modified-5e6f34ca26d0c12edfce2857-="">
+	
+    <div id="ucHeaderMenu_singin" class="clssignin">
+        <div class="sign_lft">
+            <span id="ucHeaderMenu_Label2" class="content_text" style="color:#292929;font-weight:bold;">Username or Email</span>
+            <input name="ucHeaderMenu$txtUname" type="text" maxlength="100" id="ucHeaderMenu_txtUname" tabindex="1" class="textbox" style="width: 160px;
+                height: 18px;" />
+        </div>
+        <div class="sign_rt">
+            <span id="ucHeaderMenu_Label3" class="content_text" style="color:#292929;font-weight:bold;">Password</span>
+            
+            <a id="ucHeaderMenu_hlnkForgot" class="lnkForgot" href="resendpassword">Forgot password?</a>
+            <input name="ucHeaderMenu$txtPassword" type="password" maxlength="128" id="ucHeaderMenu_txtPassword" tabindex="2" class="textbox" style="width: 160px; height: 18px;" />
+        </div>
+        <div class="clear">
+        </div>
+        <div style="width: 346px">
+            <table width="100%">
+                <tr>
+                    <td colspan="2">
+                        <span class="content_text_sub">
+                            <span class="Remembercheck"><input id="ucHeaderMenu_checker" type="checkbox" name="ucHeaderMenu$checker" checked="checked" /></span>
+                            <span id="ucHeaderMenu_Label1" style="color:#292929;font-weight:bold;">Remember me</span>
+                        </span>
+                        <div>
+                            
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="isiginbox_btn">
+                            <input type="image" name="ucHeaderMenu$imgLogin" id="ucHeaderMenu_imgLogin" class="imgSignIn" src="images/btn_Sign_in3.gif" alt="Login" onclick="if (!window.__cfRLUnblockHandlers) return false; return toMem();" style="border-width:0px;" data-cf-modified-5e6f34ca26d0c12edfce2857-="" />
+                           
+                            <input type="hidden" name="ucHeaderMenu$hfLoginAtemptCount" id="ucHeaderMenu_hfLoginAtemptCount" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="dvErr" style="width: 205px; float: left; line-height: 13px; min-height: 19px">
+                            <label id="lblError">
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+
+</div>
+
+
+<div style="width:100%;position:relative;" >
+
+<div id="signin_menu">
+     <div class="close" style="position: absolute"></div>
+    <div>
+        
+        <iframe src="//ogoingweb.rpxnow.com/openid/embed?token_url=http://www.ogoing.com/RpxHandler.aspx"
+            scrolling="no" frameborder="no" allowtransparency="true" style="width: 360px;
+            height: 240px"></iframe>
+        
+    </div>
+    <script type="5e6f34ca26d0c12edfce2857-text/javascript" language="javascript">
+            <!--
+        document.getElementById('ucHeaderMenu_txtUname').value = readCookie("theName");
+        document.getElementById('ucHeaderMenu_txtPassword').value = readCookie("theEmail");
+        if (document.getElementById('ucHeaderMenu_txtUname').value != '' && document.getElementById('ucHeaderMenu_txtPassword').value != '' && readCookie("theName") != '' && readCookie("theName") != null && readCookie("theEmail") != '' && readCookie("theEmail") != null && document.getElementById("checker").checked) { document.getElementById('ucHeaderMenu_imgLogin').click(); }
+            //-->   
+    </script>
+</div>
+
+</div>
+
+<script src="js/Commonheader.js" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+<script language="JavaScript" type="5e6f34ca26d0c12edfce2857-text/javascript">
+    $(document).ready(function () {
+
+
+
+        var d = new Date();
+        var s;
+        var tz = d.getTimezoneOffset();
+
+        if (tz > 0)
+            s = (tz / 60) * -3600;
+        else if (tz == 0)
+            s = "UTC";
+        else
+            s = (tz / 60) * -3600;
+
+        //        $.ajax({
+        //            type: "POST",
+        //            url: getweblink() + "Service/Pro.asmx/GetUtcTimeZoneNew",
+        //            data: "{UTCOffset : '" + s + "'}",
+        //            contentType: "application/json; charset=utf-8", dataType: "json",
+        //            success: function (msg) {
+        //                // Replace the div's content with the page method's return.
+        //               
+
+        //            },
+        //            error: function (msg) {
+        //              
+        //            }
+        //        });
+        if ($("#imgMenu").length > 0) {
+            //            if ((location.href).indexOf("Updates") > -1)
+            //                $("#imgMenu")[0].src = "../../images/down_menu.png";
+            //            else if ((location.href).indexOf("find_on_ogoing") == -1 && (location.href).indexOf("settings") == -1 && (location.href).indexOf("search") == -1 && (location.href).indexOf("Following") == -1 && (location.href).indexOf("Followers") == -1 && (location.href).indexOf("live") == -1)
+            //                $("#imgMenu")[0].src = "images/down_menu.png";
+            //            else
+            //                $("#imgMenu")[0].src = "../images/down_menu.png";
+
+            $("#imgMenu")[0].src = getBaseURL() + "images/down_menu.png";
+        }
+
+
+    });
+
+
+</script>
+
+                <div id="Div_Logo" class="logo" style="width: 545px">
+                    <a id="lnkHome">
+
+                        <img id="imglogo" src="Images/Portal/634376679151840000.png" style="border-width:0px;" />
+                    </a>
+                </div>
+
+                <div id="div_hrGreen" class="signUpGr">
+                    <div style="float: left; width: auto;">
+                        <span id="Label1" style="text-align: left; color: #222222; font-size: 32px; padding-left: 45px;"></span>
+                        <font size="3"><b>B2B Community</b> <font size="2">Be Found Online. Connect. Share Products and Services. Boost SEO. Grow Business.</font></font>
+                        
+                    </div>
+                    <div style="text-align: right; float: right; padding: 11px">
+                        
+                    </div>
+                </div>
+
+                
+
+<div id="sponsorAdDiv" style="display: none; z-index: 1000;">
+    <div>
+        <div class="reasClose">
+            &nbsp;</div>
+        <div id="whyjoin" style="margin: 10px 100px 0 0;">
+            <div style="float: left; width: 45%">
+                <label id="lblwhyJoin">
+                    Why Join</label>
+            </div>
+            <div style="padding: 0; float: left; width: 20%">
+                
+                <div id="WhyJoin1_divVideo">
+                    <div id="videogallery">
+                        <a id="mainIntro" rel="#voverlay" style="position:absolute !important" href="//www.youtube.com/v/A8mp2H9fkPI?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer"
+                            title="oGoing Founder & CEO">
+                            <img src="js/intro/data/thumbnails/1.png" alt="oGoing Founder & CEO" />
+                            <span></span></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="WhyJoin1_divSignup" style="padding: 0px 24px 0px 0px;; float: right; width: 20%">
+                <div id="WhyJoin1_divpopSignup" class="btnNewSign" onclick="if (!window.__cfRLUnblockHandlers) return false; loadjoin();" data-cf-modified-5e6f34ca26d0c12edfce2857-="">
+                    Sign Up</div>
+            </div>
+        </div>
+        <!--*****EDIT THIS MESSAGE*****-->
+        <div id="reasons" class="columns">
+            <ul class="listreason">
+                <li class="Whyheader" style="height: auto; background-image: none"><strong><span id="WhyJoin1_lblWhyHeader1">7 reasons
+                    to join oGoing Business to Business Social Network</span></strong></li>
+                <li><span id="WhyJoin1_lblReason1">Get 25 FREE Leads. <strong>VERY</strong> easy to use, and FREE to join!</span></li>
+                <li><span id="WhyJoin1_lblReason2"><strong>FOR</strong> your business! Connect with thousands of small businesses & SMB instantly</span></li>
+                <li><span id="WhyJoin1_lblReason3"><strong>MARKET</strong> your business! Promote your products and services with best social media</span></li>
+                <li><span id="WhyJoin1_lblReason4"><strong>DO</strong> more! Find new referrals for your business, and post your business needs now</span></li>
+                <li><span id="WhyJoin1_lblReason5"><strong>TALK</strong> more! Share real-time updates about your business deals, news and events</span></li>
+                <li><span id="WhyJoin1_lblReason6"><strong>POWER</strong> your brand! Promote your brand on Twitter, Facebook, Google+, LinkedIn etc.</span></li>
+                <li style="padding-bottom: 15px"><span id="WhyJoin1_lblReason7"><strong>BOOST</strong> your business! Generate warm leads, Attract new customers and grow sales</span></li>
+                <li class="Whyheader" style="height: auto; background-image: none"><span id="WhyJoin1_lblwhojoin">Who should join?</span></li>
+                <li><span id="WhyJoin1_lblwhojoindesc">Small businesses (less than $100 million), service providers, startups, growing businesses, entrepreneurs, owners, SMB and businesses doing business with small business</span></li>
+                <li style="height: auto; background-image: none; font-weight: bold; color: darkgreen;
+                    font-size: 12px;"><span id="WhyJoin1_lblFooter">DRIVE your small business forward with oGoing! Go BIG with oGoing!</span></li>
+            </ul>
+        </div>
+        <!--*****EDIT THE ABOVE MESSAGE*****-->
+    </div>
+</div>
+
+                <br />
+                <p>&nbsp;</p>
+                
+                <p>&nbsp;</p>
+
+                <center>
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/4ergr1O3Nxg?rel=0" frameborder="0" allowfullscreen></iframe>
+                </center>
+
+                <p>&nbsp;</p>
+                <h1 style="color: #2C3539; font-size: 40px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">Join the Leading Business Community</h1>
+                
+                <p>&nbsp;</p>
+                <p style="text-align: center;">
+                    <a href="https://www.ogoing.com/newjoinogoing">
+                        <img src="images/Join-Now-button.png" alt="Join oGoing Now" /></a>
+                </p>
+                <p>&nbsp;</p>
+                
+                <p style="color: #2C3539; font-family: helvetica; font-family: arial; font-size: 30px; text-align: center">"<em>Every Business has a story to tell… Share your story on <strong>o</strong>Going.</em>"</p>
+                
+                
+                
+                
+                
+                
+                <p style="color: black; font-family: helvetica; font-family: arial; font-size: 30px; text-align: center">oGoing Business Community helps your business get found FIRST by your customers online.</p>
+                <p style="text-align: center"> <span style="font-weight:bold; font-size:20px;"> Join the B2B Community that connects 100,000+ local, small and diverse businesses.</span></p>
+                <p style="color: black; font-family: helvetica; font-family: arial; font-size: 22px;padding:0 3%;width:94%">When you create your business profile on oGoing and share engaging stories, it helps: <br/> <br/>
+                    <span style="font-weight:bold">1. Boost SEO Rank</span>
+                    <br />
+                    <span>Get higher search engine rank on Google, Bing, Yahoo. oGoing profiles and posts are found first on Google by your customers, and websites get ranked higher (well ahead of competitors.)</span>
+                     <br /> <br />
+                    <span style="font-weight:bold">2. Boost Social Media Brand</span>
+                    <br />
+                    <span>Create stronger social media brand on Facebook, LinkedIn, Twitter, Instagram, YouTube. Active oGoing members boost their content, products and services to jumpstart the brand and establish trust.</span>
+                     <br /> <br />
+                    <span style="font-weight:bold">3. Boost Business Networking</span>
+                    <br />
+                    <span>Connect and share your expertise with over 100K member businesses in 99 categories. Active oGoing members make deeper connections with clients and partners by sharing tips, events & videos.</span>
+                     <br /> <br />
+                    
+
+                </p>
+                <p style="color: black; font-family: helvetica; font-family: arial; font-size: 22px;text-align:center">oGoing is the #1 platform to boost your SEO, B2B Products and Services, Marketing and Business Networking</p>
+                
+
+                <p>&nbsp;</p>
+                <p style="text-align: center">
+                    <img src="images/oGoing-Local-Business-Networking-B2B-Community.jpg" alt="Local Business Networking and B2B Community on oGoing" width="936" />
+                </p>
+                <p>&nbsp;</p>
+                <h2 style="color: #2C3539; font-size: 40px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">Attract New Customers</h2>
+                <p>&nbsp;</p>
+                <div style="padding: 0 20px">
+                    <p style="color: black; font-family: helvetica; font-family: arial; font-size: 20px; text-align: justify"><a href="//www.ogoing.com" target="_blank" style="color: #134B09;">oGoing.com</a> provides over 100,000 business owners, entrepreneurs, service providers, professionals and consultants the most amazing social media marketing and business networking platform to connect, network, share, promote and grow their business! <a href="http://www.ogoing.com/sanjaydalal" target="_blank" style="color: #134B09;">Sanjay Dalal</a>, serial entrepreneur, founded oGoing - the leading B2B Local Small Business Network. Dalal is on a mission to grow the <strong>B2B community</strong> to over 10 million startups, small businesses, SMB and growing companies.</p>
+                </div>
+                
+
+                <p>&nbsp;</p>
+                <h2 style="color: #2C3539; font-size: 40px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">&nbsp;Jumpstart Social Marketing</h2>
+                <p>&nbsp;</p>
+                <p style="color: black; font-family: helvetica; font-family: arial; font-size: 30px; text-align: center"><strong>o</strong>Going is an amazing B2B community to:</p>
+                
+                <p style="color: black; font-family: helvetica; font-family: arial; font-size: 30px; text-align: center">
+                    <strong>1. Share Your Story</strong><br />
+                    <strong>2. Get Found Online </strong>
+                    <br />
+                    <strong>3. Online Business Networking </strong>
+                    <br />
+                    <strong>4. Social Media Marketing</strong><br />
+                    <strong>5. Improve SEO Rank</strong>
+                </p>
+
+                <p>&nbsp;</p>
+                <p style="text-align: center">
+                    <img src="images/social-media-marketing-ogoing.jpg" alt="Social Media Marketing on oGoing" width="936" />
+                </p>
+                <p>&nbsp;</p>
+
+                <div style="padding: 0 20px">
+                    <p style="color: black; font-family: helvetica; font-family: arial; font-size: 20px; text-align: justify">Small businesses are vital to America's economic future; <strong>29</strong> million small businesses hire <strong>57.9</strong> million employees, create <strong>64 percent</strong> of new private-sector jobs, and spend over <strong>$5 trillion</strong> annually. The world has over 150 million small businesses.<strong> o</strong>Going's mission is to help empower local businesses in USA and the world. <strong>o</strong>Going provides entrepreneurs, owners and professionals a powerful B2B social media platform and network that promotes the business, boosts online visibility, increases website traffic, improves SEO ranking and <strong>attracts new customers</strong>.</p>
+                </div>
+                <p>&nbsp;</p>
+                <h2 style="color: #2C3539; font-size: 40px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">&nbsp;Grow Your Business Network</h2>
+                <p>&nbsp;</p>
+                <p style="text-align: center">
+                    <img src="images/get-found-online-ogoing.jpg" alt="Get found online on oGoing and Boost SEO" width="936" />
+                </p>
+                <p>&nbsp;</p>
+                <h2 style="color: #2C3539; font-size: 30px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">Leading B2B Social Networking Platform</h2>
+                <p>&nbsp;</p>
+                <p style="text-align: center;">
+                    <a href="https://www.ogoing.com/newjoinogoing">
+                        <img src="images/Join-Now-button.png" alt="Join oGoing Now" /></a>
+                </p>
+                <p>&nbsp;</p>
+                <div style="padding: 0 20px">
+                    <p style="color: black; font-family: helvetica; font-family: arial; font-size: 20px; text-align: justify"><em>"Have you ever tried a side by side comparison between oGoing and other networks? I suggest you do it, and you'll see a huge difference in features and capability. On these criteria you'll really appreciate what oGoing is offering small business owners, service providers and entrepreneurs in a clearly superior way. And this is not a subjective "plug" for oGoing but an objective, direct comparison of features. It is simply giving credit and recognition to where it is due - and I believe oGoing deserves it!"</em> - <strong>Alejandre Abaygar</strong></p>
+                </div>
+
+                <p>&nbsp;</p>
+                <h2 style="color: #2C3539; font-size: 30px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">7 Reasons To Join oGoing Business Network</h2>
+                <p>&nbsp;</p>
+                <div style="padding: 0 20px">
+                    <p style="color: black; font-family: helvetica; font-family: arial; font-size: 20px; text-align: justify">
+                        1. Market your business. Promote your products and services with best social media.<br />
+                        2. Expand your network. Connect with thousands of local service providers instantly.
+                        <br />
+                        3. Talk more. Share real-time stories about your business deals, tips and events.
+                        <br />
+                        4. Power your brand. Grow your brand on Facebook, LinkedIn, Twitter, YouTube, Vimeo.
+                        <br />
+                        5. Get new leads. Find new warm referrals when you post your business needs now.
+                        <br />
+                        6. Boost your visibility. Improve your SEO rank on Google, Bing & Yahoo, Increase website traffic.
+                        <br />
+                        7. Grow your business. Attract new customers, Engage current clients and Boost sales!
+                    </p>
+                </div>
+                <p>&nbsp;</p>
+                <h2 style="color: #2C3539; font-size: 30px; font-family: helvetica; font-family: arial; font-weight: bold; text-align: center">Connect With New Businesses</h2>
+                <p>&nbsp;</p>
+                <div id="JustJoin" class="tabClss" style="padding: 1px 0 0 0px; border: 0px;">
+                    <div id="DivJustJoin" style="clear: both;">
+                        <div id="firstDivJustJoin">
+                        </div>
+                        <div id="ChildDivJustjoin">
+                        </div>
+                    </div>
+                </div>
+                <div id="footer" style="width: 936px">
+
+                    <div class="fnav" style="border-top: 1px solid rgba(204, 204, 204,0); height: 33px; line-height: 33px;">
+                        <ul>
+                            <li id="homepage"><a href="home" id="home" target="_self" class="clsa">Home</a> </li>
+                            <li id="about"><a href="NewJoinoGoing" id="joinogoing" target="_self" class="clsa">Join oGoing</a> </li>
+                            <li id="liAboutUs"><a href="aboutOgoing" id="lnkAboutUs" target="_self" class="clsa">About</a> </li>
+                            <li id="li1"><a href="Advertise" id="A1" target="_self" class="clsa">Advertise</a> </li>
+                            <li id="liServ"><a href="new/services" id="lnkServ" target="_self" class="clsa">Services</a> </li>
+                            <li id="liMedia"><a href="Media" id="lnkMedia" target="_self" class="clsa">Media</a> </li>
+                            <li id="liContactUs"><a href="contactus" id="lnkContactUs" target="_self" class="clsa">Contact</a> </li>
+                            <li id="liblog"><a href="//Blog.oGoing.com" id="lnkBlog" target="_self" class="clsa">Blog</a> </li>
+                            <li id="liApi"><a href="oGoing-API-Home" id="lnkAPI" target="_self" class="clsa">API</a> </li>
+                            <li id="liSearch"><a href="advanced" id="lnkSearch" target="_self" class="clsa">Search</a> </li>
+                            <li id="liRe"><a href="business" id="lnkPortalReq" target="_self" class="clsa">Business</a> </li>
+                            <li id="liHelp"><a href="Help.aspx" id="lnkHelp" target="_self" class="clsa">Help</a> </li>
+                            <li id="litms"><a href="terms" id="lnkTermPolicy" target="_self" class="clsa">Terms Policy</a> </li>
+                            <li>
+                                <span id="lblcopy" style="vertical-align: bottom; color: #0088cc;"> © 2024 oGoing</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+            
+            <script type="5e6f34ca26d0c12edfce2857-text/javascript">
+                function clearall() {
+                    document.getElementById('txtFullName').value = "";
+                    document.getElementById('txtUserName').value = "";
+                    document.getElementById('txtPassword').value = "";
+                    document.getElementById('txtEmail').value = "";
+                    document.getElementById('txtLocation').value = "";
+                    document.getElementById('ddlCategories').value = "";
+                    document.getElementById('chkEmailUpdate').value = "";
+                    return false;
+                }
+                // function used for avoid more then 10 keywords by seprated ','
+                function UpdateKeypress(ob) {
+                    var obj = document.getElementById(ob);
+                    if (obj.value.length >= 0) {
+                        var cntComma = obj.value.length - obj.value.replace(new RegExp(",", "g"), '').length;
+                        if (cntComma > 30) {
+                            obj.value = obj.value.substring(0, parseInt(obj.value.length) - 1);
+                            alert("you can not enter more than 30 keywords");
+                        }
+                    }
+                }
+
+                //----------------------------------------------- This Function Is Fired When change ddlfullNm  DropDown's Value.------------------------------------
+                function loadmsgs() {
+                    if ($('#ddlfullNm').length > 0) {
+                        var realvalues = [];
+                        var textvalues = [];
+                        $('#ddlfullNm :selected').each(function (i, selected) {
+                            realvalues[i] = $(selected).val();
+                            textvalues[i] = $(selected).text();
+                            if (realvalues[i] == 1) {
+                                $("#spanFnm").html("Enter company name");
+                                $(".ajax__validatorcallout_error_message_cell").html("Enter company name");
+                            }
+                            else {
+                                $("#spanFnm").html("enter full name");
+                                $(".ajax__validatorcallout_error_message_cell").html("enter full name");
+                            }
+                        });
+                    }
+                }
+
+                //            function loadlocation(objloc, event) {                
+                //                if (GetKeyCode(event)) {
+                //                    if (objloc != null) {
+                //                        if (pretxt != "" && pretxt != $(objloc).val()) {
+                //                            //                            if ($(objloc).val().length >= 2 && $(objloc).val().length % 2 == 0) 
+                //                            if ($(objloc).val().length >= 2) 
+                //                            {
+                //                                pretxt = $(objloc).val();
+                //                                GetCitiesLikeList($(objloc).val());
+                //                            }
+                //                        }                        
+                //                    } 
+                //                }
+                //            }
+            </script>
+            <script type="5e6f34ca26d0c12edfce2857-text/javascript">
+
+                /******************************************
+                * PopUp Box
+                ******************************************/
+                //adTime = 45;  // seconds ad reminder is shown
+                adTime = 30;
+                chanceAd = 1; // ad will be shown 1 in X times (put 1 for everytime)
+                var ns = (document.layers);
+                var ie = (document.all);
+                var w3 = (document.getElementById && !ie);
+                var calunit = ns ? "" : "px"
+                adCount = 0;
+                // function used for initialize the popup box
+
+                //initAd(); openFirst();
+                function initAd() {
+
+                    if (!ns && !ie && !w3) return;
+                    if (ie) adDiv = eval('document.all.sponsorAdDiv.style');
+                    else if (ns) adDiv = eval('document.layers["sponsorAdDiv"]');
+                    else if (w3) adDiv = eval('document.getElementById("sponsorAdDiv").style');
+                    randAd = Math.ceil(Math.random() * chanceAd);
+                    // To show/hide popup on live page
+                    // Add : adDiv.display = "block";
+                    if (adDiv != null) {
+                        //adDiv.display = "block";
+                        /***** below service used to set session for popup.
+                        first time session is null and set the popup visible for xx seconds
+                        after that popup will not shown still browser not closed.
+                        **/
+                        //                  
+                        adDiv.display = "none";
+                        /****** end ********/
+                    }
+                    if (randAd == 1) showAd();
+                }
+
+                // function used to render PopUp to page
+                function showAd() {
+
+                    if (adCount < adTime * 10) {
+                        adCount += 1;
+                        if (ie) {
+                            documentWidth = truebody().offsetWidth / 2 + truebody().scrollLeft - 20;
+                            documentHeight = truebody().offsetHeight / 2 + truebody().scrollTop - 20;
+                        }
+                        else if (ns) {
+                            documentWidth = window.innerWidth / 2 + window.pageXOffset - 20;
+                            documentHeight = window.innerHeight / 2 + window.pageYOffset - 20;
+                        }
+                        else if (w3) {
+                            documentWidth = self.innerWidth / 2 + window.pageXOffset - 20;
+                            documentHeight = self.innerHeight / 2 + window.pageYOffset - 20;
+                        }
+                        if (adDiv != null) {
+                            adDiv.left = documentWidth - 500 + calunit;
+                            adDiv.top = documentHeight - 197 + calunit;
+                        }
+                        setTimeout("showAd()", 100);
+                    }
+                    else closeAd();
+                }
+                // function used to close PopUp 'why join popup'
+                function closeAd() {
+                    if (adDiv != null) {
+                        adDiv.display = "none";
+                    }
+                }
+                // function used to open PopUp 'why join popup'
+                function openAd() {
+                    adCount = 0; adTime = 30;
+                    if (adDiv != null) {
+                        adDiv.display = "block";
+                    }
+                }
+                function openFirst() {
+
+                    adCount = 0; adTime = 30;
+                    if (adDiv != null && $("#hdfcounter").val() != "1") {
+                        $("#hdfcounter").val("1");
+                        adDiv.display = "block";
+                    }
+                }
+                function truebody() {
+                    return (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body
+                }
+                $(document).ready(function () {
+                    loadJustJoin();
+                });
+
+                function getHashLink() {
+
+                    var obj = $(".com_text");
+                    obj.each(function (index) {
+                        $(this).html($(this).html().replace(/(#\w+)/g, function ($0, $1) {
+                            return "<a target='_self' class='msg_links' href='" + getBaseURL() + "oGoingResult.aspx?Ftext=" + encodeURIComponent($1.replace('#', '')) + "'>" + $1 + "</a>";
+                        }));
+                    });
+                }
+                function loadJustJoin() {
+
+
+                    ind = 1;
+                    var dt = new Date();
+                    var timeStamp = dt.getTime();
+                    // $(".moreUpslve").hide();
+                    // $(".moreUps").hide();
+                    //    $("#Reviews").css("display", "inline-block");
+                    //  $("#homeMention").css("display", "none");
+                    //    $("#Mention").css("display", "none");
+                    var str = window.location.href.lastIndexOf("/");
+                    var varURL = window.location.href.substring(window.location.href.lastIndexOf("/") + 1, window.location.href.length);
+                    document.getElementById('ChildDivJustjoin').innerHTML = '';
+                    // if (document.getElementById('childDiv') != null) {
+                    //  Isshow_loading(true);
+                    //  showM();
+                    // $(".moreUpslve").hide();
+                    var dt = new Date();
+                    var timet = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                    console.log('Start Time : '+timet);
+                    $.ajax({
+                        type: "POST",
+                        async: true,
+                        url: "Service/publicTM.asmx/GetJustJoinCategory",
+                        data: "{PageIndex : 1, timeStamp : " + timeStamp + " }",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (msg) {
+                            if (msg.d != null) {
+                                if (msg.d.HtmlStream != null) {
+                                    document.getElementById('ChildDivJustjoin').innerHTML = '';
+
+                                    document.getElementById('ChildDivJustjoin').innerHTML = msg.d.HtmlStream;
+
+                                    $('div#childDiv').children().slideDown();
+                                    // added Hyperlinks
+                                    getHashLink();
+                                    // Added : 
+                                    if ($("[id$='_LtstUp']").length > 0 && $("[id$='_UpTime']").length > 0) {
+                                        $("[id$='_LtstUp']").text(msg.d.LtstUp);
+                                        $("[id$='_UpTime']").text(msg.d.UpTime);
+                                    }
+                                }
+                                else {
+                                    if (msg.d.TotalCount == 0) {
+                                        document.getElementById('ChildDivJustjoin').innerHTML = "<div style='font-size:18px;padding-bottom:101px;padding-top:120px;text-align:center;width:100%;'> No Update Found </div>";
+                                    }
+                                }
+                                //if (msg.d.IsShow) {
+                                //    //$(".moreUps").show();
+                                //    hidemorewait();
+                                //    $(".moreLoasJustJoin").show('slow', function () {
+                                //        $(this).css("display", "inline-block");
+                                //    });
+                                //}
+                                //    else
+                                //  $(".moreUpslve").hide();
+                                if (msg.d.TotalNewConversation != 0)
+                                    updateID = msg.d.TotalNewConversation;
+
+                               // console.log('End Time : ' + timet);
+
+                            }
+                            else {
+                                if (msg.d.TotalCount == 0) {
+                                    document.getElementById('ChildDivJustjoin').innerHTML = "<div style='font-size:18px;padding-bottom:101px;padding-top:120px;text-align:center;width:100%;'> No Update Found </div>";
+                                }
+                            }
+                            // Isshow_loading(false);
+                            //hideM();
+
+
+                        },
+                        error: function (msg) {
+                        }
+
+                    });
+                    console.log('End Time : ' + timet);
+
+                    //}
+                }
+                // Initialize Popup on event "onload" 
+                //onload = initAd;
+                //End--> 
+
+            </script>
+        </div>
+
+    
+<script type="5e6f34ca26d0c12edfce2857-text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmJoin'];
+if (!theForm) {
+    theForm = document.frmJoin;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=ihdAlSOEMuPz1FjRfStzeMhs18od6xV5bVV6dOLH40uDgrh_oZ20IxsguUnTbfgM7Gto-r0eshD6uxT-xjGXpnTHigk1&amp;t=636208216709882692" type="5e6f34ca26d0c12edfce2857-text/javascript"></script>
+</form>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5e6f34ca26d0c12edfce2857-|49" defer></script><script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'88c066eaafdc5132',t:'MTcxNzA4OTcwMi42MzgwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

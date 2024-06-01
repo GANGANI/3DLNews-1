@@ -1,0 +1,1027 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,300,700"
+        rel="stylesheet"
+        type="text/css"
+    />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <style type="text/css">
+        /* YUI Reset 2.8 */
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        fieldset,
+        img {
+            border: 0;
+        }
+        li {
+            list-style: none;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+            font-weight: normal;
+        }
+        /* Because legend doesn't inherit in IE */
+        input,
+        button,
+        textarea,
+        select,
+        optgroup,
+        option {
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+        }
+        /* @purpose To enable resizing for IE */ /* @branch For IE6-Win, IE7-Win */
+        input,
+        button,
+        textarea,
+        select {
+            *font-size: 100%;
+            border: 1px solid #eeeeee;
+            padding: 2px;
+            outline: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a:focus {
+            outline: none;
+        }
+        .clear {
+            clear: both;
+            overflow: hidden;
+            line-height: 0;
+            font-size: 0;
+            height: 0;
+        }
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        * html .clearfix {
+            zoom: 1;
+        }
+        *:first-child + html .clearfix {
+            zoom: 1;
+        }
+        input {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        /* */
+        body {
+            word-wrap: break-word;
+            -webkit-text-size-adjust: 100%;
+            font: normal 14px/18px Lato, Arial, Helvetica, sans-serif;
+            font-family: "Montserrat", sans-serif;
+            color: #4b4b4b;
+            background: url(//exploreinquiry.com/__media__/images/5490_background.jpg) no-repeat 0 0;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        a {
+            color: #e10b00;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff5711;
+            text-decoration: underline;
+        }
+        p {
+            padding-bottom: 25px;
+            text-align: center;
+        }
+        /*#wrapper{
+           background:url(http://advexplore.com/__media__/pics/header-bg.gif) repeat-x;
+           }*/
+        .content-wrapper {
+            max-width: 1140px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 0 0 90px;
+            min-height: calc(100vh - 376px);
+        }
+        .inner {
+            max-width: 1140px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .mainLeft {
+            float: left;
+            width: 545px;
+        }
+        .domName {
+            background-color: rgba(54, 61, 94, 0.5);
+            color: #ffffff;
+            font-size: 32px;
+            line-height: 36px;
+            padding: 24px;
+            font-weight: bold;
+            margin-bottom: 97px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .hidedesk {
+            display: none;
+        }
+        .domNotice {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        .domNotice b {
+            font-weight: 700;
+        }
+        .featureList {
+            color: #ffffff;
+        }
+        .featureList li {
+            padding: 5px 5px 5px 40px;
+            font-size: 18px;
+            background: transparent url("//exploreinquiry.com/__media__/images/5485_star.png") no-repeat scroll left center;
+            list-style-position: outside;
+            list-style-type: none;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+            line-height: 21px;
+        }
+        #main {
+            background: #fff;
+            box-shadow: 0 0 20px 0 #222;
+            width: 450px;
+            float: right;
+        }
+        .form {
+            padding: 25px 37px 34px;
+        }
+        .txtfield {
+            background: #eeeeee url(//exploreinquiry.com/__media__/images/5484_spritesheet.png) no-repeat;
+            padding: 13px 14px 12px 46px;
+            width: 314px;
+            font-size: 14px;
+            line-height: 23px;
+            color: #555555;
+            border: 1px solid #d7d7d7;
+            height: 23px;
+        }
+        #uname,
+        #uname1 {
+            background-position: 0 -1px;
+        }
+        #phone,
+        #phone1 {
+            background-position: 0 -53px;
+        }
+        #email {
+            background-position: 0 -104px;
+        }
+        #offerPrice {
+            background-position: 0 -150px;
+        }
+        #ymessage {
+            background-position: 0 -202px;
+            resize: none;
+            height: auto;
+        }
+        .lalign {
+            text-align: right;
+        }
+        .label-text {
+            color: #666666;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .txtboxFocus {
+            background: #fffbdf;
+            border: 1px solid #fdeb48;
+        }
+        .section-head h3 {
+            color: #555555;
+            font-size: 19px;
+            line-height: 23px;
+            font-weight: 600;
+            padding: 0 0px 50px;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .section-head h3:after {
+            content: "";
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            margin-left: -60px;
+            width: 120px;
+            height: 1px;
+            background-color: #e10b00;
+        }
+        .disclaimer {
+            margin: 0px 20px;
+            border-top: 1px solid #b0b0b6;
+        }
+        .disclaimer a {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .disclaimer p {
+            vertical-align: middle;
+            display: inline-block;
+            font-size: 12px;
+            color: #b0b0b6;
+            width: calc(100% - 180px);
+            padding: 0px 0 0px 20px;
+            margin: 25px 0 25px 20px;
+            text-align: left;
+            border-left: 1px solid #b0b0b6;
+        }
+        .logo {
+            padding: 5px 0 10px 0;
+            text-align: center;
+        }
+        .red {
+            color: #ff0000;
+        }
+        .btnTD {
+            padding-top: 15px;
+        }
+        .ui-button-rmg {
+            position: relative;
+            font-family: "Montserrat", sans-serif;
+            background: #ff5139;
+            border: medium none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: capitalize;
+            margin: 0;
+            overflow: visible;
+            width: 375px;
+            line-height: 46px;
+            transition: 0.3s all ease;
+            box-shadow: 1.812px 6.761px 8.64px 0.36px rgba(250, 149, 135, 0.76);
+            padding-right: 50px;
+        }
+        .ui-button-rmg:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            background: #e52d14 url("//exploreinquiry.com/__media__/images/5486_arr.png") no-repeat center;
+        }
+        #escrowbutton {
+            margin: 55px 0 0;
+        }
+        #escrow {
+            width: 100%;
+            line-height: 46px;
+            transition: 0.3s all ease;
+            background: #ff5139;
+            border: medium none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 19px;
+            text-transform: capitalize;
+            font-family: "Montserrat", sans-serif;
+            position: relative;
+        }
+        #escrow:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 100%;
+            background: #e52d14 url("//exploreinquiry.com/__media__/images/5486_arr.png") no-repeat center;
+        }
+        .ui-button-rmg:hover,
+        #escrow:hover {
+            background: #e52d14;
+        }
+        .ValidateErrors {
+            font-family: arial;
+            font-size: 12px;
+            font-style: italic;
+            /*height: 11px;*/
+            padding-bottom: 10px;
+            padding-left: 0;
+            width: 275px;
+            color: #d00;
+        }
+        .buysafely {
+            text-align: center;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+            padding: 27px 0;
+        }
+        .buysafely img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .buysafely span {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 0 0 10px;
+        }
+        .payment-wrpr {
+            text-align: center;
+            color: #ffffff;
+            font-size: 15px;
+            line-height: 19px;
+            padding: 20px 25px;
+            background-color: rgba(54, 61, 94, 0.5);
+            box-shadow: -1.042px 5.909px 12.48px 0.52px rgba(6, 14, 64, 0.23);
+        }
+        .payment-wrpr p {
+            padding: 0 0 20px;
+        }
+        .payment-wrpr img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 45px;
+        }
+        .payment-wrpr img:last-child {
+            margin-right: 0;
+        }
+
+        .domName1 {
+            background: #0b77d1;
+            color: #ffffff;
+            padding: 24px;
+            font-weight: 400;
+            margin-bottom: 97px;
+            text-align: center;
+        }
+        .domName1 .s1 {
+            margin: 10px 0;
+            font-size: 61px;
+            line-height: 65px;
+            display: block;
+        }
+        .domName1 .s2 {
+            font-size: 20px;
+            text-align: center;
+            color: #f0f0f0 !important;
+            line-height: 26px;
+            margin-top: 10px;
+        }
+        #main1 {
+            background: #fff;
+            box-shadow: 0 0 20px 0 #222;
+            width: 450px;
+            margin: 0 auto;
+        }
+        .section-head1 h3 {
+            color: #555555;
+            font-size: 19px;
+            line-height: 23px;
+            font-weight: 600;
+            padding: 0 0px 50px;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .section-head1 h3:after {
+            content: "";
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            margin-left: -60px;
+            width: 120px;
+            height: 1px;
+            background-color: #e10b00;
+        }
+        /*#display2 {
+            display: none;
+        }*/
+        @media not all and (min-width: 1150px) {
+            .section-head h3 {
+                font-size: 17px;
+                line-height: 21px;
+                padding: 0 0 40px;
+            }
+            .domName {
+                margin-bottom: 60px;
+            }
+            .inner {
+                width: 800px;
+            }
+            .content-wrapper {
+                width: 800px;
+                padding: 0 0 70px;
+            }
+            .mainLeft {
+                width: 420px;
+            }
+            #main {
+                width: 340px;
+            }
+            .ValidateErrors {
+                width: auto;
+            }
+            table,
+            td {
+                width: 266px !important;
+                margin: 0px auto;
+            }
+            .ui-button-rmg {
+                width: 100%;
+            }
+            .txtfield {
+                width: 204px;
+            }
+            .form {
+                padding: 25px 15px 34px;
+            }
+            .payment-wrpr img {
+                margin-right: 18px;
+            }
+            .domName1 {
+                margin-bottom: 60px;
+            }
+            #main1 {
+                width: 340px;
+            }
+            .section-head1 h3 {
+                font-size: 17px;
+                line-height: 21px;
+                padding: 0 0 40px;
+            }
+        }
+        @media not all and (min-width: 840px) {
+            .payment-wrpr img {
+                margin-right: 100px;
+            }
+            .content-wrapper {
+                padding: 20px 0;
+            }
+            .content-wrapper {
+                width: 90%;
+            }
+            .mainLeft {
+                width: 100%;
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+            .domName {
+                margin-bottom: 20px;
+            }
+            #main {
+                width: 350px;
+                margin: 0px auto;
+                float: none;
+                overflow: hidden;
+            }
+            .txtfield {
+                width: 212px;
+            }
+            .ui-button-rmg {
+                width: 275px;
+            }
+            .disclaimer {
+                margin: 0 auto;
+            }
+            .inner {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .domName1 {
+                margin-bottom: 20px;
+            }
+            #main1 {
+                width: 350px;
+                margin: 0px auto;
+                float: none;
+                overflow: hidden;
+            }
+        }
+        @media not all and (min-width: 767px) {
+            .content-wrapper {
+                min-height: initial;
+                padding: 0 0 20px;
+            }
+            .hidedesk {
+                display: inline;
+            }
+            .domName {
+                font-size: 16px;
+                line-height: 20px;
+                padding: 20px;
+            }
+            .domNotice {
+                padding-bottom: 10px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+            .featureList li {
+                font-size: 16px;
+                line-height: 19px;
+                padding-left: 35px !important;
+                margin: 0 0 10px 0;
+            }
+            .section-head h3 {
+                font-size: 14px;
+                line-height: 18px;
+                padding-bottom: 25px;
+            }
+            .section-head h3::after {
+                bottom: 13px;
+            }
+            .ui-button-rmg {
+                font-weight: 400;
+                font-size: 18px;
+            }
+            .form {
+                padding-top: 20px;
+            }
+
+            .mainLeft_inner {
+                display: none;
+            }
+            .disclaimer {
+                padding: 20px 0 0;
+            }
+            .disclaimer p {
+                display: block;
+                width: auto;
+                border: none;
+                margin: 10px 0;
+                padding: 0;
+            }
+            .domName1 {
+                font-size: 16px;
+                line-height: 20px;
+                padding: 20px;
+            }
+            .domName1 .s1 {
+                font-size: 40px;
+                line-height: 44px;
+            }
+            .domName1 .s2 {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            .section-head1 h3 {
+                font-size: 14px;
+                line-height: 18px;
+                padding-bottom: 25px;
+            }
+            .section-head1 h3::after {
+                bottom: 13px;
+            }
+        }
+        @media not all and (min-width: 400px) {
+            table,
+            td {
+                width: 100% !important;
+            }
+            #main {
+                width: 100%;
+                margin: 0px auto;
+                float: none;
+                overflow: hidden;
+            }
+            .txtfield {
+                width: 100%;
+                box-sizing: border-box;
+                height: 50px;
+            }
+            .ui-button-rmg {
+                width: 100%;
+            }
+            #main1 {
+                width: 100%;
+                margin: 0px auto;
+                float: none;
+                overflow: hidden;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+    function vldt2() {
+        var isValid = vldt_nm_eml_ph();
+        if (!window.recaptchaChecked) {
+            document.getElementById("ValidateErrors_recap").innerHTML =
+                "Please Select Captcha";
+            isValid = false;
+        } else {
+            document.getElementById("ValidateErrors_recap").innerHTML = "";
+        }
+
+        if(!document.getElementById('acknowledge').checked
+            || !document.getElementById('personalinfo').checked)
+        {
+            isValid = false;
+            document.getElementById("ValidateErrors_checkbox").innerHTML =
+                "Please Agree Terms & Conditions";
+        }
+        else {
+            document.getElementById("ValidateErrors_checkbox").innerHTML = "";
+        }
+
+        return isValid;
+    }
+
+    function vldt_nm_eml_ph() {
+        var email1 = document.getElementById("email1").value.trim();
+        var name = document.getElementById("uname").value.trim();
+        var phone = document.getElementById("phone").value.trim();
+        var isValid = true;
+
+        if (!name) {
+            document.getElementById("ValidateErrors_uname").innerHTML =
+                "Please Enter Name.";
+            isValid = false;
+        } else {
+            document.getElementById("ValidateErrors_uname").innerHTML = "";
+        }
+
+        if (!phone) {
+            document.getElementById("ValidateErrors_phone").innerHTML =
+                "Please Enter Phone Number.";
+            isValid = false;
+        } else if (!validatePhone(phone)) {
+            document.getElementById("ValidateErrors_phone").innerHTML =
+                "Please Enter Valid Phone Number.";
+            isValid = false;
+        } else {
+            document.getElementById("ValidateErrors_phone").innerHTML = "";
+        }
+
+        if (!email1) {
+            document.getElementById("ValidateErrors_email1").innerHTML =
+                "Please Enter Email.";
+            isValid = false;
+        } else if (!isEmailValid(email1)) {
+            document.getElementById("ValidateErrors_email1").innerHTML =
+                "Please Enter Valid Email.";
+            isValid = false;
+        } else {
+            document.getElementById("ValidateErrors_email1").innerHTML = "";
+        }
+        return isValid;
+    }
+
+    function vldt() {
+        var offerPrice = document.getElementById("offerPrice").value.trim();
+        var minoffer = document.getElementById("frsmnv").value.trim();
+        var domainname = document.getElementById("domainname").value.trim();
+        var msg        =  document.getElementById("ymessage").value.trim();
+        var isValid = vldt_nm_eml_ph();
+
+        if (!offerPrice) {
+            document.getElementById("ValidateErrors_offerPrice").innerHTML =
+                "Please Enter offer price.";
+            isValid = false;
+        } else if (offerPrice && isNaN(offerPrice)) {
+            document.getElementById("ValidateErrors_offerPrice").innerHTML =
+                "Please Enter Valid offer price.";
+            isValid = false;
+        } else if (Number(offerPrice) < Number(minoffer)) {
+            document.getElementById("ValidateErrors_offerPrice").innerHTML =
+                "Minimum offer price for " +
+                domainname +
+                " is $" +
+                minoffer +
+                ". Please increase your offer and submit again.";
+            isValid = false;
+        } else {
+            document.getElementById("ValidateErrors_offerPrice").innerHTML = "";
+        }
+
+        if(new RegExp("([a-zA-Z0-9]+://)?([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?(/.*)?").test(msg))
+        {
+            document.getElementById("ValidateErrors_ymessage").innerHTML =
+                "Message should not contain web address";
+            isValid = false;
+        }
+
+        if (!window.recaptchaChecked) {
+            document.getElementById("ValidateErrors_recap").innerHTML =
+                "Please Select Captcha";
+            isValid = false;
+        } else {
+            document.getElementById("ValidateErrors_recap").innerHTML = "";
+        }
+
+
+        if(!document.getElementById('acknowledge').checked
+            || !document.getElementById('personalinfo').checked)
+        {
+            isValid = false;
+            document.getElementById("ValidateErrors_checkbox").innerHTML =
+                "Please Agree Terms & Conditions";
+        }
+        else {
+            document.getElementById("ValidateErrors_checkbox").innerHTML = "";
+        }
+
+        /*try{
+            var chk_ip = document.querySelectorAll("input[type='checkbox']");
+            for(var i = 0; i < chk_ip.length; i++) {
+                if(!chk_ip[i].checked)
+                {
+                    isValid = false;
+                    document.getElementById("ValidateErrors_checkbox").innerHTML =
+                        "Please Agree Terms & Conditions";
+                    break;
+                }
+                else {
+                    document.getElementById("ValidateErrors_checkbox").innerHTML = "";
+                }
+            }
+        }catch(e){}*/
+
+        return isValid;
+    }
+
+    function validatePhone(phone) {
+        var phoneInput = new RegExp(/^[0-9 -]{0,}$/);
+        return phoneInput.test(phone);
+    }
+    function isEmailValid(strEmail) {
+        //check for e-mail format
+        if (strEmail != "") {
+            EmailLen = strEmail.length;
+            isSpace = strEmail.indexOf(" "); //Space check
+            isAt = strEmail.indexOf("@"); //@ check
+            isDot = strEmail.lastIndexOf("."); //Dot Check
+
+            //check for the below error conditions
+            if (
+                isSpace != -1 ||
+                isAt == -1 ||
+                isDot == -1 ||
+                isAt + 1 == isDot ||
+                isDot == EmailLen - 1 ||
+                isDot < isAt
+            ) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function _ldescrwreq() {
+        window.top.location = 'https://exploreinquiry.com/sk-domsale.php?dom=associatedcontent.com&eds=dWx0cmFwcmVtZG9tYWluQHlhaG9vLmNvbQ%3D%3D&_isk_=3148&frsbnp=0&_ldesw_=1'
+        return;
+    }
+
+    var recaptchaChecked = false;
+    function recaptchaCallback() {
+        window.recaptchaChecked = true;
+    }
+</script>
+</head>
+<body>
+<div id="wrapper">
+                <div id="display1">
+        <div class="mainHeading">
+            <h1 class="domName">
+                associatedcontent.com <span class="hidedesk">is for sale</span>
+            </h1>
+        </div>
+        <div class="content-wrapper clearfix">
+            <div class="clearfix">
+                <div id="main">
+                    <div class="form">
+                        <form
+                            name="signup"
+                            action=""
+                            method="get"
+                            id="signup"
+                            onsubmit="return vldt();"
+                        >
+                            <input type="hidden" name="action" value="send" />
+                            <input type="hidden" name="domainname" id="domainname" value="associatedcontent.com">
+                            <input type="hidden" name="eds" value='dWx0cmFwcmVtZG9tYWluQHlhaG9vLmNvbQ=='>
+                            <input type="hidden" name="vw" value='1194646207541921475'>
+                            <input type="hidden" name="frsmnv" id="frsmnv" value='500'>
+                                                            <input type="hidden" name="_isk_" value="100">
+                                                                                    <div class="section-head">
+                                <h3>Submit an offer to the seller</h3>
+                            </div>
+                            <table width="375" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                    <td width="375" class="err">
+                                        <input
+                                            type="text"
+                                            id="uname"
+                                            name="name"
+                                            class="txtfield"
+                                            value=""
+                                            placeholder="Name"
+                                        />
+                                        <div
+                                            class="ValidateErrors"
+                                            id="ValidateErrors_uname"
+                                        ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="err">
+                                        <input
+                                            type="text"
+                                            id="phone"
+                                            name="phone"
+                                            class="txtfield"
+                                            placeholder="Mobile"
+                                            value=""
+                                        />
+                                        <div
+                                            class="ValidateErrors"
+                                            id="ValidateErrors_phone"
+                                        ></div>
+                                    </td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="err">
+                                        <input
+                                            type="text"
+                                            id="email1"
+                                            name="email1"
+                                            class="txtfield"
+                                            value=""
+                                            placeholder="Email"
+                                        />
+                                        <div
+                                            class="ValidateErrors"
+                                            id="ValidateErrors_email1"
+                                        ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="err">
+                                        <input
+                                            type="text"
+                                            id="offerPrice"
+                                            name="offerPrice"
+                                            class="txtfield"
+                                            placeholder="Offer Price (USD)"
+                                            value=""
+                                        />
+                                        <div
+                                            class="ValidateErrors"
+                                            id="ValidateErrors_offerPrice"
+                                        ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                        <textarea
+                            id="ymessage"
+                            name="message"
+                            class="txtfield textarea"
+                            rows="5"
+                            placeholder="Message"
+                            maxlength="100"
+                        >  </textarea>
+                                <div class="ValidateErrors" id="ValidateErrors_ymessage" ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div
+                                            class="g-recaptcha"
+                                            data-callback="recaptchaCallback"
+                                            data-sitekey="6Ldn_vcSAAAAAJvIM8yX_gJap5YgMbYBwFm35_FL"
+                                        ></div>
+                                        <div
+                                            class="ValidateErrors"
+                                            id="ValidateErrors_recap"
+                                        ></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left:20px;font-size: 11px; line-height: 1.2;position: relative;">
+                                        <input type="checkbox"  id="acknowledge" name="acknowledge" value="1" style="-webkit-appearance:checkbox;border: 1px solid #bbb;position: absolute;left: 0;top: 2px;">
+                                        <label for="acknowledge"> By signing up you acknowledge receipt and agree to the Skenzo Ltd. <a href="//skenzo.com/sk-privacy.php?sk_ref=KvoDnvBaN1W%2F7t3GtQfh8wBsf4fPBrnsuxyaTTWHKitZdXwAhq5JEPGpVlGXzm6g" target="_blank">Privacy Policy</a>.</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 0 10px 20px;font-size: 11px; line-height: 1.2;position: relative;">
+                                        <input type="checkbox"  id="personalinfo" name="personalinfo" value="1" style="-webkit-appearance:checkbox;border: 1px solid #bbb;position: absolute;left: 0;top: 12px;">
+                                        <label for="personalInfo"> By clicking this checkbox you agree to have your personal information transferred and stored in the United States, which is necessary for Skenzo Ltd. to provide you with the services under our agreement with you.</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="ValidateErrors" id="ValidateErrors_checkbox">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="btnTD">
+                                        <button
+                                            name="submit"
+                                            id="submit"
+                                            type="submit"
+                                            class="ui-button-rmg"
+                                            value="submit"
+                                        >
+                                            Submit Your Offer
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="mainLeft">
+                    <div class="mainLeft_inner">
+                        <p class="domNotice">
+                            This domain name may be <b>available for sale</b>
+                        </p>
+                        <ul class="featureList">
+                            <li>Your search for the perfect domain name ends here</li>
+                            <li>Drive relevant leads to your business</li>
+                            <li>A right domain name helps boost your online presence</li>
+                            <li>Buy this domain name before someone else does</li>
+                        </ul>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+            <div class="disclaimer">
+        <div class="inner">
+            <a href="#"><img src="//exploreinquiry.com/__media__/images/5489_skenzo.png"/></a>
+            <p>
+                Disclaimer: The advertisement as displayed on the domain parking
+                page is in no way an expression of the intention of the domain owner
+                to sell the domain name. The domain owner shall be the sole
+                authority for taking any decisions relating to the sale of domain
+                name upon receiving a request for the same. The owner of the domain
+                is also solely responsible for the legality and clear title of the
+                domain name.
+            </p>
+        </div>
+    </div>
+    <style>
+        .footlinks-custom-link-wrap{padding:20px 10px;} .footlinks-custom-link{color:#2c2e2d;font-family:Arial,sans-serif;font-size:12px;width:220px;margin:20px auto;padding:7px 10px;background-color:#fff;border-radius:20px;text-align:center} .footlinks-custom-link a{color:#2c2e2d;font-family:Arial,sans-serif;text-decoration:none;font-size:12px} .footlinks-custom-link a:hover{text-decoration:underline} .footlinks-custom-link span{padding:0 4px;display:inline-block}
+    </style>
+    <div class="footlinks-custom-link-wrap clearfix"> <div class="footlinks-custom-link"> <a href="//skenzo.com/sk-privacy.php?sk_ref=nSYLJrkwijsb7LVJVD5e%2F6VqfT%2FC2Ra%2Fjb1YW4SgaDs88seFkl%2Buq79G6IPDE3w2" target="_blank">Privacy Policy</a> </div> </div></div>
+
+</body>
+</html>

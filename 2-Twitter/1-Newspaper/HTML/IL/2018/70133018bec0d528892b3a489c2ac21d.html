@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/icons/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<style id="" media="all">/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<title>mvnnews.com is available at DomainMarket.com. Call 888-694-6735</title>
+<meta property="og:title" content="DomainMarket.com, Claim Your Brand!" />
+<meta property="og:url" content="https://www.domainmarket.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DomainMarket.com, Claim Your Brand!" />
+<meta property="og:description" content="DomainMarket.com sells premium domain names to entrepreneurs, businesses, and nonprofits that want to dominate their online marketplaces and control great brands." />
+<meta property="og:image" content="https://domainmarket.imgix.net/images/domain-market-social.png" />
+<meta property="og:image:secure_url" content="https://domainmarket.imgix.net/images/domain-market-social.png" />
+<meta property="og:image:height" content="907" />
+<meta property="og:image:width" content="1410" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@domainmarketcom" />
+<meta name="twitter:description" content="DomainMarket.com sells premium domain names to entrepreneurs, businesses, and nonprofits that want to dominate their online marketplaces and control great brands." />
+<meta name="twitter:image" content="https://domainmarket.imgix.net/images/domain-market-social.png" />
+<meta name="twitter:image:height" content="907" />
+<meta name="twitter:image:width" content="1410" />
+<meta name="twitter:site" content="@domainmarketcom" />
+<meta name="twitter:title" content="DomainMarket.com, Claim Your Brand!" />
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T7XT9HG7');</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11194840153"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11194840153');
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PDPD66B');
+</script>
+<link rel="dns-prefetch" href="//t.visitorqueue.com" style="display: none !important;" /> <script>function vqTrackId(){return 'e9b6783c-3674-49ea-9165-79053bef9ab6';} (function(d, e) { var el = d.createElement(e); el.sa = function(an, av){this.setAttribute(an, av); return this;}; el.sa('id', 'vq_tracking').sa('src', '//t.visitorqueue.com/p/tracking.min.js?id='+vqTrackId()).sa('async', 1).sa('data-id', vqTrackId()); d.getElementsByTagName(e)[0].parentNode.appendChild(el); })(document, 'script'); </script><link rel="stylesheet" type="text/css" href="https://p.visitorqueue.com/styles/e9b6783c-3674-49ea-9165-79053bef9ab6.css" id="vq_flick_styles" /> <script>function vqTrackPc(){return 1;}</script> <script>(function(d, e) { var el = d.createElement(e); el.sa = function(an, av){this.setAttribute(an, av); return this;}; el.sa('id', 'vq_personalisation').sa('src', '//personalisation.visitorqueue.com/p/personalisation.min.js?id='+vqTrackId()).sa('async', 1).sa('data-id', vqTrackId()); d.getElementsByTagName(e)[0].parentNode.appendChild(el); })(document, 'script'); </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H3DHRKVDVM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H3DHRKVDVM');
+</script>
+<link rel="preload" as="style" href="https://domainmarket.imgix.net/build/assets/app-6802b4b1.css" /><link rel="stylesheet" href="https://domainmarket.imgix.net/build/assets/app-6802b4b1.css" data-navigate-track="reload" /><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
+</head>
+<body>
+<header>
+<div class="m-auto max-w-7xl px-5">
+<div class="flex items-center justify-center text-sm w-full
+                   md:justify-end md:pr-2">
+<p class="font-bold mr-1">Customer Support:</p>
+<a class="text-[--orange] mr-1" href="tel:8886946735">(888) 694-6735</a>
+|&nbsp;
+<a class="text-[--orange]" href="/cdn-cgi/l/email-protection#2b42455f4e594e585f4e4f6b4f44464a4245464a59404e5f05484446">Email</a>
+</div>
+</div>
+<div class="m-auto px-5 flex flex-col items-center justify-between pb-8
+                xs:w-full
+                max-w-7xl">
+<div class="relative flex flex-col items-center justify-between w-full">
+<div class="flex gap-20 justify-around items-center w-full
+                        xs:gap-1 xs:justify-between">
+<a href="/"><img class="xs:w-[220px] xs:h-[40px]
+                                        sm:w-[250px] sm:h-[50px]
+                                        md:w-full
+                                        lg:w-[310px] lg:h-[60px]" src="https://domainmarket.imgix.net/images/domain-market-logo.png" alt="Domain Market Logo" /></a>
+<div class="hamburger md:hidden">
+<h4>MENU</h4>
+<div class="hamburgerIcon">
+<div class="line first"></div>
+<div class="line second"></div>
+<div class="line third"></div>
+</div>
+</div>
+<ul class="hidden md:flex justify-around text-[--coral] md:text-sm gap-8 md:mr-4">
+<li>
+<div wire:snapshot="{&quot;data&quot;:{&quot;categories&quot;:[[&quot;Art&quot;,&quot;Business&quot;,&quot;Education&quot;,&quot;Electronics&quot;,&quot;Employment&quot;,&quot;Entertainment&quot;,&quot;Finance&quot;,&quot;Food&quot;,&quot;Games&quot;,&quot;Government&quot;,&quot;Health&quot;,&quot;Home&quot;,&quot;International&quot;,&quot;Internet&quot;,&quot;Kids&quot;,&quot;Law&quot;,&quot;Local&quot;,&quot;Other&quot;,&quot;Real Estate&quot;,&quot;Recreation&quot;,&quot;Reference&quot;,&quot;Science&quot;,&quot;Services&quot;,&quot;Shopping&quot;,&quot;Society&quot;,&quot;Sports&quot;,&quot;Technology&quot;,&quot;Travel&quot;,&quot;Vehicles&quot;],{&quot;s&quot;:&quot;arr&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;qVTyl6KeQLmKVhRWjgU3&quot;,&quot;name&quot;:&quot;header.category-menu&quot;,&quot;path&quot;:&quot;buynow\/mvnnews.com&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;7ef4e0e98dcc02bf1058493e09f5ead1254f58f303153156677c542d8677da10&quot;}" wire:effects="[]" wire:id="qVTyl6KeQLmKVhRWjgU3" x-data="{open: false}">
+<a href="/categories" @mouseover="open = true" @mouseout="open = false">Categories</a>
+<div x-show="open" @mouseover="open = true" @mouseout="open = false" class="megaMenu flex" style="display: none">
+<!--[if BLOCK]><![endif]--> <div class="basis-1/5">
+<!--[if BLOCK]><![endif]--> <div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/art">Art</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/business">Business</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/education">Education</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/electronics">Electronics</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/employment">Employment</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/entertainment">Entertainment</a>
+</div>
+<!--[if ENDBLOCK]><![endif]-->
+</div>
+<div class="basis-1/5">
+<!--[if BLOCK]><![endif]--> <div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/finance">Finance</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/food">Food</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/games">Games</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/government">Government</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/health">Health</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/home">Home</a>
+</div>
+<!--[if ENDBLOCK]><![endif]-->
+</div>
+<div class="basis-1/5">
+<!--[if BLOCK]><![endif]--> <div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/international">International</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/internet">Internet</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/kids">Kids</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/law">Law</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/local">Local</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/other">Other</a>
+</div>
+<!--[if ENDBLOCK]><![endif]-->
+</div>
+<div class="basis-1/5">
+<!--[if BLOCK]><![endif]--> <div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/real estate">Real Estate</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/recreation">Recreation</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/reference">Reference</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/science">Science</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/services">Services</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/shopping">Shopping</a>
+</div>
+<!--[if ENDBLOCK]><![endif]-->
+</div>
+<div class="basis-1/5">
+<!--[if BLOCK]><![endif]--> <div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/society">Society</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/sports">Sports</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/technology">Technology</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/travel">Travel</a>
+</div>
+<div class="px-5 leading-7">
+<a class="text-[--white] hover:text-[--green] transition duration-200 m-4 whitespace-nowrap" href="/categories/vehicles">Vehicles</a>
+</div>
+<!--[if ENDBLOCK]><![endif]-->
+</div>
+<!--[if ENDBLOCK]><![endif]-->
+</div>
+</div>
+</li>
+<li><a href="/about">About</a></li>
+<li><a href="/resources">Resources</a></li>
+<li><a href="/testimonials">Testimonials</a></li>
+</ul>
+<div class="hidden lg:block">
+<div class="flex items-center justify-center
+            md:items-start md:justify-start">
+<button class="bg-[--green] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 ">
+<a class="text-white font-medium px-5 text-sm" href="/search">Search Domains</a>
+</button>
+</div>
+</div>
+</div>
+<nav class="navBar md:hidden">
+<ul>
+<li><a href="/categories">Categories</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/resources">Resources</a></li>
+<li><a href="/testimonials">Testimonials</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const hamburger = document.querySelector('.hamburger');
+    const navBar = document.querySelector('.navBar');
+    //const hamburgerIcon = document.querySelector('.hamburgerIcon');
+    //const hamburgerLines = document.querySelectorAll('.hamburgerIcon .line');
+
+    hamburger.addEventListener('click', () => {
+        navBar.classList.toggle('active');
+        //hamburgerIcon.classList.toggle('open');
+        //hamburgerLines.forEach(line => {
+        //    line.classList.toggle('open');
+        //});
+    });
+</script>
+<div>
+<section class="landing_banner">
+<div class="max-w-7xl mx-auto px-5">
+<div class="flex flex-wrap items-center justify-between">
+<div class="lg:w-7/12 md:w-3/5 md:pr-8">
+<h5 class="text-[--black]">Domain For Sale</h5>
+<h4 class="text-[--black] mb-4">Take Advantage Of Our Special Limited Time Offer!</h4>
+<h3 class="text-[--black] domain-callout">
+MvnNews.com
+<span class="mt-1 text-xl text-[--blue] font-semibold block">$4,888</span>
+</h3>
+<div class="text-base mt-2">
+<div class="my-8">Elevate your business with this premium domain name! Stand out from the crowd, build brand authority, and instill trust with your customers. A unique web address enhances your online presence, improves search engine visibility, and reinforces professionalism. Invest in your brand's future today with a personalized domain that reflects your identity and values</div>
+</div>
+</div>
+<div class="w-full md:w-2/5">
+<div class="shadow-md bg-[--white] p-10 md:p-12 xl:p-16 rounded-tl-[40px] rounded-br-[40px]">
+<h3 class="lg:text-2xl text-[--blue] mb-5 font-normal">#1 In Premium Domains</h3>
+<ul class="premium-domains-box">
+<li>208,009 Of The World's Best .Com Domains</li>
+<li>Available For Immediate Purchase</li>
+<li>Safe & Secure Transactions</li>
+<li>100% Satisfaction Guaranteed</li>
+<li><a href="/testimonials" target="_blank">See our Testimonials</a></li>
+</ul>
+<div>
+<div class="flex w-full
+            md:items-start md:justify-start
+            items-center xs:items-center justify-center xs:justify-center">
+<button class="bg-[--green] hover:bg-[--blue] h-[45px] transition duration-500 mt-8 w-full">
+<a class="text-white font-[500] px-6 md-px-11 block text-base lg:px-12 xl:text-base" href="https://www.domainmarket.com/cart/MvnNews.com">Buy Now</a>
+</button>
+<script>
+            function toggleModal() {
+                document.getElementById('modal').classList.toggle('hidden');
+            }
+        </script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.com/app/timezone/timezoneInputJs?xid=cfe73821d5c278f7215136d644043897"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webform/overwriteRefererJs"></script>
+</div>
+<div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal">
+<div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+<div class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+<span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+<div class="inline-block absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transition-all w-[90%] md:w-[700px]" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+<div class="bg-white relative p-8">
+<div class="buy_modal">
+<div class="modal_head">
+<h5 class="text-lg text-[--black] leading-[28px] mb-3 lg:leading-[25px]">You are
+inquiring about the domain name</h5>
+<h2 class="text-3xl text-[--black] leading-[30px] font-bold mb-1 lg:leading-[35px]">
+MvnNews.com
+</h2>
+<p class="text-base text-[--black] leading-[28px] mb-1 lg:leading-[25px]">Please
+complete the fields below and we will get back to you.</p>
+</div>
+<form id="inf_form_1277d593cb77ce63163a83dcef37c910" method="POST" class="infusion-form" accept-charset="UTF-8" action="https://protect.spamkill.dev/v1/">
+<input id="sk_osWGjWBuQQ3uqGJXESxIOtNAuHgQzDM6r7fd1lxQhLa" name="osWGjWBuQQ3uqGJXESxIOtNAuHgQzDM6r7fd1lxQhLa" type="hidden" value="MvnNews.com" />
+<input type="hidden" name="spamkill_formurl" value />
+<input type="hidden" name="spamkill_version" value="1.5" />
+<input type="hidden" name="spamkill_data2" value />
+<input type="hidden" name="spamkill_data1" value />
+<input type="hidden" name="formdata" value="wgEtMYObLkR2QlwHSK9mXvKvgaDrhAytCs0xrVq47aNf8rx44PwP845Lic3drHU9x9tCRE/P5XnjRxrxv8aR+N+oa9uukGMoVDzoQnJmFOk+ZhDmu5Y5NkwvDwNvnO/easFX9U/jvvep8Ps/Vy6cWdNS5DzyYalulDb5t7Yzx5Ve0gyA+8FI7VVObPUS467lnd/vMh/PiUImK2dowBuMjwfWG6jfyvn1caKryBYeWl/iqeJHa691ue3TgLcsvDT7Txx2cZT9x82ghWBQajCI1lJRfAeyRM+fwBGcHUNNSSPlrmKGzRkHr71CjlUcS9PmxMLrp9QRzSFS0Uogn8tMNZ3+twO50It/lhI3mnUO67/ibBHdhaXV/T4qXyLFaBRL++4o//O3X+aN5FMIDHxRc3R7kXmz4teKSTS/Onnc38DQhjkU61ik1D4k4H24XC4WOtLCpqfIUExNi7vSeQZKV5nAC6FAyToeEXTVvq1BINLqqzNaPoTjP/8dvijeceJd9u9/RoEChElYxNJzn4DfAdwHYchFczVDGqizghrrjEMnzw81AVn0QzVkW9u2dDvpxcSUw8CpO990DVbqGbRtEO2dENVRH6xvPZNEp4EzWPuzODkzYadEg43nEIpwwtwPgQWF1HA7FLKZA+E48YZwn0CjU/6K97bIZySERN2CjXTrxopb4WfiCWXnhu2pSOhxfv5tqd+e02jaVuDPN/0xBVLyZAuKn7FXDp4Vi5HUnKPo4UVuN58DwLPw9BpPgjHPcJCfxkFVjf1dW8jZxIg6o8OrhoiiIBKQBfO9qJDV37um/4PAuLwz0ZlBE55ivLEn42gBwQf1zMwuONULSWNg8MWIK9xO8RCooeIaA4SOp8/f2S4XssvBHOTPNC+qQbB54rz23IOI9sTdGCNlIJHn2YmEkOgtTUFy0h3qOGBX1NWKpS2y7F3WnA914c2wmTUvimQKTL2GdhsyNkdmJBiy1cT9pDUiOn5/dnsPGYZxarUU9Caw0pfcK+EicLdfnMLuc9/c7OQ43zvi+8T/sLR98a1r9VXw+ceTrjsgmCPpmnp7gDs75LiDogi3BfDxgn5HPgATmznLTKK7/naHlTwzpumAJp7WoIQVlx4/VIjXEV/W7CmrXs+E3Ltw0WMleW9+M+IP55/l+k4o9Cd3p6H96n2sbWOCaV2sCr2ilwOaHvEuwubEtadL1WOuJDid3rAHyBfR/piWwem8pDMgpVXJ2ZW0M/sqGVIXb88HbdFS+TbAAY0YAbONcTpvyi1COvRqjn/kSgAqKxUe7PEdurZPdlKqMq4h9bB8uzHAfXLL2Mj/DznLeNtn7fPTq8LqckUNBg43cEv4Zw54iN6LY6AYs2pRfTXFw6t+HicJ8WVzzPakyTXKwsERc0IiCZ34hSLA9qu/xDr2l2R9psEODqcxNUMZfaifkSRTlM26xhVN5YpQvE7+iRj6A82awzhYUMcWl3J4sw3QEs6avLP4uibkT/p5aqsUWQHU1iWQdpiw0dpBb1ex5w8Hv+VtR0fh4NLCa2QhwECSOlgLqYB3yyRlvA==" />
+<input type="hidden" name="formid" value="11bcl14PPQCxiyhyNmzjCngF2" />
+<input type="hidden" name="formname" value="9870tZfmrQNpPTNkAhmg5bRCmaTafhOexNILJesNc3839m6" />
+<div class="flex flex-wrap justify-between">
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_jhxb6gzxFhQmS3Vmh2Q4jBgosBXNht71wemqtimqHRo" name="jhxb6gzxFhQmS3Vmh2Q4jBgosBXNht71wemqtimqHRo" placeholder="First Name" type="text" required />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input tabindex="296" id="sk_4oE6yp7Eq66NHu30xHuhz6" name="4oE6yp7Eq66NHu30xHuhz6" placeholder="Your Email Address Here..." type="text" autocomplete="a315" style="position: absolute;top: -8129px;left: -9758px;" />
+<input id="sk_YXEsIi8u4jBEeveoxdYgu2Pi5rP7RUtXPOLtqBzTZkb" name="YXEsIi8u4jBEeveoxdYgu2Pi5rP7RUtXPOLtqBzTZkb" placeholder="Last Name" type="text" required />
+<input id="sk_inf_field_LastName" name="inf_field_LastName" placeholder="Last Name" type="text" tabindex="418" autocomplete="off" style="position: absolute;top: -9871px; left: -9135px;" class="-rcgdu" value novalidate="novalidate" />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_5VddCVyhtHsfQpJqKOLv3U" name="5VddCVyhtHsfQpJqKOLv3U" placeholder="Email" type="text" required />
+<input id="sk_inf_field_Email" name="inf_field_Email" placeholder="Email" type="text" tabindex="598" autocomplete="off" style="position: absolute;top: -8778px; left: -9397px;" class="-zgxon" value novalidate="novalidate" />
+<input tabindex="200" id="sk_5KZUg1eMZtDbbsuVNHHDn7" name="5KZUg1eMZtDbbsuVNHHDn7" placeholder="Email" type="text" autocomplete="a486" style="position: absolute;top: -8782px;left: -9866px;" />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_1ooZgRaM3TQ62CP4M64OkD9e2Yj7EYiuWOHtzSfPu30" name="1ooZgRaM3TQ62CP4M64OkD9e2Yj7EYiuWOHtzSfPu30" placeholder="Phone" type="text" required />
+<input id="sk_inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text" tabindex="480" autocomplete="off" style="position: absolute;top: -9671px; left: -9483px;" class="-almbs" value novalidate="novalidate" />
+</div>
+</div>
+<div class="infusion-field w-full">
+<input id="sk_20IKmN5sPy3Fd5G86wy241JNBY03BqGhDdHPleoNEbG" name="20IKmN5sPy3Fd5G86wy241JNBY03BqGhDdHPleoNEbG" placeholder="Company" type="text" />
+</div>
+<div class="infusion-field w-full">
+<textarea cols="24" id="sk_vUVarQxipWai54eS0K94sq9ffVuZ8eh6CTpae6XgF08" name="vUVarQxipWai54eS0K94sq9ffVuZ8eh6CTpae6XgF08" placeholder="How can we help you?" rows="5"></textarea>
+<textarea cols="24" id="sk_inf_custom_InquiryComments" name="inf_custom_InquiryComments" placeholder="Additional Comments" rows="5" tabindex="574" autocomplete="off" style="position: absolute;top: -8880px; left: -8999px;" class="-cwntz" value novalidate="novalidate"></textarea>
+</div>
+<div class="infusion-submit flex justify-end gap-2">
+<button id="recaptcha_1277d593cb77ce63163a83dcef37c910" type="submit" class="infusion-recaptcha bg-[--green] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 text-white font-[500] px-6 md-px-11 block text-sm lg:px-12 xl:text-base">Submit</button>
+<button type="button" onclick="toggleModal()" class="bg-[--black] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 text-white font-[500] px-6 md-px-11 block text-sm lg:px-12 xl:text-base">Close</button>
+</div>
+</form>
+<script type="text/javascript">
+                                document.getElementById("inf_form_1277d593cb77ce63163a83dcef37c910").addEventListener('submit', function (event) {
+                                    event.stopPropagation();
+                                }, true);
+                            </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="domain_type">
+<div class="max-w-7xl mx-auto px-5">
+<h2 class="font-normal">What Are The Advantages Of A Super Premium .Com Domain?</h2>
+<ul class="domain_type_list flex justify-center sm:justify-center flex-wrap pb-1 lg:pb-0 gap-y-8">
+<li class="w-full text-center xs:w-1/2 sm:w-1/3 lg:w-1/6 px-3">
+<div class="domain_icon">
+<img class="object-contain" src="https://domainmarket.imgix.net/images/icon-increased-traffic.png" alt="Increased Traffic">
+</div>
+<h3>Increased Traffic</h3>
+</li>
+<li class="w-full text-center xs:w-1/2 sm:w-1/3 lg:w-1/6 px-3">
+<div class="domain_icon">
+<img class="object-contain" src="https://domainmarket.imgix.net/images/icon-search-engine-ranking.png" alt="Search Engine Ranking">
+</div>
+<h3>Search Engine Ranking</h3>
+</li>
+<li class="w-full text-center xs:w-1/2 sm:w-1/3 lg:w-1/6 px-3">
+<div class="domain_icon">
+<img class="object-contain" src="https://domainmarket.imgix.net/images/icon-brand-recognition.png" alt="Brand Recognition">
+</div>
+<h3>Brand Recognition</h3>
+</li>
+<li class="w-full text-center xs:w-1/2 sm:w-1/3 lg:w-1/6 px-3">
+<div class="domain_icon">
+<img class="object-contain" src="https://domainmarket.imgix.net/images/icon-immediate-presence.png" alt="Immediate Presence">
+</div>
+<h3>Immediate Presence</h3>
+</li>
+<li class="w-full text-center xs:w-1/2 sm:w-1/3 lg:w-1/6 px-3">
+<div class="domain_icon">
+<img class="object-contain" src="https://domainmarket.imgix.net/images/icon-higher-profits.png" alt="Higher Profits">
+</div>
+<h3>Higher Profits</h3>
+</li>
+<li class="w-full text-center xs:w-1/2 sm:w-1/3 lg:w-1/6 px-3">
+<div class="domain_icon">
+<img class="object-contain" src="https://domainmarket.imgix.net/images/icon-great-investment.png" alt="Great Investment">
+</div>
+<h3>Great Investment</h3>
+</li>
+</ul>
+</div>
+</section>
+<section class="number_banner">
+<div class="max-w-7xl mx-auto px-5">
+<h3 class="text-center mb-5 font-normal">Truth In Numbers</h3>
+<div class="text_content text-sm mb-8 text-center">
+<p>We are constantly expanding our inventory to give you the best domains available for purchase!</p>
+</div>
+<ul class="number_list flex justify-center sm:justify-center flex-wrap mb-3 lg:pb-0 gap-7">
+<li class="number_card w-full text-center">
+<div class="number_card_content">
+<h3 class="font-bold text-[--green] mb-2">$23,733</h3>
+<h5 class="text-[--black]">Average Price</h5>
+</div>
+</li>
+<li class="number_card w-full text-center">
+<div class="number_card_content">
+<h3 class="font-bold text-[--green] mb-2">$4,936,766,160</h3>
+<h5 class="text-[--black]">Total Domains Value</h5>
+</div>
+</li>
+<li class="number_card w-full text-center">
+<div class="number_card_content">
+<h3 class="font-bold text-[--green] mb-2">208,009</h3>
+<h5 class="text-[--black]">Available Domains</h5>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="py-16">
+<div class="max-w-7xl mx-auto px-5">
+<div>
+<h3 class="text-center mb-5 font-normal">
+About MvnNews.com
+</h3>
+<div class="text_content mb-6 text-center">
+<div class="flex flex-col gap-4">
+This domain name is the cornerstone of a strong online presence. It will differentiate your
+brand, instill trust, and enhance professionalism. With this unique domain, you control your
+digital identity, ensuring consistency across platforms. Stand out from competitors, improve
+search engine visibility, and facilitate customer recall. This domain is not just an address;
+it's an investment in your brand's future success.
+</div>
+</div>
+<div>
+<div class="flex w-full
+            md:items-start md:justify-start
+            items-center xs:items-center justify-center xs:justify-center">
+<button class="bg-[--green] hover:bg-[--blue] h-[45px] transition duration-500 m-auto mt-8">
+<a class="text-white font-[500] px-6 md-px-11 block text-base lg:px-12 xl:text-base" href="https://www.domainmarket.com/cart/MvnNews.com">Buy Now</a>
+</button>
+<script>
+            function toggleModal() {
+                document.getElementById('modal').classList.toggle('hidden');
+            }
+        </script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.com/app/timezone/timezoneInputJs?xid=cfe73821d5c278f7215136d644043897"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webform/overwriteRefererJs"></script>
+</div>
+<div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal">
+<div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+<div class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+<span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+<div class="inline-block absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transition-all w-[90%] md:w-[700px]" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+<div class="bg-white relative p-8">
+<div class="buy_modal">
+<div class="modal_head">
+<h5 class="text-lg text-[--black] leading-[28px] mb-3 lg:leading-[25px]">You are
+inquiring about the domain name</h5>
+<h2 class="text-3xl text-[--black] leading-[30px] font-bold mb-1 lg:leading-[35px]">
+MvnNews.com
+</h2>
+<p class="text-base text-[--black] leading-[28px] mb-1 lg:leading-[25px]">Please
+complete the fields below and we will get back to you.</p>
+</div>
+<form id="inf_form_1277d593cb77ce63163a83dcef37c910" method="POST" class="infusion-form" accept-charset="UTF-8" action="https://protect.spamkill.dev/v1/">
+<input id="sk_osWGjWBuQQ3uqGJXESxIOtNAuHgQzDM6r7fd1lxQhLa" name="osWGjWBuQQ3uqGJXESxIOtNAuHgQzDM6r7fd1lxQhLa" type="hidden" value="MvnNews.com" />
+<input type="hidden" name="spamkill_formurl" value />
+<input type="hidden" name="spamkill_version" value="1.5" />
+<input type="hidden" name="spamkill_data2" value />
+<input type="hidden" name="spamkill_data1" value />
+<input type="hidden" name="formdata" value="wgEtMYObLkR2QlwHSK9mXvKvgaDrhAytCs0xrVq47aNf8rx44PwP845Lic3drHU9x9tCRE/P5XnjRxrxv8aR+N+oa9uukGMoVDzoQnJmFOk+ZhDmu5Y5NkwvDwNvnO/easFX9U/jvvep8Ps/Vy6cWdNS5DzyYalulDb5t7Yzx5Ve0gyA+8FI7VVObPUS467lnd/vMh/PiUImK2dowBuMjwfWG6jfyvn1caKryBYeWl/iqeJHa691ue3TgLcsvDT7Txx2cZT9x82ghWBQajCI1lJRfAeyRM+fwBGcHUNNSSPlrmKGzRkHr71CjlUcS9PmxMLrp9QRzSFS0Uogn8tMNZ3+twO50It/lhI3mnUO67/ibBHdhaXV/T4qXyLFaBRL++4o//O3X+aN5FMIDHxRc3R7kXmz4teKSTS/Onnc38DQhjkU61ik1D4k4H24XC4WOtLCpqfIUExNi7vSeQZKV5nAC6FAyToeEXTVvq1BINLqqzNaPoTjP/8dvijeceJd9u9/RoEChElYxNJzn4DfAdwHYchFczVDGqizghrrjEMnzw81AVn0QzVkW9u2dDvpxcSUw8CpO990DVbqGbRtEO2dENVRH6xvPZNEp4EzWPuzODkzYadEg43nEIpwwtwPgQWF1HA7FLKZA+E48YZwn0CjU/6K97bIZySERN2CjXTrxopb4WfiCWXnhu2pSOhxfv5tqd+e02jaVuDPN/0xBVLyZAuKn7FXDp4Vi5HUnKPo4UVuN58DwLPw9BpPgjHPcJCfxkFVjf1dW8jZxIg6o8OrhoiiIBKQBfO9qJDV37um/4PAuLwz0ZlBE55ivLEn42gBwQf1zMwuONULSWNg8MWIK9xO8RCooeIaA4SOp8/f2S4XssvBHOTPNC+qQbB54rz23IOI9sTdGCNlIJHn2YmEkOgtTUFy0h3qOGBX1NWKpS2y7F3WnA914c2wmTUvimQKTL2GdhsyNkdmJBiy1cT9pDUiOn5/dnsPGYZxarUU9Caw0pfcK+EicLdfnMLuc9/c7OQ43zvi+8T/sLR98a1r9VXw+ceTrjsgmCPpmnp7gDs75LiDogi3BfDxgn5HPgATmznLTKK7/naHlTwzpumAJp7WoIQVlx4/VIjXEV/W7CmrXs+E3Ltw0WMleW9+M+IP55/l+k4o9Cd3p6H96n2sbWOCaV2sCr2ilwOaHvEuwubEtadL1WOuJDid3rAHyBfR/piWwem8pDMgpVXJ2ZW0M/sqGVIXb88HbdFS+TbAAY0YAbONcTpvyi1COvRqjn/kSgAqKxUe7PEdurZPdlKqMq4h9bB8uzHAfXLL2Mj/DznLeNtn7fPTq8LqckUNBg43cEv4Zw54iN6LY6AYs2pRfTXFw6t+HicJ8WVzzPakyTXKwsERc0IiCZ34hSLA9qu/xDr2l2R9psEODqcxNUMZfaifkSRTlM26xhVN5YpQvE7+iRj6A82awzhYUMcWl3J4sw3QEs6avLP4uibkT/p5aqsUWQHU1iWQdpiw0dpBb1ex5w8Hv+VtR0fh4NLCa2QhwECSOlgLqYB3yyRlvA==" />
+<input type="hidden" name="formid" value="11bcl14PPQCxiyhyNmzjCngF2" />
+<input type="hidden" name="formname" value="9870tZfmrQNpPTNkAhmg5bRCmaTafhOexNILJesNc3839m6" />
+<div class="flex flex-wrap justify-between">
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_jhxb6gzxFhQmS3Vmh2Q4jBgosBXNht71wemqtimqHRo" name="jhxb6gzxFhQmS3Vmh2Q4jBgosBXNht71wemqtimqHRo" placeholder="First Name" type="text" required />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input tabindex="296" id="sk_4oE6yp7Eq66NHu30xHuhz6" name="4oE6yp7Eq66NHu30xHuhz6" placeholder="Your Email Address Here..." type="text" autocomplete="a315" style="position: absolute;top: -8129px;left: -9758px;" />
+<input id="sk_YXEsIi8u4jBEeveoxdYgu2Pi5rP7RUtXPOLtqBzTZkb" name="YXEsIi8u4jBEeveoxdYgu2Pi5rP7RUtXPOLtqBzTZkb" placeholder="Last Name" type="text" required />
+<input id="sk_inf_field_LastName" name="inf_field_LastName" placeholder="Last Name" type="text" tabindex="418" autocomplete="off" style="position: absolute;top: -9871px; left: -9135px;" class="-rcgdu" value novalidate="novalidate" />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_5VddCVyhtHsfQpJqKOLv3U" name="5VddCVyhtHsfQpJqKOLv3U" placeholder="Email" type="text" required />
+<input id="sk_inf_field_Email" name="inf_field_Email" placeholder="Email" type="text" tabindex="598" autocomplete="off" style="position: absolute;top: -8778px; left: -9397px;" class="-zgxon" value novalidate="novalidate" />
+<input tabindex="200" id="sk_5KZUg1eMZtDbbsuVNHHDn7" name="5KZUg1eMZtDbbsuVNHHDn7" placeholder="Email" type="text" autocomplete="a486" style="position: absolute;top: -8782px;left: -9866px;" />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_1ooZgRaM3TQ62CP4M64OkD9e2Yj7EYiuWOHtzSfPu30" name="1ooZgRaM3TQ62CP4M64OkD9e2Yj7EYiuWOHtzSfPu30" placeholder="Phone" type="text" required />
+<input id="sk_inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text" tabindex="480" autocomplete="off" style="position: absolute;top: -9671px; left: -9483px;" class="-almbs" value novalidate="novalidate" />
+</div>
+</div>
+<div class="infusion-field w-full">
+<input id="sk_20IKmN5sPy3Fd5G86wy241JNBY03BqGhDdHPleoNEbG" name="20IKmN5sPy3Fd5G86wy241JNBY03BqGhDdHPleoNEbG" placeholder="Company" type="text" />
+</div>
+<div class="infusion-field w-full">
+<textarea cols="24" id="sk_vUVarQxipWai54eS0K94sq9ffVuZ8eh6CTpae6XgF08" name="vUVarQxipWai54eS0K94sq9ffVuZ8eh6CTpae6XgF08" placeholder="How can we help you?" rows="5"></textarea>
+<textarea cols="24" id="sk_inf_custom_InquiryComments" name="inf_custom_InquiryComments" placeholder="Additional Comments" rows="5" tabindex="574" autocomplete="off" style="position: absolute;top: -8880px; left: -8999px;" class="-cwntz" value novalidate="novalidate"></textarea>
+</div>
+<div class="infusion-submit flex justify-end gap-2">
+<button id="recaptcha_1277d593cb77ce63163a83dcef37c910" type="submit" class="infusion-recaptcha bg-[--green] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 text-white font-[500] px-6 md-px-11 block text-sm lg:px-12 xl:text-base">Submit</button>
+<button type="button" onclick="toggleModal()" class="bg-[--black] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 text-white font-[500] px-6 md-px-11 block text-sm lg:px-12 xl:text-base">Close</button>
+</div>
+</form>
+<script type="text/javascript">
+                                document.getElementById("inf_form_1277d593cb77ce63163a83dcef37c910").addEventListener('submit', function (event) {
+                                    event.stopPropagation();
+                                }, true);
+                            </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-16">
+<h3 class="text-center mb-5 font-normal">
+Why MvnNews.com?</h3>
+<div class="text_content mb-6 text-center">
+<div class="flex flex-col gap-4">
+By securing this domain, your business gains a distinct online identity, setting it apart from
+competitors. This memorable web address reinforces brand recognition, instilling trust and
+credibility in your audience. With improved visibility in search engine results, your website
+attracts more organic traffic, driving growth and customer engagement. This domain not only
+enhances your professional image but also facilitates effective marketing and brand promotion.
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="image_banner landing_image_banner">
+<div class="mx-auto px-5 max-w-7xl">
+<h3 class="text-center mb-5 font-normal">
+Marketability of MvnNews.com
+</h3>
+<div class="flex flex-wrap justify-between items-center flex-col-reverse lg:flex-row">
+<div class="w-full lg:w-1/2 lg:pr-10">
+<div class="text_content">
+<div class="flex flex-col justify-center items-center gap-y-4">
+<p>Investing in a custom domain is a pivotal step in growing your business and brand. A
+custom domain provides a unique online identity, making it easier for customers to
+remember and find your website. This distinction sets you apart from competitors,
+reinforcing brand recognition and credibility. A custom domain lends professionalism to
+your online presence, establishing trust with potential customers.</p>
+<p>From a marketing perspective, a custom domain strengthens your brand's visibility and
+memorability. It becomes a key asset in your promotional efforts, facilitating
+word-of-mouth marketing and ensuring consistency across all marketing channels. With a
+memorable domain, you can effectively drive traffic to your website and increase brand
+awareness.</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 px-0 mb-8 lg:mb-0">
+<img class="h-auto md:h-full object-contain w-full" src="https://domainmarket.imgix.net/dm-com/21faa3cd-7e54-4be6-ab37-bf78a8164a55/marketability.png?auto=compress%2Cformat&amp;fit=min&amp;fm=jpg&amp;q=80&amp;rect=0%2C0%2C800%2C602" alt="Marketability of">
+</div>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-5">
+<div class="flex justify-between flex-wrap items-start">
+<div class="w-full lg:w-1/3">
+<div class="domain_buy_blue">
+<p class="mt-0">Buy MvnNews.com Now!</p>
+<div>
+<div class="flex w-full
+            md:items-start md:justify-start
+            items-center xs:items-center justify-center xs:justify-center">
+<button class="bg-[--green] hover:bg-[--blue] h-[45px] transition duration-500 mt-2 w-full hover:bg-[--green]">
+<a class="text-white font-[500] px-6 md-px-11 block text-base lg:px-12 xl:text-base" href="https://www.domainmarket.com/cart/MvnNews.com">Buy Now</a>
+</button>
+<script>
+            function toggleModal() {
+                document.getElementById('modal').classList.toggle('hidden');
+            }
+        </script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.com/app/timezone/timezoneInputJs?xid=cfe73821d5c278f7215136d644043897"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webform/overwriteRefererJs"></script>
+</div>
+<div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal">
+<div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+<div class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+<span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+<div class="inline-block absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transition-all w-[90%] md:w-[700px]" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+<div class="bg-white relative p-8">
+<div class="buy_modal">
+<div class="modal_head">
+<h5 class="text-lg text-[--black] leading-[28px] mb-3 lg:leading-[25px]">You are
+inquiring about the domain name</h5>
+<h2 class="text-3xl text-[--black] leading-[30px] font-bold mb-1 lg:leading-[35px]">
+MvnNews.com
+</h2>
+<p class="text-base text-[--black] leading-[28px] mb-1 lg:leading-[25px]">Please
+complete the fields below and we will get back to you.</p>
+</div>
+<form id="inf_form_1277d593cb77ce63163a83dcef37c910" method="POST" class="infusion-form" accept-charset="UTF-8" action="https://protect.spamkill.dev/v1/">
+<input id="sk_osWGjWBuQQ3uqGJXESxIOtNAuHgQzDM6r7fd1lxQhLa" name="osWGjWBuQQ3uqGJXESxIOtNAuHgQzDM6r7fd1lxQhLa" type="hidden" value="MvnNews.com" />
+<input type="hidden" name="spamkill_formurl" value />
+<input type="hidden" name="spamkill_version" value="1.5" />
+<input type="hidden" name="spamkill_data2" value />
+<input type="hidden" name="spamkill_data1" value />
+<input type="hidden" name="formdata" value="wgEtMYObLkR2QlwHSK9mXvKvgaDrhAytCs0xrVq47aNf8rx44PwP845Lic3drHU9x9tCRE/P5XnjRxrxv8aR+N+oa9uukGMoVDzoQnJmFOk+ZhDmu5Y5NkwvDwNvnO/easFX9U/jvvep8Ps/Vy6cWdNS5DzyYalulDb5t7Yzx5Ve0gyA+8FI7VVObPUS467lnd/vMh/PiUImK2dowBuMjwfWG6jfyvn1caKryBYeWl/iqeJHa691ue3TgLcsvDT7Txx2cZT9x82ghWBQajCI1lJRfAeyRM+fwBGcHUNNSSPlrmKGzRkHr71CjlUcS9PmxMLrp9QRzSFS0Uogn8tMNZ3+twO50It/lhI3mnUO67/ibBHdhaXV/T4qXyLFaBRL++4o//O3X+aN5FMIDHxRc3R7kXmz4teKSTS/Onnc38DQhjkU61ik1D4k4H24XC4WOtLCpqfIUExNi7vSeQZKV5nAC6FAyToeEXTVvq1BINLqqzNaPoTjP/8dvijeceJd9u9/RoEChElYxNJzn4DfAdwHYchFczVDGqizghrrjEMnzw81AVn0QzVkW9u2dDvpxcSUw8CpO990DVbqGbRtEO2dENVRH6xvPZNEp4EzWPuzODkzYadEg43nEIpwwtwPgQWF1HA7FLKZA+E48YZwn0CjU/6K97bIZySERN2CjXTrxopb4WfiCWXnhu2pSOhxfv5tqd+e02jaVuDPN/0xBVLyZAuKn7FXDp4Vi5HUnKPo4UVuN58DwLPw9BpPgjHPcJCfxkFVjf1dW8jZxIg6o8OrhoiiIBKQBfO9qJDV37um/4PAuLwz0ZlBE55ivLEn42gBwQf1zMwuONULSWNg8MWIK9xO8RCooeIaA4SOp8/f2S4XssvBHOTPNC+qQbB54rz23IOI9sTdGCNlIJHn2YmEkOgtTUFy0h3qOGBX1NWKpS2y7F3WnA914c2wmTUvimQKTL2GdhsyNkdmJBiy1cT9pDUiOn5/dnsPGYZxarUU9Caw0pfcK+EicLdfnMLuc9/c7OQ43zvi+8T/sLR98a1r9VXw+ceTrjsgmCPpmnp7gDs75LiDogi3BfDxgn5HPgATmznLTKK7/naHlTwzpumAJp7WoIQVlx4/VIjXEV/W7CmrXs+E3Ltw0WMleW9+M+IP55/l+k4o9Cd3p6H96n2sbWOCaV2sCr2ilwOaHvEuwubEtadL1WOuJDid3rAHyBfR/piWwem8pDMgpVXJ2ZW0M/sqGVIXb88HbdFS+TbAAY0YAbONcTpvyi1COvRqjn/kSgAqKxUe7PEdurZPdlKqMq4h9bB8uzHAfXLL2Mj/DznLeNtn7fPTq8LqckUNBg43cEv4Zw54iN6LY6AYs2pRfTXFw6t+HicJ8WVzzPakyTXKwsERc0IiCZ34hSLA9qu/xDr2l2R9psEODqcxNUMZfaifkSRTlM26xhVN5YpQvE7+iRj6A82awzhYUMcWl3J4sw3QEs6avLP4uibkT/p5aqsUWQHU1iWQdpiw0dpBb1ex5w8Hv+VtR0fh4NLCa2QhwECSOlgLqYB3yyRlvA==" />
+<input type="hidden" name="formid" value="11bcl14PPQCxiyhyNmzjCngF2" />
+<input type="hidden" name="formname" value="9870tZfmrQNpPTNkAhmg5bRCmaTafhOexNILJesNc3839m6" />
+<div class="flex flex-wrap justify-between">
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_jhxb6gzxFhQmS3Vmh2Q4jBgosBXNht71wemqtimqHRo" name="jhxb6gzxFhQmS3Vmh2Q4jBgosBXNht71wemqtimqHRo" placeholder="First Name" type="text" required />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input tabindex="296" id="sk_4oE6yp7Eq66NHu30xHuhz6" name="4oE6yp7Eq66NHu30xHuhz6" placeholder="Your Email Address Here..." type="text" autocomplete="a315" style="position: absolute;top: -8129px;left: -9758px;" />
+<input id="sk_YXEsIi8u4jBEeveoxdYgu2Pi5rP7RUtXPOLtqBzTZkb" name="YXEsIi8u4jBEeveoxdYgu2Pi5rP7RUtXPOLtqBzTZkb" placeholder="Last Name" type="text" required />
+<input id="sk_inf_field_LastName" name="inf_field_LastName" placeholder="Last Name" type="text" tabindex="418" autocomplete="off" style="position: absolute;top: -9871px; left: -9135px;" class="-rcgdu" value novalidate="novalidate" />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_5VddCVyhtHsfQpJqKOLv3U" name="5VddCVyhtHsfQpJqKOLv3U" placeholder="Email" type="text" required />
+<input id="sk_inf_field_Email" name="inf_field_Email" placeholder="Email" type="text" tabindex="598" autocomplete="off" style="position: absolute;top: -8778px; left: -9397px;" class="-zgxon" value novalidate="novalidate" />
+<input tabindex="200" id="sk_5KZUg1eMZtDbbsuVNHHDn7" name="5KZUg1eMZtDbbsuVNHHDn7" placeholder="Email" type="text" autocomplete="a486" style="position: absolute;top: -8782px;left: -9866px;" />
+</div>
+<div class="infusion-field w-full md:w-1/2">
+<input id="sk_1ooZgRaM3TQ62CP4M64OkD9e2Yj7EYiuWOHtzSfPu30" name="1ooZgRaM3TQ62CP4M64OkD9e2Yj7EYiuWOHtzSfPu30" placeholder="Phone" type="text" required />
+<input id="sk_inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text" tabindex="480" autocomplete="off" style="position: absolute;top: -9671px; left: -9483px;" class="-almbs" value novalidate="novalidate" />
+</div>
+</div>
+<div class="infusion-field w-full">
+<input id="sk_20IKmN5sPy3Fd5G86wy241JNBY03BqGhDdHPleoNEbG" name="20IKmN5sPy3Fd5G86wy241JNBY03BqGhDdHPleoNEbG" placeholder="Company" type="text" />
+</div>
+<div class="infusion-field w-full">
+<textarea cols="24" id="sk_vUVarQxipWai54eS0K94sq9ffVuZ8eh6CTpae6XgF08" name="vUVarQxipWai54eS0K94sq9ffVuZ8eh6CTpae6XgF08" placeholder="How can we help you?" rows="5"></textarea>
+<textarea cols="24" id="sk_inf_custom_InquiryComments" name="inf_custom_InquiryComments" placeholder="Additional Comments" rows="5" tabindex="574" autocomplete="off" style="position: absolute;top: -8880px; left: -8999px;" class="-cwntz" value novalidate="novalidate"></textarea>
+</div>
+<div class="infusion-submit flex justify-end gap-2">
+<button id="recaptcha_1277d593cb77ce63163a83dcef37c910" type="submit" class="infusion-recaptcha bg-[--green] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 text-white font-[500] px-6 md-px-11 block text-sm lg:px-12 xl:text-base">Submit</button>
+<button type="button" onclick="toggleModal()" class="bg-[--black] hover:bg-[--blue] h-[45px] mt-2 transition duration-500 text-white font-[500] px-6 md-px-11 block text-sm lg:px-12 xl:text-base">Close</button>
+</div>
+</form>
+<script type="text/javascript">
+                                document.getElementById("inf_form_1277d593cb77ce63163a83dcef37c910").addEventListener('submit', function (event) {
+                                    event.stopPropagation();
+                                }, true);
+                            </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-2/3">
+<div class="collapse_list">
+<div id="accordionContainer">
+<details class="accordion transition-transform hover:bg-white mt-4" onclick="handleAccordionClick(this)">
+<summary class="cursor-pointer text-lg font-semibold text-[--blue] p-5 bg-no-repeat bg-right-top bg-cover">
+How can I acquire ownership of the domain?
+</summary>
+<div class="collapse_card p-5">
+<div class="text_content">
+<p>At DomainMarket.com our goal is to make the domain process as painless and
+transparent as possible for you. Once your funds settle and we have
+verified the transaction (typically between 3 to 7 business days), we will
+be contacting you via email with the transfer instructions to take control
+of MvnNews.com.</p>
+</div>
+</div>
+</details>
+<details class="accordion transition-transform hover:white mt-4" onclick="handleAccordionClick(this)">
+<summary class="cursor-pointer text-lg font-bold p-5 bg-no-repeat bg-right-top bg-cover">
+Will there be any recurring costs after I acquire the domain?
+</summary>
+<div class="collapse_card p-5">
+<div class="text_content text-base leading-[25px] font-normal text-left">
+<p>To acquire the domain, you incur a one-time expense. Subsequently, upon the domain’s transfer to your ownership, you must annually renew it through your domain registrar. These renewal charges varies depending to your registrar and remitted directly to the registrar.</p>
+</div>
+</div>
+</details>
+<details class="accordion transition-transform hover:white mt-4" onclick="handleAccordionClick(this)">
+<summary class="cursor-pointer text-lg font-bold p-5 bg-no-repeat bg-right-top bg-cover">
+What payment methods do you accept?
+</summary>
+<div class="collapse_card p-5">
+<div class="text_content text-base leading-[25px] font-normal text-left">
+<p>We accept various payment methods, including major credit cards, PayPal, and wire transfers. Our payment processing system ensures a secure and hassle-free transaction experience.</p>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+    function handleAccordionClick(clickedElement) {
+        const accordions = document.querySelectorAll('details');
+        accordions.forEach(accordion => {
+            if (accordion !== clickedElement) {
+                accordion.removeAttribute('open');
+            }
+        });
+    }
+</script>
+</div>
+<footer class="footer">
+<div class="flex flex-col  mx-auto max-w-7xl px-5">
+<div class="flex mt-12
+                    flex-col
+                    md:flex-row">
+<div class="address mt-8">
+<h5>Address</h5>
+<img src="https://domainmarket.imgix.net/images/footer-building.png" alt="DomainMarket Building" />
+<div class="contact">
+<div class="location">
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 395.71 395.71" xmlSpace="preserve">
+<g>
+<path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
+		c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
+		C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
+		c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
+</g>
+</svg>
+<p>
+102 NE 2nd Street #217
+<br/>
+Boca Raton, FL 33432-3908
+</p>
+</div>
+<div class="phone">
+<svg id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
+<g>
+<path class="st0" d="M341.601,0H170.397c-29.29,0-53.12,23.828-53.12,53.121v405.758c0,29.29,23.83,53.121,53.12,53.121h171.204
+		c29.292,0,53.121-23.832,53.121-53.117V53.121C394.722,23.828,370.893,0,341.601,0z M255.999,480.622
+		c-11.869,0-21.526-9.658-21.526-21.526c0-11.871,9.656-21.526,21.526-21.526c11.869,0,21.526,9.655,21.526,21.526
+		C277.525,470.964,267.868,480.622,255.999,480.622z M363.274,67.271v340.156h-214.55V67.271H363.274z" />
+</g>
+</svg>
+<a href="tel:8886946735">(888) 694-6735</a>
+</div>
+<div class="email">
+<svg width="800px" height="800px" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.7143 0H2.19048C0.985714 0 0.0109524 1 0.0109524 2.22222L0 15.5556C0 16.7778 0.985714 17.7778 2.19048 17.7778H10.9524V15.5556H2.19048V4.44444L10.9524 10L19.7143 4.44444V10H21.9048V2.22222C21.9048 1 20.919 0 19.7143 0ZM10.9524 7.77778L2.19048 2.22222H19.7143L10.9524 7.77778ZM16.801 20L12.9238 16.0667L14.4681 14.5L16.79 16.8556L21.4338 12.1444L23 13.7111L16.801 20Z" fill="black" />
+</svg>
+<a href="/cdn-cgi/l/email-protection#9af3f4eeffe8ffe9eefffedafef5f7fbf3f4f7fbe8f1ffeeb4f9f5f7"><span class="__cf_email__" data-cfemail="9ef7f0eafbecfbedeafbfadefaf1f3fff7f0f3ffecf5fbeab0fdf1f3">[email&#160;protected]</span></a>
+</div>
+</div>
+</div>
+<div class="menu
+                        xs:mt-8">
+<h5>Menu</h5>
+<ul>
+<li><a class href="/">Home</a></li>
+<li><a class href="/search">Search</a></li>
+<li><a class href="/categories">Categories</a></li>
+<li><a class href="/about">About</a></li>
+<li><a class href="/resources">Resources</a></li>
+<li><a class href="/testimonials">Testimonials</a></li>
+</ul>
+</div>
+<div class="flex flex-col latest-resources xs:mt-8 md:pl-8 lg:pl-0">
+<h5>Latest Resources</h5>
+<a href="/blog/how-domain-brokers-evaluate-premium-domain-names">
+<div class="flex flex-col mb-4">
+<h6 class="text-[--orange] hover:text-[--green] transition duration-500
+                                       text-xl xlg:text-2xl">How Domain Brokers Evaluate Premium Domain Names</h6>
+<p class="m-0 mt-1 text-sm">December 30, 2023</p>
+</div>
+</a>
+<a href="/blog/finding-the-right-keywords-for-your-business-when-purchasing-a-premium-domain-name">
+<div class="flex flex-col mb-4">
+<h6 class="text-[--orange] hover:text-[--green] transition duration-500
+                                       text-xl xlg:text-2xl">Finding the Right Keywords for Your Business When Purchasing a Premium Domain Name</h6>
+<p class="m-0 mt-1 text-sm">December 23, 2023</p>
+</div>
+</a>
+<a href="/blog/benefits-of-owning-a-premium-domain-for-your-website">
+<div class="flex flex-col mb-4">
+<h6 class="text-[--orange] hover:text-[--green] transition duration-500
+                                       text-xl xlg:text-2xl">Benefits of Owning a Premium Domain for Your Website</h6>
+<p class="m-0 mt-1 text-sm">December 15, 2023</p>
+</div>
+</a>
+</div>
+</div>
+<div class="text-center text-[--white] text-sm mb-12">
+<p>&copy; 2024 DomainMarket.com | All Rights Reserved.</p>
+</div>
+</div>
+<section class="max-w-7xl mx-auto px-5 relative">
+<a href="#" id="toTop" class="fixed bottom-0 right-[100px] bg-[--grey] py-1 px-4 rounded-t-md">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+<path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z" />
+</svg>
+</a>
+</section>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    let toTopButton = document.getElementById('toTop');
+
+    window.onscroll = function() {
+        toggleScrollToTopButton();
+    };
+
+    function toggleScrollToTopButton() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            toTopButton.classList.add('show');
+        } else {
+            toTopButton.classList.remove('show');
+        }
+    }
+
+    toTopButton.addEventListener('click', function() {
+        scrollToTop();
+    });
+
+    function scrollToTop() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > 0) {
+            const scrollStep = Math.ceil(scrollTop / 20);
+            window.requestAnimationFrame(function() {
+                window.scrollTo(0, scrollTop - scrollStep);
+                scrollToTop();
+            });
+        }
+    }
+</script>
+<script type="text/javascript" src="https://wzq505.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+<script src="/livewire/livewire.min.js?id=5d8beb2e" data-csrf="erFPh9O1c99ODxv1v6y2PleTfDN4REjbn89ioVZi" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+</html>

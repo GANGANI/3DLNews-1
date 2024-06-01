@@ -1,0 +1,164 @@
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://h5.sinaimg.cn/marvel/v1.4.5/css/lib/base.css">
+    <title></title>
+    <style>
+        html{
+            background-color: #fff;
+        }
+        .t-icon{
+            padding-top:70px;
+        }
+        .t-icon img{
+            width:60px;
+            height:60px;
+            display: block;
+
+            margin:0 auto;
+        }
+        .text {
+            font-size: 20px;
+            color: #333333;
+            text-align: center;
+            font-weight: bold;
+            padding: 0px;
+            padding-top: 30px;
+        }
+        .desc {
+            color: #636363;
+            font-size: 15px;
+            text-align: center;
+            padding: 0px;
+            padding-top: 29px;
+            line-height: 1.6;
+            word-break: break-all;
+            width:305px;
+            display: block;
+            margin:0 auto;
+        }
+        .desc +.desc{
+            padding-top:10px;
+        }
+        .open-url {
+            position: absolute;
+            bottom:160px;
+            left:0px;
+            width:100%;
+        }
+
+        .open-url .m-btn {
+            width:160px;
+            height:42px;
+            background: #F6F6F6;
+            font-size: 17px;
+            color: #636363;
+            margin:0 auto;
+            line-height: 42px;
+        }
+        .link {
+            position: absolute;
+            bottom: 60px;
+            left:0px;
+            width:100%;
+        }
+        .link >div{
+            width:100%;
+        }
+
+        .link a {
+            font-size: 0.75rem;
+            color: #507DAF;
+        }
+        .link-line {
+            color: #D8D8D8;
+            padding: 0 20px;
+            font-size: 0.75rem;
+        }
+        .desc .desc-overflow{
+            width:162px;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin:0 auto;
+        }
+        .ang-down{
+            width:18px;
+            height:18px;
+            background-image: url(https://h5.sinaimg.cn/upload/1005/839/2024/03/04/icon-m.png);
+            background-size: 100% 100%;
+            position: absolute;
+            right:0px;
+            top:50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .ang-box{
+            position: relative;
+            display: inline-block;
+            padding-right:20px;
+        }
+        .show-moreBox.ang-box{
+            padding-right:0px;
+            padding-bottom:20px;
+        }
+        .show-moreBox .ang-down{
+            left:50%;
+            right:auto;
+            bottom:18px;
+            top:auto;
+            transform-origin:center bottom;
+            transform:translateX(-50%) rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+<div class="m-container-max">
+    <div class="t-icon">
+        <img src="https://h5.sinaimg.cn/upload/1005/839/2024/03/04/icon-t.png">
+    </div>
+    <div class="text">
+        将要访问
+    </div>
+    <div class="desc">
+        <div  class="ang-box" id="anBox"> <span class="desc-overflow" id="textline">
+                     http://bit.ly/1ZAn3iA</span>
+            <div class="ang-down" id="showMoreButton"></div>
+        </div>
+    </div>
+    <div class="desc">
+        此网页未在微博完成域名备案，可能存在内容风险。
+        如要继续访问，请注意您的隐私及财产安全。
+    </div>
+    <div class="open-url">
+        <a href="http://bit.ly/1ZAn3iA" class="m-btn m-btn-block m-btn-orange " ontouchstart="">继续访问</a>
+    </div>
+    <div class="link">
+        <div class="m-box-center-a m-box-center">
+            <a href="https://weibo.com/1934183965/Jbt7Nydr3">外链白名单机制公告</a> <span class="link-line">|</span><a href="https://jianye.hd.weibo.com/site/?id=2316">申请白名单</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+    var anBox = document.getElementById('anBox');
+    var showMoreDom = document.getElementById('showMoreButton');
+    var textDom = document.getElementById('textline');
+    showMoreDom.onclick = function(){
+       if(textDom.getAttribute('class')){
+        textDom.className = '';
+        anBox.className= 'ang-box show-moreBox';
+       } else {
+        textDom.className = 'desc-overflow';
+        anBox.className= 'ang-box';
+       }
+    }
+</script>
+</html>
+
