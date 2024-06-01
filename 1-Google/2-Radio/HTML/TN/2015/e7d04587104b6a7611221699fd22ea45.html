@@ -1,0 +1,1479 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>Cumulus | WIVK-FM</title><link rel="canonical" href="https://www.wivk.com/" />
+
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/general-https-ABC123H.css?ver=20240530230500" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/general-https-ABC123H.css?ver=20240530230500' type='text/css' media='all' />
+<link rel="preload" href="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/layout-front_page-https-ABC123H.css?ver=20240530230500" as="style"><link rel='stylesheet' id='headway-layout-front_page-https-css' href='https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/layout-front_page-https-ABC123H.css?ver=20240530230500' type='text/css' media='all' />
+<link rel="preload" href="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/responsive-grid-https-ABC123H.css?ver=20240530230500" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/responsive-grid-https-ABC123H.css?ver=20240530230500' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530230507" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530230507' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_10035/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/block-dynamic-js-layout-front_page-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-front_page-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240530230500" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.wivk.com","site_id":"602","tz":"America\/New_York","tz_offset":"-4","ts":"1715610524","blog_name":"WIVK-FM","client_name":"cumuluspro","user_ID":"","alt_blog_name":"WIVK-FM","market":"Knoxville, TN","format":"NASH","ts_offset":"1717095907","version":"release-3.26.01","env":"prod","settings":{"tenant_id":"see_10035","format":"NASH","market":"Knoxville, TN","syn_site_name":"WIVK-FM","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":false,"default_show_img":false,"gtm_id":false,"region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.wivk.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"1","moment_date_format":"MMMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"MM d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"602","callsign":"","mount_name":"WIVKFM","provider":"stream_the_world","gmt_offset":"-14400","live_url":"http:\/\/player.listenlive.co\/24241\/","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240530230507" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.wivk.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.wivk.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="WIVK-FM &raquo; Feed" href="https://www.wivk.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/602/2020/10/20151455/WIVK-FM-Sitelogo-2020-10-201.png" />
+
+
+<link rel='shortlink' href='https://www.wivk.com/' />
+	<script>
+		const express_config = { 
+			express_url : 'https://www.wivk.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/wivk-com\/',
+			rewards_id : '1026',
+			site_id : '602',
+			client_id : 'cumuluspro',
+			post_id : '27',
+			tracking_meta_id: '9313513',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -4,
+			timezone : 'America/New_York',
+			timezone_abbr : 'EDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -4 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'WIVK-FM','alt_station_name':'WIVK-FM','market':'Knoxville, TN','format':'NASH','author':'System User','page_type':'page' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'G-B4VQSS6556');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/602/2020/10/20151455/WIVK-FM-Sitelogo-2020-10-201.png" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NC7X92');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+	// SLOTS ARE DEFINED IN THEIR DISPLAY BLOCKS
+	window.GPT_SITE_ID = '/6717/cd.WIVK.FM';
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+
+	// APS initialization
+	if (window.cmlsAds && window.cmlsAds.apsInit) {
+		googletag.cmd.push(function() {
+			googletag.pubads().disableInitialLoad();
+		});
+		window.cmlsAds.apsInit();
+	}
+
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+
+		// Load APS bids and do initial request
+		if (window.cmlsAds && window.cmlsAds.apsLoad) {
+			window.cmlsAds.apsLoad();
+		}
+	});
+</script>
+<!-- END 2023 CMLS GPT -->
+	
+<!----Text Groove----->
+<script>
+
+smsWidgetSettings = {
+senderId: '6JtjceYv0a6E3kUW27J3GsAFs4tqIhtZtfEu4jMts5nlMfk128CF8tVceREQDiFTNbLoleRL3ZZetCqbsLLKoaR67dqHZvf4PGjv',
+token: '58f7042307a368594b3f48d43756382b41372dcf39e2e2ae5a2d53af878c669d83bb207209361c34a52b3d5199256207989a2437da5691ef27ee11f66b2cdc2f',
+color: 'f45642',
+bottom: '80px',
+right: '15px'
+};
+
+document.addEventListener("DOMContentLoaded", function(e) { var r = Math.random().toString(36).substring(3); var h = document.getElementsByTagName('head')[0]; var s = document.createElement('script'); s.type = 'text/javascript'; s.src = 'https://app.textgroove.com/widget/textloader/'+ r + '/load.js'; h.appendChild(s); });
+
+</script>
+<!-----End Text Groove--->
+<!-- Customization: Default -->
+<style style="text/css" id="customize-styles">
+#whitewrap > .wrapper-header {background-color: #000000 !important; 
+background-image: url(https://express-images.franklymedia.com/6616/sites/602/2024/01/29103421/Stock_Firefly_98800_landscape_1706541997730.jpg) !important;
+}
+#whitewrap > .wrapper-content {background-color: transparent !important; background-image: none !important;}
+#whitewrap > .wrapper-footer {background-color: transparent !important; background-image: none !important;}
+body {background-color: #0c0a0a !important; 
+background-image: none !important;
+}
+.block-title, .block-title a {background-color: #000000 !important; 
+background-image: none !important;
+}
+
+</style>
+<script>_AMP.theme.data = [];</script>
+<script type="text/javascript">var ajaxurl = "https://www.wivk.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'WIVKFM');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Format  NASH', 'Format  Country', 'Market  Knoxville TN', 'Format Country New', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'Home');
+      googletag.pubads().setTargeting('cms-pcat', '');
+			});
+		}
+		</script>
+		<link rel="preload" fetchpriority="high" href="https://www.wivk.com/wp-content/uploads/sites/602/themify-concate/3568307525/themify-3753639671.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.wivk.com/wp-content/uploads/sites/602/themify-concate/3568307525/themify-3753639671.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="WIVK-FM"/>
+  <meta property="og:title" content="WIVK-FM"/>
+  <meta property="og:url" content="https://www.wivk.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="WIVK-FM"/>
+  <meta property="article:publisher" content="https://www.facebook.com/WIVK1077"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="WIVK-FM"/>
+  <meta itemprop="headline" content="WIVK-FM"/>
+  <meta itemprop="description" content="WIVK-FM"/>
+  <meta itemprop="author" content="expressAdmin"/>
+  <!--<meta itemprop="publisher" content="WIVK-FM"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="WIVK-FM"/>
+  <meta name="twitter:url" content="https://www.wivk.com"/>
+  <meta name="twitter:description" content="WIVK-FM"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@https://twitter.com/wivk1077"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="home page-template-default page page-id-27 is-headway-theme custom safari webkit responsive-grid-enabled responsive-grid-active pageid-27 page-slug-home layout-front_page layout-using-front_page tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-8" class="wrapper independent-grid wrapper-fluid wrapper-fixed-grid grid-fluid-24-38-12 responsive-grid wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="block block-type-custom-code block-fluid-height" data-alias="728x90 Leaderboard Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-b0q5a8f20b611445" class="gigya-actions nominheight block block-type-custom-code block-fluid-height" data-alias="Gigya Profile Actions">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b0q5a8f20b611445 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-4">
+<figure id="block-31" class="logo block block-type-image block-fixed-height" data-alias="Logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wivk.com" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/602/2020/10/20151455/WIVK-FM-Sitelogo-2020-10-201.png" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<aside id="block-29" class="on-air block block-type-widget-area block-fluid-height" data-alias="Home - On Air Now" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><div style="display:none;" class="amp-onair-widget" id="amp_onair_widget-2"
+	data-title-now=""
+	data-title-upcoming=""
+	data-title=""
+	data-type="nowplaying"
+	data-change-minutes="5"
+	data-change="0"
+	data-toggle-time="5"
+	data-fields="image,timeslot"
+	data-ajaxurl="https://www.wivk.com/wp-admin/admin-ajax.php"
+	data-updateurl="https://www.wivk.com/shows/feed/?type=json"
+	data-memcached="1"
+	data-expiration="1717113540">
+	
+<div class="amp-onair-show nowplaying" >
+
+    <div class="amp-onair-widget-title js-widget-title"></div>
+
+        <div class="amp-onair-show-image">
+                    <img class="js-image amp-onair-show-image-img" src="https://express-images.franklymedia.com/6616/sites/602/2021/01/10234405/NightsWithElaina-web-small.jpg"  />
+            </div>
+        
+    <div class="amp-onair-show-title">
+            <span class="js-title">Nights with Elaina</span>
+        </div>
+    
+        <div class="amp-onair-show-timeslot js-timeslot" >7:00 p.m. - 11:59 p.m.</div>
+        
+        
+    
+</div>
+
+</div></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-29 -->
+
+</section><!-- .column -->
+
+<section class="column column-3 grid-left-0 grid-width-7">
+<section id="block-bp864f8b00db3458" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation Copy">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="#"><img src="https://express-images.franklymedia.com/6616/sites/602/2015/01/26173005/ListenLive.png" alt="Listen Live!!" title="Listen Live!!" class="img-1"  /></a></li><li><a href="/listen-live-with-alexa"><img src="https://express-images.franklymedia.com/6616/sites/602/2019/07/12182114/Smart-Speaker-ROUND-RED.png" alt="Listen with your Smart Speaker" class="img-2"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-bp864f8b00db3458 -->
+
+</section><!-- .column -->
+
+<section class="column column-4 grid-left-0 grid-width-5">
+<section id="block-30" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="https://itunes.apple.com/us/app/wivk-fm/id381043770?mt=8" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06124445/apple-1.png" alt="Get our iOS App" title="Get our iOS App" class="img-1"  /></a></li><li><a href="https://play.google.com/store/apps/details?id=com.airkast.WIVKFM"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06124534/droid-1.png" alt="Get our Android App" title="Get our Android App" class="img-2"  /></a></li><li><a href="https://www.facebook.com/WIVK1077/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06123640/facebook.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-3"  /></a></li><li><a href="https://www.instagram.com/wivk1077/?hl=en" target="_blank" alt="Instagram"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06123633/instagram-redesign-01-21.png" alt="Follow us on Instagram" title="Follow us on Instagram" class="img-4"  /></a></li><li><a href="https://twitter.com/wivk1077" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2024/04/18164718/Social-X-Black.png" alt="Follow us on X" title="Follow us on X" class="img-5"  /></a></li><li><a href="https://www.tiktok.com/@wivk1077" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/10/25094903/tiktok-1-1.png" alt="Follow us on Tiktok" title="Follow us on Tiktok" class="img-6"  /></a></li><li><a href="https://www.youtube.com/channel/UCUSwBrNXY0tLTIV7PTFbtZw/featured" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06124719/icons8-youtube-26.png" alt="Follow us on Youtube" title="Follow us on Youtube" class="img-7"  /></a></li><li><a href="https://wivkfm.clubviprewards.com/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06123642/sports-vip.png" alt="Join our VIP Club" title="Join our VIP Club" class="img-8"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-4 grid-width-20">
+<nav id="block-32" class="main-nav block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left nav-search-active nav-search-position-right"><ul id="menu-main-navigation" class="menu"><li id="menu-item-78623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-78623"><a>SHOWS</a>
+<ul class="sub-menu">
+	<li id="menu-item-2340528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2340528"><a href="https://www.wivk.com/joey-tack/">Joey &#038; Nancy</a></li>
+	<li id="menu-item-2327402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2327402"><a href="https://www.wivk.com/heather-harrington/">Heather Harrington</a></li>
+	<li id="menu-item-2227901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2227901"><a href="https://www.wivk.com/shows/rich-bailey/">Rich Bailey</a></li>
+	<li id="menu-item-72008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72008"><a href="https://www.wivk.com/gunner/">Gunner</a></li>
+	<li id="menu-item-2287894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2287894"><a href="https://www.wivk.com/nights-with-elaina/">Nights with Elaina</a></li>
+	<li id="menu-item-2270230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2270230"><a href="https://www.wivk.com/picklejar-up-all-night/">PickleJar</a></li>
+	<li id="menu-item-72269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72269"><a href="https://www.wivk.com/kent-stephens/">Kent Stephens</a></li>
+	<li id="menu-item-2288049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2288049"><a href="https://www.wivk.com/mac/">Mac</a></li>
+	<li id="menu-item-2270275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2270275"><a href="https://www.wivk.com/american-country-countdown-with-kix-brooks/">American Country Countdown with Kix Brooks</a></li>
+</ul>
+</li>
+<li id="menu-item-2340522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2340522"><a href="https://www.wivk.com/podcasts/">Podcasts</a>
+<ul class="sub-menu">
+	<li id="menu-item-2340798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2340798"><a href="https://www.wivk.com/podcasts/">WIVK Podcasts</a></li>
+	<li id="menu-item-2344976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344976"><a href="https://www.wivk.com/individual-show-podcasts/">Individual Show Podcasts</a></li>
+</ul>
+</li>
+<li id="menu-item-70052" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70052"><a href="https://www.wivk.com/category/contests/">Contests</a></li>
+<li id="menu-item-2332637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2332637"><a href="https://www.wivk.com/whats-happening/">What’s Happening</a>
+<ul class="sub-menu">
+	<li id="menu-item-2346519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346519"><a href="https://www.wivk.com/whats-happening/">What’s Happening</a></li>
+	<li id="menu-item-1801837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1801837"><a href="https://www.wivk.com/concerts/">Concerts</a></li>
+	<li id="menu-item-2312760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2312760"><a href="https://www.wivk.com/community-and-events/">Community Events</a></li>
+	<li id="menu-item-2343301" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2343301"><a href="https://www.wivk.com/?p=2343224">50th WIVK Christmas Parade</a></li>
+</ul>
+</li>
+<li id="menu-item-78611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-78611"><a href="https://www.wivk.com/category/local-news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-78614" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-78614"><a href="https://www.wivk.com/category/local-news/">WIVK News</a></li>
+	<li id="menu-item-2336578" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2336578"><a href="http://wivk.com/2024/01/22/school-closings-and-delays/">Closing &#038; Delays</a></li>
+	<li id="menu-item-2335420" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2335420"><a href="https://www.wivk.com/category/country-now/">Country News</a></li>
+	<li id="menu-item-286698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286698"><a target="_blank" rel="noopener" href="https://www.wvlt.tv">WVLT Local 8 News</a></li>
+	<li id="menu-item-80846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80846"><a target="_blank" rel="noopener" href="https://www.wvlt.tv/weather">WVLT Local 8 Forecast</a></li>
+	<li id="menu-item-286755" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286755"><a href="https://www.newstalk987.com/">Newstalk 98.7</a></li>
+</ul>
+</li>
+<li id="menu-item-286689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-286689"><a href="https://www.wivk.com/vol-news/">Vols/Lady Vols</a>
+<ul class="sub-menu">
+	<li id="menu-item-2329809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329809"><a href="https://www.wivk.com/vol-news/">Vol News</a></li>
+	<li id="menu-item-2346105" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2346105"><a href="https://www.wivk.com/category/lady-vols/">Lady Vols</a></li>
+	<li id="menu-item-2344754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2344754"><a href="https://www.wivk.com/schedules/">Schedules</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2345216" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-2345216"><a href="https://www.wivk.com/2023/12/14/2024-tennessee-football-schedule-announced/">2024 Tennessee Football Schedule</a>
+		<ul class="sub-menu">
+			<li id="menu-item-2345217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2345217"><a href="https://utsports.com/documents/2023/12/12/2024_Tennessee_Football_Schedule.pdf">2024 UT Football Printable Schedule</a></li>
+		</ul>
+</li>
+		<li id="menu-item-2344758" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344758"><a href="https://www.wivk.com/2023/11/16/ut-mens-basketball-2023-2024-schedule/">UT Mens 2023-2024 Basketball Schedule/Printable</a></li>
+		<li id="menu-item-2344757" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344757"><a href="https://www.wivk.com/2023/11/16/lady-vols-basketball-schedule-2023-2024/">Lady VOLS 2023-2024 Basketball Schedule/Printable</a></li>
+		<li id="menu-item-2344756" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344756"><a href="https://www.wivk.com/2023/11/16/tennessee-baseball-2024-schedule/">Tennessee Baseball 2024 Schedule/Printable</a></li>
+		<li id="menu-item-2344755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344755"><a href="https://www.wivk.com/2023/11/16/lady-vol-2024-schedule/">Lady Vol 2024 Softball Schedule/Printable</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2311186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2311186"><a href="https://www.wivk.com/ut-football-image-matters-game-day-all-day-shows-on-wivk/">UT Football Game Day Shows</a></li>
+	<li id="menu-item-2328939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2328939"><a href="https://www.wivk.com/category/photo-galleries/">Sports Photo Galleries</a></li>
+</ul>
+</li>
+<li id="menu-item-2340804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2340804"><a href="https://www.wivk.com/category/uncategorized/">Connect</a>
+<ul class="sub-menu">
+	<li id="menu-item-2348040" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2348040"><a href="https://www.wivk.com/2017/02/02/free-wivk-app/">Free WIVK App</a></li>
+	<li id="menu-item-2347800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2347800"><a href="https://www.wivk.com/social-media/">Social Media</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2347801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347801"><a href="https://www.facebook.com/WIVK1077/">Facebook</a></li>
+		<li id="menu-item-2347802" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347802"><a href="https://www.instagram.com/wivk1077/?hl=en">Instagram</a></li>
+		<li id="menu-item-2347803" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347803"><a href="https://twitter.com/wivk1077">Twitter (X)</a></li>
+		<li id="menu-item-2347804" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347804"><a href="https://www.tiktok.com/@wivk1077">Tik Tok</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2286773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2286773"><a href="https://www.wivk.com/country-club/">Country Club</a></li>
+	<li id="menu-item-2336172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2336172"><a href="https://www.wivk.com/2018/01/08/frog-report/">Frog Report</a></li>
+	<li id="menu-item-1968373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1968373"><a href="https://www.wivk.com/2019/12/20/join-the-wivk-music-advisory-panel/">Music Advisors</a></li>
+</ul>
+</li>
+<li id="menu-item-2339568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2339568"><a href="https://www.sweetdeals.com/knoxville/deals">Sweet Deals</a>
+<ul class="sub-menu">
+	<li id="menu-item-2339572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2339572"><a href="https://www.sweetdeals.com/knoxville/deals">Sweet Deals</a></li>
+</ul>
+</li>
+<li id="menu-item-2342493" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2342493"><a href="https://www.wivk.com/advertise-with-us/">Advertising</a>
+<ul class="sub-menu">
+	<li id="menu-item-2342492" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2342492"><a href="https://www.wivk.com/advertise-with-us/">Advertise With Us</a></li>
+	<li id="menu-item-2342490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2342490"><a href="https://www.wivk.com/epic/">EPiC Guarantee</a></li>
+</ul>
+</li>
+</ul><div class="nav-search">
+		<form method="get" id="searchform" action="https://www.wivk.com/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="text" class="field" name="s" id="s" value="Search" onclick="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';" />
+			<input type="submit" class="submit" name="searchsubmit" id="searchsubmit" value="Search" />
+		</form>
+	</div></div><!-- .nav-horizontal nav-align-left nav-search-active nav-search-position-right -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-9" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<aside id="block-35" class="promo-reel block block-type-widget-area block-fluid-height" data-alias="Home - Promo Reel" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="amp_promo_reel-2" class="widget widget_amp_promo_reel sidebar_promo">
+<div class="sliderWrapper"><div class="sliderBody" style=""><div class="bxslider" data-navigation-arrows='1' data-rotation-time='7000' data-pager-type='none'><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;"  data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/602/2024/04/29005442/Gunner-HOF-Reel.png"><div class="promoCaption bottom"><div class="captionTitle">_</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.open('https://www.wivk.com/2024/05/30/the-jury-reaches-a-verdict-in-the-hush-money-trial-against-former-president-donald-trump/', '_blank')" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/602/2024/05/30085904/Screenshot-3568.png"><div class="promoCaption bottom"><div class="captionTitle">The Jury Reaches a Verdict in the Hush Money Trial Against Former President Donald Trump</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.location='https://www.wivk.com/2024/05/29/key-mashack-to-participate-in-sec-spring-meetings/'" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/602/2024/05/29074338/Lady-Vol-Basketball-34.jpg"><div class="promoCaption bottom"><div class="captionTitle">Key, Mashack To Participate In SEC Spring Meetings</div></div></div><div class="sliderItem lazybg" style="background-color: #000;background-repeat: no-repeat;background-size: contain;background-position: 50% 50%;position: relative;height: 300px;cursor: pointer;" onclick="window.open('https://www.wivk.com/2024/05/30/gottshall-pickens-named-nfca-first-team-all-americans/', '_blank')" data-lazybg="https://express-images.franklymedia.com/cdn-cgi/image/width=1200,quality=85/6616/sites/602/2024/05/30083836/Softball-56.jpg"><div class="promoCaption bottom"><div class="captionTitle">GOTTSHALL &amp; PICKENS NAMED NFCA FIRST TEAM ALL-AMERICANS</div></div></div></div></div></div></li><!-- .widget -->
+<li id="custom_html-2" class="widget_text widget widget_custom_html">
+<div class="textwidget custom-html-widget"><div align="center">
+<a href="https://www.wivk.com/2017/02/02/free-wivk-app/" target="_blank" rel="noopener"><img src="https://www.wivk.com/wp-content/uploads/sites/602/2024/05/WIVK_APP_212.png" border="0"></a>&nbsp;<a href="https://www.wivk.com/vol-news/" target="_blank" rel="noopener"><img src="https://www.wivk.com/wp-content/uploads/sites/602/2024/05/WIVK_VOLS_212.png" border="0"></a>&nbsp;<a href="https://www.wivk.com/individual-show-podcasts/" target="_blank" rel="noopener"><img src="https://www.wivk.com/wp-content/uploads/sites/602/2024/05/WIVK_listen_212.png" border="0"></a>
+</div></div></li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-35 -->
+<div id="block-bw9567ad32f0854c" class="mobile-only block block-type-custom-code block-fluid-height" data-alias="Responsive Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-18" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-18",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [])
+				.addSize([0,0], [[300, 250]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "midresponsive")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bw9567ad32f0854c -->
+<div id="block-b0664f8b3e72974c" class="podcasts block block-type-custom-code block-fluid-height" data-alias="podcasts">
+<div class="block-content">
+<iframe src="https://omny.fm/shows/joey-and-nancy-on-wivk/playlists/podcast/embed?style=cover" allow="autoplay; clipboard-write" width="100%" height="500" frameborder="0" title="Joey and Nancy on WIVK"></iframe>
+</div><!-- .block-content -->
+
+</div><!-- #block-b0664f8b3e72974c -->
+<div id="block-b9z57cee5e3ef70c" class="post-list block block-type-content block-fluid-height" data-alias="What&#039;s Happening">
+<div class="block-content">
+<h1 class="block-title"><span>What's Happening</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-2348723" class="post-2348723 post type-post status-publish format-standard has-post-thumbnail hentry category-contests category-whats-happening author-cemerson custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/28/enter-to-win-robert-earl-keen-tickets-at-the-tennessee-theatre/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/30190042/rek-tn-t-300x300.png" alt="Enter to Win Robert Earl Keen Tickets at The Tennessee Theatre!" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/28/enter-to-win-robert-earl-keen-tickets-at-the-tennessee-theatre/" title="Enter to Win Robert Earl Keen Tickets at The Tennessee Theatre!" rel="bookmark">Enter to Win Robert Earl Keen Tickets at The Tennessee Theatre!</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p><span class="more-link-ellipsis">&#8230;  </span><a href="https://www.wivk.com/2024/05/28/enter-to-win-robert-earl-keen-tickets-at-the-tennessee-theatre/" class="more-link">More</a></p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-2348723 --><article id="post-2348622" class="post-2348622 post type-post status-publish format-standard has-post-thumbnail hentry category-contests category-whats-happening author-cemerson alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/27/enter-to-win-a-fathers-day-dinner-at-wasabi/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/27235026/fddou.png" alt="Enter to Win a Father&#8217;s Day Dinner at Wasabi!" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/27/enter-to-win-a-fathers-day-dinner-at-wasabi/" title="Enter to Win a Father&#8217;s Day Dinner at Wasabi!" rel="bookmark">Enter to Win a Father&#8217;s Day Dinner at Wasabi!</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>107.7 WIVK and Wasabi Japanese Steakhouse on Bearden Hill want you to celebrate Dad this Father&#8217;s Day with dinner on us! Enter below for your chance to win dinner for your family at the grill at Wasabi Japanese Steakhouse on Bearden Hill on Father&#8217;s Day!<span class="more-link-ellipsis">&#8230;  </span><a href="https://www.wivk.com/2024/05/27/enter-to-win-a-fathers-day-dinner-at-wasabi/" class="more-link">More</a></p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-2348622 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2348247" class="post-2348247 post type-post status-publish format-standard has-post-thumbnail hentry category-whats-happening author-bshoesmith custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/09/sports-animal-sportsfest-2024-saturday-june-1st/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/13134303/SportsFest-Feature-2024-WIVK.png" alt="Sports Animal SportsFest 2024- Saturday, June 1st" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/09/sports-animal-sportsfest-2024-saturday-june-1st/" title="Sports Animal SportsFest 2024- Saturday, June 1st" rel="bookmark">Sports Animal SportsFest 2024- Saturday, June 1st</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>99.1 The Sports Animal is proud to present the 3rd Annual Sports Animal SportsFest on Saturday, June 1st, 2024 at Knoxville Expo Center!<span class="more-link-ellipsis">&#8230;  </span><a href="https://www.wivk.com/2024/05/09/sports-animal-sportsfest-2024-saturday-june-1st/" class="more-link">More</a></p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-2348247 --><article id="post-2348356" class="post-2348356 post type-post status-publish format-standard has-post-thumbnail hentry category-whats-happening author-cemerson alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/07/pontiacs-in-pigeon-forge/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/27084519/Pontiacs-in-PF-scaled-3.jpg" alt="Pontiacs In Pigeon Forge" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/07/pontiacs-in-pigeon-forge/" title="Pontiacs In Pigeon Forge" rel="bookmark">Pontiacs In Pigeon Forge</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>Pontiacs In Pigeon Forge is back May 30th through June 1st at the LeConte Center! The annual Pontiacs in Pigeon Forge features a Swap Meet and classic GTO’s, Firebirds, Fieros, Best in Show, and Best in Stock! Register and get more information HERE In 2024, Pontiacs in Pigeon Forge will be held at the&nbsp;LeConte Center!<span class="more-link-ellipsis">&#8230;  </span><a href="https://www.wivk.com/2024/05/07/pontiacs-in-pigeon-forge/" class="more-link">More</a></p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-2348356 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2347834" class="post-2347834 post type-post status-publish format-standard has-post-thumbnail hentry category-whats-happening author-cemerson custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/04/19/dollywoods-flower-food-festival-2/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/19131110/Dollywood-Flower-and-Food-2024.png" alt="Dollywood&#8217;s Flower &#038; Food Festival!" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/04/19/dollywoods-flower-food-festival-2/" title="Dollywood&#8217;s Flower &#038; Food Festival!" rel="bookmark">Dollywood&#8217;s Flower &#038; Food Festival!</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>Dollywood&#8217;s Flower and Food Festival is back now through June 9th! Experience the splendor of springtime in the Smokies. Blooming to life in spectacular color, Dollywood&#8217;s Flower &amp; Food Festival presented by Covenant Health celebrates the beautiful blossoms and fresh flavors of the season with larger-than-life Mosaicultures, unique foods, and NEW stage shows! Capture picture-perfect&hellip;<span class="more-link-ellipsis">&#8230;  </span><a href="https://www.wivk.com/2024/04/19/dollywoods-flower-food-festival-2/" class="more-link">More</a></p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-2347834 --><article id="post-2346782" class="post-2346782 post type-post status-publish format-standard has-post-thumbnail hentry category-whats-happening author-cemerson alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/03/01/st-jude-partner-in-hope-info/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/03/01154415/pih-info-graphic.png" alt="St. Jude Partner In Hope Info" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/03/01/st-jude-partner-in-hope-info/" title="St. Jude Partner In Hope Info" rel="bookmark">St. Jude Partner In Hope Info</a></h2></header><div class="entry-summary entry-content" itemprop="text"><p>Thank you to all of our St. Jude Partner&#8217;s in Hope from our 2023 St. Jude Radiothon that helped us raise $417,284 for St. Jude Children&#8217;s Research Hospital! For all of our Partner&#8217;s in Hope that donate $19 or more monthly and signed up during our 2023 Radiothon, your Dollywood tickets are now available for&hellip;<span class="more-link-ellipsis">&#8230;  </span><a href="https://www.wivk.com/2024/03/01/st-jude-partner-in-hope-info/" class="more-link">More</a></p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-2346782 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b9z57cee5e3ef70c -->
+
+<section class="sub-column sub-column-1 column column-1 grid-width-8 grid-left-0">
+<div id="block-48" class="facebook block block-type-custom-code block-fluid-height" data-alias="Facebook Widget">
+<div class="block-content">
+<div class="fb-page" data-href="https://www.facebook.com/WIVK1077/" data-tabs="timeline" data-width="" data-height="550" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WIVK1077/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WIVK1077/">WIVK 107.7</a></blockquote></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-48 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-8 grid-left-0">
+<div id="block-49" class="twitter block block-type-custom-code block-fluid-height" data-alias="Instagram">
+<div class="block-content">
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/wivk1077/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/wivk1077/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/wivk1077/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">WIVK 107.7 🐸</a> (@<a href="https://www.instagram.com/wivk1077/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">wivk1077</a>) • Instagram photos and videos</p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+</div><!-- .block-content -->
+
+</div><!-- #block-49 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-1 column column-1 grid-width-8 grid-left-0">
+<div id="block-bjd6638dd2d849a5" class="downloadapp block block-type-custom-code block-fluid-height" data-alias="Download App">
+<div class="block-content">
+<div class="fb-page" data-href=https://express-images.franklymedia.com/6616/sites/602/2024/05/06090841/WIVK_APP_275.png" data-tabs="timeline" data-width="275" data-height="175" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WIVK1077/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WIVK1077/">WIVK 107.7</a></blockquote></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bjd6638dd2d849a5 -->
+
+</section><!-- .sub-column -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<div id="block-34" class="300x250-ad-1 block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 1">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<div id="block-38" class="sweet-deals-ad block block-type-custom-code block-fluid-height" data-alias="Sweet Deals Ad">
+<div class="block-content">
+<a href="https://www.sweetdeals.com/knoxville/deals"><img src="/wp-content/uploads/sites/602/2014/10/sweetdeals.png"></a>
+</div><!-- .block-content -->
+
+</div><!-- #block-38 -->
+<aside id="block-bhg64f8ba6200608" class="headlines block block-type-widget-area block-fluid-height" data-alias="newsletter image" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li id="simpleimage-2" class="widget widget_simpleimage">
+
+
+	<p class="simple-image">
+		<a href="/country-club/"><img width="300" height="155" src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06134420/WIVK-Country-Club-Web-Feature-Header-300x155.png" class="attachment-medium size-medium" alt="" decoding="async" srcset="https://express-images.franklymedia.com/6616/sites/602/2023/09/06134420/WIVK-Country-Club-Web-Feature-Header-300x155.png 300w, https://express-images.franklymedia.com/6616/sites/602/2023/09/06134420/WIVK-Country-Club-Web-Feature-Header.png 660w" sizes="(max-width: 300px) 100vw, 300px" /></a>	</p>
+
+
+</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-bhg64f8ba6200608 -->
+<aside id="block-45" class="free-apps block block-type-widget-area block-fluid-height" data-alias="Home - Free Apps" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<h1 class="block-title"><span>Free Apps</span></h1><ul class="widget-area"><li id="text-3" class="widget widget_text">
+			<div class="textwidget"><div align="center">
+<a href="https://itunes.apple.com/us/app/wivk-fm/id381043770?mt=8" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/602/2014/10/appstore.png" border="0"></a>&nbsp;<a href="https://play.google.com/store/apps/details?id=com.airkast.WIVKFM" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/602/2014/10/googleplay.png" border="0"></a>&nbsp;<a href="https://amazon.com/dp/B00FTGX336" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/602/2014/10/amazon.png" border="0"></a>
+</div></div>
+		</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-45 -->
+<div id="block-bfu5e877f5da0b7d" class="headlines block block-type-content block-fluid-height" data-alias="Local News">
+<div class="block-content">
+<h1 class="block-title"><span>Local News</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-2348721" class="post-2348721 post type-post status-publish format-standard has-post-thumbnail hentry category-local-news category-news-top-stories author-rtravers custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/30/person-dumps-puppies-in-cocke-county-sheriffs-office-says/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/30175653/Puppies-Dumped-Cocke-Co.jpg#aqua_resizer_image_not_local" alt="Person Dumps Puppies in Cocke County, Sheriff’s Office Says" width="65" height="65" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/30/person-dumps-puppies-in-cocke-county-sheriffs-office-says/" title="Person Dumps Puppies in Cocke County, Sheriff’s Office Says" rel="bookmark">Person Dumps Puppies in Cocke County, Sheriff’s Office Says</a></h2></header></article><!-- #post-2348721 --><article id="post-2348689" class="post-2348689 post type-post status-publish format-standard has-post-thumbnail hentry category-local-news category-local-news-reel-1 category-news-top-stories author-rcadle alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/30/the-jury-reaches-a-verdict-in-the-hush-money-trial-against-former-president-donald-trump/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<div style="position:relative;display:inline-block;">
+				<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/30085904/Screenshot-3568.png#aqua_resizer_image_not_local" alt="The Jury Reaches a Verdict in the Hush Money Trial Against Former President Donald Trump" width="65" height="65" itemprop="image" />
+				<div style="text-align:left;color:#ffffff;background-color:rgba(0,0,0,.7);position:absolute;bottom:0px;left: 0px;right: 0px;font-size:9px;line-height:10px;padding:3px 5px;">
+					Photo courtesy of Fox News				</div>
+			</div>
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/30/the-jury-reaches-a-verdict-in-the-hush-money-trial-against-former-president-donald-trump/" title="The Jury Reaches a Verdict in the Hush Money Trial Against Former President Donald Trump" rel="bookmark">The Jury Reaches a Verdict in the Hush Money Trial Against Former President Donald Trump</a></h2></header></article><!-- #post-2348689 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2348715" class="post-2348715 post type-post status-publish format-standard has-post-thumbnail hentry category-local-news category-local-news-reel-2 category-news-top-stories author-rtravers custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/30/knoxville-man-charged-in-dui-crash-that-critically-injured-woman-on-moped/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/30154213/Matthew-Christian-49.jpg#aqua_resizer_image_not_local" alt="Knoxville Man Charged in DUI Crash that Critically Injured Woman on Moped" width="65" height="65" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/30/knoxville-man-charged-in-dui-crash-that-critically-injured-woman-on-moped/" title="Knoxville Man Charged in DUI Crash that Critically Injured Woman on Moped" rel="bookmark">Knoxville Man Charged in DUI Crash that Critically Injured Woman on Moped</a></h2></header></article><!-- #post-2348715 --><article id="post-2348716" class="post-2348716 post type-post status-publish format-standard has-post-thumbnail hentry category-local-news category-local-news-reel-1 category-news-top-stories author-rtravers alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/2024/05/30/meads-quarry-lake-to-be-closed-longer-than-expected/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/30154212/Meads-Quarry-Lake-Rockfall-052524.jpg#aqua_resizer_image_not_local" alt="Mead’s Quarry Lake to be Closed Longer than Expected" width="65" height="65" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/2024/05/30/meads-quarry-lake-to-be-closed-longer-than-expected/" title="Mead’s Quarry Lake to be Closed Longer than Expected" rel="bookmark">Mead’s Quarry Lake to be Closed Longer than Expected</a></h2></header></article><!-- #post-2348716 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bfu5e877f5da0b7d -->
+<div id="block-b19554809030a362" class="weather block block-type-custom-code block-fluid-height" data-alias="Weather">
+<div class="block-content">
+<h1 class="block-title"><span>Weather</span></h1>
+
+<style type="text/css">#tabbed_weather_widget {
+	font-family: Arial, sans-serif;
+	overflow: hidden;
+	position: relative;
+	width: 300px;
+}
+#tabbed_weather_widget ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#tabbed_weather_widget .ww_header {
+	margin-left: -15;
+	padding-right: 0;
+}
+#tabbed_weather_widget .ww_sponsor {
+	margin-left: -16;
+	padding: 0;
+}
+#tabbed_weather_widget .ww_tabs {
+	display: table;
+	font-size: 13px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+}
+#tabbed_weather_widget .ww_tabs li {
+	background: #FFF;
+	border: 1px solid #5C5C5C;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	border-top-right-radius: 8px;
+	color: #888;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-weight: bold;
+	line-height: 24px;
+	margin: 0 -1px 0 0;
+	text-align: center;
+	width: 96px;
+}
+	#tabbed_weather_widget .ww_tabs li.ww_active {
+		background: #B2D1FF;
+		color: #333;
+	}
+#tabbed_weather_widget .ww_content li {
+	display: none;
+}
+	#tabbed_weather_widget .ww_content img {
+		margin-left: -50px;
+		width: 380px;
+		-ms-interpolation-mode: bicubic;
+	}
+#tabbed_weather_widget li.ww_active { display: block; }
+</style>
+<div id="tabbed_weather_widget">
+<div class="ww_header"></div>
+
+<ul class="ww_tabs">
+	<li class="ww_active">Forecast</li>
+	<li>Currents</li>
+	<li>Planner</li>
+</ul>
+
+<ul class="ww_content">
+	<li class="ww_active"><img src="https://gray.ftp.clickability.com/wvltwebftp/wx/WEB_EDTV_8DAY_600X400.jpg" /></li>
+	<li><img src="https://gray.ftp.clickability.com/wvltwebftp/wx/WEB_EDTV_DMA_TEMPS_600X400.jpg" /></li>
+	<li><img src="https://gray.ftp.clickability.com/wvltwebftp/wx/WEB_HOURLY_PLANNER_600X400.jpg" /></li>
+</ul>
+
+
+</div>
+<script>
+(function($){
+	
+	$('#tabbed_weather_widget .ww_tabs li').click(function() {
+		var i = $(this).index();
+		$('#tabbed_weather_widget .ww_tabs li')
+			.removeClass('ww_active')
+			.eq(i).addClass('ww_active');
+		$('#tabbed_weather_widget .ww_content li')
+			.removeClass('ww_active')
+			.eq(i).addClass('ww_active');
+	});
+
+	var mouse_is_in = false;
+	$('#tabbed_weather_widget').hover(
+		function() { mouse_is_in = ! mouse_is_in; }
+	);
+
+	function switchTab() {
+		if ( ! mouse_is_in) {
+			var i = $('#tabbed_weather_widget .ww_tabs li.ww_active').index();
+			var len = $('#tabbed_weather_widget .ww_tabs li').length;
+			i = (i + 1 !== len) ? i + 1 : 0;
+			$('#tabbed_weather_widget .ww_tabs li').eq(i).click();
+		}
+	}
+
+	setInterval(switchTab, 5500);
+
+})(jQuery.noConflict());
+</script>
+<a href="https://www.wvlt.tv/weather" target="_top"><img src="https://express-images.franklymedia.com/6616/sites/602/2018/04/30155412/wvlt-weather.jpg"</a>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-b19554809030a362 -->
+<div id="block-40" class="headlines block block-type-content block-fluid-height" data-alias="Country News">
+<div class="block-content">
+<h1 class="block-title"><span>Country News</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-2348642" class="post-2348642 feed_posts type-feed_posts status-publish hentry category-country-now custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/dustin-lynch-shares-video-for-jelly-roll-collab-chevrolet/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/dustinlynch-24052024-lt.jpg" alt="Dustin Lynch Shares Video For Jelly Roll Collab &#8216;Chevrolet&#8217;" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/dustin-lynch-shares-video-for-jelly-roll-collab-chevrolet/" title="Dustin Lynch Shares Video For Jelly Roll Collab &#8216;Chevrolet&#8217;" rel="bookmark">Dustin Lynch Shares Video For Jelly Roll Collab &#8216;Chevrolet&#8217;</a></h2></header></article><!-- #post-2348642 --><article id="post-2348614" class="post-2348614 feed_posts type-feed_posts status-publish hentry category-country-now alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/morgan-wallens-nashville-bar-opening-postponed/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/morgan-08022024-lt.jpg" alt="Morgan Wallen&#8217;s Nashville Bar Opening Postponed" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/morgan-wallens-nashville-bar-opening-postponed/" title="Morgan Wallen&#8217;s Nashville Bar Opening Postponed" rel="bookmark">Morgan Wallen&#8217;s Nashville Bar Opening Postponed</a></h2></header></article><!-- #post-2348614 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2348606" class="post-2348606 feed_posts type-feed_posts status-publish hentry category-country-now custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/miranda-lambert-mickey-guyton-more-to-appear-on-nhls-stanley-pup-competition/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/miranda-15022024-lt.jpg" alt="Miranda Lambert, Mickey Guyton &amp; More To Appear On NHL&#8217;s &#8220;Stanley Pup&#8221; Competition" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/miranda-lambert-mickey-guyton-more-to-appear-on-nhls-stanley-pup-competition/" title="Miranda Lambert, Mickey Guyton &amp; More To Appear On NHL&#8217;s &#8220;Stanley Pup&#8221; Competition" rel="bookmark">Miranda Lambert, Mickey Guyton &amp; More To Appear On NHL&#8217;s &#8220;Stanley Pup&#8221; Competition</a></h2></header></article><!-- #post-2348606 --><article id="post-2348605" class="post-2348605 feed_posts type-feed_posts status-publish hentry category-country-now alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/carly-pearce-announces-return-of-carlys-closet-at-cma-fest/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/carlypearce-14052024-lt.jpg" alt="Carly Pearce Announces Return Of Carly&#8217;s Closet At CMA Fest" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/carly-pearce-announces-return-of-carlys-closet-at-cma-fest/" title="Carly Pearce Announces Return Of Carly&#8217;s Closet At CMA Fest" rel="bookmark">Carly Pearce Announces Return Of Carly&#8217;s Closet At CMA Fest</a></h2></header></article><!-- #post-2348605 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2348604" class="post-2348604 feed_posts type-feed_posts status-publish hentry category-country-now custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/jewel-announces-new-ep-the-portal-a-meditative-journey-shares-title-track/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/jewel-23052024-lt.jpg" alt="Jewel Announces New EP &#8216;The Portal: A Meditative Journey,&#8217; Shares Title Track" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/jewel-announces-new-ep-the-portal-a-meditative-journey-shares-title-track/" title="Jewel Announces New EP &#8216;The Portal: A Meditative Journey,&#8217; Shares Title Track" rel="bookmark">Jewel Announces New EP &#8216;The Portal: A Meditative Journey,&#8217; Shares Title Track</a></h2></header></article><!-- #post-2348604 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-40 -->
+<div id="block-42" class="facebook-ad block block-type-custom-code block-fluid-height" data-alias="Facebook Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-8" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-8",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-42 -->
+<div id="block-36" class="vip-club-ad block block-type-custom-code block-fluid-height" data-alias="VIP Club Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-7" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-7",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest1")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-36 -->
+<div id="block-44" class="twitter-ad block block-type-custom-code block-fluid-height" data-alias="Twitter Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-9" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-9",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest3")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-44 -->
+<div id="block-46" class="300x250-ad-2 block block-type-custom-code block-fluid-height" data-alias="300x250 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-3" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-3",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600], [300, 50], [320, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-46 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-10" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-51" class="728x90-ad-2 block block-type-custom-code block-fluid-height" data-alias="728x90 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-center"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-2264163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2264163"><a href="https://www.wivk.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-2346371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346371"><a href="https://www.wivk.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-2264165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2264165"><a href="https://www.wivk.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.wivk.com/station-information/">Station Information</a></li>
+<li id="menu-item-2336522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2336522"><a href="https://www.wivk.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a target="_blank" rel="noopener" href="https://www.wivk.com/2024/03/29/eeo-report-2/">EEO Report</a></li>
+<li id="menu-item-1692532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1692532"><a href="https://www.wivk.com/category/whats-happening/join-our-team/">Join Our Team</a></li>
+<li id="menu-item-1971974" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1971974"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+<li id="menu-item-2006422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2006422"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/fm-profile/WIVK-FM">FCC Public File</a></li>
+<li id="menu-item-2288400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2288400"><a target="_blank" rel="noopener" href="https://www.wivk.com/fcc-applications/">FCC Applications</a></li>
+</ul></div><!-- .nav-horizontal nav-align-center -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2020 Cumulus Media / Cumulus Media is an equal opportunity employer / AA</p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.wivk.com/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<div id="block-bw955d350065b3f7" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bw955d350065b3f7 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- TGMP PLUGIN ENABLED 2016-08-05T15:19:55.097Z -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_10035/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3LndpdmsuY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwIiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy53aXZrLmNvbS93cC1jb250ZW50L3BsdWdpbnMiLCJseiI6IjEiLCJlbWFpbFN1YiI6IkNoZWNrIHRoaXMgb3V0ISIsIm5vcCI6IkNoZWNrIHRoaXMgb3V0ISIsImxpZ2h0Ym94Ijp7ImkxOG4iOnsidENvdW50ZXIiOiIlY3VyciUgb2YgJXRvdGFsJSJ9fSwic192IjoiNS4zLjkifTs="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.wivk.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.wivk.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://wivk.tunegenie.com/station/pwa/fullfooter.js?bs=wivk"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "wivk";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 394/670 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-30 19:05:08 by W3 Total Cache
+-->

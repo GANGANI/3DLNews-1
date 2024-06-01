@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3ABN - Three Angels Broadcasting Network</title>
+  <link rel="stylesheet" href="https://r.3abn.org/menu/latest/static/css/main.css">
+  <link rel="stylesheet" href="https://r.3abn.org/epg/latest/static/css/main.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/character-count.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
+  <link rel="stylesheet" href="/css/news.css">  
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+  <script src="/js/Parsley/parsley.js"></script>
+  <script src="/js/csi2.js"></script>
+  <meta property="fb:app_id" content="454608318077415">
+  <meta property="og:title" content="3ABN - Three Angels Broadcasting Network">
+  <meta property="og:image" content="/img/3abn-ogg.png">
+  <meta property="og:description" content="Reaching the world for Jesus">
+  <meta name="Description" content="Counteracting the counterfeit by proclaiming the three angels' messages of Revelation 14:6-12 to the world.">
+  <meta name="keywords" content="Christian television broadcasting network, Three Angels Broadcasting, Mending Broken People Network, Bible Prophecy, Prophecy, Bible Study, Bible Teaching, Healthy Lifestyle, End-Times, Sabbath, Powerful Testimonies, Daniel and Revelation, Sabbath School, Health Education, Vegan Cooking, Inspirational Music, Danny Shelton, John Lomacang, Greg Morikone, Jill Morikone">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/3abn-apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/3abn-apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/3abn-apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/3abn-apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/3abn-apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/3abn-apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/3abn-apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/3abn-apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/3abn-apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/3abn-android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/3abn-android-icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/3abn-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/3abn-favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/3abn-favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/3abn-ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!--script(id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer)-->
+  <meta name="google-site-verification" content="8bmKIODldlJF9JXZinHFul51k19RWy38yVU6VJIb6w0">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <link rel="stylesheet" href="https:////code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script> var _ctct_m = "0d23c6476bbf450719a43220666ea990"; </script>
+  <script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+
+
+  <script type="text/babel">
+const eventList = [
+  /*
+  {
+  eventId: "", 
+  beginDate: "11/02/2019", endDate: "11/02/2019", 
+  dateForSorting: "11/02/2019", 
+  firstShowDate: "09/01/2019", expirationDate: "12/01/2019", expirationFromHistory: "01/01/2021", 
+  thumbnail: "",
+  event: (
+    <>
+    <h1></h1>
+    <p></p>    
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p></p>
+    <p></p> 
+    <p></p>     
+    </>
+  )
+  },
+
+
+  *list styling
+
+      <dl>
+        <dt><b></b></dt>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+      </dl> 
+      <p></p>
+      <p></p>
+
+  - Fields:
+  - eventId - a unique id for the event
+  - beginDate - the begin date (where in the months the event will show up)
+  - endDate - the last date (where in the months the event will show up)
+  - dateForSorting - the date for sorting this event
+  - firstShowDate - the first date this event will show up
+  - expirationDate - the date this event will no longer be shown in the current calendars. It will still appear in the month it happened and in the "past news & events"
+  - expirationFromHistory - the date the event will no longer appear in the history or anywhere (past news & events)
+  - thumbnail - relative path to the image for this event
+  - event - html between <> and closing </> tags, which is always shown on the page
+  - eventDetails - html between <> and closing </> tags, which is shown when "view event details..." is clicked to expand the event details. 
+  */
+  
+  {
+  eventId: "3ABN+App", 
+  beginDate: "05/06/2021", endDate: "12/31/2100", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "12/31/2100", expirationFromHistory: "12/31/2100", 
+  thumbnail: "/img/news/3ABN+news.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">The 3ABN+ App is Here!</h1>
+    <p>The big day weâve been waiting for is finally here! Now you can watch 3ABN across many different platforms on our new app called 3ABN+! Just look at all you get from this free app:
+	 <ul>
+		 <li>Watch and listen to<strong>&nbsp;live streams</strong>&nbsp;of all of 3ABNâs TV and radio networks.</li>
+		 <li><strong>No commercial interruptions</strong></li>
+		 <li>Watch<strong>&nbsp;over 2,500 programs on-demand</strong>âwith more being added every week!</li>
+		 <li><strong>Search&nbsp;</strong>by topic, presenter, or title.</li>
+	</ul></p>
+	
+	<h3>Watch Any Way You Like</h3>
+    <p>You can watch 3ABN+ on:
+	    <ul>
+		    <li><a href="https://play.google.com/store/apps/details?id=org.threeabn.threeabnapp" rel="noreferrer noopener" target="_blank">Android</a>&nbsp;or&nbsp;<a href="https://apps.apple.com/us/app/3abn-three-angels-broadcasting/id680258460" rel="noreferrer noopener" target="_blank">iOS</a>&nbsp;smartphones and tablets</li>
+	    	<li><strong>Amazon Fire</strong></li>
+	    	<li><strong>Apple TV</strong></li>
+	    	<li><strong>Roku</strong></li>
+	    	<li><strong>Android TV</strong></li>
+	    	<li><strong>Laptop and desktop</strong>&nbsp;computers (on&nbsp;<a href="https://3abnplus.tv/catalog" rel="noreferrer noopener" target="_blank">3ABNPlus.tv</a>)</li>
+		</ul>
+	    <i><em>In addition, you can&nbsp;</em><strong><em>screen mirror</em></strong><em>&nbsp;your Android or iOS device and watch 3ABN on TV!</em></i></p>
+    
+    <h3>Account or No Account?</h3>
+    <p><strong><em>You donât have to sign up for an account</em></strong>&nbsp;to watch any of our content. Even without an account, you can still enjoy all these features:&nbsp;
+	    <ul>
+		    <li><strong>Save programs</strong>&nbsp;to a Favorites list</li>
+		    <li><strong>Download programs</strong>&nbsp;to watch offline</li>
+		    <li><strong>Download and print PDF</strong>&nbsp;study guides, recipes, kidâs crafts, and more</li>
+	    </ul> 
+	    However,<strong><em>&nbsp;if you do&nbsp;</em></strong><a href="https://3abnplus.tv/catalog" rel="noreferrer noopener" target="_blank"><i>sign up</i></a><strong><em>&nbsp;for a free account,</em></strong>&nbsp;youâll also be able to:&nbsp;<strong>pick up where you left off</strong>&nbsp;on another device and <strong>leave comments&nbsp;</strong>
+	    
+	    If you already have the 3ABN App and your device is set to&nbsp;<strong><em>auto update,</em></strong>&nbsp;it will do so on its own. Otherwise, you will need to&nbsp;<strong>manually update</strong>&nbsp;the app.&nbsp;</p>
+    
+    <h3>Evangelism Made Easy</h3>
+    <p>3ABN+ is a wonderful evangelism tool as well, by allowing you&nbsp;<strong>to share a link to a favorite 3ABN program.&nbsp;</strong>A simple click allows you to&nbsp;<strong>share a link by text, email, or post it on social media</strong>âand the Holy Spirit will do the rest!&nbsp;<br /><br />
+	    Subscribing to 3ABN+ is&nbsp;<em>free!</em>&nbsp;<strong>Just download 3ABN+ to any of the devices listed and start watching today!</strong></p>
+	   
+    </>
+  )
+  }
+  
+];
+  </script>
+  <script type="text/jsx" src="/js/news2.js"></script>
+</head>
+<body>
+  <div data-include="/top-menu.html"></div>
+  <div class="grid-container">
+    <div id="menu-3abn-root"></div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-y">
+      <div class="cell small-12 medium-8 large-5 align-self-middle text-center"><a href="/index.html"><img src="/img/logos/3abn-logo.png" style="padding-right: 10px;"></a>
+        <div class="show-for-small-only">
+          <a class="button success" href="/donate.html">DONATE</a>
+          <a class="button expanded hollow" href="https://3abnplus.tv/catalog">WATCH 3ABN TV</a>
+          <a class="button expanded hollow" href="/3abn-radio-broadcast.html">LISTEN 3ABN RADIO</a></div>
+      </div>
+      <div class="cell small-12 medium-4 large-2 align-self-middle text-left hide-for-small-only">
+        <ul class="no-bullet">
+          <li>
+            <h5>
+              &nbsp;<i class="fas fa-angle-right"></i><a class="int" href="/networks.html">&nbsp; Our TV Networks </a></h5>
+          </li>
+          <li>
+            <h5>
+              &nbsp;<i class="fas fa-angle-right"></i><a class="int" href="/networks-radio.html">&nbsp; Our Radio Networks</a></h5>
+          </li>
+        </ul>
+      </div>
+      <div class="cell small-12 medium-12 large-5 align-self-middle text-center hide-for-small">
+        <div class="grid-x grid-padding-y align-right">
+          <div class="cell">
+            <!-- a(href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UYJVUZRSBUCYY&source=url")img(src="/img/donate/giving-tuesday-donate-btn.jpg") 
+            -->
+            <!-- a(href="https://cse.google.com/cse?cx=012326256068793904417:g1o5pcqlrqe") Search-->
+          </div>
+        </div>
+        <a class="social-icon-button twitter" href="https://twitter.com/3abn" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button facebook" href="https://www.facebook.com/3abn.org/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button linkedin" href="https://www.linkedin.com/company/three-angels-broadcasting-network-3abn-/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button instagram" href="https://www.instagram.com/3abn_official/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button flickr" href="https://www.flickr.com/photos/133818083@N08/albums" target="_blank"><i class="fab fa-flickr" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button youtube" href="https://www.youtube.com/user/3ABNVideos" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button android" href="https://play.google.com/store/apps/details?id=org.threeabn.threeabnapp" target="_blank"><i class="fab fa-android" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button apple" href="https://itunes.apple.com/us/app/3abn-three-angels-broadcasting/id680258460?mt=8" target="_blank"><i class="fab fa-apple" aria-hidden="true"></i><span></span></a>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <div id="news_page_container" class="grid-container news-page-container"></div>
+
+
+  <div class="grid-container">
+    <div class="grid-x align-center">
+      <div class="cell large-12">
+        <div id="sched-widget"></div>
+      </div>
+    </div>
+  </div>
+  
+<div data-include="/footer.html"></div>
+    <script>
+      // Google Analytics
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-23528960-14');ga('send','pageview');
+    </script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/what-input/dist/what-input.js"></script>
+    <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="/js/app-min.js"></script>
+    <script src="/js/top-nav-min.js"></script>
+    <script src="https://r.3abn.org/menu/latest/static/js/main.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Get quick access to in-depth, reliable reporting on a wide range of topics with Express News Now. Stay informed with the latest news, expert analysis, and timely updates. Your trusted source for comprehensive and up-to-date news coverage.">
+<meta name="keywords" content="latest news, live news, trending news, us news, tech news">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending News</title>
+<link rel="icon" type="image/x-icon" href="../images/favicon.svg" />
+
+
+<style type="text/css">@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:500;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:600;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/hebrew/wght/normal.woff2);unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Open Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/v/open-sans/5.0.20/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:400;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic/opsz/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:400;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin-ext/opsz/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:400;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin/opsz/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:400;src:url(/cf-fonts/v/source-serif-4/5.0.16/greek/opsz/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:400;src:url(/cf-fonts/v/source-serif-4/5.0.16/vietnamese/opsz/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:400;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic-ext/opsz/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:500;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin/opsz/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:500;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic/opsz/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:500;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin-ext/opsz/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:500;src:url(/cf-fonts/v/source-serif-4/5.0.16/greek/opsz/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:500;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic-ext/opsz/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:500;src:url(/cf-fonts/v/source-serif-4/5.0.16/vietnamese/opsz/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:600;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic/opsz/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:600;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin/opsz/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:600;src:url(/cf-fonts/v/source-serif-4/5.0.16/vietnamese/opsz/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:600;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic-ext/opsz/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:600;src:url(/cf-fonts/v/source-serif-4/5.0.16/greek/opsz/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:600;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin-ext/opsz/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:700;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic-ext/opsz/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:700;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin/opsz/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:700;src:url(/cf-fonts/v/source-serif-4/5.0.16/cyrillic/opsz/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:700;src:url(/cf-fonts/v/source-serif-4/5.0.16/greek/opsz/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:700;src:url(/cf-fonts/v/source-serif-4/5.0.16/latin-ext/opsz/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Serif 4;font-style:normal;font-weight:700;src:url(/cf-fonts/v/source-serif-4/5.0.16/vietnamese/opsz/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}</style>
+<link rel="stylesheet" href="../styles/main-v1.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="/scripts/website/outsideMenuClick.js"></script>
+<script src="/scripts/website/main-v1.js"></script>
+</head>
+<body style="display: none;">
+<div class="container">
+<header>
+<div class="header-inner">
+<div class="inner-nav-wrap">
+<div class="hamburger">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+<menu class="navbar-mobile">
+<ul class="main-nav-list" id="mobile-navbar">
+<li class="active" onclick="navLinkGoTo(event, '#')"><a href="#">home</a></li>
+<li onclick="navLinkGoTo(event, '#trending-section')">
+<a data-target="Trending" href="#trending-section">Trending</a>
+</li>
+<li onclick="navLinkGoTo(event, '#business-section')">
+<a data-target="Business" href="#business-section">Business</a>
+</li>
+<li onclick="navLinkGoTo(event, '#entertainment-section')">
+<a data-target="entertainment-section" href="#entertainment-section">Entertainment</a>
+</li>
+<li onclick="navLinkGoTo(event, '#politics-section')">
+<a data-target="Politics" href="#politics-section">Politics</a>
+</li>
+<li onclick="navLinkGoTo(event, '#sports-section')">
+<a data-target="Sports" href="#sports-section">Sports</a>
+</li>
+<li onclick="navLinkGoTo(event, '#science-section')">
+<a data-target="Science" href="#science-section">Science</a>
+</li>
+<li onclick="navLinkGoTo(event, '#technology-section')">
+<a data-target="Technology" href="#technology-section">Technology</a>
+</li>
+<li onclick="navLinkGoTo(event, '#world-section')">
+<a data-target="World" href="#world-section">World</a>
+</li>
+<li onclick="navLinkGoTo(event, '#us-section')">
+<a data-target="US" href="#us-section">US</a>
+</li>
+</ul>
+<button class="mobile-menu-dropdown">
+Our Products
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+<path d="M1 5L5 1L9 5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</button>
+<div class="mobile-menu-panel">
+<ul class="product-list" id="mobile-product-list">
+<li id="mobile-chrome"><a href="/product_cc">Chrome&trade; Extension</a></li>
+<li id="mobile-firefox"><a href="/product_ff">Firefox Extension</a></li>
+</ul>
+</div>
+</menu>
+<div class="logo-wrap" onclick="logoClick()">
+<a href="#">
+<img src="../images/nav-logo.svg" alt="site-logo" />
+</a>
+</div>
+</div>
+<nav class="desktop-nav">
+<ul class="nav-list" id="navbar">
+<li class="active" onclick="navLinkGoTo(event, '#')">
+<a href="#">Home</a>
+</li>
+<li onclick="navLinkGoTo(event, '#trending-section')">
+<a href="#trending-section" data-target="Trending">Trending</a
+                            >
+</li>
+<li onclick="navLinkGoTo(event, '#business-section')">
+<a href="#business-section" data-target="Business">Business</a
+                            >
+</li>
+<li onclick="navLinkGoTo(event, '#entertainment-section')">
+<a href="#entertainment-section" data-target="Entertainment">Entertainment</a
+                            >
+</li>
+<li>
+Other
+<div class="dropdown-content" id="other-categories">
+<div>
+<a href="#science-section" onclick="navLinkGoTo(event, '#science-section')" data-target="Science">Science</a
+                                    >
+</div>
+<div>
+<a href="#technology-section" onclick="navLinkGoTo(event, '#technology-section')" data-target="Technology">Technology</a
+                                    >
+</div>
+<div>
+<a href="#world-section" onclick="navLinkGoTo(event, '#world-section')" data-target="World">World</a
+                                    >
+</div>
+<div>
+<a href="#sports-section" onclick="navLinkGoTo(event, '#sports-section')" data-target="Sports">Sports</a
+                                    >
+</div>
+<div>
+<a href="#politics-section" onclick="navLinkGoTo(event, '#politics-section')" data-target="Politics">Politics</a
+                                    >
+</div>
+<div class="nav-1">
+<a href="#entertainment-section" onclick="navLinkGoTo(event, '#entertainment-section')" data-target="Entertainment">Entertainment</a
+                                    >
+</div>
+<div class="nav-2">
+<a href="#business-section" onclick="navLinkGoTo(event, '#business-section')" data-target="Business">Business</a
+                                    >
+</div>
+<div>
+<a href="#us-section" onclick="navLinkGoTo(event, '#us-section')" data-target="US">US</a>
+</div>
+</div>
+</li>
+<li>
+Our Products
+<div class="dropdown-content" id="products">
+<div id="desktop-chrome">
+<a href="/product_cc">Chrome&trade; Extension</a
+									>
+</div>
+<div id="desktop-firefox">
+<a href="/product_ff">Firefox Extension</a
+									>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+<input type="text" placeholder="Search" class="desktop-search" />
+<div class="mobile-search">
+<div class="mobile-search-inner">
+<input type="text" placeholder="Search" />
+<button aria-label="search" title="Search">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+<path d="M21.7913 20.8031L16.1112 15.2138C17.5986 13.5978 18.5126 11.4606 18.5126 9.10876C18.5119 4.07781 14.368 0 9.25593 0C4.14384 0 0 4.07781 0 9.10876C0 14.1397 4.14384 18.2175 9.25593 18.2175C11.4647 18.2175 13.4905 17.4535 15.0818 16.1834L20.7839 21.7947C21.0617 22.0684 21.5128 22.0684 21.7906 21.7947C22.0691 21.5211 22.0691 21.0768 21.7913 20.8031ZM9.25593 16.8161C4.93055 16.8161 1.42415 13.3654 1.42415 9.10876C1.42415 4.85211 4.93055 1.40144 9.25593 1.40144C13.5813 1.40144 17.0877 4.85211 17.0877 9.10876C17.0877 13.3654 13.5813 16.8161 9.25593 16.8161Z" fill="white" />
+</svg>
+</button>
+</div>
+</div>
+<div class="mobile-search-btn">
+<img class="search-icon" src="../images/search-icon.png" alt="search-icon" />
+<img class="close-icon" src="../images/closeicon.svg" alt="close-icon" />
+</div>
+</div>
+</header>
+<div class="wrapper-inner">
+<div class="wrapper-left">
+<section id="trending-section" class="banner trending-section">
+<div class="grid">
+<div class="banner-inner">
+<div class="banner-left">
+<h2>Trending News</h2>
+<hr>
+<div class="trend-inner">
+<div class="trend-cont-left">
+<a href="#" target="_blank">
+<div class="trend-img">
+<img src alt="trend-img">
+</div>
+<div class="trend-cont">
+<div class="trend-info">
+<span class="news-cat"></span>
+<span class="trend-time"></span>
+</div>
+<div class="trend-desc-wrap">
+<p class="trend-desc">
+</p>
+</div>
+</div>
+</a>
+</div>
+<div class="trend-cont-right">
+<ul class="trend-list">
+</ul>
+</div>
+</div>
+<button onclick="handleInputSearch('Trending', true)">Load more</button>
+</div>
+</div>
+</div>
+</section>
+<section id="sports-section" class="sports news-variant-1">
+<div class="grid">
+<div class="news-variant-inner-1">
+<h2>Sports</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-img-wrap">
+<img src alt="news-img">
+</div>
+<div class="main-desc-text-wrap">
+<p class="main-desc-text"></p>
+</div>
+</a>
+<hr class="divider-2">
+<ul></ul>
+<button onclick="handleInputSearch('Sports', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="politics-section" class="politics news-variant-2">
+<div class="grid">
+<div class="inner-grid">
+<h2>Politics</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-cont-wrap">
+<div class="main-cont-img">
+<img src alt="news-img">
+</div>
+<div class="main-cont-text">
+<h3 class="main-cont-title"></h3>
+<div class="main-cont-subtitle-wrap">
+<p class="main-cont-subtitle">
+</p>
+</div>
+</div>
+</div>
+</a>
+<hr class="desktop">
+<div class="news-variant-inner-2">
+</div>
+<button onclick="handleInputSearch('Politics', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="business-section" class="business news-variant-1">
+<div class="grid">
+<div class="news-variant-inner-1">
+<h2>Business</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-img-wrap">
+<img src alt="news-img">
+</div>
+<div class="main-desc-text-wrap">
+<p class="main-desc-text"></p>
+</div>
+</a>
+<hr class="divider-2">
+<ul>
+</ul>
+<button onclick="handleInputSearch('Business', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="entertainment-section" class="entertainment news-variant-2">
+<div class="grid">
+<div class="inner-grid">
+<h2>Entertainment</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-cont-wrap">
+<div class="main-cont-img">
+<img src="../images/politics-1.png" alt="news-img">
+</div>
+<div class="main-cont-text">
+<h3 class="main-cont-title"></h3>
+<div class="main-cont-subtitle-wrap">
+<p class="main-cont-subtitle">
+</p>
+</div>
+</div>
+</div>
+</a>
+<hr class="desktop">
+<div class="news-variant-inner-2">
+</div>
+<button onclick="handleInputSearch('Entertainment', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="technology-section" class="technology news-variant-1">
+<div class="grid">
+<div class="news-variant-inner-1">
+<h2>Technology</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-img-wrap">
+<img src alt="news-img">
+</div>
+<div class="main-desc-text-wrap">
+<p class="main-desc-text"></p>
+</div>
+</a>
+<hr class="divider-2">
+<ul>
+</ul>
+<button onclick="handleInputSearch('Technology', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="world-section" class="world news-variant-2">
+<div class="grid">
+<div class="inner-grid">
+<h2>World</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-cont-wrap">
+<div class="main-cont-img">
+<img src="../images/politics-1.png" alt="news-img">
+</div>
+<div class="main-cont-text">
+<h3 class="main-cont-title"></h3>
+<div class="main-cont-subtitle-wrap">
+<p class="main-cont-subtitle">
+</p>
+</div>
+</div>
+</div>
+</a>
+<hr class="desktop">
+<div class="news-variant-inner-2">
+</div>
+<button onclick="handleInputSearch('World', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="science-section" class="science news-variant-1">
+<div class="grid">
+<div class="news-variant-inner-1">
+<h2>Science</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-img-wrap">
+<img src alt="news-img">
+</div>
+<div class="main-desc-text-wrap">
+<p class="main-desc-text"></p>
+</div>
+</a>
+<hr class="divider-2">
+<ul>
+</ul>
+<button onclick="handleInputSearch('Science', true)">Load more</button>
+</div>
+</div>
+</section>
+<section id="us-section" class="us-news news-variant-2">
+<div class="grid">
+<div class="inner-grid">
+<h2>US News</h2>
+<hr>
+<a href="#" target="_blank">
+<div class="main-cont-wrap">
+<div class="main-cont-img">
+<img src="../images/politics-1.png" alt="news-img">
+</div>
+<div class="main-cont-text">
+<h3 class="main-cont-title"></h3>
+<div class="main-cont-subtitle-wrap">
+<p class="main-cont-subtitle">
+</p>
+</div>
+</div>
+</div>
+</a>
+<hr class="desktop">
+<div class="news-variant-inner-2">
+</div>
+<button onclick="handleInputSearch('US', true)">Load more</button>
+</div>
+</div>
+</section>
+</div>
+<div class="wrapper-right">
+<div class="banner-right">
+<div class="widget-wrap">
+<h2>News you need, when you need it.</h2>
+<p class="widget-desc"> Get quick access to in-depth, reliable reporting on a wide range of topics with Trending News.</p>
+<h2 class="desktop">US News</h2>
+<hr class="desktop">
+<ul class="widget-list">
+</ul>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="grid">
+<p>
+Companies, product and service names, brands, logos or images mentioned here are trademarks or registered trademarks of their respective
+owners. Use of them here does not imply any endorsement by or affiliation with their respective holders.
+</p>
+<ul>
+<li>
+<a href="public/privacypolicy.html" target="_blank">Privacy Policy</a>
+</li>
+<li>
+<a href="public/termsofservice.html" target="_blank">Terms of Service</a>
+</li>
+<li>
+<a href="public/contactus.html" target="_blank">Contact Us </a>
+</li>
+<li>
+<a href="public/uninstall.html" target="_blank">Uninstall </a>
+</li>
+<li>
+<a href="public/ccpa.html" target="_blank">Do not Share My Personal Information</a>
+</li>
+</ul>
+</div>
+</footer>
+</div>
+<script>
+  
+        //Search icon click 
+        const navSearch = document.querySelector(".mobile-search-btn");
+        const navSearchBox = document.querySelector(".mobile-search")
+        
+        navSearch.addEventListener('click', function () {
+            navSearch.classList.toggle('active');
+            navSearchBox.classList.toggle('active');
+        });
+
+    </script>
+</body>
+</html>

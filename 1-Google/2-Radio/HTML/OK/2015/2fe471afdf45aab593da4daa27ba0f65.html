@@ -1,0 +1,1164 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>Lucky Star Casino 12/4 | KYIS-FM</title><link rel="canonical" href="https://www.kyis.com/amp-events/lucky-star-casino-124/" />
+
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/general-https-ABC123H.css?ver=20240527094329" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/general-https-ABC123H.css?ver=20240527094329' type='text/css' media='all' />
+<link rel="preload" href="https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/layout-single-https-ABC123H.css?ver=20240527094329" as="style"><link rel='stylesheet' id='headway-layout-single-https-css' href='https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/layout-single-https-ABC123H.css?ver=20240527094329' type='text/css' media='all' />
+<link rel="preload" href="https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/responsive-grid-https-ABC123H.css?ver=20240527094329" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/responsive-grid-https-ABC123H.css?ver=20240527094329' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530150524" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530150524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_10579/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/block-dynamic-js-layout-single-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-single-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.kyis.com/wp-content/uploads/sites/1020/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240527094329" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.kyis.com","site_id":"1020","tz":"America\/Chicago","tz_offset":"-5","ts":"1715610524","blog_name":"KYIS-FM","client_name":"cumuluspro","user_ID":"","alt_blog_name":"KYIS-FM","market":"Oklahoma City, OK","format":"Hot AC","ts_offset":"1717063524","version":"release-3.26.01","env":"prod","settings":{"tenant_id":"see_10579","syn_site_name":"KYIS-FM","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":"98-9 KISS-FM","default_show_img":false,"gtm_id":false,"format":"Hot AC","market":"Oklahoma City, OK","region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.kyis.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"1","moment_date_format":"MMMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"MM d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"1020","callsign":"","mount_name":"KYISFM","provider":"stream_the_world","gmt_offset":"-18000","live_url":"http:\/\/player.listenlive.co\/25271","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240530150524" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.kyis.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.kyis.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="KYIS-FM &raquo; Feed" href="https://www.kyis.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/1020/2017/03/29153832/kyis-sitelogo.png" />
+
+
+<link rel='shortlink' href='https://www.kyis.com/?p=446701' />
+	<script>
+		const express_config = { 
+			express_url : 'https://www.kyis.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/kyis-com\/',
+			rewards_id : '997',
+			site_id : '1020',
+			client_id : 'cumuluspro',
+			post_id : '446701',
+			tracking_meta_id: '6415806',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -5,
+			timezone : 'America/Chicago',
+			timezone_abbr : 'CDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -5 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'KYIS-FM','alt_station_name':'KYIS-FM','market':'Oklahoma City, OK','format':'Hot AC','author':'System User','page_type':'amp_event' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'G-LTSBVYGD9Y');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/1020/2017/03/29153832/kyis-sitelogo.png" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W864HB');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+	// SLOTS ARE DEFINED IN THEIR DISPLAY BLOCKS
+	window.GPT_SITE_ID = '/6717/cd.KYIS.FM';
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+	});
+</script>
+<!-- END 2023 CMLS GPT -->
+	
+
+<script type="text/javascript">var ajaxurl = "https://www.kyis.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'KYISFM');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Format  Hot AC', 'Market  Oklahoma City OK', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'Lucky Star Casino 124');
+      googletag.pubads().setTargeting('cms-pcat', '');
+			});
+		}
+		</script>
+		<link rel="preload" fetchpriority="high" href="https://www.kyis.com/wp-content/uploads/sites/1020/themify-concate/3568307525/themify-4105201084.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.kyis.com/wp-content/uploads/sites/1020/themify-concate/3568307525/themify-4105201084.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="KYIS-FM"/>
+  <meta property="og:title" content="Lucky Star Casino 12/4"/>
+  <meta property="og:url" content="https://www.kyis.com/amp-events/lucky-star-casino-124/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Cumulus"/>
+  <meta property="og:image" content="https://www.kyis.com/wp-content/uploads/sites/1020/2015/12/lsc-logo-top-1.png"/>
+  <meta property="og:image:url" content="https://www.kyis.com/wp-content/uploads/sites/1020/2015/12/lsc-logo-top-1.png"/>
+  <meta property="og:image:secure_url" content="https://www.kyis.com/wp-content/uploads/sites/1020/2015/12/lsc-logo-top-1.png"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Lucky Star Casino 12/4"/>
+  <meta itemprop="headline" content="Lucky Star Casino 12/4"/>
+  <meta itemprop="description" content="Cumulus"/>
+  <meta itemprop="image" content="https://www.kyis.com/wp-content/uploads/sites/1020/2015/12/lsc-logo-top-1.png"/>
+  <meta itemprop="author" content="jray"/>
+  <!--<meta itemprop="publisher" content="KYIS-FM"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="Lucky Star Casino 12/4"/>
+  <meta name="twitter:url" content="https://www.kyis.com/amp-events/lucky-star-casino-124/"/>
+  <meta name="twitter:description" content="Cumulus"/>
+  <meta name="twitter:image" content="https://www.kyis.com/wp-content/uploads/sites/1020/2015/12/lsc-logo-top-1.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="amp_event-template-default single single-amp_event postid-446701 is-headway-theme custom safari webkit responsive-grid-enabled responsive-grid-active layout-single-amp_event-446701 layout-using-single tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-48" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-32-10 responsive-grid wrapper-mirroring-8 wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="block block-type-custom-code block-fluid-height" data-alias="728x90 Leaderboard Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<figure id="block-31" class="logo block block-type-image block-fixed-height" data-alias="Logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="/" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/1020/2017/03/29153832/kyis-sitelogo.png" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-18">
+
+<section class="sub-column sub-column-1 column column-1 grid-width-5 grid-left-0">
+<aside id="block-29" class="on-air block block-type-widget-area block-fluid-height" data-alias="Home - On Air Now" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><div style="display:none;" class="amp-onair-widget" id="amp_onair_widget-2"
+	data-title-now=""
+	data-title-upcoming=""
+	data-title=""
+	data-type="nowplaying"
+	data-change-minutes="5"
+	data-change="0"
+	data-toggle-time="10"
+	data-fields="image,timeslot"
+	data-ajaxurl="https://www.kyis.com/wp-admin/admin-ajax.php"
+	data-updateurl="https://www.kyis.com/shows/feed/?type=json"
+	data-memcached="1"
+	data-expiration="1717081200">
+	
+<div class="amp-onair-show nowplaying" >
+
+    <div class="amp-onair-widget-title js-widget-title"></div>
+
+        <div class="amp-onair-show-image">
+                    <img class="js-image amp-onair-show-image-img" src="https://express-images.franklymedia.com/6616/sites/1020/2015/05/17145217/logo-KYIS.jpg"  />
+            </div>
+        
+    <div class="amp-onair-show-title">
+            <span class="js-title">Kaci Summers</span>
+        </div>
+    
+        <div class="amp-onair-show-timeslot js-timeslot" >10:00 a.m. - 3:00 p.m.</div>
+        
+        
+    
+</div>
+
+</div></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-29 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-10 grid-left-0">
+<section id="block-30" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="#"><img src="https://www.kyis.com/wp-content/uploads/sites/1020/2016/04/listen-live.png" alt="Listen Live!!" title="Listen Live!!" class="img-1"  /></a></li><li><a href="https://www.facebook.com/989kissfm" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/1020/2023/07/04021753/facebook.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-2"  /></a></li><li><a href="https://twitter.com/989kissfm" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/1020/2024/04/19135131/Social-X-Gray.png" alt="Follow us on X" title="Follow us on X" class="img-3"  /></a></li><li><a href="https://kyisfm.clubviprewards.com/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/1020/2023/07/04021824/cumulus-vip.png" alt="Join our VIP Club" title="Join our VIP Club" class="img-4"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-3 column column-3 grid-width-3 grid-left-0">
+<div id="block-b3p5a85d106cddff" class="gigya-actions block block-type-custom-code block-fluid-height" data-alias="Gigya Profile Actions">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b3p5a85d106cddff -->
+
+</section><!-- .sub-column -->
+<div id="block-bpz5a85d106c2e99" class="block block-type-custom-code block-fluid-height" data-alias="Empty Spacer">
+<div class="block-content">
+&nbsp;
+</div><!-- .block-content -->
+
+</div><!-- #block-bpz5a85d106c2e99 -->
+
+<section class="sub-column sub-column-1 column column-1 grid-width-15 grid-left-0">
+<nav id="block-32" class="main-nav block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left"><ul id="menu-main-navigation" class="menu"><li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-119"><a href="https://www.kyis.com/shows/">Shows</a>
+<ul class="sub-menu">
+	<li id="menu-item-443569" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443569"><a href="https://www.kyis.com/joey-and-heather-morning-show/">Joey and Heather Morning Show</a></li>
+	<li id="menu-item-102027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102027"><a href="https://www.kyis.com/kacisummers/">Kaci Summers</a></li>
+	<li id="menu-item-102012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102012"><a href="https://www.kyis.com/martha-steele/">Martha Steele</a></li>
+	<li id="menu-item-1507313" class="menu-item menu-item-type-post_type menu-item-object-amp-onair-pers menu-item-1507313"><a href="https://www.kyis.com/personalities/adam-bomb/">Adam Bomb</a></li>
+	<li id="menu-item-102033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-102033"><a href="https://www.kyis.com/shows/kiss-weekend/">KISS Weekend</a>
+	<ul class="sub-menu">
+		<li id="menu-item-102366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102366"><a href="http://dalydownload.cbslocal.com/">Daly Download with Carson Daly</a></li>
+		<li id="menu-item-102369" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102369"><a href="http://thehollywood5.com/">The Hollywood 5</a></li>
+		<li id="menu-item-1351400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1351400"><a href="https://www.facebook.com/SundayMorningMag">Sunday Morning Magazine</a></li>
+		<li id="menu-item-1072943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1072943"><a href="https://www.kyis.com/steve-kelly/">Steve Kelly</a></li>
+		<li id="menu-item-102009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102009"><a href="https://www.kyis.com/keri-evans/">Keri Evans</a></li>
+		<li id="menu-item-1385900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1385900"><a href="https://www.kyis.com/abe-froman/">Abe Froman</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-1636065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1636065"><a href="https://www.kyis.com/podcasts/">PODCASTS</a></li>
+<li id="menu-item-289215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-289215"><a href="https://www.kyis.com/category/dell-news-celebrities/">Trending &#038; News</a>
+<ul class="sub-menu">
+	<li id="menu-item-458224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458224"><a href="https://www.kyis.com/hollywood-hitz/">Hollywood Hitz</a></li>
+	<li id="menu-item-102216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102216"><a href="https://www.kyis.com/weather/">Weather</a></li>
+	<li id="menu-item-102249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102249"><a href="http://www.okcfox.com/category/244797/news">Local News</a></li>
+	<li id="menu-item-1646235" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1646235"><a href="https://www.kyis.com/category/music-news/">Music News</a></li>
+	<li id="menu-item-404568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404568"><a href="https://www.kyis.com/okc-thunder-2/">OKC Thunder</a></li>
+</ul>
+</li>
+<li id="menu-item-289206" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-289206"><a href="http://kyis.listenernetwork.com/asp2/contests.aspx">Contests</a>
+<ul class="sub-menu">
+	<li id="menu-item-1640221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1640221"><a href="https://express-images.franklymedia.com/6616/2021/11/15145250/11162021-Official-Rules-WWLS-Thunder-Ticket-Giveaway_Rockets.pdf">Thunder Ticket Contest Rules</a></li>
+</ul>
+</li>
+<li id="menu-item-1040459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1040459"><a href="https://www.kyis.com/events/">Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-1040357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1040357"><a href="https://www.kyis.com/concerts/">Concerts</a></li>
+	<li id="menu-item-123549" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123549"><a href="https://www.kyis.com/?p=123540">Station Appearances</a></li>
+	<li id="menu-item-154399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154399"><a href="https://www.kyis.com/community-eventscalendar/">Community Events Calendar</a></li>
+</ul>
+</li>
+<li id="menu-item-117" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117"><a href="https://www.sweetdeals.com/oklahoma-city/deals">Sweet Deals</a></li>
+<li id="menu-item-289338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-289338"><a href="https://www.kyis.com/station-information/">Connect</a>
+<ul class="sub-menu">
+	<li id="menu-item-102291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102291"><a href="https://www.kyis.com/station-information/">Station Information</a></li>
+	<li id="menu-item-1351384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1351384"><a href="https://www.kyis.com/careers/">Careers</a></li>
+	<li id="menu-item-102336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102336"><a href="https://www.kyis.com/mobile-apps/">Mobile App</a></li>
+	<li id="menu-item-102252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102252"><a href="https://www.facebook.com/989kissfm">Facebook</a></li>
+	<li id="menu-item-102255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102255"><a href="https://twitter.com/989kissfm">Twitter</a></li>
+	<li id="menu-item-102258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102258"><a href="https://instagram.com/989kissfm/">Instagram</a></li>
+</ul>
+</li>
+<li id="menu-item-1563233" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1563233"><a title="The coordinated advertising campaign that delivers results GUARANTEED." href="/epic">Advertising</a></li>
+<li id="menu-item-1575444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1575444"><a href="https://www.kyis.com/?p=1575158">LISTEN LIVE</a></li>
+</ul></div><!-- .nav-horizontal nav-align-left -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-3 grid-left-0">
+<nav id="block-33" class="nav-search block block-type-navigation block-fluid-height" data-alias="Navigation Search" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left nav-search-active nav-search-position-left"><div class="nav-search">
+		<form method="get" id="searchform" action="https://www.kyis.com/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="text" class="field" name="s" id="s" value="Search" onclick="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';" />
+			<input type="submit" class="submit" name="searchsubmit" id="searchsubmit" value="Search" />
+		</form>
+	</div></div><!-- .nav-horizontal nav-align-left nav-search-active nav-search-position-left -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-33 -->
+
+</section><!-- .sub-column -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-5">
+<div id="block-b8z54a44441b0250" class="takeover-left block block-type-custom-code block-fluid-height" data-alias="Skyscraper - Left">
+<div class="block-content">
+<!--
+<div id='div-gpt-ad-1418849849333-4'>
+<script type="module">
+googletag.cmd.push(function() {
+	var divId = "div-gpt-ad-1418849849333-4",
+		container = document.getElementById(divId);
+	window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+	// Do not call this ad if slot is hidden
+	if ( ! container || ! container.offsetParent) { return; }
+
+	// Don't show skyscrapers when viewport width < 1300px
+	var sizeMap = googletag.sizeMapping()
+		.addSize([1300,0], [160,600])
+		.addSize([0,0], [])
+		.build();
+
+	window.GPT_SITE_SLOTS[divId] = googletag.defineSlot(
+		GPT_SITE_ID,
+		[[160, 600]],
+		divId
+	)
+	.addService(googletag.pubads())
+	.defineSizeMapping(sizeMap)
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","left");
+
+	googletag.display(divId);
+});
+</script>
+</div>
+-->
+</div><!-- .block-content -->
+
+</div><!-- #block-b8z54a44441b0250 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-5">
+<div id="block-b0b54a44441b2caa" class="takeover-right block block-type-custom-code block-fluid-height" data-alias="Skyscraper - Right">
+<div class="block-content">
+<!--
+<div id='div-gpt-ad-1418849849333-5'>
+<script type="module">
+googletag.cmd.push(function() {
+	var divId = "div-gpt-ad-1418849849333-5",
+		container = document.getElementById(divId);
+	window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+	// Do not call this ad if slot is hidden
+	if ( ! container || ! container.offsetParent) { return; }
+
+	// Don't show skyscrapers when viewport width < 1300px
+	var sizeMap = googletag.sizeMapping()
+		.addSize([1300,0], [160,600])
+		.addSize([0,0], [])
+		.build();
+		
+	window.GPT_SITE_SLOTS[divId] = googletag.defineSlot(
+		GPT_SITE_ID,
+		[[160, 600]],
+		divId)
+	.addService(googletag.pubads())
+	.defineSizeMapping(sizeMap)
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","right");
+
+	googletag.display(divId);
+});
+</script>
+</div>
+-->
+</div><!-- .block-content -->
+
+</div><!-- #block-b0b54a44441b2caa -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-49" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-32-10 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<div id="block-130" class="block block-type-content block-fluid-height" data-alias="">
+<div class="block-content">
+<div class="loop"><article id="post-446701" class="post-446701 amp_event type-amp_event status-publish has-post-thumbnail hentry event_type-events author-jray " itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="entry-title" itemprop="headline">Lucky Star Casino 12/4</h1></header><div class="entry-content" itemprop="text"><div class="amp-event-single">
+    <div class="amp-event-schedule entry-meta entry-meta-above">
+        <span class="amp-event-date">December 4, 2015 3:00 pm - December 4, 2015 7:00 pm
+</span>
+    </div>
+    <div class='amp-event-content'></div>
+
+    
+	
+	<div class='google-calendar'>
+		<div class='google-calendar-add'><a href="#" class="js-amp-event-export-toggle">Add to my calendar</a></div>
+		<ul class="js-amp-event-export amp-event-export">
+			<li class="outlook"><svg class="outlook-icon" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="19" height="19" viewBox="0 0 88.026056 86" version="1.1" id="svg2" inkscape:version="0.48.3.1 r9886" sodipodi:docname="popwe.svg"><metadata id="metadata126"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs id="defs124"/><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1280" inkscape:window-height="960" id="namedview122" showgrid="false" inkscape:zoom="1.0905983" inkscape:cx="258.62288" inkscape:cy="53.75" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg2" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"/><path d="m 46.01,0 5.98,0 c 0,6.67 0,13.33 0,20 10.36,0.02 20.71,-0.03 31.06,0 2.04,-0.1 4.83,0.49 4.79,3.06 0.38,12.65 0.01,25.33 0.18,37.99 0.04,2.24 -0.03,5.77 -3.08,5.8 -10.97,0.38 -21.97,0.03 -32.95,0.15 0,6.33 0,12.67 0,19 l -6.2,0 C 30.55,83.23 15.27,80.68 0.01,78 0,54.67 0,31.34 0,8.02 15.34,5.33 30.68,2.73 46.01,0 z" id="path18" inkscape:connector-curvature="0" style="fill:#000"/><path d="m 51.99,23 c 11.08,0.01 22.15,-0.03 33.23,0.02 -0.19,1.31 -0.59,2.6 -1.69,3.42 C 76.91,32.61 70.33,38.81 63.73,45 59.76,41.41 55.9,37.7 51.99,34.05 c 0,-3.69 0,-7.37 0,-11.05 z" id="path64" inkscape:connector-curvature="0" style="fill:#ffffff"/><path d="m 21.44,26.66 c 5.64,-2.13 12.23,0.86 14.62,6.31 3.26,7.5 2.8,17.76 -3.68,23.43 -5.97,5.11 -15.98,2.2 -18.7,-5.06 -3.58,-8.37 -1.84,-21.25 7.76,-24.68 z" id="path76" inkscape:connector-curvature="0" style="fill:#ffffff"/><path d="m 66.87,45.89 c 6.01,-5.71 12.07,-11.38 18.11,-17.06 0.03,11.72 0,23.45 0.01,35.17 -11,0 -22,0 -33,0 0,-8.72 -0.01,-17.44 0.01,-26.15 3.73,3.3 7.07,7.06 11.03,10.07 1.63,0.3 2.73,-1.11 3.84,-2.03 z" id="path92" inkscape:connector-curvature="0" style="fill:#ffffff"/><path d="m 22.41,32.67 c 2.66,-1.27 5.99,0.02 7.24,2.65 2,3.96 1.99,8.79 0.68,12.97 -0.93,2.97 -4.18,5.42 -7.33,4.25 -3.93,-1.24 -5.12,-5.9 -5.16,-9.55 -0.05,-3.78 0.82,-8.49 4.57,-10.32 z" id="path96" inkscape:connector-curvature="0" style="fill:#000"/></svg><a href="https://www.kyis.com/wp-admin/admin-ajax.php?action=export_event&amp;ID=446701">Outlook Calendar</a></li>
+			<li class="google"><svg class="google-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 134.658 131.646" enable-background="new 0 0 134 .658 131.646" xml:space="preserve"><g><g><path fill="#000000" d="M70.479,71.845l-3.983-3.093c-1.213-1.006-2.872-2.334-2.872-4.765c0-2.441,1.659-3.993,3.099-5.43 c4.64-3.652,9.276-7.539,9.276-15.73c0-8.423-5.3-12.854-7.84-14.956h6.849l7.189-4.517H60.418 c-5.976,0-14.588,1.414-20.893,6.619c-4.752,4.1-7.07,9.753-7.07,14.842c0,8.639,6.633,17.396,18.346,17.396 c1.106,0,2.316-0.109,3.534-0.222c-0.547,1.331-1.1,2.439-1.1,4.32c0,3.431,1.763,5.535,3.317,7.528 c-4.977,0.342-14.268,0.893-21.117,5.103c-6.523,3.879-8.508,9.525-8.508,13.51c0,8.202,7.731,15.842,23.762,15.842 c19.01,0,29.074-10.519,29.074-20.932C79.764,79.709,75.344,75.943,70.479,71.845z M56,59.107 c-9.51,0-13.818-12.294-13.818-19.712c0-2.888,0.547-5.87,2.428-8.199c1.773-2.218,4.861-3.657,7.744-3.657 c9.168,0,13.923,12.404,13.923,20.382c0,1.996-0.22,5.533-2.762,8.09C61.737,57.785,58.762,59.107,56,59.107z M56.109,103.65 c-11.826,0-19.452-5.657-19.452-13.523c0-7.864,7.071-10.524,9.504-11.405c4.64-1.561,10.611-1.779,11.607-1.779 c1.105,0,1.658,0,2.538,0.111c8.407,5.983,12.056,8.965,12.056,14.629C72.362,98.542,66.723,103.65,56.109,103.65z"/><polygon fill="#000000" points="98.393,58.938 98.393,47.863 92.923,47.863 92.923, 58.938 81.866,58.938 81.866,64.469 92.923,64.469 92.923,75.612 98.393,75.612 98.393,64.469 109.506,64.469 109.506,58.938 "/></g></g></svg>
+				<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Lucky+Star+Casino+12%2F4&dates=20151204T150000Z/20151204T190000Z&details=&location&sf=true&output=xml" target="_blank">Google Calendar</a></li>
+			<li class="yahoo"><svg class="yahoo-icon" width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="25" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(.16 0 0 .16 3.52 36.8)"><path style="fill:#000" d="m 180.1404,-38.877032 9.91156,6.139589 L 183.38418,-21 l -10.09177, -6.320163 6.84799,-11.556869 z"/></g><g transform="matrix(.16 0 0 .16 3.52 36.8)"><path style="fill:#000" d="m 28,-138.99999 0.03088,9.16244 26.412258,2.40414 49.951742, 60.268056 1.52914,31.155522 c -1.3384,5.415036 -5.61567,3.467949 -8.665096,4.596721 l -18.467992,0.149591 0.180209,7.991365 82.269409,-0.691324 0,-7.779808 -24.22411,-0.180575 c -3.03289,0.489556 -2.77787,-1.766389 -3.05828,-3.575219 l -1.52913,-29.623294 c 0.37384,-2.38348 0.87747,-4.76696 4.07769,-7.15044 l 47.9129,-38.305975 22.42731,-4.08597 3.53707,-7.08847 -74.5672,0 1.19964,7.59922 21.40788,2.04299 c 1.27957,1.0357 3.80617,0.96067 1.01943,5.61821 l -31.09241,27.069544 c -1.64276,0.966176 -2.91183,0.434504 -4.0777,-0.51075 L 89.613273,-125.39042 c -2.564855,-3.6273 -0.05853,-4.29044 3.058273,-4.59672 l 22.427314,-1.02149 0,-7.66121 L 28,-139 z"/><path style="fill:#000" d="m 184.92937,-49.544608 8.41023,5.362835 34.6604,-56.948207 -19.6239, -11.23641 -23.44673,62.821782 z"/></g></svg><a href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Lucky+Star+Casino+12%2F4&st=20151204T150000Z&dur=400&desc=&in_loc=" target="_blank">Yahoo! Calendar</a></li>
+			<li class="ical"><svg class="apple-icon" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="19" height="19" viewBox="0 0 105 125" ><defs/><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title>Apple Logo</dc:title></cc:Work></rdf:RDF></metadata><g><path d="m 28.709,28.63 c 3.516,0 7.758,0.726 12.727,2.179 5.015,1.454 8.343,2.18 9.984,2.18 2.109,0 5.555,-0.82 10.336,-2.461 4.781,-1.64 8.93,-2.461 12.445,-2.461 5.766,0 10.899,1.547 15.399,4.641 2.531,1.781 5.039,4.195 7.523,7.242 -3.75,3.188 -6.492,6.024 -8.226,8.508 -3.141,4.5 -4.711,9.469 -4.711,14.906 0,5.953 1.664,11.32 4.992,16.102 3.328,4.781 7.125,7.804 11.392,9.07 -1.783,5.766 -4.736,11.794 -8.861,18.074 -6.234,9.42 -12.422,14.13 -18.562,14.13 -2.438,0 -5.813,-0.77 -10.125,-2.32 -4.266,-1.55 -7.875,-2.32 -10.828,-2.32 -2.954,0 -6.399,0.8 -10.336,2.39 -3.891,1.64 -7.055,2.46 -9.493,2.46 -7.359,0 -14.578,-6.23 -21.656,-18.7 C 3.631,89.919 0.092,77.825 0.092,65.966 0.09199,54.95 2.7873,45.974 8.1779,39.036 13.615,32.098 20.4589,28.63 28.7089,28.63 M 73.0059,0.927 c 0.187,0.60946 0.305,1.1486 0.352,1.6172 0.046,0.4689 0.07,0.9376 0.07,1.4063 0,3.0001 -0.703,6.281 -2.109,9.844 -1.407,3.562 -3.633,6.867 -6.68,9.914 -2.625,2.578 -5.227,4.312 -7.805,5.203 -1.64,0.516 -4.125,0.914 -7.453,1.195 0.094,-7.125 1.945,-13.289 5.555,-18.492 3.656,-5.203 9.679,-8.7655 18.07,-10.687"/></g></svg><a href="https://www.kyis.com/wp-admin/admin-ajax.php?action=export_event&amp;ID=446701">iCal Calendar</a></li>
+		</ul>
+	</div>
+	
+    
+	<div class='amp-venue-single'>
+		<div class='amp-venue-name'>Venue: Lucky Star Casino of Concho</div>
+		<div class='amp-event-image'><img src='https://www.kyis.com/wp-content/uploads/sites/1020/2015/08/lsc-logo-top.png' alt='Lucky Star Casino of Concho' /></div>
+		<div class='amp-venue-address'>7777 US-81<br />Concho, OK 73022</div>
+		<div class='amp-venue-phone'>Phone: (405) 262-7612</div>
+		<div class='amp-venue-hours'>Hours: Open 24 Hours</div>
+		<div class='amp-venue-website'>Website: <a href='http://www.luckystarcasino.org/' target='_blank'>http://www.luckystarcasino.org/</a></div>
+		<div class='amp-venue-ticketing'>Ticketing: <a href='http://www.luckystarcasino.org/promos' target='_blank'>http://www.luckystarcasino.org/promos</a></div>
+		<div class='amp-venue-google-maps-url'>Directions: <a href='https://www.google.com/maps/dir/''/lucky+star+casino+concho/@35.600174,-97.997614,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x87974e0e2d8d3e37:0x6817e409a3d9df54!2m2!1d-97.9632812!2d35.6001789' target='_blank'>https://www.google.com/maps/dir/''/lucky+star+casino+concho/@35.600174,-97.997614,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x87974e0e2d8d3e37:0x6817e409a3d9df54!2m2!1d-97.9632812!2d35.6001789</a></div>
+	</div>
+</div>
+<!--themify_builder_content-->
+<div id="themify_builder_content-446701" data-postid="446701" class="themify_builder_content themify_builder_content-446701 themify_builder tf_clear">
+    </div>
+<!--/themify_builder_content-->
+</div><!-- .entry-content --></article><!-- #post-446701 --></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-130 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<div id="block-34" class="300x250-ad-1 block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones block-mirrored block-mirroring-bgz5499e7ebd2120 block-original-65" data-alias="300x250 Ad 1">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<div id="block-38" class="sweet-deals-ad block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones block-mirrored block-mirroring-bqk5499e7ebd6bb4 block-original-68" data-alias="Sweet Deals Ad">
+<div class="block-content">
+<a href="https://www.sweetdeals.com/oklahoma-city/deals"><img src="/wp-content/uploads/sites/1020/2014/10/sweetdeals.png"></a>
+</div><!-- .block-content -->
+
+</div><!-- #block-38 -->
+<aside id="block-b905582f14dcf038" class="block block-type-widget-area block-fluid-height block-mirrored block-mirroring-b905582f14dcf038 block-original-bih5582f18d7715d" data-alias="Right Rail Widget" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><li class="widget widget-no-widgets"><h3 class="widget-title"><span class="widget-inner">No widgets!</span></h3><p>Add widgets to this sidebar in the <a href="https://www.kyis.com/wp-admin/widgets.php">Widgets panel</a> under Appearance in the WordPress Admin.</p></li></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-b905582f14dcf038 -->
+<div id="block-36" class="vip-club-ad block block-type-custom-code block-fluid-height block-mirrored block-mirroring-b6c5499e7ebd52a8 block-original-67" data-alias="VIP Club Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-7" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-7",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest1")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-36 -->
+<div id="block-b8u55718f77aba15" class="headlines block block-type-custom-code block-fluid-height block-mirrored block-mirroring-b8u55718f77aba15 block-original-bk855718ff692183" data-alias="Playlist">
+<div class="block-content">
+<h1 class="block-title"><span>Playlist</span></h1><iframe align="top,left" frameborder="0" height="480" id="tunegenie-onair" marginheight="0" marginwidth="0" name="onair" scrolling="no" src="https://kyis.tunegenie.com/plugins/onair/?branding=no&amp;colorscheme=light&amp;bg=ffffff" width="310"></iframe>
+</div><!-- .block-content -->
+
+</div><!-- #block-b8u55718f77aba15 -->
+<div id="block-42" class="facebook-ad block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bxz5499e7ebdb200 block-original-71" data-alias="Facebook Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-8" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-8",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-42 -->
+<div id="block-43" class="headlines block block-type-content block-fluid-height block-mirrored block-mirroring-bch5499e7ebdc8c7 block-original-72" data-alias="Headlines">
+<div class="block-content">
+<h1 class="block-title"><span>Headlines</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-1651679" class="post-1651679 feed_posts type-feed_posts status-publish hentry category-music-news alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.kyis.com/news/taylor-swift-teams-up-with-blondish-for-fortnight-remix/" title="Taylor Swift Teams Up With BLOND:ISH For &#8216;Fortnight&#8217; Remix" rel="bookmark">Taylor Swift Teams Up With BLOND:ISH For &#8216;Fortnight&#8217; Remix</a></h2></header></article><!-- #post-1651679 --><article id="post-1651678" class="post-1651678 feed_posts type-feed_posts status-publish hentry category-music-news custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.kyis.com/news/billie-eilishs-hit-me-hard-and-soft-debuts-atop-u-k-albums-chart/" title="Billie Eilish&#8217;s &#8216;Hit Me Hard And Soft&#8217; Debuts Atop U.K. Albums Chart" rel="bookmark">Billie Eilish&#8217;s &#8216;Hit Me Hard And Soft&#8217; Debuts Atop U.K. Albums Chart</a></h2></header></article><!-- #post-1651678 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1651677" class="post-1651677 feed_posts type-feed_posts status-publish hentry category-music-news alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.kyis.com/news/prince-celebration-2024-to-feature-the-revolution-morris-day-more/" title="Prince Celebration 2024 To Feature The Revolution, Morris Day &amp; More" rel="bookmark">Prince Celebration 2024 To Feature The Revolution, Morris Day &amp; More</a></h2></header></article><!-- #post-1651677 --><article id="post-1651676" class="post-1651676 feed_posts type-feed_posts status-publish hentry category-music-news custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.kyis.com/news/lana-del-rey-to-receive-nmpas-2024-songwriter-icon-award/" title="Lana Del Rey To Receive NMPA&#8217;s 2024 Songwriter Icon Award" rel="bookmark">Lana Del Rey To Receive NMPA&#8217;s 2024 Songwriter Icon Award</a></h2></header></article><!-- #post-1651676 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-1651675" class="post-1651675 feed_posts type-feed_posts status-publish hentry category-music-news alt custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.kyis.com/news/beyonce-accused-of-copyright-infringement-over-break-my-soul/" title="Beyonce Accused Of Copyright Infringement Over &#8216;Break My Soul&#8217;" rel="bookmark">Beyonce Accused Of Copyright Infringement Over &#8216;Break My Soul&#8217;</a></h2></header></article><!-- #post-1651675 --><article id="post-1651674" class="post-1651674 feed_posts type-feed_posts status-publish hentry category-music-news custom-query" itemscope itemtype="http://schema.org/BlogPosting"><header><h2 class="entry-title" itemprop="headline"><a href="https://www.kyis.com/news/bruce-springsteen-postpones-european-tour-dates-due-to-vocal-issues/" title="Bruce Springsteen Postpones European Tour Dates Due To &#8216;Vocal Issues&#8217;" rel="bookmark">Bruce Springsteen Postpones European Tour Dates Due To &#8216;Vocal Issues&#8217;</a></h2></header></article><!-- #post-1651674 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-43 -->
+<div id="block-44" class="twitter-ad block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bm65499e7ebde2f1 block-original-73" data-alias="Twitter Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-9" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-9",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest3")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-44 -->
+<div id="block-b6u55718fab41cad" class="concert block block-type-custom-code block-fluid-height block-mirrored block-mirroring-b6u55718fab41cad block-original-b6255718ff6936a8" data-alias="Concert Calendar">
+<div class="block-content">
+<h1 class="block-title"><span>Concert calendar</span></h1><iframe align="top,left" frameborder="0" height="480" id="tunegenie-onair" marginheight="0" marginwidth="0" name="onair" scrolling="no" src="https://kyis.tunegenie.com/plugins/concerts/?colorscheme=light&amp;bg=ffffff" width="310"></iframe>
+</div><!-- .block-content -->
+
+</div><!-- #block-b6u55718fab41cad -->
+<div id="block-46" class="300x250-ad-2 block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bll5499e7ebe1218 block-original-79" data-alias="300x250 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-3" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-3",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600], [300, 50], [320, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-46 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-50" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-32-10 responsive-grid wrapper-mirroring-10 wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-vertical nav-align-left"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-1603344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1603344"><a href="https://www.kyis.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1651026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1651026"><a href="https://www.kyis.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-1603346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1603346"><a href="https://www.kyis.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://www.kyis.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.kyis.com/station-information/">Station Information</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a href="https://www.cumulusmedia.com/careers/">Employment Opportunities</a></li>
+<li id="menu-item-1561813" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1561813"><a href="https://express-images.franklymedia.com/6616/2024/01/31110343/cumulus-oklahoma-city-2024-eeo-public-file-report-20240131-140529881-pdf.pdf">Equal Opportunity Employment Public File</a></li>
+<li id="menu-item-982065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-982065"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/fm-profile/KYIS">FCC Public File</a></li>
+<li id="menu-item-1370805" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1370805"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+</ul></div><!-- .nav-vertical nav-align-left -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+<div id="block-bgh55e9d99be8d60" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bgh55e9d99be8d60 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-18">
+<div id="block-51" class="728x90-ad-2 block block-type-custom-code block-fluid-height" data-alias="728x90 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2020 Cumulus Media / Cumulus Media is an equal opportunity employer / AA</p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.kyis.com/amp-events/lucky-star-casino-124/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- TGMP PLUGIN ENABLED 2016-08-05T18:49:46.863Z -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_10579/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3Lmt5aXMuY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwIiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy5reWlzLmNvbS93cC1jb250ZW50L3BsdWdpbnMiLCJseiI6IjEiLCJlbWFpbFN1YiI6IkNoZWNrIHRoaXMgb3V0ISIsIm5vcCI6IkNoZWNrIHRoaXMgb3V0ISIsImxpZ2h0Ym94Ijp7ImkxOG4iOnsidENvdW50ZXIiOiIlY3VyciUgb2YgJXRvdGFsJSJ9fSwic192IjoiNS4zLjkifTs="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.kyis.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.kyis.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://kyis.tunegenie.com/station/pwa/fullfooter.js?bs=kyis"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "kyis";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 257/400 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-30 10:05:24 by W3 Total Cache
+-->

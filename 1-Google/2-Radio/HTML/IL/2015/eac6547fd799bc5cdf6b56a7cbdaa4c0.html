@@ -1,0 +1,1377 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>WLS-AM 890 Local News | WLS-AM 890 | WLS-AM</title>
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/general-https-ABC123H.css?ver=20240530175859" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/general-https-ABC123H.css?ver=20240530175859' type='text/css' media='all' />
+<link rel="preload" href="https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/layout-archive-category-https-ABC123H.css?ver=20240530175859" as="style"><link rel='stylesheet' id='headway-layout-archive-category-https-css' href='https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/layout-archive-category-https-ABC123H.css?ver=20240530175859' type='text/css' media='all' />
+<link rel="preload" href="https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/responsive-grid-https-ABC123H.css?ver=20240530175859" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/responsive-grid-https-ABC123H.css?ver=20240530175859' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530180144" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240530180144' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_10483/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/block-dynamic-js-layout-archive-category-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-archive-category-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.wlsam.com/wp-content/uploads/sites/353/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240530175859" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.wlsam.com","site_id":"353","tz":"America\/Chicago","tz_offset":"-5","ts":"1715610524","blog_name":"WLS-AM 890 | WLS-AM","client_name":"cumuluspro","user_ID":"","alt_blog_name":"WLS-AM1","market":"Chicago, IL","format":"News\/Talk","ts_offset":"1717074105","version":"release-3.26.01","env":"prod","settings":{"syn_site_name":"WLS-AM1","tenant_id":"see_10483","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":"WLS-AM","default_show_img":"https:\/\/www.wlsam.com\/wp-content\/uploads\/sites\/353\/2015\/04\/onair_wlsam-general_150x150_01.jpg","format":"News\/Talk","market":"Chicago, IL","gtm_id":false,"region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.wlsam.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"0","moment_date_format":"MMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"M d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"353","callsign":"","mount_name":"WLSAM","provider":"stream_the_world","gmt_offset":"-18000","live_url":"http:\/\/player.listenlive.co\/22231","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240530180145" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.wlsam.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.wlsam.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="WLS-AM 890 | WLS-AM &raquo; Feed" href="https://www.wlsam.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/353/2017/09/29121018/favicon.ico" />
+
+
+	<script>
+		const express_config = { 
+			express_url : 'https://www.wlsam.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/wlsam-com\/',
+			rewards_id : '1934',
+			site_id : '353',
+			client_id : 'cumuluspro',
+			post_id : '',
+			tracking_meta_id: '',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -5,
+			timezone : 'America/Chicago',
+			timezone_abbr : 'CDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -5 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'WLS-AM 890 | WLS-AM','alt_station_name':'WLS-AM1','market':'Chicago, IL','format':'News/Talk','author':'System User','page_type':'post' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'UA-32629418-12');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/353/2017/09/29121018/favicon.ico" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M25HK2');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+	// SLOTS ARE DEFINED IN THEIR DISPLAY BLOCKS
+	window.GPT_SITE_ID = '/6717/cd.WLS.AM1';
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+	});
+</script>
+<!-- END 2023 CMLS GPT -->
+	
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '195160747878553');
+  fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+
+<!-- BEGIN PLAYR CODE -->
+<script src="https://cdn.plyr.io/3.4.6/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.4.8/plyr.css">
+<style>
+#playr { border:#CCC; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => { 
+  const player = new Plyr('#playr');
+});
+</script>
+<!-- END PLAYR CODE -->
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTM76581FK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MTM76581FK');
+</script>
+<script type="text/javascript">var ajaxurl = "https://www.wlsam.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'WLSAM 890  WLSAM');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Format  NewsTalk', 'Market  Chicago IL', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'WLSAM 890 Local News');
+      googletag.pubads().setTargeting('cms-pcat', '');
+			});
+		}
+		</script>
+		<link rel="preload" fetchpriority="high" href="https://www.wlsam.com/wp-content/uploads/sites/353/themify-concate/3568307525/themify-4105201084.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.wlsam.com/wp-content/uploads/sites/353/themify-concate/3568307525/themify-4105201084.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="WLS-AM 890 | WLS-AM"/>
+  <meta property="og:title" content="WLS-AM 890 Local News"/>
+  <meta property="og:url" content="https://www.wlsam.com/category/wls-am-890-local-news/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Cumulus"/>
+  <meta property="og:image" content="https://express-images.franklymedia.com/6616/sites/353/2017/09/29114551/wlsam_opengraph-general_1200x630_01.jpg"/>
+  <meta property="og:image:url" content="https://express-images.franklymedia.com/6616/sites/353/2017/09/29114551/wlsam_opengraph-general_1200x630_01.jpg"/>
+  <meta property="og:image:secure_url" content="https://express-images.franklymedia.com/6616/sites/353/2017/09/29114551/wlsam_opengraph-general_1200x630_01.jpg"/>
+  <meta property="article:publisher" content="https://www.facebook.com/wlsam890/"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="WLS-AM 890 Local News"/>
+  <meta itemprop="headline" content="WLS-AM 890 Local News"/>
+  <meta itemprop="description" content="Cumulus"/>
+  <meta itemprop="image" content="https://express-images.franklymedia.com/6616/sites/353/2017/09/29114551/wlsam_opengraph-general_1200x630_01.jpg"/>
+  <!--<meta itemprop="publisher" content="WLS-AM 890 | WLS-AM"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="WLS-AM 890 Local News"/>
+  <meta name="twitter:url" content="https://www.wlsam.com/category/wls-am-890-local-news/"/>
+  <meta name="twitter:description" content="Cumulus"/>
+  <meta name="twitter:image" content="https://express-images.franklymedia.com/6616/sites/353/2017/09/29114551/wlsam_opengraph-general_1200x630_01.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@wlsam890"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_category -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="archive paged category category-wls-am-890-local-news category-87 paged-508 category-paged-508 is-headway-theme custom safari webkit responsive-grid-enabled responsive-grid-active layout-archive-category-87 layout-using-archive-category tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-wo657a39eb9a7b4e" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-32-10 responsive-grid wrapper-mirroring-8 wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<section id="block-bpf57a25e5c76be7" class="social-nav mobile-only block block-type-social block-fixed-height" data-alias="Social Navigation - Mobile ONLY ::">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="https://www.facebook.com/wlsam890" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02134906/Facebook-WHITE.png" alt="Like us on Facebook" title="Like us on Facebook" class="img-1"  /></a></li><li><a href="https://twitter.com/wlsam890" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02135858/Twitter-WHITE.png" alt="Follow us on Twitter" title="Follow us on Twitter" class="img-2"  /></a></li><li><a href="https://www.youtube.com/wlsam890" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02134956/Youtube-WHITE.png" alt="YouTube" title="YouTube" class="img-3"  /></a></li><li><a href="https://www.instagram.com/wlsam890/" target="_blank" alt="Instagram"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02135012/Instagram-WHITE.png" alt="Instagram" title="Instagram" class="img-4"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-bpf57a25e5c76be7 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-5">
+<figure id="block-31" class="Logo-Masthead logo block block-type-image block-fixed-height" data-alias="Logo - WLSAM :: " itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="/" class="image" ><img src="https://www.wlsam.com/wp-content/uploads/sites/353/2016/08/logo_wlsam_white.svg#aqua_resizer_image_not_accessible" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-19">
+
+<section class="sub-column sub-column-1 column column-1 grid-width-6 grid-left-0">
+<aside id="block-b4w5527bdc57f220" class="on-air block block-type-widget-area block-fluid-height" data-alias="On Air Now :: " itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><div style="display:none;" class="amp-onair-widget" id="amp_onair_widget-5"
+	data-title-now=""
+	data-title-upcoming=""
+	data-title=""
+	data-type="nowplaying"
+	data-change-minutes="5"
+	data-change="0"
+	data-toggle-time="10"
+	data-fields="image,timeslot"
+	data-ajaxurl="https://www.wlsam.com/wp-admin/admin-ajax.php"
+	data-updateurl="https://www.wlsam.com/shows/feed/?type=json"
+	data-memcached="1"
+	data-expiration="1717077600">
+	
+<div class="amp-onair-show nowplaying" >
+
+    <div class="amp-onair-widget-title js-widget-title"></div>
+
+        <div class="amp-onair-show-image">
+                    <img class="js-image amp-onair-show-image-img" src="https://express-images.franklymedia.com/6616/sites/353/2021/06/02091509/WebHeader_DBONGINO-2.jpg"  />
+            </div>
+        
+    <div class="amp-onair-show-title">
+            <span class="js-title">Dan Bongino</span>
+        </div>
+    
+        <div class="amp-onair-show-timeslot js-timeslot" >11:00 a.m. - 2:00 p.m.</div>
+        
+        
+    
+</div>
+
+</div></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-b4w5527bdc57f220 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-2 column column-2 grid-width-8 grid-left-0">
+<section id="block-30" class="social-nav desktop-only block block-type-social block-fixed-height" data-alias="Social Navigation - Desktop ONLY :: ">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="#"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02134842/ListenLive-Red.png" alt="Listen Live!!" title="Listen Live!!" class="img-1"  /></a></li><li><a href="https://www.facebook.com/wlsam890" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02134906/Facebook-WHITE.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-2"  /></a></li><li><a href="https://twitter.com/wlsam890" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/353/2024/04/17152855/Social-X-Trans-White.png" alt="Follow us on X" title="Follow us on X" class="img-3"  /></a></li><li><a href="https://www.youtube.com/wlsam890" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02134956/Youtube-WHITE.png" alt="YouTube" title="YouTube" class="img-4"  /></a></li><li><a href="https://www.instagram.com/wlsam890/" target="_blank" alt="Instagram"><img src="https://express-images.franklymedia.com/6616/sites/353/2022/09/02135012/Instagram-WHITE.png" alt="Follow us on Instagram" title="Follow us on Instagram" class="img-5"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-3 column column-3 grid-width-3 grid-left-0">
+<div id="block-bts5a9048da12bc0" class="gigya-actions block block-type-custom-code block-fluid-height" data-alias="Gigya Profile Actions">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bts5a9048da12bc0 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-4 column column-4 grid-width-1 grid-left-0">
+<nav id="block-94" class="search-box desktop-only block block-type-navigation block-fluid-height" data-alias="Navigation Search - Desktop" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-right nav-search-active nav-search-position-right"><div class="nav-search">
+		<form method="get" id="searchform" action="https://www.wlsam.com/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="text" class="field" name="s" id="s" value="Type to search, then press enter" onclick="if(this.value=='Type to search, then press enter')this.value='';" onblur="if(this.value=='')this.value='Type to search, then press enter';" />
+			<input type="submit" class="submit" name="searchsubmit" id="searchsubmit" value="Search" />
+		</form>
+	</div></div><!-- .nav-horizontal nav-align-right nav-search-active nav-search-position-right -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-94 -->
+
+</section><!-- .sub-column -->
+
+<section class="sub-column sub-column-5 column column-5 grid-width-1 grid-left-0">
+<div id="block-bya5527bfa790b3b" class="search-icon desktop-only block block-type-custom-code block-fluid-height" data-alias="Search Icon :: ">
+<div class="block-content">
+<script>
+jQuery(function($){
+$(".show-search").click(function(){
+$(".search-box").toggle(200); 
+});
+});
+</script>
+<img style="max-width:22px" class="show-search" src="https://www.wlsam.com/wp-content/uploads/sites/353/2016/08/icon-magnifyingglass_01.svg">
+</div><!-- .block-content -->
+
+</div><!-- #block-bya5527bfa790b3b -->
+
+</section><!-- .sub-column -->
+<nav id="block-32" class="Nav-Primary block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left"><ul id="menu-main-navigation" class="menu"><li id="menu-item-49832" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-49832"><a>Shows</a>
+<ul class="sub-menu">
+	<li id="menu-item-1619020" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1619020"><a href="https://www.wlsam.com/shows/the-steve-cochran-show/">5:30am-9am | The Steve Cochran Show</a></li>
+	<li id="menu-item-1579059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1579059"><a href="https://www.wlsam.com/the-chris-plante-show/">9am-11am | The Chris Plante Show</a></li>
+	<li id="menu-item-1599684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1599684"><a href="https://www.wlsam.com/dan-bongino/">11am-2pm | Dan Bongino</a></li>
+	<li id="menu-item-1579075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1579075"><a href="https://www.wlsam.com/the-ben-shapiro-show/">2pm-3pm | Ben Shapiro</a></li>
+	<li id="menu-item-1654211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1654211"><a href="https://www.wlsam.com/shows/closing-bell/">3pm-4pm | CLOSING BELL</a></li>
+	<li id="menu-item-1654210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1654210"><a href="https://www.wlsam.com/shows/pm-chicago/">4pm-5pm | PM CHICAGO</a></li>
+	<li id="menu-item-1654212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1654212"><a href="https://www.wlsam.com/mark-levin/">5pm-8pm | The Mark Levin Show</a></li>
+	<li id="menu-item-1629046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1629046"><a href="https://www.wlsam.com/shows/michael-knowles/">8pm-9pm | Michael Knowles</a></li>
+	<li id="menu-item-1654219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1654219"><a href="https://www.wlsam.com/dan-bongino/">9pm-12mid | Dan Bongino (Replay)</a></li>
+	<li id="menu-item-1654221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1654221"><a>WEDNESDAY NIGHTS</a></li>
+	<li id="menu-item-1654222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1654222"><a href="https://www.wlsam.com/mark-levin/">5pm-8pm | The Mark Levin Show</a></li>
+	<li id="menu-item-1654213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1654213"><a href="https://www.wlsam.com/shows/gieger-wealth-management/">8pm-9pm | BILL GEIGER WEALTH MANAGEMENT</a></li>
+	<li id="menu-item-1654223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1654223"><a href="https://www.wlsam.com">9pm-10pm | THE ILLINI COACHES SHOW</a></li>
+	<li id="menu-item-1654224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1654224"><a href="https://www.wlsam.com/dan-bongino/">9pm-12mid | Dan Bongino (Replay)</a></li>
+	<li id="menu-item-1435970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1435970"><a href="https://www.wlsam.com/program-schedule/">Full Program Schedule</a></li>
+</ul>
+</li>
+<li id="menu-item-1601167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1601167"><a>Podcasts</a>
+<ul class="sub-menu">
+	<li id="menu-item-1619387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1619387"><a href="https://www.wlsam.com/shows/the-steve-cochran-show/">Steve Cochran</a></li>
+	<li id="menu-item-1618260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1618260"><a href="https://www.wlsam.com/shows/show-and-tell-with-andrea-darlas/">Show &#038; Tell</a></li>
+	<li id="menu-item-1601166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601166"><a href="https://www.wlsam.com/drivechicago/">DriveChicago</a></li>
+	<li id="menu-item-1665144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1665144"><a href="https://www.wlsam.com/the-hidden-wealth-solution/">The Hidden Wealth Solution</a></li>
+	<li id="menu-item-1601163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601163"><a href="https://www.wlsam.com/the-money-hour-radio/">The Money Hour Radio</a></li>
+	<li id="menu-item-1607335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1607335"><a href="https://www.wlsam.com/round-trip-with-colleen-kelly/">Round Trip With Colleen Kelly</a></li>
+	<li id="menu-item-1616103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1616103"><a href="https://www.wlsam.com/shows/everyday-wealth/#podcasts">Everyday Wealth</a></li>
+	<li id="menu-item-1617845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617845"><a href="https://www.wlsam.com/pete-mcmurray-show/">The Pete McMurray Show</a></li>
+	<li id="menu-item-1618563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1618563"><a href="https://www.wlsam.com/shows/take1withbillcameron/">Take 1 with Bill Cameron</a></li>
+</ul>
+</li>
+<li id="menu-item-15269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15269"><a>News</a>
+<ul class="sub-menu">
+	<li id="menu-item-1618541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618541"><a href="https://www.wlsam.com/wlsam890newsteam/">WLS-AM 890 News Team</a></li>
+</ul>
+</li>
+<li id="menu-item-49883" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-49883"><a href="https://www.wlsam.com/category/contests/">Contests</a></li>
+<li id="menu-item-212154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212154"><a href="https://www.wlsam.com/events-page/">Events</a></li>
+<li id="menu-item-50636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50636"><a>Station</a>
+<ul class="sub-menu">
+	<li id="menu-item-63842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63842"><a href="https://www.wlsam.com/station-information/">Station Information</a></li>
+	<li id="menu-item-50348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50348"><a href="https://www.wlsam.com/text-alerts/">Text Alerts</a></li>
+	<li id="menu-item-50357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50357"><a href="https://www.wlsam.com/mobile-apps/">Mobile Apps</a></li>
+	<li id="menu-item-1202614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202614"><a href="https://www.wlsam.com/station-information/">Contact Us</a></li>
+	<li id="menu-item-50648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50648"><a href="https://www.wlsam.com/advertise-with-us/">Advertise With Us</a></li>
+	<li id="menu-item-50339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50339"><a href="http://www.cumulus.com/careers/">Work Here</a></li>
+</ul>
+</li>
+<li id="menu-item-1456956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1456956"><a href="https://www.wlsam.com/listen-live/">Listen Live</a></li>
+<li id="menu-item-1527926" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1527926"><a title="The coordinated advertising campaign that delivers results GUARANTEED." href="/epic">Advertising</a></li>
+<li id="menu-item-1619123" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1619123"><a href="https://www.wlsam.com/category/pictures/">Photo Galleries</a></li>
+<li id="menu-item-1465848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1465848"><a href="https://www.wlsam.com/fighting-illini/">Fighting Illini</a></li>
+<li id="menu-item-1629247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1629247"><a href="https://www.wlsam.com/nascar/">NASCAR</a></li>
+<li id="menu-item-1639324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1639324"><a href="https://www.wlsam.com/chicago-fire-fc/">Chicago Fire FC</a></li>
+<li id="menu-item-1660427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1660427"><a href="https://www.wlsam.com/100-years-wls-am-890/">100 Year Anniversary</a></li>
+</ul></div><!-- .nav-horizontal nav-align-left -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-be857a25e5c671d8" class="block-ZERO block block-type-custom-code block-fluid-height" data-alias="Facebook JavaScript SDK for Module :: ">
+<div class="block-content">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=220400698009854";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</div><!-- .block-content -->
+
+</div><!-- #block-be857a25e5c671d8 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="Container-Leaderboard-Header block-ZERO marg-bot-none block block-type-custom-code block-fluid-height" data-alias="728x90 Leaderboard Ad - Header :: ">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-5">
+
+<section class="column column-1 grid-left-0 grid-width-5">
+<div id="block-bkj54a2b9912881a" class="takeover-left block block-type-custom-code block-fluid-height" data-alias="Skyscraper - Left">
+<div class="block-content">
+<!--
+<div id='div-gpt-ad-1418849849333-4'>
+<script type="module">
+googletag.cmd.push(function() {
+	var divId = "div-gpt-ad-1418849849333-4",
+		container = document.getElementById(divId);
+	window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+	// Do not call this ad if slot is hidden
+	if ( ! container || ! container.offsetParent) { return; }
+
+	// Don't show skyscrapers when viewport width < 1300px
+	var sizeMap = googletag.sizeMapping()
+		.addSize([1300,0], [160,600])
+		.addSize([0,0], [])
+		.build();
+
+	window.GPT_SITE_SLOTS[divId] = googletag.defineSlot(
+		GPT_SITE_ID,
+		[[160, 600]],
+		divId
+	)
+	.addService(googletag.pubads())
+	.defineSizeMapping(sizeMap)
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","left");
+
+	googletag.display(divId);
+});
+</script>
+</div>
+-->
+</div><!-- .block-content -->
+
+</div><!-- #block-bkj54a2b9912881a -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-5">
+<div id="block-b7x54a2b9912b304" class="takeover-right block block-type-custom-code block-fluid-height" data-alias="Skyscraper - Right">
+<div class="block-content">
+<!--
+<div id='div-gpt-ad-1418849849333-5'>
+<script type="module">
+googletag.cmd.push(function() {
+	var divId = "div-gpt-ad-1418849849333-5",
+		container = document.getElementById(divId);
+	window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+	// Do not call this ad if slot is hidden
+	if ( ! container || ! container.offsetParent) { return; }
+
+	// Don't show skyscrapers when viewport width < 1300px
+	var sizeMap = googletag.sizeMapping()
+		.addSize([1300,0], [160,600])
+		.addSize([0,0], [])
+		.build();
+		
+	window.GPT_SITE_SLOTS[divId] = googletag.defineSlot(
+		GPT_SITE_ID,
+		[[160, 600]],
+		divId)
+	.addService(googletag.pubads())
+	.defineSizeMapping(sizeMap)
+	.setCollapseEmptyDiv(true)
+	.setTargeting("pos","right");
+
+	googletag.display(divId);
+});
+</script>
+</div>
+-->
+</div><!-- .block-content -->
+
+</div><!-- #block-b7x54a2b9912b304 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-wsz57a39eb9ac227" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-32-10 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<div id="block-bpt57a39eba0c872" class="Clean-Teaser MainColumn-Module marg-bot-one block block-type-content block-fluid-height" data-alias="General Category Listing - As many posts as are designated in Settings &gt; Reading :: ">
+<div class="block-content">
+<div class="loop">
+
+<div class="entry-row">
+
+<article id="post-163443" class="post-163443 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/roseland-woman-gets-23-years-for-babys-murder/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/04/gavel1-e1437742759992.png" alt="Roseland woman gets 23 years for baby’s murder" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/roseland-woman-gets-23-years-for-babys-murder/" title="Roseland woman gets 23 years for baby’s murder" rel="bookmark">Roseland woman gets 23 years for baby’s murder</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) A Roseland woman was sentenced to 23 years in prison Thursday for brutally beating to death her boyfriend’s toddler daughter. Keisha Jones, 28, was found guilty of murder during a bench trial this spring by Judge William Lacy, the Chicago Sun-Times is reporting. All of Iyonna Davis’ injuries tied to her 2012 death were inflicted&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163443 --><article id="post-163875" class="post-163875 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-pbolger alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/discipline-for-a-controversial-cop-comment/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/file0001937815972-1.jpg" alt="Discipline for a Controversial Cop Comment" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/discipline-for-a-controversial-cop-comment/" title="Discipline for a Controversial Cop Comment" rel="bookmark">Discipline for a Controversial Cop Comment</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLS-AM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>By Bill Cameron, WLS News The police discipline for a controversial case might be less than you expect. It involved a Chicago police officer making a comment about the fatal shooting of Michael Brown, by a police officer in Ferguson, Missouri, last year. WLS’ Bill Cameron asked Superintendent McCarthy what he hopes the police board&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163875 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-163554" class="post-163554 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/local-congressman-pledges-support-for-grieving-fox-river-residents-police-2/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/07/WLS_AM_logo.png" alt="Report:  Grand jury investigating Kane rape case" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/local-congressman-pledges-support-for-grieving-fox-river-residents-police-2/" title="Report:  Grand jury investigating Kane rape case" rel="bookmark">Report:  Grand jury investigating Kane rape case</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>By John Dempsey, 89 WLS News (BUFFALO, N.Y.) A new report says a New York grand jury has started investigating rape allegations against Blackhawk star Patrick Kane. WGRZ- TV in Buffalo reports that the woman who went back to Kane&#8217;s home with his alleged victim on August 1st, has been subpoenaed to appear before a grand&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163554 --><article id="post-163455" class="post-163455 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/two-charged-with-double-fatal-shooting-in-uptown/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/uptown-300x188.jpg" alt="Two charged with double fatal shooting in Uptown" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/two-charged-with-double-fatal-shooting-in-uptown/" title="Two charged with double fatal shooting in Uptown" rel="bookmark">Two charged with double fatal shooting in Uptown</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) Two men have been charged with shooting two others to death early Wednesday in the Uptown neighborhood on the North Side. The attack happened at 2:17 a.m. when 28-year-old Michael Laster and 33-year-old Jonathon Thompson shot two other men in the 5000 block of North Winthrop, police said. Robert Anderson, 34, of the 7900 block&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163455 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-163338" class="post-163338 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/michael-a-bilandic-building-closes-because-of-flooding/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/07/WLS_AM_logo.png" alt="Michael A. Bilandic Building closes because of flooding" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/michael-a-bilandic-building-closes-because-of-flooding/" title="Michael A. Bilandic Building closes because of flooding" rel="bookmark">Michael A. Bilandic Building closes because of flooding</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) The Michael A. Bilandic Building, located at 160 North LaSalle, will be closed Friday because to flooding, officials said. According to a statement from Central Management Services Director Tom Tyrrell, water infiltration caused by construction work on Randolph Street ruptured a water main, causing flooding to occur in the ComEd electrical vault. Damages are currently&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163338 --><article id="post-163266" class="post-163266 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/weather-scattered-thunderstorms-developing-this-afternoon-high-near-85f/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/05/thermometer-hot-sun_654x372_01.jpg" alt="WEATHER &#8211; Scattered thunderstorms developing this afternoon. High near 85F." width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/weather-scattered-thunderstorms-developing-this-afternoon-high-near-85f/" title="WEATHER &#8211; Scattered thunderstorms developing this afternoon. High near 85F." rel="bookmark">WEATHER &#8211; Scattered thunderstorms developing this afternoon. High near 85F.</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>Forecast Summary Meteorologist Ray Stagich WLS-AM Forecast Friday, September 4th, 2015 Warm to hot and humid over Labor Day Weekend. Some scattered storms possible. Thursday at O&#8217;Hare: High: 91 Low: 72 SUNRISE AND SUNSET SEPTEMBER 4 2015 &#8211; SUNRISE 620 AM CDT SUNSET 720 PM CDT SEPTEMBER 5 2015 &#8211; SUNRISE 621 AM CDT SUNSET 719 PM CDT Today&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163266 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-163251" class="post-163251 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/13-year-old-boy-dies-after-cross-country-meet-at-st-charles-middle-school-2/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/05/train-commuter-buildings_654x372_01.jpg" alt="17-year-old girl killed by Metra train in Lemont" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/13-year-old-boy-dies-after-cross-country-meet-at-st-charles-middle-school-2/" title="17-year-old girl killed by Metra train in Lemont" rel="bookmark">17-year-old girl killed by Metra train in Lemont</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>&nbsp; (LEMONT) A 17-year-old girl was fatally struck by a Metra train in southwest suburban Lemont Wednesday evening. The crash happened before 6 p.m. Wednesday on the Heritage Corridor rail line, said Cook County Sheriff’s office spokesperson Sophia Ansari. Alexa Turner was walking on the train tracks wearing headphones near Main Street in Lemont as&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163251 --><article id="post-162891" class="post-162891 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-pbolger alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/a-chicago-high-school-set-to-re-open/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/Dyett.png" alt="A Chicago High School set to re-open" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/a-chicago-high-school-set-to-re-open/" title="A Chicago High School set to re-open" rel="bookmark">A Chicago High School set to re-open</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLS-AM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>&nbsp; By Bill Cameron, WLS News CPS has announced a decision on what to do with Dyett high school, which was closed in June, because of declining enrollment and poor student performance but it has only made the hunger strikers angrier. The hunger strikers demanded an open enrollment, neighborhood high school for global leadership and&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-162891 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-163245" class="post-163245 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/labor-day-weekend-travel-forecast-hot-and-heavy-traffic/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/05/traffic-day-cars-chicago_654x372_01.jpg" alt="Labor Day weekend travel forecast: Hot and heavy traffic" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/labor-day-weekend-travel-forecast-hot-and-heavy-traffic/" title="Labor Day weekend travel forecast: Hot and heavy traffic" rel="bookmark">Labor Day weekend travel forecast: Hot and heavy traffic</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) Though the holiday traditionally represents the end of summer, the upcoming Labor Day weekend is expected to be hot—with heavy traffic in the air and on the ground in Chicago and surrounding areas. The holiday weekend is expected to be mostly sunny with highs near 90, and a few chances for thunderstorms, according to the&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163245 --><article id="post-163230" class="post-163230 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/gary-man-charged-with-donating-hiv-positive-blood/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/blood-donor.jpg" alt="Gary man charged with donating HIV-positive blood" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/gary-man-charged-with-donating-hiv-positive-blood/" title="Gary man charged with donating HIV-positive blood" rel="bookmark">Gary man charged with donating HIV-positive blood</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(GARY, Ind.) A northwest Indiana man was charged Thursday with donating HIV-positive blood to a blood bank earlier this summer. On June 3, Wilfred Campbell Jr. of Gary, who knew he was HIV-positive, donated blood plasma at Bio Blood Component in Gary, according to a statement from the Gary police. He received payment for the&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163230 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-163224" class="post-163224 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/suit-ipra-investigator-fired-for-refusing-to-change-findings-on-police-shootings/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/04/gavel1-e1437742759992.png" alt="Suit: IPRA investigator fired for refusing to change findings on police shootings" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/suit-ipra-investigator-fired-for-refusing-to-change-findings-on-police-shootings/" title="Suit: IPRA investigator fired for refusing to change findings on police shootings" rel="bookmark">Suit: IPRA investigator fired for refusing to change findings on police shootings</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) A former top investigator in Chicago’s Independent Police Review Authority has filed a federal lawsuit against the agency and the city, alleging he was fired after he refused to change his reports to more favorably reflect upon Chicago Police officers who shot civilians in six separate incidents. Lorenzo Davis, 66, a former Chicago Police commander who was hired by IPRA&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163224 --><article id="post-163218" class="post-163218 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/police-woman-killed-man-injured-in-edgewater-rollover-crash/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://express-images.franklymedia.com/6616/sites/353/2015/08/22214656/EmergencyVehicle-234579904_654x372-300x300.jpg" alt="Police: Woman killed, man injured in Edgewater rollover crash" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/police-woman-killed-man-injured-in-edgewater-rollover-crash/" title="Police: Woman killed, man injured in Edgewater rollover crash" rel="bookmark">Police: Woman killed, man injured in Edgewater rollover crash</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) A woman died and a man was injured in a rollover crash Thursday night in the Edgewater neighborhood on the North Side, police said. The single-vehicle crash happened at 7:25 p.m. on Lake Shore Drive near Sheridan Road, said police News Affairs Officer Ronald Gaines, citing preliminary information. A 33-year-old woman sitting in the passenger seat was ejected from the vehicle&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163218 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-163209" class="post-163209 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/04/16-year-old-girl-missing-from-crystal-lake/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/sudhir-169x300.jpg" alt="16-year-old girl missing from Crystal Lake" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/04/16-year-old-girl-missing-from-crystal-lake/" title="16-year-old girl missing from Crystal Lake" rel="bookmark">16-year-old girl missing from Crystal Lake</a></h3><div class="entry-meta entry-meta-above">Sep 4, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CRYSTAL LAKE) Police are asking for the public’s help in finding a 16-year-old girl missing from northwest suburban Crystal Lake since Tuesday. Kalyani Sudhir left her home Aug. 18, boarded a train in Crystal Lake a short time later and was seen about 6 p.m. that day at Ogilvie Transportation Center, according to a statement&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-163209 --><article id="post-162870" class="post-162870 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-pbolger alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/13-year-old-boy-dies-after-cross-country-meet-at-st-charles-middle-school/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/Thompson-Middle-School.png" alt="13-year-old boy dies after cross country meet at St. Charles middle school" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/13-year-old-boy-dies-after-cross-country-meet-at-st-charles-middle-school/" title="13-year-old boy dies after cross country meet at St. Charles middle school" rel="bookmark">13-year-old boy dies after cross country meet at St. Charles middle school</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLS-AM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(ST CHARLES) A 13-year-old boy died after finishing a cross country meet Tuesday evening at a west suburban middle school. Cameron Pepera, a 7th-grader at Thompson Middle School in St. Charles, finished his race at the school when parents said Cameron suffered a seizure, according to Jim Blaney, director of communications for St. Charles School&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-162870 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-162246" class="post-162246 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/update-skyway-workers-secure-new-contract-avoid-labor-day-weekend-strike/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/08/skyway-bridge-300x141.jpg" alt="UPDATE: Skyway workers secure new contract, avoid Labor Day weekend strike" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/update-skyway-workers-secure-new-contract-avoid-labor-day-weekend-strike/" title="UPDATE: Skyway workers secure new contract, avoid Labor Day weekend strike" rel="bookmark">UPDATE: Skyway workers secure new contract, avoid Labor Day weekend strike</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) Chicago Skyway toll booth workers have agreed to a new three-year contract, avoiding a strike over one of the busiest traffic times of the year, the Labor Day weekend. Workers ratified the agreement Wednesday, according to a statement from Teamsters Local 727. The new contract, which expires July 3, 2018, includes wage increases, guarantees full-time&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-162246 --><article id="post-162156" class="post-162156 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/trump-set-to-promise-not-to-make-third-party-bid/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/150901171006-donald-trump-mac-miller-exlarge-tease.jpg" alt="Trump set to promise not to make third-party bid" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/trump-set-to-promise-not-to-make-third-party-bid/" title="Trump set to promise not to make third-party bid" rel="bookmark">Trump set to promise not to make third-party bid</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>By John Dempsey, 89 WLS-AM News Billionaire Donald Trump is reportedly set to sign a pledge not to run for President as a third-party candidate, in the event he is not the Republican nominee. CNN is reporting that Trump has agreed with Republican party demands to sign the pledge.   GOP leaders have been concerned that&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-162156 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-161982" class="post-161982 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/emanuel-reportedly-proposing-record-property-tax-hike/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/08/bill-and-rahm-300x300.jpeg" alt="Emanuel reportedly proposing record property tax hike." width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/emanuel-reportedly-proposing-record-property-tax-hike/" title="Emanuel reportedly proposing record property tax hike." rel="bookmark">Emanuel reportedly proposing record property tax hike.</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>By John Dempsey, 89 WLS-AM News (CHICAGO) Bad news for Chicago homeowners. The Chicago Tribune and Sun Times are reporting that Mayor Rahm Emanuel is getting ready to propose the largest property tax increase in modern Chicago history. 40th ward Alderman Patrick O&#8217;Connor, the mayor&#8217;s floor leader, says the $500 million increase would go toward making&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161982 --><article id="post-161877" class="post-161877 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/weather-partly-cloudy-with-afternoon-showers-or-thunderstorms-high-89f/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/04/clouds_654x372_01.jpg" alt="WEATHER &#8211; Partly cloudy with afternoon showers or thunderstorms. High 89F." width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/weather-partly-cloudy-with-afternoon-showers-or-thunderstorms-high-89f/" title="WEATHER &#8211; Partly cloudy with afternoon showers or thunderstorms. High 89F." rel="bookmark">WEATHER &#8211; Partly cloudy with afternoon showers or thunderstorms. High 89F.</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>Forecast Summary Meteorologist Ray Stagich WLS-AM Thursday, September 3rd, 2015 Temperatures will stay above average right on through Labor Day. Best chance of showers and storms looks like later today into this evening. High yesterday: 90 Trace of rain THE CHICAGO-OHARE CLIMATE NORMALS FOR TODAY NORMAL RECORD YEAR MAXIMUM TEMPERATURE (F) 79 97 1953 MINIMUM&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161877 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-161865" class="post-161865 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/former-woodstock-principal-charged-with-stealing-thousands/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/Princip.jpg" alt="Former Woodstock principal charged with stealing thousands" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/former-woodstock-principal-charged-with-stealing-thousands/" title="Former Woodstock principal charged with stealing thousands" rel="bookmark">Former Woodstock principal charged with stealing thousands</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(WOODSTOCK) The former principal of a northwest suburban middle school was charged with theft and forgery for allegedly stealing thousands of dollars from bank accounts he oversaw as part of his job. On July 31, administrators at Woodstock Community Unit School District 200 officials notified police about “possible mismanagement and theft of funds from various&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161865 --><article id="post-161856" class="post-161856 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/wheaton-attorney-charged-with-stealing-2m-from-estates-of-dead-clients/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/Beck-240x300.jpg" alt="Wheaton attorney charged with stealing $2M from estates of dead clients" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/wheaton-attorney-charged-with-stealing-2m-from-estates-of-dead-clients/" title="Wheaton attorney charged with stealing $2M from estates of dead clients" rel="bookmark">Wheaton attorney charged with stealing $2M from estates of dead clients</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(WHEATON) A west suburban attorney stole more than $2 million from the estates of dead former clients, and from trusts set up for the heirs of those clients, prosecutors claim. DuPage County Judge Timothy McJoynt on Wednesday set bond at $250,000 for Robert Beck, 48, of Wheaton, who is charged with one Class X felony&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161856 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-161850" class="post-161850 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/tollway-construction-to-bring-road-closures-to-nw-suburbs/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/04/road-work-ahead_654x372_01.jpg" alt="Tollway construction to bring road closures to NW suburbs" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/tollway-construction-to-bring-road-closures-to-nw-suburbs/" title="Tollway construction to bring road closures to NW suburbs" rel="bookmark">Tollway construction to bring road closures to NW suburbs</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) Several road closures in Elk Grove Village and Des Plaines are scheduled throughout the month of September as the Jane Addams Memorial Tollway bridge is rebuilt. Long-term lane closures on Oakton Street in Elk Grove Village and overnight lane closures on Wolf Road and Touhy Avenue in Des Plaines are scheduled as the bridge is&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161850 --><article id="post-161844" class="post-161844 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/police-suicidal-man-threatened-to-shoot-self-others-near-sw-suburban-school/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/07/Police-Line-do-not-cross.jpg" alt="Police: ‘Suicidal’ man threatened to shoot self, others near SW suburban school" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/police-suicidal-man-threatened-to-shoot-self-others-near-sw-suburban-school/" title="Police: ‘Suicidal’ man threatened to shoot self, others near SW suburban school" rel="bookmark">Police: ‘Suicidal’ man threatened to shoot self, others near SW suburban school</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) A “despondent” gunman threatened to shoot himself, several others and any responding officers in a building across the street from Plainfield Central High School Wednesday, police said. At 5:25 p.m., officers coordinated a lockdown with the high school and began setting up perimeter on the 15000 block of South James Street in Plainfield, according to&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161844 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-161838" class="post-161838 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/police-presence-in-volo-not-related-to-fox-lake-manhunt-authorities/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/05/police-e1430493953817.jpg" alt="Police presence in Volo not related to Fox Lake manhunt: authorities" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/police-presence-in-volo-not-related-to-fox-lake-manhunt-authorities/" title="Police presence in Volo not related to Fox Lake manhunt: authorities" rel="bookmark">Police presence in Volo not related to Fox Lake manhunt: authorities</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(VOLO) An increased police presence in north suburban Volo late Wednesday was not related to the ongoing manhunt for three people suspected in the fatal shooting of police Lt. Charles Joseph Gliniewicz in nearby Fox Lake, officials said. About 9:30 p.m. Wednesday, officers in the Lake County Sheriff’s office were dispatched to a corn field&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161838 --><article id="post-161829" class="post-161829 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo alt default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/03/police-woman-lied-about-spotting-suspects-in-fox-lake-manhunt/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/09/kiefer090415-225x300.jpg" alt="Police: Woman lied about spotting suspects in Fox Lake manhunt" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/03/police-woman-lied-about-spotting-suspects-in-fox-lake-manhunt/" title="Police: Woman lied about spotting suspects in Fox Lake manhunt" rel="bookmark">Police: Woman lied about spotting suspects in Fox Lake manhunt</a></h3><div class="entry-meta entry-meta-above">Sep 3, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>&nbsp; (VOLO) A north suburban woman made a phony report to authorities that she spotted two suspects in the Fox Lake cop-killer manhunt late Wednesday, prompting a massive police response in Volo for five hours into early Thursday, according to the Lake County sheriff’s office. About 9:20 p.m., Kristin B. Kiefer called police and claimed she had&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161829 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-161340" class="post-161340 post type-post status-publish format-standard has-post-thumbnail hentry category-wls-am-890-local-news author-jdesalvo default" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wlsam.com/2015/09/02/chicago-man-gets-8-years-for-running-west-side-sex-trafficking-ring/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://www.wlsam.com/wp-content/uploads/sites/353/2015/04/gavel-closeup_654x372_01.jpg" alt="Chicago man gets 8 years for running West Side sex trafficking ring" width="auto" height="auto" itemprop="image" />
+								</a>
+
+		<header><h3 class="entry-title" itemprop="headline"><a href="https://www.wlsam.com/2015/09/02/chicago-man-gets-8-years-for-running-west-side-sex-trafficking-ring/" title="Chicago man gets 8 years for running West Side sex trafficking ring" rel="bookmark">Chicago man gets 8 years for running West Side sex trafficking ring</a></h3><div class="entry-meta entry-meta-above">Sep 2, 2015 | WLSAM Staff</div><!-- .entry-meta --></header><div class="entry-summary entry-content" itemprop="text"><p>(CHICAGO) A Chicago man was sentenced to eight years in prison Monday after pleading guilty to running a violent sex trafficking ring on the West Side for six years. Dajuan Brown, 39, pleaded guilty to one count of aggravated trafficking in persons for forced labor or services, according to the Cook County state’s attorney’s office. Beginning&hellip;</p>
+</div><!-- .entry-summary.entry-content --></article><!-- #post-161340 -->
+
+</div><!-- .entry-row -->
+
+</div><div id="nav-below" class="loop-navigation loop-utility loop-utility-below" itemscope itemtype="http://schema.org/SiteNavigationElement"><div class="nav-previous" itemprop="url"><a href="https://www.wlsam.com/category/wls-am-890-local-news/page/509/" ><span class="meta-nav">&larr;</span> Older posts</a></div><div class="nav-next" itemprop="url"><a href="https://www.wlsam.com/category/wls-am-890-local-news/page/507/" >Newer posts <span class="meta-nav">&rarr;</span></a></div></div><!-- #nav-below -->
+</div><!-- .block-content -->
+
+</div><!-- #block-bpt57a39eba0c872 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<div id="block-34" class="300x250-ad-1 Sidebar-Module marg-bot-two block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones block-mirrored block-mirroring-bb25499e64d5bce0 block-original-br257a39eb9e4946" data-alias="300x250 Ad 1 :: ">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<div id="block-bvf57aa0b7a8b970" class="Clean-Teaser Sidebar-Module marg-bot-two block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bvf57aa0b7a8b970 block-original-bjc57ac926c44650" data-alias="WLSAM General - Twitter Module - Sidebar :: ">
+<div class="block-content">
+<h1 class="block-title"><span>WLS-AM Twitter</span></h1><div class="loop bg-graylight">
+	<div class="pad-Clean-Content">
+    	<a class="twitter-timeline" data-height="600" data-chrome="noheader" href="https://twitter.com/wlsam890">Tweets by wlsam890</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bvf57aa0b7a8b970 -->
+<div id="block-46" class="300x250-ad-2 Sidebar-Module marg-bot-two block block-type-custom-code block-fluid-height block-mirrored block-mirroring-box5499e64d77392 block-original-b1857a39eb9b8547" data-alias="300x250 Ad 2 :: ">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-3" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-3",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600], [300, 50], [320, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-46 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-wn657a39eb9ae4b2" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-32-10 responsive-grid wrapper-mirroring-10 wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-51" class="728x90-ad-2 marg-bot-one block block-type-custom-code block-fluid-height" data-alias="728x90 Leaderboard Ad - Footer">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-center"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-1571565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1571565"><a href="https://www.wlsam.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1663219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1663219"><a href="https://www.wlsam.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-1571567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1571567"><a href="https://www.wlsam.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://www.wlsam.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-63839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63839"><a href="https://www.wlsam.com/station-information/">Station Information</a></li>
+<li id="menu-item-122604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122604"><a target="_blank" rel="noopener" href="https://express-images.franklymedia.com/6616/sites/350/2023/07/31140520/Cumulus-Chicago-2023-EEO-Public-File-Report.pdf">EEO Report</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/careers/">Employment Opportunities</a></li>
+<li id="menu-item-733845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-733845"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/am-profile/wls">FCC Public File</a></li>
+<li id="menu-item-1251443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1251443"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+</ul></div><!-- .nav-horizontal nav-align-center -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-bep6310cef028a0a" class="block block-type-custom-code block-fluid-height" data-alias="CMP Links">
+<div class="block-content">
+<style>.cmp-consentlinks { color: #fff; text-align: center; padding: .75em } .cmp-consentlinks a { display: inline-block; color: #fff; text-decoration: underline; margin: 0 .5em; }</style>
+<div class="cmp-consentlinks">
+Advertising Privacy: <a class="change-consent" onclick="window.__uspapi('displayUspUi');">Do Not Sell My Personal Information</a>
+<a class="change-consent" onclick="window.__tcfapi('displayConsentUi', 2, function() {} );">Change Consent</a>
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-bep6310cef028a0a -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2020 Cumulus Media / Cumulus Media is an equal opportunity employer / AA</p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.wlsam.com/category/wls-am-890-local-news/page/508/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-5">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<div id="block-b1m55c9dd4e93b96" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-b1m55c9dd4e93b96 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- BEGIN CENTRO PIXEL a -->
+<script src ="https://up.pixel.ad/assets/up.js?um=1"></script>
+<script type="text/javascript">
+	cntrUpTag.track('cntrData', '7b2ff5848ad40958');
+</script>
+<!-- END CENTRO PIXEL -->
+
+<!-- TransUnion Pixel -->
+<img style='display:none' src='//di.rlcdn.com/406006.gif?pdata=partner%3Dtap349536%2Cdata%3Dtype%3Asite%24audience%3ASS_WLSAM_ClientSite_Control'/>
+<!-- End TransUnion Pixel -->
+
+<!-- inMarket Pixel -->
+<img style='display:none' src='////di.rlcdn.com/406006.gif?pdata=partner%3Dtap202380%2Cdata%3Dtype%3Aimpression%24audience%3ANinthDecimal_OnDemand_Pixel_Cumulus_WLSAM_NEW_20210331'/>
+<!-- End inMarket Pixel -->
+
+<!-- TGMP PLUGIN ENABLED 2016-08-05T00:38:33.253Z -->
+<!-- DISABLE TGMP INFO TRAY -->
+<!-- ADDED 2016-08-05T00:38:33.253Z -->
+<script>
+function onTuneGenieMediaPlayerInitialized(tgmp) {
+	console.log(tgmp+' is initialized!');
+	tgmp.updateOption('infoTrayOnLoad',false);
+}
+</script>
+<!-- END DISABLE TGMP INFO TRAY -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<img src="https://cumuluschicago.com/active/index.php?station=wls-am" width="1" height="1" />
+
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_10483/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3Lndsc2FtLmNvbS93cC1hZG1pbi9hZG1pbi1hamF4LnBocCIsIm1lbnVfdG9vbHRpcHMiOltdLCJwbHVnaW5fdXJsIjoiaHR0cHM6Ly93d3cud2xzYW0uY29tL3dwLWNvbnRlbnQvcGx1Z2lucyIsImx6IjoiMSIsImVtYWlsU3ViIjoiQ2hlY2sgdGhpcyBvdXQhIiwibm9wIjoiQ2hlY2sgdGhpcyBvdXQhIiwibGlnaHRib3giOnsiaTE4biI6eyJ0Q291bnRlciI6IiVjdXJyJSBvZiAldG90YWwlIn19LCJzX3YiOiI1LjMuOSJ9Ow=="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.wlsam.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.wlsam.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://wlsam.tunegenie.com/station/pwa/fullfooter.js?bs=wlsam"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "wlsam";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 238/956 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-30 13:01:45 by W3 Total Cache
+-->

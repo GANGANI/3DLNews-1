@@ -1,0 +1,2595 @@
+<!DOCTYPE HTML><html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+<!-- Global Script -->
+<script src="https://cdn.jsdelivr.net/gh/cumulus-digital/cmls-amp-cms-utils@5fda732/dist/main.js" async defer data-ot-ignore></script>
+
+<script>
+/**
+ * Match a sizeMap array to the viewport.
+ * 
+ * GPT's own sizeMapping does not work inside an iframe!
+ * In these cases, this function can be used to force
+ * consideration of the device dimensions when passing
+ * the default sizes in defineSlot.
+ * 
+ * provide a size map array in decreasing order of preference, such as:
+ * [
+ *  // [ [viewport w,h], [ [ad size w,h] ]
+ *  [ [726,0], [] ],
+ *  [ [0,0], [ [300,250], [320,50] ] ]
+ * ]
+ * Returns the first ad sizes array which matches the viewport size.
+ * Example above would return [ [300,250], [320,50] ] on viewport widths below 726px.
+ **/
+function cmlsGetMapSize(sizeMap) {
+  function logit(retMap) {
+    console.groupCollapsed('cmlsGetMapSize', { request: sizeMap, return: retMap });
+    console.trace();
+    console.groupEnd();
+    return retMap;
+  }
+
+  if (!Array.isArray(sizeMap) || !Array.isArray(sizeMap[0]) || sizeMap[0].length < 2) {
+    return logit([]);
+  }
+  if (!matchMedia || !matchMedia('screen').matches) {
+    return logit(sizeMap[0][1]);
+  }
+  var mapSize = false;
+  sizeMap.some(function (map) {
+    if (!Array.isArray(map) || map[0].length < 2) return false;
+    if (
+      matchMedia(
+        `(min-width: ${map[0][0]}px) and (min-height: ${map[0][1]}px)`
+      ).matches
+    ) {
+      mapSize = map[1];
+      return true;
+    }
+  });
+  if (mapSize === false) {
+    return logit(sizeMap[0][1]);
+  }
+  return logit(mapSize);
+}
+</script>
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_top.js?v=160" ></script>
+
+
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<style id="tb_inline_styles" data-no-optimize="1">.tb_animation_on{overflow-x:hidden}.themify_builder .wow{visibility:hidden;animation-fill-mode:both}[data-tf-animation]{will-change:transform,opacity,visibility}.themify_builder .tf_lax_done{transition-duration:.8s;transition-timing-function:cubic-bezier(.165,.84,.44,1)}[data-sticky-active].tb_sticky_scroll_active{z-index:1}[data-sticky-active].tb_sticky_scroll_active .hide-on-stick{display:none}@media(min-width:1281px){.hide-desktop{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:769px) and (max-width:1280px){.hide-tablet_landscape{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(min-width:681px) and (max-width:768px){.hide-tablet{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}@media(max-width:680px){.hide-mobile{width:0!important;height:0!important;padding:0!important;visibility:hidden!important;margin:0!important;display:table-column!important;background:0!important}}div.row_inner,div.subrow_inner{--gutter:3.2%;--narrow:1.6%;--none:0%;}@media(max-width:680px){
+		    .themify_map.tf_map_loaded{width:100%!important}
+		    .ui.builder_button,.ui.nav li a{padding:.525em 1.15em}
+		    .fullheight>.row_inner:not(.tb_col_count_1){min-height:0}
+	    }</style><noscript><style>.themify_builder .wow,.wow .tf_lazy{visibility:visible!important}</style></noscript>        <style id="tf_lazy_common" data-no-optimize="1">
+                                    .tf_fa,em tf-lottie,i tf-lottie{display:inline-block;vertical-align:middle}em tf-lottie,i tf-lottie{width:1.4em;height:1.4em}.tf_fa{width:1em;height:1em;stroke-width:0;stroke:currentColor;overflow:visible;fill:currentColor;pointer-events:none;text-rendering:optimizeSpeed;buffered-rendering:static}#tf_svg symbol{overflow:visible}.tf_lazy{position:relative;visibility:visible;display:block;opacity:.3}.wow .tf_lazy{visibility:hidden;opacity:1;position:static;display:inline}div.tf_audio_lazy audio{visibility:hidden;height:0;display:inline}.mejs-container{visibility:visible}.tf_iframe_lazy{transition:opacity .3s ease-in-out;min-height:10px}.tf_carousel .tf_swiper-wrapper{display:flex}.tf_carousel .tf_swiper-slide{flex-shrink:0;opacity:0;width:100%;height:100%}.tf_carousel .tf_lazy{contain:none}.tf_swiper-wrapper>br,.tf_lazy.tf_swiper-wrapper .tf_lazy:after,.tf_lazy.tf_swiper-wrapper .tf_lazy:before{display:none}.tf_lazy:after,.tf_lazy:before{content:'';display:inline-block;position:absolute;width:10px!important;height:10px!important;margin:0 3px;top:50%!important;right:50%!important;left:auto!important;border-radius:100%;background-color:currentColor;visibility:visible;animation:tf-hrz-loader infinite .75s cubic-bezier(.2,.68,.18,1.08)}.tf_lazy:after{width:6px!important;height:6px!important;right:auto!important;left:50%!important;margin-top:3px;animation-delay:-.4s}@keyframes tf-hrz-loader{0%{transform:scale(1);opacity:1}50%{transform:scale(.1);opacity:.6}100%{transform:scale(1);opacity:1}}.tf_lazy_lightbox{position:fixed;background:rgba(11,11,11,.8);color:#ccc;top:0;left:0;display:flex;align-items:center;justify-content:center;z-index:999}.tf_lazy_lightbox .tf_lazy:after,.tf_lazy_lightbox .tf_lazy:before{background:#fff}.tf_vd_lazy,tf-lottie{display:flex;flex-wrap:wrap}tf-lottie{aspect-ratio:1.777}.tf_w.tf_vd_lazy video{width:100%;height:auto;position:static;object-fit:cover}
+        </style>
+        <meta name='robots' content='max-image-preview:large' />
+
+<!-- Title -->
+<title>Vol News | WIVK-FM</title><link rel="canonical" href="https://www.wivk.com/vol-news/" />
+
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='headway-google-fonts' href='//fonts.googleapis.com/css?family=Oswald' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3" as="style"><link rel='stylesheet' id='bxslider-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3" as="style"><link rel='stylesheet' id='amp-promo-reel-widget-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/widget.css?ver=20210512-3' type='text/css' media='all' />
+<link rel="preload" href="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/general-https-ABC123H.css?ver=20240531020940" as="style"><link rel='stylesheet' id='headway-general-https-css' href='https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/general-https-ABC123H.css?ver=20240531020940' type='text/css' media='all' />
+<link rel="preload" href="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/layout-single-https-ABC123H.css?ver=20240531020940" as="style"><link rel='stylesheet' id='headway-layout-single-https-css' href='https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/layout-single-https-ABC123H.css?ver=20240531020940' type='text/css' media='all' />
+<link rel="preload" href="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/responsive-grid-https-ABC123H.css?ver=20240531020940" as="style"><link rel='stylesheet' id='headway-responsive-grid-https-css' href='https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/responsive-grid-https-ABC123H.css?ver=20240531020940' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='create-block-adman-style-inline-css' type='text/css'>
+div[id^=google_ads_iframe_]{text-align:center}div[id^=google_ads_iframe_] iframe{margin:auto}.wp-block-create-block-adman,.wp-block-create-block-adman iframe,.wp-block-create-block-adman iframe div{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+
+</style>
+<style id='express-block-express-alerts-style-inline-css' type='text/css'>
+.express-alert-banner,.express-alert-wrapper-base{position:relative;width:100%}.express-alert-wrapper-base{background-color:#eee}.express-alert-wrapper{position:absolute;width:100%}.express-alert{z-index:1}.express-alert-next-position{height:50px;position:absolute;right:0;top:0}.express-alert-next-position-wrapper{position:absolute;top:50%}.express-alert-next-wrapper{height:0;margin:auto;max-width:var(--express-alert-width);position:relative;z-index:10}.express-alert-warning{fill:#000;background-color:#fff;border-radius:3px;color:#000;font-size:var(--express-alert-font-title);font-weight:700;margin-right:2px;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}.express-alert-next{right:40px}.express-alert-close,.express-alert-next{fill:#fff;cursor:pointer;height:25px;position:absolute;top:-12px}.express-alert-close{right:10px}.express-alert-item,.express-alert-item-base{padding:var(--express-alert-banner-padding)}.express-alert-container{display:flex;margin:auto;max-width:var(--express-alert-width)}.express-alert-container.pagination{padding-bottom:15px}.express-alert-pagination{background:rgba(0,0,0,.2);bottom:0;height:15px;left:0;line-height:8px;margin:auto;position:absolute;right:0;text-align:center;z-index:11}.paginate-item{background-color:hsla(0,0%,100%,.5);border-radius:10px;display:inline-block;height:8px;margin:0 5px;width:8px}.paginate-item.paginate-active{background-color:#fff}.express-alert-title{border-radius:3px;font-size:var(--express-alert-font-title);font-weight:700;padding:var(--express-alert-title-padding);text-transform:uppercase;white-space:nowrap}a.express-alert-link{text-decoration:none!important}a.express-alert-link:hover{text-decoration:underline!important}.express-alert-content{font-size:var(--express-alert-font-msg);font-weight:700;overflow:hidden;padding:var(--express-alert-content-padding);text-overflow:ellipsis;white-space:nowrap}.express-alert-content a,.express-alert-content a:hover{text-decoration:underline}.express-alert-breakingnews{background-color:var(--express-alert-BN-content-bgcolor)}.express-alert-breakingnews .express-alert-title{background-color:var(--express-alert-BN-title-bgcolor);color:var(--express-alert-BN-title-color)}.express-alert-breakingnews .express-alert-content,.express-alert-breakingnews .express-alert-content a{color:var(--express-alert-BN-content-color)}.express-alert-watchlive{background-color:var(--express-alert-WL-content-bgcolor)}.express-alert-watchlive .express-alert-title{background-color:var(--express-alert-WL-title-bgcolor);color:var(--express-alert-WL-title-color)}.express-alert-watchlive .express-alert-content,.express-alert-watchlive .express-alert-content a{color:var(--express-alert-WL-content-color)}.express-alert-announcement{background-color:var(--express-alert-AA-content-bgcolor)}.express-alert-announcement .express-alert-title{background-color:var(--express-alert-AA-title-bgcolor);color:var(--express-alert-AA-title-color)}.express-alert-announcement .express-alert-content,.express-alert-announcement .express-alert-content a{color:var(--express-alert-AA-content-color)}.express-alert-delay{background-color:var(--express-alert-CD-content-bgcolor)}.express-alert-delay .express-alert-title{background-color:var(--express-alert-CD-title-bgcolor);color:var(--express-alert-CD-title-color)}.express-alert-delay .express-alert-content,.express-alert-delay .express-alert-content a{color:var(--express-alert-CD-content-color)}.express-alert-weather{background-color:var(--express-alert-WA-content-bgcolor)}.express-alert-weather .express-alert-title{background-color:var(--express-alert-WA-title-bgcolor);color:var(--express-alert-WA-title-color)}.express-alert-weather .express-alert-content,.express-alert-weather .express-alert-content a{color:var(--express-alert-WA-content-color)}
+
+</style>
+<style id='create-block-express-archive-style-inline-css' type='text/css'>
+.express-archive-richtext{border:1px solid #ccc;margin:0 10px 10px;padding-top:13px}.event-archive-content{display:none;margin:15px 0}
+
+</style>
+<style id='create-block-express-brand-style-inline-css' type='text/css'>
+.wp-block-create-block-express-brand.alignright{margin:auto;text-align:right}.wp-block-create-block-express-brand.aligncenter{margin:auto;text-align:center}.wp-block-create-block-express-brand.alignleft{margin:auto;text-align:left}@media(max-width:782px){.wp-block-create-block-express-brand.alignleft,.wp-block-create-block-express-brand.alignright{-webkit-margin-end:0!important;-webkit-margin-start:0!important;float:none!important;margin-inline-end:0!important;margin-inline-start:0!important;text-align:center}.express-brand-image{max-width:90%}}
+
+</style>
+<style id='create-block-express-styles-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-links-style-inline-css' type='text/css'>
+.express-link-icon-wrapper{align-items:center;display:flex;justify-content:left}.express-link-icon-container{text-align:left}.express-link-icon-container.center{text-align:center}.express-link-icon-container.right{text-align:right}.express-link-icon-container a,.express-link-icon-container span{display:inline-block;white-space:nowrap}.express-link-icon-container a.link-icon-button,.express-link-icon-container span.link-icon-button{background-color:var(--link-icon-btn-bgcolor)!important;border-color:var(--link-icon-btn-bd-color)!important;border-radius:var(--link-icon-btn-radius)!important;border-style:solid;border-width:var(--link-icon-btn-bd-width)!important;padding:var(--link-icon-btn-padding)!important}.express-link-icon-container a.link-icon-button:hover,.express-link-icon-container span.link-icon-button:hover{background-color:var(--link-icon-btn-hover-bgcolor)!important}.express-link-icon-container.override a,.express-link-icon-container.override span{color:var(--link-icon-color)!important;font-size:var(--link-icon-fontsize)!important;-webkit-text-decoration:var(--link-icon-underline)!important;text-decoration:var(--link-icon-underline)!important}.express-link-icon-container.override a:hover,.express-link-icon-container.override span:hover{color:var(--link-icon-hover-color)!important;-webkit-text-decoration:var(--link-icon-hover-underline)!important;text-decoration:var(--link-icon-hover-underline)!important}
+
+</style>
+<style id='create-block-express-content-style-inline-css' type='text/css'>
+
+
+</style>
+<style id='create-block-express-events-style-inline-css' type='text/css'>
+.express-events-grid-container,.express-events-list-container{container:event-layout/inline-size;width:100%}.express-event-listing{min-height:200px;position:relative}.express-events-grid-container .grid-container{width:100%!important}.event-load{background:hsla(0,0%,100%,.702);bottom:0;display:none;left:0;padding-top:70px;position:absolute;right:0;text-align:center;top:0;z-index:10}.event-load i{font-size:46px}.wp-block-create-block-express-events a,.wp-block-create-block-express-events a:hover{text-decoration:none!important}.event_pagination{font-size:16px;padding:20px 0;text-align:center}.engine_event_pagination{cursor:pointer;text-decoration:underline!important}.event_pagination span{display:inline-block;margin:0 15px}.express-events-date{padding-right:10px;text-transform:uppercase}.express-events-date-wrapper,.express-events-time-wrapper{white-space:nowrap}.express-events-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-events-icon.hide-icon,.express-events-title-grid,.express-events-title-list{display:none}.express-event-listing .grid-container{display:inline-grid;width:100%}.express-event-listing .grid-container.col5{grid-template-columns:20% 20% 20% 20% 20%}.express-event-listing .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-event-listing .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-event-listing .grid-container.col2{grid-template-columns:50% 50%}.express-event-listing .grid-container.col1{grid-template-columns:100%}.express-event-listing .grid-item{padding:10px}.express-event-listing .grid-item .express-events-featured-image,.express-event-listing .list-item .express-events-featured-image{background-position:50%;background-repeat:no-repeat;background-size:cover;width:100%}.express-event-listing .grid-item .express-events-title-grid{display:block}.express-event-listing .list-item .express-events-featured-image{margin:20px 0}.express-event-listing .list-item{display:inline-grid;grid-template-columns:25% 75%;width:100%}.express-event-listing .grid-item .express-events-time-wrapper,.express-event-listing .list-item .express-events-date-wrapper,.express-event-listing .list-item .express-events-time-wrapper{display:block!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:25px 20px}@media(max-width:550px){.express-event-listing .list-item{grid-template-columns:100%!important}.express-event-listing .list-item .express-events-featured-image{margin:20px 0 0!important}.express-event-listing .list-item .express-events-date-time-wrapper{padding:10px 20px 25px!important}}.express-event-listing .list-item .express-events-title-list{display:block}.express-events-grid-container .express-events-date-time-wrapper{padding-left:5px;padding-right:5px}.express-events-grid-container.event-editor .express-events-date-time-wrapper{line-height:1;padding-top:5px}.express-events-grid-container.event-editor .express-events-title-venue-wrapper{line-height:24px;padding-top:10px}.express-events-grid-container.event-editor .express-events-venue-wrapper{padding-top:5px}.express-events-list-container.event-editor .express-events-date-time-wrapper{line-height:23px}.express-events-list-container.event-editor .express-events-title-list{padding-bottom:6px}.express-events-editor-date-icon,.express-events-editor-time-icon,.express-events-editor-venue-icon{margin-right:5px}.express-events-editor-date-icon:after{background-color:#ff0}.express-events-editor-time-icon:before{color:#ff0}.express-events-editor-venue-icon:before{fill:#ff0}
+
+</style>
+<style id='express-cms-blocks-express-cms-group-style-inline-css' type='text/css'>
+.express-group-wrapper{margin:0;margin:auto!important}.express-group-container{box-sizing:border-box;margin:auto;position:relative;width:100%}.express-group-background{background-color:transparent;position:relative;z-index:1}.express-group-background:before{bottom:0;content:"";left:0;opacity:0;position:absolute;right:0;top:0;z-index:1}.express-group-content{box-sizing:border-box;margin:auto;padding:0;position:relative;z-index:3}
+
+</style>
+<style id='create-block-express-search-style-inline-css' type='text/css'>
+.express_search_wrapper{display:flex;float:right;position:relative}.express_search_btn{align-items:center;background-color:var(--express-search-btn-bkgd)!important;border:1px solid var(--express-search-btn-border);border-radius:var(--express-search-radius);display:flex;justify-content:center;line-height:0px;padding:var(--express-search-padding)!important;position:relative;text-decoration:none;z-index:30}.express_search_btn div{line-height:0px}.express_search_icon{color:var(--express-search-icon-color);height:var(--express-search-icon-size);width:var(--express-search-icon-size)}.express_search_btn:hover{background-color:var(--express-search-btn-bkgd-hover)!important;border-color:var(--express-search-btn-bkgd-hover)!important;cursor:pointer}.express_search_btn div.search_title{color:var(--express-search-font-color)!important;font-size:var(--express-search-font-size)!important;padding-left:var(--express-search-font-padding)}.express_search_field{bottom:0;position:absolute;right:0;top:0;width:-webkit-fill-available;z-index:0}.express_search_input{background-color:var(--express-search-field-bkgd)!important;border:1px solid var(--express-search-btn-border)!important;border-radius:var(--express-search-radius);bottom:0;color:var(--express-search-field-color)!important;font-size:var(--express-search-field-font)!important;height:auto!important;line-height:0px!important;min-height:1px!important;padding:var(--express-search-padding)!important;position:absolute;right:0;top:0;transition:all .5s ease-in-out;white-space:nowrap;width:0}.express_search_wrapper input:focus,.express_search_wrapper:hover input{border-bottom-left-radius:var(--express-search-radius);border-top-left-radius:var(--express-search-radius);margin-left:0;width:var(--express-search-field)}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1" as="style"><link rel='stylesheet' id='create-block-express-weather-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-weather/build/style-index.css?ver=0.2.1' type='text/css' media='all' />
+<style id='express-block-express-regions-style-inline-css' type='text/css'>
+.express-regions-grid-container,.express-regions-list-container{container:regions-layout/inline-size;width:100%}.wp-block-express-block-express-regions a,.wp-block-express-block-express-regions a:hover{text-decoration:none!important}.express-regions-icon{display:inline-block;font-size:.9em;position:relative;width:auto}.express-regions-icon.hide-icon{display:none}.express-regions-title-grid,.express-regions-title-list{display:block}.express-regions .grid-item .express-regions-title-grid{text-align:center}.express-regions .grid-container{display:inline-grid;width:100%}.express-regions .grid-container.col4{grid-template-columns:25% 25% 25% 25%}.express-regions .grid-container.col3{grid-template-columns:33.3333% 33.3333% 33.3333%}.express-regions .grid-container.col2{grid-template-columns:50% 50%}.express-regions .grid-container.col1{grid-template-columns:100%}.express-regions .grid-item{padding:10px}.express-regions .grid-item .express-regions-featured-image,.express-regions .list-item .express-regions-featured-image{background-position:50%;background-repeat:no-repeat;background-size:contain;height:100%;width:100%}.express-regions .grid-item .express-regions-title-grid{display:block}.express-regions .list-item .express-regions-featured-image{margin:20px 0}.express-regions .list-item{grid-template-columns:25% 75%;width:100%}.express-regions .list-container{display:inline-grid}.express-regions .list-item .express-regions-list-title-wrapper{padding:25px 20px}@media(max-width:550px){.express-regions .list-item{grid-template-columns:100%!important}.express-regions .list-item .express-regions-featured-image{margin:20px 0 0!important}.express-regions .list-item .express-regions-list-title-wrapper{padding:10px 20px 25px!important}}.express-regions .list-item .express-regions-title-list{display:block}.express-regions-grid-container.event-editor .express-regions-grid-title-wrapper{line-height:24px;padding-top:10px}.express-regions-list-container.event-editor .express-regions-grid-title-wrapper{line-height:23px}.express-regions-list-container.region-editor .express-regions-title-list{padding-bottom:6px}.express-regions .dropdown{display:inline-block;position:relative;width:300px;z-index:9999}.regions-button{background:#fff;border:none;cursor:pointer}.express-regions .dropdown-options{background-color:#fff;border-radius:5px;box-shadow:0 10px 10px 0 rgba(0,0,0,.4);color:red;display:none;overflow:auto;position:absolute;width:100%}.express-regions .dropdown:hover .dropdown-options{display:block}.express-regions .dropdown-options a{border-bottom:1px solid #d7172f;color:green;display:block;padding:10px 20px;text-decoration:none}.express-regions .dropdown-options a:hover{background-color:#ddd;border-radius:5px;color:red}.express-regions .region-arrow{border:solid #000;border-width:0 3px 3px 0;display:inline-block;padding:4px}.express-regions .right{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}.express-regions .down{margin-left:3px;transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+</style>
+<style id='create-block-express-weather-display-style-inline-css' type='text/css'>
+.weather-maps ol,.weather-maps ul{font-weight:400;list-style:none;margin:0;padding:0}.weather-maps{border:1px solid #e6e7e8;display:flex;flex-wrap:wrap;margin-bottom:1rem;width:100%}@media screen and (min-width:48rem){.weather-maps{margin-bottom:1.5rem}}.weather-maps .tabs-list{width:25%}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list{order:2;width:100%}}.weather-maps .tabs-list ul li{padding:10px}.weather-maps .tabs-list ul li.active,.weather-maps .tabs-list ul li:hover{background-color:#f4f5f5;cursor:pointer}@media only screen and (max-width:47.9375rem){.weather-maps .tabs-list ul{display:flex;overflow-x:scroll}.weather-maps .tabs-list ul li{align-items:center;border-right:1px solid #f4f5f5;display:flex;flex-shrink:0;padding:10px;width:55vw}}.weather-maps .output{width:75%}@media only screen and (max-width:47.9375rem){.weather-maps .output{order:1;width:100%}}.weather-maps .map-tabs{width:100%}.weather-maps .map-tabs ul{display:flex;margin-bottom:10px}.weather-maps .map-tabs ul li{padding:10px;text-transform:uppercase}.weather-maps .map-tabs ul li.active,.weather-maps .map-tabs ul li:hover{border-bottom:2px solid #b2cce9!important}.weather-maps button{-webkit-appearance:none;background-color:unset!important;border:none!important;-webkit-border-radius:0;box-shadow:none!important;display:block;font-size:.75rem!important;letter-spacing:1.6px;line-height:16px!important;text-align:left;text-transform:uppercase}.weather-maps button:active,.weather-maps button:hover{cursor:pointer}.weather-maps .main-display img{padding:5px;width:98%}.express-weather-hidden{display:none}
+
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240531025927" as="style"><link rel='stylesheet' id='express-count-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-block-tools/express-countdown/build/style-index.css?ver=0.1.720240531025927' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01" as="style"><link rel='stylesheet' id='express-cms-blocks-rewards-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/blocks/block-rewards.css?ver=20220510-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6" as="style"><link rel='stylesheet' id='create-block-express-onair-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/blocks/express-onair/build/style-index.css?ver=0.1.6' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01" as="style"><link rel='stylesheet' id='express-expire-css-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/block-expire-date/express_expire.css?ver=20220624-01' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--10: 1rem;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: 100%;--wp--style--global--wide-size: 100%; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) { padding-right: 0; padding-left: 0; }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(.has-global-padding:not(.wp-block-block)) > .alignfull { margin-right: 0; margin-left: 0; }.has-global-padding > .alignfull:where(:not(.has-global-padding):not(.is-layout-flex):not(.is-layout-grid)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding :where(.has-global-padding) > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) { padding-right: 0; padding-left: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524" as="style"><link rel='stylesheet' id='express-cms-common-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/css/express-cms-common-public.css?ver=1715610524' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-ad-manager-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/css/express-cms-ad-manager-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-codes-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/css/express-cms-codes-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-control-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/css/express-cms-control-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4" as="style"><link rel='stylesheet' id='amp-breaking-news-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/breaking-news-public.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4" as="style"><link rel='stylesheet' id='animate-style-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/css/animate.css?ver=0.3.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-events-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/css/express-cms-events-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0" as="style"><link rel='stylesheet' id='express-cms-tools-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/css/express-cms-tools-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2" as="style"><link rel='stylesheet' id='amp-onair-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/css/public.css?ver=1.7.2' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-calendar-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/calendar.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4" as="style"><link rel='stylesheet' id='amp-events-export-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/css/public.css?ver=1.1.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0" as="style"><link rel='stylesheet' id='amp_feed-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/css/feed-public.css?ver=0.6.0' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4" as="style"><link rel='stylesheet' id='amp-listen-live-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/css/public.css?ver=1.4.4' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1" as="style"><link rel='stylesheet' id='AMPPromoReel-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/css/public.css?ver=1.4.1' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5" as="style"><link rel='stylesheet' id='amp-header-rotator-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/css/amp-header-rotator.css?ver=1.1.5' type='text/css' media='all' />
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://engage-see.franklymedia.com/widget/see_10035/see.js?ver=20220510-01" id="see_engagement_script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/selectnav.js?ver=1715610524" id="headway-selectnav-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.hoverintent.js?ver=6.4.2" id="jquery-hoverintent-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/blocks/navigation/js/jquery.superfish.js?ver=6.4.2" id="headway-superfish-js"></script>
+<script type="text/javascript" src="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/block-dynamic-js-layout-single-https-ABC123H.js?ver=6.4.2" id="block-dynamic-js-layout-single-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/bxslider/jquery.bxslider.min.js?ver=20210819-12" id="bxslider-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-promo-reel/js/widget.js?ver=20210922-01" id="promo-reel-block-widget-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/headway/library/media/js/jquery.fitvids.js?ver=6.4.2" id="fitvids-js"></script>
+<script type="text/javascript" src="https://www.wivk.com/wp-content/uploads/sites/602/headway/cache/responsive-grid-js-https-ABC123H.js?ver=20240531020940" id="headway-responsive-grid-js-https-js"></script>
+<script type="text/javascript" id="amp-common-js-extra">
+/* <![CDATA[ */
+var _ampconfig = {"site_url":"https:\/\/www.wivk.com","site_id":"602","tz":"America\/New_York","tz_offset":"-4","ts":"1715610524","blog_name":"WIVK-FM","client_name":"cumuluspro","user_ID":"","alt_blog_name":"WIVK-FM","market":"Knoxville, TN","format":"NASH","ts_offset":"1717109967","version":"release-3.26.01","env":"prod","settings":{"tenant_id":"see_10035","format":"NASH","market":"Knoxville, TN","syn_site_name":"WIVK-FM","selector_logo":false,"selector_masthead":false,"selector_nav":false,"selector_rotator":false,"default_show_name":false,"default_show_img":false,"gtm_id":false,"region_text_field":false,"region_img":false,"vidible_company_key":false,"client_name":false,"nielsen_provider":false,"promoreel_priority":1,"amplog_enabled":0,"amploginfo_enabled":false,"amplogwarn_enabled":false,"express_password_status":false,"express_password_expire":false,"express_user_disable":false,"express_user_disable_date":"2022-08-12"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/amp-common.js?ver=20210629-03" id="amp-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/public/js/express-cms-common-public.js?ver=202200726-01" id="express-cms-common-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-ad-manager/public/js/express-cms-ad-manager-public.js?ver=1.0.0" id="express-cms-ad-manager-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/express-cms-codes-public.js?ver=1.0.0" id="express-cms-codes-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/js.cookie.js?ver=6.4.2" id="js-cookie-js"></script>
+<script type="text/javascript" id="express-cms-codes-plugin-script-js-extra">
+/* <![CDATA[ */
+var amp_rewards = {"ajaxurl":"https:\/\/www.wivk.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-codes/public/js/public-rewards.js?ver=1.0.0" id="express-cms-codes-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/public/js/express-cms-control-public.js?ver=1.0.0" id="express-cms-control-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/breaking-news-public.js?ver=0.3.4" id="amp-breaking-news-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/js/express-cms-events-public.js?ver=1.0.0" id="express-cms-events-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-tools/public/js/express-cms-tools-public.js?ver=1.0.0" id="express-cms-tools-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-control/style_functions/js/public.js?ver=1.4.5" id="amp-styles-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/mu-plugins/express-cms-common/js/jquery.initialize/jquery.initialize.min.js?ver=20210820-03" id="jquery_initialize-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/public/assets/js/public.js?ver=20220707-01" id="amp-onair-plugin-script-js"></script>
+<script type="text/javascript" id="amp-events-calendar-script-js-extra">
+/* <![CDATA[ */
+var dates = {"start_of_week":"1","moment_date_format":"MMMM D, YYYY","moment_time_format":"h:mm a","calendar_date_format":"MMMM d, yyyy","calendar_time_format":"h:mm tt","date_format":"MM d, yy","time_format":"g:i a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/calendar.js?ver=1.1.4" id="amp-events-calendar-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-events/js/public.js?ver=1.1.4" id="amp-events-export-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/jquery.totemticker.min.js?ver=0.6.0" id="amp_feed-totemticker-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/public/js/feed-public.js?ver=0.6.0" id="amp_feed-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-feeds/admin/js/feed-date.js?ver=0.6.0" id="amp_feed-php-date-js"></script>
+<script type="text/javascript" id="amp-listen-live-plugin-script-js-extra">
+/* <![CDATA[ */
+var _amplistenlive = {"blog_id":"602","callsign":"","mount_name":"WIVKFM","provider":"stream_the_world","gmt_offset":"-14400","live_url":"http:\/\/player.listenlive.co\/24241\/","live_url_mobile":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-listen-live/public/assets/js/playlist.js?ver=20240531025927" id="amp-listen-live-plugin-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/js/amp-theme.js?ver=20210929-06" id="amp-theme-js-js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://www.wivk.com/wp-content/themes/headway/library/media/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="https://www.wivk.com/wp-content/themes/headway/library/media/js/ie8.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" title="WIVK-FM &raquo; Feed" href="https://www.wivk.com/feed/" />
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/ico" href="https://express-images.franklymedia.com/6616/sites/602/2020/10/20151455/WIVK-FM-Sitelogo-2020-10-201.png" />
+
+
+<link rel='shortlink' href='https://www.wivk.com/?p=286683' />
+	<script>
+		const express_config = { 
+			express_url : 'https://www.wivk.com',
+			network_url : 'https:\/\/cumuluspro.express-pro.franklymedia.com\/wivk-com\/',
+			rewards_id : '1026',
+			site_id : '602',
+			client_id : 'cumuluspro',
+			post_id : '286683',
+			tracking_meta_id: '9313511',
+			tracking_status: false,
+			weatherSettings_data: '',
+			offset : -4,
+			timezone : 'America/New_York',
+			timezone_abbr : 'EDT',
+			browser_offset : ( new Date().getTimezoneOffset() / - 60 ),
+			univ_app: false,
+			time_offset : ( -4 ) - ( new Date().getTimezoneOffset() / - 60 )
+					};
+	</script>
+	
+	<!-- Force Block Library Styles -->
+	<link rel="stylesheet" id="block-library-styles" href="/wp-includes/css/dist/block-library/style.min.css"/>
+			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			if ( typeof _AMP != 'undefined'){
+				if ( typeof _AMP.config == 'object' ){
+					gtag('config','G-7LHM6PBR21');
+					var express_dimensions = { 'client_name':'cumuluspro','station_name':'WIVK-FM','alt_station_name':'WIVK-FM','market':'Knoxville, TN','format':'NASH','author':'System User','page_type':'page' };
+					gtag('event', 'express_dimensions', express_dimensions );
+				}
+			}
+
+						gtag('config', 'G-B4VQSS6556');								</script>
+		<!-- End Google Analytics -->
+		
+		<link rel="Shortcut Icon" type="image/x-icon" href="https://express-images.franklymedia.com/6616/sites/602/2020/10/20151455/WIVK-FM-Sitelogo-2020-10-201.png" />
+<!-- Begin Cumulus Corporate Google Tag Manager -->
+<!-- MUST COME FIRST, DO NOT PLACE ANYTHING BEFORE THIS -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.setAttributeNode(d.createAttribute('data-ot-ignore')); j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NC7X92');</script>
+<!-- End Cumulus Corporate Google Tag Manager -->
+
+<!-- BEGIN 2023 CMLS GPT -->
+<script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+	// SLOTS ARE DEFINED IN THEIR DISPLAY BLOCKS
+	window.GPT_SITE_ID = '/6717/cd.WIVK.FM';
+	window.googletag = window.googletag || {};
+	window.googletag.cmd = window.googletag.cmd || [];
+
+	// APS initialization
+	if (window.cmlsAds && window.cmlsAds.apsInit) {
+		googletag.cmd.push(function() {
+			googletag.pubads().disableInitialLoad();
+		});
+		window.cmlsAds.apsInit();
+	}
+
+	googletag.cmd.push(function() {
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+
+		// Load APS bids and do initial request
+		if (window.cmlsAds && window.cmlsAds.apsLoad) {
+			window.cmlsAds.apsLoad();
+		}
+	});
+</script>
+<!-- END 2023 CMLS GPT -->
+	
+<!----Text Groove----->
+<script>
+
+smsWidgetSettings = {
+senderId: '6JtjceYv0a6E3kUW27J3GsAFs4tqIhtZtfEu4jMts5nlMfk128CF8tVceREQDiFTNbLoleRL3ZZetCqbsLLKoaR67dqHZvf4PGjv',
+token: '58f7042307a368594b3f48d43756382b41372dcf39e2e2ae5a2d53af878c669d83bb207209361c34a52b3d5199256207989a2437da5691ef27ee11f66b2cdc2f',
+color: 'f45642',
+bottom: '80px',
+right: '15px'
+};
+
+document.addEventListener("DOMContentLoaded", function(e) { var r = Math.random().toString(36).substring(3); var h = document.getElementsByTagName('head')[0]; var s = document.createElement('script'); s.type = 'text/javascript'; s.src = 'https://app.textgroove.com/widget/textloader/'+ r + '/load.js'; h.appendChild(s); });
+
+</script>
+<!-----End Text Groove--->
+<!-- Customization: Default -->
+<style style="text/css" id="customize-styles">
+#whitewrap > .wrapper-header {background-color: #000000 !important; 
+background-image: url(https://express-images.franklymedia.com/6616/sites/602/2024/01/29103421/Stock_Firefly_98800_landscape_1706541997730.jpg) !important;
+}
+#whitewrap > .wrapper-content {background-color: transparent !important; background-image: none !important;}
+#whitewrap > .wrapper-footer {background-color: transparent !important; background-image: none !important;}
+body {background-color: #0c0a0a !important; 
+background-image: none !important;
+}
+.block-title, .block-title a {background-color: #000000 !important; 
+background-image: none !important;
+}
+
+</style>
+<script>_AMP.theme.data = [];</script>
+<script type="text/javascript">var ajaxurl = "https://www.wivk.com/wp-admin/admin-ajax.php"</script>		<!-- AMP CMS DFP custom tags -->
+		<script type='text/javascript'>
+		if ( typeof googletag !== 'undefined' ) {
+			googletag.cmd.push(function() {
+				      googletag.pubads().setTargeting('cms-sname', 'WIVKFM');
+      googletag.pubads().setTargeting('cms-sgroup', ['All Sites', 'Format  NASH', 'Format  Country', 'Market  Knoxville TN', 'Format Country New', 'Cumulus OO']);
+      googletag.pubads().setTargeting('cms-ptitle', 'Vol News');
+      googletag.pubads().setTargeting('cms-pcat', '');
+			});
+		}
+		</script>
+		<link rel="preload" href="https://www.wivk.com/wp-content/plugins/themify-builder/js/themify.builder.script.min.js?ver=7.0.6" as="script" fetchpriority="low"><link rel="preload" fetchpriority="high" href="https://www.wivk.com/wp-content/uploads/sites/602/themify-concate/3568307525/themify-3883281980.min.css" as="style"><link fetchpriority="high" id="themify_concate-css" rel="stylesheet" href="https://www.wivk.com/wp-content/uploads/sites/602/themify-concate/3568307525/themify-3883281980.min.css"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="//www.google-analytics.com"><link rel="dns-prefetch" href="https://api.tunegenie.com">
+<link rel="preconnect" href="https://api.tunegenie.com">
+
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="WIVK-FM"/>
+  <meta property="og:title" content="Vol News"/>
+  <meta property="og:url" content="https://www.wivk.com/vol-news/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Read the latest sports news on the Vols below! WIVK is your official flagship station for the Tennessee Volunteers!  Catch the live broadcasts of all Tennessee football and men’s basketball games here on the frog station courtesy of the Vol Network.  You can also catch Vol Calls right here on WIVK o"/>
+  <meta property="article:publisher" content="https://www.facebook.com/WIVK1077"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Vol News"/>
+  <meta itemprop="headline" content="Vol News"/>
+  <meta itemprop="description" content="Read the latest sports news on the Vols below! WIVK is your official flagship station for the Tennessee Volunteers!  Catch the live broadcasts of all Tennessee football and men’s basketball games here on the frog station courtesy of the Vol Network.  You can also catch Vol Calls right here on WIVK o"/>
+  <meta itemprop="author" content="bshoesmith"/>
+  <!--<meta itemprop="publisher" content="WIVK-FM"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="Vol News"/>
+  <meta name="twitter:url" content="https://www.wivk.com/vol-news/"/>
+  <meta name="twitter:description" content="Read the latest sports news on the Vols below! WIVK is your official flagship station for the Tennessee Volunteers!  Catch the live broadcasts of all Tennessee football and men’s basketball games here on the frog station courtesy of the Vol Network.  You can also catch Vol Calls right here on WIVK o"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@https://twitter.com/wivk1077"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+
+
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_bottom.js?v=160" async ></script>
+
+</head>
+
+<body class="page-template-default page page-id-286683 is-headway-theme custom safari webkit responsive-grid-enabled responsive-grid-active pageid-286683 page-slug-vol-news layout-single-page-286683 layout-using-single tb_animation_on" itemscope itemtype="http://schema.org/WebPage">
+
+
+<div id="whitewrap">
+
+
+<div id="wrapper-48" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-mirroring-8 wrapper-first wrapper-header" data-alias="Wrapper Header">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-27" class="block block-type-custom-code block-fluid-height" data-alias="728x90 Leaderboard Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-1" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-1",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90], [970, 90], [970, 250]])
+				.addSize([780,0], [[728, 90], [320, 50]])
+				.addSize([0,0], [[320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "top")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-27 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-b0q5a8f20b611445" class="gigya-actions nominheight block block-type-custom-code block-fluid-height" data-alias="Gigya Profile Actions">
+<div class="block-content">
+<div class="see-widget" data-see-type="regUi" data-see-loginbonus="false"></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-b0q5a8f20b611445 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-4">
+<figure id="block-31" class="logo block block-type-image block-fixed-height" data-alias="Logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<div class="block-content">
+<a href="https://www.wivk.com" class="image" ><img src="https://express-images.franklymedia.com/6616/sites/602/2020/10/20151455/WIVK-FM-Sitelogo-2020-10-201.png" alt="" title="" itemprop="contentURL"/></a>
+</div><!-- .block-content -->
+
+</figure><!-- #block-31 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<aside id="block-29" class="on-air block block-type-widget-area block-fluid-height" data-alias="Home - On Air Now" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<ul class="widget-area"><div style="display:none;" class="amp-onair-widget" id="amp_onair_widget-2"
+	data-title-now=""
+	data-title-upcoming=""
+	data-title=""
+	data-type="nowplaying"
+	data-change-minutes="5"
+	data-change="0"
+	data-toggle-time="5"
+	data-fields="image,timeslot"
+	data-ajaxurl="https://www.wivk.com/wp-admin/admin-ajax.php"
+	data-updateurl="https://www.wivk.com/shows/feed/?type=json"
+	data-memcached="1"
+	data-expiration="1717113540">
+	
+<div class="amp-onair-show nowplaying" >
+
+    <div class="amp-onair-widget-title js-widget-title"></div>
+
+        <div class="amp-onair-show-image">
+                    <img class="js-image amp-onair-show-image-img" src="https://express-images.franklymedia.com/6616/sites/602/2021/01/10234405/NightsWithElaina-web-small.jpg"  />
+            </div>
+        
+    <div class="amp-onair-show-title">
+            <span class="js-title">Nights with Elaina</span>
+        </div>
+    
+        <div class="amp-onair-show-timeslot js-timeslot" >7:00 p.m. - 11:59 p.m.</div>
+        
+        
+    
+</div>
+
+</div></ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-29 -->
+
+</section><!-- .column -->
+
+<section class="column column-3 grid-left-0 grid-width-7">
+<section id="block-bp864f8b00db3458" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation Copy">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="#"><img src="https://express-images.franklymedia.com/6616/sites/602/2015/01/26173005/ListenLive.png" alt="Listen Live!!" title="Listen Live!!" class="img-1"  /></a></li><li><a href="/listen-live-with-alexa"><img src="https://express-images.franklymedia.com/6616/sites/602/2019/07/12182114/Smart-Speaker-ROUND-RED.png" alt="Listen with your Smart Speaker" class="img-2"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-bp864f8b00db3458 -->
+
+</section><!-- .column -->
+
+<section class="column column-4 grid-left-0 grid-width-5">
+<section id="block-30" class="social-nav block block-type-social block-fixed-height" data-alias="Social Navigation">
+<div class="block-content">
+<div class="social-icons-container"><ul class="social-icons"><li><a href="https://itunes.apple.com/us/app/wivk-fm/id381043770?mt=8" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06124445/apple-1.png" alt="Get our iOS App" title="Get our iOS App" class="img-1"  /></a></li><li><a href="https://play.google.com/store/apps/details?id=com.airkast.WIVKFM"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06124534/droid-1.png" alt="Get our Android App" title="Get our Android App" class="img-2"  /></a></li><li><a href="https://www.facebook.com/WIVK1077/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06123640/facebook.png" alt="Follow us on Facebook" title="Follow us on Facebook" class="img-3"  /></a></li><li><a href="https://www.instagram.com/wivk1077/?hl=en" target="_blank" alt="Instagram"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06123633/instagram-redesign-01-21.png" alt="Follow us on Instagram" title="Follow us on Instagram" class="img-4"  /></a></li><li><a href="https://twitter.com/wivk1077" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2024/04/18164718/Social-X-Black.png" alt="Follow us on X" title="Follow us on X" class="img-5"  /></a></li><li><a href="https://www.tiktok.com/@wivk1077" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/10/25094903/tiktok-1-1.png" alt="Follow us on Tiktok" title="Follow us on Tiktok" class="img-6"  /></a></li><li><a href="https://www.youtube.com/channel/UCUSwBrNXY0tLTIV7PTFbtZw/featured" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06124719/icons8-youtube-26.png" alt="Follow us on Youtube" title="Follow us on Youtube" class="img-7"  /></a></li><li><a href="https://wivkfm.clubviprewards.com/" target="_blank"><img src="https://express-images.franklymedia.com/6616/sites/602/2023/09/06123642/sports-vip.png" alt="Join our VIP Club" title="Join our VIP Club" class="img-8"  /></a></li></ul></div><!-- .social-icons-container -->
+</div><!-- .block-content -->
+
+</section><!-- #block-30 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-4 grid-width-20">
+<nav id="block-32" class="main-nav block block-type-navigation block-fluid-height" data-alias="Main Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-left nav-search-active nav-search-position-right"><ul id="menu-main-navigation" class="menu"><li id="menu-item-78623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-78623"><a>SHOWS</a>
+<ul class="sub-menu">
+	<li id="menu-item-2340528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2340528"><a href="https://www.wivk.com/joey-tack/">Joey &#038; Nancy</a></li>
+	<li id="menu-item-2327402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2327402"><a href="https://www.wivk.com/heather-harrington/">Heather Harrington</a></li>
+	<li id="menu-item-2227901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2227901"><a href="https://www.wivk.com/shows/rich-bailey/">Rich Bailey</a></li>
+	<li id="menu-item-72008" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72008"><a href="https://www.wivk.com/gunner/">Gunner</a></li>
+	<li id="menu-item-2287894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2287894"><a href="https://www.wivk.com/nights-with-elaina/">Nights with Elaina</a></li>
+	<li id="menu-item-2270230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2270230"><a href="https://www.wivk.com/picklejar-up-all-night/">PickleJar</a></li>
+	<li id="menu-item-72269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72269"><a href="https://www.wivk.com/kent-stephens/">Kent Stephens</a></li>
+	<li id="menu-item-2288049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2288049"><a href="https://www.wivk.com/mac/">Mac</a></li>
+	<li id="menu-item-2270275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2270275"><a href="https://www.wivk.com/american-country-countdown-with-kix-brooks/">American Country Countdown with Kix Brooks</a></li>
+</ul>
+</li>
+<li id="menu-item-2340522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2340522"><a href="https://www.wivk.com/podcasts/">Podcasts</a>
+<ul class="sub-menu">
+	<li id="menu-item-2340798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2340798"><a href="https://www.wivk.com/podcasts/">WIVK Podcasts</a></li>
+	<li id="menu-item-2344976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344976"><a href="https://www.wivk.com/individual-show-podcasts/">Individual Show Podcasts</a></li>
+</ul>
+</li>
+<li id="menu-item-70052" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70052"><a href="https://www.wivk.com/category/contests/">Contests</a></li>
+<li id="menu-item-2332637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2332637"><a href="https://www.wivk.com/whats-happening/">What’s Happening</a>
+<ul class="sub-menu">
+	<li id="menu-item-2346519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346519"><a href="https://www.wivk.com/whats-happening/">What’s Happening</a></li>
+	<li id="menu-item-1801837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1801837"><a href="https://www.wivk.com/concerts/">Concerts</a></li>
+	<li id="menu-item-2312760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2312760"><a href="https://www.wivk.com/community-and-events/">Community Events</a></li>
+	<li id="menu-item-2343301" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2343301"><a href="https://www.wivk.com/?p=2343224">50th WIVK Christmas Parade</a></li>
+</ul>
+</li>
+<li id="menu-item-78611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-78611"><a href="https://www.wivk.com/category/local-news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-78614" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-78614"><a href="https://www.wivk.com/category/local-news/">WIVK News</a></li>
+	<li id="menu-item-2336578" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2336578"><a href="http://wivk.com/2024/01/22/school-closings-and-delays/">Closing &#038; Delays</a></li>
+	<li id="menu-item-2335420" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2335420"><a href="https://www.wivk.com/category/country-now/">Country News</a></li>
+	<li id="menu-item-286698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286698"><a target="_blank" rel="noopener" href="https://www.wvlt.tv">WVLT Local 8 News</a></li>
+	<li id="menu-item-80846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80846"><a target="_blank" rel="noopener" href="https://www.wvlt.tv/weather">WVLT Local 8 Forecast</a></li>
+	<li id="menu-item-286755" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286755"><a href="https://www.newstalk987.com/">Newstalk 98.7</a></li>
+</ul>
+</li>
+<li id="menu-item-286689" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-286683 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-286689"><a href="https://www.wivk.com/vol-news/" aria-current="page">Vols/Lady Vols</a>
+<ul class="sub-menu">
+	<li id="menu-item-2329809" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-286683 current_page_item menu-item-2329809"><a href="https://www.wivk.com/vol-news/" aria-current="page">Vol News</a></li>
+	<li id="menu-item-2346105" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2346105"><a href="https://www.wivk.com/category/lady-vols/">Lady Vols</a></li>
+	<li id="menu-item-2344754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2344754"><a href="https://www.wivk.com/schedules/">Schedules</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2345216" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-2345216"><a href="https://www.wivk.com/2023/12/14/2024-tennessee-football-schedule-announced/">2024 Tennessee Football Schedule</a>
+		<ul class="sub-menu">
+			<li id="menu-item-2345217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2345217"><a href="https://utsports.com/documents/2023/12/12/2024_Tennessee_Football_Schedule.pdf">2024 UT Football Printable Schedule</a></li>
+		</ul>
+</li>
+		<li id="menu-item-2344758" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344758"><a href="https://www.wivk.com/2023/11/16/ut-mens-basketball-2023-2024-schedule/">UT Mens 2023-2024 Basketball Schedule/Printable</a></li>
+		<li id="menu-item-2344757" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344757"><a href="https://www.wivk.com/2023/11/16/lady-vols-basketball-schedule-2023-2024/">Lady VOLS 2023-2024 Basketball Schedule/Printable</a></li>
+		<li id="menu-item-2344756" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344756"><a href="https://www.wivk.com/2023/11/16/tennessee-baseball-2024-schedule/">Tennessee Baseball 2024 Schedule/Printable</a></li>
+		<li id="menu-item-2344755" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2344755"><a href="https://www.wivk.com/2023/11/16/lady-vol-2024-schedule/">Lady Vol 2024 Softball Schedule/Printable</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2311186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2311186"><a href="https://www.wivk.com/ut-football-image-matters-game-day-all-day-shows-on-wivk/">UT Football Game Day Shows</a></li>
+	<li id="menu-item-2328939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2328939"><a href="https://www.wivk.com/category/photo-galleries/">Sports Photo Galleries</a></li>
+</ul>
+</li>
+<li id="menu-item-2340804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2340804"><a href="https://www.wivk.com/category/uncategorized/">Connect</a>
+<ul class="sub-menu">
+	<li id="menu-item-2348040" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2348040"><a href="https://www.wivk.com/2017/02/02/free-wivk-app/">Free WIVK App</a></li>
+	<li id="menu-item-2347800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2347800"><a href="https://www.wivk.com/social-media/">Social Media</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2347801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347801"><a href="https://www.facebook.com/WIVK1077/">Facebook</a></li>
+		<li id="menu-item-2347802" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347802"><a href="https://www.instagram.com/wivk1077/?hl=en">Instagram</a></li>
+		<li id="menu-item-2347803" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347803"><a href="https://twitter.com/wivk1077">Twitter (X)</a></li>
+		<li id="menu-item-2347804" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2347804"><a href="https://www.tiktok.com/@wivk1077">Tik Tok</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2286773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2286773"><a href="https://www.wivk.com/country-club/">Country Club</a></li>
+	<li id="menu-item-2336172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2336172"><a href="https://www.wivk.com/2018/01/08/frog-report/">Frog Report</a></li>
+	<li id="menu-item-1968373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1968373"><a href="https://www.wivk.com/2019/12/20/join-the-wivk-music-advisory-panel/">Music Advisors</a></li>
+</ul>
+</li>
+<li id="menu-item-2339568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2339568"><a href="https://www.sweetdeals.com/knoxville/deals">Sweet Deals</a>
+<ul class="sub-menu">
+	<li id="menu-item-2339572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2339572"><a href="https://www.sweetdeals.com/knoxville/deals">Sweet Deals</a></li>
+</ul>
+</li>
+<li id="menu-item-2342493" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2342493"><a href="https://www.wivk.com/advertise-with-us/">Advertising</a>
+<ul class="sub-menu">
+	<li id="menu-item-2342492" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2342492"><a href="https://www.wivk.com/advertise-with-us/">Advertise With Us</a></li>
+	<li id="menu-item-2342490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2342490"><a href="https://www.wivk.com/epic/">EPiC Guarantee</a></li>
+</ul>
+</li>
+</ul><div class="nav-search">
+		<form method="get" id="searchform" action="https://www.wivk.com/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="text" class="field" name="s" id="s" value="Search" onclick="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';" />
+			<input type="submit" class="submit" name="searchsubmit" id="searchsubmit" value="Search" />
+		</form>
+	</div></div><!-- .nav-horizontal nav-align-left nav-search-active nav-search-position-right -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-32 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-49" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-content" data-alias="Wrapper Content">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-16">
+<div id="block-130" class="block block-type-content block-fluid-height" data-alias="">
+<div class="block-content">
+<div class="loop"><article id="post-286683" class="post-286683 page type-page status-publish hentry author-bshoesmith default" itemscope itemtype="http://schema.org/BlogPosting"><header><h1 class="entry-title" itemprop="headline">Vol News</h1></header><div class="entry-content" itemprop="text"><p style="text-align: left;">Read the latest sports news on the <strong>Vols</strong> below! <strong>WIVK</strong> is your official flagship station for the Tennessee Volunteers!  Catch the live broadcasts of all <strong>Tennessee football and men’s basketball games</strong> here on the frog station courtesy of the Vol Network.  You can also catch <strong><a href="http://www.utsports.com/volnetwork/">Vol Calls</a></strong> right here on WIVK on Monday nights @ 8:00pm throughout football and basketball season. GO BIG ORANGE!!!<br /><img decoding="async" class="alignleft size-thumbnail wp-image-1875391" src="https://www.wivk.com/wp-content/uploads/sites/602/2015/08/tennessee-2-150x150.jpg" alt="" width="150" height="150" srcset="https://express-images.franklymedia.com/6616/sites/602/2015/08/25180907/tennessee-2-150x150.jpg 150w, https://express-images.franklymedia.com/6616/sites/602/2015/08/25180907/tennessee-2-300x300.jpg 300w, https://express-images.franklymedia.com/6616/sites/602/2015/08/25180907/tennessee-2-768x768.jpg 768w, https://express-images.franklymedia.com/6616/sites/602/2015/08/25180907/tennessee-2-1024x1024.jpg 1024w, https://express-images.franklymedia.com/6616/sites/602/2015/08/25180907/tennessee-2.jpg 1500w" sizes="(max-width: 150px) 100vw, 150px" /><img decoding="async" class="alignleft size-thumbnail wp-image-1875403" src="https://www.wivk.com/wp-content/uploads/sites/602/2015/08/Vol_Network_3-D_Shield_400x400-150x150.png" alt="" width="150" height="150" srcset="https://express-images.franklymedia.com/6616/sites/602/2015/08/25181209/Vol_Network_3-D_Shield_400x400-150x150.png 150w, https://express-images.franklymedia.com/6616/sites/602/2015/08/25181209/Vol_Network_3-D_Shield_400x400-300x300.png 300w, https://express-images.franklymedia.com/6616/sites/602/2015/08/25181209/Vol_Network_3-D_Shield_400x400.png 400w" sizes="(max-width: 150px) 100vw, 150px" /><img decoding="async" class="alignleft size-thumbnail wp-image-1875421" src="https://www.wivk.com/wp-content/uploads/sites/602/2015/08/volcalls-crop-150x150.jpg" alt="" width="150" height="150" /></p>
+</p>
+<h1> </h1>
+<!--themify_builder_content-->
+<div id="themify_builder_content-286683" data-postid="286683" class="themify_builder_content themify_builder_content-286683 themify_builder tf_clear">
+    				<!-- module_row -->
+		<div  data-lazy="1" class="module_row themify_builder_row tb_15wn646 tb_first tf_w tf_clearfix">
+					<div class="row_inner col_align_top tb_col_count_1 tf_box tf_rel">
+					<div  data-lazy="1" class="module_column tb-column col-full tb_1hww959 first">
+									<div class="tb-column-inner tf_box tf_w">
+				<!-- module post -->
+<div  class="module module-post tb_0sq1494 ">
+        <div  class="builder-posts-wrap loops-wrapper list-thumb-image tf_clear tf_clearfix" data-lazy="1">
+	
+	
+	<article id="post-2348662" class="post tf_clearfix post-2348662 type-post status-publish format-standard has-post-thumbnail hentry category-lady-vols category-sports-radio-wnml-features category-vols-news tag-college-basketball tag-knoxville tag-lady-vols tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/29/key-mashack-to-participate-in-sec-spring-meetings/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/29074338/Lady-Vol-Basketball-34.jpg" width="640" height="360" title="Key, Mashack To Participate In SEC Spring Meetings" alt="Key, Mashack To Participate In SEC Spring Meetings"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/29/key-mashack-to-participate-in-sec-spring-meetings/">Key, Mashack To Participate In SEC Spring Meetings</a>
+			    </h2>
+		
+	    
+	    <p>The University of Tennessee will be represented by two basketball student-athletes at next week&#8217;s Southeastern Conference Spring Meetings, as LVFL and graduate Tamari Key and Vol standout Jahmai Mashack make their way to Florida. Key, who is attending for the second consecutive year, and Mashack will be among seven SEC student-athletes who will participate in the event that starts May&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348660" class="post tf_clearfix post-2348660 type-post status-publish format-standard has-post-thumbnail hentry category-lady-vols category-sports-radio-wnml-features category-vols-news tag-knoxville tag-lady-vols tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/29/three-peat-tennessee-athletics-captures-third-consecutive-sec-all-sports-trophy/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/29073814/All-Sports-Champs-3-peat.jpg" width="1024" height="576" title="THREE-PEAT! TENNESSEE ATHLETICS CAPTURES THIRD CONSECUTIVE SEC ALL-SPORTS TROPHY" alt="THREE-PEAT! TENNESSEE ATHLETICS CAPTURES THIRD CONSECUTIVE SEC ALL-SPORTS TROPHY"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/29/three-peat-tennessee-athletics-captures-third-consecutive-sec-all-sports-trophy/">THREE-PEAT! TENNESSEE ATHLETICS CAPTURES THIRD CONSECUTIVE SEC ALL-SPORTS TROPHY</a>
+			    </h2>
+		
+	    
+	    <p>UT becomes just the second school in SEC history to win the award three straight years Tennessee Athletics etched its name into the record book, becoming just the second school to capture three consecutive SEC All-Sports titles, presented by&nbsp;USA Today Network. &#8220;I am so proud of our exceptional student-athletes, coaches, and staff, as well as&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348625" class="post tf_clearfix post-2348625 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/28/vols-earn-no-1-national-seed-for-second-time-in-program-history/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/28075326/Baseball-71.jpg" width="1024" height="576" title="VOLS EARN NO. 1 NATIONAL SEED FOR SECOND TIME IN PROGRAM HISTORY" alt="VOLS EARN NO. 1 NATIONAL SEED FOR SECOND TIME IN PROGRAM HISTORY"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/28/vols-earn-no-1-national-seed-for-second-time-in-program-history/">VOLS EARN NO. 1 NATIONAL SEED FOR SECOND TIME IN PROGRAM HISTORY</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;For the second time in program history, Tennessee is the No. 1 national seed in the NCAA Baseball Tournament. The Volunteers will begin their postseason run by hosting the Knoxville Regional, which features No. 2 seed Southern Miss (Sun Belt Champion), No. 3 seed Indiana (at-large) and No. 4 seed Northern Kentucky (Horizon&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348607" class="post tf_clearfix post-2348607 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/27/top-ranked-vols-win-fifth-sec-tournament-championship-with-4-3-win-over-lsu/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/27062344/Baseball-70.jpg" width="1024" height="576" title="TOP-RANKED VOLS WIN FIFTH SEC TOURNAMENT CHAMPIONSHIP WITH 4-3 WIN OVER LSU" alt="TOP-RANKED VOLS WIN FIFTH SEC TOURNAMENT CHAMPIONSHIP WITH 4-3 WIN OVER LSU"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/27/top-ranked-vols-win-fifth-sec-tournament-championship-with-4-3-win-over-lsu/">TOP-RANKED VOLS WIN FIFTH SEC TOURNAMENT CHAMPIONSHIP WITH 4-3 WIN OVER LSU</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 26, 2024 HOOVER, Ala. –&nbsp;Top-ranked Tennessee secured its fifth Southeastern Conference Tournament Championship, including its second in the last three seasons, after taking down LSU, 4-3, in Sunday&#8217;s title game at the Hoover Met. The Volunteers (50-11) were led by another impressive performance from its pitching staff, highlighted by 4.2 scoreless&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348602" class="post tf_clearfix post-2348602 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-uncategorized category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/26/1-vols-advance-to-sec-title-game-with-6-4-win-over-rival-vanderbilt/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/26062733/Baseball-69.jpg" width="1024" height="576" title="#1 VOLS ADVANCE TO SEC TITLE GAME WITH 6-4 WIN OVER RIVAL VANDERBILT" alt="#1 VOLS ADVANCE TO SEC TITLE GAME WITH 6-4 WIN OVER RIVAL VANDERBILT"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/26/1-vols-advance-to-sec-title-game-with-6-4-win-over-rival-vanderbilt/">#1 VOLS ADVANCE TO SEC TITLE GAME WITH 6-4 WIN OVER RIVAL VANDERBILT</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 25, 2024 HOOVER, Ala. –&nbsp;For the third time in four years, No. 1/1 Tennessee will play for the Southeastern Conference Tournament Championship after taking down rival Vanderbilt, 6-4, in Saturday&#8217;s semifinal at the Hoover Met. Another stellar&nbsp;Zander Sechrist&nbsp;start on the mound and some more fireworks from&nbsp;Christian Moore&nbsp;at the plate led the&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348595" class="post tf_clearfix post-2348595 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/25/1-vols-secure-spot-in-sec-tournament-semifinal-with-6-5-win-over-14-bulldogs/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/25044809/Baseball-68.jpg" width="1920" height="1080" title="#1 Vols Secure Spot in SEC Tournament Semifinal with 6-5 Win Over #14 Bulldogs" alt="#1 Vols Secure Spot in SEC Tournament Semifinal with 6-5 Win Over #14 Bulldogs"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/25/1-vols-secure-spot-in-sec-tournament-semifinal-with-6-5-win-over-14-bulldogs/">#1 Vols Secure Spot in SEC Tournament Semifinal with 6-5 Win Over #14 Bulldogs</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 24, 2024 HOOVER, Ala. –&nbsp;For the third time in the last four years, Tennessee is headed to the SEC Tournament semifinals after earning a hard-fought 6-5 win over No. 14/15 Mississippi State on a muggy Friday night at the Hoover Met. Blake Burke&#8217;s&nbsp;eighth-inning solo home run broke a 5-5 tie and&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348572" class="post tf_clearfix post-2348572 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/23/top-ranked-vols-bounce-back-with-7-4-win-over-no-3-texas-am/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/23211314/baseball-SEC.jpeg" width="1024" height="576" title="TOP-RANKED VOLS BOUNCE BACK WITH 7-4 WIN OVER NO. 3 TEXAS A&amp;M" alt="TOP-RANKED VOLS BOUNCE BACK WITH 7-4 WIN OVER NO. 3 TEXAS A&amp;M"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/23/top-ranked-vols-bounce-back-with-7-4-win-over-no-3-texas-am/">TOP-RANKED VOLS BOUNCE BACK WITH 7-4 WIN OVER NO. 3 TEXAS A&amp;M</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 23, 2024 HOOVER, Ala. –&nbsp;No. 1/1 Tennessee rebounded from its opening-game loss at the SEC Tournament with a 7-4 victory over No. 3/4 Texas A&amp;M in Thursday&#8217;s elimination game at the Hoover Met. The Volunteers used a well-rounded effort from their pitchers and hitters as numerous individuals played key roles in&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348556" class="post tf_clearfix post-2348556 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/23/1-vols-fall-to-vanderbilt-in-sec-tournament-opener-2/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/23062940/Baseball-67.jpg" width="1024" height="576" title="#1 VOLS FALL TO VANDERBILT IN SEC TOURNAMENT OPENER" alt="#1 VOLS FALL TO VANDERBILT IN SEC TOURNAMENT OPENER"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/23/1-vols-fall-to-vanderbilt-in-sec-tournament-opener-2/">#1 VOLS FALL TO VANDERBILT IN SEC TOURNAMENT OPENER</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 22, 2024 HOOVER, Ala. –&nbsp;No. 1/1 Tennessee didn&#8217;t open its 2024 SEC Tournament run the way it had hoped, falling to Vanderbilt, 13-4, at the Hoover Met on Wednesday evening. The Volunteers were unable to overcome a tough night on the mound in which they used eight pitchers and gave up&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348554" class="post tf_clearfix post-2348554 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/23/1-vols-fall-to-vanderbilt-in-sec-tournament-opener/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/23062410/Screenshot-3552.png" width="573" height="462" title="#1 Vols Fall to Vanderbilt in SEC Tournament Opener" alt="#1 Vols Fall to Vanderbilt in SEC Tournament Opener"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/23/1-vols-fall-to-vanderbilt-in-sec-tournament-opener/">#1 Vols Fall to Vanderbilt in SEC Tournament Opener</a>
+			    </h2>
+		
+	    
+	    <p>HOOVER, Ala. –&nbsp;No. 1/1 Tennessee didn&#8217;t open its 2024 SEC Tournament run the way it had hoped, falling to Vanderbilt, 13-4, at the Hoover Met on Wednesday evening. The Volunteers were unable to overcome a tough night on the mound in which they used eight pitchers and gave up 15 hits, including four home runs.&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348513" class="post tf_clearfix post-2348513 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/21/bsb-preview-no-1-vols-begin-sec-tournament-run-on-wednesday-in-hoover/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/21110353/Baseball-66.jpg" width="1416" height="797" title="BSB PREVIEW: No. 1 Vols Begin SEC Tournament Run on Wednesday in Hoover" alt="BSB PREVIEW: No. 1 Vols Begin SEC Tournament Run on Wednesday in Hoover"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/21/bsb-preview-no-1-vols-begin-sec-tournament-run-on-wednesday-in-hoover/">BSB PREVIEW: No. 1 Vols Begin SEC Tournament Run on Wednesday in Hoover</a>
+			    </h2>
+		
+	    
+	    <p>Share: BaseballMay 21, 2024 HOOVER, Ala.&nbsp;– No. 1/1 Tennessee begins postseason play Wednesday evening at the SEC Tournament in Hoover, Alabama, where it will take on the winner of Tuesday&#8217;s contest between No. 8 seed Vanderbilt and No. 9 seed Florida. MORE INFO GAME &amp; BROADCAST INFO #1/1 TENNESSEE (46-10 | 22-8 SEC) &nbsp;Roster&nbsp;Schedule&nbsp;Stats&nbsp;Notes&nbsp;Tournament Bracket&nbsp;Tickets&nbsp;Tournament&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348505" class="post tf_clearfix post-2348505 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/21/moore-and-burke-among-semifinalists-for-2024-golden-spikes-award/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/21064431/Baseball-65.jpg" width="1024" height="576" title="MOORE AND BURKE AMONG SEMIFINALISTS FOR 2024 GOLDEN SPIKES AWARD" alt="MOORE AND BURKE AMONG SEMIFINALISTS FOR 2024 GOLDEN SPIKES AWARD"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/21/moore-and-burke-among-semifinalists-for-2024-golden-spikes-award/">MOORE AND BURKE AMONG SEMIFINALISTS FOR 2024 GOLDEN SPIKES AWARD</a>
+			    </h2>
+		
+	    
+	    <p>CARY, N.C. –&nbsp;Tennessee was one of five schools with two players named 2024 Golden Spikes Award semifinalists, USA Baseball announced on Monday afternoon. Juniors&nbsp;Christian Moore&nbsp;and&nbsp;Blake Burke&nbsp;were both among the 25 semifinalists for college baseball&#8217;s most prestigious award, which is presented annually to the top amateur baseball in the country. Moore and Burke, who rank first&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348503" class="post tf_clearfix post-2348503 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/21/top-ranked-vols-have-six-players-garner-sec-postseason-honors/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/21063939/Baseball-64.jpg" width="1024" height="576" title="TOP-RANKED VOLS HAVE SIX PLAYERS GARNER SEC POSTSEASON HONORS" alt="TOP-RANKED VOLS HAVE SIX PLAYERS GARNER SEC POSTSEASON HONORS"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/21/top-ranked-vols-have-six-players-garner-sec-postseason-honors/">TOP-RANKED VOLS HAVE SIX PLAYERS GARNER SEC POSTSEASON HONORS</a>
+			    </h2>
+		
+	    
+	    <p>BIRMINGHAM, Ala. –&nbsp;The 2024 Southeastern Conference regular season champion Tennessee Volunteers were well-represented in the league&#8217;s postseason honors, which were announced by the conference office on Monday afternoon. The Big Orange had four players earn first or second team All-SEC honors, including a pair of first-team selections, while&nbsp;Drew Beam&nbsp;was named the SEC Scholar-Athlete of the&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348462" class="post tf_clearfix post-2348462 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/18/1-vols-claim-fifth-sec-regular-season-title-with-sweep-of-23-gamecocks/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/18204250/Baseball-63.jpg" width="1024" height="576" title="#1 VOLS CLAIM FIFTH SEC REGULAR SEASON TITLE WITH SWEEP OF #23 GAMECOCKS" alt="#1 VOLS CLAIM FIFTH SEC REGULAR SEASON TITLE WITH SWEEP OF #23 GAMECOCKS"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/18/1-vols-claim-fifth-sec-regular-season-title-with-sweep-of-23-gamecocks/">#1 VOLS CLAIM FIFTH SEC REGULAR SEASON TITLE WITH SWEEP OF #23 GAMECOCKS</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 18, 2024 KNOXVILLE, Tenn. –&nbsp;No. 1/1 Tennessee completed the series sweep of No. 23/24 South Carolina and clinched its fifth Southeastern Conference regular season title with a 4-1 victory on Saturday afternoon in front of a sold-out crowd at Lindsey Nelson Stadium. The Volunteers&#8217; 22nd&nbsp;league victory paired with a Kentucky loss&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348457" class="post tf_clearfix post-2348457 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/18/1-vols-erase-three-run-deficit-to-top-23-gamecocks-secure-ninth-straight-series-win/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/18063225/Baseball-62.jpg" width="1024" height="576" title="#1 Vols Erase Three-Run Deficit to Top #23 Gamecocks &#038; Secure Ninth Straight Series Win" alt="#1 Vols Erase Three-Run Deficit to Top #23 Gamecocks &#038; Secure Ninth Straight Series Win"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/18/1-vols-erase-three-run-deficit-to-top-23-gamecocks-secure-ninth-straight-series-win/">#1 Vols Erase Three-Run Deficit to Top #23 Gamecocks &#038; Secure Ninth Straight Series Win</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 17, 2024 KNOXVILLE, Tenn. –&nbsp;Top-ranked Tennessee dug itself out of a three-run hole with eight combined runs in the sixth and seventh innings, clinching its ninth straight series win with an 8-3 victory over South Carolina on Friday night at Lindsey Nelson Stadium. &nbsp; A&nbsp;Christian Moore&nbsp;sixth-inning solo home run ignited the&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348434" class="post tf_clearfix post-2348434 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/17/moore-breaks-single-season-home-run-record-in-9-3-win-over-23-gamecocks/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/17061700/Baseball-60-1.jpg" width="1416" height="797" title="MOORE BREAKS SINGLE-SEASON HOME RUN RECORD IN 9-3 WIN OVER #23 GAMECOCKS" alt="MOORE BREAKS SINGLE-SEASON HOME RUN RECORD IN 9-3 WIN OVER #23 GAMECOCKS"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/17/moore-breaks-single-season-home-run-record-in-9-3-win-over-23-gamecocks/">MOORE BREAKS SINGLE-SEASON HOME RUN RECORD IN 9-3 WIN OVER #23 GAMECOCKS</a>
+			    </h2>
+		
+	    
+	    <p>3 South Carolina&nbsp;33-19, 13-15 SEC 9 WinnerTennessee&nbsp;44-10, 20-8 SEC Team 1 2 3 4 5 6 7 8 9 R H E South Carolina 1 0 0 0 0 1 0 1 0 3 8 0 Tennessee 1 0 4 1 0 0 3 0 X 9 9 0 W:&nbsp;Causey, AJ&nbsp;(10-3)&nbsp;L: Ty Good (5-2) Emma&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348417" class="post tf_clearfix post-2348417 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/16/bsb-preview-1-vols-host-23-gamecocks-to-close-out-regular-season/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/16105848/Baseball-60.jpg" width="1416" height="797" title="BSB PREVIEW: #1 Vols Host #23 Gamecocks to Close Out Regular Season" alt="BSB PREVIEW: #1 Vols Host #23 Gamecocks to Close Out Regular Season"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/16/bsb-preview-1-vols-host-23-gamecocks-to-close-out-regular-season/">BSB PREVIEW: #1 Vols Host #23 Gamecocks to Close Out Regular Season</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn.&nbsp;– The 2024 regular season comes to a close this weekend as No. 1/1 Tennessee and No 23/24 South Carolina square off in a top-25 matchup on Rocky Top starting Thursday night at 6:30 p.m. MORE INFO GAME &amp; BROADCAST INFO #1/1 TENNESSEE (43-10, 19-8 SEC) &nbsp;Roster&nbsp;Schedule&nbsp;Stats&nbsp;Notes&nbsp; #23/24 SOUTH CAROLINA (33-18, 13-14 SEC) &nbsp;Roster&nbsp;Schedule&nbsp;Stats&nbsp;UT&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348409" class="post tf_clearfix post-2348409 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-basketball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/16/dalton-knecht-named-tshf-co-male-amateur-athlete-of-the-yeartshf-release/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/16065445/Basketball-54.jpg" width="1024" height="576" title="Dalton Knecht Named TSHF Co-Male Amateur Athlete of the YearTSHF Release" alt="Dalton Knecht Named TSHF Co-Male Amateur Athlete of the YearTSHF Release"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/16/dalton-knecht-named-tshf-co-male-amateur-athlete-of-the-yeartshf-release/">Dalton Knecht Named TSHF Co-Male Amateur Athlete of the YearTSHF Release</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;The Tennessee Sports Hall of Fame announced Wednesday the recipients of its annual honors, with Tennessee men&#8217;s basketball&nbsp;standout&nbsp;Dalton Knecht&nbsp;claiming Co-Male Amateur Athlete of the Year&nbsp;plaudits. Knecht is the first member of Tennessee&#8217;s men&#8217;s basketball program to receive the honor since Grant Williams in 2019. He shared the plaudit with Vanderbilt golfer Gordon Sargent.&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348390" class="post tf_clearfix post-2348390 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/15/beam-named-to-sec-baseball-community-service-team/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/15135020/Baseball-59.jpg" width="900" height="507" title="Beam Named to SEC Baseball Community Service Team" alt="Beam Named to SEC Baseball Community Service Team"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/15/beam-named-to-sec-baseball-community-service-team/">Beam Named to SEC Baseball Community Service Team</a>
+			    </h2>
+		
+	    
+	    <p>BIRMINGHAM, Ala. –&nbsp;Tennessee pitcher&nbsp;Drew Beam&nbsp;was tabbed to the 2024 SEC Community Service Team, as announced by the league office on Wednesday afternoon. Beam, a Murfreesboro, Tennessee, native, has made it a point to give back and use his notoriety as one of the SEC&#8217;s top pitchers to positively impact the Knoxville community and beyond. The&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348371" class="post tf_clearfix post-2348371 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/15/1-vols-blank-bruins-10-0-on-senior-night/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/15063629/Baseball-58.jpg" width="1024" height="576" title="#1 VOLS BLANK BRUINS, 10-0, ON SENIOR NIGHT" alt="#1 VOLS BLANK BRUINS, 10-0, ON SENIOR NIGHT"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/15/1-vols-blank-bruins-10-0-on-senior-night/">#1 VOLS BLANK BRUINS, 10-0, ON SENIOR NIGHT</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 14, 2024 KNOXVILLE, Tenn. –&nbsp;No. 1/1 Tennessee started fast with five runs in the first inning and cruised to a 10-0 victory on Senior Day in Tuesday&#8217;s midweek affair against Belmont at Lindsey Nelson Stadium. The Volunteers&#8217; pitching staff was dominant, holding the Bruins to four hits while issuing just two&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348311" class="post tf_clearfix post-2348311 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/12/1-vols-drop-series-finale-at-25-vanderbilt/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/12213752/Baseball-57.jpg" width="1920" height="1080" title="#1 Vols Drop Series Finale at #25 Vanderbilt" alt="#1 Vols Drop Series Finale at #25 Vanderbilt"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/12/1-vols-drop-series-finale-at-25-vanderbilt/">#1 Vols Drop Series Finale at #25 Vanderbilt</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 12, 2024 NASHVILLE, Tenn. –&nbsp;No. 1/1 Tennessee struggled at the plate in a 3-0 loss to No. 25/NR Vanderbilt in Sunday&#8217;s series finale at Hawkins Field in Nashville. The Commodores were able to avoid being swept for the second straight time at home against the Volunteers thanks in large part to&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348296" class="post tf_clearfix post-2348296 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/12/moores-five-rbis-power-1-vols-to-7-6-victory-over-25-vandy/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/12060132/Baseball-56.jpg" width="1024" height="576" title="MOORE&#8217;S FIVE RBIS POWER #1 VOLS TO 7-6 VICTORY OVER #25 VANDY" alt="MOORE&#8217;S FIVE RBIS POWER #1 VOLS TO 7-6 VICTORY OVER #25 VANDY"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/12/moores-five-rbis-power-1-vols-to-7-6-victory-over-25-vandy/">MOORE&#8217;S FIVE RBIS POWER #1 VOLS TO 7-6 VICTORY OVER #25 VANDY</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 11, 2024 NASHVILLE, Tenn. –&nbsp;No. 1/1 Tennessee battled throughout the afternoon and eventually came out on top to earn a gritty 7-6 victory at No. 25/NR Vanderbilt on Saturday at Hawkins Field, securing its eighth straight series win in the process. After falling behind 3-2 in the bottom of the fourth,&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348290" class="post tf_clearfix post-2348290 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/11/top-ranked-vols-rally-late-to-win-series-opener-on-west-end/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/11060651/Baseball-55.jpg" width="1024" height="576" title="TOP-RANKED VOLS RALLY LATE TO WIN SERIES OPENER ON WEST END" alt="TOP-RANKED VOLS RALLY LATE TO WIN SERIES OPENER ON WEST END"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/11/top-ranked-vols-rally-late-to-win-series-opener-on-west-end/">TOP-RANKED VOLS RALLY LATE TO WIN SERIES OPENER ON WEST END</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 10, 2024 NASHVILLE, Tenn. –&nbsp;A go-ahead two-run homer from&nbsp;Kavares Tears&nbsp;kick-started a decisive five-run eighth inning for top-ranked Tennessee as it erased a late deficit to win Friday night&#8217;s series opener at No. 25/NR Vanderbilt, 8-4, at Hawkins Field in Nashville. The Vols jumped out to a 3-1 lead through three innings&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348222" class="post tf_clearfix post-2348222 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/08/1-vols-reach-40-win-mark-with-6-3-victory-over-queens/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/08070439/Baseball-54.jpg" width="1024" height="576" title="#1 VOLS REACH 40-WIN MARK WITH 6-3 VICTORY OVER QUEENS" alt="#1 VOLS REACH 40-WIN MARK WITH 6-3 VICTORY OVER QUEENS"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/08/1-vols-reach-40-win-mark-with-6-3-victory-over-queens/">#1 VOLS REACH 40-WIN MARK WITH 6-3 VICTORY OVER QUEENS</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 07, 2024 KNOXVILLE, Tenn. –&nbsp;No. 1/1 Tennessee earned a hard-fought 6-3 midweek win over a scrappy Queens team on Tuesday night at Lindsey Nelson Stadium to record its 40th&nbsp;victory of the year. The Volunteers (40-9, 17-7 SEC) have now posted 40 or more wins in each of their last five full&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348168" class="post tf_clearfix post-2348168 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-blog-vince-ferrara-blog category-vols-news tag-college-football tag-football tag-knoxville tag-nfl tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/05/nfl-update-38-vfls-8-ex-vols-7-knox-area-players-coaches-players-with-ut-connections-in-minicamps/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/05234422/tennessee_wright_jaylen_4-scaled.jpg" width="2560" height="1706" title="NFL Update: 38 VFLs, 8 ex-Vols, 7 Knox area players, coaches &#038; players with UT connections in minicamps" alt="NFL Update: 38 VFLs, 8 ex-Vols, 7 Knox area players, coaches &#038; players with UT connections in minicamps"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/05/nfl-update-38-vfls-8-ex-vols-7-knox-area-players-coaches-players-with-ut-connections-in-minicamps/">NFL Update: 38 VFLs, 8 ex-Vols, 7 Knox area players, coaches &#038; players with UT connections in minicamps</a>
+			    </h2>
+		
+	    
+	    <p>Here’s an updated list of University of Tennessee players on expanded NFL rosters as 2024 rookie minicamps are underway this weekend.</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348154" class="post tf_clearfix post-2348154 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/05/3-vols-run-rule-gators-to-win-seventh-straight-sec-series/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/05055417/Baseball-53.jpg" width="1024" height="576" title="#3 Vols Run-Rule Gators to Win Seventh Straight SEC Series" alt="#3 Vols Run-Rule Gators to Win Seventh Straight SEC Series"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/05/3-vols-run-rule-gators-to-win-seventh-straight-sec-series/">#3 Vols Run-Rule Gators to Win Seventh Straight SEC Series</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 04, 2024 GAINESVILLE, Fla. –&nbsp;No. 3/3 Tennessee exploded for 11 runs in the sixth inning to blow open a close game and secure its seventh straight SEC series win, toppling Florida 16-3 in seven innings on Saturday night at Condron Family Ballpark. With the win, the Volunteers also recorded their fourth&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348146" class="post tf_clearfix post-2348146 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/04/3-vols-split-friday-doubleheader-at-florida/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/04062356/Baseball-52.jpg" width="1024" height="576" title="#3 Vols Split Friday Doubleheader at Florida" alt="#3 Vols Split Friday Doubleheader at Florida"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/04/3-vols-split-friday-doubleheader-at-florida/">#3 Vols Split Friday Doubleheader at Florida</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;May 03, 2024 GAINESVILLE, Fla. –&nbsp;No. 3/3 Tennessee split its doubleheader at Florida on Friday, winning game one 6-2 before a ninth-inning rally came up just short in 4-3 game two loss at Condron Family Ballpark in Gainesville. Recaps from both games can be found below. Game 1: Vols 6, Gators 2&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348125" class="post tf_clearfix post-2348125 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/03/thursdays-baseball-series-opener-at-florida-postponed/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/03055243/Baseball-51.jpg" width="1416" height="797" title="Thursday&#8217;s Baseball Series Opener at Florida Postponed" alt="Thursday&#8217;s Baseball Series Opener at Florida Postponed"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/03/thursdays-baseball-series-opener-at-florida-postponed/">Thursday&#8217;s Baseball Series Opener at Florida Postponed</a>
+			    </h2>
+		
+	    
+	    <p>BaseballMay 02, 2024 GAINESVILLE, Fla. –&nbsp;Thursday night&#8217;s series opener between No. 3/3 Tennessee and Florida was postponed due to inclement weather in Gainesville. The Volunteers and Gators will play a doubleheader on Friday with game one slated to begin at 3 p.m. Game two will start 45 minutes following the completion of game one. Both&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348104" class="post tf_clearfix post-2348104 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-basketball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/02/knecht-voted-tswa-mens-basketball-player-of-the-year/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/02094436/Basketball-53.jpg" title="KNECHT VOTED TSWA MEN’S BASKETBALL PLAYER OF THE YEAR" alt="KNECHT VOTED TSWA MEN’S BASKETBALL PLAYER OF THE YEAR"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/02/knecht-voted-tswa-mens-basketball-player-of-the-year/">KNECHT VOTED TSWA MEN’S BASKETBALL PLAYER OF THE YEAR</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;University of Tennessee standout&nbsp;Dalton Knecht&nbsp;is the Tennessee Sportswriters Association (TSWA) Men&#8217;s Basketball Player of the Year, as announced Thursday. Knecht collected 17 of the 18&nbsp;votes, winning the award in near-unanimous fashion. Players from Tennessee schools across all levels of college basketball are considered for the distinction. A fifth-year guard, Knecht turned in one&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348068" class="post tf_clearfix post-2348068 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/05/01/3-vols-midweek-win-streak-snapped-in-loss-to-lipscomb/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/05/01064434/Baseball-50.jpg" width="1920" height="1080" title="#3 Vols&#8217; Midweek Win Streak Snapped in Loss to Lipscomb" alt="#3 Vols&#8217; Midweek Win Streak Snapped in Loss to Lipscomb"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/05/01/3-vols-midweek-win-streak-snapped-in-loss-to-lipscomb/">#3 Vols&#8217; Midweek Win Streak Snapped in Loss to Lipscomb</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 30, 2024 KNOXVILLE, Tenn. –&nbsp;No. 3/3 Tennessee had its 15-game midweek win streak snapped on Tuesday night after a 9-6 loss to Lipscomb at Lindsey Nelson Stadium. The Vols jumped out to an early 4-1 lead after two innings but struggled in the middle frames as the Bisons scored six unanswered&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348008" class="post tf_clearfix post-2348008 type-post status-publish format-standard has-post-thumbnail hentry category-dell-sports-nfl-news category-nfl-news category-sports-radio-wnml-features category-vols-news tag-college-football tag-football tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/28/three-vols-selected-on-day-three-of-2024-nfl-draft/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/28070813/Football-16.jpg" width="1416" height="797" title="Three Vols Selected On Day Three of 2024 NFL Draft" alt="Three Vols Selected On Day Three of 2024 NFL Draft"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/28/three-vols-selected-on-day-three-of-2024-nfl-draft/">Three Vols Selected On Day Three of 2024 NFL Draft</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;Three Tennessee football players were selected on the final day of the 2024 NFL Draft, pushing the Volunteers&#8217; three-year total under head coach&nbsp;Josh Heupel&nbsp;to 13. All-SEC running back&nbsp;Jaylen Wright&nbsp;was taken by the Miami Dolphins with the 120th overall pick in the fourth round, quarterback&nbsp;Joe Milton III&nbsp;went 193rd overall in the sixth round to&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2348006" class="post tf_clearfix post-2348006 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/28/bullpen-shines-again-to-lead-3-vols-to-sweep-of-mizzou/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/28070017/Baseball-49.jpg" width="1024" height="576" title="BULLPEN SHINES AGAIN TO LEAD #3 VOLS TO SWEEP OF MIZZOU" alt="BULLPEN SHINES AGAIN TO LEAD #3 VOLS TO SWEEP OF MIZZOU"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/28/bullpen-shines-again-to-lead-3-vols-to-sweep-of-mizzou/">BULLPEN SHINES AGAIN TO LEAD #3 VOLS TO SWEEP OF MIZZOU</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 27, 2024 KNOXVILLE, Tenn. –&nbsp;No. 3/3 Tennessee finished off its second consecutive home sweep in Southeastern Conference play with a hard-fought 3-2 victory over Missouri on Saturday afternoon in front of a sellout crowd at Lindsey Nelson Stadium. The Vols got another impressive performance from their bullpen, which held the Tigers&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347999" class="post tf_clearfix post-2347999 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/27/quality-start-from-beam-bullpen-pace-3-vols-to-3-2-win-over-tigers/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/27064248/Baseball-48.jpg" width="1920" height="1080" title="Quality Start from Beam, Bullpen Pace #3 Vols to 3-2 Win Over Tigers" alt="Quality Start from Beam, Bullpen Pace #3 Vols to 3-2 Win Over Tigers"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/27/quality-start-from-beam-bullpen-pace-3-vols-to-3-2-win-over-tigers/">Quality Start from Beam, Bullpen Pace #3 Vols to 3-2 Win Over Tigers</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 26, 2024 KNOXVILLE, Tenn. –&nbsp;On a night where runs were hard to come by for both teams, No. 3/3 Tennessee&#8217;s pitching staff came up big as the Volunteers secured their sixth consecutive SEC series win with a 3-2 victory over Missouri on Friday night at Lindsey Nelson Stadium. A fantastic outing&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347967" class="post tf_clearfix post-2347967 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/26/3-vols-go-deep-six-times-in-series-opening-win-over-missouri/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/26064732/Baseball-47.jpg" width="1024" height="576" title="#3 VOLS GO DEEP SIX TIMES IN SERIES-OPENING WIN OVER MISSOURI" alt="#3 VOLS GO DEEP SIX TIMES IN SERIES-OPENING WIN OVER MISSOURI"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/26/3-vols-go-deep-six-times-in-series-opening-win-over-missouri/">#3 VOLS GO DEEP SIX TIMES IN SERIES-OPENING WIN OVER MISSOURI</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 25, 2024 KNOXVILLE, Tenn. –&nbsp;No. 3/3 Tennessee opened its series against Missouri with a bang, tying a season high with six home runs to cruise to a 10-1 win on Thursday night at Lindsey Nelson Stadium. Six of the Vols&#8217; 10 hits on the night left the yard while all 10&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347930" class="post tf_clearfix post-2347930 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/24/amicks-big-night-helps-3-vols-stay-unbeaten-in-midweek-action/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/24070619/Baseball-46.jpg" width="1024" height="576" title="AMICK&#8217;S BIG NIGHT HELPS #3 VOLS STAY UNBEATEN IN MIDWEEK ACTION" alt="AMICK&#8217;S BIG NIGHT HELPS #3 VOLS STAY UNBEATEN IN MIDWEEK ACTION"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/24/amicks-big-night-helps-3-vols-stay-unbeaten-in-midweek-action/">AMICK&#8217;S BIG NIGHT HELPS #3 VOLS STAY UNBEATEN IN MIDWEEK ACTION</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 23, 2024 KNOXVILLE, Tenn. –&nbsp;A two-homer night from&nbsp;Billy Amick&nbsp;and an impressive effort from the bullpen paced No. 3/3 Tennessee to a 12-4 victory over Western Carolina on Tuesday night at Lindsey Nelson Stadium. Amick had a career night for the Vols, going 3-for-5 while driving in seven of the team&#8217;s 12&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347892" class="post tf_clearfix post-2347892 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/22/moore-named-sec-player-of-the-week-for-second-time-this-season/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/22132209/Baseball-45.jpg" width="1024" height="576" title="MOORE NAMED SEC PLAYER OF THE WEEK FOR SECOND TIME THIS SEASON" alt="MOORE NAMED SEC PLAYER OF THE WEEK FOR SECOND TIME THIS SEASON"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/22/moore-named-sec-player-of-the-week-for-second-time-this-season/">MOORE NAMED SEC PLAYER OF THE WEEK FOR SECOND TIME THIS SEASON</a>
+			    </h2>
+		
+	    
+	    <p>BIRMINGHAM, Ala. –&nbsp;For the second time in three weeks, Tennessee&#8217;s&nbsp;Christian Moore&nbsp;was named the SEC Player of the Week, as announced by the league office on Monday afternoon. Moore led the Vols to a massive road series win at No. 3/3 Kentucky over the weekend, handing the Wildcats their first SEC series loss of the season.&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347870" class="post tf_clearfix post-2347870 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/21/moores-record-setting-day-leads-2-vols-to-thrilling-win-at-3-kentucky/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/21190855/Baseball-44.jpg" width="1024" height="576" title="Moore&#8217;s Record-Setting Day Leads #2 Vols to Thrilling Win at #3 Kentucky" alt="Moore&#8217;s Record-Setting Day Leads #2 Vols to Thrilling Win at #3 Kentucky"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/21/moores-record-setting-day-leads-2-vols-to-thrilling-win-at-3-kentucky/">Moore&#8217;s Record-Setting Day Leads #2 Vols to Thrilling Win at #3 Kentucky</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 21, 2024 LEXINGTON, Ky. –&nbsp;A record-setting performance from&nbsp;Christian Moore&nbsp;along with contributions from a variety of others led No. 2/4 Tennessee to a 13-11 victory and a huge road series win against No. 3/3 Kentucky on Sunday afternoon in front of another sellout crowd in Lexington. Moore tied the single-game program record&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347860" class="post tf_clearfix post-2347860 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/21/2-vols-mash-five-homers-to-even-series-at-3-kentucky/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/21060001/Baseball-43.jpg" width="1024" height="576" title="#2 VOLS MASH FIVE HOMERS TO EVEN SERIES AT #3 KENTUCKY" alt="#2 VOLS MASH FIVE HOMERS TO EVEN SERIES AT #3 KENTUCKY"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/21/2-vols-mash-five-homers-to-even-series-at-3-kentucky/">#2 VOLS MASH FIVE HOMERS TO EVEN SERIES AT #3 KENTUCKY</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 20, 2024 LEXINGTON, Ky. –&nbsp;No. 2/4 Tennessee scored five runs before No. 3/3 Kentucky recorded an out and never looked back, evening the weekend series with a 9-4 victory on Saturday afternoon in front of another record crowd at Kentucky Proud Park. Christian Moore&nbsp;and&nbsp;Blake Burke&nbsp;led off the game with back-to-back home&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347854" class="post tf_clearfix post-2347854 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/20/late-lead-slips-away-as-2-vols-fall-in-series-opener-at-3-kentucky/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/20063359/Baseball-42.jpg" width="1280" height="720" title="Late Lead Slips Away as #2 Vols Fall in Series Opener at #3 Kentucky" alt="Late Lead Slips Away as #2 Vols Fall in Series Opener at #3 Kentucky"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/20/late-lead-slips-away-as-2-vols-fall-in-series-opener-at-3-kentucky/">Late Lead Slips Away as #2 Vols Fall in Series Opener at #3 Kentucky</a>
+			    </h2>
+		
+	    
+	    <p>LEXINGTON, Ky. –&nbsp;No. 2/4 Tennessee was unable to hold on to a late lead and dropped its series opener at No. 3/3 Kentucky, 5-3, on Friday night in front of a record-setting crowd of 6,922 at Kentucky Proud Park. A three-run seventh inning erased a two-run deficit for the Wildcats before they added an extra&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347826" class="post tf_clearfix post-2347826 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/19/vols-ink-all-caa-honoree-darlinstone-dubar/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/19082615/Basketball-52.jpg" width="1416" height="797" title="Vols Ink All-CAA Honoree Darlinstone Dubar" alt="Vols Ink All-CAA Honoree Darlinstone Dubar"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/19/vols-ink-all-caa-honoree-darlinstone-dubar/">Vols Ink All-CAA Honoree Darlinstone Dubar</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;University of Tennessee head men&#8217;s basketball coach&nbsp;Rick Barnes&nbsp;announced Thursday the signing of Hofstra transfer guard Darlinstone Dubar. The 2023-24 Second Team All-CAA designee will join the Volunteers in 2024-25 with one year of eligibility remaining. &#8220;We are pleased to welcome Darlinstone and his supportive family into the Tennessee basketball program. He is already&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347754" class="post tf_clearfix post-2347754 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/17/2-vols-blast-six-homers-to-topple-knights-20-5/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/17062412/Baseball-41.jpg" width="1024" height="576" title="#2 VOLS BLAST SIX HOMERS TO TOPPLE KNIGHTS, 20-5" alt="#2 VOLS BLAST SIX HOMERS TO TOPPLE KNIGHTS, 20-5"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/17/2-vols-blast-six-homers-to-topple-knights-20-5/">#2 VOLS BLAST SIX HOMERS TO TOPPLE KNIGHTS, 20-5</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;No. 2/3 Tennessee ran its winning streak to seven games with a 20-5 midweek victory over Bellarmine on Tuesday night at Lindsey Nelson Stadium. The Vols started fast with seven runs in the second inning to take an early lead and went on to score in six of the eight innings they batted&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347688" class="post tf_clearfix post-2347688 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/14/moores-homers-power-4-vols-to-series-sweep-over-25-lsu/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/14203126/Baseball-40.jpg" width="1920" height="1080" title="MOORE&#8217;S HOMERS POWER #4 VOLS TO SERIES SWEEP OVER #25 LSU" alt="MOORE&#8217;S HOMERS POWER #4 VOLS TO SERIES SWEEP OVER #25 LSU"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/14/moores-homers-power-4-vols-to-series-sweep-over-25-lsu/">MOORE&#8217;S HOMERS POWER #4 VOLS TO SERIES SWEEP OVER #25 LSU</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 14, 2024 KNOXVILLE, Tenn. –&nbsp;A big day at the plate from&nbsp;Christian Moore&nbsp;and a solid group effort from the pitching staff led No. 4/4 Tennessee to an 8-4 victory over No. 25/NR LSU on Sunday afternoon in front of another capacity crowd at Lindsey Nelson Stadium, completing the series sweep against the&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347682" class="post tf_clearfix post-2347682 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-ut-football category-vols-news tag-football tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/14/orange-tops-white-21-14-as-vols-complete-spring-ball/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/14073558/Football-14.jpg" title="ORANGE TOPS WHITE, 21-14, AS VOLS COMPLETE SPRING BALL" alt="ORANGE TOPS WHITE, 21-14, AS VOLS COMPLETE SPRING BALL"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/14/orange-tops-white-21-14-as-vols-complete-spring-ball/">ORANGE TOPS WHITE, 21-14, AS VOLS COMPLETE SPRING BALL</a>
+			    </h2>
+		
+	    
+	    <p>Share: GeneralApril 13, 2024 KNOXVILLE, Tenn. –&nbsp;The fourth spring of the Josh Heupel era of Tennessee football culminated with Orange topping White, 21-14, in the annual Orange &amp; White Game on a beautiful Saturday afternoon in Neyland Stadium. Capacity was limited to 10,000 fans as the&nbsp;historic venue continues to undergo renovations this offseason. Offense, wearing&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347677" class="post tf_clearfix post-2347677 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/14/beam-wills-4-vols-to-3-1-win-over-25-lsu-to-secure-series/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/14071710/Baseball-39.jpg" width="1024" height="576" title="Beam Wills #4 Vols to 3-1 Win Over 25 LSU to Secure Series" alt="Beam Wills #4 Vols to 3-1 Win Over 25 LSU to Secure Series"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/14/beam-wills-4-vols-to-3-1-win-over-25-lsu-to-secure-series/">Beam Wills #4 Vols to 3-1 Win Over 25 LSU to Secure Series</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 13, 2024 KNOXVILLE, Tenn. –&nbsp;No. 4/4 Tennessee recorded its seventh straight victory against LSU in Knoxville with a hard-fought 3-1 win on Saturday in front of a record crowd of 6,155 at Lindsey Nelson Stadium. Junior pitcher&nbsp;Drew Beam&nbsp;gave the Vols another quality start and earned the win to improve to 5-1&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347664" class="post tf_clearfix post-2347664 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/13/amick-homers-in-return-as-4-vols-take-opener-vs-25-lsu/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/13071723/Baseball-38.jpg" width="1024" height="576" title="Amick Homers in Return as #4 Vols Take Opener vs. #25 LSU" alt="Amick Homers in Return as #4 Vols Take Opener vs. #25 LSU"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/13/amick-homers-in-return-as-4-vols-take-opener-vs-25-lsu/">Amick Homers in Return as #4 Vols Take Opener vs. #25 LSU</a>
+			    </h2>
+		
+	    
+	    <p>Game Recap: Baseball |&nbsp;April 12, 2024 KNOXVILLE, Tenn. –&nbsp;A strong relief outing from&nbsp;AJ Causey&nbsp;and a pair big home runs by&nbsp;Billy Amick&nbsp;and&nbsp;Dylan Dreiling&nbsp;led No. 4/4 Tennessee to a 6-3 series-opening victory over No. 25/NR LSU on Friday night in front of a record crowd of 5,901 at Lindsey Nelson Stadium. In his return to the lineup&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347610" class="post tf_clearfix post-2347610 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-football tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/10/need-to-know-2024-orange-white-game/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/10072804/Football-13.jpg" width="1416" height="797" title="Need To Know: 2024 Orange &amp; White Game" alt="Need To Know: 2024 Orange &amp; White Game"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/10/need-to-know-2024-orange-white-game/">Need To Know: 2024 Orange &amp; White Game</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. &#8212;&nbsp;Tennessee football will culminate its spring with the 2024 Orange &amp; White Game at 1 p.m. ET on Saturday, April 13 in Neyland Stadium, which will be at a significantly limited capacity of approximately 10,000 fans due to construction. Construction continues on the stadium&#8217;s south end, west side and upper north end as&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347606" class="post tf_clearfix post-2347606 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/10/balanced-attack-leads-4-vols-to-run-rule-win-over-alabama-am/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/10071416/Baseball-37.jpg" width="1024" height="576" title="Balanced Attack Leads #4 Vols to Run-Rule Win Over Alabama A&amp;M" alt="Balanced Attack Leads #4 Vols to Run-Rule Win Over Alabama A&amp;M"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/10/balanced-attack-leads-4-vols-to-run-rule-win-over-alabama-am/">Balanced Attack Leads #4 Vols to Run-Rule Win Over Alabama A&amp;M</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;No. 4/4 Tennessee continued to score runs in bunches with its 13th&nbsp;run-rule victory of the season, toppling Alabama A&amp;M, 20-2, in seven innings on Tuesday night at Lindsey Nelson Stadium. The Vols (27-6) had 12 different players record one hit apiece as a multitude of players got opportunities at the plate.&nbsp;Christian Moore,&nbsp;Ariel Antigua,&nbsp;Colby&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347602" class="post tf_clearfix post-2347602 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-basketball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/10/vols-finish-program-best-fifth-in-national-polls/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/10070812/Basketball-51.jpg" title="Vols Finish Program-Best Fifth in National Polls" alt="Vols Finish Program-Best Fifth in National Polls"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/10/vols-finish-program-best-fifth-in-national-polls/">Vols Finish Program-Best Fifth in National Polls</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;The University of Tennessee men&#8217;s basketball is fifth in both major polls to conclude the 2023-24 season. Tennessee (27-9, 14-4 SEC) holds the fifth position in both the Associated Press Top 25 Poll and the USA TODAY Coaches Poll, as revealed Tuesday afternoon. The Volunteers moved up one spot on each list, as&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347546" class="post tf_clearfix post-2347546 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-college-baseball tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/07/home-run-barrage-continues-as-4-vols-run-rule-tigers-to-win-series/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/07191732/Baseball-36.jpg" width="1024" height="576" title="HOME RUN BARRAGE CONTINUES AS #4 VOLS RUN-RULE TIGERS TO WIN SERIES" alt="HOME RUN BARRAGE CONTINUES AS #4 VOLS RUN-RULE TIGERS TO WIN SERIES"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/07/home-run-barrage-continues-as-4-vols-run-rule-tigers-to-win-series/">HOME RUN BARRAGE CONTINUES AS #4 VOLS RUN-RULE TIGERS TO WIN SERIES</a>
+			    </h2>
+		
+	    
+	    <p>AUBURN, Ala. –&nbsp;No. 4/4 Tennessee continued its red-hot hitting from Saturday&#8217;s victory with another explosive offensive performance on Sunday afternoon, run-ruling Auburn for the second straight day to claim the series with a 19-5 win at Plainsman Park. For the second game in a row, the Big Orange (26-6, 7-5 SEC) blasted six home runs&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347540" class="post tf_clearfix post-2347540 type-post status-publish format-standard has-post-thumbnail hentry category-lady-vols category-local-news-reel-1 category-sports-radio-wnml-features category-vols-news tag-college-basketball tag-knoxville tag-lady-vols tag-sec tag-tennessee">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/07/tennessee-selects-caldwell-to-lead-storied-lady-vol-basketball-program/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/07143308/Lady-Vol-Basketball-00.jpg" width="1024" height="576" title="TENNESSEE SELECTS CALDWELL TO LEAD STORIED LADY VOL BASKETBALL PROGRAM" alt="TENNESSEE SELECTS CALDWELL TO LEAD STORIED LADY VOL BASKETBALL PROGRAM"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/07/tennessee-selects-caldwell-to-lead-storied-lady-vol-basketball-program/">TENNESSEE SELECTS CALDWELL TO LEAD STORIED LADY VOL BASKETBALL PROGRAM</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;University of Tennessee Vice Chancellor/Director of Athletics Danny White announced Sunday that Kim Caldwell, the 2024 Spalding Maggie Dixon NCAA Division I Rookie Coach of the Year, has been chosen to lead the Lady Volunteers. She will be introduced Tuesday at a press conference on campus. &#8220;From the beginning, our goal has been&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+
+	
+	<article id="post-2347536" class="post tf_clearfix post-2347536 type-post status-publish format-standard has-post-thumbnail hentry category-sports-radio-wnml-features category-vols-news tag-football tag-knoxville tag-sec tag-tennessee tag-vols">
+
+	    
+	    
+		    <figure class="post-image">
+						    <a href="https://www.wivk.com/2024/04/07/tight-end-rotation-taking-shape-for-tennessee-this-spring/"><img decoding="async" src="https://express-images.franklymedia.com/6616/sites/602/2024/04/07061747/Football-12.jpg" width="1024" height="576" title="Tight End Rotation Taking Shape For Tennessee This Spring" alt="Tight End Rotation Taking Shape For Tennessee This Spring"></a>
+					    </figure>
+
+		    
+	    <div class="post-content">
+
+		
+						<h2 class="post-title">
+				    <a href="https://www.wivk.com/2024/04/07/tight-end-rotation-taking-shape-for-tennessee-this-spring/">Tight End Rotation Taking Shape For Tennessee This Spring</a>
+			    </h2>
+		
+	    
+	    <p>KNOXVILLE, Tenn. –&nbsp;A revamped tight end room featuring two major transfers and one returning redshirt freshman is taking shape for the Tennessee football team, which completed its 10th practice of the spring on Saturday afternoon at Haslam Field. The Volunteers went full pads to conclude the third week of spring ball. Second-year tight ends coach&nbsp;Alec&hellip;</p>
+	    
+    </div>
+    <!-- /.post-content -->
+
+    </article>
+
+</div><!-- .builder-posts-wrap -->
+            <link rel="prefetch" as="document" href="https://www.wivk.com/vol-news/page/2/"/><div class="pagenav tf_clear tf_box tf_textr tf_clearfix "> <span class="number current">1</span> <a href="https://www.wivk.com/vol-news/page/2/" class="number">2</a> <a href="https://www.wivk.com/vol-news/page/3/" class="number">3</a> <a href="https://www.wivk.com/vol-news/page/4/" class="number">4</a><a href="https://www.wivk.com/vol-news/page/2/"  class="number nextp">&rsaquo;</a><a href="https://www.wivk.com/vol-news/page/145/" title="&raquo;" class="number lastp">&raquo;</a></div>        </div>
+    <!-- /module post -->
+				</div><!-- .tb-column-inner -->
+						</div><!-- .module_column -->
+						</div><!-- .row_inner -->
+		</div><!-- .module_row -->
+				</div>
+<!--/themify_builder_content--></div><!-- .entry-content --></article><!-- #post-286683 --></div>
+</div><!-- .block-content -->
+
+</div><!-- #block-130 -->
+
+</section><!-- .column -->
+
+<section class="column column-2 grid-left-0 grid-width-8">
+<div id="block-34" class="300x250-ad-1 block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones block-mirrored block-mirroring-bgz5499e7ebd2120 block-original-65" data-alias="300x250 Ad 1">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-0" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-0",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-34 -->
+<div id="block-38" class="sweet-deals-ad block block-type-custom-code block-fluid-height responsive-block-hiding-device-smartphones block-mirrored block-mirroring-bqk5499e7ebd6bb4 block-original-68" data-alias="Sweet Deals Ad">
+<div class="block-content">
+<a href="https://www.sweetdeals.com/knoxville/deals"><img src="/wp-content/uploads/sites/602/2014/10/sweetdeals.png"></a>
+</div><!-- .block-content -->
+
+</div><!-- #block-38 -->
+<div id="block-36" class="vip-club-ad block block-type-custom-code block-fluid-height block-mirrored block-mirroring-b6c5499e7ebd52a8 block-original-67" data-alias="VIP Club Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-7" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-7",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest1")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-36 -->
+<div id="block-40" class="blogs block block-type-content block-fluid-height block-mirrored block-mirroring-bji5499e7ebd999f block-original-70" data-alias="Country News">
+<div class="block-content">
+<h1 class="block-title"><span>Country News</span></h1><div class="loop">
+
+<div class="entry-row">
+
+<article id="post-2348642" class="post-2348642 feed_posts type-feed_posts status-publish hentry category-country-now alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/dustin-lynch-shares-video-for-jelly-roll-collab-chevrolet/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/dustinlynch-24052024-lt.jpg" alt="Dustin Lynch Shares Video For Jelly Roll Collab &#8216;Chevrolet&#8217;" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/dustin-lynch-shares-video-for-jelly-roll-collab-chevrolet/" title="Dustin Lynch Shares Video For Jelly Roll Collab &#8216;Chevrolet&#8217;" rel="bookmark">Dustin Lynch Shares Video For Jelly Roll Collab &#8216;Chevrolet&#8217;</a></h2></header></article><!-- #post-2348642 --><article id="post-2348614" class="post-2348614 feed_posts type-feed_posts status-publish hentry category-country-now custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/morgan-wallens-nashville-bar-opening-postponed/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/morgan-08022024-lt.jpg" alt="Morgan Wallen&#8217;s Nashville Bar Opening Postponed" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/morgan-wallens-nashville-bar-opening-postponed/" title="Morgan Wallen&#8217;s Nashville Bar Opening Postponed" rel="bookmark">Morgan Wallen&#8217;s Nashville Bar Opening Postponed</a></h2></header></article><!-- #post-2348614 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2348606" class="post-2348606 feed_posts type-feed_posts status-publish hentry category-country-now alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/miranda-lambert-mickey-guyton-more-to-appear-on-nhls-stanley-pup-competition/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/miranda-15022024-lt.jpg" alt="Miranda Lambert, Mickey Guyton &amp; More To Appear On NHL&#8217;s &#8220;Stanley Pup&#8221; Competition" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/miranda-lambert-mickey-guyton-more-to-appear-on-nhls-stanley-pup-competition/" title="Miranda Lambert, Mickey Guyton &amp; More To Appear On NHL&#8217;s &#8220;Stanley Pup&#8221; Competition" rel="bookmark">Miranda Lambert, Mickey Guyton &amp; More To Appear On NHL&#8217;s &#8220;Stanley Pup&#8221; Competition</a></h2></header></article><!-- #post-2348606 --><article id="post-2348605" class="post-2348605 feed_posts type-feed_posts status-publish hentry category-country-now custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/carly-pearce-announces-return-of-carlys-closet-at-cma-fest/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/carlypearce-14052024-lt.jpg" alt="Carly Pearce Announces Return Of Carly&#8217;s Closet At CMA Fest" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/carly-pearce-announces-return-of-carlys-closet-at-cma-fest/" title="Carly Pearce Announces Return Of Carly&#8217;s Closet At CMA Fest" rel="bookmark">Carly Pearce Announces Return Of Carly&#8217;s Closet At CMA Fest</a></h2></header></article><!-- #post-2348605 -->
+
+</div><!-- .entry-row -->
+
+
+
+<div class="entry-row">
+
+<article id="post-2348604" class="post-2348604 feed_posts type-feed_posts status-publish hentry category-country-now alt custom-query" itemscope itemtype="http://schema.org/BlogPosting">		
+		<a href="https://www.wivk.com/news/jewel-announces-new-ep-the-portal-a-meditative-journey-shares-title-track/" class="post-thumbnail post-thumbnail-left" style="text-decoration:none!important;">
+						<img style="margin:0px;padding:0px;display:block;" src="https://musicnews.franklymedia.com/media/orig/jewel-23052024-lt.jpg" alt="Jewel Announces New EP &#8216;The Portal: A Meditative Journey,&#8217; Shares Title Track" width="70" height="70" itemprop="image" />
+								</a>
+
+		<header><h2 class="entry-title" itemprop="headline"><a href="https://www.wivk.com/news/jewel-announces-new-ep-the-portal-a-meditative-journey-shares-title-track/" title="Jewel Announces New EP &#8216;The Portal: A Meditative Journey,&#8217; Shares Title Track" rel="bookmark">Jewel Announces New EP &#8216;The Portal: A Meditative Journey,&#8217; Shares Title Track</a></h2></header></article><!-- #post-2348604 -->
+
+</div><!-- .entry-row -->
+
+</div>
+</div><!-- .block-content -->
+
+</div><!-- #block-40 -->
+<div id="block-42" class="facebook-ad block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bxz5499e7ebdb200 block-original-71" data-alias="Facebook Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-8" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-8",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-42 -->
+<div id="block-44" class="twitter-ad block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bm65499e7ebde2f1 block-original-73" data-alias="Twitter Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-9" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-9",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 100], [300, 50]])
+				.addSize([0,0], [[320, 100], [300, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 100], [300, 50]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "contest3")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-44 -->
+<div id="block-b19554809030a362" class="weather block block-type-custom-code block-fluid-height block-mirrored block-mirroring-b19554809030a362 block-original-bog55480938e69f0" data-alias="Weather">
+<div class="block-content">
+<h1 class="block-title"><span>Weather</span></h1>
+
+<style type="text/css">#tabbed_weather_widget {
+	font-family: Arial, sans-serif;
+	overflow: hidden;
+	position: relative;
+	width: 300px;
+}
+#tabbed_weather_widget ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#tabbed_weather_widget .ww_header {
+	margin-left: -15;
+	padding-right: 0;
+}
+#tabbed_weather_widget .ww_sponsor {
+	margin-left: -16;
+	padding: 0;
+}
+#tabbed_weather_widget .ww_tabs {
+	display: table;
+	font-size: 13px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+}
+#tabbed_weather_widget .ww_tabs li {
+	background: #FFF;
+	border: 1px solid #5C5C5C;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	border-top-right-radius: 8px;
+	color: #888;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-weight: bold;
+	line-height: 24px;
+	margin: 0 -1px 0 0;
+	text-align: center;
+	width: 96px;
+}
+	#tabbed_weather_widget .ww_tabs li.ww_active {
+		background: #B2D1FF;
+		color: #333;
+	}
+#tabbed_weather_widget .ww_content li {
+	display: none;
+}
+	#tabbed_weather_widget .ww_content img {
+		margin-left: -50px;
+		width: 380px;
+		-ms-interpolation-mode: bicubic;
+	}
+#tabbed_weather_widget li.ww_active { display: block; }
+</style>
+<div id="tabbed_weather_widget">
+<div class="ww_header"></div>
+
+<ul class="ww_tabs">
+	<li class="ww_active">Forecast</li>
+	<li>Currents</li>
+	<li>Planner</li>
+</ul>
+
+<ul class="ww_content">
+	<li class="ww_active"><img src="https://gray.ftp.clickability.com/wvltwebftp/wx/WEB_EDTV_8DAY_600X400.jpg" /></li>
+	<li><img src="https://gray.ftp.clickability.com/wvltwebftp/wx/WEB_EDTV_DMA_TEMPS_600X400.jpg" /></li>
+	<li><img src="https://gray.ftp.clickability.com/wvltwebftp/wx/WEB_HOURLY_PLANNER_600X400.jpg" /></li>
+</ul>
+
+
+</div>
+<script>
+(function($){
+	
+	$('#tabbed_weather_widget .ww_tabs li').click(function() {
+		var i = $(this).index();
+		$('#tabbed_weather_widget .ww_tabs li')
+			.removeClass('ww_active')
+			.eq(i).addClass('ww_active');
+		$('#tabbed_weather_widget .ww_content li')
+			.removeClass('ww_active')
+			.eq(i).addClass('ww_active');
+	});
+
+	var mouse_is_in = false;
+	$('#tabbed_weather_widget').hover(
+		function() { mouse_is_in = ! mouse_is_in; }
+	);
+
+	function switchTab() {
+		if ( ! mouse_is_in) {
+			var i = $('#tabbed_weather_widget .ww_tabs li.ww_active').index();
+			var len = $('#tabbed_weather_widget .ww_tabs li').length;
+			i = (i + 1 !== len) ? i + 1 : 0;
+			$('#tabbed_weather_widget .ww_tabs li').eq(i).click();
+		}
+	}
+
+	setInterval(switchTab, 5500);
+
+})(jQuery.noConflict());
+</script>
+<a href="https://www.wvlt.tv/weather" target="_top"><img src="https://express-images.franklymedia.com/6616/sites/602/2018/04/30155412/wvlt-weather.jpg"</a>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-b19554809030a362 -->
+<aside id="block-45" class="free-apps block block-type-widget-area block-fluid-height block-mirrored block-mirroring-bcg5499e7ebdfbb2 block-original-74" data-alias="Home - Free Apps" itemscope="" itemtype="http://schema.org/WPSideBar">
+<div class="block-content">
+<h1 class="block-title"><span>Free Apps</span></h1><ul class="widget-area"><li id="text-3" class="widget widget_text">
+			<div class="textwidget"><div align="center">
+<a href="https://itunes.apple.com/us/app/wivk-fm/id381043770?mt=8" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/602/2014/10/appstore.png" border="0"></a>&nbsp;<a href="https://play.google.com/store/apps/details?id=com.airkast.WIVKFM" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/602/2014/10/googleplay.png" border="0"></a>&nbsp;<a href="https://amazon.com/dp/B00FTGX336" target="_blank" rel="noopener"><img src="/wp-content/uploads/sites/602/2014/10/amazon.png" border="0"></a>
+</div></div>
+		</li><!-- .widget -->
+</ul>
+</div><!-- .block-content -->
+
+</aside><!-- #block-45 -->
+<div id="block-46" class="300x250-ad-2 block block-type-custom-code block-fluid-height block-mirrored block-mirroring-bll5499e7ebe1218 block-original-79" data-alias="300x250 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-3" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-3",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([780,0], [[300, 250], [300, 600]])
+				.addSize([0,0], [[300, 250], [300, 600], [300, 50], [320, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[300, 250], [300, 600]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "mid2")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-46 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+<div id="wrapper-50" class="wrapper wrapper-fluid wrapper-fixed-grid grid-fluid-24-22-20 responsive-grid wrapper-mirroring-10 wrapper-last wrapper-footer" data-alias="Wrapper Footer">
+
+<div class="grid-container clearfix">
+
+<section class="row row-1">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<div id="block-51" class="728x90-ad-2 block block-type-custom-code block-fluid-height" data-alias="728x90 Ad 2">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-2" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-2",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([970,0], [[728, 90]])
+				.addSize([780,0], [[728, 90], [320, 100], [320, 50]])
+				.addSize([0,0], [[300, 250], [320, 100], [320, 50], [300, 50]])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[728, 90]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "bot")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-51 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-2">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<nav id="block-50" class="footer-nav block block-type-navigation block-fluid-height" data-alias="Footer Navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+<div class="block-content">
+<div class="nav-horizontal nav-align-center"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-2264163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2264163"><a href="https://www.wivk.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-2346371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346371"><a href="https://www.wivk.com/terms-of-service/">Terms of Service</a></li>
+<li id="menu-item-2264165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2264165"><a href="https://www.wivk.com/contest-rules/">General Contest Rules</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://www.wivk.com/station-information/">Station Information</a></li>
+<li id="menu-item-2336522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2336522"><a href="https://www.wivk.com/advertise-with-us/">Advertise With Us</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a target="_blank" rel="noopener" href="https://www.wivk.com/2024/03/29/eeo-report-2/">EEO Report</a></li>
+<li id="menu-item-1692532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1692532"><a href="https://www.wivk.com/category/whats-happening/join-our-team/">Join Our Team</a></li>
+<li id="menu-item-1971974" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1971974"><a target="_blank" rel="noopener" href="https://www.cumulusmedia.com/">Cumulus Media Corporate</a></li>
+<li id="menu-item-2006422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2006422"><a target="_blank" rel="noopener" href="https://publicfiles.fcc.gov/fm-profile/WIVK-FM">FCC Public File</a></li>
+<li id="menu-item-2288400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2288400"><a target="_blank" rel="noopener" href="https://www.wivk.com/fcc-applications/">FCC Applications</a></li>
+</ul></div><!-- .nav-horizontal nav-align-center -->
+</div><!-- .block-content -->
+
+</nav><!-- #block-50 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-3">
+
+<section class="column column-1 grid-left-0 grid-width-24">
+<footer id="block-52" class="copyright block block-type-footer block-fluid-height" data-alias="Copyright" itemscope="" itemtype="http://schema.org/WPFooter">
+<div class="block-content">
+
+<div class="footer-container">
+
+<div class="footer">
+<p class="copyright footer-copyright">Copyright 2020 Cumulus Media / Cumulus Media is an equal opportunity employer / AA</p><p class="footer-responsive-grid-link-container footer-responsive-grid-link-disable-container"><a href="https://www.wivk.com/vol-news/?full-site=true" rel="nofollow" class="footer-responsive-grid-link footer-responsive-grid-disable footer-link">View Full Site</a></p>
+</div><!-- .footer -->
+</div><!-- .footer-container -->
+</div><!-- .block-content -->
+
+</footer><!-- #block-52 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+<section class="row row-4">
+
+<section class="column column-1 grid-left-0 grid-width-6">
+<div id="block-bw955d350065b3f7" class="block block-type-custom-code block-fluid-height" data-alias="Wallpaper Ad">
+<div class="block-content">
+
+<div id="div-gpt-ad-1418849849333-16" align="center">
+	<script>
+		googletag.cmd.push(function() {
+			var id = "div-gpt-ad-1418849849333-16",
+				c = document.getElementById(id);
+			window.GPT_SITE_SLOTS = window.GPT_SITE_SLOTS || {};
+
+			// Do not call if slot is hidden
+			if (!c || !c.offsetParent) return;
+
+			var sizeMap = googletag.sizeMapping()
+				.addSize([1200,0], [1, 1])
+				.addSize([0,0], [])
+				.build();
+
+			window.GPT_SITE_SLOTS[id] = googletag.defineSlot(
+				GPT_SITE_ID,
+				[[1, 1]],
+				id
+			)
+				.addService(googletag.pubads())
+				.defineSizeMapping(sizeMap)
+				.setCollapseEmptyDiv(true, true)
+				.setTargeting("pos", "wallpaper-ad")
+			;
+
+			googletag.display(id);
+		});
+	</script>
+</div>
+
+</div><!-- .block-content -->
+
+</div><!-- #block-bw955d350065b3f7 -->
+
+</section><!-- .column -->
+
+</section><!-- .row -->
+
+
+</div><!-- .grid-container -->
+
+</div><!-- .wrapper -->
+
+
+
+
+<!-- TGMP PLUGIN ENABLED 2016-08-05T15:19:55.097Z -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<img src="https://thrtle.com/sync?vxii_pid=7004" alt="" style="display: none" width="1" height="1" /><script>_AMP.theme.init();</script>
+<script type='text/javascript' src='//engage-see.franklymedia.com/widget/see_10035/see.js?ver=20220510-01'></script>                <!--googleoff:all-->
+                <!--noindex-->
+                <!--noptimize-->
+                <script id="tf_vars" data-no-optimize="1" data-noptimize="1" defer="defer" src="data:text/javascript;base64,dmFyIHRiTG9jYWxTY3JpcHQgPSB7ImJyZWFrcG9pbnRzIjp7InRhYmxldF9sYW5kc2NhcGUiOls3NjksMTI4MF0sInRhYmxldCI6WzY4MSw3NjhdLCJtb2JpbGUiOjY4MH0sImZ1bGx3aWR0aF9zdXBwb3J0IjoiMSIsInNjcm9sbEhpZ2hsaWdodCI6eyJzcGVlZCI6OTAwLjAxfSwiYWRkb25zIjpbXX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7IndwIjoiNi40LjIiLCJhamF4X3VybCI6Imh0dHBzOi8vd3d3LndpdmsuY29tL3dwLWFkbWluL2FkbWluLWFqYXgucGhwIiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy53aXZrLmNvbS93cC1jb250ZW50L3BsdWdpbnMiLCJseiI6IjEiLCJlbWFpbFN1YiI6IkNoZWNrIHRoaXMgb3V0ISIsIm5vcCI6IkNoZWNrIHRoaXMgb3V0ISIsImxpZ2h0Ym94Ijp7ImkxOG4iOnsidENvdW50ZXIiOiIlY3VyciUgb2YgJXRvdGFsJSJ9fSwic192IjoiNS4zLjkiLCJkb25lIjp7InRiX3Bvc3QiOnRydWUsInRmX2dyaWRfbGlzdC10aHVtYi1pbWFnZSI6dHJ1ZSwidGJfcGFnZW5hdiI6dHJ1ZSwidGJfc3R5bGUiOnRydWV9fTs="></script>
+                <!--/noptimize-->
+                <!--/noindex-->
+                <!--googleon:all-->
+                <link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01" as="style"><link rel='stylesheet' id='headway-child-theme-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/themes/Headway-AMP_CMS/style.css?ver=20220610-01' type='text/css' media='all' />
+<link rel="preload" href="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2" as="style"><link rel='stylesheet' id='amp-polls-plugin-styles-css' href='https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/css/widget.css?ver=6.4.2' type='text/css' media='all' />
+<script type="text/javascript" defer="defer" data-v="7.0.6" data-pl-href="https://www.wivk.com/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.wivk.com/wp-content/plugins/themify-builder/themify/js/main.min.js?ver=7.0.6" id="themify-main-script-js"></script>
+<script type="text/javascript" src="https://express-cms-assets.franklymedia.com/v3_26_00b/wp-content/plugins/express-cms-polls/js/widget-front-end.js?ver=6.4.2" id="amp-polls-plugin-script-js"></script>
+<script src="https://wivk.tunegenie.com/station/pwa/fullfooter.js?bs=wivk"></script>
+<!-- OH WOW -->
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-7150119-1', 'auto', 'm2gTracker');
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      if (registrations.length) {
+        for(let registration of registrations) {
+          var tg_brand = "wivk";
+          // unregister old version
+          if (registration.active.scriptURL.endsWith('tg-sw.js') || registration.active.scriptURL.endsWith('tg2-sw.js')) {
+            registration.unregister().then(function(success) {
+              if (success) {
+                ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister', 'wordpress');
+                console.log('removed service worker');
+              }
+            }).catch(function(err) {
+              ga('m2gTracker.send', 'event', tg_brand, 'pwa/unregister/error', 'wordpress');
+              console.log('remove sw failed.');
+            });
+          }
+        }
+      }
+    }).catch(function(err) {
+      console.log('get registrations failed: ' + error);
+    });
+  }
+</script>
+	<style>
+	/* Quick Fix for themify style conflicts */
+	img { height:auto; }
+	</style>
+	
+
+</div><!-- #whitewrap -->
+
+<svg id="tf_svg" style="display:none"><defs></defs></svg>
+
+<script src="https://www.92profm.com/wp-content/uploads/ecms/ecms_global_footer.js?v=160" async ></script>
+
+</body>
+
+
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 297/2907 objects using Memcache
+
+Served from: www.eriesportsradio.com @ 2024-05-30 22:59:30 by W3 Total Cache
+-->

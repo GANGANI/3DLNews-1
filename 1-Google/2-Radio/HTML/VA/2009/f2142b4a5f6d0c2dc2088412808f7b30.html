@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Last 15 Tracks - WUVT: Radio for Everyone!</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/wuvt.css?v=28" />
+        <link rel="stylesheet" type="text/css" href="/static/css/glyphiconstrap.css" />
+        <link rel="alternate" type="application/atom+xml"
+            href="/last15.atom" title="Atom Feed"  />
+        
+        
+        <link rel="shortcut icon"
+            href="/static/img/favicon.ico" />
+        <link rel="apple-touch-icon"
+            href="/static/img/icon.png" />
+    </head>
+    <body>
+
+<header>
+    <div id="nowplaying"> <!-- now playing bar -->
+        
+        <ul>
+            <li><strong>Currently on air:</strong> <span id="current_track">Not Available</span></li>
+            <li><strong>Current DJ:</strong> <span id="current_dj">Not Available</span></li>
+        </ul>
+        
+    </div>
+
+    <div id="mainheader">
+        <h1>
+            <a href="/" title="WUVT-FM 90.7 Blacksburg, VA">
+	        <img id="logo" src="/static/img/logo.svg" alt="WUVT: Radio for Everyone! 90.7 FM" />
+	    </a>
+	    <img id="hamburger" src="/static/img/Hamburger_icon.svg" /> <!--Icon source: https://commons.wikimedia.org/wiki/File:Hamburger_icon.svg-->
+	</h1>
+
+        <div id="robot">
+        </div>
+	<div id="bubble">
+            
+            <ul>
+                <li id="listen-live"><a href="/listen-live">Listen Live!</a></li>
+                <li id="last-15"><a href="/last15">Last 15 Tracks!!</a></li>
+                <li id="donate-online"><a href="/donate">Donate Online!!!</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <nav> <!-- top, horizontal nav bar -->
+        
+        <ul>
+        </ul>
+        
+    </nav>
+</header>
+
+<div id="wrapper">
+
+    <div id="side" class="translateSide">
+        <nav id="side_primary">
+            
+            <ul>
+                <li>
+                    <span class="menu-heading">News</span>
+                    <ul>
+                        
+                        
+                        <li><a href="/category/events">Events</a></li>
+                        
+                        
+                        
+                        <li><a href="/category/music">Music</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/category/programming">Programming</a></li>
+                        
+                        
+                        
+                        <li><a href="/category/radiothon">Radiothon</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="/category/station-updates">Updates</a></li>
+                        
+                        
+                        
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <span class="menu-heading">About</span>
+                    <ul>
+                        
+                        
+                        <li><a href="/contact">Contact</a></li>
+                        
+                        
+                        <li><a href="/fm">FM</a></li>
+                        
+                        
+                        <li><a href="/legal">Legal</a></li>
+                        
+                        
+                        <li><a href="/listen-live">Listen</a></li>
+                        
+                        
+                        <li><a href="/about">Our Mission</a></li>
+                        
+                        
+                        <li><a href="/staff">Staff</a></li>
+                        
+                        
+                        
+                        <li><a href="/wishlist">Wishlist</a></li>
+                        
+                        
+                        </ul>
+                </li>
+                <li>
+                    <span class="menu-heading">Community</span>
+                    <ul>
+                        
+                        <li><a href="/alumni">Alumni</a></li>
+                        
+                        
+                        
+                        
+                        <li><a href="/community">Get Involved</a></li>
+                        
+                        
+                        <li><a href="/public-relations">Public Service Announcements</a></li>
+                        
+                        
+                        <li><a href="/supporters">Supporters</a></li>
+                        
+                        
+                        <li><a href="/the-woove">The Woove (external site)</a></li>
+                        
+                        
+                        <li><a href="/underwriting">Underwriting</a></li>
+                        
+                        </ul>
+                </li>
+                <li>
+                    <span class="menu-heading">Playlists</span>
+                    <ul>
+                        <li class="active"><a href="/last15">Last 15</a></li>
+                        <li><a href="/playlists/date">by date</a></li>
+                        <li><a href="/playlists/dj">by DJ</a></li>
+                        <li><a href="/playlists/charts">Charts</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <span class="menu-heading">Shows</span>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="/shows">Schedule</a></li>
+                        
+                        
+                        </ul>
+                </li>
+                
+
+                <li>
+                    <span class="menu-heading">Social</span>
+                    <ul>
+                        <li><a href="https://www.facebook.com/WUVTFM" rel="external" title="WUVT on Facebook">Facebook</a></li>
+                        <li><a href="https://twitter.com/wuvtfm" rel="external" title="WUVT on Twitter">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/wuvt" rel="external" title="WUVT on Instagram">Instagram</a></li>
+                        <li><a href="/last15.atom" rel="feed" title="Atom Feed">Feed</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </nav>
+
+        
+        <ul id="side_social">
+        </ul>
+        
+    </div>
+
+    <div id="content">
+        
+<header>
+    <h2>Last 15 Tracks</h2>
+</header>
+
+<section class="tableSection">
+
+<table id="last15tracks" class="tracklist">
+    <thead>
+        <th>Time</th>
+        <th class="icon-column"></th>
+        <th>Artist</th>
+        <th>Track</th>
+        <th>Album</th>
+        <th class="dj-column">DJ</th>
+        <th class="icon-column"></th>
+        <th class="icon-column"></th>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:44:09+00:00" data-format="HH:mm:ss">05:44:09</time></td>
+            <td></td>
+            <td>Tycho</td>
+            <td><a href="/playlists/track/392991">Horizon</a></td>
+            <td>Epoch</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:39:40+00:00" data-format="HH:mm:ss">05:39:40</time></td>
+            <td></td>
+            <td>AFX</td>
+            <td><a href="/playlists/track/71161">Crying in your face</a></td>
+            <td>Chosen Lords</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:36:41+00:00" data-format="HH:mm:ss">05:36:41</time></td>
+            <td></td>
+            <td>Negativland</td>
+            <td><a href="/playlists/track/449264">Deliberate Sabotage (live)</a></td>
+            <td>These Guys Are From England and Who Gives a Shit</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:31:30+00:00" data-format="HH:mm:ss">05:31:30</time></td>
+            <td></td>
+            <td>Boards of Canada</td>
+            <td><a href="/playlists/track/36469">Oirectine</a></td>
+            <td>Twoism</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:27:54+00:00" data-format="HH:mm:ss">05:27:54</time></td>
+            <td></td>
+            <td>Cassius</td>
+            <td><a href="/playlists/track/198729">Rock Number One</a></td>
+            <td>15 Again</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:25:18+00:00" data-format="HH:mm:ss">05:25:18</time></td>
+            <td></td>
+            <td>Daft Punk</td>
+            <td><a href="/playlists/track/193359">End of Line</a></td>
+            <td>Tron Legacy</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:20:52+00:00" data-format="HH:mm:ss">05:20:52</time></td>
+            <td></td>
+            <td>Long Distance Runner</td>
+            <td><a href="/playlists/track/96041">After the Math</a></td>
+            <td>The Fire of Cumulative Hours</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:18:29+00:00" data-format="HH:mm:ss">05:18:29</time></td>
+            <td></td>
+            <td>Flying Lotus</td>
+            <td><a href="/playlists/track/197345">Camera Day</a></td>
+            <td>Pattern + Grid World (EP)</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:14:08+00:00" data-format="HH:mm:ss">05:14:08</time></td>
+            <td></td>
+            <td>Squarepusher</td>
+            <td><a href="/playlists/track/105209">Arterial Fantasy</a></td>
+            <td>Numbers Lucent</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:07:52+00:00" data-format="HH:mm:ss">05:07:52</time></td>
+            <td></td>
+            <td>Cut Chemist</td>
+            <td><a href="/playlists/track/299987">The Garden</a></td>
+            <td>The Audience&#39;s Listening</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T09:01:44+00:00" data-format="HH:mm:ss">05:01:44</time></td>
+            <td></td>
+            <td>Graham Knox Frazier</td>
+            <td><a href="/playlists/track/263594">Like A</a></td>
+            <td>House Instrumentals II</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T08:58:51+00:00" data-format="HH:mm:ss">04:58:51</time></td>
+            <td></td>
+            <td>Filthy Dukes</td>
+            <td><a href="/playlists/track/158652">Audio Soul Project - Reality Check (Vincenzo Remix)</a></td>
+            <td>Fabrictive 48</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T08:54:52+00:00" data-format="HH:mm:ss">04:54:52</time></td>
+            <td></td>
+            <td>Dutch</td>
+            <td><a href="/playlists/track/168608">Just Before the Rain</a></td>
+            <td>A Bright Cold Day</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T08:50:47+00:00" data-format="HH:mm:ss">04:50:47</time></td>
+            <td></td>
+            <td>Gold Panda</td>
+            <td><a href="/playlists/track/17963">Vanilla Minus</a></td>
+            <td>Lucky Shiner</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td><time datetime="2024-05-30T08:44:29+00:00" data-format="HH:mm:ss">04:44:29</time></td>
+            <td></td>
+            <td>Swayzak</td>
+            <td><a href="/playlists/track/203487">Grace&#39;s State</a></td>
+            <td>Route de la Slack - cd2 Rarities</td>
+            <td>
+                Automation
+                </td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </tbody>
+</table>
+</section>
+
+<section>
+<header>
+    <h2>Miss a Song?</h2>
+</header>
+
+<p>Check out our playlist archives. You can search
+<a href='/playlists/date'>air date</a> or
+<a href="/playlists/dj">DJ</a>.</p>
+</section>
+
+    </div>
+</div>
+
+<footer>
+    © 2007-2024 WUVT-FM et al. <a href="/legal">Some rights reserved.</a> <a href="/privacy">Privacy Policy</a>
+</footer>
+
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/moment.min.js"></script>
+<script src="/static/js/global.js"></script>
+<script src="/static/js/live.js?v=3"></script>
+<script src="/static/js/stream.js?v=3"></script>
+<script src="/static/js/playlists_by_date.js"></script>
+<script src="/static/js/responsive_components.js"></script>
+<script src="/js/init.js"></script>
+
+    </body>
+</html>

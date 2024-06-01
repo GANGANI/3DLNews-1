@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3ABN - Three Angels Broadcasting Network</title>
+  <link rel="stylesheet" href="https://r.3abn.org/menu/latest/static/css/main.css">
+  <link rel="stylesheet" href="https://r.3abn.org/epg/latest/static/css/main.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/character-count.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css">
+  <link rel="stylesheet" href="/css/news.css">  
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+  <script src="/js/Parsley/parsley.js"></script>
+  <script src="/js/csi2.js"></script>
+  <meta property="fb:app_id" content="454608318077415">
+  <meta property="og:title" content="3ABN - Three Angels Broadcasting Network">
+  <meta property="og:image" content="/img/3abn-ogg.png">
+  <meta property="og:description" content="Reaching the world for Jesus">
+  <meta name="Description" content="Counteracting the counterfeit by proclaiming the three angels' messages of Revelation 14:6-12 to the world.">
+  <meta name="keywords" content="Christian television broadcasting network, Three Angels Broadcasting, Mending Broken People Network, Bible Prophecy, Prophecy, Bible Study, Bible Teaching, Healthy Lifestyle, End-Times, Sabbath, Powerful Testimonies, Daniel and Revelation, Sabbath School, Health Education, Vegan Cooking, Inspirational Music, Danny Shelton, John Lomacang, Greg Morikone, Jill Morikone">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/3abn-apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/3abn-apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/3abn-apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/3abn-apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/3abn-apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/3abn-apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/3abn-apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/3abn-apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/3abn-apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/3abn-android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/3abn-android-icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/3abn-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/3abn-favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/3abn-favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/3abn-ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!--script(id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer)-->
+  <meta name="google-site-verification" content="8bmKIODldlJF9JXZinHFul51k19RWy38yVU6VJIb6w0">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <link rel="stylesheet" href="https:////code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script> var _ctct_m = "0d23c6476bbf450719a43220666ea990"; </script>
+  <script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+
+
+  <script type="text/babel">
+const eventList = [
+  /*
+  {
+  eventId: "", 
+  beginDate: "11/02/2019", endDate: "11/02/2019", 
+  dateForSorting: "11/02/2019", 
+  firstShowDate: "09/01/2019", expirationDate: "12/01/2019", expirationFromHistory: "01/01/2021", 
+  thumbnail: "",
+  event: (
+    <>
+    <h1></h1>
+    <p></p>    
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p></p>
+    <p></p> 
+    <p></p>     
+    </>
+  )
+  },
+
+
+  *list styling
+
+      <dl>
+        <dt><b></b></dt>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+      </dl> 
+      <p></p>
+      <p></p>
+
+  - Fields:
+  - eventId - a unique id for the event
+  - beginDate - the begin date (where in the months the event will show up)
+  - endDate - the last date (where in the months the event will show up)
+  - dateForSorting - the date for sorting this event
+  - firstShowDate - the first date this event will show up
+  - expirationDate - the date this event will no longer be shown in the current calendars. It will still appear in the month it happened and in the "past news & events"
+  - expirationFromHistory - the date the event will no longer appear in the history or anywhere (past news & events)
+  - thumbnail - relative path to the image for this event
+  - event - html between <> and closing </> tags, which is always shown on the page
+  - eventDetails - html between <> and closing </> tags, which is shown when "view event details..." is clicked to expand the event details. 
+  */
+
+{
+  eventId: "Rally202405DodgeCenter", 
+  beginDate: "03/26/2024", endDate: "06/01/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "03/26/2024", expirationDate: "06/01/2024", expirationFromHistory: "06/01/2024", 
+  thumbnail: "/img/news/2024-03-27-Dodge-Center-Rally.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Dodge Center, Minnesota</h1>
+    <p>Weâre excited for the chance to meet you in person at a special rally on Saturday, May 18, in Dodge Center, Minnesota! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners. We canât wait to meet you in person, so if you live anywhere in the Dodge Center area, please come and spend some time with us as we praise the Lord together!</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, May 18, 2024</dd>
+         <dd>9:30 a.m. Sabbath School</dd>
+         <dd>11:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>2:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>Dodge Center Seventh-day Adventist Church</dd>
+         <dd>410 3rd Avenue SW, Dodge Center, MN 55927</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>Greg and Jill Morikone</dd>
+         <dd>Danny and Yvonne Shelton</dd>
+         <dd>Ryan and Stephanie Day</dd>
+         <dd>Tim Parton</dd>
+         <dd><br /></dd>
+         <dd><b>INFO:</b> Email - Pastor Joel Kratzke <a href="mailto:pastorjoelsda@gmail.com" target="_blank">pastorjoelsda@gmail.com</a></dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+  
+{
+  eventId: "Rally202404Bahamas", 
+  beginDate: "05/01/2024", endDate: "07/30/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "05/01/2024", expirationDate: "07/30/2024", expirationFromHistory: "07/30/2024", 
+  thumbnail: "/img/news/2024-05-02-Nassau-Bahamas-Rally.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Nassau, Bahamas</h1>
+    <p>Weâre excited for the chance to meet you in person at a special rally on Friday and Saturday, June 28 and 29, in Nassau, Bahamas! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our viewers and listeners. We canât wait to meet you in person, so if you live anywhere near Nassau, please come and spend some time with us as we praise the Lord together!</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Friday Evening Service, Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>June 28 â 29, 2024</dd>
+         <dd>7:00 p.m. Friday Evening Service</dd>
+         <dd>9:15 a.m. Sabbath School</dd>
+         <dd>11:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>4:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>Hillview Seventh-day Adventist Church</dd>
+         <dd>135 Tonique Williams-Darling Highway, Nassau, Bahamas</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>Greg and Jill Morikone</dd>
+         <dd>Danny and Yvonne Shelton</dd>
+         <dd>Ryan and Stephanie Day</dd>
+         <dd>Jason and Francine Bergmann</dd>
+         <dd>Reggie and Ladye Love Smith</dd>
+         <dd><br /></dd>
+         <dd><b>INFO:</b> South Bahamas Conference Office (242) 341-4021</dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+
+  {
+  eventId: "Rally202404Huntsville", 
+  beginDate: "03/26/2024", endDate: "05/01/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "03/26/2024", expirationDate: "05/01/2024", expirationFromHistory: "05/01/2024", 
+  thumbnail: "/img/news/2024-03-27-First-SDA-Huntsville.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Huntsville, Alabama</h1>
+    <p>Weâre excited for the chance to meet you in person at a special rally on Saturday, April 20, in Huntsville, Alabama! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners. We canât wait to meet you in person, so if you live anywhere in the Huntsville area, please come and spend some time with us as we praise the Lord together!</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, April 20, 2024</dd>
+         <dd>9:30 a.m. Sabbath School</dd>
+         <dd>11:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>3:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>First Seventh-day Adventist Church</dd>
+         <dd>1303 Evangel Dr NW, Huntsville, AL 35816</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>Greg and Jill Morikone</dd>
+         <dd>Danny and Yvonne Shelton</dd>
+         <dd>John and Angela Lomacang</dd>
+         <dd>Jason and Palmetta Bradley</dd>
+         <dd>Tim Parton</dd>
+         <dd><br /></dd>
+         <dd><b>INFO:</b> Email - <a href="mailto:busychurch@bellsouth.com" target="_blank">busychurch@bellsouth.com</a></dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "Charter2024", 
+  beginDate: "03/12/2024", endDate: "12/30/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "03/12/2024", expirationDate: "12/30/2024", expirationFromHistory: "12/30/2024", 
+  thumbnail: "/img/news/2024-03-13-Spectrum-Notice.jpg",
+  event: (
+    <>
+    <h1>Important Update: Charter/Spectrum Discontinuing Airing 3ABN - Here's How You Can Watch</h1>
+    <p>What a blessing you have been to the ministry of 3ABN! We love having you as part of our family and want to ensure you remain connected with 3ABNâs life-changing, spiritually uplifting programming. Charter/Spectrum has made the decision to eliminate their Legacy package, which includes 3ABN. If you watch 3ABN on Charter/Spectrum, this will affect you. We want to assure you that there are alternative ways for you to stay connected and not miss out on the programs you love. We're excited to share these options with you.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <p>Here are the various ways you can continue watching 3ABN:</p>
+    <dl>
+        <dt></dt>
+        <dd>â¢ Roku</dd>
+        <dd>â¢ FireTV</dd>
+        <dd>â¢ Apple TV</dd>
+        <dd>â¢ 3ABNPlus.tv</dd>
+        <dd>â¢ 3ABN+ app</dd>
+        <dd>â¢ Satellite Dish</dd>
+        <dd>â¢ mySDAtv</dd>
+        <dd>â¢ DISH 9401</dd>
+      </dl>
+    <p>We understand that change can be difficult sometimes, and we apologize for any inconvenience caused. Please know that this transition is beyond our control. We appreciate your understanding and continued support. If you have any questions or need detailed instructions on any of the alternative options that may work best for you, please don't hesitate to contact 3ABNâs Call Center at 618-627-4651 option 2. We will do everything we can to ensure you remain connected with this ministry!</p>
+    <p>Once again, we would like to express our gratitude for your dedication to 3ABN. Thank you for being a part of our 3ABN Family, and know that we are here for you.</p>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "Dish2024", 
+  beginDate: "02/21/2024", endDate: "12/30/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "02/21/2024", expirationDate: "12/30/2024", expirationFromHistory: "12/30/2024", 
+  thumbnail: "/img/news/2024-02-22-Dish-Special-Notice.jpg",
+  event: (
+    <>
+    <h1>Dish Special Notice</h1>
+    <p>Dear 3ABN Family,</p>
+    <p>We are reaching out to share an important update concerning our broadcast on the DISH Network. 
+	   In our continuous effort to make our programming accessible to you, our valued viewer, there has been a change in the channel number for 3ABN. Effective immediately, you can find all your favorite 3ABN programs on <strong>Channel 9401</strong>.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <p>Thank you for being an integral part of our 3ABN family.
+	   We appreciate your understanding during this transition and look forward to continuing to bring you high-quality content on channel 9401.</p>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "NewYearDay2024", 
+  beginDate: "12/19/2023", endDate: "02/01/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/19/2023", expirationDate: "02/01/2024", expirationFromHistory: "02/28/2024", 
+  thumbnail: "/img/news/2024-New-Years-News-Bug.jpg",
+  event: (
+    <>
+    <h1>New Yearâs Day Programs</h1>
+    <p>We want to help you begin the new year with a solid biblical foundation. Join us New Yearâs Day for a special selection of spiritually uplifting programs to enrich your walk with the Lord.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>New Yearâs Day 2024 Schedule - All Times Central (UTC-6)
+      <dt><b><u>Monday, January 1</u></b></dt>
+         <dd><b>4:00 a.m.</b> 2023 Summer Camp Meeting Welcome And Music Hour - 3ABN Family</dd>
+         <dd><b>5:00 a.m.</b> Salvation Is Of The Lord (Jonah 2:9) - Wintley Phipps</dd>
+         <dd><b>6:00 a.m.</b> Changeless Love (Malachi 3:6) - Jay Gallimore</dd>
+         <dd><b>7:00 a.m.</b> A Faithful Husband (Hosea 2:20) - James Rafferty</dd>
+         <dd><b>8:00 a.m.</b> Resting In His Love (Zephaniah 3:17) - Jill Morikone</dd>
+         <dd><b>9:00 a.m.</b> The Valley Of Decision (Joel 3:14) - Dakota Day</dd>
+         <dd><b>10:00 a.m.</b> Living By Faith (Habakkuk 2:4) - Christopher Hudson</dd>
+         <dd><b>11:00 a.m.</b> When I Fall (Micah 7:8) - Dr. Eric Walsh</dd>
+         <dd><b>12:00 p.m.</b> Behold The Branch (Zechariah 3:8) - Steve Wohlberg</dd>
+         <dd><b>1:00 p.m.</b> The Desire Of All Nations (Haggai 2:7) - Dr. David Shin</dd>
+         <dd><b>2:00 p.m.</b> The Messenger Of The Convenant (Malachi 3:1) - Christopher Hudson</dd>
+         <dd><b>3:00 p.m.</b> The Family - Dr. Ben Carson</dd>
+         <dd><b>4:00 p.m.</b> Prepare To Meet Thy God (Amos 4:12) - Dr. David Shin</dd>
+         <dd><b>5:00 p.m.</b> The Counsel Of Peace (Zechariah 6:13) - Shelley Quinn</dd>
+         <dd><b>6:00 p.m.</b> Time Of The Latter Rain (Zechariah 10:1) - Ryan Day</dd>
+         <dd><b>7:00 p.m.</b> The First Dominion (Micah 4:8) - John Dinzey</dd>
+         <dd><b>8:00 p.m.</b> Divine Service - The Truth About Sin - Danny Shelton</dd>
+         <dd><b>10:15 p.m.</b> Pause to Pray - Tim Parton</dd>
+         <dd><b>10:30 p.m.</b> Then Shall We Know (Hosea 6:3) - Kenny Shelton</dd>
+         <dd><b>11:00 p.m.</b> âGod, the Perfector of Our Faithâ - John Lomacang</dd>
+         <dd><b>12:00 a.m.</b> Trouble Will Not Rise Again (Nahum 1:7-9) - John Lomacang</dd>
+        <br />
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "Rally2023ORedlands", 
+  beginDate: "12/21/2023", endDate: "02/01/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/21/2023", expirationDate: "02/01/2024", expirationFromHistory: "02/28/2024", 
+  thumbnail: "/img/news/2023-12-21-Redlands-Rally.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Redlands, California</h1>
+    <p>Weâre excited for the chance to meet you in person at a special rally on Saturday, February 3, in Redlands, California! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners. We canât wait to meet you in person, so if you live anywhere in the Loma Linda/Redlands area, please come and spend some time with us as we praise the Lord together!</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, February 3, 2024</dd>
+         <dd>9:00 a.m. Sabbath School</dd>
+         <dd>10:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>3:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>Loma Linda Indonesian Seventh-day Adventist Church</dd>
+         <dd>10827 California St, Redlands, CA 92373</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>Greg and Jill Morikone</dd>
+         <dd>Danny and Yvonne Shelton</dd>
+         <dd>John and Angela Lomacang</dd>
+         <dd>Jason Bradley, Tim Parton, Ryan Day</dd>
+         <dd><br /></dd>
+         <dd><b>MORE INFO:</b> For more information, call (909) 314-9932</dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "GYC2023News", 
+  beginDate: "12/20/2023", endDate: "01/28/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/19/2023", expirationDate: "01/28/2024", expirationFromHistory: "01/28/2024",
+  thumbnail: "/img/news/2023-GYC-News-Bug.jpg",
+  event: (
+    <>
+    <h1>GYC Convention 2023</h1>
+    <p>We look forward to the excitement of the Live GYC Conference in Portland, Oregon. This dedicated group of youth are taking an active role in finishing the work of God in this generation! See full schedule here.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl> All Times Central (UTC-6)
+        <dt><b><u>Wednesday, December 27</u></b></dt>
+         <dd><b>8:00 PM - Keynote Address - Andrew Park</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Thursday, December 28</u></b></dt>
+         <dd><b>10:30 AM - Morning Devotional - Mark Howard</b></dd>
+         <dd><b>2:00 PM - Changed lives (Testimony) - Andrew Hosford</b></dd>
+         <dd><b>8:00 PM - Evening Plenary - Sam Walters</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, December 29</u></b></dt>
+         <dd><b>10:30 AM - Morning Devotional - Mark Howard</b></dd>
+         <dd><b>8:00 PM - Evening Plenary - Sam Walters</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Saturday, December 30</u></b></dt>
+         <dd><b>10:30 AM - Morning Devotional - Mark Howard</b></dd>
+         <dd><b>12:00 PM - Sabbath School - ECOM</b></dd>
+         <dd><b>1:30 PM - Divine Service - Jermaine Gayle</b></dd>
+         <dd><b>8:00 PM - Evening Plenary - Sam Walters</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Sunday, December 31</u></b></dt>
+         <dd><b>11:30 AM - Final Charge - Mark Finley</b></dd>
+
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "HolidayProgramming-2023", 
+  beginDate: "12/07/2023", endDate: "01/28/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/07/2023", expirationDate: "01/28/2024", expirationFromHistory: "01/28/2024", 
+  thumbnail: "/img/news/2023-12-08-Christmas-Special-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Celebrating Our Greatest GiftâAll Month Long</h1>
+    <p>The birth of Jesus is without a doubt the greatest gift ever given to mankind, so weâre celebrating all month long on our 3ABN Today program. Each day is packed with âgood tidings of great joyâ as we fill the air with hymns and carols sung by members of your 3ABN musical family, heartwarming childrenâs programs with Aunt Francine and her young friends, delicious holiday meal ideas, and the warmth of family worships. So celebrate the birth of our Savior and feel the joy all month long with us on 3ABN Today. We know you will be blessed!</p>
+    </>
+  ),
+  
+  eventDetails: (
+    <>
+	<dl>
+		
+        <dt><b><u>FRIDAY, DECEMBER 1</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â A 3ABN Dare to Dream Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Kim Fleming, Ryan Day, Mark Payne, Paul Heflin, Celestine Dickens, and Farrah Barry.</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Family Worship â âLotâs Wifeâ</b></dd>
+         <dd>With Kenny and Chris Shelton, Eric and Marilyn Durant, Ian and Angela Vandervalk</dd>
+         
+        <br />
+        
+        <dt><b><u>SATURDAY, DECEMBER 2</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m.	â An Evening With Your 3ABN Family</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         
+        <br />
+        
+        <dt><b><u>SUNDAY, DECEMBER 3</u></b></dt>
+         <dd><b>8:00 a.m. and 8:00 p.m. â An Evening With Sherice Tomlin and Neville Peter</b></dd>
+         <dd>With Yvonne Shelton, Sherice Tomlin, and Neville Peter.</dd>
+         <dd><b>3:00 p.m. â 3ABN Today Live â âIâm Not Qualified: Women in Leadershipâ</b></dd>
+         <dd>With Jill Morikone and Antionette Fournier</dd>
+         
+        <br />
+        
+        <dt><b><u>MONDAY, DECEMBER 4</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Today Bible Q & A â âWhat Does âUnder the Lawâ Mean?â</b></dd>
+         <dd>With John and Angela Lomacang, and Ryan Day</dd>
+         
+        <br />
+        
+        <dt><b><u>TUESDAY, DECEMBER 5</u></b></dt>
+         <dd><b>8:00 a.m. â 3ABN Today Live â âIâm Not Qualified: Women in Leadershipâ</b></dd>
+         <dd>With Jill Morikone and Antionette Fournier</dd>
+         <dd><b>3:00 p.m. and 8:00 p.m. â A Praise Him Christmas with Jared and Hillary Mitchell</b></dd>
+         <dd>With Tim Parton, and Jared and Hillary Mitchell</dd>
+         
+        <br />
+        
+        <dt><b><u>WEDNESDAY, DECEMBER 6</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Today â âA Plant-Based Christmasâ</b></dd>
+         <dd>With Idalia Dinzey and Kylee Melo</dd>
+         
+        <br />
+        
+        <dt><b><u>THURSDAY, DECEMBER 7</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â 3ABN Today â âTrust Servicesâ</b></dd>
+         <dd>With Jill Morikone, Jeff Doerr, and Joe and Nancy OâBrien</dd>
+         <dd><b>8:00 p.m. â An Evening With Your 3ABN Family</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         <dd><b>9:00 p.m. â A Praise Him Christmas with Jared and Hillary Mitchell</b></dd>
+         <dd>With Tim Parton, and Jared and Hillary Mitchell</dd>
+         
+        <br />
+        
+        <dt><b><u>FRIDAY, DECEMBER 8</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â Christmas Praise  â âJesus Is My Very Best Friendâ</b></dd>
+         <dd>With Aunt Francine, John-Harley, John-Kenley, Juliana, Micaiah, Nia-Rhode, Sam, Samantha, Sofiya, Liam, Sophia, and Natalie</dd>
+         <dd><b>8:30 a.m. and 3:30 p.m. â Christmas Praise  â âA Christmas Rose (Love One Another)</b></dd>
+         <dd>With Aunt Francine, Julianna, Liam, Micaiah, Natalie, Sam, Sofiya, Samantha, and Sofia</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Family Worship â âExperiencing the Joy of the Lordâ</b></dd>
+         <dd>With J. D. and Shelley Quinn, Daniel and Valerie Morikone, Darrell and Sasha Thomas</dd>
+         
+        <br />  
+         
+         <dt><b><u>SATURDAY, DECEMBER 9</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Dare to Dream Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Zina Johnson, Sherice Tomlin, Mark Payne, Neville Peter, and Celestine Dickens.</dd>
+         
+        <br />
+        
+         <dt><b><u>SUNDAY, DECEMBER 10</u></b></dt>
+         <dd><b>8:00 a.m. and 8:00 p.m. â A Praise Him Christmas</b></dd>
+         <dd>With Tim Parton and Ryan Day</dd>
+         <dd><b>8:30 a.m. and 8:30 p.m. â Your Favorites By Request â âYour Favorite Christmas Hymnsâ</b></dd>
+         <dd>With Tim Parton</dd>
+         <dd><b>3:00 p.m. â An Evening with Your 3ABN Family</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone.</dd>
+         <dd><b>4:00 p.m. â A Praise Him Christmas with Jared and Hillary Mitchell</b></dd>
+         <dd>With Tim Parton, and Jared and Hillary Mitchell</dd>
+         
+        <br />
+        
+        <dt><b><u>MONDAY, DECEMBER 11</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Today Bible Q & A â âShould Christians Today Bear Arms?â</b></dd>
+         <dd>With J. D. Quinn, John Dinzey, Ryan Day, and Daniel Perrin</dd>
+         
+        <br />
+        
+        <dt><b><u>TUESDAY, DECEMBER 12</u></b></dt>
+         <dd><b>8:00 a.m. â An Evening With Your 3ABN Family</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         <dd><b>9:00 a.m. â A Praise Him Christmas with Jared and Hillary Mitchell</b></dd>
+         <dd>With Tim Parton, and Jared and Hillary Mitchell</dd>
+         <dd><b>3:00 p.m. and 8:00 p.m. â 3ABN Today â âYear-End Givingâ</b></dd>
+         <dd>With Greg and Jill Morikone, Danny and Yvonne Shelton, Jason Bergmann, and Aunt Francine</dd>
+         
+        <br />
+        
+        <dt><b><u>WEDNESDAY, DECEMBER 13</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Today Cooking â âChristmas Holiday Favoritesâ</b></dd>
+         <dd>With Dee Hilderbrand, Heidi Tompkins, Ivan Raj, and Eva Tompkins</dd>
+         
+        <br />
+        
+        <dt><b><u>THURSDAY, DECEMBER 14</u></b></dt>
+         <dd><b>8:00 a.m. 3:00 p.m. â An Evening With Paul Heflin and Mark Payne</b></dd>
+         <dd>With Yvonne Shelton, Paul Heflin, and Mark Payne</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Live Behind the Scenes â âDecemberâ</b></dd>
+         <dd>With Greg and Jill Morikone, Danny and Yvonne Shelton, Ricky and Jasmine Carter, Aunt Francine, Bruce Chance, Ryan Day</dd>
+         
+        <br />
+        
+        <dt><b><u>FRIDAY, DECEMBER 15</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â Light of the World Christmas Special</b></dd>
+         <dd>With Aunt Francine, John, Nia, John, Sam, Sofiya, Samantha, and Sophia.</dd>
+         <dd><b>8:30 a.m. and 3:30 p.m. â Jesus Is King Christmas Special</b></dd>
+         <dd>With Aunt Francine, John, Juliana, John, Liam, Micaiah, Natalie, Nia, Sofiya, Sam Sophia, and Samantha.</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Family Worship â âGood Tidings of Great Joyâ</b></dd>
+         <dd>With John Dinzey, Andy and Naomi Weaver, Joe and Nancy OâBrien.</dd>
+         
+        <br />
+        
+        <dt><b><u>SATURDAY, DECEMBER 16</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â Celebrate the Season Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         
+        <br />
+        
+        <dt><b><u>SUNDAY, DECEMBER 17</u></b></dt>
+         <dd><b>8:00 a.m. and 8:00 p.m. â 3ABN Dare to Dream Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Zina Johnson, Sherice Tomlin, Mark Payne, Neville Peter, and Celestine Dickens</dd>
+         
+         <dd><b>3:00 p.m. â 3ABN Today Live Behind the Scenes â âDecember 2023â</b></dd>
+         <dd>With Greg and Jill Morikone, Danny and Yvonne Shelton, Ricky and Jasmine Carter, Aunt Francine, Bruce Chance, Ryan Day</dd>
+         
+        <br />
+        
+        <dt><b><u>MONDAY, DECEMBER 18</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Today Bible Q & A â âHow Can I Witness to My Family?â</b></dd>
+         <dd>With Ricky Carter, Ryan Day, and John Dinzey</dd>
+         
+        <br />
+        
+        <dt><b><u>TUESDAY, DECEMBER 19</u></b></dt>
+         <dd><b>8:00 a.m. â 3ABN Today Live Behind the Scenes â âDecember 2023â</b></dd>
+         <dd>With Greg and Jill Morikone, Danny and Yvonne Shelton, Ricky and Jasmine Carter, Aunt Francine, Bruce Chance, Ryan Day</dd>
+         
+         <dd><b>3:00 p.m. and 8:00 p.m. â Christmas with Reggie and Ladye Love Smith</b></dd>
+         <dd>With Reggie and Ladye Love Smith, and Tim Parton</dd>
+         
+        <br />
+        
+        <dt><b><u>WEDNESDAY, DECEMBER 20</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â 3ABN Today Cooking â âA Lomacang Family Christmas Dinnerâ</b></dd>
+         <dd>With John and Angela Lomacang</dd>
+         
+        <br />
+        
+        <dt><b><u>THURSDAY, DECEMBER 21</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 9:00 p.m. â Celebrate the Season Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         <dd><b>8:00 p.m. â An Evening With Sherice Tomlin and Neville Peter</b></dd>
+         <dd>With Yvonne Shelton, Sherice Tomlin, and Neville Peter</dd>
+         
+        <br />
+        
+        <dt><b><u>FRIDAY, DECEMBER 22</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â An Evening With Your 3ABN Family</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Family Worship â âThe Giftâ</b></dd>
+         <dd>With Kenny and Chris Shelton, Eric and Marilyn Durant, Jason Bradley, and Ben Lingle</dd>
+         
+        <br />
+        
+        <dt><b><u>SATURDAY, DECEMBER 23</u></b></dt>
+         <dd><b>8:00 a.m., 3:00 p.m., and 8:00 p.m. â A Praise Him Christmas with Jared and Hillary Mitchell</b></dd>
+         <dd>With Tim Parton, and Jared and Hillary Mitchell</dd>
+         
+        <br />
+        
+        <dt><b><u>SUNDAY, DECEMBER 24</u></b></dt>
+         <dd><b>8:00 a.m. and 8:00 p.m. â A 2023 3ABN Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Gene McDonald, Melody Firestone, Reggie and Ladye Love Smith, and Tim Parton</dd>
+         <dd><b>3:00 p.m. â An Evening With Sherice Tomlin and Neville Peter</b></dd>
+         <dd>With Yvonne Shelton, Sherice Tomlin, and Neville Peter</dd>
+         <dd><b>4:00 p.m. â Celebrate the Season Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         
+        <br />
+        
+        <dt><b><u>MONDAY, DECEMBER 25</u></b></dt>
+         <dd><b>6:00 a.m. â A 3ABN Christmas â âJesus, Joy of the World</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Candy Carson, Kris Wilkinson, Emily Rogers, David Davidson</dd>
+         <dd><b>7:00 a.m. â A Praise Him Christmas</b></dd>
+         <dd>With Tim Parton, Sandra Entermann, Drew Grounds, and Cheryl Harre</dd>
+         <dd><b>8:00 a.m. â Kids Christmas Praise  â âJesus Is My Very Best Friendâ</b></dd>
+         <dd>With Aunt Francine, John-Harley, John-Kenley, Juliana, Micaiah, Nia-Rhode, Sam, Samantha, Sofiya, Liam, Sophia, and Natalie</dd>
+         <dd><b>8:30 a.m. â Kids Christmas Praise  â âA Christmas Roseâ</b></dd>
+         <dd>With Aunt Francine, Julianna, Liam, Micaiah, Natalie, Sam, Sofiya, Samantha, and Sofia</dd>
+         <dd><b>9:00 a.m. â Joy to the World â Fountainview Academy Orchestra and Choir</b></dd>
+         <dd><b>10:00 a.m. â An Evening With Paul Heflin and Mark Payne</b></dd>
+         <dd>With Yvonne Shelton, Paul Heflin, and Mark Payne</dd>
+         <dd><b>11:00 a.m. â A 3ABN Christmas â âThe King Has Comeâ</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Jared and Hillary Mitchell, Kris Wilkinson, Emily Rogers and Tim Parton</dd>
+         <dd><b>12:00 noon â A Dare to Dream Christmas â âCelebrate Jesusâ</b></dd>
+         <dd>With Danny and Yvonne Shelton, Mark Williams, Mark Payne, ChÃ© and Renelle Chin King, Celestine Dickens, and Farrah Barry.</dd>
+         <dd><b>1:00 p.m. â O Come, All Ye Faithful â Fountainview Academy Orchestra and Choir</b></dd>
+         <dd><b>2:00 p.m. â A Dare to Dream Christmas</b></dd>
+         <dd>With Danny and Yvonne Shelton, Kim Fleming, Celestine Dickens, Farrah Barry, Ryan Day, Mark Payne, and Paul Heflin</dd>
+         <dd><b>3:00 p.m. â Kids Christmas Praise â âLight of the Worldâ</b></dd>
+         <dd>With Aunt Francine, John-Harley, John-Kenley, Nia-Rhode, Sophia, Sam, Samantha, and Sofiya</dd>
+         <dd><b>3:30 p.m. â Kids Christmas Praise â âJesus is Kingâ</b></dd>
+         <dd>With Aunt Francine, John-Harley, John-Kenley, Julianna, Sophia, Liam, Micaiah, Natalie, Sam, Nia-Rhode, Samantha, and Sofiya</dd>
+         <dd><b>4:00 p.m. â A Praise Him Christmas</b></dd>
+         <dd>With Tim Parton and Ryan Day</dd>
+         <dd><b>4:30 p.m. â Your Favorites By Request â Christmas Edition</b></dd>
+         <dd>With Tim Parton and Ryan Day</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Family Worship â âChristmas: A New Lookâ</b></dd>
+         <dd>With Danny & Yvonne Shelton and Jason Bradley</dd>
+         <dd><b>5:00 p.m. â A Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Gene McDonald, Melody Firestone, Reggie and Ladye Love Smith, and Tim Parton.</dd>
+         <dd><b>6:00 p.m. â A Praise Him Christmas with Jared and Hillary Mitchell</b></dd>
+         <dd>With Tim Parton, and Jared and Hillary Mitchell</dd>
+         <dd><b>7:00 p.m. â An Evening With Your 3ABN Family</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone.</dd>
+         <dd><b>8:00 p.m. â 3ABN Dare to Dream Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Zina Johnson, Sherice Tomlin, Mark Payne, Neville Peter, and Celestine Dickens</dd>
+         <dd><b>9:00 p.m. â Celebrate the Season</b></dd>
+         <dd>With Danny and Yvonne Shelton, Gene McDonald, Melody Firestone, Reggie and Ladye Love Smith, and Tim Parton</dd>
+         <dd><b>10:00 p.m. â An Evening With Sherice Tomlin and Neville Peter</b></dd>
+         <dd>With Yvonne Shelton, Sherice Tomlin, and Neville Peter</dd>
+         <dd><b>11:00 p.m. â An Evening With Reggie and Ladye Love Smith</b></dd>
+         <dd>With Reggie and Ladye Love Smith, and Tim Parton</dd>
+         
+       <br />
+        
+       <dt><b><u>TUESDAY, DECEMBER 26</u></b></dt>
+         <dd><b>8:00 a.m. â An Evening With Sherice Tomlin and Neville Peter</b></dd>
+         <dd>With Yvonne Shelton, Sherice Tomlin, and Neville Peter</dd>
+         <dd><b>8:30 a.m. â Celebrate the Season Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Reggie and Ladye Love Smith, Tim Parton, Gene McDonald, and Melody Firestone</dd>
+         <dd><b>3:00 p.m. and 8:00 p.m. â 3ABN Today â âYear-End Givingâ</b></dd>
+         <dd>With Greg and Jill Morikone, Danny and Yvonne Shelton, Jason Bergmann, and Aunt Francine</dd>
+         
+       <br />
+        
+       <dt><b><u>WEDNESDAY, DECEMBER 27</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â 3ABN Today Cooking â âChristmas With the Menasâ</b></dd>
+         <dd>With Yvonne Shelton and Michelle Mena</dd>
+         <dd><b>8:00 p.m. â GYC Convention â âKeynote Addressâ</b></dd>
+         <dd>With GYC President Andrew Park</dd>
+         
+       <br />
+       
+       <dt><b><u>THURSDAY, DECEMBER 28</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â A 3ABN Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Celestine Dickens, John Lomacang, and Tim Parton</dd>
+         <dd><b>8:00 p.m. â GYC Convention â âThursday Night Plenaryâ</b></dd>
+         <dd>With Sam Walters</dd>
+         
+       <br />
+       
+       <dt><b><u>FRIDAY, DECEMBER 29</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â A 2023 3ABN Christmas Special</b></dd>
+         <dd>With Danny and Yvonne Shelton, Gene McDonald, Melody Firestone, Reggie and Ladye Love Smith, and Tim Parton</dd>
+         <dd><b>8:00 p.m. â GYC Convention â âFriday Night Plenaryâ</b></dd>
+         <dd>With Sam Walters</dd>
+         
+       <br />
+       
+       <dt><b><u>SATURDAY, DECEMBER 30</u></b></dt>
+         <dd><b>8:00 a.m. and 3:00 p.m. â 3ABN Today â3ABN School of Discipleshipâ</b></dd>
+         <dd><b>8:00 p.m. â GYC Convention â âSaturday Night Plenaryâ</b></dd>
+         <dd>With Sam Walters</dd>
+         
+       <br />
+       
+       <dt><b><u>SUNDAY, DECEMBER 31</u></b></dt>
+         <dd><b>8:00 a.m. and 8:00 p.m. â Christmas with Reggie and Ladye Love Smith</b></dd>
+         <dd>With Reggie and Ladye Love Smith, and Tim Parton.</dd>
+         <dd><b>3:00 p.m. â 3ABN Today Live âProphetic Waymarks: Counterfeiting Christâ</b></dd>
+         <dd>With Ryan Day and James Rafferty</dd>
+         
+       <br />
+        
+    </dl>
+    </>
+  )
+  
+  },
+    
+  {
+  eventId: "Thanksgiving-2023", 
+  beginDate: "11/01/2023", endDate: "11/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "11/01/2023", expirationDate: "11/30/2023", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/2023-11-15-Thanksgiving-2023-news.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Itâs a Special Day of Thanksgiving!</h1>
+    <p>Join us for cherished moments and the warmth of Godâs love. Itâs a Special 3ABN Thanksgiving with your 3ABN family! Click for full schedule</p>
+    </>
+  ),
+  
+  eventDetails: (
+    <>
+	<dl>
+        <dt><b><u>3ABN Thanksgiving Day Programming</u></b></dt>
+         <dd>Thursday November 23, 2023 (All times Central)</dd>
+         <dd><br /></dd>
+         <dd>5:00am to 8:00am - Mending Broken People</dd>
+         <dd><b>8:00am to 10:45am - Thanksgiving Special</b></dd>
+         <dd>10:45am to 11:00am - Pause to Pray</dd>
+         <dd>11:00am to 1:00pm - Anniversary Special</dd>
+         <dd>1:00pm to 2:00pm - God is Faithful</dd>
+         <dd>2:00pm to 3:00pm - Shelton Family Music</dd>
+         <dd>3:00pm to 5:15pm - Thanksgiving Special 2022</dd>
+         <dd>5:15pm to 5:30pm - Pause to Pray</dd>
+         <dd>5:30pm to 6:00pm - Your Favorites by Request</dd>
+         <dd>6:00pm to 8:00pm - Anniversary Special</dd>
+         <dd><b>8:00pm to 10:45pm - Thanksgiving Special</b></dd>
+         <dd>10:45pm to 11:00pm - Pause to Pray</dd>
+         <dd>11:00pm to 12:00am - God is Faithful</dd>
+       
+        <br />
+
+    </dl>
+    </>
+  )
+  },
+
+  
+  {
+  eventId: "Rally2023OR", 
+  beginDate: "08/23/2023", endDate: "10/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/23/2023", expirationDate: "10/30/2023", expirationFromHistory: "10/30/2023", 
+  thumbnail: "/img/news/2023-08-24-Medford-OR-Rally-News.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Medford, Oregon</h1>
+    <p>Weâre excited for the chance to meet you in person at a special 3ABN Rally on Saturday, October 28 in Medford, Oregon! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners!</p>
+    <p>Please note that this event will not be broadcast, but we canât wait to meet you in person! So if you live anywhere in the Medford area, please come and spend some time with us as we praise the Lord together.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, October 28, 2023</dd>
+         <dd>9:45 a.m. Sabbath School</dd>
+         <dd>11:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>2:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>Medford Seventh-day Adventist Church</dd>
+         <dd>1900 Greenwood Street, Medford, Oregon 97504</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>With Greg & Jill Morikone, Danny & Yvonne Shelton,</dd>
+         <dd>James & RisÃ« Rafferty, Jason Bradley, Ryan Day</dd>
+         <dd>and Tim Parton</dd>
+         <dd><br /></dd>
+         <dd><b>MORE INFO:</b> Call the church office: 541-772-6021</dd>
+         <dd><b>Or visit: <a href="https://medfordsda.org" target="_blank">MedfordSDA.org</a></b></dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "NewSeries2023", 
+  beginDate: "10/02/2023", endDate: "10/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "10/02/2023", expirationDate: "12/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-10-03-new.jpg",
+  event: (
+    <>
+    <h1>New Series Coming in October</h1>
+    <p>Three new series will begin airing in October on 3ABN, and we believe they will be a tremendous blessing to you!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    
+    <p><strong>Spotless</strong> - Shelley Quinnâs new series magnifies the love of God as she takes you on a panoramic journey through redemptionâs story from Genesis through Revelation, delivering an end-time message of righteousness by faith and an intimate picture of the Messiah-Christ through understanding Godâs covenant language.</p>
+    <p>A companion book by the same name will also be available from <a href="https://3abnstore.com/" target="_blank">3ABNStore.com</a>. Written in a simple narrative form, this book provides ample Scripture references, features all 28 fundamental beliefs, and includes helpful chapter summaries. Donât miss the series, or the opportunity to add this valuable companion resource to your library!</p>
+    <p><strong>Made for Health</strong> - Hosted by RisÃ« Rafferty, this series addresses the underlying health conditions that drive sickness and disease. We tend to ask questions like, âWhat virus?â or âWhat was I exposed to?â However, we should be asking, âWhat made me vulnerable to this?â or âHow can I strengthen myself to fight this better?â Sheâll focus on the unhealthful conditions we can change, and the wrong habits we can correct. Weâll be inspired and motivated to implement practical, simple strategies that can improve our quality of life, because we were all Made for Health!</p>
+    <p><strong>Recipes from Russia</strong> â Our first English cooking series produced in our Russian studios will be hosted by 3ABN Russiaâs Executive Director, Julia Outkina, and will feature the tasty and healthy recipes the Lord has given them since they first received the health message during Pastor John Carterâs historic evangelistic series in 1992. Along with the recipes, Julia will share memories of over 30 years of 3ABN Russia. Youâll rejoice as you hear how God provided during the construction of our Russian Evangelism Center, and many other outstanding moments in 3ABN Russiaâs history.</p>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>Spotless </b></dd>
+         <dd><b>Begins October 2</b></dd>
+         <dd>Mondays at 6:00 p.m.; Thursdays at 12:00 p.m.; Sundays at 5:00 a.m.</dd>
+         <dd><br /></dd>
+         <dd><b>Made for Health</b></dd>
+         <dd><b>Begins October 8</b></dd>
+         <dd>Sundays at 9:00 p.m.; Wednesdays at 3:00 a.m.; Fridays at 11:00 a.m.</dd>
+         <dd><br /></dd>
+         <dd><b>Recipes from Russia</b></dd>
+         <dd><b>Begins October 8</b></dd>
+         <dd>Sundays at 9:45 a.m.; Wednesdays at 3:45 a.m.; Fridays at 11:45 a.m.</dd>
+         <dd><br /></dd>
+         <dd><i>All Times Central</i></dd>
+         <dd><br /></dd>
+         
+    </dl>
+    
+    </>
+  )
+  },
+  
+  {
+  eventId: "3ABN-39Years-2023", 
+  beginDate: "09/21/2023", endDate: "12/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "09/21/2023", expirationDate: "12/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-11-16-39th-Anniversary-Bug.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-PRISON">3ABN Celebrates 39 Years of Ministry</h1>
+    <p>Danny Shelton was impressed in 1984 to build a television station that would reach the world, and since 3ABN first went on the air, countless thousands have found salvation and a new walk with Jesus.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    
+    <p>As we celebrate 3ABNâs 39th Anniversary, weâll bring you the incredible stories of 3ABN employees whose lives have been transformed by the power of the Holy Spiritâand the programs they watched on 3ABN!</p>
+    <p>Hear the joy they experience as they work in the very ministry that helped them find their way back to Christ! Join Greg and Jill Morikone, Danny and Yvonne Shelton, Tim Parton and many other guests on 3ABNâs Anniversary Special! Thursday, November 17 at 8:00 p.m. Central.</p>
+    
+    </>
+  )
+  },
+  
+  {
+  eventId: "Truth-Like", 
+  beginDate: "07/12/2023", endDate: "12/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "07/12/2023", expirationDate: "12/30/2023", expirationFromHistory: "12/30/2023", 
+  thumbnail: "/img/news/2023-07-13-Looking-Higher.jpg",
+  event: (
+    <>
+    <h1>Truth Like Youâve Never Seen It!</h1>
+    <p>â3ABN has been all about evangelism from the very beginning,â says 3ABN President Greg Morikone, âand we are excited to have a brand-new set of Bible Study Guides that will help you point others to Jesus and lead them to discover more truth.â</p>
+    <p>âThe truth contained in Godâs Word is timeless and life-changing,â adds Jill Morikone, 3ABN Vice President/COO, âand these Bible Study Guides are packaged in an attractive and easy-to-follow format. They are perfect for personal study or group discussions, and they can be shared in your church, with your neighbors, or even in prisons!â</p>
+    <p>This first set is called âLooking Higherâ and presents Bible truths that draw attention to God and to the three angelsâ messages of Revelation 14 that are proclaimed to the whole world just before the Second Coming of Jesus Christ. The titles in this set are:</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd>1. The Battle for You (The Great Controversy)</dd>
+         <dd>2. Love Never Gives Up (Salvation through Jesus)</dd>
+         <dd>3. Godâs Textbook for Living (The Bible)</dd>
+         <dd>4. Godâs Law of Love and Liberty (The Ten Commandments)</dd>
+         <dd>5. The Power to Change (The Holy Spirit and Sanctification)</dd>
+         <dd>6. Hope For Your Family (The Family and Marriage)</dd>
+         <dd>7. A Healthy You (Health and Lifestyle)</dd>
+         <dd>8. When All is Said and Done (The Judgment - Pre-Advent)</dd>
+         <dd>9. Cosmic Beginnings (Creation)</dd>
+         <dd>10. Save the Date! (The Sabbath)</dd>
+         <dd>11. Delivered from Death (Death)</dd>
+         <dd>12. When Hell Burns Up (Hell)</dd>
+         <dd>13. God, the Church, and You (Godâs Church and Worship)</dd>
+         <dd>14. The Great Rescue (The Second Coming)</dd>
+    </dl>
+    	<p>These study guides were written by 3ABN Pastoral Department Assistant Manager, Daniel Perrin, who drew from  his long experience as a Bible teacher at a Christian academy.</p>
+    	<p>âWriting them has been such a privilege and a blessing,â he says. âMy prayer is that each person who studies them will be guided by the Holy Spirit to other places in Scripture, giving them confidence that God will help them know how to apply the truths they discover.â</p>
+    	<p>Each guide has a special QR code on the back that takes readers to related material on our <a href="http://3ABNBibleAnswers.com" target="_blank">3ABNBibleAnswers.com</a> website, or to a five-minute video on each topic. In addition, they take us to programs on the 3ABN+ app and website, as well as free offers like magazines and books that cover the subject more in depth. </p>
+    	<p>The first set of 14 Bible Study Guides are now available for a suggested donation of just $7 postpaid in the U.S., and now you can order 10 entire sets for just $25 postpaid in the U.S., as well! Individual lessons can be <a href="https://3abnbibleanswers.com/bible-study/" target="_blank">downloaded for free here</a>â just click on the âattachmentsâ link. For bulk pricing, please call 3ABN at 618-627-4651 or visit <a href="https://3ABNStore.com" target="_blank">3ABNStore.com</a>.</p>
+    	<p>Thank you for partnering with 3ABN in evangelism. Because of you, many who are broken, alone, lost, and hurting will discover hope, healing, and transformation through Godâs Word and the power of His Holy Spirit.</p>
+
+    </>
+  )
+  },
+    
+  {
+  eventId: "2023SOD", 
+  beginDate: "09/21/2023", endDate: "10/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "09/21/2023", expirationDate: "12/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-09-22-3ABN-SOD.jpg",
+  event: (
+    <>
+    <h1>3ABN School of Discipleship Intensive</h1>
+    <p>Our first 3ABN School of Discipleship Intensive, âCultivating Minds for Christ,â will run from October 6â14 on our campus in Southern Illinois, addressing different elements of personal, public, and digital evangelism.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    
+    <p>Our instructors will be Pastor James Rafferty, Ryan Day, RisÃ« Rafferty, and Daniel Perrin. Theyâll teach courses on The Essentials of Evangelism; How to Study the Bible; Apologetics; Sanctuary Doctrine; Church History, Mission, and Religious Context; Healthy, Happy, Holy; and The Great Controversy. In addition to these courses, all our instructors are committed to making time for extra small-group and individual discipleship sessions outside class hours, too!</p>
+    <p>Christâs investment in human beings turned the world upside down, and our great hope is that the Holy Spirit will empower us to disciple as Christ did.</p>
+    <p>For more information on 3ABNâs School of Discipleship visit <a href="https://3abnsod.com/" target="_blank">3ABNsod.com</a>.</p>
+    
+    </>
+  )
+  },
+      
+  {
+  eventId: "ASI-2023", 
+  beginDate: "07/23/2023", endDate: "08/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "07/23/2023", expirationDate: "09/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-07-24-ASI-2023-News.jpg",
+  event: (
+    <>
+    <h1>3ABN Broadcasts Live from ASIâs International Convention</h1>
+    <p>3ABN will be broadcasting live from Kansas City, Missouri, as we bring you exciting coverage of the Adventist-laymenâs Services & Industries (ASI) International Convention from August 2â5.</p>
+    <p>This membership-based organization of Seventh-day Adventist is made up of laypeople who are enthusiastic about actively participating in the churchâs worldwide mission: to spread the gospel of Jesus Christ to the world. Members range from business owners and individual professionals to supporting ministries, like 3ABN, and their motto is, Sharing Christ in the Marketplace.</p>
+    <p>This yearâs theme is âRevived to Witness. United. Transformed. Sent.â International evangelist, Pastor Mark Finley will address the audience on opening night, and Dwain Esmond, Dr. Lyndi Schwartz, Charissa Torossian, and Dr. Dosung Kim will be speaking throughout the week and weekend. 3ABN will also carry live broadcasts of ASIâs morning meetings (see 3ABNâs Broadcast Schedule for details).</p>
+    <p>If youâve never tuned in for ASI before, we hope you will this year. The enthusiasm and dedication of ASI members is inspiring!</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>3ABNâs ASI Broadcast Schedule</b></dd>
+         <dd><br /></dd>
+         <dd><b>Wednesday, August 2</b></dd>
+         <dd>7:00 p.m. - Mark Finley - âRevived by His Spiritâ</dd>
+         <dd><br /></dd>
+         <dd><b>Thursday, August 3</b></dd>
+         <dd>9:00 a.m. - David Fam - âMission Revivalâ</dd>
+         <dd>7:00 p.m. - Members in Action</dd>
+         <dd><br /></dd>
+         <dd><b>Friday, August 4</b></dd>
+         <dd>9:00 a.m. - Antoinette Fournier - âNot Qualifiedâ</dd>
+         <dd>7:00 p.m. - Dwain Esmond - âIâm With Himâ </dd>
+         <dd><br /></dd>
+         <dd><b>Saturday, August 5</b></dd>
+         <dd>9:00 a.m. - Lyndi Schwartz - Sabbath School Lesson</dd>
+         <dd>10:45 a.m. - Charissa Torossian - âDevoted for Lifeâ</dd>
+         <dd>7:00 p.m. - Dr. Dosung Kim - âLet My People Goâ</dd>
+         <dd><br /></dd>
+         <dd><i>All Times Central</i></dd>
+         <dd><br /></dd>
+         
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "2023HomeComing", 
+  beginDate: "09/21/2023", endDate: "10/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "09/21/2023", expirationDate: "12/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-09-22-3ABN-Fall-CM-2023.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-PRISON">3ABN Homecoming Fall Camp Meeting</h1>
+    <p>Our 3ABN Homecoming camp meeting will be held on our campus September 28 through 30 with the theme of âYou Shall Receive Powerâ (Acts 1:8). Each of us needs the power of a new beginning, the power of prayer, and the power to overcome sin. We all need power to forgive, to endure trials, and to receive the Latter Rain. These are just a few of the topics youâll hear, and weâre really hoping to see you in person!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    
+    <p>Weâll hear David Shin, John Lomacang, James Rafferty, Danny Shelton, Jill Morikone, and many of your favorite 3ABN speakers on how God gives us power to walk in the footsteps of Jesus.</p>
+    <p>Weâll have free RV and camping sites, delicious free meals, programs for children of all ages, and tours of our studios. Just visit <a href="https://3abncampmeeting.org/" target="_blank">3ABNCampMeeting.tv</a> for more information, and to reserve your free RV or campsite! And if you canât be with us this time, please join us by television, radio, or the Internet!</p>
+    
+    </>
+  )
+  },
+  
+  {
+  eventId: "Rally2023TX", 
+  beginDate: "06/20/2023", endDate: "07/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "06/20/2023", expirationDate: "07/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-06-21-Crowley-TX-Rally-News.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Crowley, TX</h1>
+    <p>Weâre excited for the chance to meet you in person at a special 3ABN Rally on Saturday, July 22, in Crowley, TX! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners!</p>
+    <p><b>Please note that this event will not be broadcast</b>, but we canât wait to meet you in person! So if you live in or nearby the Crowley area, please come and spend some time with us as we praise the Lord together.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, July 22</dd>
+         <dd>9:30 a.m. Sabbath School</dd>
+         <dd>10:45 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>2:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>Crowley Seventh Day Adventist Church </dd>
+         <dd>3200 FM1187, Crowley, TX 76036</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>With Greg & Jill Morikone, Danny & Yvonne Shelton,</dd>
+         <dd>Jason & Francine Bergmann, Ryan & Stephanie Day,</dd>
+         <dd>and Tim Parton</dd>
+         <dd><br /></dd>
+         <dd><b>MORE INFO:</b> Call 817-297-7737 </dd>
+         <dd><b>Or email: <a href="mailto:crowleysdachurch@gmail.com" target="_blank">crowleysdachurch@gmail.com</a></b></dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "Rally2023NY", 
+  beginDate: "06/06/2023", endDate: "07/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "06/06/2023", expirationDate: "07/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-06-07-City-Tabernacle-NY-News.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in New York</h1>
+    <p>Weâre excited for the chance to meet you in person at a special 3ABN Rally on Saturday, July 8, in New York, NY! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners!</p>
+    <p><b>Please note that this event will not be broadcast</b>, but we canât wait to meet you in person! So if you live in or nearby the New York City area, please come and spend some time with us as we praise the Lord together.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, July 8</dd>
+         <dd>9:30 a.m. Sabbath School</dd>
+         <dd>11:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>4:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>City Tabernacle Seventh-day Adventist Church</dd>
+         <dd>562 W 150th St, New York, NYÂ  10031</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>Greg & Jill Morikone, Danny & Yvonne Shelton,</dd>
+         <dd>John & Angela Lomacang, Jason Bradley, Ryan Day,</dd>
+         <dd>and Reggie & Ladye Love Smith</dd>
+         <dd><br /></dd>
+         <dd><b>MORE INFO:</b> Call 917-553-8121</dd>
+         <dd><b>Or email: <a href="mailto:churchoffice@citytabsda.org" target="_blank">Churchoffice@citytabsda.org</a></b></dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+    
+  {
+  eventId: "Rally2023", 
+  beginDate: "02/22/2023", endDate: "04/30/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "02/22/2022", expirationDate: "04/30/2023", expirationFromHistory: "12/05/2023", 
+  thumbnail: "/img/news/2023-02-23-Auburn-Rally-News.jpg",
+  event: (
+    <>
+    <h1>3ABN Rally in Auburn, Washington</h1>
+    <p>Weâre excited for the chance to meet you in person at a special 3ABN Rally on Saturday, April 29, in Auburn, Washington! Itâs a wonderful opportunity to share what the Lord is doing at 3ABNâand in the lives of our 3ABN viewers and listeners!</p>
+    <p><b>Please note that this event will not be broadcast</b>, but we canât wait to meet you in person! So if you live in or nearby the Auburn area, please come and spend some time with us as we praise the Lord together.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd><b>WHAT:</b></dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHEN:</b></dd>
+         <dd>Saturday, April 29</dd>
+         <dd>10:00 a.m. Sabbath School</dd>
+         <dd>11:00 a.m. Divine Worship</dd>
+         <dd>Fellowship Lunch</dd>
+         <dd>2:00 p.m. Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd><b>WHERE:</b></dd>
+         <dd>Auburn City Seventh-day Adventist Church</dd>
+         <dd>402 29th Street SE, Auburn, WA</dd>
+         <dd><br /></dd>
+         <dd><b>WHO:</b></dd>
+         <dd>Jill & Greg Morikone</dd>
+         <dd>Danny & Yvonne Shelton</dd>
+         <dd>Pastor John & Angela Lomacang</dd>
+         <dd>Pastor James & RisÃ« Rafferty</dd>
+         <dd>Tim Parton</dd>
+         <dd><br /></dd>
+         <dd><b>MORE INFO:	Call the church office: 253-833-2560</b></dd>
+         <dd><b>Or email: <a href="mailto:auburncity7@hotmail.com" target="_blank">auburncity7@hotmail.com</a></b></dd>
+         <dd><br /></dd>
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "G19-SATELLITE", 
+  beginDate: "08/06/2023", endDate: "12/30/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/06/2023", expirationDate: "12/30/2024", expirationFromHistory: "12/30/2024", 
+  thumbnail: "/img/news/2023-08-09-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-PRISON">Urgent: Frequency Switch on G19 Satellite</h1>
+    <p>3ABN wants you to know about an upcoming switch in frequencies on our G-19 satellite and that we are doing everything we can to make it easy on you if you watch us via satellite!</p>
+    <p>This frequency switch <u>will only affect those who watch us on the G-19 satellite</u> over North America, and <u>will not affect anyone else</u> who watches over broadcast stations, the Internet, or on any smart phone or device.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    
+    <h4>Who Will Be Affected?</h4>
+    <p>Viewers with newer DVB-S2 capable receivers will simply need to rescan, and find 3ABN on our new frequency. Our new location will show up as 3ABN S2.</p>
+    <p>If you watch with an older receiver such as the Manhattan and other models, you will need a new receiverâand 3ABN will send you one free of charge! Your new receiver will be <u>preprogrammed, so all you do is âplug and play!â</u> We want to make it as easy and painless as possible for you to make the switch.</p>
+    
+    <h4>The Advantages are Amazing!</h4>
+    <p>With the switch to our new frequency, youâll be able to watch 3ABN in High Definition (HD), and enjoy looking ahead to find the programs you donât want to miss with the new Electronic Program Guide (EPG). This frequency change even helps us to stretch the reach of the gospel, since it will decrease our satellite cost!</p>
+    
+    <h4>Questions? Need Help?</h4>
+    <p>Weâre always here to help you, and want to make this switch as easy as possible. So feel free to call us for help at 618- 627-7677, Monday through Thursday during regular business hours (8:00 a.m. to 5:00 p.m. Central Time).</p>
+    <p><a href="/pdfs/news/GEOSATPRO-3500-Update-Instructions.pdf" target="_blank">GEOSATPRO 3500 Update Instructions</a></p>
+    <p><a href="/pdfs/news/GT-Media-V9-Prime-Update-Instructions.pdf" target="_blank">GT MEDIA V9 Prime Update Instructions</a></p>
+    <p><a href="/pdfs/news/GEOSATPRO-1200.pdf" target="_blank">Geosatpro 1200 Update Instructions</a></p>
+    <p><a href="/pdfs/news/Koqit-V5H-H265.pdf" target="_blank">Koqit V5H H.265 Update Instructions</a></p>
+    
+    </>
+  )
+  },
+  
+  {
+  eventId: "3ABN+App", 
+  beginDate: "05/06/2021", endDate: "12/31/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "12/31/2024", expirationFromHistory: "12/31/2024", 
+  thumbnail: "/img/news/3ABN+news.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">The 3ABN+ App is Here!</h1>
+    <p>The big day weâve been waiting for is finally here! Now you can watch 3ABN across many different platforms on our new app called 3ABN+! Just look at all you get from this free app:
+	 <ul>
+		 <li>Watch and listen to<strong>&nbsp;live streams</strong>&nbsp;of all of 3ABNâs TV and radio networks.</li>
+		 <li><strong>No commercial interruptions</strong></li>
+		 <li>Watch<strong>&nbsp;over 2,500 programs on-demand</strong>âwith more being added every week!</li>
+		 <li><strong>Search&nbsp;</strong>by topic, presenter, or title.</li>
+	</ul></p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <h3>Watch Any Way You Like</h3>
+    <p>You can watch 3ABN+ on:
+	    <ul>
+		    <li><a href="https://play.google.com/store/apps/details?id=org.threeabn.threeabnapp" rel="noreferrer noopener" target="_blank">Android</a>&nbsp;or&nbsp;<a href="https://apps.apple.com/us/app/3abn-three-angels-broadcasting/id680258460" rel="noreferrer noopener" target="_blank">iOS</a>&nbsp;smartphones and tablets</li>
+	    	<li><strong>Amazon Fire</strong></li>
+	    	<li><strong>Apple TV</strong></li>
+	    	<li><strong>Roku</strong></li>
+	    	<li><strong>Android TV</strong></li>
+	    	<li><strong>Laptop and desktop</strong>&nbsp;computers (on&nbsp;<a href="https://3abnplus.tv/catalog" rel="noreferrer noopener" target="_blank">3ABNPlus.tv</a>)</li>
+		</ul>
+	    <i><em>In addition, you can&nbsp;</em><strong><em>screen mirror</em></strong><em>&nbsp;your Android or iOS device and watch 3ABN on TV!</em></i></p>
+    
+    <h3>Account or No Account?</h3>
+    <p><strong><em>You donât have to sign up for an account</em></strong>&nbsp;to watch any of our content. Even without an account, you can still enjoy all these features:&nbsp;
+	    <ul>
+		    <li><strong>Save programs</strong>&nbsp;to a Favorites list</li>
+		    <li><strong>Download programs</strong>&nbsp;to watch offline</li>
+		    <li><strong>Download and print PDF</strong>&nbsp;study guides, recipes, kidâs crafts, and more</li>
+	    </ul> 
+	    However,<strong><em>&nbsp;if you do&nbsp;</em></strong><a href="https://3abnplus.tv/catalog" rel="noreferrer noopener" target="_blank"><i>sign up</i></a><strong><em>&nbsp;for a free account,</em></strong>&nbsp;youâll also be able to:&nbsp;<strong>pick up where you left off</strong>&nbsp;on another device and <strong>leave comments&nbsp;</strong>
+	    
+	    If you already have the 3ABN App and your device is set to&nbsp;<strong><em>auto update,</em></strong>&nbsp;it will do so on its own. Otherwise, you will need to&nbsp;<strong>manually update</strong>&nbsp;the app.&nbsp;</p>
+    
+    <h3>Evangelism Made Easy</h3>
+    <p>3ABN+ is a wonderful evangelism tool as well, by allowing you&nbsp;<strong>to share a link to a favorite 3ABN program.&nbsp;</strong>A simple click allows you to&nbsp;<strong>share a link by text, email, or post it on social media</strong>âand the Holy Spirit will do the rest!&nbsp;<br /><br />
+	    Subscribing to 3ABN+ is&nbsp;<em>free!</em>&nbsp;<strong>Just download 3ABN+ to any of the devices listed and start watching today!</strong></p>
+    </>
+  )
+  },
+  
+  {
+  eventId: "Freeview2023", 
+  beginDate: "03/01/2023", endDate: "12/05/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "03/01/2023", expirationDate: "12/05/2024", expirationFromHistory: "12/05/2024", 
+  thumbnail: "/img/news/2023-03-01-Freeview-on-3ABN.jpg",
+  event: (
+    <>
+    <h1>3ABN Now Available on Freeview in the UK</h1>
+    <p>Thereâs always something to be excited about when we work for the Lord, and this time, weâre excited about a new opportunity to share the good news of the gospel in the United Kingdom!</p>
+    <p>For many years, 3ABN was only accessible by satellite to that part of Europe, but beginning in December 2022, programming from eight of our television networks became available throughout the UK, as well as its islands and territories, on their largest TV platform! </p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>  
+      <dt><b><u></u></b></dt>
+         <dd>Freeview offers all the local broadcast TV channels along with many live stream channelsâincluding 3ABNâfor free to 48 million people in England, Wales, Scotland, and Northern Ireland. In fact, eight of 3ABNâs networks can now be watched on channel 283! </dd>
+         <dd>Sabbath School, Divine Worship, and Afternoon Music and Testimonies</dd>
+         <dd><br /></dd>
+         <dd>In January of this year, nearly 75,000 viewers watched one of our 3ABN networksâand this number is sure to grow as more and more viewers discover our Christ-centered family and lifestyle programming, since they are sure to tell their friends and loved ones.</dd>
+         <dd><br /></dd>
+         <dd>We want to thank our supporters who have made this possible through their faithful prayers and financial support, and we ask you to please pray for those who will soon discover the truths that can change their lives for eternity!</dd>
+         <dd><br /></dd>
+         <dd>Networks Available on Freeview Channel 283 in the UK</dd>
+         <dd><br /></dd>
+         <dd><b>3ABN</b></dd>
+         <dd><b>3ABN Dare to Dream</b></dd>
+         <dd><b>3ABN Kids</b></dd>
+         <dd><b>3ABN Proclaim!</b></dd>
+         <dd><b>3ABN Praise Him </b></dd>
+         <dd><b>3ABN Latino (Spanish)</b></dd>
+         <dd><b>3ABN Russia (Russian)</b></dd>
+         <dd><b>3ABN FranÃ§ais (French)</b></dd>
+         
+    </dl>
+
+    </>
+  )
+  },
+    
+  {
+  eventId: "JimGilley2023", 
+  beginDate: "01/01/2023", endDate: "02/28/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/20/2022", expirationDate: "02/28/2023", expirationFromHistory: "02/28/2023", 
+  thumbnail: "/img/news/2023-01-04-Jim-Gilley-Passing-News-post.jpg",
+  event: (
+    <>
+    <h1>Passing of Elder Jim Gilley</h1>
+    <p>It is with great sadness that we announce the passing of Pastor Jim Gilley, who served as president of Three Angels Broadcasting Network from 2007 through 2015. Pastor Gilley was a beloved husband, father, and leader in the Seventh-day Adventist Church.</p>
+    <p>As we grieve his loss, we take comfort in the words of 1 Thessalonians 4:14, which reminds us that we do not âsorrow as others who have no hope. For if we believe that Jesus died and rose again, even so God will bring with Him those who sleep in Jesus.â Jimâs faith in Jesus Christ gave him the blessed hope of the resurrection. </p>
+    <p>Please join us in praying for Pastor Gilleyâs wife, Camille, and all of his family. May Godâs grace and peace be with them during this difficult time and may His promise in Isaiah 25:8 to âswallow up death forever,â and âwipe away tearsâ comfort their hearts.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>   Memorial Service:
+      <dt><b><u>February 4, 3:00pm</u></b></dt>
+         <dd><b>Dallas First SDA Church</b></dd>
+         <dd>4009 N US 75-Central Expy 1000</dd>
+         <dd>Dallas, TX 75204</dd>
+         <dd><br /></dd>
+         <dd>Links for the live stream:</dd>
+         <dd><a href="https://youtube.com/dfcuptown" target="_blank">youtube.com/dfcuptown</a></dd>
+         <dd><a href="https://facebook.com/dfcuptown" target="_blank">facebook.com/dfcuptown</a></dd>
+        <br />
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "NewYearDay2023", 
+  beginDate: "12/20/2022", endDate: "02/28/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/20/2022", expirationDate: "02/28/2023", expirationFromHistory: "02/28/2023", 
+  thumbnail: "/img/news/2023-New-Years-News-Bug.jpg",
+  event: (
+    <>
+    <h1>New Yearâs Day Programs</h1>
+    <p>We want to help you begin the new year with a solid biblical foundation. Join us New Yearâs Day for a special selection of spiritually uplifting programs to enrich your walk with the Lord.</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl>   New Yearâs Day 2023 Schedule - All Times Central (UTC-6)
+      <dt><b><u>Sunday, January 1</u></b></dt>
+         <dd><b>5:00 a.m. - 6:00 a.m.</b> Welcome/Music Hour - Danny Shelton</dd>
+         <dd><b>6:00 a.m. - 7:00 a.m.</b> âThe Personality of Our Heavenly Fatherâ - David Shin</dd>
+         <dd><b>7:00 a.m. - 8:00 a.m.</b> âThe Power of Godâ - Ryan Day</dd>
+         <dd><b>8:00 a.m. - 9:00 a.m.</b> Music Hour 2 - Danny Shelton</dd>
+         <dd><b>9:00 a.m. - 10:00 a.m.</b> âThe Paradise of God â - James Rafferty</dd>
+         <dd><b>10:00 a.m. - 10:30 a.m.</b> Lineage - Adam Ramdin</dd>
+         <dd><b>10:30 a.m. - 11:30 a.m.</b> GYC (See GYC Schedule)</dd>
+         <dd><b>11:30 a.m. - 12:00 a.m.</b> Sanctuary, Salvation and Our Savior - David Shin</dd>
+         <dd><b>12:00 a.m. - 1:00 p.m.</b> âGodâs Plan of Salvationâ - Jay Gallimore</dd>
+         <dd><b>1:00 p.m. - 2:00 p.m.</b> Music Hour 3 - Danny Shelton</dd>
+         <dd><b>2:00 p.m. - 3:00 p.m.</b> âGod, the Promise Maker & Keeperâ - Mark Finley</dd>
+         <dd><b>3:00 p.m. - 4:00 p.m.</b> âGod, Our Provider & Protectorâ - CA Murray</dd>
+         <dd><b>4:00 p.m. - 5:00 p.m.</b> Music Hour 4 - Danny Shelton</dd>
+         <dd><b>5:00 p.m.- 6:00 p.m.</b> âGod, Our Peaceâ - Kenny Shelton</dd>
+         <dd><b>6:00 p.m. - 7:00 p.m.</b> âGodâs Sure Word of Prophecyâ - Chris Hudson</dd>
+         <dd><b>7:00 p.m. - 8:00 p.m.</b> Sabbath School Panel</dd>
+         <dd><b>8:00 p.m. - 9:30 p.m.</b> âJust in the Nick of Timeâ - Danny Shelton</dd>
+         <dd><b>9:30 p.m. - 10:00 p.m.</b> Lineage - Adam Ramdin</dd>
+         <dd><b>10:00 p.m. - 11:00 p.m.</b> âGodâs Passion for Righteousnessâ - Jill Morikone</dd>
+         <dd><b>11:00 p.m. - 12:00 a.m.</b> âGod, the Perfector of Our Faithâ - John Lomacang</dd>
+        <br />
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "GYC2022News", 
+  beginDate: "12/20/2022", endDate: "02/28/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/20/2022", expirationDate: "02/28/2023", expirationFromHistory: "02/28/2023",
+  thumbnail: "/img/news/GYC-2022-News-Graphic.jpg",
+  event: (
+    <>
+    <h1>GYC Convention 2022</h1>
+    <p>Donât miss the GYC Convention, live from Phoenix, Arizona. Youâll be inspired by these young people who are determined to spread the gospel of Jesus Christ! Watch on 3ABN.tv. See broadcast times below:</p>
+       </>
+  ),
+  eventDetails: (
+    <>
+    <dl> All Times Central (UTC-6)
+        <dt><b><u>Wednesday, December 28</u></b></dt>
+         <dd><b>7:00 p.m. - Keynote Address  -Andrew Park</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Thursday, December 29</u></b></dt>
+         <dd><b>9:30 a.m. - Morning Devotional - Douglas Naâa</b></dd>
+         <dd><b>1:00 p.m. - Something is Happening - </b></dd>
+         <dd><b>7:00 p.m. - Evening Plenary - Steve Conway</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, December 30</u></b></dt>
+         <dd><b>9:30 a.m. - Morning Devotional - Douglas Naâa</b></dd>
+         <dd><b>7:00 p.m. - Evening Plenary - Steve Conway</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Saturday, December 31</u></b></dt>
+         <dd><b>10:00 a.m. - Morning Devotional - Douglas Naâa</b></dd>
+         <dd><b>11:00 a.m. - Sabbath School</b></dd>
+         <dd><b>12:30 p.m. - Divine Service - Sam Walters</b></dd>
+         <dd><b>7:00 p.m. - Evening Plenary - Steve Conway</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Sunday, January 1</u></b></dt>
+         <dd><b>10:30 a.m. - Final Charge - Doug Batchelor</b></dd>
+
+    </dl>
+
+    </>
+  )
+  },
+  
+  {
+  eventId: "HolidayProgramming-2022", 
+  beginDate: "12/04/2022", endDate: "01/28/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "12/04/2022", expirationDate: "01/28/2023", expirationFromHistory: "01/28/2023", 
+  thumbnail: "/img/news/2022-12-05-Christmas-Special-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Special 3ABN Holiday Programming</h1>
+    <p>Weâre excited to announce an entire month of special 3ABN Today programming as we focus our sights on the greatest gift of allâJesus Christ! Celebrating His birth will fill your heart with love as you join us in lifting our voices in praise!</p>
+    </>
+  ),
+  
+  eventDetails: (
+    <>
+	<dl>
+		
+        <dt><b><u>Thursday, December 1</u></b></dt>
+         <dd><b>8:00 p.m. - 3ABN Christmas Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton, Reggie & Ladye Love Smith, Jared & Hillary Mitchell, Kris Wilkinson, Emily Rodgers, and David Davidson</dd>
+         
+         <dd><b>9:00 p.m. Dare to Dream Celebrates Jesus</b></dd>
+         <dd>With Danny & Yvonne Shelton, Mark Udo Williams, Mark Payne, ChÃ© & Renelle Chin King, Celestine Dickens, Farrah Barry, and John Lomacang</dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, December 2</u></b></dt>
+         <dd><b>3:00 p.m. - Your Favorite Christmas Hymns</b></dd>
+         <dd>With Tim Parton and Ryan Day</dd>
+         
+         <dd><b>3:30 p.m. - Your Favorites by Request Christmas</b></dd>
+         <dd>With Tim Parton</dd>
+         
+         <dd><b>8:00 p.m. - 3ABN Today Family Worship â âExperiencing the Joy of the Lordâ</b></dd>
+         <dd>With J. D. and Shelley Quinn, Daniel & Valerie Morikone, Darrell & Sasha Thomas</dd>
+                  
+        <br />
+        
+        <dt><b><u>Saturday, December 3</u></b></dt>
+         <dd><b>8:00 a.m. - Child Impact Ministry To The Most Vulnerable</b></dd>
+         <dd>With Jill Morikone, Dr. Tom Evans, and Jason Churchwell</dd>
+         
+        <br />
+        
+        <dt><b><u>Sunday, December 4</u></b></dt>
+         <dd><b>8:00 a.m. - A Praise Him Christmas</b></dd>
+         <dd>With Jonathan and Benji Burchfield</dd>
+
+         <dd><b>8:30 a.m. - A Praise Him Christmas</b></dd>
+         <dd>With Brian, Jonathan, Bailee, Jonathan, Jayda, and Josie Lester</dd>
+         
+        <br />
+        
+        <dt><b><u>Monday, December 5</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Bible Q & A â âWhy Am I Lacking Perfect Peace?â</b></dd>
+         <dd>With Jason Bradley, John Lomacang, John Dinzey, and Daniel Perrin</dd>
+         
+        <br />
+        
+        <dt><b><u>Tuesday, December 6</u></b></dt>
+         <dd><b>8:00 a.m - 3ABN Planned Giving and Trust Services</b></dd>
+         <dd>With John Lomacang, Jeff Doerr, and Jason Bergmann</dd>
+         
+        <br />
+        
+        <dt><b><u>Wednesday, December 7</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Cooking â âHoliday Favoritesâ</b></dd>
+         <dd>With Angela Lomacang, Heidi Tompkins, and Ivan Raj</dd>
+         
+        <br />
+        
+        <dt><b><u>Thursday, December 8</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Christmas Music Special â âJoyful, Joyful Christmas Time Is Hereâ</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton, John Lomacang, Ben Lingle, Allison Speer, and Reggie & Ladye Love Smith</dd>
+         <dd><b>8:00 p.m - Behind the Scenes at 3ABN â âA Christmas Behind the Scenesâ</b></dd>
+         <dd>With Greg & Jill Morikone, Danny & Yvonne Shelton, and your 3ABN Family</dd>
+         
+         <dt><b><u>Friday, December 9</u></b></dt>
+         <dd><b>8:00 a.m. - A Praise Him Christmas</b></dd>
+         <dd>With Mark & Wanda Burchfield, Layke Jones, and Ginger Pitchers</dd>
+         <dd><b>8:00 p.m. - 3ABN Today Family Worship â âChristmas: a New Lookâ</b></dd>
+         <dd>With Danny & Yvonne Shelton, and Jason Bradley</dd>
+         
+        <br />
+        
+        <dt><b><u>Saturday, December 10</u></b></dt>
+         <dd><b>8:00 a.m. - Christmas Behind Bars</b></dd>
+         <dd>With Greg & Jill Morikone, Lemuel Vega, Jason Bradley, and Luis Jean</dd>
+         
+        <br />
+        
+        <dt><b><u>Sunday, December 11</u></b></dt>
+         <dd><b>8:00 a.m - 3ABN Christmas Music Special â âA December Evening with Your 3ABN Familyâ</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Tim Parton, Gene 	McDonald, Ryan Day, John Lomacang, and Celestine Dickens</dd>
+         
+        <br />
+        
+        <dt><b><u>Monday, December 12</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Bible Q & A â âWhy Do Prayers of Many Christians Go Unanswered?â</b></dd>
+         <dd>With Ricky Carter, Shelley Quinn, John Dinzey, and Daniel Perrin</dd>
+         
+        <br />
+        
+        <dt><b><u>Tuesday, December 13</u></b></dt>
+         <dd><b>9:00 a.m. - 3ABN Christmas Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Allison Speer, Ryan Day, and Tim Parton</dd>
+         
+        <br />
+        
+        <dt><b><u>Wednesday, December 14</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Cooking â âLomacang Family Christmas Dinnerâ</b></dd>
+         <dd>With John and Angela Lomacang</dd>
+         
+        <br />
+        
+        <dt><b><u>Thursday, December 15</u></b></dt>
+         <dd><b>8:00 a.m. - Dare to Dream Celebrates Jesus</b></dd>
+         <dd>With Danny & Yvonne Shelton, Mark Udo Williams, Mark Payne, ChÃ© and Renelle Chin King, Celestine Dickens, Farrah Barry, and John Lomacang</dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, December 16</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Christmas Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Tim Parton, Gene McDonald, Ryan Day, John Lomacang, and Celestine Dickens</dd>
+         <dd><b>8:00 p.m. - 3ABN Today Family Worship â âFaith in Actionâ</b></dd>
+         <dd>With Jason Bradley, Darrell & Sasha Thomas, and Ian & Angela Vandervalk</dd>
+         
+        <br />
+        
+        <dt><b><u>Saturday, December 17</u></b></dt>
+         <dd><b>8:00 a.m. - Return to Paradise Valley</b></dd>
+         <dd>With Greg & Jill Morikone</dd>
+         
+        <br />
+        
+        <dt><b><u>Sunday, December 18</u></b></dt>
+         <dd><b>8:00 a.m. - Dare to Dream, âAn Evening withâ</b></dd>
+         <dd>With Yvonne Shelton, Paul Heflin, and Mark Payne</dd>
+         
+        <br />
+        
+        <dt><b><u>Monday, December 19</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Bible Q & A</b></dd>
+         <dd>With Greg Morikone, John Dinzey, Ryan Day, and Daniel Perrin</dd>
+         
+        <br />
+        
+        <dt><b><u>Tuesday, December 20</u></b></dt>
+         <dd><b>3:00 p.m. - 3ABN Christmas Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton, Reggie & Ladye Love Smith, Jared & Hillary Mitchell, Kris Wilkinson, Emily Rodgers, and David Davidson</dd>
+         
+        <br />
+        
+        <dt><b><u>Wednesday, December 21</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Cooking â âChristmas With the Menasâ</b></dd>
+         <dd>With Yvonne Shelton and Michelle Mena</dd>
+         
+        <br />
+        
+        <dt><b><u>Thursday, December 22</u></b></dt>
+         <dd><b>8:00 a.m. - Kids Christmas Praise â âGiving Your Bestâ</b></dd>
+         <dd>With Aunt Francine, Abigail, Amy, Ashton, Iannah, Jon, Jada, Jason, Kamuela, K-Voices 	(John, Kenley, and Nia), Michael, Raphael, and Sam</dd>
+         <dd><b>8:30 a.m. - Kids Christmas Praise â âOur Prayersâ</b></dd>
+         <dd>With Aunt Francine, Abigail, Amy, Ashton, Jon, Jada, Jason, K-Voices (John, Kenley, 	and Nia), Logan, Michael, and Sam</dd>
+         <dd><b>8:00 p.m. - Christmas Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Tim Parton, Gene 	McDonald, Ryan Day, John Lomacang, and Celestine Dickens</dd>
+         <dd><b>9:00 p.m. - 3ABN Christmas Special 2022</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton, John Lomacang, Reggie Smith, Ladye Love Smith, Ryan Day, Gene McDonald, and Celestine Barry-Dickens.</dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, December 23</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, John Stoddart, Tim Parton, Denise Barclay, Sherice Tomlin, and Ryan Day</dd>
+         <dd><b>8:00 p.m. -  3ABN Christmas Special 2022</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton, John Lomacang, Reggie Smith, Ladye Love Smith, Ryan Day, Gene McDonald, and Celestine Barry-Dickens.</dd>
+         
+        <br />
+        
+        <dt><b><u>Saturday, December 24</u></b></dt>
+         <dd><b>8:00 a.m. - Dare to Dream Christmas Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Kim Fleming, Celestine Dickens, Farrah Barry, Ryan Day, Mark Payne, Paul Heflin</dd>
+         
+        <br />
+        
+        <dt><b><u>Sunday, December 25</u></b></dt>
+         <dd><b>6:00 a.m. - Special Feature â âJoy to the Worldâ</b></dd>
+         <dd><b>7:00 a.m. â Praise Him Today</b></dd>
+         <dd>With Tim Parton and Reggie & Ladye Love Smith</dd>
+         <dd><b>7:30 a.m. â Praise Him Today</b></dd>
+         <dd>With Tim Parton and Ryan Day</dd>
+         <dd><b>8:00 a.m. â Praise Him Music Special</b></dd>
+         <dd>With The Lesters</dd>
+         <dd><b>8:30 a.m. â Praise Him Music Special</b></dd>
+         <dd>With The Burchfield Brothers</dd>
+         <dd><b>9:00 a.m. â 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton,  Reggie & Ladye Love Smith, Candy Carson, Kris Wilkinson, Emily Rodgers, and David Davidson</dd>
+         <dd><b>10:00 a.m. â Kids Christmas Praise - âA Heart for Jesusâ</b></dd>
+         <dd><b>10:30 a.m. â Kids Christmas Praise â âGiving Your Bestâ</b></dd>
+         <dd><b>11:00 a.m. â 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Jared & Hillary Mitchell, Kris Wilkinson, Emily Rodgers, and David Davidson</dd>
+         <dd><b>12:00 p.m. â Dare to Dream Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Mark Williams, Mark Payne, Che & Renelle Chin King, Celestine Dickens, and Farrah Barry</dd>
+         <dd><b>1:00 p.m. â 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Tim Parton, Gene McDonald, Ryan Day, John Lomacang, and Celestine Dickens</dd>
+         <dd><b>2:00 p.m. â Dare to Dream, âAn Evening Withâ</b></dd>
+         <dd>With Yvonne Shelton, Paul Heflin, and Mark Payne</dd>
+         <dd><b>3:00 p.m. - Evangelism with 3ABN</b></dd>
+         <dd>With Greg & Jill Morikone, Danny & Yvonne Shelton, and Jason & Francine Bergmann</dd>
+         <dd><b>4:00 p.m. â 3ABN Christmas Music Special â âEndless Highwayâ </b></dd>
+         <dd><b>5:00 p.m. â Return to Paradise Valley</b></dd>
+         <dd>With Greg & Jill Morikone</dd>
+         <dd><b>6:00 p.m. â Dare to Dream Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Kim Fleming, Celestine Dickens, Farrah Barry, Ryan 	Day, Mark Payne, and Paul Heflin</dd>
+         <dd><b>7:00 p.m. â 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Reggie & Ladye Love Smith, Tim Parton, Gene McDonald, Ryan Day, John Lomacang, and Celestine Dickens</dd>
+         <dd><b>8:00 p.m. â 3ABN Today Family Worship â âChristmas: A New Lookâ</b></dd>
+         <dd>With Danny & Yvonne Shelton and Jason Bradley</dd>
+         <dd><b>9:00 p.m. â Praise Him Music Special</b></dd>
+         <dd>With Tim Parton, Sandra Entermann, Drew Grounds, and Cheryl Harre</dd>
+         <dd><b>10:00 p.m. â 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Tim Parton, John Lomacang, and Celestine Dickens</dd>
+         <dd><b>11:00 p.m. â 3ABN Today Family Worship â âExperiencing the Joy of the Lordâ</b></dd>
+         <dd>With JD & Shelley Quinn, Daniel & Valerie Morikone, and Darrell & Sasha Thomas</dd>
+         
+       <br />
+        
+       <dt><b><u>Monday, December 26</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Bible Q & A</b></dd>
+         <dd>With Jill Morikone, Yvonne Shelton, Ryan Day, and Daniel Perrin</dd>
+         
+       <br />
+        
+       <dt><b><u>Tuesday, December 27</u></b></dt>
+         <dd><b>3:00 p.m. - Evangelism with 3ABN</b></dd>
+         <dd>With Greg & Jill Morikone, Danny & Yvonne Shelton, and Jason & Francine Bergmann</dd>
+         
+       <br />
+       
+       <dt><b><u>Wednesday, December 28</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Today Cooking â âRecipes for Special Occasionsâ</b></dd>
+         <dd>With Idalia Dinzey and Stephanie Salazar</dd>
+         
+       <br />
+       
+       <dt><b><u>Thursday, December 29</u></b></dt>
+         <dd><b>8:00 a.m. - 3ABN Music Special</b></dd>
+         <dd>With Danny & Yvonne Shelton, Gene McDonald, Tim Parton, Reggie & Ladye Love Smith, John Lomacang, Ryan Day, and Celestine Dickens</dd>
+         
+       <br />
+       
+       <dt><b><u>Friday, December 30</u></b></dt>
+         <dd><b>8:00 a.m. - Kids Christmas Praise â âHis Peaceâ</b></dd>
+         <dd>With Aunt Francine</dd>
+         <dd><b>8:30 a.m. - Kids Christmas Praise â âA Heart for Jesus</b></dd>
+         <dd>With Aunt Francine, Amy, John, Joshua, Kenley, Joshua, Logan, Michael, Nia, and Sam</dd>
+         
+       <br />
+       
+       <dt><b><u>Saturday, December 31</u></b></dt>
+         <dd><b>TBA</b></dd>
+         
+       <br />
+        
+    </dl>
+    </>
+  )
+  
+  },
+  
+  {
+  eventId: "BibleAnswers-2022", 
+  beginDate: "11/29/2022", endDate: "12/31/2023", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "11/29/2021", expirationDate: "12/31/2023", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/2022-11-30-BibleAnswers-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App"><a href="https://3abnbibleanswers.com" target="_blank">NEW 3ABN Bible Answers Website</a></h1>
+    <p>Dear 3ABN Family,</p>
+    <p>Have you ever come across a Bible question you struggled to answer? Well, if you have, then youâre not alone! Every day, our Pastoral staff answers phone calls and letters from viewers and listeners who have <strong>questions about the Bible</strong>, or something theyâve heard on 3ABN. Others are searching right now on YouTube or the Internet for <strogn>answers to their troubling questions</strogn>âand who knows what theyâll find, since <strong>the devil is trying his best to keep them away from the truth!</strong></p>
+    </>
+  ),
+  
+  eventDetails: (
+    <>
+    <p>But now thereâs a brand-new website with answers you can trustâand feel good about recommending! Itâs called <a href="https://3abnbibleanswers.com" target="_blank">3ABNBibleAnswers.com</a> and it addresses some of the most commonly asked questions we hear. Right now, <strong>weâve posted over 100 questions and answers</strong>âand weâll keep adding more as we go!</p>
+    <p>Weâre all about evangelism, and <a href="https://3abnbibleanswers.com" target="_blank">3ABNBibleAnswers.com</a> is <strong>a great evangelistic tool!</strong> So tell your <strong>family</strong>. Tell your <strong>friends</strong>. And <strong>share it on social media!</strong></p>
+    </>
+  )
+  
+  },
+  
+  {
+  eventId: "Thanksgiving-2022", 
+  beginDate: "11/01/2022", endDate: "12/31/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "11/01/2021", expirationDate: "12/31/2022", expirationFromHistory: "12/31/2022", 
+  thumbnail: "/img/news/2022-11-21-Thanksgiving-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Itâs a Special Day of Thanksgiving!</h1>
+    <p>A thankful heart opens our eyes to the blessings that continually surround us, so we invite you to spend some time with your 3ABN Family on this Thanksgiving holiday. Weâll praise God for the many blessings He pours out from Heaven, and recall the many ways He has shown us His love!</p>
+    <p>Donât miss our special 3ABN Today Live, Thanksgiving Day, November 24 at 8:00 a.m. and 8:00 p.m. Central.</p>
+    </>
+  ),
+  
+  eventDetails: (
+    <>
+	<dl>
+        <dt><b><u>See Thanksgiving Day Schedule here:</u></b></dt>
+         <dd>4:00am to 7:00am - Mending Broken People</dd>
+         <dd>7:00am to 8:00am - Year End Giving</dd>
+         <dd><b>8:00am to 10:15am - Thanksgiving Special</b></dd>
+         <dd>10:15am to 10:30am - Pause to Pray</dd>
+         <dd>10:30am to 11:00am - Praise Him Music Special</dd>
+         <dd>11:00am to 2:00pm - Anniversary Special</dd>
+         <dd>2:00pm to 4:30pm - Thanksgiving Special</dd>
+         <dd>4:30pm to 5:00pm - Giving Thanks and Praise to God </dd>
+         <dd>5:00pm to 8:00pm - Anniversary Special</dd>
+         <dd><b>8:00pm to 10:15pm - Thanksgiving Special</b></dd>
+         <dd>10:15pm to 10:30pm - Pause to Pray</dd>
+         <dd>10:30pm to 11:00pm - Praise Him Music Special</dd>
+         <dd><b>11:00pm to 1:15am  - Thanksgiving Special</b></dd>         
+        <br />
+
+    </dl>
+    </>
+  )
+  
+  },
+    
+  {
+  eventId: "It-Is-Coming", 
+  beginDate: "08/01/2022", endDate: "10/31/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2022", expirationDate: "12/31/2022", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/Its-Coming-John-Lomacang-news.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Evangelistic Series âItâs Comingâ with John Lomacang</h1>
+    <p>If youâre in the Pleasant Hill, California, area, then please join us for a new series with Pastor John Lomacang! This series will be broadcast live on 3ABN, so please calculate broadcast times for your area.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+     <p>
+	    <ul>
+	    	<li><strong>What:</strong> Itâs Coming Evangelistic Series</li>
+	    	<li><strong>Who:</strong> Pastor John Lomacang</li>
+	    	<li><strong>When: </strong> Every day except Thursdays from<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;October 14â29 at 7:00 p.m. (Pacific Time)<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saturday, October 22 at 11:00 a.m. (Pacific Time) </li>
+	    	<li><strong>Where:</strong> Pleasant Hill Seventh-day Adventist Church<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;800 Grayson Rd, Pleasant Hill, CA 94523</li>
+	    	<li><strong>More Information: </strong> Call (925) 934-5803<br /> 
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or email <a href="mailto:mitchewilliams@live.com" target="_blank"><b>mitchewilliams@live.com</b></a></li>
+	    	<li><strong>Website:</strong> <a href="https://www.its-coming.com/" target="_blank">its-coming.com</a></li>
+		</ul>
+	 </p>
+    </>
+  )
+  
+    },
+  
+  {
+  eventId: "End-Time-Events", 
+  beginDate: "08/01/2022", endDate: "10/31/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2022", expirationDate: "12/31/2022", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/End-Time-Events-KennyShelton-news.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Evangelistic Series âEnd Time Eventsâ with Kenny Shelton</h1>
+    <p>If youâre in the Grovetown, Georgia, area, please join us for a new series with Pastor Kenny Shelton!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+     <p>
+	    <ul>
+	    	<li><strong>What:</strong> End Time Events Evangelistic Series</li>
+	    	<li><strong>Who:</strong> Pastor Kenny and Chris Shelton</li>
+	    	<li><strong>When: </strong> October 16â29, 7:00pm, Eastern each evening<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(except Mondays and Thursdays)</li>
+	    	<li><strong>Where:</strong> Grovetown Korean-English Seventh-day<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adventist Church<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4705 Wrightsboro Road, Grovetown, GA 30813</li>
+	    	<li><strong>More Information: </strong> Call George Foster at 706-401-9273<br /> 
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or email <a href="mailto:mustardseedj@nu-z.net" target="_blank"><b>mustardseedj@nu-z.net</b></a></li>
+		</ul>
+	 </p>
+    </>
+  )
+  
+    },
+  
+  {
+  eventId: "Amazing-Revelations", 
+  beginDate: "08/01/2022", endDate: "10/31/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2022", expirationDate: "12/31/2022", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/AmazingRevelations-news.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">Evangelistic Series âAmazing Revelations in Prophecyâ with Ryan Day</h1>
+    <p>If youâre in the Tacoma, Washington, area, donât miss this new series with Ryan Day!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+     <p>
+	    <ul>
+	    	<li><strong>What:</strong> Amazing Revelations in Prophecy Evangelistic Series</li>
+	    	<li><strong>Who:</strong> Pastor Ryan Day</li>
+	    	<li><strong>When: </strong> Opening Night Friday, October 28 at 7:00 p.m. Pacific</li>
+	    	<li><strong>Where:</strong> First Tacoma Seventh-day Adventist Church<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1301 South Baltimore Street<br />
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tacoma, Washington 98465</li>
+	    	<li><strong>More Information: </strong> Call (253) 752-6694 <br /> 
+	    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or email <a href="mailto:office@tacomacentralchurch.org" target="_blank"><b>office@tacomacentralchurch.org</b></a></li>
+		</ul>
+	 </p>
+    </>
+  )
+  
+    },
+  
+  {
+  eventId: "ASI-2022", 
+  beginDate: "05/06/2021", endDate: "08/29/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "08/29/2022", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/ASI-2022-s.jpg",
+  event: (
+    <>
+    <h1 id="3ABN+App">ASI Annual Convention 2022</h1>
+    <p>This summer, 3ABN will once again broadcast live coverage of the Adventist-laymenâs Services and Industries Convention that will be held from <b>August 3 - 6</b> in Orlando, Florida.</p>
+    </>
+  ),
+  
+  eventDetails: (
+    <>
+	<dl>
+		
+        <dt><b><u>Wednesday, August 3</u></b></dt>
+         <dd><b>6:00 p.m. - John Bradshaw</b></dd>
+         <dd>Evening Keynote</dd>
+         
+        <br />
+        
+        <dt><b><u>Thursday, August 4</u></b></dt>
+         <dd><b>8:00 a.m. - James Hartley</b></dd>
+         <dd>Morning Keynote</dd>
+         
+         <dd><b>6:00 p.m. - Members in Action</b></dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, August 5</u></b></dt>
+         <dd><b>8:00 a.m. - Robert Hunsaker</b></dd>
+         <dd>Morning Keynote</dd>
+         
+         <dd><b>6:00 p.m. - Calvin Kim </b></dd>
+         <dd>Evening Keynote</dd>
+         
+        <br />
+        
+        <dt><b><u>Saturday, August 6</u></b></dt>
+         <dd><b>8:00 a.m. - T. J. Knutson</b></dd>
+         <dd>Sabbath School</dd>
+
+         <dd><b>9:45 a.m. - Dee Casper</b></dd>
+         <dd>Worship Service</dd>
+
+         <dd><b>6:00 p.m. - Mark Finley</b></dd>
+         <dd>Evening Keynote</dd>
+         
+        <br />
+
+    </dl>
+    </>
+  )
+  
+  },
+    
+  {
+  eventId: "3ABN-SPP", 
+  beginDate: "05/06/2021", endDate: "12/31/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "12/31/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/SSP-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-SPP">3ABN Sabbath School Panel: Come Study With Your Family!</h1>
+    <p>If youâre looking for a way to freshen up your Sabbath School Lesson study, then why not spend some time with your 3ABN Family?</p>
+    <p>Each week we gather for a fresh look at Godâs Holy Word on 3ABNâs Sabbath School Panel. Each member brings their thoughtful and honest study to the table, showing how the Lord gave them new insight, or has challenged their old ideas.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>All the discussions are infused with prayer and based on careful study of Godâs Word, and we believe thatâs why our Sabbath School Panel is a favorite among 3ABN viewers. Join us for an insightful commentary this weekâand every week!</p>
+    <p>Visit <a href="https://3abnsabbathschoolpanel.com" target="_blank" rel="noreferrer noopener">3ABNSabbathSchoolPanel.com</a> to watch current and previous programs on-demand, and while youâre at it, share a link to the programs on social media. If you donât have an Adult Sabbath School Quarterly, you can easily download one there for free!</p>
+    <p>3ABN Sabbath School PanelâAlways fresh. Always relevant. Come study with your family!</p>
+    </>
+  )
+  },
+  
+  {
+  eventId: "3ABN-PRISON", 
+  beginDate: "05/06/2021", endDate: "12/31/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "12/31/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Prison-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-PRISON">You Came to Me: 3ABN Behind Bars</h1>
+    <p>âI was in prison and you came to Meâ¦. Inasmuch as you did it to one of the least of these My brethren, you did it to Me.â Matthew 25:36, 40</p>
+    <p>3ABN responds to thousands of souls who are searching for Jesus behind bars. Each day, we go through the countless letters we receive, answering their questions, giving them encouragement, and sending them free books, magazines, and Remnant Study Bibles by the hundreds. In fact, on average this past year, weâve sent out 700 free Study Bibles each month!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>Our dedicated staff carefully reads and maintains contact with prisoners in 42 states, assuring those who have lost all hopeâand usually all contact with those they loveâof the Saviorâs love for them. We tell them about His plan of salvation.</p>
+    <p>In addition, 3ABNâs Hard Drive for Prisons Initiative provides a way for them to watch Christ-centered programming by loading a special device with over 3,900 customized programs that can be added to their TV channels.</p>
+    <p>Every day, the Holy Spirit works on their hearts, and many are accepting Jesus Christ and the truths of the Bible. The gospel of Jesus Christ is setting the captives free, and your support makes it all possible. Thank you!</p>
+    </>
+  )
+  },
+  
+  {
+  eventId: "3ABN-CUBA", 
+  beginDate: "05/06/2021", endDate: "12/31/2024", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "12/31/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Cuba-News.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-CUBA">3ABN Latino in Cuba</h1>
+    <p>For over 60 years, it has been very difficult to spread the gospel of Jesus Christ in Cuba. But even as our 3ABN Latino Network grew, we always longed to reach that island nation and the millions who need to hear the three angelsâ messages of Revelation 14!</p>
+    <p>We prayed for a miracleâand God opened a door by making 3ABN Latino programming available to over 11 million viewers in every Cuban city on <em>El Paquete</em> (âThe Packageâ)âtheir most popular source of TV programming!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p><em>El Paquete</em> is a weekly selection of popular foreign TV series, music, films, and other programs available for download onto memory sticks or hard drives for a small fee. Currently, thereâs no other method of video distribution, since all the local television stations are run by the government. But although it was developed to distribute secular programs, we see how the Lord is using <em>El Paquete</em> to reach millions!</p>
+    <p>We praise God for the opportunity to be <em>the very first Christian television programming to ever be allowed into Cuba, </em>and we praise Him for the precious souls that have already been baptized! Every day, the seeds of the gospel are being planted, and we can count on an abundant harvest. Soon, 3ABN will open a call center in Cuba with a local number that will connect them with a nearby church for Bible studies. Truly, the Lord is holding the doors wide open for the salvation of millions of souls!</p>
+    </>
+  )
+  },
+  
+  {
+  eventId: "3ABN-GC", 
+  beginDate: "05/18/2022", endDate: "12/31/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "05/18/2022", expirationDate: "08/31/2022", expirationFromHistory: "12/31/2022", 
+  thumbnail: "/img/news/GC-2022.jpg",
+  event: (
+    <>
+    <h1 id="3ABN-GC">3ABN at the General Conference Session in St.&nbsp;Louis June 6-11, 2022</h1>
+	<p>Three Angels Broadcasting Network (3ABN) is thrilled to join thousands of Christians at the 61<sup>st</sup> Session of the General Conference of Seventh-day Adventists in St. Louis, Missouri, from June 6â11. The theme for this yearâs session is âJesus is Coming! Get Involved!â and reflects the Churchâs initiative for Total Member Involvement.</p>
+	<p>This event will be held in the 66,000-seat Dome at the Americaâs Center, where 2,700 voting delegates, representing over 21 million church members in more than 200 countries, will gather for the Churchâs global business session.</p>
+	   
+    </>
+  ),
+  eventDetails: (
+    <>
+    <h3><strong>Live Broadcasts</strong></h3>
+
+	<p>3ABN, in partnership with Adventist Review TV (ARTV) and the Seventh-day Adventist Church, will be broadcasting each day from the Dome. Weâll bring you live coverage, as well as inspiring interviews and news from your brothers and sisters around the world.</p>
+		
+	<p>In addition, you can watch exclusive programming like morning worships, Division reports, and afternoon programs online atÂ <a rel="noreferrer noopener" href="https://3abnplus.tv/catalog" target="_blank">3ABNPlus.tv</a>, or on ourÂ <a rel="noreferrer noopener" href="https://3abn.org/news-3abnplus.html" target="_blank">3ABN+ app</a>! ToÂ <a rel="noreferrer noopener" href="https://3abn.org/news-3abnplus.html" target="_blank">download</a>Â this free app that allows you to watch thousands of programs on demand, along with live streams of each of our television and radio networks, just visitÂ <a rel="noreferrer noopener" href="https://play.google.com/store/apps/details?id=org.threeabn.threeabnapp" target="_blank">Google Play</a>Â or theÂ <a rel="noreferrer noopener" href="https://apps.apple.com/us/app/3abn-three-angels-broadcasting/id680258460" target="_blank">App Store</a>.</p>
+	
+	<h3><strong>3ABN Broadcast for Television / Radio:</strong></h3>
+	<dl>
+        <dt><b><u>Wednesday, June 8 (7:00 p.m. - 8:30 p.m.)</u></b></dt>
+        <dt><b><u>Thursday, June 9 (7:00 p.m. - 8:30 p.m.) (All times Central)</u></b></dt>
+         <dd>Live broadcast with 3ABN hosts from GC convention room, as well as evening devotional.</dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, June 10</u></b></dt>
+         <dd><b>6:00 p.m. â 9:00 p.m.</b></dd>
+         <dd>Live broadcastÂ with 3ABN hosts from GC convention room and evening program.</dd>
+         
+        <br />
+        
+        <dt><b><u>Sabbath, June 11</u></b></dt>
+         <dd><b>8:30 a.m.</b></dd>
+         <dd>Live Sabbath School from the main hall.</dd>
+         
+         <dd><b>10:15 a.m.</b></dd>
+         <dd>Live broadcast with 3ABN hosts from GC convention room.</dd>
+         
+         <dd><b>10:30 a.m.</b></dd>
+         <dd>Live divine worship from the main hall.</dd>
+         
+        <br />
+        
+	<h3><strong>Only on 3ABN+Â </strong></h3>
+        <dt><b><u>Monday - Thursday June 6 - 9 (All times Central)</u></b></dt>
+         <dd><b>8:00 a.m.</b></dd>
+         <dd>Morning worship from the main hall.</dd>
+         
+        <br />
+        
+        <dt><b><u>Friday, June 10</u></b></dt>
+         <dd><b>8:00 a.m.</b></dd>
+         <dd>Morning worship</dd>
+         
+         <dd><b>9:15 a.m.</b></dd>
+         <dd>Division Reports from the main hall.</dd>
+         
+         <dd><b>1:30 p.m.</b></dd>
+         <dd>Music / Division Reports from the main hall.</dd>
+         
+        <br />
+        
+        <dt><b><u>Sabbath, June 11</u></b></dt>
+         <dd><b>2:00 p.m.</b></dd>
+         <dd>Afternoon program from the main hall.</dd>
+         
+        <br />
+
+    </dl>
+
+
+	<h3><strong>Virtual Booths</strong></h3>
+
+	<p>You wonât want to miss the GC Session Exhibition Experience!Â <a rel="noreferrer noopener" href="https://exhibithall.gcsession.org/" target="_blank">Register here</a>Â and you can visit all the GC Virtual Boothsâincluding our 3ABN booth, where you can live chat with 3ABN staff, download free resources, and find out all the latest information about what God is doing through this ministry! It really is the next best thing to being there in person, and we canât wait to meet you!</p>
+	
+	<p>Three Angels Broadcasting Network is a non-profit supporting ministry of the Seventh-day Adventist Church, and your faithful prayers and support make it possible for us to bring you live coverage and much more. Thank you for all you do for the Lord, and may God richly bless you!</p>
+    </>
+  )
+  },
+  
+  {
+  eventId: "3ABN-on-Skitter-TV", 
+  beginDate: "05/06/2021", endDate: "04/25/2022", 
+  dateForSorting: "05/02/2021", 
+  firstShowDate: "08/01/2021", expirationDate: "04/25/2022", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/Skitter-Bug.jpg",
+  event: (
+    <>
+    <h1 id="skitter">3ABN on Skitter TV</h1>
+    <p>Our 3ABN Marketing Department is happy to announce that Skitter TV has just launched 3ABNâs Flagship network, 3ABN Parent, on its IPTV HD platform to various cities in the U.S. Now viewers can watch 3ABN programming 24 hours a day on channel 97 in 20 large cities in Indiana, Michigan, Wisconsin, Missouri, Iowa, Nebraska, Minnesota, North and South Dakota, Arkansas, Texas, and Georgia!</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>To find out if 3ABN is available on Skitter TV in your city, just visit <a href="https://skitter.tv" target="_blank" rel="noreferrer noopener">skitter.tv</a> and put in your zip code, and if you have any questions, just contact our 3ABN marketing department at <a href="mailto:marketing@3abn.org"><b>Marketing@3abn.org</b></a>.</p>
+    <p>We are committed to bringing good news to those who are searching for truth and hope, and with your help, we are reaching ever-wider audiences both here in the U.S. and around the world!</p>
+    </>
+  )
+  },
+
+  {
+  eventId: "NewEyesoftheAncientsBook", 
+  beginDate: "05/06/2021", endDate: "01/30/2024", 
+  dateForSorting: "05/12/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "01/30/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Eyes-of-Ancients.jpg",
+  event: (
+    <>
+    <h1>New Eyes of the Ancients Book</h1>
+    <p>3ABN Books has just published, <i>Through the Eyes of the Ancients: The Books of Moses</i> by Dr. R. Dean Davis. Based on the popular column he wrote for many years in the 3ABN World magazine, this book covers the familiar Old Testament stories from the perspective of the ancient Hebrews, bringing fresh insights and revelations about the character of our loving God.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>âWritten in a heart-warming and condensed story form, <i>Through the Eyes of the Ancients</i> is an inspirational and instructional guide that unveils how the original Hebrew audience interpreted the books of Moses,â says author and 3ABN television host Shelley Quinn. âDean Davis points the way by acquainting us with ancient Hebrew customs, expressions, and literary style. As we follow stories of the gradual spiritual growth of the patriarchs, we begin to better understand the heart of a tender, loving, personal God and His everlasting covenant of graceâthat revelation can draw us closer to God.â</p>
+    <p>Bill Knott, editor of the <i>Adventist Review</i> magazine, says, âDean Davisâs fifty-plus years of mission service, pastoral care, and classroom teaching have coalesced in this volume to make available to thousands of readers what only a few Old Testament scholars know. The writing is clean and clear; the insights are fresh and vivid. In a word, this study of the Books of Moses is <i>accessible</i>.â</p>
+    <p>To order your copy of <i>Through the Eyes of the Ancients: The Books of Moses</i>, visit our website, <a href="https://3abnstore.com/index.php?id_product=3614&id_product_attribute=0&rewrite=through-the-eyes-of-the-ancients&controller=product" target="_blank"><b>3ABNStore.com</b></a>, or call us at <a href="tel:+1618-627-4651"><b>618-627-4651</b></a>.</p>
+
+    </>
+  )
+  },
+
+  {
+  eventId: "ThreeAngelsâMessages_Summary", 
+  beginDate: "05/06/2021", endDate: "01/30/2024", 
+  dateForSorting: "05/11/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "01/30/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Three-Angels-Messages-booklet.jpg",
+  event: (
+    <>
+    <h1>Three Angelsâ Messages in Summary</h1>
+    <p>3ABN has produced a new booklet written by Pastor John Lomacang, called, <i>The Three Angelsâ Messages in Summary</i>. These messages, found in Revelation 14:6â12, are more important than any global warning system and are intended to awaken a sleeping world to its future.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>âThe booklet is a synopsis of the most potent message that Heaven has sent,â Pastor Lomacang explains, âand these are messages of fearless urgency because a coalition is being formed with the intent to decide the fate of earthâs inhabitantsâbut not before God has something to say about the outcome!</p>
+    <p>âWhile this booklet is not an exhaustive study,â he adds, âit will introduce and explain the issues and orchestrators of the final showdown. And ultimately, it will make you aware that only you can decide your fate.â</p>
+    <p><i>The Three Angelsâ Messages in Summary</i> booklets are available in cases of 200 and are perfect for sharing. For more information, visit <a href="https://3abnstore.com/index.php?id_product=3482&id_product_attribute=0&rewrite=bttamc&controller=product" target="_blank"><b>3ABNStore.com</b></a>.</p>
+    </>
+  )
+  },
+
+  {
+  eventId: "3ABNAustralia_NewBibleTracts", 
+  beginDate: "05/06/2021", endDate: "12/31/2024", 
+  dateForSorting: "05/10/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "12/31/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Insight-Tracts.jpg",
+  event: (
+    <>
+    <h1>3ABN Australia Produces New Bible Tracts</h1>
+    <p>Although social distancing has hampered personal evangelism, our dedicated team at 3ABN Australia pushed forward with a new series of inexpensive tracts to hand out just as soon as it became safe to do so. </p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>âTheyâre called <i>Insight tracts</i>,â says John Malkiewycz, 3ABN Australiaâs General Manager, âand theyâre a great way to share the messages of the Bible with others here in Australia, New Zealand, and the Pacific Islands.â* </p>
+    <p>These pocket-sized, attractive, and easy-to-read tracts each have a QR code that can be scanned with a smartphone, connecting the reader to 3ABN Australiaâs website. </p>
+    <p>âTheyâre all based on Scripture, and address topics that are important to people right now,â says Rosemary Malkiewycz, 3ABN Australiaâs  Assistant to the General Manager. </p>
+    <dl>
+        <dt><b><i>Insight</i> Tract Titles</b></dt>
+        <dd>Why Do Bad Things Happen?</dd>
+        <dd>Five Minutes After Death</dd>
+        <dd>Paradise (Heaven)</dd>
+        <dd>The Journey of a Lifetime (The Second Coming of Christ)</dd>
+        <dd>Experiencing Godâs Presence Through Prayer</dd>
+        <dd>Sabbath Peace in Our Time</dd>
+        <dd>Fingerprints of Godâs Messiah</dd>
+        <dd>Evolved or Designed?</dd>
+        <dd>The Mark of the Beast</dd>
+        <dd>Who Is the Beast? </dd>
+      </dl>
+      <p> âWe are truly living in the End Times,â John adds, âand we must do all we can to warn the worldâs inhabitants of the battle for control of our minds and souls. We only have a short point of time to get these into the hands of people, so weâre doing everything we can to distribute as many as we can.â</p>
+      <p>Find out more about 3ABNâs work in Australia and New Zealand at <a href="https://www.3abnaustralia.org.au/" target="_blank"><b>3ABNAustralia.org.au</b></a>.</p>
+      <p>*Insight tracts available only in Australia.</p>
+    </>
+  )
+  },
+
+  {
+  eventId: "3ABN_FreeviewAfrica", 
+  beginDate: "05/06/2021", endDate: "05/30/2022", 
+  dateForSorting: "05/09/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "12/31/2022", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Freeview.jpg",
+  event: (
+    <>
+    <h1>3ABN on Freeview Africa</h1>
+    <p>God has given us a new opportunity to reach millions of people on the massive African continent through a new Direct to Home (DTH) satellite service based in Nigeria! </p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>3ABN Dare to Dream has just begun broadcasting to a potential audience of 45 million homes in Nigeria and other West African nations covered by Freeview Africa, a satellite service provider that delivers free-to-air and premium channels using Satview Network. </p>
+    <p>âThis is an innovative approach to satellite programming,â says Moses Primo, 3ABNâs Director of Broadcasting and Engineering. âInstead of charging subscribers a monthly fee for programming, they charge the networks, instead, and keep the programming free for those who watch. If you multiply each home by an average number of people who live there, then you quickly realize how many millions of people now have access to 3ABNâs Christ-centered programming!</p>
+    <p> âThis is far more affordable than our previous satellite coverage,â Moses adds, âand because of our faithful 3ABN supporters, countless millions of Africans are now receiving the good news of salvation through 3ABNâs Dare to Dream Network every day.â</p>
+    <p>For more information on Freeview Africa, visit their website, <a href="https://freeviewafrica.tv/" target="_blank"><b>FreeviewAfrica.tv</b></a>.</p>
+    </>
+  )
+  },
+
+  {
+  eventId: "ReachingBeyondInternet", 
+  beginDate: "05/06/2021", endDate: "12/31/2024", 
+  dateForSorting: "05/08/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "12/31/2024", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Interless.jpg",
+  event: (
+    <>
+    <h1>Reaching Beyond the Internet</h1>
+    <p>In 1984, when Danny Shelton was impressed by God to âbuild a television station that would reach the world,â only satellite transmissions made that remotely possible; but with Godâs blessings, just two years later, 3ABN was available on satellite over all of North America. </p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>In the following years, the Lord made it possible for people to watch over the air as 3ABN built dozens of television stations across the United States, and by 2000, Three Angels Broadcasting Network was available on satellite and the Internet on every inhabited continent of the word! </p>
+    <p>Despite these technology advances, there are still certain areas where our satellite signals do not reachâmost notably, on the island nations of the South Pacific. Even the cost of Internet access is too high in those remote locations, so we prayed and waited on the Lord for an answer.</p>
+    <p>Expanding 3ABNâs coverage has been a special burden for Moses Primo, our Director of Broadcasting and Engineering, and his fervent prayers were answered when the Lord impressed him with the idea of the <b>Interless</b> set top box! Developed with South Pacific Island viewers in mind, this small, light, and portable box provides thousands of programs on an internal memory making it perfect for viewers anywhere in the world who cannot receive our satellite signal, or where Internet costs are prohibitive. </p>
+    <p><b>Interless</b> provides a whole new way to watch programming by 3ABN and other ministries. Simply plugging it into a TV allows viewers to choose any of the thousands of Adventist television programs stored in its internal memory. The Interless box is also ideal for residents in aged care facilities, rental properties, prisons, and anywhere else satellite or Internet access are unavailable. The programs can be played on demand, and as a special bonus, when an Internet connection is available, viewers can watch nearly every Seventh-day Adventist TV channel through the built-in <b>mySDAtv</b> app!</p>
+    <p>3ABN Australia has begun a campaign to send <b>Interless</b> boxes to the South Pacific islands, where they can be used for themed talks to small groups or for sermons in small churches with no regular speaker. The cooking programs can be used at church or at home to introduce friends to the benefits of vegan cooking, and the excellent childrenâs content can help little ones learn about Jesus. </p>
+    <p>âGod has opened the doors and provided the material,â says John Malkiewycz, 3ABN Australiaâs General Manager. âWe are beginning to send these <b>Interless</b> boxes to viewers in the South Pacific islands and other areas, and we pray they will be used as another powerful evangelistic tool to win many more souls to Jesus.â</p>
+    </>
+  )
+  },
+
+  {
+  eventId: "Focus_on_Truth", 
+  beginDate: "05/06/2021", endDate: "04/25/2022", 
+  dateForSorting: "05/07/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "05/25/2022", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/FocusOnTruthNewsbug.jpg",
+  event: (
+    <>
+    <h1>New <i>Focus on Truth</i>&nbsp; Booklets</h1>
+    <p>The <i>Focus on Truth</i> booklet series explores significant Bible topics that impact both our present well-being and our eternal destiny. In a world of disinformation and conflicting opinions, only the Bible stands as a sure beacon of light, hope, and truth; and now you can help bring life-saving truths to millions through zip code mailings! </p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>Each packet contains Danny Sheltonâs new booklets, â<i>Focus on Hellfire</i>,â â<i>Focus on the Ten Commandments</i>,â and â<i>Focus on Salvation</i>,â clearly showing what the Bible says about these often misunderstood topics.</p>
+    <p>With zip code mailings, you can send all three booklets in an eye-catching, full-color envelope to homes in the zipÂ code of your choice in the United States for just 50 centsâthatâs <i>less than a first-class stamp!</i></p>
+    <p>You can also order the booklets by the case and pass them out in your neighborhood and community. Due to the generous donations that covered the cost of printing, we can ship each case of 250 booklets for only $16.50 in the U.S. (International rates higher).  <i>Thatâs less than 7 cents per booklet!</i></p>
+    <p>If you live in the U.S., weâll be happy to send you a free packet of booklets to read for yourself! Just call us at <a href="tel:+1618-627-4651"><b>618-627-4651</b></a> or email us your address at <a href="mailto:mail@3abn.org"><b>mail@3abn.org</b></a>.</p>
+    <p>Donât miss this opportunity to reach those around you with these life-saving truths in an easy and inexpensive way! Visit <a href="https://3abnstore.com/index.php?id_category=203&controller=category&q=Collection-Focus+on+Truth+Book+Series" target="_blank"><b>3ABNstore.com</b></a> for more details.</p>
+    </>
+  )
+  },
+
+  {
+  eventId: "3ABN-LatinoCuba", 
+  beginDate: "05/06/2021", endDate: "04/25/2022", 
+  dateForSorting: "05/06/2021", 
+  firstShowDate: "05/06/2021", expirationDate: "04/25/2022", expirationFromHistory: "12/31/2030", 
+  thumbnail: "/img/news/Cuba.jpg",
+  event: (
+    <>
+    <h1>3ABN Latino in Cuba</h1>
+    <p>Itâs been hard to imagine the day when Christ-centered television programming would become available in every city in Cuba, but that day has come! 3ABN Latino programs are now widely available to over 11.3 million people who live in that island nation on âThe Packageâ <i>(El Paquete)</i>. This weekly selection of TV series, soap operas, music, films, and other programs are available to download onto memory sticks or hard drives for a small fee, and can then be played back on their TV sets at home,â explains John Dinzey, 3ABNâs General Manager.</p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>âThere is no other method of distribution,â he adds, âsince all the local television stations are run by the government. And although it was developed to distribute secular programs, I marvel at how the Lord is using it to reach millions who are hungry for the gospel!â </p>
+    <p>Chaplain Hernell Hernandez, our 3ABN Latino representative in Cuba, is thrilled. âI thank the Lord that He has opened these doors,â he says, âbecause now I have the hope that the gospel can be preached in my native country of Cuba!â Each month, he travels to Cuba with fresh programming and maintains a good relationship with those who distribute it. </p>
+    <p>At their request, 3ABN Latino adds public service announcements to each program, urging Cuban viewers to conserve electricity and water, recycle plastics and cans, and use precautions to avoid spreading COVID-19. âWe are also providing a downloadable PDF book each month to âThe Packageâ subscribers,â John Dinzey adds. âWeâve made the Ellen White books, <i>Steps to Christ</i>, and <i>The Ministry of Healing</i> available, and soon weâll be offering them the Spanish version of 3ABNâs booklet, <i>COVID-19: Whatâs Next?</i></p>
+    <p>âThis is a marvelous opportunity, and we are taking full advantage of it because we donât know when things will become more difficult,â John concludes. âWhatever we can do, we need to do now, and the Lord will surely bless!â</p>
+    </>
+  )
+  },
+
+   {
+  eventId: "3ABN+_Watch", 
+  beginDate: "03/08/2021", endDate: "05/01/2021", 
+  dateForSorting: "03/08/2021", 
+  firstShowDate: "03/08/2021", expirationDate: "12/31/2021", expirationFromHistory: "12/31/2023", 
+  thumbnail: "/img/news/3ABN+_Watch_Newsbug.jpg",
+  event: (
+    <>
+    <h1>3ABN+</h1>
+    <p>Thereâs a new way to watch and listen to all of our television and radio networks, and itâs really exciting! <a href="https://3abnplus.tv/catalog" target="_blank"><b>3ABN+</b></a> lets you watch videos on demand, easily share links on social media, download videos to watch offline, and watch 3ABN <i>with no ads!</i></p>
+    </>
+  ),
+  eventDetails: (
+    <>
+    <p>This new delivery method is similar to what is used on Netflix, Amazon Prime Video, and other streaming companies. With 3ABN+ you can watch more than 1,500 hours of video on demand, and weâre adding fresh content every week! You can search our programs by title, topic, or even presenter. You can also download Bible studies, recipes, kids' activities, and more!</p>
+    <p>Right now <a href="https://3abnplus.tv/catalog" target="_blank"><b>3ABN+</b></a> is available on our 3ABN.tv website, but soon youâll have a similar experience across multiple platforms, including our 3ABN app on your smartphone, tablet, Roku, Apple TV, Amazon Fire, smart TVsâthe list goes on! </p>
+    <p>So check out <a href="https://3abnplus.tv/catalog" target="_blank"><b>3ABNPlus.tv</b></a> On demand. All the time.</p>
+    </>
+  )
+  },
+
+];
+  </script>
+  <script type="text/jsx" src="/js/news5.js?v=00002"></script>
+</head>
+<body>
+  <div data-include="/top-menu.html"></div>
+  <div class="grid-container">
+    <div id="menu-3abn-root"></div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-y">
+      <div class="cell small-12 medium-8 large-5 align-self-middle text-center"><a href="/index.html"><img src="/img/logos/3abn-logo.png" style="padding-right: 10px;"></a>
+        <div class="show-for-small-only">
+          <a class="button success" href="/donate.html">DONATE</a>
+          <a class="button expanded hollow" href="https://3abnplus.tv/catalog">WATCH 3ABN TV</a>
+          <a class="button expanded hollow" href="/3abn-radio-broadcast.html">LISTEN 3ABN RADIO</a></div>
+      </div>
+      <div class="cell small-12 medium-4 large-2 align-self-middle text-left hide-for-small-only">
+        <ul class="no-bullet">
+          <li>
+            <h5>
+              &nbsp;<i class="fas fa-angle-right"></i><a class="int" href="/networks.html">&nbsp; Our TV Networks </a></h5>
+          </li>
+          <li>
+            <h5>
+              &nbsp;<i class="fas fa-angle-right"></i><a class="int" href="/networks-radio.html">&nbsp; Our Radio Networks</a></h5>
+          </li>
+        </ul>
+      </div>
+      <div class="cell small-12 medium-12 large-5 align-self-middle text-center hide-for-small">
+        <div class="grid-x grid-padding-y align-right">
+          <div class="cell">
+            <!-- a(href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UYJVUZRSBUCYY&source=url")img(src="/img/donate/giving-tuesday-donate-btn.jpg") 
+            -->
+            <!-- a(href="https://cse.google.com/cse?cx=012326256068793904417:g1o5pcqlrqe") Search-->
+          </div>
+        </div>
+        <a class="social-icon-button twitter" href="https://twitter.com/3abn" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button facebook" href="https://www.facebook.com/3abn.org/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button linkedin" href="https://www.linkedin.com/company/three-angels-broadcasting-network-3abn-/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button instagram" href="https://www.instagram.com/3abn_official/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button flickr" href="https://www.flickr.com/photos/133818083@N08/albums" target="_blank"><i class="fab fa-flickr" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button youtube" href="https://www.youtube.com/user/3ABNVideos" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button android" href="https://play.google.com/store/apps/details?id=org.threeabn.threeabnapp" target="_blank"><i class="fab fa-android" aria-hidden="true"></i><span></span></a>
+        <a class="social-icon-button apple" href="https://itunes.apple.com/us/app/3abn-three-angels-broadcasting/id680258460?mt=8" target="_blank"><i class="fab fa-apple" aria-hidden="true"></i><span></span></a>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <div id="news_page_container" class="grid-container news-page-container"></div>
+
+
+  <div class="grid-container">
+    <div class="grid-x align-center">
+      <div class="cell large-12">
+        <div id="sched-widget"></div>
+      </div>
+    </div>
+  </div>
+ <div data-include="/footer.html"></div>
+    <script>
+      // Google Analytics
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-23528960-14');ga('send','pageview');
+    </script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/what-input/dist/what-input.js"></script>
+    <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="/js/app-min.js"></script>
+    <script src="/js/top-nav-min.js"></script>
+    <script src="https://r.3abn.org/menu/latest/static/js/main.js"></script>
+</body>
+</html>

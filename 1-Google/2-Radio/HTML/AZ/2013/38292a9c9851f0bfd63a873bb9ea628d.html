@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" dir="ltr"><!--<![endif]-->
+<head>
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-c2661d1fe14a52a7af7",applicationID:"531119592"};;/*! For license information please see nr-loader-rum-1.260.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},S={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},R={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]={...(0,i.D)(t,S),...D};const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.260.1",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>l,Tt:()=>c,_A:()=>a,iS:()=>s,il:()=>i,sK:()=>f,ux:()=>u,v6:()=>o,w1:()=>d});var n=r(7894);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(i&&window.document.documentMode)),l=!!a.navigator?.sendBeacon,f=Date.now()-(0,n.z)()},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:S,runtime:R={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,S=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,S||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),R.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],R.ptid=e.agentIdentifier,(0,i.sU)(e.agentIdentifier,R),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),S(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=S(w,e,!0,"api")})),p.addPageAction=S(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,S(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=()=>{try{(0,o.p)(l.xS,["API/start/called"],void 0,n.D.metrics,b),b.emit("manual-start-all")}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function S(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function R(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((e=>{(0,d.Z)("Downloading runtime APIs failed...",e),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=S(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?S(_,"routeName",void 0,n.D.softNav):S(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>R()),!0):R(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.260.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.260.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-WLWoh5UWJ/3XNXjYcJoBc8bSPHGDdu86FTMTgY1yxRTQeEmWWEBFFVPIfCRSbxd8K297eHg86RaJPD+UJxG1+w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.260.1.PROD"]=self["webpackChunk:NRBA-1.260.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402),n=i(8325);class o{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e,this.ee=n.ee.get(e)}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var a=i(3325),s=i(234);const c=Object.values(a.D);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(2758);var l=i(8e3),f=i(5938),g=i(3960),p=i(385);const h=e=>p.il&&!0===(0,s.Mt)(e,"privacy.cookies_enabled");function v(e){return!!s.Yu.MO&&h(e)&&!0===(0,s.Mt)(e,"session_trace.enabled")}var m=i(7872);class b extends f.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,s.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,l.RP)(e,r):this.ee.on("manual-start-all",(0,m.Z)((()=>{(0,l.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===a.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,l.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,l.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};p.il?(0,g.b2)((()=>n()),!0):n()}#t(e,t){return e!==a.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!v(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,r),this.importAggregator()}}var w=i(1117),_=i(1284);class E extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,_.D)(e,(function(e,r){t[e]=x(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,_.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=x(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=x(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),R=i(4351);var k=i(5546),N=i(7956),P=i(3239),j=i(9251),T=i(7894);class I extends b{static featureName=j.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,j.t,r),p.il&&((0,N.N)((()=>(0,k.p)("docHidden",[(0,T.z)()],void 0,j.t,this.ee)),!0),(0,P.bP)("pagehide",(()=>(0,k.p)("winPagehide",[(0,T.z)()],void 0,j.t,this.ee))),this.importAggregator())}}var O=i(3081);class M extends b{static featureName=O.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,O.t9,r),this.importAggregator()}}new class extends o{constructor(t,r){super(r),p._A?(this.sharedAggregator=new E({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.D.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.p[e.featureName]-a.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.D.softNav)return;const n=function(e){switch(e){case a.D.ajax:return[a.D.jserrors];case a.D.sessionTrace:return[a.D.ajax,a.D.pageViewEvent];case a.D.sessionReplay:return[a.D.sessionTrace];case a.D.pageViewTiming:return[a.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,S.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[A,I,M],loaderType:"lite"})})()})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="image_src" href="https://kjzz.org/sites/default/files/KJZZ_twitterCard_1600x800.png" />
+<link rel="canonical" href="https://kjzz.org/search-news" />
+<link rel="shortlink" href="https://kjzz.org/search-news" />
+<meta property="og:site_name" content="KJZZ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kjzz.org/search-news" />
+<meta property="og:title" content="Search News" />
+<meta property="og:image" content="https://kjzz.org/sites/default/files/KJZZ_twitterCard_1600x800.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://kjzz.org/sites/default/files/KJZZ_twitterCard_1600x800.png" />
+<meta name="twitter:image:alt" content="KJZZ 91.5FM Phoenix" />
+<link rel="shortcut icon" href="https://media.kjzz.org/s3fs-public/kjzz_16x16.ico" type="image/vnd.microsoft.icon" />
+<link rel="mask-icon" href="https://kjzz.org/safari-pinned-tab.svg" />
+<link rel="icon" href="https://media.kjzz.org/s3fs-public/kjzz_16x16.png" sizes="16x16" />
+<link rel="icon" href="https://media.kjzz.org/s3fs-public/kjzz_32x32.png" sizes="32x32" />
+<link rel="icon" href="https://media.kjzz.org/s3fs-public/kjzz_96x96.png" sizes="96x96" />
+<link rel="icon" href="https://media.kjzz.org/s3fs-public/kjzz_192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_76x76.png" sizes="76x76" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_120x120.png" sizes="120x120" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_152x152.png" sizes="152x152" />
+<link rel="apple-touch-icon" href="https://media.kjzz.org/s3fs-public/kjzz_180x180.png" sizes="180x180" />
+<script type='text/javascript'>(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = '//stream.publicbroadcasting.net/analytics/abmr.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><title>Search News | KJZZ</title>
+<style type="text/css" media="all">
+@import url("https://kjzz.org/modules/system/system.base.css?se9iz1");
+@import url("https://kjzz.org/modules/system/system.menus.css?se9iz1");
+@import url("https://kjzz.org/modules/system/system.messages.css?se9iz1");
+@import url("https://kjzz.org/modules/system/system.theme.css?se9iz1");
+</style>
+<style type="text/css" media="all">
+@import url("https://kjzz.org/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.datepicker.min.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/views_slideshow/views_slideshow.css?se9iz1");
+</style>
+<style type="text/css" media="all">
+@import url("https://kjzz.org/modules/comment/comment.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/date/date_api/date.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/date/date_repeat_field/date_repeat_field.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/domain/domain_nav/domain_nav.css?se9iz1");
+@import url("https://kjzz.org/modules/field/theme/field.css?se9iz1");
+@import url("https://kjzz.org/modules/node/node.css?se9iz1");
+@import url("https://kjzz.org/modules/search/search.css?se9iz1");
+@import url("https://kjzz.org/modules/user/user.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/views/css/views.css?se9iz1");
+</style>
+<style type="text/css" media="all">
+@import url("https://kjzz.org/sites/all/modules/colorbox/styles/default/colorbox_style.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/ctools/css/ctools.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/panels/css/panels.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/ds/layouts/ds_2col_fluid/ds_2col_fluid.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/views_slideshow_cycle.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/responsive_menus/styles/meanMenu/meanmenu.min.css?se9iz1");
+@import url("https://kjzz.org/s3fs-css/honeypot/honeypot.css?se9iz1");
+@import url("https://kjzz.org/sites/all/modules/webform/css/webform.css?se9iz1");
+@import url("https://kjzz.org/sites/all/libraries/superfish/css/superfish.css?se9iz1");
+@import url("https://kjzz.org/sites/all/libraries/superfish/style/default.css?se9iz1");
+</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+#sliding-popup.sliding-popup-bottom,#sliding-popup.sliding-popup-bottom .eu-cookie-withdraw-banner,.eu-cookie-withdraw-tab{background:#3399cc;}#sliding-popup.sliding-popup-bottom.eu-cookie-withdraw-wrapper{background:transparent}#sliding-popup .popup-content #popup-text h1,#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text h3,#sliding-popup .popup-content #popup-text p,.eu-cookie-compliance-secondary-button,.eu-cookie-withdraw-tab{color:#fff !important;}.eu-cookie-withdraw-tab{border-color:#fff;}.eu-cookie-compliance-more-button{color:#fff !important;}
+
+/*]]>*/-->
+</style>
+<style type="text/css" media="screen">
+@import url("https://kjzz.org/sites/all/themes/adaptivetheme/at_core/css/at.layout.css?se9iz1");
+@import url("https://kjzz.org/sites/all/themes/kjzz_subtheme/css/global.base.css?se9iz1");
+@import url("https://kjzz.org/sites/all/themes/kjzz_subtheme/css/global.styles.css?se9iz1");
+@import url("https://kjzz.org/sites/all/themes/kjzz_subtheme/scripts/flexslider/flexslider.css?se9iz1");
+@import url("https://kjzz.org/sites/all/themes/kjzz_subtheme/css/kjzzup.css?se9iz1");
+@import url("https://kjzz.org/sites/all/themes/kjzz_subtheme/../../libraries/flat-audio/css/flat.audio.css?se9iz1");
+</style>
+<link type="text/css" rel="stylesheet" href="https://kjzz.org/s3fs-css/adaptivetheme/kjzz_subtheme_files/kjzz_subtheme.responsive.layout.css?se9iz1" media="only screen" />
+<link type="text/css" rel="stylesheet" href="https://kjzz.org/sites/all/themes/kjzz_subtheme/css/responsive.smartphone.portrait.css?se9iz1" media="only screen and (max-width:320px)" />
+<link type="text/css" rel="stylesheet" href="https://kjzz.org/sites/all/themes/kjzz_subtheme/css/responsive.smartphone.landscape.css?se9iz1" media="only screen and (min-width:321px) and (max-width:480px)" />
+<link type="text/css" rel="stylesheet" href="https://kjzz.org/sites/all/themes/kjzz_subtheme/css/responsive.tablet.portrait.css?se9iz1" media="only screen and (min-width:481px) and (max-width:768px)" />
+<link type="text/css" rel="stylesheet" href="https://kjzz.org/sites/all/themes/kjzz_subtheme/css/responsive.tablet.landscape.css?se9iz1" media="only screen and (min-width:769px) and (max-width:1024px)" />
+<link type="text/css" rel="stylesheet" href="https://kjzz.org/sites/all/themes/kjzz_subtheme/css/responsive.desktop.css?se9iz1" media="only screen and (min-width:1025px)" />
+
+<!--[if lt IE 9]>
+<style type="text/css" media="screen">
+@import url("https://kjzz.org/s3fs-css/adaptivetheme/kjzz_subtheme_files/kjzz_subtheme.lt-ie9.layout.css?se9iz1");
+</style>
+<![endif]-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://kjzz.org/misc/jquery-extend-3.4.0.js?v=1.7.2"></script>
+<script type="text/javascript" src="https://kjzz.org/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.7.2"></script>
+<script type="text/javascript" src="https://kjzz.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://kjzz.org/misc/drupal.js?se9iz1"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://kjzz.org/misc/ui/jquery.ui.datepicker-1.13.0-backport.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/date/date_popup/jquery.timeentry.pack.js?v=1.4.7"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/views_slideshow/js/views_slideshow.js?v=1.0"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/colorbox/jquery.colorbox-min.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/colorbox/js/colorbox.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/colorbox/styles/default/colorbox_style.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/colorbox/js/colorbox_load.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/colorbox/js/colorbox_inline.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/better_exposed_filters/better_exposed_filters.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/date/date_popup/date_popup.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/jquery.cycle/jquery.cycle.all.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/js/views_slideshow_cycle.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/captcha/captcha.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/responsive_menus/styles/meanMenu/jquery.meanmenu.min.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/responsive_menus/styles/meanMenu/responsive_menus_mean_menu.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/menu_target/menu_target.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/misc/textarea.js?v=7.96"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/antibot/js/antibot.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/webform/js/webform.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/superfish/jquery.hoverIntent.minified.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/superfish/sftouchscreen.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/superfish/supposition.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/superfish/superfish.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/libraries/superfish/supersubs.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/superfish/superfish.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/themes/kjzz_subtheme/scripts/flexslider/jquery.flexslider-min.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/themes/kjzz_subtheme/../../libraries/flat-audio/js/jquery.jplayer.js?se9iz1"></script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/themes/kjzz_subtheme/../../libraries/flat-audio/js/jplayer.playlist.js?se9iz1"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"kjzz_subtheme","theme_token":"1L4D7-xskAVcEWZc_O4WwYF0G0T_5DsvFnDQbE-wr0c","js":{"0":1,"1":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"\/\/code.jquery.com\/jquery-1.7.2.min.js":1,"2":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/code.jquery.com\/ui\/1.10.2\/jquery-ui.min.js":1,"3":1,"misc\/ui\/jquery.ui.datepicker-1.13.0-backport.js":1,"sites\/all\/modules\/date\/date_popup\/jquery.timeentry.pack.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/all\/modules\/date\/date_popup\/date_popup.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"sites\/all\/modules\/captcha\/captcha.js":1,"sites\/all\/modules\/responsive_menus\/styles\/meanMenu\/jquery.meanmenu.min.js":1,"sites\/all\/modules\/responsive_menus\/styles\/meanMenu\/responsive_menus_mean_menu.js":1,"sites\/all\/modules\/menu_target\/menu_target.js":1,"misc\/textarea.js":1,"sites\/all\/modules\/antibot\/js\/antibot.js":1,"sites\/all\/modules\/webform\/js\/webform.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sftouchscreen.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1,"sites\/all\/themes\/kjzz_subtheme\/scripts\/flexslider\/jquery.flexslider-min.js":1,"sites\/all\/themes\/kjzz_subtheme\/..\/..\/libraries\/flat-audio\/js\/jquery.jplayer.js":1,"sites\/all\/themes\/kjzz_subtheme\/..\/..\/libraries\/flat-audio\/js\/jplayer.playlist.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.datepicker.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/jquery.timeentry.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"sites\/all\/modules\/domain\/domain_nav\/domain_nav.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/ds\/layouts\/ds_2col_fluid\/ds_2col_fluid.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/modules\/responsive_menus\/styles\/meanMenu\/meanmenu.min.css":1,"public:\/\/honeypot\/honeypot.css":1,"sites\/all\/modules\/webform\/css\/webform.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/libraries\/superfish\/style\/default.css":1,"0":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.layout.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/global.base.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/global.styles.css":1,"sites\/all\/themes\/kjzz_subtheme\/scripts\/flexslider\/flexslider.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/kjzzup.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/video.css":1,"sites\/all\/themes\/kjzz_subtheme\/..\/..\/libraries\/flat-audio\/css\/flat.audio.css":1,"public:\/\/adaptivetheme\/kjzz_subtheme_files\/kjzz_subtheme.responsive.layout.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/responsive.smartphone.portrait.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/responsive.smartphone.landscape.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/responsive.tablet.portrait.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/responsive.tablet.landscape.css":1,"sites\/all\/themes\/kjzz_subtheme\/css\/responsive.desktop.css":1,"public:\/\/adaptivetheme\/kjzz_subtheme_files\/kjzz_subtheme.lt-ie9.layout.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":false,"mobiledevicewidth":"480px"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"search_news":{"displays":{"page_2":{"filters":{"keys":{"required":false},"date_filter":{"required":false}}}}},"nodequeue_7":{"displays":{"block":{"filters":[]}}},"nodequeue_4":{"displays":{"block":{"filters":[]}}},"pledge_drive":{"displays":{"block_1":{"filters":[]}}},"nodequeue_48":{"displays":{"block":{"filters":[]}}},"header_news_promo":{"displays":{"block":{"filters":[]}}},"test_npr_hourly_news":{"displays":{"block_1":{"filters":[]}}},"nodequeue_59":{"displays":{"block":{"filters":[]}}}}},"datePopup":{"edit-date-filter-min-datepicker-popup-0":{"func":"datepicker","settings":{"changeMonth":true,"changeYear":true,"autoPopUp":"focus","closeAtTop":false,"speed":"immediate","firstDay":1,"dateFormat":"yy-mm-dd","yearRange":"-10:+0","fromTo":false,"defaultDate":"0y"}},"edit-date-filter-max-datepicker-popup-0":{"func":"datepicker","settings":{"changeMonth":true,"changeYear":true,"autoPopUp":"focus","closeAtTop":false,"speed":"immediate","firstDay":1,"dateFormat":"yy-mm-dd","yearRange":"-10:+0","fromTo":false,"defaultDate":"0y"}}},"urlIsAjaxTrusted":{"\/search-news":true,"\/search":true,"\/search\/node":true,"\/search-news?page=5931":true},"viewsSlideshow":{"nodequeue_4-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_nodequeue_4-block_1":{"num_divs":6,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"nodequeue_4-block_1","effect":"fade","transition_advanced":1,"timeout":6000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"play_on_hover":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"pause_after_slideshow":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":0,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cp\u003E\u003Cstrong\u003EWe use cookies on this site to enhance your user experience. Please review our \u003Ca href=\u0022\/privacy-policy\u0022 target=\u0022_blank\u0022\u003Eprivacy policy\u003C\/a\u003E for more information.\u003C\/strong\u003E\u003C\/p\u003E\n\n          \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n                \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":"768","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":1,"popup_position":null,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","popup_eu_only_js":0,"cookie_lifetime":"100","cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false},"responsive_menus":[{"selectors":"#block-superfish-1, #block-superfish-3,#block-superfish-4","container":"body","trigger_txt":"","close_txt":"X","close_size":"18px","position":"right","media_size":"1000","show_children":"1","expand_children":"1","expand_txt":"+","contract_txt":"-","remove_attrs":"1","responsive_menus_style":"mean_menu"}],"superfish":{"1":{"id":"1","sf":{"animation":{"opacity":"show"},"speed":0,"autoArrows":false,"dropShadows":true,"disableHI":false},"plugins":{"touchscreen":{"mode":"useragent_custom","useragent":"iphone|android|ipad"},"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}},"antibot":{"forms":{"webform-client-form-994261":{"action":"\/search-news?page=5931","key":"a11f8162e4fbc13031910248dff30548"}}},"adaptivetheme":{"kjzz_subtheme":{"layout_settings":{"bigscreen":"three-col-grail","tablet_landscape":"three-col-grail","tablet_portrait":"one-col-vert"},"media_query_settings":{"bigscreen":"only screen and (min-width:1025px)","tablet_landscape":"only screen and (min-width:769px) and (max-width:1024px)","tablet_portrait":"only screen and (min-width:481px) and (max-width:768px)"}}}});
+//--><!]]>
+</script>
+<!--[if lt IE 9]>
+<script src="https://kjzz.org/sites/all/themes/adaptivetheme/at_core/scripts/html5.js?se9iz1"></script>
+<![endif]-->
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-search-news domain-kjzz-org site-name-hidden atr-7.x-3.x atv-7.x-3.1 page-views">
+  <div id="skip-link" class="nocontent">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="page-wrapper">
+  <div id="page" class="container page">
+
+    <!-- !Leaderboard Region -->
+    <div class="region region-leaderboard"><div class="region-inner clearfix"><nav id="block-superfish-1" class="block block-superfish no-title odd first block-count-1 block-region-leaderboard block-1" ><div class="block-inner clearfix">  
+  
+  <ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-default sf-total-items-9 sf-parent-items-8 sf-single-items-1"><li id="menu-218-1" class="first odd sf-item-1 sf-depth-1 sf-total-children-10 sf-parent-children-0 sf-single-children-10 menuparent"><a href="https://kjzz.org/news" title="" class="sf-depth-1 menuparent">News</a><ul><li id="menu-807-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://kjzz.org/news" title="" class="sf-depth-2">KJZZ News</a></li><li id="menu-1654-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="https://kjzz.org/business" title="Business Desk" class="sf-depth-2">Business</a></li><li id="menu-2472-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="https://kjzz.org/education" title="" class="sf-depth-2">Education</a></li><li id="menu-2352-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://fronterasdesk.org/" title="" class="sf-depth-2">Fronteras Desk</a></li><li id="menu-2959-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/hermosillo" title="" class="sf-depth-2">Hermosillo Bureau</a></li><li id="menu-3025-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/politics" title="Politics" class="sf-depth-2">Politics</a></li><li id="menu-1655-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="https://kjzz.org/science" title="Science" class="sf-depth-2">Science</a></li><li id="menu-2727-1" class="middle even sf-item-8 sf-depth-2 sf-no-children"><a href="https://kjzz.org/sustainability" title="" class="sf-depth-2">Sustainability</a></li><li id="menu-2963-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children"><a href="/content/673196/qaz" class="sf-depth-2">Q&amp;AZ</a></li><li id="menu-4261-1" class="last even sf-item-10 sf-depth-2 sf-no-children"><a href="/tribal-natural-resources" title="" class="sf-depth-2">Tribal Natural Resources</a></li></ul></li><li id="menu-760-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="https://kjzz.org/program-schedule" title="" class="sf-depth-1 menuparent">Programs</a><ul><li id="menu-792-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://theshow.kjzz.org" title="" class="sf-depth-2">KJZZ&#039;s The Show</a></li><li id="menu-790-1" class="last even sf-item-2 sf-depth-2 sf-no-children"><a href="https://kjzz.org/program-schedule" title="" class="sf-depth-2">Schedule</a></li></ul></li><li id="menu-2293-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-13 sf-parent-children-0 sf-single-children-13 menuparent"><a href="https://kjzz.org/podcast" title="" class="sf-depth-1 menuparent">Podcasts</a><ul><li id="menu-2296-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/the-show" title="" class="sf-depth-2">The Show</a></li><li id="menu-6756-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/sunup" title="" class="sf-depth-2">Sun Up</a></li><li id="menu-2664-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/friday-newscap" title="" class="sf-depth-2">Friday NewsCap</a></li><li id="menu-2383-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/stories-you-dont-want-to-miss" title="" class="sf-depth-2">Stories You Don&#039;t Want to Miss</a></li><li id="menu-7429-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="https://word.kjzz.org" title="" class="sf-depth-2">Word</a></li><li id="menu-7969-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/content/1847082/period-end-not-really-podcast-about-menopause" class="sf-depth-2">Period, The End</a></li><li id="menu-7827-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/exitinterview" title="" class="sf-depth-2">Exit Interview</a></li><li id="menu-7905-1" class="middle even sf-item-8 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/litsquad" title="" class="sf-depth-2">Lit Squad</a></li><li id="menu-7856-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children"><a href="https://heararizona.org/" title="" class="sf-depth-2">Hear Arizona</a></li><li id="menu-2773-1" class="middle even sf-item-10 sf-depth-2 sf-no-children"><a href="https://kjzz.org/podcast/untold-arizona" title="" class="sf-depth-2">Untold Arizona</a></li><li id="menu-7563-1" class="middle odd sf-item-11 sf-depth-2 sf-no-children"><a href="/podcast/azmonsoon" title="" class="sf-depth-2">Arizona Monsoon Stories</a></li><li id="menu-5086-1" class="middle even sf-item-12 sf-depth-2 sf-no-children"><a href="/podcast/recovering-caregiver" title="" class="sf-depth-2">The Recovering Caregiver</a></li><li id="menu-8043-1" class="last odd sf-item-13 sf-depth-2 sf-no-children"><a href="/podcast/prickly" title=" A podcast from KJZZ&#039;s Politics Desk." class="sf-depth-2">Prickly</a></li></ul></li><li id="menu-761-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/support" class="sf-depth-1 menuparent">Support</a><ul><li id="menu-774-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://kjzz.org/events" title="" class="sf-depth-2">Events</a></li><li id="menu-2731-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/member-benefits" class="sf-depth-2">Membership</a></li><li id="menu-1793-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="https://fpraz-store.myshopify.com/collections/kjzz" class="sf-depth-2" title="">Shop</a></li><li id="menu-7406-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://kjzz.org/content/1827401/vehicle-donation-program" title="" class="sf-depth-2">Car Donations</a></li><li id="menu-7522-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="https://fpraz.giftlegacy.com/" title="Estate Planning" class="sf-depth-2">Estate Planning</a></li></ul></li><li id="menu-787-1" class="middle odd sf-item-5 sf-depth-1 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href="/about" class="sf-depth-1 menuparent">About</a><ul><li id="menu-811-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://kjzz.org/staff" title="" class="sf-depth-2">Staff</a></li><li id="menu-1744-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="http://fpraz.org" class="sf-depth-2" title="Friends of Public Radio">Friends of Public Radio Arizona</a></li><li id="menu-933-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="https://kjzz.org/jobs" title="" class="sf-depth-2">Jobs</a></li><li id="menu-8128-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/contest-details" class="sf-depth-2">Contest Rules</a></li><li id="menu-7524-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/public-files" class="sf-depth-2">Public Files</a></li><li id="menu-796-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="https://kjzz.org/kjzz-ethics-and-practices" title="" class="sf-depth-2">Ethics and Practices</a></li><li id="menu-794-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="https://kjzz.org/content/996/award-winning-news-coverage-kjzz" title="" class="sf-depth-2">Awards</a></li><li id="menu-7764-1" class="last even sf-item-8 sf-depth-2 sf-no-children"><a href="/listening-options" class="sf-depth-2">Listening Options</a></li></ul></li><li id="menu-8096-1" class="middle even sf-item-6 sf-depth-1 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/play" class="sf-depth-1 menuparent">PLAY</a><ul><li id="menu-8098-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/play" title="" class="sf-depth-2">Quiz of the Week</a></li><li id="menu-8099-1" class="last even sf-item-2 sf-depth-2 sf-no-children"><a href="/hotspots" class="sf-depth-2">Hotspots</a></li></ul></li><li id="menu-1792-1" class="middle odd sf-item-7 sf-depth-1 sf-no-children"><a href="https://kjzz.org/contact" title="" class="sf-depth-1">Contact</a></li><li id="menu-780-1" class="middle even sf-item-8 sf-depth-1 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent"><a href="https://kjzz.org/music" title="" class="sf-depth-1 menuparent">Music</a><ul><li id="menu-782-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://jazz.kjzz.org/" title="" class="sf-depth-2">Jazz PHX</a></li><li id="menu-783-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="https://jazz.kjzz.org/playlists" title="" class="sf-depth-2">Jazz Playlists</a></li><li id="menu-784-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="https://jazz.kjzz.org/events" title="" class="sf-depth-2">Events</a></li><li id="menu-785-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="https://jazz.kjzz.org/jazz-venues-and-organizations" title="" class="sf-depth-2">Jazz Venues and Organizations</a></li><li id="menu-786-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="https://jazz.kjzz.org/jazz-venues-map" title="" class="sf-depth-2">Jazz Map</a></li><li id="menu-781-1" class="last even sf-item-6 sf-depth-2 sf-no-children"><a href="https://kjzz.org/blues-playlist" title="" class="sf-depth-2">Blues Playlists</a></li></ul></li><li id="menu-746-1" class="last odd sf-item-9 sf-depth-1 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="https://secure.kjzz.org/alleg/OnlineDonor/Login.aspx?AFF=1" title="" class="sf-depth-1 menuparent">E-Member Login</a><ul><li id="menu-1665-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://kjzz.org/e-member-information" title="" class="sf-depth-2">E-Member Information</a></li><li id="menu-1666-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="https://kjzz.org/stream-plus" title="" class="sf-depth-2">Access KJZZ Plus</a></li><li id="menu-1719-1" class="last odd sf-item-3 sf-depth-2 sf-no-children"><a href="https://secure.kjzz.org/alleg/OnlineDonor/Login.aspx?AFF=1" title="" class="sf-depth-2">E-Member Login</a></li></ul></li></ul>
+  </div></nav><div id="block-views-exp-search-news-page-5" class="block block-views no-title even block-count-2 block-region-leaderboard block--exp-search-news-page-5" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><form action="/search" method="get" id="views-exposed-form-search-news-page-5" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-keys-wrapper" class="views-exposed-widget views-widget-filter-keys">
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-keys">
+ <input title="Enter the terms you wish to search for." type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-search-news" value="Search" class="form-submit" />    </div>
+      </div>
+</div>
+</div></form></div>
+  </div></div><div id="block-block-194" class="block block-block no-title odd last block-count-3 block-region-leaderboard block-194" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id="campaignBannerDiv" >
+<!-- It's Your Turn, KJZZ 2024 -->
+
+    <a target="_blank" href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=ZCAMPMP&PAGETYPE=PLG&CHECK=EVmbRh6gn97lfODTdmTyU%2BzWDeZ%2BeA1M">
+        <!-- create two horizonal divs here:
+        one for A and one for B. 
+        A will contain subdivs for left and right. 
+        Right will contain subdivs for name and year.
+        -->
+        
+        <div id="bannerAsideDiv" >
+            <div id="bannerAsideLeftDiv" >
+                <img src="https://media.kjzz.org/s3fs-public/yourTurnCampaign2024_Z_zLeader_850x100-B.png">
+            </div>
+            <div id="bannerAsideRightDiv" >
+                <div id="nameDiv" class="dynamicTextDiv" >Member since Year</div>
+                <div id="memberSinceDiv" class="dynamicTextDiv" >Name in Place</div>
+            </div>
+        </div>
+        <div id="bannerBsideDiv">
+            <img id="whyB1img" src="https://media.kjzz.org/s3fs-public/yourTurnCampaign2024_Z_zLeader_1230x100-A1.png">
+            <img id="whyB2img" src="https://media.kjzz.org/s3fs-public/yourTurnCampaign2024_Z_zLeader_1230x100-A2.png">
+        </div>
+    </a>
+</div>
+
+<script>
+
+var listeners = ["Gladys from Phoenix", "Greg and Maureen from Phoenix", "Jennifer from Phoenix", "Mary from Phoenix", "Sarah from Phoenix", "Barry and Donna from Scottsdale", "Beverly and Lillian from Phoenix", "Bill and Ruth from Tampa", "Daniel and Linda from Phoenix", "David and Kim from Phoenix", "Patricia from Scottsdale", "Philip from Peoria", "Rebekah from Chandler", "Richard from Prescott", "Roseanne from Phoenix", "Serine from Phoenix", "Seth from Phoenix", "Shannon from Scottsdale", "Shirley from Apache Junction", "Stephen from Phoenix", "Thomas from Wilmington", "Tom from Phoenix", "Don and Deborah from Chandler", "Steve from Goodyear", "Carol from Avondale", "Carol from Hereford", "Cheryl from Phoenix", "Chris from Anthem", "Comer from Seabrook", "Geoffrey and Elizabeth from Mesa", "Paul from Cave Creek", "Valda from Scottsdale", "Alan and Dianne from Phoenix", "Cornele and Dona from Scottsdale", "David and Lisa from Phoenix", "Eric and Judy from Chandler", "Ester from Queen Creek", "Jean from Scottsdale", "Jeanne from Scottsdale", "Jessica from Chandler", "John from Scottsdale", "John from Surprise", "Judith from Phoenix", "Amy from Tempe", "Ann from Scottsdale", "Bill from Surprise", "Blakely from Phoenix", "Caroline from Sun City", "Mark and Linda from Peoria", "Paul and Charlotte from Mesa", "Phil and Kathleen from Mesa", "Russell and Maggie from Phoenix", "Steve from Fountain Hills", "Brenda from Mesa", "Kenneth and Kathleen from Scottsdale", "Mary from Phoenix", "Richard and Mary Ann from Chandler", "Theodor and Claudia from Phoenix", "Lavinia from Mesa", "Lucia from Paradise Vly", "Lynne from Prescott", "Marc from Chandler", "Margaret from Seattle", "Maria from Litchfield Park", "Richard from Dallas", "Richard from San Tan Valley", "Richard from Glendale", "Richard from Cave Creek", "Robert from Mesa", "Robin from Prescott", "Ruth from Laveen", "Sally from Phoenix", "Alan and Ellen from Paradise Valley", "Alan and Karen from Denver", "Alan and Marci from Phoenix", "Alan and Shelley from Tempe", "Alexander and Kristen from Phoenix", "Allen and Bruce from Scottsdale", "Amir and Shanna from Phoenix", "Bruce and Kathleen from Phoenix", "Bryan and Anne-Marie from Phoenix", "Burt and Janet from Phoenix", "Carl and Deborah from Prescott", "Carl and Jeanne from Tempe", "Carlos and Sindra from Phoenix", "Carol and Sonja from Tempe", "Cedric and Christine from Goodyear", "Chad and Sharon from Phoenix", "Esther from Prescott", "Ethan from Phoenix", "Ethel from San Tan Valley", "Evangeline from Chandler", "Felicia from Gilbert", "Fernanda from Los Angeles", "Jo from Avondale", "Lynn from Paradise Valley", "Lynn from Chandler", "Lynn from Glendale", "Maaike from Phoenix", "Maggie from Gilbert", "Mahbub from Chandler", "Mai-Linh from Tempe", "Manjira from Scottsdale", "Manuel from Eloy", "Mary from Phoenix", "Mary from Mesa", "Philip and Maria from Phoenix", "Rahul and Manju from Phoenix", "Ralph and Billie from Phoenix", "Randy and Barbara from Tempe", "William and Marian from Scottsdale", "William and Silvana from Chandler", "Zachary and Bethany from Seattle", "Wendy from Tempe", "Wendy from Surprise", "Whitney from Denver", "William from Phoenix", "William from Phoenix", "Zachary from Scottsdale", "Adam and Sonia from Scottsdale", "Alan and Deana from Tempe", "Alan and Paula from Nampa", "Amil and Mandy from Tempe", "James and Margherita from Glendale", "James and Nancy from Tempe", "James and Patricia from Sun Lakes", "James and Sara from Scottsdale", "James and Stacia from Gilbert", "Abby from Tempe", "Abdullah from Peoria", "Abigail from Phoenix", "Adebiyi from Tempe", "Adetayo from Waddell", "Adriane from Fountain Hills", "Afton from Sun City", "Ahisha from Phoenix", "Aida from Phoenix", "Albert from Phoenix", "Alejandro from Phoenix", "Alex from Chandler", "Alex from San Diego", "Ken and Judith from Mesa", "Kenneth and Evlynn from Sun City West", "Kent and Ronda from Phoenix", "Kevin and Allison from Mesa", "Kevin and Jamie from Chandler", "Kim and Kathy from Phoenix", "Kimball and Janet from Thatcher", "Kurt and Barb from Phoenix", "Mary from Cave Creek", "Peter and Deborah from Phoenix", "Phil and Mary from Mesa", "Phillip and Diane from Mesa", "Ralph and Tahani from Phoenix", "Rama and Mangala from Phoenix", "Randal and Cesar from Tucson", "Randall and Elizabeth from Phoenix", "Gabriel from Tempe", "Gail from Sadorus", "Gail from Queen Creek", "Gale from Gilbert", "Gary from Coolidge", "Hilary from Roseville", "Hildegarde from Mesa", "Holly from Tempe", "Hope from Chandler", "Howard from Phoenix", "Hugh from Chandler", "Ibrahim from Chandler", "Ivan from Glendale", "Phil from Leawood", "Philip from Saint Paul", "Philip from Phoenix", "Philip from Scottsdale", "Prakash from Phoenix", "Premnath from Sammamish", "Rachel from Glendale", "Rachel from Portland", "Raj from Gilbert", "Ralph from Fort Collins", "Ralph from Phoenix", "Ralph from Mesa", "Russ from Phoenix", "Russ from Sun City West", "Russell from Gilbert", "Russell from Scottsdale", "Ruth from Mesa", "Ruth from Sun City", "Ryan from Phoenix", "Scott from Phoenix", "Scott from Scottsdale", "Sean from Phoenix", "Shannon from Peoria", "Tara from Gilbert", "Tawana from Mesa", "Taylor from Phoenix", "Tena from Mesa", "Warren from Chandler", "Wayne from Overgaard", "Wei from Chandler", "Wendy from Phoenix", "Wendy from Scottsdale", "Zack from Phoenix", "Abraham and Monica from Chandler", "Adam and Mariel from Paradise Valley", "Akkangari and Manjulatha from Phoenix", "Alan and Karen from Mesa", "Alan and Lorna from Chandler", "Alastair and Karen from Scottsdale", "Alexis from Phoenix", "Alexiz from Phoenix", "Alice from Tempe", "Alisa from Mesa", "Alison from Phoenix", "Caren from Scottsdale", "Carla from Phoenix", "Carleen from Scottsdale", "Carlos from Mesa", "Carmen from Phoenix", "Gretchen from Scottsdale", "Guru from Gilbert", "Hannah from Reynoldsville", "Hannah from Tempe", "Harry from Scottsdale", "Hayward from Gilbert", "Helder from Chandler", "Joe from Gold Canyon", "Joe from Scottsdale", "Joellen from Scottsdale", "Johanna from Phoenix", "John from Phoenix", "Karly from Phoenix", "Kasha from Phoenix", "Katalin from Phoenix", "Kate from Phoenix", "Kate from New River", "Katelyn from Phoenix", "Mindi from Goodyear", "Mitul from Phoenix", "Mohammad from Glendale", "Moises from Glendale", "Paul from Surprise", "Paul from Wickenburg", "Paul from Tacoma", "Pauline from Phoenix", "Penny from Scottsdale", "Perla from Oro Valley", "Pete from Mesa", "Peter from Phoenix", "Peter from Chandler", "Philip from Cave Creek", "Phuong from Goodyear", "Phyllis from Phoenix", "Phyllis from Phoenix", "Prabhakara from Columbia", "Rafael from Phoenix", "Rajeev from Phoenix", "Rosa from Phoenix", "Rosemarie from Tucson", "Rosemary from Phoenix", "Rowdy from Phoenix", "Roxan from Surprise", "Roynette from Sun City West", "Shawn from Scottsdale", "Shayla and Julie from Scottsdale", "Sheilagh from Phoenix", "Shelley from Phoenix", "Jennifer from Peoria", "Jeremi from Tucson", "Jeremy from Phoenix", "Jessica from Phoenix", "Jessica from Mesa", "Jill from Mesa", "Mary from Gilbert", "Mary from Glendale", "Maryann from Glendale", "Mason from Paradise Vly", "Matina from Laveen", "Rajesh from Glendale", "Ramon from Phoenix", "Randall from Peoria", "Ray from Cottonwood", "Raymond and Kerri from Chandler", "Shawn from Tempe", "Sheldon from Scottsdale", "Tamwah from Scottsdale", "Taylor from Milpitas", "Tazmine from Phoenix", "Ted from Glendale", "Zack from Peoria", "Zaida from Phoenix", "Abigail from Mesa", "Frank and Vicki from Tempe", "Freya from Bellevue", "Gabriela from Avondale", "Judith from Peoria", "Judy from Cincinnati", "Ladonna and Kirsten from Peoria", "Lorna from Green Valley", "Lorraine from Phoenix", "Lourdes from Mesa", "Lydia from Chicago", "Victoria from Scottsdale", "Vidya from Scottsdale", "Vivian from Phoenix", "Vyle from Apache Junction", "Wayne from Queen Creek", "Matthew from Phoenix", "Matthew from Gilbert", "Meg from Tempe", "Melinda from Phoenix", "Melissa from Tempe", "Michael from Potomac", "Michael from Cave Creek", "Christopher and Jennifer from Scottsdale", "Cindy from Scottsdale", "Colter and Katie from Glendale", "Consuelo from Phoenix", "Craig and Marylou from Scottsdale", "Cynthia from Phoenix", "Ed from Phoenix", "Edward from Eloy", "Eileen from Wheaton", "Eileen from Scottsdale", "Erin from Phoenix", "Ernesto from Mesa", "Ferdaus from Laveen", "Flavia from Phoenix", "Forrest from Phoenix", "Fran from Peoria", "Janet from Sun City", "Janice from Goodyear", "Janira from Glendale", "Janis from Phoenix", "Jay from Glendale", "Robert and Jacqueline from Phoenix", "Robert and Kathy from Phoenix", "Roger from Phoenix", "Ron from Kalamazoo", "Rosalind from Harvard", "Tate from Surprise", "Terrence from Fountain Hls", "Thomas and Hina from Chandler", "Tiernnee from Gilbert", "Tim and Shelley from Chandler", "Timothy and Jennifer from Scottsdale", "Tina from Prescott Valley", "Bonnie from Scottsdale", "Bonnie from Peoria", "Brenda from Chandler", "Brian and Carrie from Phoenix", "Bruce from Cave Creek", "Caitlin from Phoenix", "Caitlin from Phoenix", "Camilo from Sun City West", "Candis from Tucson", "Neil from Scottsdale", "Nolawi and Sangeeta from Phoenix", "Patricia from Goodyear", "Paul from Gilbert", "Paul from Scottsdale", "Paul and Yuanita from Scottsdale", "Petter and Mary from Surprise", "Rajesh and Paragi from Phoenix", "Rebecca from Arizona City", "Richard and Cheryl from Scottsdale", "Robert from Apache Junction", "Sylvina from Gilbert", "Tara from Scottsdale", "Terry from Scottsdale", "Timothy and Nina from Chandler", "Tom from Phoenix", "Wyatt and Andrea from Phoenix"];
+
+var yearsArray = ["Member since 1996", "Members since 1996", "Member since 1996", "Member since 1996", "Member since 1996", "Members since 1997", "Members since 1997", "Members since 1997", "Members since 1997", "Members since 1997", "Member since 1997", "Member since 1997", "Member since 1997", "Member since 1997", "Member since 1997", "Member since 1997", "Member since 1998", "Member since 1998", "Member since 1998", "Member since 1998", "Member since 1998", "Member since 1998", "Members since 1999", "Member since 2000", "Member since 2001", "Member since 2001", "Member since 2001", "Member since 2001", "Member since 2001", "Members since 2001", "Member since 2003", "Member since 2003", "Members since 2004", "Members since 2004", "Members since 2004", "Members since 2004", "Member since 2005", "Member since 2005", "Member since 2005", "Member since 2005", "Member since 2005", "Member since 2005", "Member since 2005", "Member since 2007", "Member since 2007", "Member since 2007", "Member since 2007", "Member since 2007", "Members since 2007", "Members since 2007", "Members since 2007", "Members since 2007", "Member since 2007", "Member since 2008", "Members since 2008", "Member since 2008", "Members since 2008", "Members since 2008", "Member since 2009", "Member since 2009", "Member since 2009", "Member since 2009", "Member since 2009", "Member since 2009", "Member since 2010", "Member since 2010", "Member since 2010", "Member since 2010", "Member since 2010", "Member since 2010", "Member since 2010", "Member since 2010", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Member since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Members since 2011", "Member since 2013", "Member since 2013", "Member since 2013", "Member since 2013", "Member since 2013", "Member since 2013", "Members since 2014", "Members since 2014", "Members since 2014", "Members since 2014", "Members since 2014", "Members since 2014", "Members since 2014", "Members since 2014", "Members since 2014", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Member since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Member since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Members since 2015", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Member since 2017", "Members since 2018", "Members since 2018", "Members since 2018", "Members since 2018", "Members since 2018", "Members since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Member since 2018", "Members since 2018", "Member since 2018", "Member since 2018", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Members since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2019", "Member since 2020", "Members since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Members since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2020", "Member since 2021", "Member since 2021", "Member since 2021", "Member since 2021", "Member since 2021", "Member since 2021", "Member since 2021", "Members since 2022", "Member since 2022", "Members since 2022", "Member since 2022", "Members since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Members since 2022", "Members since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Member since 2022", "Members since 2022", "Member since 2022", "Members since 2022", "Members since 2022", "Member since 2022", "Member since 2023", "Member since 2023", "Member since 2023", "Members since 2023", "Member since 2023", "Member since 2023", "Member since 2023", "Member since 2023", "Member since 2023", "Member since 2023", "Members since 2023", "Member since 2023", "Member since 2023", "Member since 2023", "Members since 2023", "Members since 2024", "Members since 2024", "Member since 2024", "Members since 2024", "Member since 2024", "Member since 2024", "Member since 2024", "Member since 2024", "Members since 2024", "Member since 2024", "Members since 2024"];
+
+/*
+Psuedocode:
+define div for A and div for B with B style set to display none
+declare state variable isDisplayingB
+
+randomizeText()
+setInterval(switchDisplay, delay)
+
+function randomizeText:
+    randomly change contents of displayAdiv
+
+function switchDisplay:
+    if (isDisplayingB)
+        randomizeFunction()
+        displayBdiv = none
+        displayAdiv = block
+        isDisplayingB = false
+    else
+        displayAdiv = none
+        displayBdiv = block
+        isDisplayingB = true
+*/
+
+// my code -----------------------------
+document.getElementById('bannerBsideDiv').style.opacity = 0;
+let isDisplayingB = false;
+let arrayLength = listeners.length;
+    
+randomizeText();
+setInterval(switchDisplay, 4000);
+//    was 4000, set to 400000 for CSS tuning
+let recentChoices = [];
+
+
+function randomizeText() {
+    var pickamember = Math.floor(Math.random() * arrayLength);
+    // pickamember = 164;
+    document.getElementById('memberSinceDiv').innerHTML = yearsArray[pickamember];
+    document.getElementById('nameDiv').innerHTML = listeners[pickamember];
+}
+function switchDisplay() {
+    if (isDisplayingB) {
+        randomizeText();
+        document.getElementById('bannerBsideDiv').style.opacity = 0;
+        document.getElementById('bannerAsideDiv').style.opacity = 1;
+        isDisplayingB = false;
+    } else {
+        document.getElementById('bannerAsideDiv').style.opacity = 0;
+        document.getElementById('bannerBsideDiv').style.opacity = 1;
+        isDisplayingB = true;
+    }
+}
+</script>
+
+<style>
+    #campaignBannerDiv {
+        background-image: url("https://media.kjzz.org/s3fs-public/yourTurnCampaign2024_Z_zLeader_1230x150-BKG.png");
+        background-size: cover;
+/*        background-position: center;*/
+        position: relative;
+        max-width:12300px;
+        min-height:100px;
+        margin-bottom: 10px;
+    }
+    #campaignBannerDiv a {
+        color: #fff;
+    }
+    #campaignBannerDiv a:hover, #campaignBannerDiv:focus  {
+        text-decoration:none;
+    }
+    #bannerAsideDiv {
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    div#bannerBsideDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+         width:100%;
+        height:100%;
+    }
+    #bannerAsideDiv, #bannerBsideDiv {
+        opacity: 1;
+        transition: opacity 0.5s linear;
+        position: absolute;
+        top: 0;
+    }
+    div#bannerAsideLeftDiv {
+        max-height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink:1;
+    }
+    div#bannerAsideLeftDiv img {
+        max-height: 100%;
+    }
+    div#bannerAsideRightDiv {
+        max-height: 50%;
+        flex-basis:40%;
+        flex-shrink:1;
+        flex-grow: 1;
+        display:flex;
+        flex-direction: column;
+/*        justify-content: flex-end;*/
+        font-family: sans-serif;
+        font-size: 4.0vw;
+        line-height: 1.2;
+        font-weight: 400;
+        font-style: normal;
+        color:white;
+        padding: 0 10px 4px 10px;
+    }
+    div.dynamicTextDiv {
+        width:100%;
+    }
+    div#memberSinceDiv {
+      line-height: normal;
+    }
+    div#nameDiv, div#memberSinceDiv {
+        text-align:center;
+    }
+    div#nameDiv {
+        font-weight: bold;
+    }
+    img#whyBimg {
+        max-width:85%;
+        max-height: 95%;
+    }
+
+@media only screen and (max-width: 600px) {
+    img#whyB1img, img#whyB2img {
+            max-height: 44%;
+    } 
+}
+    
+     
+   
+
+@media only screen and (min-width: 600px) {
+    #campaignBannerDiv {
+/*        background-size: 100% 100%;*/
+    }
+    img#whyB1img {
+        max-width: 55%;
+        max-height: 90%;
+        padding-top: 12px;
+    }
+    img#whyB2img {
+        max-width: 45%;
+    }
+    div#bannerAsideRightDiv {
+        font-size: 3.0vw;
+    }
+    div#bannerBsideDiv {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    div#bannerAsideRightDiv {
+/*        justify-content: flex-end;*/
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    div#bannerAsideDiv {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    div#bannerAsideLeftDiv {
+        height: 100%;
+        max-height: 100%;
+        max-width: 55%;
+    }
+    div#bannerAsideRightDiv {
+        max-height: 100%;
+        font-size: 24px;
+/*        color: black;*/
+        flex-grow: 0;
+        padding: 0 10px 4px 10px;
+    }
+    div#nameDiv {
+        line-height: 1.0;
+        
+    }
+    div.#memberSinceDiv {
+        line-height: 1.4;
+    }
+}
+
+</style></div>
+  </div></div></div></div>
+    <header id="header" class="clearfix" role="banner">
+
+              <!-- !Branding -->
+        <div id="branding" class="branding-elements clearfix">
+
+          
+                      <!-- !Site name and Slogan -->
+            <div class="element-invisible h-group" id="name-and-slogan">
+
+                              <h1 class="element-invisible" id="site-name"><a href="/" title="Home page">KJZZ</a></h1>
+              
+              
+            </div>
+          
+        </div>
+      
+      <!-- !Header Region -->
+      <div class="region region-header"><div class="region-inner clearfix"><div id="block-block-5" class="block block-block no-title odd first block-count-4 block-region-header block-5" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id="header-logo">
+<a href="https://kjzz.org"><img src="/sites/default/files/KJZZ_Gen_BlackBlue.png" alt="KJZZ 91.5FM Phoenix Logo"/></a>
+</div>
+
+<div id="give-buttons">
+<div class="donate"><a href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=ZSUSTANBOX&PAGETYPE=PLG&CHECK=zG7rksPMV58tjNqfRNYwgr1YhDw50SikSh2nq0qouhg%3d">Donate</a></div>
+<div class="subscribe"><a href="https://kjzz.org/content/1811965/subscribe-our-e-newsletters">Subscribe</a></div>
+<div class="clear-it"></div>
+</div></div>
+  </div></div><div id="block-block-81" class="block block-block no-title even block-count-5 block-region-header block-81" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><style>
+#block-block-81{
+margin: 10px 0 0 10px;
+}
+@media only screen and (max-width: 1000px) {
+.page-banner img{
+max-width: 100%;
+}
+#block-block-81 {
+    margin: 10px auto;
+    max-width: 300px;
+}
+}
+</style>
+<style>
+.cmi-banner {
+  max-width:600px;
+  height: 60px;
+  background:#006ba9;
+}
+.cmi-image {
+  max-width:300px;
+  float:left;
+}
+.cmi-wrap {
+  max-width:300px;
+  float:left;
+  margin-left: 50px;
+  background: #006ba9;
+}
+.cmi-number {
+  font-size:32px;
+}
+.cmi-number,
+.cmi-text {
+  color: #fff;
+  font-weight: bold;
+  text-align:center;
+  line-height: 1.15em;
+}
+.cmi-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1000px)  {
+  .page-banner {
+    margin-top:0;
+  }
+  .page-banner img {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #block-block-82 {
+    margin: 10px auto 0 auto;
+  }
+  .cmi-wrap {
+    width:300px;
+    margin:0;
+    float: none;
+    display: block;
+  }
+  .cmi-banner {
+    height:unset;
+  }
+  .cmi-image {
+    float:none;
+    width: 300px;
+    height: 60px;
+    background: #006ba9 url('http://kjzz.org/sites/default/files/cmi-banner-300x60_mobile.png') no-repeat;
+  }
+  .cmi-image img {
+    display:none;
+  }
+}
+
+</style>
+<div class="view view-nodequeue-48 view-id-nodequeue_48 view-display-id-block view-dom-id-6ef782703a127d9c8f38c1c7cc31436d">
+        
+  
+  
+      <div class="view-content">
+        <div>
+      
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://kjzz.org/play"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/play_banner_20240509.png" width="800" height="100" alt="https://kjzz.org/play" title="https://kjzz.org/play" /></a></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div><!--
+  <a href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=ZEND_FYEAR&PAGETYPE=PLG&CHECK=VI4QcbudbqyOMGlu6e8NcL1YhDw50SikSh2nq0qouhg%3d"><div>
+    <img src="/sites/default/files/ImConnected_border_600x60.png" alt="Im Connected - Business. Be A Member. Donate." />
+  </div></a>
+
+<div class="cmi-banner">
+  <a href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=ZCOUNTMEIN&PAGETYPE=PLG&CHECK=essBm54gOBRvSlCeOGfmA71YhDw50SikSh2nq0qouhg%3d"><div class="cmi-image">
+    <img src="/sites/default/files/cmi-banner-300x60.png" />
+  </div></a>
+  <div class="cmi-wrap">
+    <div class="cmi-number">
+-->
+    <!--
+    </div>
+    <div class="cmi-text">New Members</div>
+  </div>
+</div>
+--><!-- // pull Homepage news promo nodequeue block -->
+<div class="page-banner" style="margin-top:2px;"><div class="view view-header-news-promo view-id-header_news_promo view-display-id-block view-dom-id-5fc48214c87afc13e37f890c346ac96e">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://kjzz.org/content/1793205/every-last-drop-tackling-big-questions-about-arizonas-water-future" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/every_drop_whale_banner_20240523.jpg" width="800" height="144" alt="water.kjzz.org" title="water.kjzz.org" /></a></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+
+
+</div>
+  </div></div><div id="block-block-7" class="block block-block no-title odd last block-count-6 block-region-header block-7" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id="on-play" style="margin: 5px;">
+<!-- ================ On Now box =============== -->
+<script>
+
+ function PopOut(){
+    window.open('/sites/all/services/kjzzstreamer.php','KJZZ','width=325,height=580,location=0,toolbar=0');
+  }
+	function PopOutJazz(){
+    window.open('https://jazz.kjzz.org/sites/all/services/jazzstreamer.php','JAZZ','width=325,height=580,location=0,toolbar=0');
+  }
+	
+</script>
+
+ <iframe style="float: left; margin-top: -3px; margin-left: -5px;"  src="https://composer.nprstations.org/widgets/iframe/now.html?v=5.12.6&station=5a674aa3e4b00f44944636b5" width="135" height="95" frameborder="0" seamless></iframe>
+
+<!-- ================ Listen Now Button =============== -->
+<div>
+  <div class="section clearfix">
+    <div class="press-play" style="padding: 20px 15px;" onClick="PopOut()" alt="Listen Live">Listen<br><span class="press-live">LIVE</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ================ JazzPHX Listen Now Button =============== -->
+<div class="jazzphx"><a onClick="PopOutJazz()" style="cursor: pointer; color: #1a85b5"><img src="/sites/default/files/jazzplay.png" alt="Listen to Jazz" style="height: 14px;" />&nbsp;&nbsp;Listen to JazzPHX</a></div>
+
+<!-- ================ Hourly Newscast =============== -->
+
+<div class="view view-test-npr-hourly-news view-id-test_npr_hourly_news view-display-id-block_1 view-dom-id-bdf889b7d9b70a44850d7863cc08080e">
+            <div class="view-header">
+      <style>
+.npr-audio {max-width: 100% !important; width: 100%;}
+</style>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last npr-audio">
+      
+  <div class="views-field views-field-title">        <span class="field-content">NPR News: 05-30-2024 6PM EDT</span>  </div>  
+  <div class="views-field views-field-field-audio">        <div class="field-content">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.3/dist/amplitude.js"></script>
+    <style>
+    .view-test-npr-hourly-news .views-field-title {
+      font-size: 12px;
+      text-align: center;
+    }
+    div#hourly-news-player {
+      width: 275px;
+      margin: auto;
+    }
+    div#hourly-news-player div.hnp-container {
+      background-color: #000;
+    }
+    div#hourly-news-player div.hnp-container progress.amplitude-song-played-progress:not([value]) {
+      background-color: #475e86;
+    }
+    div#hourly-news-player div.hnp-container progress.amplitude-song-played-progress {
+      background-color: #475e86;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 7px;
+      display: block;
+      cursor: pointer;
+      border: none;
+    }
+    div#hourly-news-player div.hnp-container progress[value]::-webkit-progress-bar {
+      background-color: #475e86;
+    }
+    div#hourly-news-player div.hnp-container progress[value]::-moz-progress-bar {
+      background-color: #00a0ff;
+    }
+    div#hourly-news-player div.hnp-container progress[value]::-webkit-progress-value {
+      background-color: #00a0ff;
+    }
+    div#hourly-news-player div.hnp-container div.time-container {
+      font-family: 'arial';
+      font-size: 12px;
+      color: #fff;
+      height: 0;
+    }
+    div#hourly-news-player div.hnp-container div.time-container span.current-time {
+      position: relative;
+      left: 7px;
+      top: -20px;
+    }
+    div#hourly-news-player div.hnp-container div.time-container span.duration {
+      position: relative;
+      left: 205px;
+      top: -20px;
+    }
+    div#hourly-news-player div.hnp-container div.control-container div.amplitude-play-pause {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      margin: 5px auto;
+    }
+    div#hourly-news-player div.hnp-container div.control-container div.amplitude-play-pause.amplitude-paused {
+      background: url('https://kjzz.org/sites/default/files/play-it.svg');
+    }
+    div#hourly-news-player div.hnp-container div.control-container div.amplitude-play-pause.amplitude-playing {
+      background: url('https://kjzz.org/sites/default/files/pause-it.svg');
+    }
+    div#hourly-news-player div.hnp-container div.control-container:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    </style>
+
+    <div id="hourly-news-player">
+      <div class="hnp-container">
+        <progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+
+        <div class="control-container">
+          <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+        </div>
+
+        <div class="time-container">
+          <span class="current-time">
+            <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+          </span>
+          <span class="duration">
+            <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      Amplitude.init({
+        "songs": [
+          {
+            "url": "https://media.kjzz.org/s3fs-public/s3fs-public/podcast/NPR8215610644.mp3",
+          }
+        ]
+      });
+      /*window.onkeydown = function(e) {
+          return !(e.keyCode == 32);
+      };*/
+      document.getElementById('song-played-progress').addEventListener('click', function( e ){
+        var offset = this.getBoundingClientRect();
+        var x = e.pageX - offset.left;
+        Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+      });
+    </script>
+</div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+  </div></div></div></div>
+    </header>
+
+    <!-- !Navigation -->
+            
+    <!-- !Breadcrumbs -->
+    
+    <!-- !Messages and Help -->
+        <div class="region region-help"><div class="region-inner clearfix"><div id="block-block-13" class="block block-block no-title odd first block-count-7 block-region-help block-13" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!-- div style="text-align: center;"><a href="http://recorder.maricopa.gov/electionresults/" target="_blank"><img src="https://kjzz.org/sites/default/files/election-result.png"  /></a></div -->
+
+
+<!--  // AZ PRIMARY ELECTION BANNER // 
+
+
+<div class="font1" style="vertical-align: middle; color: #000000; background-color: #ffffcc; padding: 10px; text-align: center;"><span style="font-size: medium; horizontal-align: center;"><strong><span style="font-size: xx-large;">2018 Arizona Midterm Election</span></strong></span><span style="font-size: medium;  "><strong><br />• <a href="https://results.arizona.vote/#/featured/4/0" target="_blank">Arizona Secretary Of State Results</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-size: medium;"><strong>• <a href="http://recorder.maricopa.gov/electionresults/" target="_blank">Maricopa County Election Results</a></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: medium;"></span></div> 
+-->
+
+
+<!--
+<div class="font1" style="vertical-align: middle; color: #000000; background-color: #025F98; padding: 10px; text-align: center;"><span style="font-size: medium; horizontal-align: center;"><strong><span style="font-size: xx-large; color: #ffffff;">Inauguration Coverage</span></strong></span><span style="font-size: medium; color: #ffffcc;"><strong><br />• 
+<a onClick="PopOut()" style=" color: #ffffcc;" href="#" target="_blank">Listen to KJZZ on-air coverage</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span>
+<span style="font-size: medium; color: #ffffcc;"><strong>• <a style=" color: #ffffcc;" href="http://kjzz.org/inauguration-fact-check" target="_blank">Inauguration Fact Check</a></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span style="font-size: medium;color: #ffffcc;"><strong>• <a style=" color: #ffffcc;" href="http://kjzz.org/content/423673/npr-2017-inauguration-live-blog" target="_blank">NPR Inauguration Live Blog</a><br /></strong></span></div><br />
+
+-->
+<!-- // BREAKING NEWS BANNER // -->
+
+
+
+<!--
+
+<style>
+#menu-bar {height:inherit;}
+</style>
+
+<div style="background-color: #ffffe0; color: #000000; font-size: 1em; padding: 7px 10px 10px 10px; margin:0 auto; text-align: center; max-width: 1200px;">
+
+<h3> TECHNICAL NOTE:  Our Glenwood/Silver City, New Mexico, transmitter at 92.1 FM is off air. Our engineers are diagnosing the problem. Thank you for your patience.</h3>
+
+</div>
+-->
+
+
+<!--
+<!-- div style="margin-top: 10px; background-color: #eee; color: #000000; font-size: 1em; padding: 7px 15px 10px 15px; margin:0 auto; text-align: center; max-width: 1200px;">
+Technical update: For listeners to KJZZ's translator at 92.1 serving Glenwood, NM and surrounding communities, storms have knocked out power.  We will continue to monitor the local power company for updates. Thanks for your patience.
+</div -->
+<!--
+<div style="margin-top: 10px; background-color: #eee; color: #000000; font-size: 1em; padding: 7px 15px 10px 15px; margin:10px auto; text-align: center; max-width: 1200px;">
+Technical update: For listeners to KJZZ's translator at 106.9 serving Globe and surrounding communities, we are experiencing broadcasting difficulties. Thanks for your patience.
+</div>
+
+-->
+
+</div>
+  </div></div><div id="block-block-199" class="block block-block no-title even block-count-8 block-region-help block-199" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><style>
+#block-block-199 {
+max-width: 320px;
+  margin: 15px auto;
+}
+</style>
+<!-- script address domain change per Google in August 2023
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+-->
+<script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+if(window.innerWidth<=500){
+googletag.defineSlot('/1056837/320x50', [320, 50], 'div-gpt-ad-1706286201356-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if (event.slot.getSlotElementId() == "div-gpt-ad-1706286201356-0" ) {
+       if(event.isEmpty){
+jQuery('#block-block-199').css('display', 'none');
+}    
+}
+
+});
+    googletag.enableServices();
+}
+  });
+</script>
+
+<!-- /1056837/320x50 -->
+<div id='div-gpt-ad-1706286201356-0' style='height:100%; max-width:500px; margin: auto;'>
+  <script>
+if(window.innerWidth<=500){
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1706286201356-0'); });
+}
+  </script>
+</div>
+</div>
+  </div></div><div id="block-block-88" class="block block-block no-title odd last block-count-9 block-region-help block-88" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><style>
+#block-block-88 {
+  margin: 15px auto;
+}
+</style>
+
+<!-- script address domain change per Google in August 2023
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+-->
+<script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+if(window.innerWidth>=768){
+    googletag.defineSlot('/1056837/kjzz_970x50', [970, 50], 'div-gpt-ad-1506709294720-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if (event.slot.getSlotElementId() == "div-gpt-ad-1506709294720-0" ) {
+       if(event.isEmpty){
+jQuery('#block-block-88').css('display', 'none');
+}    
+}
+
+});
+    googletag.enableServices();
+}
+  });
+</script>
+
+<!-- /1056837/kjzz_970x50 -->
+<div id='div-gpt-ad-1506709294720-0' style='height:100%; max-width:970px; margin: auto;'>
+<script>
+if(window.innerWidth>=768){
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506709294720-0'); });
+}
+</script>
+
+</div>
+</div>
+  </div></div></div></div>
+    <!-- !Secondary Content Region -->
+    
+    <div id="columns" class="columns clearfix">
+      <main id="content-column" class="content-column" role="main">
+        <div class="content-inner">
+
+          <!-- !Highlighted region -->
+          
+          <section id="main-content">
+
+            
+            <!-- !Main Content Header -->
+                          <header id="main-content-header" class="clearfix">
+
+                                  <h1 id="page-title">
+                    Search News                  </h1>
+                
+                
+              </header>
+            
+            <!-- !Main Content -->
+                          <div id="content" class="region">
+                <div id="block-system-main" class="block block-system no-title odd first last block-count-10 block-region-content block-main" >  
+  
+  <div class="view view-search-news view-id-search_news view-display-id-page_2 keyword-search view-dom-id-9fa2e60added6cbe9fd94dff5c470f6b">
+            <div class="view-header">
+      <p>Not finding what you are looking for? Try <a href="/search-support">searching our support pages</a> for information on membership.
+</p>    </div>
+  
+      <div class="view-filters">
+      <form action="/search-news" method="get" id="views-exposed-form-search-news-page-2" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-keys-wrapper" class="views-exposed-widget views-widget-filter-keys">
+                  <label for="edit-keys">
+            Keywords          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-keys">
+ <input title="Enter the terms you wish to search for." type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+          <div id="edit-date-filter-wrapper" class="views-exposed-widget views-widget-filter-date_filter">
+                  <label for="edit-date-filter">
+            Publish Date          </label>
+                        <div class="views-widget">
+          <div id="edit-date-filter-min-wrapper"><div id="edit-date-filter-min-inside-wrapper"><div  class="container-inline-date"><div class="form-item form-type-date-popup form-item-date-filter-min">
+  <label for="edit-date-filter-min">Start date </label>
+ <div id="edit-date-filter-min"  class="date-padding"><div class="form-item form-type-textfield form-item-date-filter-min-date">
+  <label class="element-invisible" for="edit-date-filter-min-datepicker-popup-0">Date </label>
+ <input type="text" id="edit-date-filter-min-datepicker-popup-0" name="date_filter[min][date]" value="" size="20" maxlength="30" class="form-text" />
+<div class="description"> E.g., 2024-06-30</div>
+</div>
+</div>
+</div>
+</div></div></div><div id="edit-date-filter-max-wrapper"><div id="edit-date-filter-max-inside-wrapper"><div  class="container-inline-date"><div class="form-item form-type-date-popup form-item-date-filter-max">
+  <label for="edit-date-filter-max">End date </label>
+ <div id="edit-date-filter-max"  class="date-padding"><div class="form-item form-type-textfield form-item-date-filter-max-date">
+  <label class="element-invisible" for="edit-date-filter-max-datepicker-popup-0">Date </label>
+ <input type="text" id="edit-date-filter-max-datepicker-popup-0" name="date_filter[max][date]" value="" size="20" maxlength="30" class="form-text" />
+<div class="description"> E.g., 2024-06-30</div>
+</div>
+</div>
+</div>
+</div></div></div>        </div>
+              </div>
+              <div class="views-exposed-widget views-widget-sort-by">
+        <div class="form-item form-type-select form-item-sort-by">
+  <label for="edit-sort-by">Sort by </label>
+ <select id="edit-sort-by" name="sort_by" class="form-select"><option value="created" selected="selected">Publish Date</option><option value="score">Relevancy</option></select>
+</div>
+      </div>
+      <div class="views-exposed-widget views-widget-sort-order">
+        <div class="form-item form-type-select form-item-sort-order">
+  <label for="edit-sort-order">Order </label>
+ <select id="edit-sort-order" name="sort_order" class="form-select"><option value="ASC">Asc</option><option value="DESC" selected="selected">Desc</option></select>
+</div>
+      </div>
+                <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-search-news" value="Apply" class="form-submit" />    </div>
+          <div class="views-exposed-widget views-reset-button">
+        <input type="submit" id="edit-reset" name="op" value="Reset" class="form-submit" />      </div>
+      </div>
+</div>
+</div></form>    </div>
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div  role="article" class="ds-2col-fluid node node-article article odd node-search-display view-mode-search_display group-one-column clearfix">
+
+  
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10502/new-bill-would-give-credit-score-nontraditional-borrowers">New Bill Would Give Credit Score To Nontraditional Borrowers</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">If you do not have a credit card or a mortgage payment, it is tough to get a bank's attention when you are asking for a loan. It is a Catch 22, how do you get credit if you do not have credit?</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Peter O'Dowd</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div  role="article" class="ds-2col-fluid node node-article article even node-search-display view-mode-search_display clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-teaser-image field-type-image field-label-hidden view-mode-search_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/10499/mesa-roll-new-development"><img class="image-style-media-thumbnail" src="https://media.kjzz.org/s3fs-public/styles/media_thumbnail/public/field/image/mesa cubs plaque.jpg?itok=p4NCUCpI" width="150" height="150" /></a></figure></div></div>    </div>
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10499/mesa-roll-new-development">Mesa Is On A Roll With New Development</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Mesa has been on a pretty good roll recently. Last week, it landed an Apple facility. The city has seen a lot of development along its existing and proposed light rail lines, has added several colleges and universities to its downtown and is the home of Phoenix Mesa Gateway Airport.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Mark Brodie</div><div class="field-item odd">Steve Goldstein</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div  role="article" class="ds-2col-fluid node node-article article odd node-search-display view-mode-search_display group-one-column clearfix">
+
+  
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10498/net-metering-debate-ends-compromise">Net Metering Debate Ends With Compromise </a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">You may have heard something about this whole net metering debate, lots of ads, lots of accusations, lots of money being spent. Late Thursday night, the Arizona Corporation Commission narrowly voted to add a fee of around $5 to the monthly utility bills of future roof-top solar customers.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Mark Brodie</div><div class="field-item odd">Steve Goldstein</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div  role="article" class="ds-2col-fluid node node-article article even node-search-display view-mode-search_display group-one-column clearfix">
+
+  
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10497/canadian-snowbirds-flock-arizona">Canadian Snowbirds Flock To Arizona</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">It is November and that means we are running into our annual nemeses, crowded freeways, crowded parking lots. Let's just say everything seems more crowded.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Steve Goldstein</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div  role="article" class="ds-2col-fluid node node-imported-fronteras-stories article odd node-search-display view-mode-search_display group-one-column clearfix">
+
+  
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/9246/remittances-sent-latin-america-recover-recession">Remittances Sent To Latin America Recover From Recession</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">The U.S. is the largest source of remittances to Latin America. The recession greatly slowed money being sent to home countries by migrants. But the Pew Hispanic Trends Project has found that rates in most Latin American countries have bounced back, except in Mexico.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Kate Sheehy</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div  role="article" class="ds-2col-fluid node node-article article even node-search-display view-mode-search_display clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-teaser-image field-type-image field-label-hidden view-mode-search_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/10494/did-you-know-st-marys-basilica-oldest-catholic-church-phoenix"><img class="image-style-media-thumbnail" src="https://media.kjzz.org/s3fs-public/styles/media_thumbnail/public/field/image/StMarys Basilica.jpg?itok=oe87ycDL" width="150" height="150" alt="St. Mary&#039;s Basilica " title="St. Mary&#039;s Basilica " /></a></figure></div></div>    </div>
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10494/did-you-know-st-marys-basilica-oldest-catholic-church-phoenix">Did You Know: St. Mary&#039;s Basilica Is The Oldest Catholic Church In Phoenix</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Surrounded by modern-day hotels, convention and art centers, the relatively small building dates back 100 years. It is one of the oldest religious structures in Phoenix. </div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nadine Arroyo Rodriguez</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div  role="article" class="ds-2col-fluid node node-article article odd node-search-display view-mode-search_display group-one-column clearfix">
+
+  
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10493/arizona-supreme-court-rules-prosecutors-must-turn-over-evidence">Arizona Supreme Court Rules Prosecutors Must Turn Over Evidence</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">The Arizona Supreme Court has approved a new rule that may help people convicted of a crime. The help could come from and unlikely source, prosecutors.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Al Macias</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div  role="article" class="ds-2col-fluid node node-imported-fronteras-stories article even node-search-display view-mode-search_display clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-teaser-image field-type-image field-label-hidden view-mode-search_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/9245/remains-mcstay-family-found-sheriff-calls-it-homicide"><img class="image-style-media-thumbnail" src="https://media.kjzz.org/s3fs-public/styles/media_thumbnail/public/field/image/2013/02/01/McStay.jpg?itok=ViDdposw" width="150" height="150" alt="Clockwise from top left, Joseph McStay, Summer McStay, Joseph Mateo McStay and Gianni McStay." /></a></figure></div></div>    </div>
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/9245/remains-mcstay-family-found-sheriff-calls-it-homicide">Remains Of McStay Family Found, Sheriff Calls It Homicide</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Human remains buried in the desert near Victorville, Calif. have been identified as those of the McStay family, who had been missing from their Fallbrook, Calif. home since February 2010.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Tracy Greer</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div  role="article" class="ds-2col-fluid node node-article article odd node-search-display view-mode-search_display clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-teaser-image field-type-image field-label-hidden view-mode-search_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/10492/first-intravenous-drip-bar-opens-valley"><img class="image-style-media-thumbnail" src="https://media.kjzz.org/s3fs-public/styles/media_thumbnail/public/field/image/photo 1(1).JPG?itok=_5uKmTkU" width="150" height="150" /></a></figure></div></div>    </div>
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10492/first-intravenous-drip-bar-opens-valley">First Intravenous Drip Bar Opens In The Valley</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">A "drip bar" in Old Town Scottsdale is putting a new spin on taking your vitamins.The Drip Room offers customers vitamins through an intravenous feed.  </div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Alexandra Olgin</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-10 views-row-even views-row-last">
+    <div  role="article" class="ds-2col-fluid node node-article article even node-search-display view-mode-search_display clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-teaser-image field-type-image field-label-hidden view-mode-search_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/10488/kjzz-correspondent-achieves-personal-victory-very-short-triathlon"><img class="image-style-media-thumbnail" src="https://media.kjzz.org/s3fs-public/styles/media_thumbnail/public/IMG_0385.JPG?itok=0ee9Gy_Y" width="150" height="150" /></a></figure></div></div>    </div>
+  
+      <div class="group-right">
+      <div class="field field-name-title field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even"><h3><a href="/content/10488/kjzz-correspondent-achieves-personal-victory-very-short-triathlon">KJZZ Correspondent Achieves Personal Victory In Very Short Triathlon</a></h3></div></div></div><div class="field field-name-field-summary field-type-text-long field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">KJZZ's own Nick Blumberg recently competed in a charity triathlon, a massive athletic undertaking that comprised 1/100th of an Ironman. Don't act like you're not impressed.</div></div></div><div class="field field-name-field-bylines field-type-list-text field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nick Blumberg</div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden view-mode-search_display"><div class="field-items"><div class="field-item even">Nov. 15, 2013</div></div></div>    </div>
+  
+</div>
+
+  </div>
+    </div>
+  
+      <h2 class="element-invisible">Pages</h2><div class="item-list item-list-pager"><ul class="pager"><li class="pager-first even first"><a title="Go to first page" href="/search-news">« first</a></li><li class="pager-previous odd"><a title="Go to previous page" href="/search-news?page=5930">‹ previous</a></li><li class="pager-ellipsis even">…</li><li class="pager-item odd"><a title="Go to page 5928" href="/search-news?page=5927">5928</a></li><li class="pager-item even"><a title="Go to page 5929" href="/search-news?page=5928">5929</a></li><li class="pager-item odd"><a title="Go to page 5930" href="/search-news?page=5929">5930</a></li><li class="pager-item even"><a title="Go to page 5931" href="/search-news?page=5930">5931</a></li><li class="pager-current odd">5932</li><li class="pager-item even"><a title="Go to page 5933" href="/search-news?page=5932">5933</a></li><li class="pager-item odd"><a title="Go to page 5934" href="/search-news?page=5933">5934</a></li><li class="pager-item even"><a title="Go to page 5935" href="/search-news?page=5934">5935</a></li><li class="pager-item odd"><a title="Go to page 5936" href="/search-news?page=5935">5936</a></li><li class="pager-ellipsis even">…</li><li class="pager-next odd"><a title="Go to next page" href="/search-news?page=5932">next ›</a></li><li class="pager-last even last"><a title="Go to last page" href="/search-news?page=6598">last »</a></li></ul></div>  
+  
+  
+      <div class="view-footer">
+      <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.view-search-news td img {
+  max-width:none;
+}
+.form-type-date-popup label {float: left; margin-right: 5px;}
+.view-search-news .captcha-admin-links {
+  display:none;
+}
+
+/*--><!]]>*/
+</style>    </div>
+  
+  
+</div>
+  </div>              </div>
+            
+            <!-- !Feed Icons -->
+            
+            
+          </section><!-- /end #main-content -->
+
+          <!-- !Content Aside Region-->
+          
+        </div><!-- /end .content-inner -->
+      </main><!-- /end #content-column -->
+
+      <!-- !Sidebar Regions -->
+            <div class="region region-sidebar-second sidebar"><div class="region-inner clearfix"><div id="block-block-60" class="block block-block no-title odd first block-count-11 block-region-sidebar-second block-60" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><script type='text/javascript'>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    /*
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    */
+    gads.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+
+<script type='text/javascript'>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1056837/kjzz_300X250', [300, 250], 'div-gpt-ad-1464891475466-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+<!-- /1056837/kjzz_300X250 -->
+<div id='div-gpt-ad-1464891475466-0' style='height:250px; width:300px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1464891475466-0'); });
+</script>
+</div></div>
+  </div></div><div id="block-views-nodequeue-7-block" class="block block-views no-title even block-count-12 block-region-sidebar-second block-nodequeue-7-block" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div class="view view-nodequeue-7 view-id-nodequeue_7 view-display-id-block prog-box view-dom-id-2771436e6b74c1ecda3e9590909a003a">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <h3 class="field-content progamming-title"><a href="https://conta.cc/4dV5Ugb">Q&amp;AZ newsletter!</a></h3>  </div>  
+  <div class="views-field views-field-field-sub-title">        <h4 class="field-content prog-sub"></h4>  </div>  
+  <div class="views-field views-field-field-teaser-art">        <div class="field-content prog-img"><a href="https://conta.cc/4dV5Ugb"><img class="image-style-120-thumbnail" src="https://media.kjzz.org/s3fs-public/styles/120_thumbnail/public/qaz-black-promo-20230731.jpg?itok=JkggolCo" width="120" height="120" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content">The Show has taken over Q&AZ! Get answers reported by your favorite weekday news magazine.</div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+  </div></div><div id="block-block-1" class="block block-block no-title odd block-count-13 block-region-sidebar-second block-1" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!-- New google ad code Oct2017, from NPM - kjzz_300x250_position_2 -->
+<!-- script address domain change per Google in August 2023
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+-->
+<script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1056837/kjzz_300x250_position_2', [300, 250], 'div-gpt-ad-1507142113540-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+<!-- /1056837/kjzz_300x250_position_2 -->
+<div id='div-gpt-ad-1507142113540-0' style='height:250px; width:300px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1507142113540-0'); });
+</script>
+</div></div>
+  </div></div><div id="block-block-75" class="block block-block no-title even block-count-14 block-region-sidebar-second block-75" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!-- a href='https://kjzz.org/content/1623165/empty-seats-pandemic-vs-sports-capital'><img src='https://media.kjzz.org/s3fs-public/emptyseats.png' alt='Empty Seats Podcast' /></a -->
+
+<a href='https://kjzz.org/content/1725840/current-kjzz-sponsors'><img src='https://media.kjzz.org/s3fs-public/our-sponors-banner-20211019.jpeg' alt='Our Sponsors' /></a>
+<br />
+<!--a href='/content/755842/word-podcast-about-literary-arts-arizona-and-region'><img src='https://media.kjzz.org/s3fs-public/word-GIF-20210304.gif' alt='Word Podcast' /></a--></div>
+  </div></div><div id="block-views-nodequeue-4-block" class="block block-views no-title odd block-count-15 block-region-sidebar-second block-nodequeue-4-block" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div class="view view-nodequeue-4 view-id-nodequeue_4 view-display-id-block view-dom-id-1fc0a931641d82254963016f0a874e01">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_nodequeue_4-block_1" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_nodequeue_4-block_1" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_nodequeue_4-block_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-first views-row-odd" >
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first">
+    
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=ZCAMPMP&amp;PAGETYPE=PLG&amp;CHECK=EVmbRh6gn97lfODTdmTyU%2BzWDeZ%2BeA1M" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/yourTurnCampaign2024_Z_promoBox_300x250.png" width="300" height="250" alt="It&#039;s Your Turn. Support Your Public Radio." /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_nodequeue_4-block_1_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even" >
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+    
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://heararizona.org/" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/HearAZ5.jpg" width="300" height="250" alt="Hear Arizona: Podcasts to Empower Our Community" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_nodequeue_4-block_1_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd" >
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+    
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://kjzz.org/content/1827401/vehicle-donation-program" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/Vehicle3.png" width="300" height="250" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_nodequeue_4-block_1_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even" >
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+    
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://kjzz.org/travel-club" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/kjzz-travel-club-300x250px.png" width="300" height="250" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_nodequeue_4-block_1_4" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd" >
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+    
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://heararizona.org/" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/HearAZ6.jpg" width="300" height="250" alt="Hear Arizona: Addressing issues and empowering our community" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_nodequeue_4-block_1_5" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-6 views_slideshow_cycle_hidden views-row-last views-row-even" >
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+    
+  <div class="views-field views-field-field-image-promo">        <div class="field-content"><a href="https://kjzz.org/mobile-options" target="_blank"><img class="image-style-none" src="https://media.kjzz.org/s3fs-public/APP_KJZZ_promo.png" width="300" height="250" alt="KJZZ Mobile App" /></a></div>  </div></div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+  </div></div><div id="block-block-177" class="block block-block no-title even block-count-16 block-region-sidebar-second block-177" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><a href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=SPWRKTAX&PAGETYPE=PLG&CHECK=%2bYvMLMVX5qLX8CYzq47SRm3L5BYddGq6PVAl6UEf65g%3d" target="_blank" title="Spot 127 web site"><img src="/sites/default/files/webform/graphic-design/SPOT127_2016_Tax_credit.png" alt="Spot127" title="Spot127" width="300" height="81" /></a></div>
+  </div></div><div id="block-block-3" class="block block-block no-title odd block-count-17 block-region-sidebar-second block-3" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!--a class="twitter-timeline"  href="https://twitter.com/kjzzphoenix/newsroom"  data-widget-id="385166839682060289">Tweets from @kjzzphoenix/newsroom</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script-->
+</div>
+  </div></div><section id="block-webform-client-block-994261" class="block block-webform even block-count-18 block-region-sidebar-second block-client-block-994261" ><div class="block-inner clearfix">  
+      <h2 class="block-title"> </h2>
+  
+  <div class="block-content content"><noscript>
+  <style>form.antibot { display: none !important; }</style>
+  <div class="antibot-no-js antibot-message antibot-message-warning messages warning">
+    You must have JavaScript enabled to use this form.  </div>
+</noscript>
+<form class="webform-client-form webform-client-form-994261 antibot" action="/antibot" method="post" id="webform-client-form-994261" accept-charset="UTF-8"><div><div  class="form-item webform-component webform-component-markup webform-component--css">
+ <style>
+
+.qaz-hidden{
+display: none;
+}
+.qaz-question textarea{
+width: 95%;
+margin: 10px;
+padding: 8px;
+}
+.qaz-contact-field input{
+width: 87%;
+margin: 2px 10px;
+padding: 8px;
+}
+.qaz-option label{
+font-weight: normal;
+}
+#webform-client-form-994261{
+background-color: #efefef;
+color: #425568;
+font-size: small;
+}
+#webform-client-form-994261 .webform-submit{
+   background: #000;
+    color: #FFFFFF;
+     padding: 15px 15px;
+    font-weight: bold;
+    width: 200px;
+    font-size: 16px;
+    line-height: 20px;
+border-radius: 15px;
+border: thin solid #000;
+margin-bottom: 10px;
+}
+.qaz-contact-field, .description, .webform-component--your-contact-info, .qaz-option{
+margin: 2px 10px;
+}
+.form-actions{
+text-align: center;
+}
+
+</style>
+
+<div style="text-align: center; background-color: #ffffff;" ><img class="QAZ-banner"  src="/sites/default/files/QandAZ-banner-700x286.jpg" alt="Q and AZ" width="700" height="286"><h4  style="margin-top: 0px; margin-bottom: 0px; padding: 16px; background-color:#3399cc; color: white; font-size: 14px;">What questions do you have about the Valley and the state we call home?</h4></div>
+
+<h4  class="qazlink" style="margin-top: 0px; margin-bottom: 0px; font-size: 14px; text-align: center; padding: 16px 0px;  "><a style="margin-top: 0px; margin-bottom: 0px; font-size: 14px;" href="https://kjzz.org/content/673196/qaz">See the questions we've answered so far!</a></h4>
+<!--div style="font-style: italic; font-size: small; text-align: center;">Supported by <a href="https://www.abrazohealth.com/?c=ABCHD&utm_source=native&utm_medium=DIS&utm_slc=BRND&utm_loc=ACHN&utm_lan=en&utm_cta=INF&utm_ven=hg" target="_blank">Abrazo Health</a></div-->
+</div>
+<div  class="qaz-question form-item webform-component webform-component-textarea webform-component--qaz-question">
+  <label class="element-invisible" for="edit-submitted-qaz-question">Question <span class="form-required" title="This field is required.">*</span></label>
+ <div class="form-textarea-wrapper resizable"><textarea required="required" placeholder="Ask your question here and it may be answered by one of KJZZ&#039;s reporters. (280 character limit)" id="edit-submitted-qaz-question" name="submitted[qaz_question]" cols="60" rows="5" class="form-textarea required"></textarea></div>
+ <div class="description">For questions about programming, membership or anything else about KJZZ, please visit kjzz.org/contact.</div>
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--your-contact-info">
+ <p><span style="font-weight: bold; font size: large;">Your contact info</span><br /><span style="font-style: italic; font-size: small;">We'll be in touch if we look into your question.</span></p>
+
+</div>
+<div  class="qaz-contact-field form-item webform-component webform-component-textfield webform-component--name">
+  <label class="element-invisible" for="edit-submitted-name">Name <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" placeholder="Name" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required" />
+</div>
+<div  class="qaz-contact-field form-item webform-component webform-component-email webform-component--email-address">
+  <label class="element-invisible" for="edit-submitted-email-address">Email Address <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email form-text form-email required" placeholder="Email address" type="email" id="edit-submitted-email-address" name="submitted[email_address]" size="60" />
+</div>
+<div  class="qaz-contact-field form-item webform-component webform-component-textfield webform-component--your-zip-code">
+  <label class="element-invisible" for="edit-submitted-your-zip-code">Your Zip Code <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" placeholder="Your zip code" type="text" id="edit-submitted-your-zip-code" name="submitted[your_zip_code]" value="" size="60" maxlength="128" class="form-text required" />
+</div>
+<div  class="qaz-option form-item webform-component webform-component-checkboxes webform-component--newsletter">
+  <label class="element-invisible" for="edit-submitted-newsletter">Newsletter </label>
+ <div id="edit-submitted-newsletter" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-submitted-newsletter-Newsletter-">
+ <input type="checkbox" id="edit-submitted-newsletter-1" name="submitted[newsletter][Newsletter ]" value="Newsletter " class="form-checkbox" />  <label class="option" for="edit-submitted-newsletter-1"> Sign me up for the Q&amp;AZ newsletter. </label>
+
+</div>
+</div>
+</div>
+<div  class="qaz-option form-item webform-component webform-component-checkboxes webform-component--name-use">
+  <label class="element-invisible" for="edit-submitted-name-use">Name use </label>
+ <div id="edit-submitted-name-use" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-submitted-name-use-anonymous-">
+ <input type="checkbox" id="edit-submitted-name-use-1" name="submitted[name_use][anonymous ]" value="anonymous " class="form-checkbox" />  <label class="option" for="edit-submitted-name-use-1"> Please don't publish my name. </label>
+
+</div>
+</div>
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--underwriting">
+ 
+</div>
+<div  class="qaz-hidden form-item webform-component webform-component-textfield webform-component--company">
+  <label class="element-invisible" for="edit-submitted-company">Company </label>
+ <input type="text" id="edit-submitted-company" name="submitted[company]" value="" size="60" maxlength="128" class="form-text" />
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-5qI5IL2T3_GL-L0s6RD37naGNBpzijiRsahh1-rgZEo" />
+<input type="hidden" name="form_id" value="webform_client_form_994261" />
+<input type="hidden" name="antibot_key" value="" />
+<div class="url-textfield"><div class="form-item form-type-textfield form-item-url">
+  <label for="edit-url">Leave this field blank </label>
+ <input autocomplete="off" type="text" id="edit-url" name="url" value="" size="20" maxlength="128" class="form-text" />
+</div>
+</div><fieldset class="captcha form-wrapper"><legend><span class="fieldset-legend">CAPTCHA</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.</div><input type="hidden" name="captcha_sid" value="251327062" />
+<input type="hidden" name="captcha_token" value="fc93701fac62d2477afb9abd4011de4e" />
+<div class="form-item form-type-textfield form-item-captcha-response">
+  <label for="edit-captcha-response">Math question <span class="form-required" title="This field is required.">*</span></label>
+ <span class="field-prefix">11 + 6 = </span> <input type="text" id="edit-captcha-response" name="captcha_response" value="" size="4" maxlength="2" class="form-text required" />
+<div class="description">Solve this simple math problem and enter the result. E.g. for 1+3, enter 4.</div>
+</div>
+</div></fieldset>
+<div class="form-actions"><input class="webform-submit button-primary form-submit" type="submit" name="op" value="Submit My Question" /></div></div></form></div>
+  </div></section><div id="block-block-59" class="block block-block no-title odd block-count-19 block-region-sidebar-second block-59" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!-- New DFP ad code Oct 2017 from NPM - kjzz_300x250_position_3 -->
+<!-- script address domain changed per Google in August 2023
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+-->
+<script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1056837/kjzz_300x250_position_3', [300, 250], 'div-gpt-ad-1507142194251-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+<!-- /1056837/kjzz_300x250_position_3 -->
+<div id='div-gpt-ad-1507142194251-0' style='height:250px; width:300px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1507142194251-0'); });
+</script>
+</div></div>
+  </div></div><div id="block-block-19" class="block block-block no-title even last block-count-20 block-region-sidebar-second block-19" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!--  
+<a href="http://spot127.org" target="_blank" title="Spot 127 web site"><img src="/sites/default/files/SPOT127YOUTH.png" alt="Spot127" title="Spot127" width="300" height="81" /></a>
+
+
+
+<a href="https://plus.google.com/100638390401556359822" style="color: #ffffff;" rel="publisher">Google+</a>
+-->
+
+<a href='https://heararizona.org/?utm_source=kjzzwebsite&utm_medium=banner&utm_campaign=hearaz_promo&utm_content=sidebar' target='_blank'><img src='https://media.kjzz.org/s3fs-public/haz-podcasts-300x85px.png' alt='Hear Arizona Podcast' /></a>
+
+
+
+</div>
+  </div></div></div></div>
+    </div><!-- /end #columns -->
+
+    <!-- !Tertiary Content Region -->
+    
+    <!-- !Footer -->
+          <footer id="footer" class="clearfix" role="contentinfo">
+        <div class="region region-footer"><div class="region-inner clearfix"><div id="block-block-109" class="block block-block no-title odd first block-count-21 block-region-footer block-109" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><style>
+.pane-bbc-view, .pane-ap-feed {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+}
+.wrap {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+#page .wrap a {
+  color:#999;
+  text-decoration: none;
+}
+#page .wrap a:hover {
+  text-decoration:underline;
+}
+#page .wrap h3 {
+  margin: 0 0 15px 0;
+}
+div.social {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.social a {
+  margin:0 5px 0 0;
+}
+.ftr-col {
+  margin:0 40px;
+}
+.ftr-year {
+  text-align:center;
+  margin:40px auto;
+  line-height:1.5em;
+}
+.wrap ul {
+  margin:0;
+  padding:0;
+}
+.wrap li {
+  list-style-type: none;
+}
+.first {
+  /*margin:  0 140px 0 0;*/
+}
+div.social img {
+    max-width: 30px;
+    max-height: 30px;
+}
+</style>
+
+
+<!-- ================ streamer popout box =============== -->
+<script>
+
+ function PopOut(){
+    window.open('/sites/all/services/kjzzstreamer.php','KJZZ','width=325,height=580,location=0,toolbar=0');
+  }
+	function PopOutJazz(){
+    window.open('https://jazz.kjzz.org/sites/all/services/jazzstreamer.php','JAZZ','width=325,height=580,location=0,toolbar=0');
+  }
+	
+</script>
+<!--color update to streaming box -->
+<style>
+.jazzphx{background-color: #fff; border: solid orange 4px;}
+div#hourly-news-player{padding-bottom: 5px;}
+div#hourly-news-player div.hnp-container {background-color: #1a85b5}
+#block-block-7 {border: 5px #ddd solid; height: auto;}
+</style>
+
+<div class="wrap">
+<div class="ftr-col first">
+  <div class="social">
+  <a href="https://tunein.com/radio/KJZZ-915-s33408/" title="Listen to us on TuneIn" target="_blank"><img src="https://kjzz.org/sites/default/files/TuneIn_logo_white_30.png" alt="TuneIn Logo"></a>
+  <a href="https://www.facebook.com/kjzzphoenix" title="Visit us on Facebook" target="_blank"><img src="https://kjzz.org/sites/default/files/FB-f-Logo__white_29.png" alt="Facebook Logo"></a>
+  <a href="https://www.instagram.com/kjzzphoenix" title="Visit us on Instagram" target="_blank" style="margin-left:5px;"><img src="https://kjzz.org/sites/default/files/insta-logo-29.png" alt="Instagram Logo"></a>
+  <a href="https://www.threads.net/@kjzzphoenix" title="Connect with us on Threads" target="_blank" style="margin-left:5px;"><img src="https://media.kjzz.org/s3fs-public/threads_logo.png" alt="Threads logo"></a>
+  <a href="https://www.youtube.com/@KJZZPhoenix" title="Visit us on YouTube" target="_blank" style="margin-left:5px;"><img src="https://media.kjzz.org/s3fs-public/youtube_logo.png" alt="YouTube icon"></a>
+  </div>
+</div>
+<div class="ftr-col">
+  <h3>Listen</h3>
+  <ul>
+    <li><a onClick="PopOut()" style="cursor:pointer;">Live Audio Stream</a></li>
+    <li><a onClick="PopOutJazz()" style="cursor:pointer;">Listen to JazzPHX</a></li>
+    <li><a href="https://kjzz.org/listening-options">Listening Options</a></li>
+  </ul>
+</div>
+<div class="ftr-col">
+  <h3>About</h3>
+  <ul>
+    <li><a href="https://kjzz.org/contact">Contact</a></li>
+    <!-- li><a href="https://media.kjzz.org/s3fs-public/KJZZ_FM_translator_renewal_notice.pdf">FCC Applications</a></li -->
+    <li><a href="https://kjzz.org/jobs">Jobs</a></li>
+    <li><a href="https://kjzz.org/staff">Staff</a></li>
+    <li><a href="https://kjzz.org/kjzz-ethics-and-practices">Ethics and Practices</a></li>
+    <li><a href="http://fpraz.org/">Friends of Public Radio Arizona</a></li>
+  </ul>
+</div>
+<div class="ftr-col">
+  <h3>Support</h3>
+  <ul>
+    <li><a href="https://secure.kjzz.org/alleg/WebModule/Donate.aspx?P=ZSUSTANBOX&PAGETYPE=PLG&CHECK=zG7rksPMV58tjNqfRNYwgr1YhDw50SikSh2nq0qouhg%3D">Donate</a></li>
+    <li><a href="https://kjzz.org/member-benefits">Membership</a></li>
+    <li><a href="https://www.sponsorkjzz.org/">Corporate Sponsorship</a></li>
+    <li><a href="https://kjzz.org/events">Events</a></li>
+    <li><a href="https://fpraz-store.myshopify.com/collections/kjzz">Shop</a></li>
+  </ul>
+</div>
+
+<div class="ftr-year">
+<p>KJZZ is a service of <a href="http://www.riosalado.edu/">Rio Salado College</a>, and <a href="http://www.maricopa.edu/">Maricopa Community Colleges</a><br>
+<a href="https://kjzz.org/privacy-policy">Privacy Policy</a> | <a href="https://publicfiles.fcc.gov/fm-profile/KJZZ">FCC Public File</a> | <a href="https://kjzz.org/contest-details">Contest Rules</a><br>
+Copyright &copy; 2024 KJZZ/Rio Salado College/MCCCD</p>
+</div>
+</div>
+
+</div>
+  </div></div><div id="block-block-92" class="block block-block no-title even block-count-22 block-region-footer block-92" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><style type="text/css">
+@media print{
+.node-type-article .region-sidebar-second, .node-type-article .region-leaderboard, .node-type-article #header, .node-type-article .pane-block-67,  .node-type-article #sm-audio-special, .node-type-article #footer, .node-type-article .pane-3, .node-type-article .region-help, .node-type-article #menu-bar, .node-type-article .fb-twit{
+display: none !important;
+}
+}
+.node-type-page #page-title{margin-bottom: 20px;}
+.page-node-1773826 #page-title {display: none;}
+
+@media only screen and (max-width: 600px) {
+.bus-1 tr td, .bus-2 tr td, .bus-3 tr td, .bus-4 tr td {
+    width: 100%;
+text-align: center;
+    clear: both;
+    float: left;
+   }
+}
+ </style></div>
+  </div></div><div id="block-block-51" class="block block-block no-title odd block-count-23 block-region-footer block-51" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1913988-1', 'auto');
+  ga('send', 'pageview');
+
+</script></div>
+  </div></div><div id="block-block-93" class="block block-block no-title even block-count-24 block-region-footer block-93" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><script>
+
+jQuery(document).ready(function ($) {
+  // Track audio page clicks of news and special stories
+  $("#sm-audio-special a").bind('click', function() {
+    ga('send', 'event', 'Audio', 'play', 'all-audio');
+  });
+
+  // Track download clicks of news and special stories
+  $("#download-mp3 a").bind('click', function() {
+    ga('send', 'event', 'Audio', 'download', 'all-audio');
+  });
+
+  // Track play clicks of podcasts
+  $(".podcast-play a").bind('click', function() {
+    ga('send', 'event', 'PodcastAudio', 'play', 'all-audio');
+  });
+
+  // Track download clicks of podcasts
+  $(".podcast-download a").bind('click', function() {
+    var href = $(this).attr('href');
+    ga('send', 'event', 'PodcastAudio', 'download', href);
+  });
+
+});
+
+</script></div>
+  </div></div><div id="block-block-71" class="block block-block no-title odd last block-count-25 block-region-footer block-71" ><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '518086275050634');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=518086275050634&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code --></div>
+  </div></div></div></div>              </footer>
+    
+  </div>
+</div>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function euCookieComplianceLoadScripts() {}
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var eu_cookie_compliance_cookie_name = "";
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://kjzz.org/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js?se9iz1"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-c2661d1fe14a52a7af7","applicationID":"531119592","transactionName":"Z1BabBEEXUcCW0ZYWF4abUoKShxdDVxXSRlAXUg=","queueTime":0,"applicationTime":1108,"atts":"SxdZGlkeTkk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
