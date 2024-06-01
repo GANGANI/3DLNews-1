@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+		<meta name="viewport" content="initial-scale=1">
+		<title>StatMonitr Stat Feed</title>
+
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/jquery.min.js"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/bootstrap.bundle.min.js"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/bootbox.all.min.js"></script>
+
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/StatUtilities.class.js?_04032024"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/StatBroadcastAds.class.js?_04032024"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/StatBroadcast.class.js?_04032024"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/Web.views.js?_04032024"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/Bench.views.js?_04032024"></script>
+		<script  type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/StatMonitr.platform.js?_04032024"></script>
+		<script type="text/javascript" src="//s3.amazonaws.com/s3.statbroadcast.com/js/hotkeys.js"></script>
+		<script async src="//www.googletagmanager.com/gtag/js?id=G-2ZWVK1X7BJ"></script>
+
+		<link type="text/css" href="//s3.amazonaws.com/s3.statbroadcast.com/css/bootstrap.min.css?_04032024" rel="stylesheet" />
+		<link type="text/css" href="//s3.amazonaws.com/s3.statbroadcast.com/css/bootstrap.additional.css?_04032024" rel="stylesheet"  class="snap" />
+		<link type="text/css" href="//s3.amazonaws.com/s3.statbroadcast.com/css/lte.css" rel="stylesheet" class="snap"  />
+		<link rel="stylesheet" href="//s3.amazonaws.com/s3.statbroadcast.com/css/StatBroadcast.bootstrapcommon.css?_04032024" class="snap" />
+		<link rel="stylesheet" href="//s3.amazonaws.com/s3.statbroadcast.com/css/StatBroadcast.bootstrapweb.css?_04032024" class="snap" />
+		<link rel="stylesheet" href="//s3.amazonaws.com/s3.statbroadcast.com/css/StatBroadcast.lighttheme.css?_04032024" class="snap" id="sb-light" />
+		<link rel="stylesheet" href="//s3.amazonaws.com/s3.statbroadcast.com/css/StatMonitr.platform.css?_04032024" class="snap" />
+
+		<link type="text/css" href="//s3.amazonaws.com/s3.statbroadcast.com/css/fontawesome/css/all.css" rel="stylesheet" class="snap" >
+		<link type="text/css" href="//s3.amazonaws.com/s3.statbroadcast.com/css/sbicon/sbicon.css?_04032024" rel="stylesheet" class="snap" >
+
+		<style>
+		.hidden		{display:none;}
+		.row{ display: -webkit-flex;}
+		.pageheading, .headingpart	{display:none;}
+		</style>
+	</head>
+
+	<body id="statbroadcast-body">
+		<div class="sb-load-overlay bg-total-black"></div>
+		<div class="sb-overlay-total bg-gradient-load"></div>
+		<header class="border-top border-bottom" id="statbroadcast-header">
+			<div class="bg-gradient-primary small">
+			<div id="statbroadcast-header-ad" class="statbroadcast-ad-banner" class="w-100"></div>
+				<div class="row">
+
+					<div class="text-left col-5"><div class="pl-4 sb-title-text" role="heading" aria-level="1"></div></div>
+					<div class="text-center col-2"><a data-google-interstitial="false" class="small nav-link" id="accesslink" href="" tabindex="1"><i class="fa fa-low-vision" aria-hidden="true"></i> Accessibility View</a></div>
+					<div class="text-right col-5"><div class="sb-desc-text pr-4" role="heading" aria-level="2"></div></div>
+				</div>
+			</div>
+			<div id="statbroadcast-ad-top" class="statbroadcast-ad bg-primary bg-ad w-100">
+				<div id="statbroadcast-ad-top-banner" class="statbroadcast-ad-banner" class="w-100"></div>
+			</div>
+			<div id="statmonitrBanner" class="sb-statmonitr-banner sb-banner">
+				<div id="statmonitrBannerImage" class="sb-statmonitr-banner-image"></div>
+			</div>
+			<div id="statbroadcast-ad-midtop" class="statbroadcast-ad bg-ad w-100">
+				<div id="statbroadcast-ad-midtop-banner" class="statbroadcast-ad-banner" class="w-100"></div>
+			</div>
+			<div id="navarea">
+			<div id="statbroadcast-ad-midtop" class="statbroadcast-ad bg-primary bg-ad w-100">
+				<div id="statbroadcast-ad-midtop-banner" class="statbroadcast-ad-banner" class="w-100 pb-2"></div>
+			</div>
+			<nav class="navbar navbar-expand-md bg-primary p-1 pl-4">
+				<button class="btn btn-secondary navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navtoggler" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> Change View</button>
+				<div id="nav" class="collapse navbar-collapse"><div class="navbar-nav mx-auto"></div></div>
+			</nav>
+			</div>
+		</header>
+		<main role="main" id="statbroadcast-main">
+			<div id="statbroadcast-ad-main" class="statbroadcast-ad bg-ad w-100">
+				<div id="statbroadcast-ad-main-banner" class="statbroadcast-ad-banner" class="w-100 pb-2"></div>
+			</div>
+			<div id="content" class="container-fluid">
+				<div id="stats" class="sb-stats pb-2"  aria-live="assertive" ></div>
+			</div>
+			<div id="statbroadcast-ad-bottom" class="statbroadcast-ad bg-stats w-100 hidden">
+				<div id="statbroadcast-ad-bottom-banner" class="statbroadcast-ad statbroadcast-ad-banner w-100"></div>
+			</div>
+		</main>
+		<footer id="statbroadcast-footer" class="footer mt-auto">
+			<div class="w-100 footer-transition"></div>
+			<div class="footer-content w-100 py-3">
+				<div class="container text-center small border-top">
+					StatBroadcast&#174; is a registered trademark and dba of Radiak Group LLC, an Arizona entity.<br/>
+					Copyright &#169; 2006-2022. Radiak Group LLC, Tempe AZ. All Rights Reserved.<br/>
+
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/terms.php">Terms of Use</a> |
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/privacy.php">Privacy Policy</a> |
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/accessibility.php">Accessibility</a> |
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/getintouch.php">Contact</a>
+					<br/><span class="consent"><button id="pmLink">Privacy Manager</button></span>
+				</div>
+			</div>
+			<div id="hooks" class="sb-hooks"></div>
+			<div id="objects" class="sb-objects">
+				<a data-google-interstitial="false" href="#" id="scroll" style="display: none;"><span></span></a>
+				<div class="sb-overlay bg-primary hidden"></div>
+				<div class="sb-statmonitr-logo-floater">&nbsp;</div>
+				<div class="sb-statmonitr-home-floater hidden"><i class="fas fa-home" aria-hidden="true"></i></div>
+				<div class="sb-statmonitr-back-floater hidden"><i class="fas fa-backward" aria-hidden="true"></i></div>
+				<div class="sb-statmonitr-refresh-floater hidden"><i class="fas fa-sync" aria-hidden="true"></i></div>
+				<div id="statbroadcast-fixed-ad" class="fixed-bottom pb-2"></div>
+				<div id="statbroadcast-floating-ad" class="statbroadcast-ad"></div>
+				<div id="statbroadcast-loading-footer" class="fixed-bottom pb-2">
+					<a data-google-interstitial="false" class="loadlink link" onclick="this.style.display='none';" data-toggle="collapse" href="#load-info" role="button" aria-expanded="false" aria-controls="collapseExample">Show Info on Terms, Privacy and more</a>
+					<div id="load-info" class="collapse">
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/terms.php">Terms of Use</a> |
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/privacy.php">Privacy Policy</a> |
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/accessibility.php">Accessibility</a> |
+					<a class="link" target="_blank" href="https://www.statbroadcast.com/getintouch.php">Contact</a>
+<span class="consent"><button id="pmLink">Privacy Manager</button></span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</HTML>
