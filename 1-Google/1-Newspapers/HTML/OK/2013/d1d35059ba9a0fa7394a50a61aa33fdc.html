@@ -1,0 +1,284 @@
+<html>
+
+<head>
+				<meta name="apple-itunes-app" content="app-id=912961629, app-argument=com.stwnewspress.iosapp://load/selDate=&edition=&goTo=&artid=&pSetup=" />
+		<meta charset="UTF-8">
+	<meta name="description" content="This full replica of our printed product provides you the newspaper as you know and love it from the convenience of the web.">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<meta name="viewport" content="width = device-width , initial-scale = 1.0 , user-scalable = no , minimum-scale = 1.0 , maximum-scale = 1.0 , minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+				
+		<style>
+		html,
+		body {
+			overflow: hidden;
+		}
+
+		body {
+			margin: 0 !important;
+			height: auto;
+		}
+
+		#mainframe {
+			padding: 0px;
+			position: relative;
+			margin: 0px;
+			border: none;
+			-webkit-overflow-scrolling: touch;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script src="/ee/_nmum/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript">
+		function changeURL(url) {
+							window.location.href = url;
+					}
+	</script>
+		<script type="text/javascript">
+	var enableAnalyticsFunc = false;
+	function enableAnalytics(val){
+		if(typeof val != "undefined"){
+			enableAnalyticsFunc = val;
+		}
+		try{
+			if(enableAnalyticsFunc && !document.getElementById("mainframe").contentWindow.enabledGoogleAnalytics){				
+				document.getElementById("mainframe").contentWindow.initGoogleAnalytics();
+			}
+		}catch(err){
+			
+		}		
+	}
+</script>
+<script type="text/javascript">
+	enableAnalytics(true);
+</script>
+<title>Stillwater News Press</title>
+</head>
+<body id="body" name="body">
+<iframe id="mainframe" name="mainframe" frameBorder='0' scrolling="no"></iframe>
+<div id="imgResize"><img id="resize" src="" onclick="javascript:resizeBody();"></div>
+<script type="text/javascript">
+
+try{
+	if(localStorage.getItem("bbchoice") == "bb_classic"){
+		cookie_set("bbchoice",localStorage.getItem("bbchoice"),null,"/");
+	}
+}catch(e){}
+
+	var windowWidth;
+	var windowHeight;
+	var windowVisible = true;
+
+function resizeContent(){		
+		if (windowVisible) {
+			var cWidth;
+			var cHeight;
+	if (window.innerWidth){
+				cWidth = window.innerWidth;
+				cHeight = window.innerHeight;
+	}else if(document.documentElement.clientWidth){ //IE
+				cWidth = document.documentElement.clientWidth;
+				cHeight = document.documentElement.clientHeight;
+	}else{ //Fallback
+				cWidth = document.body.clientWidth;
+				cHeight = document.body.clientHeight;
+	}
+			//console.log(window.innerWidth + " - " + document.documentElement.clientWidth + " - " + document.body.clientWidth);
+			//console.log(window.innerHeight + " - " + document.documentElement.clientHeight + " - " + document.body.clientHeight);
+			if (window.innerWidth && document.documentElement.clientWidth) {
+				var widths = [window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth];
+				var heights = [window.innerHeight, document.documentElement.clientHeight, document.body.clientHeight];
+				var minWidth = Math.min(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
+				var maxWidth = Math.max(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
+				var minHeight = Math.min(window.innerHeight, document.documentElement.clientHeight, document.body.clientHeight);
+				var maxHeight = Math.max(window.innerHeight, document.documentElement.clientHeight, document.body.clientHeight);
+
+				//get the width/height value with more occurrences
+				cWidth = minWidth;
+				if (widths.filter(function(width) {
+						return width === maxWidth
+					}).length > widths.filter(function(width) {
+						return width === minWidth
+					}).length) {
+					cWidth = maxWidth;
+				}
+
+				cHeight = minHeight;
+				if (heights.filter(function(height) {
+						return height === maxHeight
+					}).length > heights.filter(function(height) {
+						return height === minHeight
+					}).length) {
+					cHeight = maxHeight;
+				}
+			}
+			//console.log(windowWidth + " - " + cWidth + ", " + windowHeight + " - " + cHeight);
+			if (windowWidth !== cWidth || windowHeight !== cHeight) {
+				windowWidth = cWidth;
+				windowHeight = cHeight;
+
+				var frameM = document.getElementById("mainframe");
+				var bElem = document.getElementById("body");
+	bElem.style.width = (cWidth) + "px";
+	bElem.style.height = (cHeight) + "px";
+	frameM.style.width = (cWidth) + "px";
+	frameM.style.height = (cHeight)  + "px";
+	//If the content extends beyond the window, try to resize accordingly
+	try{
+		if(frameM.contentWindow.document.body){
+			var frameC = frameM.contentWindow.document.body;
+			if(frameC.scrollHeight && (frameC.scrollHeight > cHeight)){
+				bElem.style.height = (frameC.scrollHeight) + "px";
+				frameM.style.height = (frameC.scrollHeight) + "px";
+			}
+		}
+	}catch(err){}
+	if(window.outerWidth>(document.body.clientWidth*window.devicePixelRatio)){
+		document.getElementById("imgResize").style.display = "block";
+		$("#resize").attr("src","/eeUsers/_nmum/full-screen-on.png");
+	}else{
+		document.getElementById("imgResize").style.display = "none";
+		document.getElementById("resize").src = "";
+	}
+	if(typeof enableAnalytics != "undefined")enableAnalytics();
+}
+		} else {
+			//console.log("Window is hidden, do not resize");
+		}
+	}
+
+/* Get into full screen */
+function GoInFullscreen(element) {
+	if(element.requestFullscreen)
+		element.requestFullscreen();
+	else if(element.mozRequestFullScreen)
+		element.mozRequestFullScreen();
+	else if(element.webkitRequestFullscreen)
+		element.webkitRequestFullscreen();
+	else if(element.msRequestFullscreen)
+		element.msRequestFullscreen();
+}
+
+/* Get out of full screen */
+function GoOutFullscreen() {
+	if(document.exitFullscreen)
+		document.exitFullscreen();
+	else if(document.mozCancelFullScreen)
+		document.mozCancelFullScreen();
+	else if(document.webkitExitFullscreen)
+		document.webkitExitFullscreen();
+	else if(document.msExitFullscreen)
+		document.msExitFullscreen();
+}
+
+/* Is currently in full screen or not */
+function IsFullScreenCurrently() {
+	var full_screen_element = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || null;
+	
+	// If no element is in full-screen
+	if(full_screen_element === null)
+		return false;
+	else
+		return true;
+}
+
+function resizeBody(){
+	if(IsFullScreenCurrently()){
+		GoOutFullscreen();
+		$("#resize").attr("src","/ee/_nmum/full-screen-on.png");
+	}else{
+		GoInFullscreen($("body").get(0));
+		$("#resize").attr("src","/ee/_nmum/full-screen-off.png");
+	}
+}
+
+function loadinFrame(){
+		 var frameSrc = "//stwnewspress-cnhi.newsmemory.com/ee/_nmum/_default_bb_include_inframe.php?pSetup=cnhi_thestillwaternewspress_1029&isFrame=1&bbtype=type_html5&enableUniversalLinkSplash=1&deviceType=";  // USING NEW MOBILE SPLASH PAGE 20150203
+		// //Include js variables to the frame
+	if(document.compatMode){
+		frameSrc += ("&docMode="+document.compatMode);
+	}
+	document.getElementById("mainframe").src = frameSrc;
+	if(window.outerWidth>(document.body.clientWidth*window.devicePixelRatio)){
+		document.getElementById("imgResize").style.display = "block";
+		$("#resize").attr("src","/ee/_nmum/full-screen-on.png");
+	}
+}
+
+function receiveMessageCookieGet(event){
+	var referrer = document.referrer.split('/');
+	var referrerDomain = referrer[0]+'/'+referrer[1]+'/'+referrer[2];
+    if (event.origin !== referrerDomain)return;
+    var dataObj = JSON.parse(event.data);
+    if (dataObj.action == "cookie_get"){
+		mFrame.contentWindow.receiveMessageCookieGet(dataObj.value);
+		if(typeof dataObj.referrer != "undefined" && dataObj.referrer != ""){
+			try{
+			mFrame.contentWindow.setReferrerVanity(dataObj.referrer);
+			}catch(err){}
+		}
+	}else if(dataObj.action == "enable_analytics"){
+		mFrame.contentWindow.initGoogleAnalytics();
+		} else if (dataObj.action == "messageFromOutside") {
+			mFrame.contentWindow.messageFromOutside(dataObj.value);
+    }else if(dataObj.action == "setFunctionality"){
+		mFrame.contentWindow.setFunctionality(dataObj.value);
+		mFrame.contentWindow.consentDataApproved = true;
+    }else if(dataObj.action == "setLocalStorage"){
+		mFrame.contentWindow.localStorageX.setItem(dataObj.key,dataObj.value);
+    }else if(dataObj.action == "login_token"){
+		document.getElementById("mainframe").src = document.getElementById("mainframe").src + "&token=" + dataObj.value;
+    }
+}
+
+	function messageFromOutside(val) {
+		var action = {
+			action: 'messageFromOutside',
+			value: val
+		};
+		try {
+			document.getElementById(idFrame).contentWindow.postMessage(JSON.stringify(action), "https://" + document.getElementById(idFrame).src.split('/')[2]);
+		} catch (err) {
+			try {
+				document.getElementsByTagName("iframe")[0].contentWindow.postMessage(JSON.stringify(action), "https://" + document.getElementsByTagName("iframe")[0].src.split('/')[2]);
+				//				mFrame.contentWindow.messageFromOutside(val);
+			} catch (err2) {
+				//console.error(err2.message);
+			}
+		}
+	}
+//Set the listener for window changes
+window.onload = new function(){ 
+	loadinFrame(); 
+	window.addEventListener("message", receiveMessageCookieGet, false);
+};
+var mFrame = document.getElementById("mainframe");
+mFrame.onload = mFrame.onreadystatechange = window.onresize = window.onorientationchange = resizeContent;    			
+	document.addEventListener("visibilitychange", function() {
+		//console.log("Window is " + document.visibilityState);
+		windowVisible = document.visibilityState === "visible";
+		if (windowVisible) {
+			resizeContent();
+			//check if a new issue is published
+			messageFromOutside("goingForeground");
+		} else {
+			messageFromOutside("goingBackground");
+		}
+	});
+</script>
+<style>
+div#imgResize {
+	display:none;
+    position: absolute;
+    bottom: 0px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+img#resize {
+    position: relative;
+    width: 25px;
+}
+</style></body>
+</html>

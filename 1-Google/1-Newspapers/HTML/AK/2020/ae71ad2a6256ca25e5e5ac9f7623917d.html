@@ -1,0 +1,709 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<!-- Engine: Aestiva HTML/OS Version 4.89 Developer Edition -->
+<html lang="en">
+
+
+
+
+
+
+ 
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Wrangell Sentinel" />
+  <META NAME="description" CONTENT="Wrangell Sentinel archives search page" />
+  <META NAME="keywords" CONTENT="Wrangell Sentinel,archives,archives search,search,search tool,keyword,phrase,search results" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="7 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Wrangell Sentinel Archives">
+<META PROPERTY="og:description" CONTENT="">
+<META PROPERTY="og:url" CONTENT="https://www.wrangellsentinel.com/section/obituaries/101">
+<META PROPERTY="og:site_name" CONTENT="Wrangell Sentinel">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.wrangellsentinel.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Wrangell Sentinel Archives</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28257/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1732x44534/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" HREF="https://www.wrangellsentinel.com/section/obituaries/101">
+<link rel="alternate" media="only screen and (max-width: 640px)" HREF="https://www.wrangellsentinel.com/section/obituaries/101?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" HREF="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20349/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21165/XPATH/app/website_specifics/nonresponsive.js"></script>
+
+    <script>
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+    </script>
+<script>
+function RemoveContent(d) {document.getElementById(d).style.display = "none";}
+function InsertContent(d) {document.getElementById(d).style.display = ""; swapdiv(d);}
+
+function expiredAJAX() {
+ // noop
+}
+
+     function swapdiv(a){
+      if (a=='div2'){
+       CLEAR.f.runOverlay('/ajax/popular/blogged');
+      } else {
+       CLEAR.f.runOverlay('/ajax/popular/viewed');
+      }
+     }
+</script><script src="HTTPS://www.wrangellsentinel.com/apps/clear/clear.js"></script>
+<script>
+ debug=false;
+</script>
+  
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0WVJS807P"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-K0WVJS807P'); </script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a><a  href="HTTPS://www.wrangellsentinel.com/about" >About</a><a  href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a><a  href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a><a  href="HTTPS://www.wrangellsentinel.com/login?r=%2Fsection%2Fobituaries%2F101" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Wrangell Sentinel - </h1>
+    <a href="HTTPS://www.wrangellsentinel.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:xztx5nBvxCql013sw%5FtL9y21zdDM8%5F9vJCCdMFMEF--><a href="https://www.wrangellsentinel.com/home/customer_files/visitor_guides/2024-25_travel_wrangell_travel_guide.pdf"><img src="/IMG/5N__NQeJ8JLdO4TyEwXnQcEioZeWf/XPATH/home/cms_data/dfault/web_ads/horiz_small/7355-vg2024.jpgXEXT1362x35506.jpeg" width="260" height="90" alt="A link to the free Wrangell Visitor's Guide"></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_2">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class="" href="HTTPS://www.wrangellsentinel.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/news">News</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/state%5Fof%5Falaska">State of Alaska</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell">Wrangell</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell%5Fsentinel">Wrangell Sentinel</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/sports">Sports</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports/wrangell">Wrangell</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/about_town">About Town</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town/pastors%5Fchristmas%5Fmessages">Pastors Christmas messages</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a class="active" href="HTTPS://www.wrangellsentinel.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/police">Police</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/opinion">Opinion</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/editorial">Editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/from%5Fa%5Fnew%5Farrival">FROM A NEW ARRIVAL</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/guest%5Fopinion">Guest opinion</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/letters%5Fto%5Fthe%5Feditor">Letters to the editor</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/publisher%27s%5Fcolumn">Publisher's column</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/reflections">Reflections</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorial">Sentinel editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorials">Sentinel editorials</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/dockside">Dockside</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/classifieds">Classifieds</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" ACTION="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <p><a href="https://www.wrangellsentinel.com/home/customer_files/public_submission_form/wrangell_sentinel_obituary_form.pdf" target="_blank"><img src="/app/images/form_button_obituaries.png"></a></p><h2 class="section_title_font">Obituaries</h2><p class='tagline'><strong>Sorted by date</strong>&nbsp;&nbsp;Results <strong>101 - 125</strong> of <strong>404</strong></p><p><a class='page-up' href='HTTPS://www.wrangellsentinel.com/section/obituaries/76'>Page Up</a></p><br /><br /><div class='sections_display'><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_28_2021/'>January 28, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/george-woodbury-an-expert-in-all-things-timber/8254.html" aria-label="Story Thumbnail: George Woodbury, an expert in all things timber"><img src="/IMG/4MIiqhygKVIXfKjAblh1f1hjX/XPATH/home/cms_data/dfault/photos/stories/id/5/4/8254/s_topXEXT1538x35861is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/george-woodbury-an-expert-in-all-things-timber/8254.html" aria-label="George Woodbury, an expert in all things timber"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/george-woodbury-an-expert-in-all-things-timber/8254.html" aria-label="George Woodbury, an expert in all things timber"><h3>George Woodbury, an expert in all things timber</h3></a>
+<p>George Woodbury; Feb. 24, 1937, to Jan. 11, 2021. If there is one word to describe my dad, it is production. Dad was always busy doing something. He worked until his very last days. Up until the end...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/george-woodbury-an-expert-in-all-things-timber/8254.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_28_2021/'>January 28, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/mcauliffe-lived-his-rodeo-dream/8255.html" aria-label="Story Thumbnail: McAuliffe lived his rodeo dream"><img src="/IMG/HbGaoZ2IcOMYSfXQZawxqy3Wg/XPATH/home/cms_data/dfault/photos/stories/id/5/5/8255/s_topXEXT1542x35879is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/mcauliffe-lived-his-rodeo-dream/8255.html" aria-label="McAuliffe lived his rodeo dream"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/mcauliffe-lived-his-rodeo-dream/8255.html" aria-label="McAuliffe lived his rodeo dream"><h3>McAuliffe lived his rodeo dream</h3></a>
+<p>Jeffry "Jeff" McAuliffe, 49, born in Klamath Falls, Oregon, died unexpectedly on Jan. 16. Jeff was a bold, charismatic individual who had the uncanny ability to see the good in a person no matter how...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/28/obituaries/mcauliffe-lived-his-rodeo-dream/8255.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_14_2021/'>January 14, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/former-wrangell-resident-puzzy-holland-dies-at-101/8211.html" aria-label="Story Thumbnail: Former Wrangell resident &apos;Puzzy&apos; Holland dies at 101"><img src="/IMG/HbGaoZ2IcOMYSfXQZawxoy3Wg/XPATH/home/cms_data/dfault/photos/stories/id/1/1/8211/s_topXEXT1526x35804is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/former-wrangell-resident-puzzy-holland-dies-at-101/8211.html" aria-label="Former Wrangell resident &apos;Puzzy&apos; Holland dies at 101"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/former-wrangell-resident-puzzy-holland-dies-at-101/8211.html" aria-label="Former Wrangell resident &apos;Puzzy&apos; Holland dies at 101"><h3>Former Wrangell resident 'Puzzy' Holland dies at 101</h3></a>
+<p>Gerald G. "Puzzy" Holland, 101, passed away Dec. 20, 2020, at home, surrounded by loved ones, in Salem, Oregon. He was born in Calumet, Michigan, in October 1919. He was the fifth of nine children...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/former-wrangell-resident-puzzy-holland-dies-at-101/8211.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_14_2021/'>January 14, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/suzanne-maryella-grant-leverett-dies-at-80/8212.html" aria-label="Suzanne Maryella Grant Leverett dies at 80"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/suzanne-maryella-grant-leverett-dies-at-80/8212.html" aria-label="Suzanne Maryella Grant Leverett dies at 80"><h3>Suzanne Maryella Grant Leverett dies at 80</h3></a>
+<p>Former Wrangell resident Suzanne Maryella Grant Leverett died Dec. 22, 2020, in Gig Harbor, Washington. She was born Oct. 28, 1940, in Wrangell, to Neil and Lillian Grant, a pioneer Wrangell family. She graduated Wrangell High School in 1958. “Suzann...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2021/01/14/obituaries/suzanne-maryella-grant-leverett-dies-at-80/8212.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/12_31_2020/'>December 31, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/12/31/obituaries/obituary-sig-and-helen-decker/8164.html" aria-label="Story Thumbnail: Obituary: Sig and Helen Decker"><img src="/IMG/JdKcbX1XYGeQOWTRnqbkl3ygp/XPATH/home/cms_data/dfault/photos/stories/id/6/4/8164/s_topXEXT1538x35856is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/12/31/obituaries/obituary-sig-and-helen-decker/8164.html" aria-label="Obituary: Sig and Helen Decker"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/12/31/obituaries/obituary-sig-and-helen-decker/8164.html" aria-label="Obituary: Sig and Helen Decker"><h3>Obituary: Sig and Helen Decker</h3></a>
+<p>Siguard Vernon Decker (March 3, 1999 – July 27, 2020) and Helen Francis Decker (May 10, 2001 – July 27, 2020) packed more living into their short lives than most others do. While their lives end...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/12/31/obituaries/obituary-sig-and-helen-decker/8164.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/12_24_2020/'>December 24, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/12/24/obituaries/obituary-robert-h-grant-jr-83/8147.html" aria-label="Story Thumbnail: Obituary: Robert H. Grant, Jr., 83"><img src="/IMG/FZATmUxORZVcIeR-pc0qoinlm/XPATH/home/cms_data/dfault/photos/stories/id/4/7/8147/s_topXEXT1550x35850is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/12/24/obituaries/obituary-robert-h-grant-jr-83/8147.html" aria-label="Obituary: Robert H. Grant, Jr., 83"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/12/24/obituaries/obituary-robert-h-grant-jr-83/8147.html" aria-label="Obituary: Robert H. Grant, Jr., 83"><h3>Obituary: Robert H. Grant, Jr., 83</h3></a>
+<p>Robert H. Grant, Jr., 83, a retired teacher, and longtime resident of Wrangell, died on October 21, 2020 in Wrangell, Alaska. He was born on April 19, 1937 to Robert and Catherine Grant in Dubuque,...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/12/24/obituaries/obituary-robert-h-grant-jr-83/8147.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_19_2020/'>November 19, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-margaret-jane-tiny-hall/8063.html" aria-label="Story Thumbnail: Obituary: Margaret Jane (&quot;Tiny&quot;) Hall"><img src="/IMG/KeCgbe0VYUeXVGPJjhhpjxzQp/XPATH/home/cms_data/dfault/photos/stories/id/6/3/8063/s_topXEXT1534x35869is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-margaret-jane-tiny-hall/8063.html" aria-label="Obituary: Margaret Jane (&quot;Tiny&quot;) Hall"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-margaret-jane-tiny-hall/8063.html" aria-label="Obituary: Margaret Jane (&quot;Tiny&quot;) Hall"><h3>Obituary: Margaret Jane ("Tiny") Hall</h3></a>
+<p>Margaret Jane ("Tiny") Hall, 101, died in her home in Kodiak, Alaska on October 30, 2020. She was born on June 15, 1919, in Minneapolis Minnesota, to Phyllis and Raymond Gray, and had two older sister...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-margaret-jane-tiny-hall/8063.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_19_2020/'>November 19, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-vera-mae-harto-90/8064.html" aria-label="Story Thumbnail: Obituary: Vera Mae Harto, 90"><img src="/IMG/-SZcoM1OYYTcWeYFZYsmfosjg/XPATH/home/cms_data/dfault/photos/stories/id/6/4/8064/s_topXEXT1538x35930is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-vera-mae-harto-90/8064.html" aria-label="Obituary: Vera Mae Harto, 90"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-vera-mae-harto-90/8064.html" aria-label="Obituary: Vera Mae Harto, 90"><h3>Obituary: Vera Mae Harto, 90</h3></a>
+<p>Vera Mae Harto, 90, died October 31, 2020 in Ritzville, Washington. She was born March 10, 1930 in Central City, Kentucky to Gladys and James Cobb, the eldest of nine children. The family moved to...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-vera-mae-harto-90/8064.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_19_2020/'>November 19, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-lena-marshall-gillman-70/8065.html" aria-label="Story Thumbnail: Obituary: Lena Marshall Gillman, 70"><img src="/IMG/QkAVqf0YcMVKXdNQhUuipx0Sk/XPATH/home/cms_data/dfault/photos/stories/id/6/5/8065/s_topXEXT1542x35937is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-lena-marshall-gillman-70/8065.html" aria-label="Obituary: Lena Marshall Gillman, 70"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/19/obituaries/obituary-lena-marshall-gillman-70/8065.html" aria-label="Obituary: Lena Marshall Gillman, 70"><h3>Obituary: Lena Marshall Gillman, 70</h3></a>
+<p>Lena Marshall Gillman, 70, passed away November 1, 2020 in Kalispell, Montana where she lived the last 26 years. She was born September 17, 1950 in Wrangell, Alaska, where she spent her years growing...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_12_2020/'>November 12, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/11/12/obituaries/obituary-wayne-jabusch-74/8044.html" aria-label="Story Thumbnail: Obituary: Wayne Jabusch, 74"><img src="/IMG/-SUfidwgTTGOZQY-mlqwQ6nWh/XPATH/home/cms_data/dfault/photos/stories/id/4/4/8044/s_topXEXT1538x35864is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/12/obituaries/obituary-wayne-jabusch-74/8044.html" aria-label="Obituary: Wayne Jabusch, 74"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/12/obituaries/obituary-wayne-jabusch-74/8044.html" aria-label="Obituary: Wayne Jabusch, 74"><h3>Obituary: Wayne Jabusch, 74</h3></a>
+<p>Wayne Jabusch, 74 died November 4, 2020 due to medical complications at St. Francis Hospital in Federal Way, Washington surrounded by family. Wayne was born November 16, 1945 to James and Vivian...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/12/obituaries/obituary-wayne-jabusch-74/8044.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_05_2020/'>November 5, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-david-leroy-cummings-73/8020.html" aria-label="Story Thumbnail: Obituary: David Leroy Cummings, 73"><img src="/IMG/MgAldQySdUeIQbePpqhrSx0Un/XPATH/home/cms_data/dfault/photos/stories/id/2/0/8020/s_topXEXT1522x35788is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-david-leroy-cummings-73/8020.html" aria-label="Obituary: David Leroy Cummings, 73"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-david-leroy-cummings-73/8020.html" aria-label="Obituary: David Leroy Cummings, 73"><h3>Obituary: David Leroy Cummings, 73</h3></a>
+<p>Dave Leroy Cummings, 73 passed away at home with his family on Oct. 16, 2020. Dave had inoperable/untreatable cancer. Born in Tacoma, Washington on Sept. 8, 1947, he was the second child of Albert...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-david-leroy-cummings-73/8020.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_05_2020/'>November 5, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-harriet-ann-bangs-63/8021.html" aria-label="Story Thumbnail: Obituary: Harriet Ann Bangs, 63"><img src="/IMG/NhVnlioXGVbMcOLLfrqtS1lkj/XPATH/home/cms_data/dfault/photos/stories/id/2/1/8021/s_topXEXT1541x35134is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-harriet-ann-bangs-63/8021.html" aria-label="Obituary: Harriet Ann Bangs, 63"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-harriet-ann-bangs-63/8021.html" aria-label="Obituary: Harriet Ann Bangs, 63"><h3>Obituary: Harriet Ann Bangs, 63</h3></a>
+<p>Harriet Ann Bangs age 63, left this earth surrounded by family and friends on Saturday, January 18, 2020 at Swedish Hospital in Seattle, Washington. She was born March 23, 1956 in Sitka, Alaska. She...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/11/05/obituaries/obituary-harriet-ann-bangs-63/8021.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/10_29_2020/'>October 29, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/10/29/obituaries/obituary-minnie-evangeline-larsen-kalkins-88/8001.html" aria-label="Story Thumbnail: Obituary: Minnie Evangeline (Larsen) Kalkins, 88"><img src="/IMG/PjCgbe0VWUeXVGPJjhhpjxzQp/XPATH/home/cms_data/dfault/photos/stories/id/0/1/8001/s_topXEXT1526x35800is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/29/obituaries/obituary-minnie-evangeline-larsen-kalkins-88/8001.html" aria-label="Obituary: Minnie Evangeline (Larsen) Kalkins, 88"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/29/obituaries/obituary-minnie-evangeline-larsen-kalkins-88/8001.html" aria-label="Obituary: Minnie Evangeline (Larsen) Kalkins, 88"><h3>Obituary: Minnie Evangeline (Larsen) Kalkins, 88</h3></a>
+<p>Minnie Evangeline (Larsen) Kalkins, 88 Minnie Evangeline (Larsen) Kalkins, Yéil Tláa (raven mother), 88. a lifelong resident of Wrangell, Alaska, and member of the Tlingit Shtax'héen Kwáan (St...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/29/obituaries/obituary-minnie-evangeline-larsen-kalkins-88/8001.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/10_15_2020/'>October 15, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-roy-james-guthrie-sr-69/7969.html" aria-label="Story Thumbnail: Obituary: Roy James Guthrie Sr, 69"><img src="/IMG/JdEfdM1OeVgKbMdKmnp0fvfWi/XPATH/home/cms_data/dfault/photos/stories/id/6/9/7969/s_topXEXT1558x35934is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-roy-james-guthrie-sr-69/7969.html" aria-label="Obituary: Roy James Guthrie Sr, 69"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-roy-james-guthrie-sr-69/7969.html" aria-label="Obituary: Roy James Guthrie Sr, 69"><h3>Obituary: Roy James Guthrie Sr, 69</h3></a>
+<p>Roy James Guthrie Sr. of Juneau passed away on October 10, 2020 in Wrangell after a brave and difficult battle with brain cancer. He was born on July 17, 1951 in Metlakatla. He graduated from Kayhi...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-roy-james-guthrie-sr-69/7969.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/10_15_2020/'>October 15, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-james-hiebert-86/7970.html" aria-label="Story Thumbnail: Obituary: James Hiebert, 86"><img src="/IMG/NhCgbe0VYUeXVGPJjhhpjxzQp/XPATH/home/cms_data/dfault/photos/stories/id/7/0/7970/s_topXEXT1522x35862.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-james-hiebert-86/7970.html" aria-label="Obituary: James Hiebert, 86"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-james-hiebert-86/7970.html" aria-label="Obituary: James Hiebert, 86"><h3>Obituary: James Hiebert, 86</h3></a>
+<p>James Hiebert, 86, passed away on September 24 in Newberry, Florida. He taught his children to work and earn money also, by hiring them to help with his concrete and Chattahoochee jobs when they...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/10/15/obituaries/obituary-james-hiebert-86/7970.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_24_2020/'>September 24, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/09/24/obituaries/henrietta-fanette-hoyt-ne-bradley/7922.html" aria-label="Story Thumbnail: Henrietta Fanette Hoyt née Bradley"><img src="/IMG/FZTcpK6QKWQhWeJAun0soouSg/XPATH/home/cms_data/dfault/photos/stories/id/2/2/7922/s_topXEXT1530x35811is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/24/obituaries/henrietta-fanette-hoyt-ne-bradley/7922.html" aria-label="Henrietta Fanette Hoyt née Bradley"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/24/obituaries/henrietta-fanette-hoyt-ne-bradley/7922.html" aria-label="Henrietta Fanette Hoyt née Bradley"><h3>Henrietta Fanette Hoyt née Bradley</h3></a>
+<p>On September 4, 2020, Henrietta "Hankie" Hoyt, cherished mother, grandmother, great-grandmother, aunt and cousin left us as gently as she lived. She was surrounded at her passing by her children and...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/24/obituaries/henrietta-fanette-hoyt-ne-bradley/7922.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_17_2020/'>September 17, 2020</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/17/obituaries/death-notice/7913.html" aria-label="Death Notice"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/17/obituaries/death-notice/7913.html" aria-label="Death Notice"><h3>Death Notice</h3></a>
+<p>Edward Robert Naumann, 60, of Wrangell, Alaska, passed away on Sept. 5, 2020, at home. An obituary will be released at a later date. Due to coronavirus, no services are planned at this time....&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/17/obituaries/death-notice/7913.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_10_2020/'>September 10, 2020</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/10/obituaries/death-notice/7891.html" aria-label="Death Notice"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/10/obituaries/death-notice/7891.html" aria-label="Death Notice"><h3>Death Notice</h3></a>
+<p>Royann Churchill, 71, of Wrangell, Alaska passed away on September 5, 2020 at the Wrangell Medical Center. Condolences can be sent to Kathy Binkie, PO Box 1574 Haines, AK 99827, Leonard Vazquez, 932 Lindberg Ave. Alamogordo, NM 88310. An obituary...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/10/obituaries/death-notice/7891.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_03_2020/'>September 3, 2020</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/03/obituaries/death-notice/7874.html" aria-label="Death Notice"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/03/obituaries/death-notice/7874.html" aria-label="Death Notice"><h3>Death Notice</h3></a>
+<p>Fred P. Thruston Sr., died of a heart attack at Wrangell Medical Center on May 26, 2020. An obituary will follow and a memorial service also at some point....</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_03_2020/'>September 3, 2020</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/03/obituaries/obituary-colleen-l-hought-64/7875.html" aria-label="Obituary: Colleen L. Hought, 64"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/09/03/obituaries/obituary-colleen-l-hought-64/7875.html" aria-label="Obituary: Colleen L. Hought, 64"><h3>Obituary: Colleen L. Hought, 64</h3></a>
+<p>Colleen L. Hought, 64, died on August 16, 2020 in Eugene, Oregon. She was born on May 2, 1956 in Minneapolis, Minnesota to Lurine and Mac McGee. She grew up in Wrangell, Alaska. Dave Hought can be reached at 2374 E. Irwin, Eugene, OR 97402 The...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/08_13_2020/'>August 13, 2020</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/08/13/obituaries/death-notice/7830.html" aria-label="Death Notice"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/08/13/obituaries/death-notice/7830.html" aria-label="Death Notice"><h3>Death Notice</h3></a>
+<p>Darrel Gross passed away July 30 of cancer in Wrangell at SEARHC Medical Center. An obituary will follow....&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/08/13/obituaries/death-notice/7830.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/08_06_2020/'>August 6, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/08/06/obituaries/obituary-hollis-ellis-hayes-47/7813.html" aria-label="Story Thumbnail: Obituary: Hollis Ellis Hayes, 47"><img src="/IMG/4MIiqiygKVIXhKeAblh1f7hjX/XPATH/home/cms_data/dfault/photos/stories/id/1/3/7813/s_topXEXT1534x35814is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/08/06/obituaries/obituary-hollis-ellis-hayes-47/7813.html" aria-label="Obituary: Hollis Ellis Hayes, 47"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/08/06/obituaries/obituary-hollis-ellis-hayes-47/7813.html" aria-label="Obituary: Hollis Ellis Hayes, 47"><h3>Obituary: Hollis Ellis Hayes, 47</h3></a>
+<p>Hollis Ellis Hayes, 47, died on July 18, 2020, in Ketchikan, Alaska. He was born on Sept. 26, 1972, in Wrangell, Alaska. He attended Wrangell Elementary School, Wrangell High School, Ketchikan High...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/07_23_2020/'>July 23, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/07/23/obituaries/obituary-joyce-vivian-phillips-86/7776.html" aria-label="Story Thumbnail: Obituary: Joyce Vivian Phillips, 86"><img src="/IMG/GaYciKoZOVMVbVd4xahsa7toR/XPATH/home/cms_data/dfault/photos/stories/id/7/6/7776/s_topXEXT1546x35883is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/23/obituaries/obituary-joyce-vivian-phillips-86/7776.html" aria-label="Obituary: Joyce Vivian Phillips, 86"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/23/obituaries/obituary-joyce-vivian-phillips-86/7776.html" aria-label="Obituary: Joyce Vivian Phillips, 86"><h3>Obituary: Joyce Vivian Phillips, 86</h3></a>
+<p>Joyce Vivian Twiss, 86, died July 16, 2020 at her home surrounded by family and friends. She was born October 13, 1933 to Ben and Martha Twiss in Riverside, California. Her mother was diagnosed with...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/23/obituaries/obituary-joyce-vivian-phillips-86/7776.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/07_09_2020/'>July 9, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/07/09/obituaries/obituary-catherine-cathy-marie-warner-59/7746.html" aria-label="Story Thumbnail: Obituary: Catherine (Cathy) Marie Warner, 59"><img src="/IMG/FZATmUxORZVcIeR-pc0qoinlm/XPATH/home/cms_data/dfault/photos/stories/id/4/6/7746/s_topXEXT1546x35860is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/09/obituaries/obituary-catherine-cathy-marie-warner-59/7746.html" aria-label="Obituary: Catherine (Cathy) Marie Warner, 59"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/09/obituaries/obituary-catherine-cathy-marie-warner-59/7746.html" aria-label="Obituary: Catherine (Cathy) Marie Warner, 59"><h3>Obituary: Catherine (Cathy) Marie Warner, 59</h3></a>
+<p>Catherine (Cathy) Marie Warner, 59, lost her fight and passed away June 6, 2020, in Wrangell, Alaska. She was born November 28, 1960 in Vernonia, Oregon, the daughter of William G. and Lucille...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/09/obituaries/obituary-catherine-cathy-marie-warner-59/7746.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/07_02_2020/'>July 2, 2020</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2020/07/02/obituaries/obituary-floyd-steven-ramsey-61/7729.html" aria-label="Story Thumbnail: Obituary: Floyd Steven Ramsey, 61"><img src="/IMG/GaYNdf3aUeMXKVa8radvW8uhT/XPATH/home/cms_data/dfault/photos/stories/id/2/9/7729/s_topXEXT1558x35940is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/02/obituaries/obituary-floyd-steven-ramsey-61/7729.html" aria-label="Obituary: Floyd Steven Ramsey, 61"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/02/obituaries/obituary-floyd-steven-ramsey-61/7729.html" aria-label="Obituary: Floyd Steven Ramsey, 61"><h3>Obituary: Floyd Steven Ramsey, 61</h3></a>
+<p>Floyd Steven Ramsey, 61, died on May 25, 2020. He was born to Dudley and Esther Ramsey in Albuquerque, New Mexico on November 15, 1959. He was raised in Palm Springs, California and Newport Beach. He...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2020/07/02/obituaries/obituary-floyd-steven-ramsey-61/7729.html">Full story</a></p>
+</div>&nbsp;</div></div><p><a class='page-down' href='HTTPS://www.wrangellsentinel.com/section/obituaries/126'>Page Down</a></p>
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'>New state task force w...<span class='mp_author'>Yereth Rosen</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'><img src="/IMG/l_c614OvyC4JuQqHwz7DK39qD/XPATH/home/cms_data/dfault/photos/stories/id/6/8/13268/s_topXEXT762x35742is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'>Canoes start 150-mile...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'><img src="/IMG/OottCzVkx60MukyO1x18Iy4w4/XPATH/home/cms_data/dfault/photos/stories/id/7/7/13277/s_topXEXT762x35728is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'>Forest Service will ra...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/southeast-fisherman-pleads-guilty-for-ordering-crew-to-shoot-whale/13279.html' aria-label='Story Thumbnail: Southeast fisherman pl...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/southeast-fisherman-pleads-guilty-for-ordering-crew-to-shoot-whale/13279.html' aria-label='Story Thumbnail: Southeast fisherman pl...'>Southeast fisherman pl...<span class='mp_author'>James Brooks</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'>Legislature approves m...<span class='mp_author'>Claire Stremple</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:h715BvJ35Kyt89%5F04H1TF6%2D97BLAELF3RSKBUNUMN--><span class="ad_local_square"><img src="/IMG/reagye0NPkVYTYhMmrrxbDgenzb5_w1t2/XPATH/home/cms_data/dfault/web_ads/square/2412-sentinel_info_copy.jpgXEXT1716x39744is.jpeg" width="300" height="247" alt=""></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:b1vz7pDxzEsn235uyBvN%5F043CbFOCl7NLMR7%2D--><span class="ad_local_square"><a href="https://www.wrangellsentinel.com/subscribe"><img src="/IMG/uhdYpR2kNtTLgRhMqtmvpGjenzq-qh1nt/XPATH/home/cms_data/dfault/web_ads/square/5483-sentinel_online_subscribe_300x250.jpgXEXT1397x44008is.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!-- LL Network Ad --></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/police' aria-label="Section link">Police</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/classifieds' aria-label="Section link">Classifieds</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a></li><li><a href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a></li><li><a href="HTTPS://www.wrangellsentinel.com/about" >About</a></li><li><a href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.wrangellsentinel.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.wrangellsentinel.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.wrangellsentinel.com/section/obituaries/101?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.wrangellsentinel.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Wrangell Sentinel</h4>
+        <p>
+          P.O. Box 798<br />Wrangell, AK 99929<br />Ph: (907) 874-2301<br />
+       </p>
+        <p>
+          &copy; 2024 Good Journalism, LLC<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <!-- <br><small>live</small> (Desktop|paywallerror|error|usernum=00685) -->
+ </body>
+
+
+</html>

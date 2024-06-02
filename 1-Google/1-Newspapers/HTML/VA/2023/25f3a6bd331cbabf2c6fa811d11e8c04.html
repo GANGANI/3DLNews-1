@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <style>
+        @-webkit-keyframes spinner{0%{background:#dde2e7}10%{background:#6b9dc8}40%{background:#dde2e7}}@-moz-keyframes spinner{0%{background:#dde2e7}10%{background:#6b9dc8}40%{background:#dde2e7}}@-o-keyframes spinner{0%{background:#dde2e7}10%{background:#6b9dc8}40%{background:#dde2e7}}@keyframes spinner{0%{background:#dde2e7}10%{background:#6b9dc8}40%{background:#dde2e7}}.spinner:not(:required){-webkit-animation:spinner 2000ms 300ms infinite ease-out;-moz-animation:spinner 2000ms 300ms infinite ease-out;-ms-animation:spinner 2000ms 300ms infinite ease-out;-o-animation:spinner 2000ms 300ms infinite ease-out;animation:spinner 2000ms 300ms infinite ease-out;background:#dde2e7;display:inline-block;position:relative;text-indent:-9999px;width:.9em;height:1.5em;margin:0 1.6em}.spinner:not(:required):after,.spinner:not(:required):before{background:#dde2e7;content:'\x200B';display:inline-block;width:.9em;height:1.5em;position:absolute;top:0}.spinner:not(:required):before{-webkit-animation:spinner 2000ms 150ms infinite ease-out;-moz-animation:spinner 2000ms 150ms infinite ease-out;-ms-animation:spinner 2000ms 150ms infinite ease-out;-o-animation:spinner 2000ms 150ms infinite ease-out;animation:spinner 2000ms 150ms infinite ease-out;left:-1.6em}.spinner:not(:required):after{-webkit-animation:spinner 2000ms 450ms infinite ease-out;-moz-animation:spinner 2000ms 450ms infinite ease-out;-ms-animation:spinner 2000ms 450ms infinite ease-out;-o-animation:spinner 2000ms 450ms infinite ease-out;animation:spinner 2000ms 450ms infinite ease-out;right:-1.6em}
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var validate = function(token) {
+          document.getElementById("response").value = token;
+          document.getElementById("captcha-form").submit();
+        };
+
+        var onloadCallback = function() {
+          var id = grecaptcha.render('captcha', {
+            'sitekey' : '6LcQjikUAAAAAF6HVWPw0Jkd9f4XZSEc8diWuHdI',
+            'callback' : validate,
+            'size' : 'invisible'
+          });
+
+          grecaptcha.execute(id);
+
+        };
+    </script>
+  </head>
+  <body>
+    <div id='loading_div'>
+        <h4>Please wait while we attempt to load the request page</h4>
+        <div class='spinner'></div>
+    </div>
+    <div class="g-recaptcha" id="captcha"></div>
+    <form id='captcha-form' action="/_services/v1/client_captcha/validate" method="POST">
+        <input type="hidden" name="request" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTcwNjU3MjEsImlhdCI6MTcxNzA2NTQyMSwicmVkaXJlY3QiOiIvbmV3cy9zdGF0ZS1yZWdpb25hbC9nb3Zlcm5tZW50LXBvbGl0aWNzL2RvbmFsZC10cnVtcC12aXJnaW5pYS1zdGF0ZS11bml2ZXJzaXR5LWZvcm1lci1wcmVzaWRlbnQtZG9uYWxkLXRydW1wLXNheXMtaGUtaXMtZWFnZXItdG8tZGViYXRlLXByZXNpZGVudC1qb2UtYmlkZW4tZXZlbi1pZi10aGUtZGViYXRlcy1hcmUtc3BvbnNvcmVkLWJ5LXRoZS1ub25wYXJ0aXNhbi1jb21taXNzaW9uLW9uLXByZXNpZGVudGlhbC1kZWJhdGVzLWFuZC1oZS1zYXlzLWhlLWlzLW9wZW4tdG8tZGViYXRpbmctYS1zaW5nbGUtcmVwdWJsaWNhbi1yaXZhbC1pZi1hLXNlcmlvdXMtY2hhbGxlbmdlci1lbWVyZ2VzLWFmdGVyLXRoZS1uZXctaGFtcHNoaXJlLXByaW1hcnktdHJ1bXAtaGFzLXNraXBwZWQtYWxsLW9mLXRoZS1wcmltYXJ5LWRlYmF0ZXMtc28tZmFyLWNpdGluZy1oaXMtY29tbWFuZGluZy1sZWFkLWluLXRoZS1wb2xscy1oZS13YXMtYXNrZWQtYWJvdXQtaGlzLXBsYW5zLWR1cmluZy1hbi1pbnRlcnZpZXctd2l0aC1jb25zZXJ2YXRpdmUtcmFkaW8taG9zdC1odWdoLWhld2l0dC1mcmlkYXktYmlkZW5zLWNhbXBhaWduLWhhcy1ub3Qtc2FpZC15ZXQtd2hldGhlci1oZS1wbGFucy10by1wYXJ0aWNpcGF0ZS1pbi10aGUtZGViYXRlcy9hcnRpY2xlXzJlY2ZiYTU0LWExMDItMTFlZS1hNjJmLWFmOTYzMDJhOWM2Yy5odG1sIiwic2VydmljZSI6Il9sYl9yYXRlX2ZvcmVpZ24iLCJzaXRlIjoicmljaG1vbmQuY29tIn0.VbuGkX3QR4VWle3rCDJHLTa-tx6eRy5yBvXQa9vFbl8">
+        <input type="hidden" id="response" name="response" value="">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+  </body>
+</html>

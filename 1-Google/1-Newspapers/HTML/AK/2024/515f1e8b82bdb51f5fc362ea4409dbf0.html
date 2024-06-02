@@ -1,0 +1,674 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<!-- Engine: Aestiva HTML/OS Version 4.89 Developer Edition -->
+<html lang="en">
+
+
+
+
+
+
+ 
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Petersburg Pilot" />
+  <META NAME="description" CONTENT="Petersburg Pilot archives search page" />
+  <META NAME="keywords" CONTENT="Petersburg Pilot,archives,archives search,search,search tool,keyword,phrase,search results" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="7 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Petersburg Pilot News">
+<META PROPERTY="og:description" CONTENT="">
+<META PROPERTY="og:url" CONTENT="https://www.petersburgpilot.com/section/news/petersburg/">
+<META PROPERTY="og:site_name" CONTENT="Petersburg Pilot">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.petersburgpilot.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Petersburg Pilot News</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28265/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1189x44472/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" HREF="https://www.petersburgpilot.com/section/news/petersburg/">
+<link rel="alternate" media="only screen and (max-width: 640px)" HREF="https://www.petersburgpilot.com/section/news/petersburg/?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" HREF="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20362/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21158/XPATH/app/website_specifics/nonresponsive.js"></script>
+
+    <script>
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+    </script>
+<script>
+function RemoveContent(d) {document.getElementById(d).style.display = "none";}
+function InsertContent(d) {document.getElementById(d).style.display = ""; swapdiv(d);}
+
+function expiredAJAX() {
+ // noop
+}
+
+     function swapdiv(a){
+      if (a=='div2'){
+       CLEAR.f.runOverlay('/ajax/popular/blogged');
+      } else {
+       CLEAR.f.runOverlay('/ajax/popular/viewed');
+      }
+     }
+</script><script src="HTTPS://www.petersburgpilot.com/apps/clear/clear.js"></script>
+<script>
+ debug=false;
+</script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45270664-1', 'petersburgpilot.com');
+  ga('send', 'pageview');
+
+</script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.petersburgpilot.com/about" >About</a><a  href="HTTPS://www.petersburgpilot.com/contact" >Contact</a><a  href="HTTPS://www.petersburgpilot.com/advertise" >Advertise</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="https://www.facebook.com/petersburgpilot/"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='21' alt='FaceBook'></a><a  href="HTTPS://www.petersburgpilot.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.petersburgpilot.com/subscribe/start" >Subscribe</a><a  href="HTTPS://www.petersburgpilot.com/login?r=%2Fsection%2Fnews%2Fpetersburg%2F" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Petersburg Pilot - </h1>
+    <a href="HTTPS://www.petersburgpilot.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:LfZdlTtbduWRT1jYcrZ3p6i9fBv0ovl35auBrRIwx--><a href="https://online.fliphtml5.com/zzzil/sgye/#p=1" target="blank"><img src="/IMG/-SFPYKlAJO8oA-Q0XglUFEZ0VKYOd/XPATH/home/cms_data/dfault/web_ads/horiz_small/4344-vg_ad_layout_1.jpgXEXT1675x39441is.jpeg" width="260" height="90" alt=""></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_2">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class="" href="HTTPS://www.petersburgpilot.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a class="active" href="HTTPS://www.petersburgpilot.com/section/news">News</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.petersburgpilot.com/section/news">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.petersburgpilot.com/section/news/petersburg">Petersburg</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.petersburgpilot.com/section/news/state%5Fof%5Falaska">State of Alaska</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/sports">Sports</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/opinion">Opinion</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/about_town">About Town</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/dockside">Dockside</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/police">Police</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.petersburgpilot.com/home/customer_files/52324pilotlegal.pdf" target="_blank">Legals</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.petersburgpilot.com/home/customer_files/52324pilotclass.pdf" target="_blank">Classifieds</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" ACTION="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <h2 class="section_title_font">News / Petersburg</h2><p class='tagline'><strong>Sorted by date</strong>&nbsp;&nbsp;Results <strong>1 - 25</strong> of <strong>5469</strong></p><br /><br /><div class='sections_display'><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' target='_blank' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/'>May 23, 2024</a>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/page/the-full-pdf-of-this-weeks-petersburg-pilot/11750.html" aria-label="Story Thumbnail: The Full PDF of this week&apos;s Petersburg Pilot"><img src="/IMG/LfIjliibUTaSXVfKoojxSzxep/XPATH/home/cms_data/dfault/photos/stories/id/5/0/11750/s_topXEXT1520x35455is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/page/the-full-pdf-of-this-weeks-petersburg-pilot/11750.html" aria-label="The Full PDF of this week&apos;s Petersburg Pilot"></a>
+<a href="HTTPS://www.petersburgpilot.com/page/the-full-pdf-of-this-weeks-petersburg-pilot/11750.html" aria-label="The Full PDF of this week&apos;s Petersburg Pilot"><h3>The Full PDF of this week's Petersburg Pilot</h3></a>
+<p>Subscribers log in for access to this week's PDF ..................................</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/'>May 23, 2024</a>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/pvfd-chief-jim-stolpe-is-petersburgs-volunteer-of-the-year/14069.html" aria-label="Story Thumbnail: PVFD Chief Jim Stolpe is Petersburg&apos;s Volunteer of the Year"><img src="/IMG/LfIkliibUTaSXVfKoqjxSzwep/XPATH/home/cms_data/dfault/photos/stories/id/6/9/14069/s_topXEXT1520x35476is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/pvfd-chief-jim-stolpe-is-petersburgs-volunteer-of-the-year/14069.html" aria-label="PVFD Chief Jim Stolpe is Petersburg&apos;s Volunteer of the Year"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/pvfd-chief-jim-stolpe-is-petersburgs-volunteer-of-the-year/14069.html" aria-label="PVFD Chief Jim Stolpe is Petersburg&apos;s Volunteer of the Year"><h3>PVFD Chief Jim Stolpe is Petersburg's Volunteer of the Year</h3></a>
+<p>On Saturday, the Petersburg Community Foundation (PCF) granted over $26,000 to nine Petersburg nonpr...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/'>May 23, 2024</a>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/assembly-considers-sales-tax-cap-increase/14071.html" aria-label="Story Thumbnail: Assembly considers sales tax cap increase"><img src="/IMG/4MYTYK3cGMZQfWh4siowaxumj/XPATH/home/cms_data/dfault/photos/stories/id/7/1/14071/s_topXEXT1520x35484is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/assembly-considers-sales-tax-cap-increase/14071.html" aria-label="Assembly considers sales tax cap increase"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/assembly-considers-sales-tax-cap-increase/14071.html" aria-label="Assembly considers sales tax cap increase"><h3>Assembly considers sales tax cap increase</h3></a>
+<p>The Petersburg Borough Assembly is considering an ordinance that may increase the local sales tax...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/'>May 23, 2024</a>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/borough-budget-weighs-deficit-spending-school-funding/14072.html" aria-label="Story Thumbnail: Borough Budget weighs deficit spending, school funding"><img src="/IMG/4MTdiesXTcYXdOe6qjp0Y2ygi/XPATH/home/cms_data/dfault/photos/stories/id/7/2/14072/s_topXEXT1520x35444is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/borough-budget-weighs-deficit-spending-school-funding/14072.html" aria-label="Borough Budget weighs deficit spending, school funding"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/borough-budget-weighs-deficit-spending-school-funding/14072.html" aria-label="Borough Budget weighs deficit spending, school funding"><h3>Borough Budget weighs deficit spending, school funding</h3></a>
+<p>The Petersburg Borough budget for the next fiscal year (FY25) is nearly decided. Currently, the...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/'>May 23, 2024</a>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_23_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/psd-proposes-three-different-scenarios-for-activities-budget/14077.html" aria-label="Story Thumbnail: PSD proposes three different scenarios for activities budget"><img src="/IMG/NhKmVioLEbaKOZRPpqbvgvzag/XPATH/home/cms_data/dfault/photos/stories/id/7/7/14077/s_topXEXT1520x35465is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/psd-proposes-three-different-scenarios-for-activities-budget/14077.html" aria-label="PSD proposes three different scenarios for activities budget"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/23/news/psd-proposes-three-different-scenarios-for-activities-budget/14077.html" aria-label="PSD proposes three different scenarios for activities budget"><h3>PSD proposes three different scenarios for activities budget</h3></a>
+<p>The Petersburg School District is considering three scenarios to reduce the financial burden of...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_16_2024/'>May 16, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/little-norway-festival-has-arrived/14051.html" aria-label="Story Thumbnail: Little Norway Festival has arrived"><img src="/IMG/NhUPbdqfUeGbYTdCohxuf0nlT/XPATH/home/cms_data/dfault/photos/stories/id/5/1/14051/s_topXEXT1520x35444is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/little-norway-festival-has-arrived/14051.html" aria-label="Little Norway Festival has arrived"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/little-norway-festival-has-arrived/14051.html" aria-label="Little Norway Festival has arrived"><h3>Little Norway Festival has arrived</h3></a>
+<p>Skol! This year's Little Norway Festival kicks off today with over fifty festivities to choose from...&nbsp;<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/little-norway-festival-has-arrived/14051.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_16_2024/'>May 16, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/teacher-contract-negotiations-near-agreement-with-strings-attached/14052.html" aria-label="Story Thumbnail: Teacher contract negotiations near agreement, with strings attached"><img src="/IMG/-STgZboOZQfIgMM4umdijq2gp/XPATH/home/cms_data/dfault/photos/stories/id/5/2/14052/s_topXEXT1520x35385is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/teacher-contract-negotiations-near-agreement-with-strings-attached/14052.html" aria-label="Teacher contract negotiations near agreement, with strings attached"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/teacher-contract-negotiations-near-agreement-with-strings-attached/14052.html" aria-label="Teacher contract negotiations near agreement, with strings attached"><h3>Teacher contract negotiations near agreement, with strings attached</h3></a>
+<p>On May 7, negotiating teams for the Associated Teachers of Petersburg (ATP) and Petersburg School...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_16_2024/'>May 16, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/seattles-staxx-bros-set-to-perform-in-petersburg/14056.html" aria-label="Story Thumbnail: Seattle&apos;s Staxx bros set to perform in Petersburg"><img src="/IMG/GaRTodmdKMbShGh-cSwwSoyYo/XPATH/home/cms_data/dfault/photos/stories/id/5/6/14056/s_topXEXT1520x35485is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/seattles-staxx-bros-set-to-perform-in-petersburg/14056.html" aria-label="Seattle&apos;s Staxx bros set to perform in Petersburg"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/seattles-staxx-bros-set-to-perform-in-petersburg/14056.html" aria-label="Seattle&apos;s Staxx bros set to perform in Petersburg"><h3>Seattle's Staxx bros set to perform in Petersburg</h3></a>
+<p>Feel like dancing during this week's festivities? Then you're in luck! High energy, multi-genre...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_16_2024/'>May 16, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/community-theater-troupe-raising-funds-for-fellow-mummer/14058.html" aria-label="Story Thumbnail: Community theater troupe raising funds for fellow mummer"><img src="/IMG/JdOebd1MbMMdSfJQfVbxkkljZ/XPATH/home/cms_data/dfault/photos/stories/id/5/8/14058/s_topXEXT1520x35452is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/community-theater-troupe-raising-funds-for-fellow-mummer/14058.html" aria-label="Community theater troupe raising funds for fellow mummer"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/community-theater-troupe-raising-funds-for-fellow-mummer/14058.html" aria-label="Community theater troupe raising funds for fellow mummer"><h3>Community theater troupe raising funds for fellow mummer</h3></a>
+<p>Today, the Mitkof Mummers community theater group is hosting a sloppy joe dinner and silent auction...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_16_2024/'>May 16, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/ruptured-pipe-causes-flooding-on-fram-street/14062.html" aria-label="Story Thumbnail: Ruptured pipe causes flooding on Fram Street"><img src="/IMG/NhCemY6QYZWZWXPLsWwiW3ppR/XPATH/home/cms_data/dfault/photos/stories/id/6/2/14062/s_topXEXT1520x35480is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/ruptured-pipe-causes-flooding-on-fram-street/14062.html" aria-label="Ruptured pipe causes flooding on Fram Street"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/16/news/ruptured-pipe-causes-flooding-on-fram-street/14062.html" aria-label="Ruptured pipe causes flooding on Fram Street"><h3>Ruptured pipe causes flooding on Fram Street</h3></a>
+<p>Fram Street flooded Tuesday evening when thousands of gallons of water poured out of the ground and...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/assembly-considers-transient-room-tax-increase/14032.html" aria-label="Assembly considers transient room tax increase"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/assembly-considers-transient-room-tax-increase/14032.html" aria-label="Assembly considers transient room tax increase"><h3>Assembly considers transient room tax increase</h3></a>
+<p>Assembly members voted on the proposed FY25 borough budget for the first time on Monday, as well as two additional ordinances related to revenue — u...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/captain-dan-bird-earns-statewide-fire-service-leadership-award/14033.html" aria-label="Story Thumbnail: Captain Dan Bird earns statewide Fire Service Leadership Award"><img src="/IMG/AUXdtK1YRaQXXcbHzawehztoZ/XPATH/home/cms_data/dfault/photos/stories/id/3/3/14033/s_topXEXT1520x35381is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/captain-dan-bird-earns-statewide-fire-service-leadership-award/14033.html" aria-label="Captain Dan Bird earns statewide Fire Service Leadership Award"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/captain-dan-bird-earns-statewide-fire-service-leadership-award/14033.html" aria-label="Captain Dan Bird earns statewide Fire Service Leadership Award"><h3>Captain Dan Bird earns statewide Fire Service Leadership Award</h3></a>
+<p>On Monday, Assistant State Fire Marshal Mark Brauneis traveled to Petersburg to announce that Captai...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/us-coast-guard-cutter-anacapa-decommissioned-after-34-years/14034.html" aria-label="Story Thumbnail: U.S. Coast Guard Cutter Anacapa decommissioned after 34 years"><img src="/IMG/NhGTqU7IcMJIdaL-saysoiyge/XPATH/home/cms_data/dfault/photos/stories/id/3/4/14034/s_topXEXT1520x35406is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/us-coast-guard-cutter-anacapa-decommissioned-after-34-years/14034.html" aria-label="U.S. Coast Guard Cutter Anacapa decommissioned after 34 years"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/us-coast-guard-cutter-anacapa-decommissioned-after-34-years/14034.html" aria-label="U.S. Coast Guard Cutter Anacapa decommissioned after 34 years"><h3>U.S. Coast Guard Cutter Anacapa decommissioned after 34 years</h3></a>
+<p>"I want to thank the crew serving today, and all who served aboard Anacapa over these many years,...&nbsp;<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/us-coast-guard-cutter-anacapa-decommissioned-after-34-years/14034.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-wants-to-hear-community-priorities-for-tongass-management/14036.html" aria-label="Story Thumbnail: Forest Service wants to hear community priorities for Tongass management"><img src="/IMG/8QXTbfshEeMLIbd6fljzg6fjh/XPATH/home/cms_data/dfault/photos/stories/id/3/6/14036/s_topXEXT1520x35469is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-wants-to-hear-community-priorities-for-tongass-management/14036.html" aria-label="Forest Service wants to hear community priorities for Tongass management"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-wants-to-hear-community-priorities-for-tongass-management/14036.html" aria-label="Forest Service wants to hear community priorities for Tongass management"><h3>Forest Service wants to hear community priorities for Tongass management</h3></a>
+<p>The USDA Forest Service is starting the process of revising the Tongass National Forest Land...&nbsp;<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-wants-to-hear-community-priorities-for-tongass-management/14036.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/ola_richards' aria-label="Author link">Ola Richards</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/mud-dump-fee-waived-for-new-pmc-facility-project/14040.html" aria-label="Story Thumbnail: Mud Dump fee waived for new PMC facility project"><img src="/IMG/MgTdmYzOXZKdOMeCySziTi0jT/XPATH/home/cms_data/dfault/photos/stories/id/4/0/14040/s_topXEXT1520x35394is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/mud-dump-fee-waived-for-new-pmc-facility-project/14040.html" aria-label="Mud Dump fee waived for new PMC facility project"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/mud-dump-fee-waived-for-new-pmc-facility-project/14040.html" aria-label="Mud Dump fee waived for new PMC facility project"><h3>Mud Dump fee waived for new PMC facility project</h3></a>
+<p>All mud dump fees for the new hospital project will be waived. Although the fees would have...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/blind-slough-hydroelectric-powerhouse-turns-100/14041.html" aria-label="Story Thumbnail: Blind Slough hydroelectric powerhouse turns 100"><img src="/IMG/MgKckg0XVObKZXXQhmushwwWk/XPATH/home/cms_data/dfault/photos/stories/id/4/1/14041/s_topXEXT1520x35444is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/blind-slough-hydroelectric-powerhouse-turns-100/14041.html" aria-label="Blind Slough hydroelectric powerhouse turns 100"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/blind-slough-hydroelectric-powerhouse-turns-100/14041.html" aria-label="Blind Slough hydroelectric powerhouse turns 100"><h3>Blind Slough hydroelectric powerhouse turns 100</h3></a>
+<p>Petersburg Municipal Power and Light invites the public to celebrate 100 years of hydropower in...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/orin_pierson' aria-label="Author link">Orin Pierson</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/dozens-in-petersburg-cooperate-to-assemble-worlds-largest-puzzle/14044.html" aria-label="Story Thumbnail: Dozens in Petersburg cooperate to assemble &apos;world&apos;s largest puzzle&apos;"><img src="/IMG/GaYVpdyZSXMbbKi-fnl1Q6lTR/XPATH/home/cms_data/dfault/photos/stories/id/4/4/14044/s_topXEXT1520x35487is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/dozens-in-petersburg-cooperate-to-assemble-worlds-largest-puzzle/14044.html" aria-label="Dozens in Petersburg cooperate to assemble &apos;world&apos;s largest puzzle&apos;"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/dozens-in-petersburg-cooperate-to-assemble-worlds-largest-puzzle/14044.html" aria-label="Dozens in Petersburg cooperate to assemble &apos;world&apos;s largest puzzle&apos;"><h3>Dozens in Petersburg cooperate to assemble 'world's largest puzzle'</h3></a>
+<p>In January, Petersburg resident Sondra Hurst learned that seniors at a retirement home in her hometo...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/larry_persily' aria-label="Author link">Larry Persily</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-seeks-public-comment-on-fees-for-new-cabins/14045.html" aria-label="Story Thumbnail: Forest Service seeks public comment on fees for new cabins"><img src="/IMG/IcNhfZxeWVZQdIaJnqjwjywei/XPATH/home/cms_data/dfault/photos/stories/id/4/5/14045/s_topXEXT1520x35454is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-seeks-public-comment-on-fees-for-new-cabins/14045.html" aria-label="Forest Service seeks public comment on fees for new cabins"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/forest-service-seeks-public-comment-on-fees-for-new-cabins/14045.html" aria-label="Forest Service seeks public comment on fees for new cabins"><h3>Forest Service seeks public comment on fees for new cabins</h3></a>
+<p>The U.S. Forest Service plans to build six new cabins and a new campground in Southeast Alaska and...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/shelby_herbert' aria-label="Author link">Shelby Herbert</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_09_2024/'>May 9, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/petersburg-residents-march-for-missing-and-murdered-indigenous-people-awareness-day/14050.html" aria-label="Story Thumbnail: Petersburg residents march for Missing and Murdered Indigenous People Awareness Day"><img src="/IMG/HbPjnZzQZIXZWeRMsisqhoyjV/XPATH/home/cms_data/dfault/photos/stories/id/5/0/14050/s_topXEXT1520x35452is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/petersburg-residents-march-for-missing-and-murdered-indigenous-people-awareness-day/14050.html" aria-label="Petersburg residents march for Missing and Murdered Indigenous People Awareness Day"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/09/news/petersburg-residents-march-for-missing-and-murdered-indigenous-people-awareness-day/14050.html" aria-label="Petersburg residents march for Missing and Murdered Indigenous People Awareness Day"><h3>Petersburg residents march for Missing and Murdered Indigenous People Awareness Day</h3></a>
+<p>Around 20 Petersburg residents marched downtown on May 5 in observance of Missing and Murdered Indig...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_02_2024/'>May 2, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/hospital-site-work/14014.html" aria-label="Story Thumbnail: Hospital site work"><img src="/IMG/4MYTYK3bGMZQfWh4siowaxumj/XPATH/home/cms_data/dfault/photos/stories/id/1/4/14014/s_topXEXT1520x35468is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/hospital-site-work/14014.html" aria-label="Hospital site work"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/hospital-site-work/14014.html" aria-label="Hospital site work"><h3>Hospital site work</h3></a>
+<p>"Progress on the new facility site is steady and going well," PMC CEO Phil Hofstetter reported to...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_02_2024/'>May 2, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/pole-fire-knocks-out-power-in-petersburg-wrangell-and-ketchikan/14015.html" aria-label="Story Thumbnail: Pole fire knocks out power in Petersburg, Wrangell and Ketchikan"><img src="/IMG/LfQejbobXKZOObTRZqhfQ3ySX/XPATH/home/cms_data/dfault/photos/stories/id/1/5/14015/s_topXEXT1520x35432is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/pole-fire-knocks-out-power-in-petersburg-wrangell-and-ketchikan/14015.html" aria-label="Pole fire knocks out power in Petersburg, Wrangell and Ketchikan"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/pole-fire-knocks-out-power-in-petersburg-wrangell-and-ketchikan/14015.html" aria-label="Pole fire knocks out power in Petersburg, Wrangell and Ketchikan"><h3>Pole fire knocks out power in Petersburg, Wrangell and Ketchikan</h3></a>
+<p>A brief regionwide blackout across Ketchikan, Wrangell and Petersburg last week started with a...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/05_02_2024/'>May 2, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/local-colon-cancer-survivor-shares-her-story-to-raise-awareness-and-normalize-the-conversation/14017.html" aria-label="Story Thumbnail: Local colon cancer survivor shares her story to raise awareness and normalize the conversation"><img src="/IMG/MgTdmYzOXZKdOMeCySziTi0jT/XPATH/home/cms_data/dfault/photos/stories/id/1/7/14017/s_topXEXT1520x35442is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/local-colon-cancer-survivor-shares-her-story-to-raise-awareness-and-normalize-the-conversation/14017.html" aria-label="Local colon cancer survivor shares her story to raise awareness and normalize the conversation"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/02/news/local-colon-cancer-survivor-shares-her-story-to-raise-awareness-and-normalize-the-conversation/14017.html" aria-label="Local colon cancer survivor shares her story to raise awareness and normalize the conversation"><h3>Local colon cancer survivor shares her story to raise awareness and normalize the conversation</h3></a>
+<p>"...Don't say the C word..." Cris Morrison remembers telling her husband "...It's a blockage..." It...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/04_25_2024/'>April 25, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/school-district-drafts-budget-teachers-union-contract-still-in-negotiations/14002.html" aria-label="Story Thumbnail: School district drafts budget; teachers&apos; union contract still in negotiations"><img src="/IMG/4MTdiesXTcYXeOe6qjp0Y2ygi/XPATH/home/cms_data/dfault/photos/stories/id/0/2/14002/s_topXEXT1520x35394is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/school-district-drafts-budget-teachers-union-contract-still-in-negotiations/14002.html" aria-label="School district drafts budget; teachers&apos; union contract still in negotiations"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/school-district-drafts-budget-teachers-union-contract-still-in-negotiations/14002.html" aria-label="School district drafts budget; teachers&apos; union contract still in negotiations"><h3>School district drafts budget; teachers' union contract still in negotiations</h3></a>
+<p>There were more attendees than usual at the Petersburg School District Board meeting last week as...&nbsp;<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/school-district-drafts-budget-teachers-union-contract-still-in-negotiations/14002.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/olivia_rose' aria-label="Author link">Olivia Rose</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/04_25_2024/'>April 25, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/a-rezoning-ordinance-could-help-develop-desperately-needed-child-care-facility/14005.html" aria-label="Story Thumbnail: A rezoning ordinance could help develop &apos;desperately&apos; needed child care facility"><img src="/IMG/NhCemY6QYZWZWXPLsW0iW3ppR/XPATH/home/cms_data/dfault/photos/stories/id/0/5/14005/s_topXEXT1520x35445is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/a-rezoning-ordinance-could-help-develop-desperately-needed-child-care-facility/14005.html" aria-label="A rezoning ordinance could help develop &apos;desperately&apos; needed child care facility"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/a-rezoning-ordinance-could-help-develop-desperately-needed-child-care-facility/14005.html" aria-label="A rezoning ordinance could help develop &apos;desperately&apos; needed child care facility"><h3>A rezoning ordinance could help develop 'desperately' needed child care facility</h3></a>
+<p>To free up preschool classroom space, Petersburg Children's Center (PCC) hopes to build a parking lo...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.petersburgpilot.com/author/orin_pierson' aria-label="Author link">Orin Pierson</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.petersburgpilot.com/issue/04_25_2024/'>April 25, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/chili-cook-off-will-raise-money-for-rescue-equipment/14010.html" aria-label="Story Thumbnail: Chili cook-off will raise money for rescue equipment"><img src="/IMG/-SDNqdkOXOdYgGcImmlrf4xfn/XPATH/home/cms_data/dfault/photos/stories/id/1/0/14010/s_topXEXT1520x35469is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/chili-cook-off-will-raise-money-for-rescue-equipment/14010.html" aria-label="Chili cook-off will raise money for rescue equipment"></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/04/25/news/chili-cook-off-will-raise-money-for-rescue-equipment/14010.html" aria-label="Chili cook-off will raise money for rescue equipment"><h3>Chili cook-off will raise money for rescue equipment</h3></a>
+<p>This Friday, the Petersburg Police Department and the Petersburg Volunteer Fire Department are turni...</p>
+</div>&nbsp;</div></div><p><a class='page-down' href='HTTPS://www.petersburgpilot.com/section/news/petersburg/26'>Page Down</a></p>
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/petersburgs-class-of-2024-sets-the-bar-high/14082.html' aria-label='Story Thumbnail: Petersburg&apos;s Class of...'><img src="/IMG/i8s2GsRkvFuSpk3G3yG8K7t9x/XPATH/home/cms_data/dfault/photos/stories/id/8/2/14082/s_topXEXT1520x35451is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/petersburgs-class-of-2024-sets-the-bar-high/14082.html' aria-label='Story Thumbnail: Petersburg&apos;s Class of...'>Petersburg's Class of...<span class='mp_author'>Orin Pierson</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/news/pvfd-chief-jim-stolpe-is-petersburgs-volunteer-of-the-year/14069.html' aria-label='Story Thumbnail: PVFD Chief Jim Stolpe...'><img src="/IMG/f5i-_881uB0Ewf6I189L5564D/XPATH/home/cms_data/dfault/photos/stories/id/6/9/14069/s_topXEXT1520x35476is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/news/pvfd-chief-jim-stolpe-is-petersburgs-volunteer-of-the-year/14069.html' aria-label='Story Thumbnail: PVFD Chief Jim Stolpe...'>PVFD Chief Jim Stolpe...<span class='mp_author'>Olivia Rose</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/scenes-from-the-66th-little-norway-festival/14078.html' aria-label='Story Thumbnail: Scenes from the 66th L...'><img src="/IMG/k-i7C0Nwv6zNllq87uO2PusqA/XPATH/home/cms_data/dfault/photos/stories/id/7/8/14078/s_topXEXT1520x35450is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/scenes-from-the-66th-little-norway-festival/14078.html' aria-label='Story Thumbnail: Scenes from the 66th L...'>Scenes from the 66th L...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/100-years-of-blind-slough-hydropower/14076.html' aria-label='Story Thumbnail: 100 years of Blind Slo...'><img src="/IMG/Uuu6_1KzkHz-0WqLw91O9rp__/XPATH/home/cms_data/dfault/photos/stories/id/7/6/14076/s_topXEXT1520x35460is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/100-years-of-blind-slough-hydropower/14076.html' aria-label='Story Thumbnail: 100 years of Blind Slo...'>100 years of Blind Slo...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/elks-students-of-the-month-and-year/14084.html' aria-label='Story Thumbnail: Elks Students of the M...'><img src="/IMG/b1w5-8E3gFxI5Y4J21DH978uA/XPATH/home/cms_data/dfault/photos/stories/id/8/4/14084/s_topXEXT1520x35397is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/elks-students-of-the-month-and-year/14084.html' aria-label='Story Thumbnail: Elks Students of the M...'>Elks Students of the M...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/little-norway-festival/14080.html' aria-label='Story Thumbnail: Little Norway Festival'><img src="/IMG/e4p935-zvC4C1j0H017JKs6wx/XPATH/home/cms_data/dfault/photos/stories/id/8/0/14080/s_topXEXT1520x35500is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/about-town/little-norway-festival/14080.html' aria-label='Story Thumbnail: Little Norway Festival'>Little Norway Festival<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/sports/track-andamp-field-takes-three-regional-titles/14068.html' aria-label='Story Thumbnail: Track &amp;amp; field take...'><img src="/IMG/Ssg85986k3gP1SqJu7FO3753_/XPATH/home/cms_data/dfault/photos/stories/id/6/8/14068/s_topXEXT1520x35454is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/23/sports/track-andamp-field-takes-three-regional-titles/14068.html' aria-label='Story Thumbnail: Track &amp;amp; field take...'>Track &amp; field take...<span class='mp_author'>Liam Demko</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:f5z3%5FtH13IwrtP9y2FzRDU8X5bJOCd%5FVT0ITFviKL--><span class="ad_local_square"><img src="/IMG/uhSmke2jbieRiNfVfDb9oDrTqhuHusijz/XPATH/home/cms_data/dfault/web_ads/square/4321-pilot_info.jpgXEXT1244x36719is.jpeg" width="300" height="247" alt=""></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:g604AuI24JxsuQ%2Dz3G0SEV9Y6cKTD%2DAaU1JUTMTLM--><span class="ad_local_square"><a href="https://www.rockysmarine.com/" target="blank"><img src="/IMG/xkVfvZ2cflajVgQOk5rxpGmanshEAftjk/XPATH/home/cms_data/dfault/web_ads/square/3762-rocky_smarineweb_layout_1.jpgXEXT1717x41549.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/opinion' aria-label="Section link">Opinion</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/about_town' aria-label="Section link">About Town</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/dockside' aria-label="Section link">Dockside</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/police' aria-label="Section link">Police</a></li><li>Legals</li><li>Classifieds</li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/contact" >Contact</a></li><li><a href="HTTPS://www.petersburgpilot.com/subscribe/start" >Subscribe</a></li><li><a href="HTTPS://www.petersburgpilot.com/about" >About</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.petersburgpilot.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.petersburgpilot.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.petersburgpilot.com/section/news/petersburg/?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/advertise" >Advertise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.petersburgpilot.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="https://www.facebook.com/petersburgpilot/"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='30' alt='FaceBook'></a><a  href="HTTPS://www.petersburgpilot.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Petersburg Pilot</h4>
+        <p>
+          P.O. Box 930<br />Petersburg, AK 99833<br />Ph: (907) 772-9393<br />
+       </p>
+        <p>
+          &copy; 2024 Pilot Publishing, Inc.<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <!-- <br><small>live</small> (Desktop|paywallerror|error|usernum=00767) -->
+ </body>
+
+
+</html>

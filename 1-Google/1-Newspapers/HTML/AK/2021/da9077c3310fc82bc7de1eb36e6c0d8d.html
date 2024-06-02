@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Juneau Empire</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/png" href="/eeLayout/juneauempire/1.0.a/images/webapp/favicon.png">
+<meta name="viewport" content="device-width, initial-scale=1">
+<style>
+    body {
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 14px;
+        background-color: #d1d1d1;
+        margin: 0;
+    }
+    header {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    header.smaller {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    main {
+        max-width: 1024px;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+    }
+    #ssindex {
+        border: 0;
+        width: 100%;
+    }
+    #primaContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0.5rem;
+        color: #7b7b7b;
+    }
+    #primaContainer .description {
+        flex: 1;
+        padding: 1rem;
+        text-align: center;
+        margin: 0 1rem;
+    }
+    #primaContainer #recentPrimas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #recentPrimas header {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    #recentPrimas .prima {
+        margin: 20px 10%;
+    }
+    footer {
+        background-color: #093d72;
+        color: #fff;
+        padding: 0.5rem;
+    }
+    footer header {
+        font-size: 1.3rem;
+        text-align: inherit;
+    }
+    footer main {
+        display: flex;
+        background-color: inherit;
+    }
+    footer main > * {
+        flex: 1;
+        text-align: center;
+    }
+    footer main > *:first-child {
+        text-align: left;
+    }
+    footer main > *:last-child {
+        text-align: right;
+    }
+    .prima img {
+        flex: 0 1 auto;
+        box-shadow: 3px 3px 5px #444;
+    }
+    .prima a:hover img {
+        box-shadow: 3px 3px 10px #000;
+    }
+</style>
+</head>
+<body>
+    <main>
+        <div><a href="/"><img src="/eeLayout/juneauempire/landing/header.jpg"></a></div>
+        <div id='primaContainer'>
+            <div class='prima'>
+                <header>Latest News</header>
+                <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?"><img src="/getprima.php"></a>
+            </div>
+            <div class='description'>
+                <header>Juneau Empire</header>
+                                <header class='smaller'>Recent News</header>
+                <div id='recentPrimas'>
+                                           <div class='prima'>
+                            <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?selDate=20240525"><header>05/25/2024</header><img src="/newsmemvol2/alaska/juneauempire/20240525/juen240525_a01.pdf.0/low.jpg"></a>
+                       </div>
+                                           <div class='prima'>
+                            <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?selDate=20240522"><header>05/22/2024</header><img src="/newsmemvol2/alaska/juneauempire/20240522/juen240522_a01.pdf.0/low.jpg"></a>
+                       </div>
+                                           <div class='prima'>
+                            <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?selDate=20240518"><header>05/18/2024</header><img src="/newsmemvol2/alaska/juneauempire/20240518/juen240518_a01.pdf.0/low.jpg"></a>
+                       </div>
+                                           <div class='prima'>
+                            <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?selDate=20240515"><header>05/15/2024</header><img src="/newsmemvol2/alaska/juneauempire/20240515/juen240515_a01.pdf.0/low.jpg"></a>
+                       </div>
+                                           <div class='prima'>
+                            <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?selDate=20240511"><header>05/11/2024</header><img src="/newsmemvol2/alaska/juneauempire/20240511/juen240511_a01.pdf.0/low.jpg"></a>
+                       </div>
+                                           <div class='prima'>
+                            <a target="_blank" href="https://juneauempire-ak.newsmemory.com/ee/thirdparty/nwsso/?selDate=20240508"><header>05/08/2024</header><img src="/newsmemvol2/alaska/juneauempire/20240508/juen240508_a01.pdf.0/low.jpg"></a>
+                       </div>
+                                    </div>
+            </div>
+        </div>
+        <div><iframe id='ssindex' src="/ssindex.php"></iframe></div>
+    </main>
+    <footer>
+        <main>
+            <div>
+                <header>About Us</header>
+                <p>The Juneau Empire has been the voice of Alaska’s capital since 1912 and is a division of Sound Publishing, Inc</p>
+            </div>
+            <div>
+                <header>Contact</header>
+                <div>Juneau Empire</div>
+                <div>i888-838-3000</div>
+                <!--<div>425-339-3200</div>-->
+                <div><p><a href="mailto:circulation@soundpublishing.com">circulation@soundpublishing.com</a></p></div>
+                
+            </div>
+        </main>
+    </footer>
+    <script>
+        var iframe = document.getElementById('ssindex');
+        iframe.onload = function() {
+            var height = this.contentDocument.documentElement.offsetHeight;
+            this.style.height = height+"px";
+        }
+    </script>
+</body>
+</html>

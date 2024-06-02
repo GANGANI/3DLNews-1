@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://www.freeburgtribune.com/xmlrpc.php" />
+<link rel="stylesheet" href="https://www.freeburgtribune.com/wp-content/themes/bb-theme/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://www.freeburgtribune.com/wp-content/themes/bb-theme-child/news01.css" />
+<!--[if lt IE 9]>
+	<script src="https://www.freeburgtribune.com/wp-content/themes/bb-theme/js/html5shiv.js"></script>
+	<script src="https://www.freeburgtribune.com/wp-content/themes/bb-theme/js/respond.min.js"></script>
+<![endif]-->
+<title>The Freeburg Tribune</title>
+    <script>
+      var bwg_admin_ajax = 'https://www.freeburgtribune.com/wp-admin/admin-ajax.php?action=shortcode_bwg';
+      var bwg_ajax_url = 'https://www.freeburgtribune.com/wp-admin/admin-ajax.php?action';
+      var bwg_plugin_url = 'https://www.freeburgtribune.com/wp-content/plugins/photo-gallery';
+      document.addEventListener('DOMContentLoaded', function(){ // Analog of $(document).ready(function(){
+        bwg_check_ready = function () {}
+        document.onkeyup = function(e){
+          if ( e.key == 'Escape' ) {
+            bwg_remove_loading_block();
+          }
+        };
+      });
+
+      // Set shortcode popup dimensions.
+      function bwg_set_shortcode_popup_dimensions() {
+        var H = jQuery(window).height(), W = jQuery(window).width();
+        jQuery("#TB_title").hide().first().show();
+        // New
+        var tbWindow = jQuery('#TB_window');
+        if (tbWindow.size()) {
+          tbWindow.width(W).height(H);
+          jQuery('#TB_iframeContent').width(W).height(H);
+          tbWindow.attr('style',
+            'top:'+ '0px !important;' +
+            'left:' + '0px !important;' +
+            'margin-left:' + '0;' +
+            'z-index:' + '1000500;' +
+            'max-width:' + 'none;' +
+            'max-height:' + 'none;' +
+            '-moz-transform:' + 'none;' +
+            '-webkit-transform:' + 'none'
+          );
+        }
+        // Edit
+        var tbWindow = jQuery('.mce-window[aria-label="Photo Gallery"]');
+        if (tbWindow.length) {
+          // To prevent wp centering window with old sizes.
+          setTimeout(function() {
+            tbWindow.width(W).height(H);
+            tbWindow.css({'top': 0, 'left': 0, 'margin-left': '0', 'z-index': '1000500'});
+            tbWindow.find('.mce-window-body').width(W).height(H);
+          }, 10);
+        }
+      }
+      // Create loading block.
+      function bwg_create_loading_block() {
+        jQuery('body').append('<div class="loading_div" style="display:block; width: 100%; height: 100%; opacity: 0.6; position: fixed; background-color: #000000; background-image: url('+ bwg_plugin_url +'/images/spinner.gif); background-position: center; background-repeat: no-repeat; background-size: 50px; z-index: 1001000; top: 0; left: 0;"></div>');
+      }
+      // Remove loading block.
+      function bwg_remove_loading_block() {
+        jQuery(".loading_div", window.parent.document).remove();
+        jQuery('.loading_div').remove();
+      }
+	  </script>
+    <script type="text/javascript" >            function apbct_attach_event_handler__backend(elem, event, callback){                if(typeof window.addEventListener === "function") elem.addEventListener(event, callback);                else                                              elem.attachEvent(event, callback);            }            apbct_attach_event_handler__backend(window, 'load', function(){                ctSetCookie('ct_checkjs', '1362910805' );            });</script><link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="The Freeburg Tribune &raquo; Feed" href="https://www.freeburgtribune.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Freeburg Tribune &raquo; Comments Feed" href="https://www.freeburgtribune.com/comments/feed/" />
+<meta property="og:title" content="Home"/><meta property="og:type" content="article"/><meta property="og:url" content="https://www.freeburgtribune.com/"/><meta property="og:site_name" content="The Freeburg Tribune"/><meta property="og:image" content="http://media.iadsnetwork.com/facebookthumbnail/facebook.jpg"/><link rel='stylesheet' id='formidable-css'  href='https://www.freeburgtribune.com/wp-content/plugins/formidable/css/formidableforms.css?ver=9111339' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.freeburgtribune.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.13' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://www.freeburgtribune.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.6.13' media='all' />
+<link rel='stylesheet' id='jquery-bxslider-css'  href='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.4.2.2' media='all' />
+<link rel='stylesheet' id='fl-builder-layout-1041-css'  href='https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/1041-layout.css?ver=be6ae1804bba20eda8c53244290faf5b' media='all' />
+<link rel='stylesheet' id='bwg_fonts-css'  href='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/css/bwg-fonts/fonts.css?ver=0.0.1' media='all' />
+<link rel='stylesheet' id='sumoselect-css'  href='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/css/sumoselect.min.css?ver=3.0.3' media='all' />
+<link rel='stylesheet' id='mCustomScrollbar-css'  href='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.min.css?ver=2.5.75' media='all' />
+<link rel='stylesheet' id='bwg_frontend-css'  href='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/css/styles.min.css?ver=2.5.75' media='all' />
+<link rel='stylesheet' id='webads-admin-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-admin/public/css/webads-admin-public.css?ver=1.5.5' media='all' />
+<link rel='stylesheet' id='webads-adrotate-legacy-widget-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-adrotate-legacy-widget/public/css/webads-adrotate-legacy-widget-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-adrotate-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-adrotate/css/webads-adrotate.css?ver=5.7.02' media='all' />
+<link rel='stylesheet' id='webads-church-directory-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-church-directory/public/css/webads-church-directory-public.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='webads-crosswords-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-crosswords/public/css/webads-crosswords-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-display-ads-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-display-ads/public/css/webads-display-ads-public.css?ver=1.1.5' media='all' />
+<link rel='stylesheet' id='webads-elasticpress-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-elasticpress/public/css/webads-elasticpress-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-event-calendar-wd-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-event-calendar-wd/public/css/webads-event-calendar-wd-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-news-ticker-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-news-ticker/public/css/webads-news-ticker-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-online-edition-v1-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-online-edition-v1/public/css/webads-online-edition-v1-public.css?ver=1.0.3' media='all' />
+<link rel='stylesheet' id='webads-paperboy-signup-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-paperboy-signup/public/css/webads-paperboy-signup-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-password-protect-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-password-protect/public/css/webads-password-protect-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-photo-gallery-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-photo-gallery/public/css/webads-photo-gallery-public.css?ver=2.5.40.03' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-polls/polls-css.css?ver=2.72' media='all' />
+<style id='wp-polls-inline-css'>
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('https://www.freeburgtribune.com/wp-content/plugins/webads-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel='stylesheet' id='webads-rss-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-rss/public/css/webads-rss-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-social-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-social/public/css/webads-social-public.css?ver=5.6.13' media='all' />
+<link rel='stylesheet' id='webads-stats-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-stats/public/css/webads-stats-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-syndicated-stories-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-syndicated-stories/public/css/webads-syndicated-stories-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-weather-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-weather-v2/public/css/webads-weather-public.css?ver=2.0.7' media='all' />
+<link rel='stylesheet' id='ecwd-popup-style-css'  href='https://www.freeburgtribune.com/wp-content/plugins/event-calendar-wd/css/ecwd_popup.css?ver=5.1.32_59543abab7f72' media='all' />
+<link rel='stylesheet' id='ecwd_font-awesome-css'  href='https://www.freeburgtribune.com/wp-content/plugins/event-calendar-wd/css/font-awesome/font-awesome.css?ver=5.1.32_59543abab7f72' media='all' />
+<link rel='stylesheet' id='ecwd-public-css'  href='https://www.freeburgtribune.com/wp-content/plugins/event-calendar-wd/css/style.css?ver=5.1.32_59543abab7f72' media='all' />
+<link rel='stylesheet' id='sc_form-add_event_public-css'  href='https://www.freeburgtribune.com/wp-content/plugins/ecwd-frontend-event-management/css/style.css?ver=1.0.13' media='all' />
+<link rel='stylesheet' id='addtoany-css'  href='https://www.freeburgtribune.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16' media='all' />
+<link rel='stylesheet' id='jquery-magnificpopup-css'  href='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.4.2.2' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.freeburgtribune.com/wp-content/themes/bb-theme/css/bootstrap.min.css?ver=1.7.9' media='all' />
+<link rel='stylesheet' id='fl-automator-skin-css'  href='https://www.freeburgtribune.com/wp-content/uploads/bb-theme/skin-63ea924e4d40a.css?ver=1.7.9' media='all' />
+<link rel='stylesheet' id='fl-builder-google-fonts-3f19d897d5677fab9c7f938fa02ecdad-css'  href='//fonts.googleapis.com/css?family=Oswald%3A400&#038;ver=5.6.13' media='all' />
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4' id='jquery-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/event-calendar-wd/js/gmap/gmap3.js?ver=5.1.32_59543abab7f72' id='ecwd-gmap-public-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/event-calendar-wd/js/ecwd_popup.js?ver=5.1.32_59543abab7f72' id='ecwd-popup-js'></script>
+<script src='https://www.freeburgtribune.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script src='https://www.freeburgtribune.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.12.1' id='jquery-ui-mouse-js'></script>
+<script src='https://www.freeburgtribune.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.12.1' id='jquery-ui-draggable-js'></script>
+<script src='https://www.freeburgtribune.com/wp-includes/js/imagesloaded.min.js?ver=5.6.13' id='imagesloaded-js'></script>
+<script src='https://www.freeburgtribune.com/wp-includes/js/masonry.min.js?ver=4.2.2' id='masonry-js'></script>
+<script id='ecwd-public-js-extra'>
+var ecwd = {"ajaxurl":"https:\/\/www.freeburgtribune.com\/wp-admin\/admin-ajax.php","ajaxnonce":"2d82b7e87f","loadingText":"Loading...","event_popup_title_text":"Event Details","plugin_url":"https:\/\/www.freeburgtribune.com\/wp-content\/plugins\/event-calendar-wd","gmap_type":"ROADMAP","gmap_redirect":"","gmap_key":"AIzaSyCaa0RtTxnqA-JnjHxBpIGMd3YpYmbJm8g","gmap_style":""};
+</script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/event-calendar-wd/js/scripts.js?ver=5.1.32_59543abab7f72' id='ecwd-public-js'></script>
+<script id='addtoany-core-js-before'>
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+</script>
+<script async src='https://static.addtoany.com/menu/page.js' id='addtoany-core-js'></script>
+<script async src='https://www.freeburgtribune.com/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1' id='addtoany-jquery-js'></script>
+<script id='ct_public-js-extra'>
+var ctPublic = {"_ajax_nonce":"cfc81a6f79","_rest_nonce":"9eea767625","_ajax_url":"\/wp-admin\/admin-ajax.php","_rest_url":"https:\/\/www.freeburgtribune.com\/wp-json\/","_apbct_ajax_url":"https:\/\/www.freeburgtribune.com\/wp-content\/plugins\/cleantalk-spam-protect\/lib\/Cleantalk\/ApbctWP\/Ajax.php","data__set_cookies":"1","data__set_cookies__alt_sessions_type":"0","pixel__setting":"0","pixel__enabled":"","pixel__url":null,"data__email_check_before_post":"1"};
+</script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/cleantalk-spam-protect/js/apbct-public.min.js?apbct_ver=5.159.5&#038;ver=5.159.5' id='ct_public-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/cleantalk-spam-protect/js/cleantalk-modal.min.js?ver=5.159.5' id='cleantalk-modal-js'></script>
+<script id='ct_nocache-js-extra'>
+var ctNocache = {"ajaxurl":"\/wp-admin\/admin-ajax.php","info_flag":"","set_cookies_flag":"1","blog_home":"https:\/\/www.freeburgtribune.com\/"};
+</script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/cleantalk-spam-protect/js/cleantalk_nocache.min.js?ver=5.159.5' id='ct_nocache-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/js/jquery.sumoselect.min.js?ver=3.0.3' id='sumoselect-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/js/jquery.mobile.min.js?ver=1.4.5' id='jquery-mobile-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=2.5.75' id='mCustomScrollbar-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.min.js?ver=0.4.1' id='jquery-fullscreen-js'></script>
+<script id='bwg_frontend-js-extra'>
+var bwg_objectsL10n = {"bwg_field_required":"field is required.","bwg_mail_validation":"This is not a valid email address.","bwg_search_result":"There are no images matching your search.","bwg_select_tag":"Select Tag","bwg_order_by":"Order By","bwg_search":"Search","bwg_show_ecommerce":"Show Ecommerce","bwg_hide_ecommerce":"Hide Ecommerce","bwg_show_comments":"Show Comments","bwg_hide_comments":"Hide Comments","bwg_restore":"Restore","bwg_maximize":"Maximize","bwg_fullscreen":"Fullscreen","bwg_exit_fullscreen":"Exit Fullscreen","bwg_search_tag":"SEARCH...","bwg_tag_no_match":"No tags found","bwg_all_tags_selected":"All tags selected","bwg_tags_selected":"tags selected","play":"Play","pause":"Pause","is_pro":"1","bwg_play":"Play","bwg_pause":"Pause","bwg_hide_info":"Hide info","bwg_show_info":"Show info","bwg_hide_rating":"Hide rating","bwg_show_rating":"Show rating","ok":"Ok","cancel":"Cancel","select_all":"Select all","lazy_load":"0","lazy_loader":"https:\/\/www.freeburgtribune.com\/wp-content\/plugins\/photo-gallery\/images\/ajax_loader.png","front_ajax":"0","bwg_tag_see_all":"see all tags","bwg_tag_see_less":"see less tags"};
+</script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/photo-gallery/js/scripts.min.js?ver=2.5.75' id='bwg_frontend-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-admin/public/js/webads-admin-public.js?ver=1.5.5' id='webads-admin-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-adrotate-legacy-widget/public/js/webads-adrotate-legacy-widget-public.js?ver=1.0.0' id='webads-adrotate-legacy-widget-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-church-directory/public/js/webads-church-directory-public.js?ver=1.0' id='webads-church-directory-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-crosswords/public/js/webads-crosswords-public.js?ver=1.0.0' id='webads-crosswords-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-display-ads/public/js/jquery.sudoSlider.js?ver=1.0.0' id='webads-display-ads-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-elasticpress/public/js/webads-elasticpress-public.js?ver=1.0.0' id='webads-elasticpress-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-event-calendar-wd/public/js/webads-event-calendar-wd-public.js?ver=1.0.0' id='webads-event-calendar-wd-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-news-ticker/public/js/webads-news-ticker-public.js?ver=23' id='webads-news-ticker-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-online-edition-v1/public/js/webads-online-edition-v1-public.js?ver=1.0.3' id='webads-online-edition-v1-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-paperboy-signup/public/js/webads-paperboy-signup-public.js?ver=1.0.0' id='webads-paperboy-signup-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-password-protect/public/js/webads-password-protect-public.js?ver=1.0.0' id='webads-password-protect-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-password-protect/public/js/js.cookie.min.js?ver=5.6.13' id='jquery-cookie-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-photo-gallery/public/js/webads-photo-gallery-public.js?ver=2.5.40.03' id='webads-photo-gallery-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-rss/public/js/webads-rss-public.js?ver=1.0.0' id='webads-rss-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-social/public/js/webads-social-public.js?ver=0.0.1' id='webads-social-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-stats/public/js/webads-stats-public.js?ver=1.0.0' id='webads-stats-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-syndicated-stories/public/js/webads-syndicated-stories-public.js?ver=1.0.1' id='webads-syndicated-stories-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-weather-v2/public/js/webads-weather-public.js?ver=2.0.8' id='webads-weather-js'></script>
+<link rel="https://api.w.org/" href="https://www.freeburgtribune.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.freeburgtribune.com/wp-json/wp/v2/pages/1041" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.freeburgtribune.com/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://www.freeburgtribune.com/" />
+<link rel='shortlink' href='https://www.freeburgtribune.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.freeburgtribune.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.freeburgtribune.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.freeburgtribune.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.freeburgtribune.com%2F&#038;format=xml" />
+
+<!-- This site is using AdRotate v5.8.3 Professional to display their advertisements - https://ajdg.solutions/ -->
+<!-- AdRotate CSS -->
+<style type="text/css" media="screen">
+	.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }
+	.g img { height:auto; }
+	.g-col { position:relative; float:left; }
+	.g-col:first-child { margin-left: 0; }
+	.g-col:last-child { margin-right: 0; }
+	.g-1 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:167px; }
+	@media only screen and (max-width: 480px) {
+		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
+	}
+</style>
+<!-- /AdRotate CSS -->
+
+<!-- Matomo -->
+<script>
+var _paq = window._paq = window._paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+	var u="//stats.iadsnetwork.com/";
+	_paq.push(['setTrackerUrl', u+'matomo.php']);
+	_paq.push(['setSiteId', '138']);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<!-- End Matomo Code -->	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GX5H2QH0GM"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-GX5H2QH0GM');
+	</script><script type="text/javascript">document.documentElement.className += " js";</script>
+<link rel="shortcut icon" href="https://www.freeburgtribune.com/wp-content/uploads/2021/03/favicon-16x16-1.png"/>
+<link rel="stylesheet" href="https://www.freeburgtribune.com/wp-content/themes/bb-theme-child/style.css" /></head>
+
+<body class="home page-template-default page page-id-1041 fl-builder ecwd-theme-parent-bb-theme ecwd-theme-child-bb-theme-child fl-framework-bootstrap fl-preset-color01 fl-fixed-width" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a><div>
+	<div class="fl-page-bar">
+	<div class="fl-page-bar-container container">
+		<div class="fl-page-bar-row row">
+			<div class="col-md-8 hidden-sm text-left clearfix">		<div class="breakingNews" id="bn7">
+			<div class="bn-title"><h2>Breaking News</h2><span></span></div>
+			<ul>
+								<li><a href="https://www.freeburgtribune.com/2024/05/29/once-again-working-through-the-night-lawmakers-finalize-53-1-billion-budget/">Once again working through the night, lawmakers finalize $53.1 billion budget</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/29/lawmakers-move-to-pause-then-further-regulate-carbon-dioxide-pipeline-development/">Lawmakers move to pause – then further regulate – carbon dioxide pipeline development</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/23/advocates-underscore-need-for-statewide-reentry-programs/">Advocates underscore need for statewide reentry programs</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/22/nursing-home-industry-unlikely-to-see-much-help-from-springfield-in-tough-budget-year/">Nursing home industry unlikely to see much help from Springfield in tough budget year</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/22/as-legislative-session-adjournment-looms-a-rush-to-regulate-carbon-capture-industry/">As legislative session adjournment looms, a rush to regulate carbon capture industry</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/17/illinois-launches-summer-food-assistance-program/">Illinois launches summer food assistance program</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/15/capitol-briefs-house-oks-program-for-student-teacher-stipends-but-not-the-funding-for-it/">Capitol Briefs: House OKs program for student teacher stipends – but not the funding for it</a></li>
+								<li><a href="https://www.freeburgtribune.com/2024/05/08/public-officials-seek-greater-oversight-of-prescription-drug-middlemen/">Public officials seek greater oversight of prescription drug middlemen</a></li>
+								<li><a href="https://www.freeburgtribune.com/2022/02/03/subscribe-to-the-tribune-online/">Subscribe to The Tribune Online</a></li>
+								<li><a href="https://www.freeburgtribune.com/2020/06/11/check-out-the-photo-galleries-under-the-photo-tab-for-additional-photos/">Check out the Photo Galleries under the Photo tab for additional photos</a></li>
+				
+			</ul>
+			<div class="bn-navi">
+				<span></span>
+				<span></span>
+			</div>
+	</div>
+        
+<script>
+    (function( $ ) {
+        $(window).load(function(e) {
+
+            $("#bn7").breakingNews({
+                effect		:"slide-v",
+                autoplay	:true,
+                timer		:7000,
+                color		:'default'
+            });
+
+        });
+
+    })( jQuery );
+</script>
+
+<div class="fl-page-bar-text fl-page-bar-text-1"></div></div>			<div class="col-md-4 col-sm-12 text-right clearfix"><ul id="menu-top-bar-menu" class="fl-page-bar-nav nav navbar-nav menu"><li id="menu-item-284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284 nav-item"><a href="https://www.freeburgtribune.com/contact-us/" class="nav-link">Contact Us</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285 nav-item"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b" class="nav-link">E-Edition</a></li>
+<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286 nav-item"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b&#038;view=subscribe" class="nav-link">Subscribe</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287 nav-item"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b&#038;view=archives" class="nav-link">Archives</a></li>
+</ul>	<div class="fl-social-icons">
+	<a href="https://www.facebook.com/TheFreeburgTribune/" target="_blank" rel="noopener noreferrer"><span class="sr-only">Facebook</span><i aria-hidden="true" class="fab fa-facebook-f mono"></i></a><a href="mailto:newsroom@freeburgtribune.com" rel="noopener noreferrer"><span class="sr-only">Email</span><i aria-hidden="true" class="fas fa-envelope mono"></i></a></div>
+</div>		</div>
+	</div>
+</div><!-- .fl-page-bar -->
+</div>
+<div class="fl-page">
+	<header class="fl-page-header fl-page-header-primary fl-page-nav-bottom fl-page-nav-toggle-button fl-page-nav-toggle-visible-mobile" itemscope="itemscope"
+        itemtype="http://schema.org/WPHeader">
+    <div class="fl-page-header-wrap">
+
+                    <div class="fl-page-header-container container">
+                <div class="fl-page-header-row row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="fl-page-header-logo" itemscope="itemscope"
+                             itemtype="http://schema.org/Organization">
+                            <a href="https://www.freeburgtribune.com" itemprop="url"><img loading="false" data-no-lazy="1" class="fl-logo-img" itemscope itemtype="https://schema.org/ImageObject" src="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg" data-retina="" title="" alt="The Freeburg Tribune" /><meta itemprop="name" content="The Freeburg Tribune" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="fl-page-header-content">
+                            <div id="webads_weather_widget-2" class="widget widget_webads_weather_widget pull-right">
+        <script>
+            jQuery(document).ready(function() {
+                loadWeather('62243', 'transparent', 'Freeburg, IL', '62243');
+            });
+        </script>
+
+        <div id="webads-weather-62243" class="widget widget-webads-weather">
+            <a id="webads-weather-62243-link" href="https://www.freeburgtribune.com">
+                <div class="awe-mini">
+                    <div>
+                        <div class="col visual">
+                            <span id="webads-weather-62243-temperature" class="temperature"></span>
+                            <i id="webads-weather-62243-image" class="weather-forecast-icon" style="background-size:contain"></i>
+                        </div>
+                        <div class="col info">
+                            <span id="webads-weather-62243-location" class="location"></span>
+                            <span id="webads-weather-62243-conditions" class="forecast"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <script>
+            function loadWeather(zipcode, background, location, instanceid) {
+                if (zipcode !== undefined) {
+                    var location = String(location);
+                    var instanceid = String(instanceid);
+                    jQuery.ajax({
+                        url: "https://ws.iadsnetwork.com/weather.svc/GetCurrentConditions",
+                        data: { "zipcode": zipcode },
+                        dataType: "json",
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            if (data.d != null) {
+                                var dtCC = data.d;
+                                for (i = 0; i < dtCC.length; i++) {
+                                    jQuery("#webads-weather-" + instanceid + "-temperature").append(dtCC[i].temperature);
+                                    jQuery("#webads-weather-" + instanceid + "-location").append(location);
+                                    jQuery("#webads-weather-" + instanceid + "-conditions").append(dtCC[i].conditions);
+                                    jQuery("#webads-weather-" + instanceid + "-image").css('background-image', 'url(' + dtCC[i].image + ')');
+                                    $link = jQuery("#webads-weather-" + instanceid + "-link").attr("href");
+                                    jQuery("#webads-weather-" + instanceid + "-link").attr("href", $link + '/weather/?zipcode=' + dtCC[i].zipcode + '&location=' + encodeURIComponent(location));
+                                    jQuery("#webads-weather-" + instanceid).css('background-color', background);
+                                }
+                            }
+                        },
+                        error: function (d) {
+                            //alert("Error");
+                        }
+                    });
+                }
+            }
+        </script>
+
+        </div><div id="search-2" class="widget widget_search pull-right"><form aria-label="Search" method="get" role="search" action="https://www.freeburgtribune.com/" title="Type and press Enter to search.">
+	<input aria-label="Search" type="search" class="fl-search-input form-control" name="s" placeholder="Search"  value="" onfocus="if (this.value === 'Search') { this.value = ''; }" onblur="if (this.value === '') this.value='Search';" />
+</form>
+</div>                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    <div class="fl-page-nav-wrap">
+        <div class="fl-page-nav-container container">
+            <nav class="fl-page-nav navbar navbar-default" role="navigation" itemscope="itemscope"
+                 itemtype="http://schema.org/SiteNavigationElement">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".fl-page-nav-collapse">
+                    <span>Menu</span>
+                </button>
+                <div class="fl-page-nav-collapse collapse navbar-collapse">
+                    <ul id="menu-main-menu" class="nav navbar-nav menu"><li id="menu-item-1076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1041 current_page_item menu-item-1076 nav-item"><a href="https://www.freeburgtribune.com/" aria-current="page" class="nav-link">Home</a></li>
+<li id="menu-item-296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-296 nav-item"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b" class="nav-link">E-Edition</a></li>
+<li id="menu-item-52845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52845 nav-item"><a href="https://www.freeburgtribune.com/classfieds/" class="nav-link">Classifieds</a></li>
+<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293 nav-item"><a href="https://www.freeburgtribune.com/photos/" class="nav-link">Photos</a></li>
+<li id="menu-item-292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292 nav-item"><a href="https://www.freeburgtribune.com/obituaries/" class="nav-link">Obituaries</a></li>
+<li id="menu-item-297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-297 nav-item"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b&#038;view=subscribe" class="nav-link">Subscribe</a></li>
+<li id="menu-item-53990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53990 nav-item"><a target="_blank" rel="noopener" href="https://www.publicnoticeillinois.com/search.aspx?paperid=354" class="nav-link">Public Notices</a></li>
+<li id="menu-item-289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289 nav-item"><a href="https://www.freeburgtribune.com/crossword/" class="nav-link">Crossword</a></li>
+<li id="menu-item-4243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4243 nav-item"><a href="#" class="nav-link">Regional News</a>
+<ul class="sub-menu">
+	<li id="menu-item-52782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52782 nav-item"><a href="https://www.freeburgtribune.com/cardinals-news/" class="nav-link">Cardinals News</a></li>
+	<li id="menu-item-4246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4246 nav-item"><a href="https://www.freeburgtribune.com/illinois-news/" class="nav-link">Illinois News</a></li>
+	<li id="menu-item-4245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4245 nav-item"><a href="https://www.freeburgtribune.com/st-louis-news/" class="nav-link">St. Louis News</a></li>
+</ul>
+</li>
+<li id="menu-item-52964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-52964 nav-item"><a href="https://www.freeburgtribune.com/category/mister-marquee/" class="nav-link">Mister Marquee</a></li>
+</ul>                </div>
+            </nav>
+        </div>
+    </div>
+</header><!-- .fl-page-header -->	<div class="fl-page-content" itemprop="mainContentOfPage">
+        <div class="webads-userbar-wrapper" style="display: none;"><span class="webads-userbar"><span class="webads-userbar-name"></span><span class="fl-sep"> | </span><a href="https://www.freeburgtribune.com/wp-admin/admin-post.php?action=webads_logout&webads_logout_nonce=DS9URN7DtQcxre6U"><span>logout</span></a></span></div>        <script>
+            $(document).ready(function(){
+                if (Cookies.get('webads-auth-2484')) {
+                    $(".webads-userbar-wrapper").show();
+                    $(".webads-userbar-name").text(decodeURIComponent(Cookies.get('webads-username-2484')));
+                } else {
+                    $(".webads-userbar-wrapper").hide();
+                }
+            });
+        </script>
+
+		
+<div class="container">
+	<div class="row">
+		
+				
+		<div class="fl-content fl-content-left col-md-9">
+							<article class="fl-post post-1041 page type-page status-publish hentry" id="fl-post-1041" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+
+			<div class="fl-post-content clearfix" itemprop="text">
+		<div class="fl-builder-content fl-builder-content-1041 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="1041"><div class="fl-row fl-row-fixed-width fl-row-bg-none fl-node-56eaf6fcd9854" data-node="56eaf6fcd9854">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-fixed-width fl-node-content">
+		
+<div class="fl-col-group fl-node-56eaf6fcde661" data-node="56eaf6fcde661">
+			<div class="fl-col fl-node-56eaf6fcde874" data-node="56eaf6fcde874">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-post-slider fl-node-56eaf6fcd94f3" data-node="56eaf6fcd94f3">
+	<div class="fl-module-content fl-node-content">
+		
+	<div class="fl-post-slider" itemscope="itemscope" itemtype="https://schema.org/Blog">
+		<div class="fl-post-slider-wrapper">
+
+			<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57382 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/29/once-again-working-through-the-night-lawmakers-finalize-53-1-billion-budget/" content="Once again working through the night, lawmakers finalize $53.1 billion budget" /><meta itemprop="datePublished" content="2024-05-29" /><meta itemprop="dateModified" content="2024-05-29" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/WINDHORST-0329-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/29/once-again-working-through-the-night-lawmakers-finalize-53-1-billion-budget/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57383 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/WINDHORST-0329-700-700-p-C-97-square.jpg" alt="Rep. Patrick Windhorst, R-Metropolis, reads the House rules as members of his party look on. His procedural maneuvering forced Democratic leadership to suspend the rules in order to get enough members in the chamber to pass the revenue plan. (Capitol News Illinois photo by Jerry Nowicki)" itemprop="image" loading="false" height="466" width="700" title="WINDHORST-0329-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/29/once-again-working-through-the-night-lawmakers-finalize-53-1-billion-budget/" rel="bookmark" title="Once again working through the night, lawmakers finalize $53.1 billion budget">Once again working through the night, lawmakers finalize $53.1 billion budget</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 29, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57376 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/29/lawmakers-move-to-pause-then-further-regulate-carbon-dioxide-pipeline-development/" content="Lawmakers move to pause – then further regulate – carbon dioxide pipeline development" /><meta itemprop="datePublished" content="2024-05-29" /><meta itemprop="dateModified" content="2024-05-29" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/240526-FINE-AA-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/29/lawmakers-move-to-pause-then-further-regulate-carbon-dioxide-pipeline-development/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57377 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/240526-FINE-AA-700-700-p-C-97-square.jpg" alt="Sen. Laura Fine, D-Glenview, and an aide watch as Sen. Michael Halpin, D-Rock Island, explains why he will vote no on her bill to regulate the carbon capture and sequestration industry. (Capitol News Illinois photo by Andrew Adams)" itemprop="image" loading="false" height="466" width="700" title="240526-FINE-AA-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/29/lawmakers-move-to-pause-then-further-regulate-carbon-dioxide-pipeline-development/" rel="bookmark" title="Lawmakers move to pause – then further regulate – carbon dioxide pipeline development">Lawmakers move to pause – then further regulate – carbon dioxide pipeline development</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 29, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57364 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/23/advocates-underscore-need-for-statewide-reentry-programs/" content="Advocates underscore need for statewide reentry programs" /><meta itemprop="datePublished" content="2024-05-23" /><meta itemprop="dateModified" content="2024-05-23" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/hb3418-11-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="439" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/23/advocates-underscore-need-for-statewide-reentry-programs/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57365 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/hb3418-11-700-700-p-C-97-square.jpg" alt="Antonio Lightfoot, deputy director at the nonprofit Workers Center for Racial Justice, speaks at a news conference in the Illinois State Capitol. Advocates wore orange jumpsuits to symbolize the restrictions placed on people who return to society from prison. (Capitol News Illinois photo by Dilpreet Raju)" itemprop="image" loading="false" height="439" width="700" title="hb3418-11-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/23/advocates-underscore-need-for-statewide-reentry-programs/" rel="bookmark" title="Advocates underscore need for statewide reentry programs">Advocates underscore need for statewide reentry programs</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 23, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57361 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/22/nursing-home-industry-unlikely-to-see-much-help-from-springfield-in-tough-budget-year/" content="Nursing home industry unlikely to see much help from Springfield in tough budget year" /><meta itemprop="datePublished" content="2024-05-22" /><meta itemprop="dateModified" content="2024-05-22" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/240520-HOUSE-FILE-AA1-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/22/nursing-home-industry-unlikely-to-see-much-help-from-springfield-in-tough-budget-year/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57362 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/240520-HOUSE-FILE-AA1-700-700-p-C-97-square.jpg" alt="The Illinois House of Representatives, shown during floor debate early in their final scheduled week of the 2024 spring legislative session. (Capitol News Illinois photo by Andrew Adams)" itemprop="image" loading="false" height="466" width="700" title="240520-HOUSE-FILE-AA1-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/22/nursing-home-industry-unlikely-to-see-much-help-from-springfield-in-tough-budget-year/" rel="bookmark" title="Nursing home industry unlikely to see much help from Springfield in tough budget year">Nursing home industry unlikely to see much help from Springfield in tough budget year</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 22, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57358 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/22/as-legislative-session-adjournment-looms-a-rush-to-regulate-carbon-capture-industry/" content="As legislative session adjournment looms, a rush to regulate carbon capture industry" /><meta itemprop="datePublished" content="2024-05-22" /><meta itemprop="dateModified" content="2024-05-22" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/240521-CAP-INT-AA1-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/22/as-legislative-session-adjournment-looms-a-rush-to-regulate-carbon-capture-industry/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57359 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/240521-CAP-INT-AA1-700-700-p-C-97-square.jpg" alt="The interior of the Illinois Capitol is pictured in Springfield. (Capitol News Illinois photo by Andrew Adams)" itemprop="image" loading="false" height="466" width="700" title="240521-CAP-INT-AA1-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/22/as-legislative-session-adjournment-looms-a-rush-to-regulate-carbon-capture-industry/" rel="bookmark" title="As legislative session adjournment looms, a rush to regulate carbon capture industry">As legislative session adjournment looms, a rush to regulate carbon capture industry</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 22, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57339 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/17/illinois-launches-summer-food-assistance-program/" content="Illinois launches summer food assistance program" /><meta itemprop="datePublished" content="2024-05-17" /><meta itemprop="dateModified" content="2024-05-17" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/PRITZKER-Summer-food1-2405161-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="465" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/17/illinois-launches-summer-food-assistance-program/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57340 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/PRITZKER-Summer-food1-2405161-700-700-p-C-97-square.jpg" alt="Gov. JB Pritzker announces the launch of a new summer nutrition program for school-age children during a news conference at Enos Elementary in Springfield. (Capitol News Illinois photo by Peter Hancock)" itemprop="image" loading="false" height="465" width="700" title="PRITZKER-Summer-food1-2405161-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/17/illinois-launches-summer-food-assistance-program/" rel="bookmark" title="Illinois launches summer food assistance program">Illinois launches summer food assistance program</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 17, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57326 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/15/capitol-briefs-house-oks-program-for-student-teacher-stipends-but-not-the-funding-for-it/" content="Capitol Briefs: House OKs program for student teacher stipends – but not the funding for it" /><meta itemprop="datePublished" content="2024-05-15" /><meta itemprop="dateModified" content="2024-05-15" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/20230619_HERNANDEZ-21-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/15/capitol-briefs-house-oks-program-for-student-teacher-stipends-but-not-the-funding-for-it/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57327 size-full" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/20230619_HERNANDEZ-21-700-700-p-C-97-square.jpg" alt="State Rep. Barbara Hernandez, D-Aurora, is pictured in a file photo on the Illinois House floor. She’s the sponsor of a bill to create a stipend program for student teachers, although she said she doesn’t expect funding to be allocated for it in next year’s budget. (Capitol News Illinois file photo)" itemprop="image" loading="false" height="466" width="700" title="20230619_HERNANDEZ-21-700-700-p-C-97"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/15/capitol-briefs-house-oks-program-for-student-teacher-stipends-but-not-the-funding-for-it/" rel="bookmark" title="Capitol Briefs: House OKs program for student teacher stipends – but not the funding for it">Capitol Briefs: House OKs program for student teacher stipends – but not the funding for it</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 15, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-57307 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/08/public-officials-seek-greater-oversight-of-prescription-drug-middlemen/" content="Public officials seek greater oversight of prescription drug middlemen" /><meta itemprop="datePublished" content="2024-05-08" /><meta itemprop="dateModified" content="2024-05-08" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/MANLEY-04245.jpg" /><meta itemprop="width" content="1200" /><meta itemprop="height" content="799" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2024/05/08/public-officials-seek-greater-oversight-of-prescription-drug-middlemen/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-57308 size-large" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/MANLEY-04245-1024x682-square.jpg" alt="State Rep. Natalie Manley, D-Joliet, oversees a House committee hearing into the practices of pharmacy benefit managers, an opaque but powerful arm of the health insurance industry. (Capitol News Illinois photo by Cole Longcor)" itemprop="image" loading="false" height="682" width="1024" title="MANLEY -04245"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2024/05/08/public-officials-seek-greater-oversight-of-prescription-drug-middlemen/" rel="bookmark" title="Public officials seek greater oversight of prescription drug middlemen">Public officials seek greater oversight of prescription drug middlemen</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					May 8, 2024				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-no-thumb fl-post-slider-has-image swiper-slide post-55575 post type-post status-publish format-standard hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2022/02/03/subscribe-to-the-tribune-online/" content="Subscribe to The Tribune Online" /><meta itemprop="datePublished" content="2022-02-03" /><meta itemprop="dateModified" content="2022-02-03" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2022/02/03/subscribe-to-the-tribune-online/" rel="bookmark" title="Subscribe to The Tribune Online">Subscribe to The Tribune Online</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					February 3, 2022				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+<div class="fl-post-slider-post fl-post-slider-thumb fl-post-slider-has-image swiper-slide post-54518 post type-post status-publish format-standard has-post-thumbnail hentry category-breaking-news"  itemscope="itemscope" itemtype="https://schema.org/BlogPosting" > 	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2020/06/11/check-out-the-photo-galleries-under-the-photo-tab-for-additional-photos/" content="Check out the Photo Galleries under the Photo tab for additional photos" /><meta itemprop="datePublished" content="2020-06-11" /><meta itemprop="dateModified" content="2021-01-13" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2020/06/IMG_1405.jpg" /><meta itemprop="width" content="1200" /><meta itemprop="height" content="800" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div><div class="fl-post-slider-img"><div class="fl-photo fl-photo-crop-square fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www.freeburgtribune.com/2020/06/11/check-out-the-photo-galleries-under-the-photo-tab-for-additional-photos/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-55078 size-large" src="https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/IMG_1405-1024x683-square.jpg" alt="IMG_1405" itemprop="image" loading="false" height="683" width="1024" title="IMG_1405"  />
+				</a>
+					</div>
+	</div>
+</div>
+	<div class="fl-post-slider-content">
+
+		<h2 class="fl-post-slider-title" itemprop="headline"><a href="https://www.freeburgtribune.com/2020/06/11/check-out-the-photo-galleries-under-the-photo-tab-for-additional-photos/" rel="bookmark" title="Check out the Photo Galleries under the Photo tab for additional photos">Check out the Photo Galleries under the Photo tab for additional photos</a></h2>
+				<div class="fl-post-slider-feed-meta">
+														<span class="fl-post-slider-feed-date">
+					June 11, 2020				</span>
+								</div>
+		
+		
+	</div>
+
+</div>
+		</div>
+		</div>
+	<div class="fl-clear"></div>
+
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+
+<div class="fl-col-group fl-node-56eafb79c4b90" data-node="56eafb79c4b90">
+			<div class="fl-col fl-node-56eafb79c4e1f" data-node="56eafb79c4e1f">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-widget fl-node-56eafb79c49fc" data-node="56eafb79c49fc">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-widget">
+<div class="widget widget_adrotate_widgets"><div class="g g-2"><div class="g-single a-23"><img src="https://www.freeburgtribune.com/wp-content/uploads/2022/08/Printbanner.jpg" /></div></div></div></div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+
+<div class="fl-col-group fl-node-56eafea882f58" data-node="56eafea882f58">
+			<div class="fl-col fl-node-56eafea883262 fl-col-small" data-node="56eafea883262">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-56eaff05bf741" data-node="56eaff05bf741">
+	<div class="fl-module-content fl-node-content">
+		<h4 class="fl-heading">
+		<span class="fl-heading-text">Latest E-Edition</span>
+	</h4>
+	</div>
+</div>
+<div class="fl-module fl-module-widget fl-node-57080606dcc3c" data-node="57080606dcc3c">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-widget">
+<div class="widget widget_webads_oev1_widget">
+        <script>
+            jQuery(document).ready(function() {
+                loadOnlineEdition('824', '', '', '', '2484', '6659577fc2964');
+            });
+        </script>
+
+        <div class="fl-photo fl-photo-align-center" itemscope="" itemtype="http://schema.org/ImageObject">
+            <div class="fl-photo-content">
+                <a id="webads-online-edition-6659577fc2964" href="https://www.google.com" target="_blank" /></a>
+            </div>
+        </div>
+
+        </div></div>
+	</div>
+</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-56eafea883273 fl-col-small" data-node="56eafea883273">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-56eaff4cb9b10" data-node="56eaff4cb9b10">
+	<div class="fl-module-content fl-node-content">
+		<h4 class="fl-heading">
+		<span class="fl-heading-text">Illinois Capital News</span>
+	</h4>
+	</div>
+</div>
+<div class="fl-module fl-module-post-grid fl-node-56eaff6046d20" data-node="56eaff6046d20">
+	<div class="fl-module-content fl-node-content">
+			<div class="fl-post-feed" itemscope="itemscope" itemtype="https://schema.org/Blog">
+	<div class="fl-post-feed-post fl-post-feed-image-beside fl-post-align-default post-57370 post type-post status-publish format-standard has-post-thumbnail hentry category-illinois-capital-news" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/29/maternal-health-abortion-protection-measures-advance-as-session-nears-end/" content="Maternal health, abortion protection measures advance as session nears end" /><meta itemprop="datePublished" content="2024-05-29" /><meta itemprop="dateModified" content="2024-05-29" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/COLLINS-JN-0469-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	<div class="fl-post-feed-image">
+
+	
+	<a href="https://www.freeburgtribune.com/2024/05/29/maternal-health-abortion-protection-measures-advance-as-session-nears-end/" rel="bookmark" title="Maternal health, abortion protection measures advance as session nears end">
+		<img width="300" height="300" src="https://www.freeburgtribune.com/wp-content/uploads/2024/05/COLLINS-JN-0469-700-700-p-C-97-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" />	</a>
+
+	
+</div>
+
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2024/05/29/maternal-health-abortion-protection-measures-advance-as-session-nears-end/" rel="bookmark" title="Maternal health, abortion protection measures advance as session nears end">Maternal health, abortion protection measures advance as session nears end</a>
+			</h2>
+
+			
+						<div class="fl-post-feed-meta">
+																		<span class="fl-post-feed-date">
+						May 29, 2024					</span>
+											</div>
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+<div class="fl-post-feed-post fl-post-feed-image-beside fl-post-align-default post-57367 post type-post status-publish format-standard has-post-thumbnail hentry category-illinois-capital-news" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/29/illinois-could-be-19th-state-to-phase-out-subminimum-wage-for-disabled-workers/" content="Illinois could be 19th state to phase out subminimum wage for disabled workers" /><meta itemprop="datePublished" content="2024-05-29" /><meta itemprop="dateModified" content="2024-05-29" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/240523-MAH-AA1-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="466" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	<div class="fl-post-feed-image">
+
+	
+	<a href="https://www.freeburgtribune.com/2024/05/29/illinois-could-be-19th-state-to-phase-out-subminimum-wage-for-disabled-workers/" rel="bookmark" title="Illinois could be 19th state to phase out subminimum wage for disabled workers">
+		<img width="300" height="300" src="https://www.freeburgtribune.com/wp-content/uploads/2024/05/240523-MAH-AA1-700-700-p-C-97-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" />	</a>
+
+	
+</div>
+
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2024/05/29/illinois-could-be-19th-state-to-phase-out-subminimum-wage-for-disabled-workers/" rel="bookmark" title="Illinois could be 19th state to phase out subminimum wage for disabled workers">Illinois could be 19th state to phase out subminimum wage for disabled workers</a>
+			</h2>
+
+			
+						<div class="fl-post-feed-meta">
+																		<span class="fl-post-feed-date">
+						May 29, 2024					</span>
+											</div>
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+<div class="fl-post-feed-post fl-post-feed-image-beside fl-post-align-default post-57355 post type-post status-publish format-standard has-post-thumbnail hentry category-illinois-capital-news" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/22/potawatomi-land-transfer-advances-in-illinois-house/" content="Potawatomi land transfer advances in Illinois House" /><meta itemprop="datePublished" content="2024-05-22" /><meta itemprop="dateModified" content="2024-05-22" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/Rupnick-Guzzardi-Potawatomi-240521-pqh1-700-700-p-C-97.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="465" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	<div class="fl-post-feed-image">
+
+	
+	<a href="https://www.freeburgtribune.com/2024/05/22/potawatomi-land-transfer-advances-in-illinois-house/" rel="bookmark" title="Potawatomi land transfer advances in Illinois House">
+		<img width="300" height="300" src="https://www.freeburgtribune.com/wp-content/uploads/2024/05/Rupnick-Guzzardi-Potawatomi-240521-pqh1-700-700-p-C-97-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" />	</a>
+
+	
+</div>
+
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2024/05/22/potawatomi-land-transfer-advances-in-illinois-house/" rel="bookmark" title="Potawatomi land transfer advances in Illinois House">Potawatomi land transfer advances in Illinois House</a>
+			</h2>
+
+			
+						<div class="fl-post-feed-meta">
+																		<span class="fl-post-feed-date">
+						May 22, 2024					</span>
+											</div>
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+	</div>
+<div class="fl-clear"></div>
+	</div>
+</div>
+<div class="fl-module fl-module-heading fl-node-56eb0132bb76c" data-node="56eb0132bb76c">
+	<div class="fl-module-content fl-node-content">
+		<h4 class="fl-heading">
+		<span class="fl-heading-text">Area News</span>
+	</h4>
+	</div>
+</div>
+<div class="fl-module fl-module-post-grid fl-node-56eb015705359" data-node="56eb015705359">
+	<div class="fl-module-content fl-node-content">
+			<div class="fl-post-feed" itemscope="itemscope" itemtype="https://schema.org/Blog">
+	<div class="fl-post-feed-post fl-post-feed-image-beside fl-post-align-default post-57305 post type-post status-publish format-standard has-post-thumbnail hentry category-news" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/08/for-your-health-most-of-us-should-eat-more-fruits-and-veggies-springtime-produce-can-help/" content="For Your Health – Most of Us Should Eat More Fruits and Veggies — Springtime Produce Can Help" /><meta itemprop="datePublished" content="2024-05-08" /><meta itemprop="dateModified" content="2024-05-08" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2023/12/Dr.-Graham-A.-Colditz-headshot.jpg" /><meta itemprop="width" content="1000" /><meta itemprop="height" content="667" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	<div class="fl-post-feed-image">
+
+	
+	<a href="https://www.freeburgtribune.com/2024/05/08/for-your-health-most-of-us-should-eat-more-fruits-and-veggies-springtime-produce-can-help/" rel="bookmark" title="For Your Health – Most of Us Should Eat More Fruits and Veggies — Springtime Produce Can Help">
+		<img width="300" height="300" src="https://www.freeburgtribune.com/wp-content/uploads/2023/12/Dr.-Graham-A.-Colditz-headshot-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" />	</a>
+
+	
+</div>
+
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2024/05/08/for-your-health-most-of-us-should-eat-more-fruits-and-veggies-springtime-produce-can-help/" rel="bookmark" title="For Your Health – Most of Us Should Eat More Fruits and Veggies — Springtime Produce Can Help">For Your Health – Most of Us Should Eat More Fruits and Veggies — Springtime Produce Can Help</a>
+			</h2>
+
+			
+						<div class="fl-post-feed-meta">
+																		<span class="fl-post-feed-date">
+						May 8, 2024					</span>
+											</div>
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+<div class="fl-post-feed-post fl-post-feed-image-beside fl-post-align-default post-57302 post type-post status-publish format-standard has-post-thumbnail hentry category-news" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/05/08/thousands-of-youths-at-risk-of-losing-access-to-after-school-programs/" content="Thousands of youths at risk of losing access to after-school programs" /><meta itemprop="datePublished" content="2024-05-08" /><meta itemprop="dateModified" content="2024-05-08" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2024/05/Susan-Stanton-ACT-Now-240507-pqh3-700-700-p-C-100.jpg" /><meta itemprop="width" content="700" /><meta itemprop="height" content="465" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	<div class="fl-post-feed-image">
+
+	
+	<a href="https://www.freeburgtribune.com/2024/05/08/thousands-of-youths-at-risk-of-losing-access-to-after-school-programs/" rel="bookmark" title="Thousands of youths at risk of losing access to after-school programs">
+		<img width="300" height="300" src="https://www.freeburgtribune.com/wp-content/uploads/2024/05/Susan-Stanton-ACT-Now-240507-pqh3-700-700-p-C-100-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" />	</a>
+
+	
+</div>
+
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2024/05/08/thousands-of-youths-at-risk-of-losing-access-to-after-school-programs/" rel="bookmark" title="Thousands of youths at risk of losing access to after-school programs">Thousands of youths at risk of losing access to after-school programs</a>
+			</h2>
+
+			
+						<div class="fl-post-feed-meta">
+																		<span class="fl-post-feed-date">
+						May 8, 2024					</span>
+											</div>
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+<div class="fl-post-feed-post fl-post-feed-image-beside fl-post-align-default post-57195 post type-post status-publish format-standard has-post-thumbnail hentry category-news" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2024/04/03/for-your-health-literally-taking-steps-to-boost-mental-health/" content="For Your Health – Literally Taking Steps to Boost Mental Health" /><meta itemprop="datePublished" content="2024-04-03" /><meta itemprop="dateModified" content="2024-04-03" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www.freeburgtribune.com/wp-content/uploads/2023/12/Dr.-Graham-A.-Colditz-headshot.jpg" /><meta itemprop="width" content="1000" /><meta itemprop="height" content="667" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	<div class="fl-post-feed-image">
+
+	
+	<a href="https://www.freeburgtribune.com/2024/04/03/for-your-health-literally-taking-steps-to-boost-mental-health/" rel="bookmark" title="For Your Health – Literally Taking Steps to Boost Mental Health">
+		<img width="300" height="300" src="https://www.freeburgtribune.com/wp-content/uploads/2023/12/Dr.-Graham-A.-Colditz-headshot-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy" />	</a>
+
+	
+</div>
+
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2024/04/03/for-your-health-literally-taking-steps-to-boost-mental-health/" rel="bookmark" title="For Your Health – Literally Taking Steps to Boost Mental Health">For Your Health – Literally Taking Steps to Boost Mental Health</a>
+			</h2>
+
+			
+						<div class="fl-post-feed-meta">
+																		<span class="fl-post-feed-date">
+						April 3, 2024					</span>
+											</div>
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+	</div>
+<div class="fl-clear"></div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+
+<div class="fl-col-group fl-node-56eb0260cf43b" data-node="56eb0260cf43b">
+			<div class="fl-col fl-node-56eb0260cf7e3" data-node="56eb0260cf7e3">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-widget fl-node-56eb03b1eb83d" data-node="56eb03b1eb83d">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-widget">
+<div class="widget widget_adrotate_widgets"><div class="g g-2"><div class="g-single a-23"><img src="https://www.freeburgtribune.com/wp-content/uploads/2022/08/Printbanner.jpg" /></div></div></div></div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-fixed-width fl-row-bg-none fl-node-572760514a73b" data-node="572760514a73b">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-fixed-width fl-node-content">
+		
+<div class="fl-col-group fl-node-572765636b1d9" data-node="572765636b1d9">
+			<div class="fl-col fl-node-572765636b4f3 fl-col-small fl-col-has-cols" data-node="572765636b4f3">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-57277121da28e" data-node="57277121da28e">
+	<div class="fl-module-content fl-node-content">
+		<h4 class="fl-heading">
+		<span class="fl-heading-text">Take Our Poll</span>
+	</h4>
+	</div>
+</div>
+<div class="fl-module fl-module-widget fl-node-5c5c5a3fc523c" data-node="5c5c5a3fc523c">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-widget">
+<div class="widget widget_polls-widget">Sorry, there are no polls available at the moment.<ul><li><a href="http://www.freeburgtribune.com/pollsarchive">Polls Archive</a></li></ul></div></div>
+	</div>
+</div>
+
+<div class="fl-col-group fl-node-5fa4278e52a4f fl-col-group-nested" data-node="5fa4278e52a4f">
+			<div class="fl-col fl-node-5fa4278e52b38 fl-col-small" data-node="5fa4278e52b38">
+	<div class="fl-col-content fl-node-content">
+		</div>
+</div>
+			<div class="fl-col fl-node-5fa4278e52b3f fl-col-small" data-node="5fa4278e52b3f">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-widget fl-node-5fa4277b4961c" data-node="5fa4277b4961c">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-widget">
+<div class="widget 5e3b5e9d01cf8"><div class="a-single a-24"><a onClick="_paq.push(['trackEvent', 'Adverts', 'Click', 'Public Notices']);" href="https://www.publicnoticeillinois.com/search.aspx?paperid=354" target="_blank"><img onload="_paq.push(['trackEvent', 'Adverts', 'Impression', 'Public Notices']);" src="https://www.freeburgtribune.com/wp-content/uploads/2020/11/Capture.png" /></a></div></div></div>
+	</div>
+</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-5fa4278e52b42 fl-col-small" data-node="5fa4278e52b42">
+	<div class="fl-col-content fl-node-content">
+		</div>
+</div>
+	</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-572765636b573 fl-col-small" data-node="572765636b573">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-5727712eed0a8" data-node="5727712eed0a8">
+	<div class="fl-module-content fl-node-content">
+		<h4 class="fl-heading">
+		<span class="fl-heading-text">Video Of The Week</span>
+	</h4>
+	</div>
+</div>
+<div id="home-video" class="fl-module fl-module-post-grid fl-node-57276d0d7b008" data-node="57276d0d7b008">
+	<div class="fl-module-content fl-node-content">
+			<div class="fl-post-feed" itemscope="itemscope" itemtype="https://schema.org/Blog">
+	<div class="fl-post-feed-post fl-post-align-default post-54957 post type-post status-publish format-standard hentry category-videos" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.freeburgtribune.com/2020/11/04/new-athens-fire/" content="New Athens Fire" /><meta itemprop="datePublished" content="2020-11-04" /><meta itemprop="dateModified" content="2020-11-04" /><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="The Freeburg Tribune"><div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://www.freeburgtribune.com/wp-content/uploads/2019/03/Free-header.jpg"></div></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www.freeburgtribune.com/author/editor/" /><meta itemprop="name" content="Editor" /></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction" /><meta itemprop="userInteractionCount" content="0" /></div>	
+		<div class="fl-post-feed-text">
+	
+		<div class="fl-post-feed-header">
+
+			<h2 class="fl-post-feed-title" itemprop="headline">
+				<a href="https://www.freeburgtribune.com/2020/11/04/new-athens-fire/" rel="bookmark" title="New Athens Fire">New Athens Fire</a>
+			</h2>
+
+			
+			
+			
+			
+		</div>
+
+	
+	
+	
+		
+				<div class="fl-post-feed-content" itemprop="text">
+			<p><iframe width="500" height="281" src="https://www.youtube.com/embed/FXUxsqTebME?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.freeburgtribune.com/2020/11/04/new-athens-fire/" data-a2a-title="New Athens Fire"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.freeburgtribune.com%2F2020%2F11%2F04%2Fnew-athens-fire%2F&amp;linkname=New%20Athens%20Fire" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.freeburgtribune.com%2F2020%2F11%2F04%2Fnew-athens-fire%2F&amp;linkname=New%20Athens%20Fire" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div>					</div>
+		
+		
+	</div>
+
+	<div class="fl-clear"></div>
+</div>
+	</div>
+<div class="fl-clear"></div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+<div class="fl-row fl-row-fixed-width fl-row-bg-none fl-node-57276ee0b64a3" data-node="57276ee0b64a3">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-fixed-width fl-node-content">
+		
+<div class="fl-col-group fl-node-57276ee0bbde5" data-node="57276ee0bbde5">
+			<div class="fl-col fl-node-57276ee0bc0c8" data-node="57276ee0bc0c8">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-56eb040d26990" data-node="56eb040d26990">
+	<div class="fl-module-content fl-node-content">
+		<h4 class="fl-heading">
+		<span class="fl-heading-text">National Headlines</span>
+	</h4>
+	</div>
+</div>
+<div class="fl-module fl-module-widget fl-node-59428ce8dea78" data-node="59428ce8dea78">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-widget">
+<div class="widget widget_webads_syndicated_stories_carousel_widget">        <script>
+            jQuery(document).ready(function() {
+                jQuery.ajax({
+                    url: "https://ws.iadsnetwork.com/syndicatedfeeds.svc/GetSyndicatedItems?feedslug=united-states&count=10",
+                    data: { },
+                    dataType: "json",
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        if (data.d != null) {
+                            var dtHeadlines = data.d;
+                            for (i = 0; i < dtHeadlines.length; i++) {
+                                jQuery("#webads-national-headlines-widget").append('<div class="fl-post-carousel-post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting"><div class="fl-post-carousel-text"><h2 class="fl-post-carousel-title" itemprop="headline"><a href="' + dtHeadlines[i].url + '" target="_blank" title="' + dtHeadlines[i].title + '">' + dtHeadlines[i].title + '</a></h2><div class="fl-post-carousel-meta"><span class="fl-post-feed-date">' + dtHeadlines[i].pubdate + '</span></div></div></div>');
+                            }
+                        }
+                    },
+                    error: function (d) {
+                        //alert("Error");
+                    }
+                });
+
+                var delay = 1000;
+                setTimeout(function() {
+
+                    WAFLBuilderPostCarousel = function (settings) {
+                        this.settings = settings.settings;
+                        this.transitionType = settings.transition;
+                        this.nodeClass = '.fl-node-' + settings.id;
+                        this.wrapperClass = this.nodeClass + ' .fl-post-carousel-wrapper';
+                        this.postClass = this.nodeClass + ' .fl-post-carousel-post';
+                        this.prevCarouselBtn = $(this.nodeClass + ' .carousel-prev');
+                        this.nextCarouselBtn = $(this.nodeClass + ' .carousel-next');
+                        this.layout = settings.layout;
+                        this.navigation = settings.navigationControls;
+                        this.slideWidth = settings.slideWidth;
+                        this.currentBrowserWidth = $(window).width();
+                        if (this._hasPosts()) {
+                            //alert('yes');
+                            this._initCarousel();
+                            $(window).on('resize', function (e) {
+                                var width = $(window).width();
+                                if (width != this.currentBrowserWidth) {
+                                    this._resizeDebounce();
+                                    this.currentBrowserWidth = width;
+                                }
+                            }.bind(this));
+                        } else {
+                            //alert('no');
+                        }
+                    };
+                    WAFLBuilderPostCarousel.prototype = {
+                        settings: {},
+                        nodeClass: '',
+                        wrapperClass: '',
+                        postClass: '',
+                        prevCarouselBtn: '',
+                        nextCarouselBtn: '',
+                        layout: '',
+                        navigation: false,
+                        slideWidth: 0,
+                        carousel: '',
+                        _hasPosts: function () {
+                            return $(this.postClass).length > 0;
+                        },
+                        _resizeDebounce: function () {
+                            clearTimeout(this.resizeTimer);
+                            this.resizeTimer = setTimeout(function () {
+                                this._reloadCarousel();
+                            }.bind(this), 250);
+                        },
+                        _getSlidesNumber: function () {
+                            var $wrapperWidth = $(this.nodeClass + ' .fl-post-carousel').width(), $slideWidth = $(this.postClass).width(), columns = Math.ceil($wrapperWidth / this.slideWidth);
+                            return columns;
+                        },
+                        _getSlideWidth: function () {
+                            return Math.ceil(($(this.nodeClass + ' .fl-post-carousel').width() - (this.settings.slideMargin * (this._getSlidesNumber() - 1))) / this._getSlidesNumber());
+                        },
+                        _getSettings: function () {
+                            var newSettings, settings = {
+                                slideWidth: this._getSlideWidth(),
+                                minSlides: this._getSlidesNumber(),
+                                maxSlides: this._getSlidesNumber(),
+                                onSliderLoad: function () {
+                                    $(this.wrapperClass).addClass('fl-post-carousel-loaded');
+                                }.bind(this),
+                            }
+                            newSettings = $.extend({}, this.settings, settings);
+                            return newSettings;
+                        },
+                        _initCarousel: function () {
+                            this.carousel = $(this.wrapperClass).bxSlider(
+                                this._getSettings()
+
+                            );
+                            if (this.navigation) {
+                                this.prevCarouselBtn.on('click', function (e) {
+                                    e.preventDefault();
+                                    this.carousel.goToPrevSlide();
+                                }.bind(this));
+                                this.nextCarouselBtn.on('click', function (e) {
+                                    e.preventDefault();
+                                    this.carousel.goToNextSlide();
+                                }.bind(this));
+                            }
+                        },
+                        _reloadCarousel: function () {
+                            this.carousel.reloadSlider(this._getSettings());
+                        },
+                    };
+
+                    new WAFLBuilderPostCarousel({
+                        id: '593ae829a39ce',
+                        layout: 'grid',
+                        slideWidth: 300,
+                        settings: {
+                            auto: true,
+                            pause: 5000,
+                            speed: 1000,
+                            infiniteLoop: true,
+                            adaptiveHeight: true,
+                            controls: false,
+                            autoHover: true,
+                            slideMargin: 30,
+                            moveSlides: 1,
+                        }
+                    });
+                }, delay);
+            });
+
+
+
+        </script>
+
+
+        
+       
+        
+        
+	<div class="fl-module-post-carousel fl-node-593ae829a39ce" data-node="593ae829a39ce"  data-animation-delay="0.0" >
+	
+		
+	<div class="fl-post-carousel fl-post-carousel-grid" itemscope="itemscope" itemtype="http://schema.org/Blog">
+		<div class="fl-post-carousel-wrapper fl-post-carousel-593ae829a39ce" id="webads-national-headlines-widget">
+		
+
+
+			</div>
+			</div>
+
+	<div class="fl-clear"></div>
+
+	</div>
+
+
+
+
+
+
+    
+    </div></div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div><div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.freeburgtribune.com/" data-a2a-title="Home"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.freeburgtribune.com%2F&amp;linkname=Home" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.freeburgtribune.com%2F&amp;linkname=Home" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div>	</div><!-- .fl-post-content -->
+	
+</article>
+
+<!-- .fl-post -->
+					</div>
+		
+		<div class="fl-sidebar  fl-sidebar-right fl-sidebar-display-always col-md-3" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+		<aside id="webads_facebook_widget-2" class="fl-widget widget_webads_facebook_widget"><h4 class="fl-widget-title">Like Us On Facebook</h4>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"></script>
+
+
+        <div class="fb-page" data-href="https://www.facebook.com/TheFreeburgTribune/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+        
+
+        </aside><aside id="adrotate_widgets-3" class="fl-widget widget_adrotate_widgets"><!-- Error, Ad (10) is not available at this time due to schedule/budgeting/geolocation/mobile restrictions! --></aside><aside id="webads_displayads_widget-2" class="fl-widget widget_webads_displayads_widget"><h4 class="fl-widget-title">Our Advertisers</h4>
+
+                <style>
+                    #displayAds img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                                        #displayAdsWrapper {
+                        height: 1500px;
+                        overflow: hidden;
+                    }
+                    
+
+                </style>
+
+                <div id="displayAdsWrapper">
+                    <div id="displayAds">
+                        <ul id="displayAdsUL">
+                        </ul>
+                    </div>
+                </div>
+
+                <script>
+                    (function( $ ) {
+                        $(document).ready(function () {
+                            $("#displayAdsWrapper").hide();
+                            loadDisplayAds(2484, 100, 2);
+                        });
+
+                        function loadDisplayAds(memberid, count, thumbtype) {
+
+                            if (memberid !== undefined) {
+                                var memberid = String(memberid);
+                                var count = String(count);
+                                var thumbtype = String(thumbtype);
+                                if (memberid.length == 4) {
+                                    $.ajax({
+                                        url: "https://ws.iadsnetwork.com/displayads.svc/GetDisplayAds",
+                                        data: { "memberid": memberid, "count": count, "thumbtype": thumbtype },
+                                        dataType: "json",
+                                        type: "GET",
+                                        contentType: "application/json; charset=utf-8",
+                                        success: function (data) {
+
+                                            if (data.d != null) {
+                                                $("#displayAdsUL").empty();
+                                                var dtDisplayAd = data.d;
+
+                                                for (i = 0; i < dtDisplayAd.length; i++) {
+                                                    switch (dtDisplayAd[i].statsVersion) {
+                                                    case "1":
+                                                        // Matomo
+                                                        if (typeof _paq !== "undefined") {
+                                                            $("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a onClick=\"_paq.push(['trackEvent', 'Adverts', 'Click', '" + dtDisplayAd[i].name + "']);\" href='" + dtDisplayAd[i].url + "' target='_blank'><img onload=\"_paq.push(['trackEvent', 'Adverts', 'Impression', '" + dtDisplayAd[i].name + "']);\" src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+                                                        } else {
+                                                            $("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a href='" + dtDisplayAd[i].url + "' target='_blank'><img src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+}                                                       break;                                                    
+                                                    case "2":
+                                                        // Google Analytics
+                                                        gtag('event', 'impression', {'event_category': 'Adverts', 'event_label': dtDisplayAd[i].name, 'value': 1.00, 'non_interaction': true});
+                                                        $("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a onClick=\"gtag('event', 'click', {'event_category': 'Adverts', 'event_label': '" + dtDisplayAd[i].name + "', 'value': 1.00, 'non_interaction': true});\" href='" + dtDisplayAd[i].url + "' target='_blank'><img src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+                                                        break;   
+                                                    }
+                                                    //if (typeof ga !== "undefined") {
+                                                        // safe to use the function
+                                                        //ga('send','event','Adverts','impression',dtDisplayAd[i].name,2,{'nonInteraction':1});
+                                                        //gtag('event', 'click', {'event_category': 'Adverts', 'event_label': dtDisplayAd[i].name, 'value': 1.00, 'non_interaction': true});
+                                                        // $("#displayAdsUL").append('<li style="padding-bottom: 5px;"><a onClick="ga(\'send\',\'event\',\'Adverts\',\'click\',\'' + dtDisplayAd[i].name + '\',1,{\'nonInteraction\':1});" href="' + dtDisplayAd[i].url + '" target="_blank"><img src="' + dtDisplayAd[i].img + '" alt=" " /></a></li>');
+                                                        //$("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a onClick=\"gtag('event', 'click', {'event_category': 'Adverts', 'event_label': '" + dtDisplayAd[i].name + "', 'value': 1.00, 'non_interaction': true});\" href='" + dtDisplayAd[i].url + "' target='_blank'><img src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+                                                    //} else {
+                                                        //$("#displayAdsUL").append('<li style="padding-bottom: 5px;"><a href="' + dtDisplayAd[i].url + '" target="_blank"><img src="' + dtDisplayAd[i].img + '" alt=" " /></a></li>');
+                                                    //}
+                                                }
+                                                setTimeout(function(){ startSlider(i) }, 1000);
+                                            }
+                                        },
+                                        error: function (d) {
+                                            //alert("Error");
+                                        }
+                                    });
+                                } else {
+                                    $("#displayAdsWrapper").empty();
+                                }
+                            }
+                        }
+
+                        function startSlider(count) {
+                            var isAuto = true;
+                            var pauseLen = '5000';
+
+                            $("#displayAds").sudoSlider({
+                                vertical: true,
+                                continuous: true,
+                                                                slideCount: count+1,
+                                auto: isAuto,
+                                                                autoHeight: false,
+                                                                pause:  pauseLen,
+                                prevNext: false,
+                                useCSS: false,
+                                autoWidth: true
+                            });
+                            $("#displayAdsWrapper").show();
+                        }
+                    })( jQuery );
+
+                </script>
+
+                </aside><aside id="adrotate_widgets-2" class="fl-widget widget_adrotate_widgets"><h4 class="fl-widget-title">Business Spotlight</h4><div class="g g-1"><div class="g-dyn a-22 c-1"><a onClick="_paq.push(['trackEvent', 'Adverts', 'Click', 'Employment']);" href="http://www.hometownemploymentnetwork.com/Default.aspx?AffiliateID=2293" target="_blank"><img onload="_paq.push(['trackEvent', 'Adverts', 'Impression', 'Employment']);" src="http://www.freeburgtribune.com/wp-content/uploads/2019/03/employment.jpg" /></a></div></div></aside>	</div>
+		
+	</div>
+</div>
+
+			
+	</div><!-- .fl-page-content -->
+				</div><!-- .fl-page -->
+		<footer class="fl-page-footer-wrap" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+		<div class="fl-page-footer-widgets">
+	<div class="fl-page-footer-widgets-container container">
+		<div class="fl-page-footer-widgets-row row">
+		<div class="col-sm-4 col-md-4 fl-page-footer-widget-col fl-page-footer-widget-col-1"><aside id="nav_menu-3" class="fl-widget widget_nav_menu"><h4 class="fl-widget-title">The Freeburg Tribune</h4><div class="menu-footer-menu-1-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-228"><a href="http://www.freeburgtribune.com/" aria-current="page">Home</a></li>
+<li id="menu-item-229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-229"><a href="https://www.freeburgtribune.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-230" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-230"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b">E-Edition</a></li>
+<li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b&#038;view=subscribe">Subscribe</a></li>
+<li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a target="_blank" rel="noopener" href="https://2484.newstogo.us/editionviewer/default.aspx?Publication=cf82e59c-770a-4b53-b3ab-0ec66d5b783b&#038;view=archives">Archives</a></li>
+</ul></div></aside></div><div class="col-sm-4 col-md-4 fl-page-footer-widget-col fl-page-footer-widget-col-2"><aside id="webads_syndicated_stories_menu_widget-2" class="fl-widget widget_webads_syndicated_stories_menu_widget"><h4 class="fl-widget-title">US &#038; World News</h4> 
+   
+   <div><ul class="menu">
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/united-states/">US</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/sports/">Sports</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/entertainment/">Entertainment</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/technology/">Technology</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/political/">Politics</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/world/">World</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/business/">Business</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.freeburgtribune.com/syndicated_category/health/">Health</a></li>
+   </ul></div>   
+   
+   </aside></div><div class="col-sm-4 col-md-4 fl-page-footer-widget-col fl-page-footer-widget-col-3"><aside id="nav_menu-5" class="fl-widget widget_nav_menu"><h4 class="fl-widget-title">Odds &#038; Ends</h4><div class="menu-footer-menu-3-container"><ul id="menu-footer-menu-3" class="menu"><li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="https://www.freeburgtribune.com/crossword/">Crossword Puzzle</a></li>
+<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="https://www.freeburgtribune.com/event-calendar/">Event Calendar</a></li>
+<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="https://www.freeburgtribune.com/photos/">Photo Galleries</a></li>
+<li id="menu-item-1473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1473"><a href="https://www.freeburgtribune.com/poll/">Online Poll</a></li>
+</ul></div></aside></div>		</div>
+	</div>
+</div><!-- .fl-page-footer-widgets -->
+<div class="fl-page-footer">
+	<div class="fl-page-footer-container container">
+		<div class="fl-page-footer-row row">
+			<div class="col-md-12 text-center clearfix"><div class="fl-page-footer-text fl-page-footer-text-1">This website is powered by <a href="http://www.websitesfornewspapers.com" target="_blank"><i><strong>WebsitesForNewspapers.com</strong></i></a></div></div>					</div>
+	</div>
+</div><!-- .fl-page-footer -->
+	</footer>
+	
+<script type="text/javascript" >				
+				window.addEventListener('DOMContentLoaded', function () {
+					setTimeout(function(){
+						if( document.querySelectorAll('[name^=ct_checkjs]').length > 0 ) {
+			                apbct_public_sendAJAX(
+			                    { action: 'apbct_js_keys__get' },
+			                    { callback: apbct_js_keys__set_input_value, apbct_ajax: 1 }
+			                );
+			            }
+					},0);					    
+				});				
+			</script><link rel='stylesheet' id='font-awesome-5-css'  href='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.1/css/all.min.css?ver=2.4.2.2' media='all' />
+<link rel='stylesheet' id='jquery-bxslider-css-css'  href='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=5.6.13' media='all' />
+<link rel='stylesheet' id='webads-carousel-style-css'  href='https://www.freeburgtribune.com/wp-content/plugins/webads-syndicated-stories/public/css/carousel.css?ver=5.6.13' media='all' />
+<script src='https://www.freeburgtribune.com/wp-content/plugins/adrotate-pro/library/jquery.adrotate.dyngroup.js' id='adrotate-dyngroup-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/js/jquery.easing.min.js?ver=1.4' id='jquery-easing-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js?ver=1.2' id='jquery-fitvids-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/js/jquery.bxslider.min.js?ver=2.4.2.2' id='jquery-bxslider-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/uploads/bb-plugin/cache/1041-layout.js?ver=5dd8f4276abd4f2377db1b4d7e484933' id='fl-builder-layout-1041-js'></script>
+<script src='https://www.google.com/recaptcha/api.js?ver=5.6.13' id='recaptcha-scripts-js'></script>
+<script id='wp-polls-js-extra'>
+var pollsL10n = {"ajax_url":"https:\/\/www.freeburgtribune.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+</script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/webads-polls/polls-js.js?ver=2.72' id='wp-polls-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/ecwd-frontend-event-management/js/autocomplete.js?ver=1.0.13' id='sc_form-autocomplete-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/js/jquery.ba-throttle-debounce.min.js?ver=2.4.2.2' id='jquery-throttle-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/plugins/bb-plugin/js/jquery.magnificpopup.min.js?ver=2.4.2.2' id='jquery-magnificpopup-js'></script>
+<script src='https://www.freeburgtribune.com/wp-content/themes/bb-theme/js/bootstrap.min.js?ver=1.7.9' id='bootstrap-js'></script>
+<script id='fl-automator-js-extra'>
+var themeopts = {"medium_breakpoint":"992","mobile_breakpoint":"768"};
+</script>
+<script src='https://www.freeburgtribune.com/wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.9' id='fl-automator-js'></script>
+<script src='https://www.freeburgtribune.com/wp-includes/js/wp-embed.min.js?ver=5.6.13' id='wp-embed-js'></script>
+<!-- AdRotate JS -->
+<script type="text/javascript">
+jQuery(document).ready(function(){if(jQuery.fn.gslider) {
+	jQuery('.g-1').gslider({groupid:1,speed:6000,repeat_impressions:'Y'});
+}});
+</script>
+<!-- /AdRotate JS -->
+
+<script type="text/javascript"> var infolinks_pid = 3387487; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script></body>
+</html>

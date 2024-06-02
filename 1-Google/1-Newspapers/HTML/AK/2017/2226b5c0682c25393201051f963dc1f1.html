@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Petersburg Pilot" />
+  <META NAME="description" CONTENT="May 30, 2024 edition of Petersburg Pilot, a weekly newspaper." />
+  <META NAME="keywords" CONTENT="The Petersburg Community Foundation,Long Term Care Center,Medical Center CEO,community risk,Memorial Day,Columbia" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="1 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Petersburg Pilot Homepage">
+<META PROPERTY="og:description" CONTENT="Petersburg Pilot">
+<META PROPERTY="og:url" CONTENT="https://www.petersburgpilot.com">
+<META PROPERTY="og:site_name" CONTENT="Petersburg Pilot">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.petersburgpilot.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Petersburg Pilot Homepage</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28265/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1189x44472/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" href="https://www.petersburgpilot.com/">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.petersburgpilot.com/?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>    <link rel="stylesheet" type="text/css" href="/app/js/homepage_overlay_ad/facebox.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20362/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21158/XPATH/app/website_specifics/nonresponsive.js"></script>
+    <script src="HTTPS://www.petersburgpilot.com/apps/clear/clear.js"></script>
+
+    <script>
+
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+
+     debug=false;
+
+
+     function expiredAJAX() {
+      // noop
+     }
+    </script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45270664-1', 'petersburgpilot.com');
+  ga('send', 'pageview');
+
+</script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+<!-- Version 5.020 of ROAR -->
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.petersburgpilot.com/about" >About</a><a  href="HTTPS://www.petersburgpilot.com/contact" >Contact</a><a  href="HTTPS://www.petersburgpilot.com/advertise" >Advertise</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="https://www.facebook.com/petersburgpilot/"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='21' alt='FaceBook'></a><a  href="HTTPS://www.petersburgpilot.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.petersburgpilot.com/subscribe/start" >Subscribe</a><a  href="HTTPS://www.petersburgpilot.com/login?r=%2F" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Petersburg Pilot - </h1>
+    <a href="HTTPS://www.petersburgpilot.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:BVPTbJjRTkMHWXZOSlPdfcYzVzlaelfRr8k7unumn--><a href="https://online.fliphtml5.com/zzzil/sgye/#p=1" target="blank"><img src="/IMG/-SFPYKlAJO8oA-Q0XglUFEZ0VKYOd/XPATH/home/cms_data/dfault/web_ads/horiz_small/4344-vg_ad_layout_1.jpgXEXT1675x39441is.jpeg" width="260" height="90" alt=""></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_1 leftone">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+    <div class="grid_1 rightone">
+     <p class="pub_date">
+      Week of May 30, 2024
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class=" active" href="HTTPS://www.petersburgpilot.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/news">News</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.petersburgpilot.com/section/news">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.petersburgpilot.com/section/news/petersburg">Petersburg</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.petersburgpilot.com/section/news/state%5Fof%5Falaska">State of Alaska</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/sports">Sports</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/opinion">Opinion</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/about_town">About Town</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/dockside">Dockside</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.petersburgpilot.com/section/police">Police</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.petersburgpilot.com/home/customer_files/pdf_preview/53024pilotlegal.pdf" target="_blank">Legals</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="https://www.petersburgpilot.com/home/customer_files/pdf_preview/53024pilotclass.pdf" target="_blank">Classifieds</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" action="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <div>
+          <div class="slideshow hidehead">
+  <script>
+   "undefined"==typeof addLoadEvent&&(addLoadEvent=function(o){var n=window.onload;"function"!=typeof window.onload?window.onload=o:window.onload=function(){n&&n(),o()}});
+   
+   home_top = {};
+   home_top.divs_to_fade = new Array('box_home_top_1', 'box_home_top_2', 'box_home_top_3', 'box_home_top_4', 'box_home_top_5', 'box_home_top_6', 'box_home_top_7', 'box_home_top_8', 'box_home_top_9');
+   home_top.iAd = 0;
+   home_top.iOl = 0;
+   
+   home_top.swapFade = function(i) {
+    home_top.iOl;
+    home_top.iOl = home_top.iAd;
+    home_top.iAd = home_top.iAd + i;
+    if (home_top.iAd == home_top.divs_to_fade.length){home_top.iAd = 0;}
+    if (home_top.iAd < 0){home_top.iAd = home_top.divs_to_fade.length-1;}
+    document.getElementById(home_top.divs_to_fade[home_top.iOl]).className='aslide fadeOutLeft home_top animated zbottom';
+    document.getElementById('dot_home_top_'+home_top.iOl).src=document.getElementById('dot_home_top_'+home_top.iOl).src.replace('doton','dotoff');
+    document.getElementById('dot_home_top_'+home_top.iAd).src=document.getElementById('dot_home_top_'+home_top.iAd).src.replace('dotoff','doton');
+    setTimeout(function(){
+     document.getElementById(home_top.divs_to_fade[home_top.iAd]).className='aslide fadeInLeft home_top animated ztop';
+    },200);
+   }
+   home_top.prev = function(){
+    
+    home_top.swapFade(-1);
+    
+   }
+   home_top.next = function(){
+    
+    home_top.swapFade(1);
+    
+   }
+   home_top.goto = function(x){
+    
+    var c='dot_home_top_'+home_top.iAd;
+    var n='dot_home_top_'+x;
+    document.getElementById(c).src=document.getElementById(c).src.replace('doton','dotoff');
+    document.getElementById(home_top.divs_to_fade[home_top.iAd]).className='aslide fadeOutLeft home_top animated zbottom';
+    document.getElementById(n).src=document.getElementById(n).src.replace('dotoff','doton');
+    document.getElementById(home_top.divs_to_fade[x]).className='aslide fadeInLeft home_top animated ztop';
+    home_top.iAd=x;
+    
+   }
+  </script>
+ 
+           <div class="slideshow_slides" id="slides_home_top">
+            <a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/sports/vikings-track-and-field-finish-strong-at-state/14098.html" aria-label="Top slideshow story: Vikings track and field finish strong at State" id="box_home_top_9" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/Ttuo_0J5lLytytzX4CrUvB_jG_Uzx/XPATH/home/cms_data/dfault/photos/stories/id/9/8/14098/s_topXEXT1520x35536is.jpg'); background-size: contain"><span>Vikings track and field finish strong at State</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html" aria-label="Top slideshow story: Columbia out of service until end of the year" id="box_home_top_8" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/e4sqFpB2nQf1niim6xtUxS6xtSM6C/XPATH/home/cms_data/dfault/photos/stories/id/9/7/14097/s_topXEXT1520x35472is.jpg'); background-size: contain"><span>Columbia out of service until end of the year</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html" aria-label="Top slideshow story: Twisted Ginger silversmith grows her business close to home" id="box_home_top_7" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/g6b3_xTpxKvuvwok4z4HvQ0ytXCwu/XPATH/home/cms_data/dfault/photos/stories/id/9/6/14096/s_topXEXT1520x35451is.jpg'); background-size: contain"><span>Twisted Ginger silversmith grows her business close to home</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/plant-share-hosted-by-petersburg-market/14095.html" aria-label="Top slideshow story: Plant Share hosted by Petersburg Market" id="box_home_top_6" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/Ppus04F6dPlgh02TrCvY5Tqs9MQ39/XPATH/home/cms_data/dfault/photos/stories/id/9/5/14095/s_topXEXT1520x35458is.jpg'); background-size: contain"><span>Plant Share hosted by Petersburg Market</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html" aria-label="Top slideshow story: Ribbon Cutting Ceremony at South Harbor" id="box_home_top_5" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/e4h9-770tEznwu4j0HvWrM7nFHQA-/XPATH/home/cms_data/dfault/photos/stories/id/9/2/14092/s_topXEXT1520x35434is.jpg'); background-size: contain"><span>Ribbon Cutting Ceremony at South Harbor</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/remembering/14091.html" aria-label="Top slideshow story: Remembering" id="box_home_top_4" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/Rrf74875j6fy1hoktG3ZpO6mBJL8E/XPATH/home/cms_data/dfault/photos/stories/id/9/1/14091/s_topXEXT1535x34723is.jpg'); background-size: contain"><span>Remembering</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html" aria-label="Top slideshow story: High School Class of 2024" id="box_home_top_3" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/OoZ7DlB0lOv1hyye552Q_N5q1U--_/XPATH/home/cms_data/dfault/photos/stories/id/8/9/14089/s_topXEXT1520x35456is.jpg'); background-size: contain"><span>High School Class of 2024</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html" aria-label="Top slideshow story: Canoe Journey Welcome" id="box_home_top_2" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/g6to02D4tPfwxs2b0-9T4VyuvQN7G/XPATH/home/cms_data/dfault/photos/stories/id/8/7/14087/s_topXEXT1520x35491is.jpg'); background-size: contain"><span>Canoe Journey Welcome</span></a>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html" aria-label="Top slideshow story: &apos;A tangible step forward&apos; taken toward borough owning entitled state land" id="box_home_top_1" class="aslide home_top fadeInLeft animated zbottom" style="background-image: url('/IMG/a0o8AyUpy5wuv3ql4_4P6B9sxWCzD/XPATH/home/cms_data/dfault/photos/stories/id/8/6/14086/s_topXEXT1520x35464is.jpg'); background-size: contain"><span>'A tangible step forward' taken toward borough owning entitled state land</span></a>
+
+           </div>
+           <div class="slideshow_dots" id="dots_home_top">
+            <div>
+             <a href="javascript:home_top.goto(0);" onmouseover="home_top.goto(0);"><img src="/cms/slideshow/images/doton.png" width="16" height="16" id="dot_home_top_0" alt=""></a><a href="javascript:home_top.goto(1);" onmouseover="home_top.goto(1);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_1" alt=""></a><a href="javascript:home_top.goto(2);" onmouseover="home_top.goto(2);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_2" alt=""></a><a href="javascript:home_top.goto(3);" onmouseover="home_top.goto(3);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_3" alt=""></a><a href="javascript:home_top.goto(4);" onmouseover="home_top.goto(4);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_4" alt=""></a><a href="javascript:home_top.goto(5);" onmouseover="home_top.goto(5);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_5" alt=""></a><a href="javascript:home_top.goto(6);" onmouseover="home_top.goto(6);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_6" alt=""></a><a href="javascript:home_top.goto(7);" onmouseover="home_top.goto(7);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_7" alt=""></a><a href="javascript:home_top.goto(8);" onmouseover="home_top.goto(8);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_8" alt=""></a>
+            </div>
+           </div>
+
+           <div class="slideshow_prev" id="prev_home_top">
+            <div>
+             <a href="javascript:home_top.prev();" aria-label="Previous Item"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            </div>
+           </div>
+           <div class="slideshow_next" id="next_home_top">
+            <div>
+             <a href="javascript:home_top.next();" aria-label="Next Item"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+           </div>
+
+
+
+          </div>
+</div>
+  <div class='sections_display'>
+  <div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/news">News</a></h2></div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html" aria-label="Story Thumbnail: &apos;A tangible step forward&apos; taken toward borough owning entitled state land"><img src="/IMG/HbPjnZ7QZIXZWeRMsisqhoyjV/XPATH/home/cms_data/dfault/photos/stories/id/8/6/14086/s_topXEXT1520x35464is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html"><h3>'A tangible step forward' taken toward borough owning entitled state land</h3></a><div class='blurb_byline'>By Olivia Rose</div><p>About 1,758 acres of state land on Mitkof Island is in process to be conveyed to the Petersburg...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/page/the-full-pdf-of-this-weeks-petersburg-pilot/11750.html" aria-label="Story Thumbnail: The Full PDF of this week&apos;s Petersburg Pilot"><img src="/IMG/LfIjliibUTaSXVfKoojxSzxep/XPATH/home/cms_data/dfault/photos/stories/id/5/0/11750/s_topXEXT1520x35432is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/page/the-full-pdf-of-this-weeks-petersburg-pilot/11750.html"><h3>The Full PDF of this week's Petersburg Pilot</h3></a><div class='blurb_byline'></div><p>Subscribers log in for access to this week's PDF ............................</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/funding-for-new-hospital-project-left-out-of-state-capital-budget/14088.html" aria-label="Story Thumbnail: Funding for new hospital project left out of state capital budget"><img src="/IMG/CWPcrcxiMbIZZUhAtlrtezljk/XPATH/home/cms_data/dfault/photos/stories/id/8/8/14088/s_topXEXT1520x35454is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/funding-for-new-hospital-project-left-out-of-state-capital-budget/14088.html"><h3>Funding for new hospital project left out of state capital budget</h3></a><div class='blurb_byline'>By Olivia Rose</div><p>The multi-million dollar funding request for the Petersburg hospital replacement project was not...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html" aria-label="Story Thumbnail: Twisted Ginger silversmith grows her business close to home"><img src="/IMG/NhCemY6QYZWZWXPLsWsiW3ppR/XPATH/home/cms_data/dfault/photos/stories/id/9/6/14096/s_topXEXT1520x35451is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html"><h3>Twisted Ginger silversmith grows her business close to home</h3></a><div class='blurb_byline'>By Olivia Rose</div><p>Silversmith Erin Kandoll has always considered herself an artist. When the Pilot visited Kandoll's...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html" aria-label="Story Thumbnail: Columbia out of service until end of the year"><img src="/IMG/LfTRsQodOfGgOJJNuUhvY5voR/XPATH/home/cms_data/dfault/photos/stories/id/9/7/14097/s_topXEXT1520x35472is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html"><h3>Columbia out of service until end of the year</h3></a><div class='blurb_byline'>By Larry Persily</div><p>The Alaska state ferry Columbia - which has been out of service since late November for its annual...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/sports">Sports</a></h2></div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/sports/vikings-track-and-field-finish-strong-at-state/14098.html" aria-label="Story Thumbnail: Vikings track and field finish strong at State"><img src="/IMG/AUVPmbwgMaZYZUa-slfvWo0aq/XPATH/home/cms_data/dfault/photos/stories/id/9/8/14098/s_topXEXT1520x35536is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/sports/vikings-track-and-field-finish-strong-at-state/14098.html"><h3>Vikings track and field finish strong at State</h3></a><div class='blurb_byline'>By Liam Demko</div><p>Petersburg High School's track team's seven qualifying athletes wrapped up their season last...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/opinion">Opinion</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/opinion/to-the-editor/14093.html"><h3>To the Editor</h3></a><div class='blurb_byline'></div><p>Good Job Power and Light To the Editor: On May 16, there was a ribbon cutting at the new Blind Slough Hydro Power Plant. It was well attended and...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/about_town">About Town</a></h2></div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html" aria-label="Story Thumbnail: Canoe Journey Welcome"><img src="/IMG/NhUPbdqfUeGbYTdCohxuf8nlT/XPATH/home/cms_data/dfault/photos/stories/id/8/7/14087/s_topXEXT1520x35491is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html"><h3>Canoe Journey Welcome</h3></a><div class='blurb_byline'></div><p></p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html" aria-label="Story Thumbnail: High School Class of 2024"><img src="/IMG/7PAiqMobMdWgIZZFtcqrm0uhZ/XPATH/home/cms_data/dfault/photos/stories/id/8/9/14089/s_topXEXT1520x35456is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html"><h3>High School Class of 2024</h3></a><div class='blurb_byline'></div><p></p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/yesterdays-news-news-from-25-50-75-100-years-ago/14090.html"><h3>Yesterday's News: News from 25-50-75-100 years ago</h3></a><div class='blurb_byline'></div><p>May 30, 1924 – A Good Suggestion. Dear Editor: Will you kindly pass this suggestion along to the ladies of your city while it will do the most...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/remembering/14091.html" aria-label="Story Thumbnail: Remembering"><img src="/IMG/-SGifjigKJGdcIPLhpr0Q1vdl/XPATH/home/cms_data/dfault/photos/stories/id/9/1/14091/s_topXEXT1535x34723is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/remembering/14091.html"><h3>Remembering</h3></a><div class='blurb_byline'></div><p></p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html" aria-label="Story Thumbnail: Ribbon Cutting Ceremony at South Harbor"><img src="/IMG/LfIkliibUTaSXVfKoqjxSzwep/XPATH/home/cms_data/dfault/photos/stories/id/9/2/14092/s_topXEXT1520x35434is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html"><h3>Ribbon Cutting Ceremony at South Harbor</h3></a><div class='blurb_byline'></div><p></p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/plant-share-hosted-by-petersburg-market/14095.html" aria-label="Story Thumbnail: Plant Share hosted by Petersburg Market"><img src="/IMG/8QVTbfshEeMLIbd6fljzg6fjh/XPATH/home/cms_data/dfault/photos/stories/id/9/5/14095/s_topXEXT1520x35458is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/plant-share-hosted-by-petersburg-market/14095.html"><h3>Plant Share hosted by Petersburg Market</h3></a><div class='blurb_byline'></div><p></p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/artifact-archive/14099.html" aria-label="Story Thumbnail: Artifact Archive"><img src="/IMG/-STgZjoOZQfIgMM4undijq2gp/XPATH/home/cms_data/dfault/photos/stories/id/9/9/14099/s_topXEXT1520x35519is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/artifact-archive/14099.html"><h3>Artifact Archive</h3></a><div class='blurb_byline'></div><p>This ship in a bottle was created by Petersburg fisherman Ole Sjursen as a gift to the Norberg...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/school-news/14100.html"><h3>School News</h3></a><div class='blurb_byline'></div><p>Three Petersburg students graduated from the University of Alaska Fairbanks during its 102nd commencement ceremony on Saturday, May 4, at the...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/police">Police</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/police/police-report/14094.html"><h3>Police report</h3></a><div class='blurb_byline'></div><p>May 22 – An officer conducted foot patrols at Sandy Beach Park. Officers conducted additional patrols on Dolphin Street. An officer assisted a...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/legals">Legals</a></h2></div>
+<div class='hmfunction_headlineonly'>
+<a href='https://www.petersburgpilot.com/home/customer_files/pdf_preview/53024pilotlegal.pdf'  target="_blank" ONMOUSEDOWN="return offsiteLink(this,'5444');"><h3>Legals</h3></a>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.petersburgpilot.com/section/classifieds">Classifieds</a></h2></div>
+<div class='hmfunction_headlineonly'>
+<a href='https://www.petersburgpilot.com/home/customer_files/pdf_preview/53024pilotclass.pdf'  target="_blank" ONMOUSEDOWN="return offsiteLink(this,'021320120514622404491');"><h3>Classifieds</h3></a>
+</div>
+</div></div> 
+  <div class='sections_display'>
+  </div><div style="clear: both;"></div><!-- Homepage, code 90 -->
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html' aria-label='Story Thumbnail: Twisted Ginger silvers...'><img src="/IMG/h7c4AyUqyHwLvhqJ5oG899zDr/XPATH/home/cms_data/dfault/photos/stories/id/9/6/14096/s_topXEXT1520x35451is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html' aria-label='Story Thumbnail: Twisted Ginger silvers...'>Twisted Ginger silvers...<span class='mp_author'>Olivia Rose</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html' aria-label='Story Thumbnail: &apos;A tangible step forwa...'><img src="/IMG/b1p9BzVqz2xLvosK50GEIu89v/XPATH/home/cms_data/dfault/photos/stories/id/8/6/14086/s_topXEXT1520x35464is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html' aria-label='Story Thumbnail: &apos;A tangible step forwa...'>'A tangible step forwa...<span class='mp_author'>Olivia Rose</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html' aria-label='Story Thumbnail: Ribbon Cutting Ceremon...'><img src="/IMG/f5i-_881uB0Ewf6I189L5564D/XPATH/home/cms_data/dfault/photos/stories/id/9/2/14092/s_topXEXT1520x35434is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html' aria-label='Story Thumbnail: Ribbon Cutting Ceremon...'>Ribbon Cutting Ceremon...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html' aria-label='Story Thumbnail: Columbia out of servic...'><img src="/IMG/f5trGqC3oNgSnTkL7m7J__5Cr/XPATH/home/cms_data/dfault/photos/stories/id/9/7/14097/s_topXEXT1520x35472is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html' aria-label='Story Thumbnail: Columbia out of servic...'>Columbia out of servic...<span class='mp_author'>Larry Persily</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/funding-for-new-hospital-project-left-out-of-state-capital-budget/14088.html' aria-label='Story Thumbnail: Funding for new hospit...'><img src="/IMG/Wwp2F2L8mJiLye8-63FHF5v9-/XPATH/home/cms_data/dfault/photos/stories/id/8/8/14088/s_topXEXT1520x35454is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/funding-for-new-hospital-project-left-out-of-state-capital-budget/14088.html' aria-label='Story Thumbnail: Funding for new hospit...'>Funding for new hospit...<span class='mp_author'>Olivia Rose</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html' aria-label='Story Thumbnail: Canoe Journey Welcome'><img src="/IMG/h7up13E5uMgNxd4A1zLIGCx_t/XPATH/home/cms_data/dfault/photos/stories/id/8/7/14087/s_topXEXT1520x35491is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html' aria-label='Story Thumbnail: Canoe Journey Welcome'>Canoe Journey Welcome<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html' aria-label='Story Thumbnail: High School Class of 2024'><img src="/IMG/Ppa8EmC1mLwShj0D6uEFN647z/XPATH/home/cms_data/dfault/photos/stories/id/8/9/14089/s_topXEXT1520x35456is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html' aria-label='Story Thumbnail: High School Class of 2024'>High School Class of 2024<span class='mp_author'></span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><!-- Hospital-->
+<br /><a href="https://www.petersburgpilot.com/story/2020/01/30/news/new-hospital-cost-estimates-range-up-to-110-million/9352.html"><img src="/home/customer_files/images/petersburg_medical_center.png" width="300" height="169" alt="Petersburg Medical Center"></a>
+
+
+<div class="side_separator"></div>
+
+
+<!-- WEATHER WIDGET -->
+<div style="width: 300px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=95535" width="300" height="80" frameborder="0" scrolling="no"></iframe><a style="text-indent: -9999em;margin: -80px 0 0 0;float: right;height: 80px;width: 20px;display: block;position: relative;z-index: 1" href="https://www.willyweather.com/ak/wrangell--petersburg-borough/petersburg.html" rel="nofollow">Up to date weather for Petersburg</a></div>
+
+
+<div class="side_separator"></div>
+
+
+<!-- WEBCAM -->
+<a href="http://www.roadweather.alaska.gov/iways/roadweather/forms/CameraViews.html?areaId=5&perspectiveId=2&siteId=192" target="_blank"><img src="/home/customer_files/images/mitkof_webcam.png" width="300" height="224" alt="Click to see the Road Weather Information webcam from South Mitkof Highway at mile 33, Blaquiere Point"></a>
+
+<div class="side_separator"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:d3x19rFz1Gup457w0Hx%5FB%2D6V3VHYALBzNWGhQJQIJ--><span class="ad_local_square"><img src="/IMG/uhSmke2jbieRiNfVfDb9oDrTqhuHusijz/XPATH/home/cms_data/dfault/web_ads/square/4321-pilot_info.jpgXEXT1244x36719is.jpeg" width="300" height="247" alt=""></span></div><div class="side_separator"></div></div><div class='sidebar_split_ad'><div class='split_left'><a href='HTTPS://www.petersburgpilot.com/subscribe' aria-label='Subscribe'><img src="/home/cms_data/dfault/images/.TEMP/cover_graphic_staticTEMP140x280-1870.png" width="140" height="175" alt=""></a></div><div class='split_right'><p class='sidebar_split_ad_title'><strong>Subscribe & receive:</strong></p>
+
+<p>
+- Full online access<br>
+- Comment on articles<br>
+- Access the archives<br>
+- And much more<br>
+</p><a href='HTTPS://www.petersburgpilot.com/subscribe' aria-label='Subscribe'><img src="/home/cms_data/dfault/images/.TEMP/subscribelogoTEMP150x100-9528.png" width="150" height="40" alt=""></a></div></div><div class="side_separator"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:Yysw4mAuwBpkz02rvCs6851Q%5FACP%5Fi4SV9%2D47--><span class="ad_local_square"><a href="https://www.rockysmarine.com/" target="blank"><img src="/IMG/xkVfvZ2cflajVgQOk5rxpGmanshEAftjk/XPATH/home/cms_data/dfault/web_ads/square/3762-rocky_smarineweb_layout_1.jpgXEXT1717x41549.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   <div class="page_text_bottom widen_vertical_width skel"><div class="slickcarousel_white"> <div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html" aria-label="Story: &apos;A tangible step forward&apos; taken toward borough owning entitled state land"><img src="/IMG/Ssg04qMhqZoKnvidwvw_y11kpO6r7/XPATH/home/cms_data/dfault/photos/stories/id/8/6/14086/s_topXEXT1520x35464is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>NEWS</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/a-tangible-step-forward-taken-toward-borough-owning-entitled-state-land/14086.html' aria-label='Story: &apos;A tangible step forward&apos; taken toward borough owning entitled state land'>'A tangible step forward' taken toward borough owning entitled state land</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html" aria-label="Story: Canoe Journey Welcome"><img src="/IMG/Yylgsu7wlvXMpkuTsu1DwJqmnIFz-/XPATH/home/cms_data/dfault/photos/stories/id/8/7/14087/s_topXEXT1520x35491is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>ABOUT TOWN</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/canoe-journey-welcome/14087.html' aria-label='Story: Canoe Journey Welcome'>Canoe Journey Welcome</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html" aria-label="Story: Columbia out of service until end of the year"><img src="/IMG/Wwki9h5ufwXRfaaeyhlEpGyplKEy6/XPATH/home/cms_data/dfault/photos/stories/id/9/7/14097/s_topXEXT1520x35472is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>NEWS</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/columbia-out-of-service-until-end-of-the-year/14097.html' aria-label='Story: Columbia out of service until end of the year'>Columbia out of service until end of the year</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html" aria-label="Story: High School Class of 2024"><img src="/IMG/GgRz7d5sdunRZqqWxpuA3BxitM223/XPATH/home/cms_data/dfault/photos/stories/id/8/9/14089/s_topXEXT1520x35456is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>ABOUT TOWN</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/high-school-class-of-2024/14089.html' aria-label='Story: High School Class of 2024'>High School Class of 2024</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/plant-share-hosted-by-petersburg-market/14095.html" aria-label="Story: Plant Share hosted by Petersburg Market"><img src="/IMG/Hhmksw9yVvd8ZsuLjynIxHik1EIv1/XPATH/home/cms_data/dfault/photos/stories/id/9/5/14095/s_topXEXT1520x35458is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>ABOUT TOWN</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/plant-share-hosted-by-petersburg-market/14095.html' aria-label='Story: Plant Share hosted by Petersburg Market'>Plant Share hosted by Petersburg Market</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/remembering/14091.html" aria-label="Story: Remembering"><img src="/IMG/JjXzw0zxbaXOtZgcl2vJhCye5BD08/XPATH/home/cms_data/dfault/photos/stories/id/9/1/14091/s_topXEXT1535x34723is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>ABOUT TOWN</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/remembering/14091.html' aria-label='Story: Remembering'>Remembering</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html" aria-label="Story: Ribbon Cutting Ceremony at South Harbor"><img src="/IMG/WwZ12zzslkrDomwbs3nGjAzf9_I42/XPATH/home/cms_data/dfault/photos/stories/id/9/2/14092/s_topXEXT1520x35434is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>ABOUT TOWN</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/about-town/ribbon-cutting-ceremony-at-south-harbor/14092.html' aria-label='Story: Ribbon Cutting Ceremony at South Harbor'>Ribbon Cutting Ceremony at South Harbor</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html" aria-label="Story: Twisted Ginger silversmith grows her business close to home"><img src="/IMG/Ssg04qLhqZoPnvidwvz_y11qpQ6r7/XPATH/home/cms_data/dfault/photos/stories/id/9/6/14096/s_bottomXEXT1515x35653is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>NEWS</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/news/twisted-ginger-silversmith-grows-her-business-close-to-home/14096.html' aria-label='Story: Twisted Ginger silversmith grows her business close to home'>Twisted Ginger silversmith grows her business close to home</a></h4><p></p></div><div><div class="carouselimg"><a href="HTTPS://www.petersburgpilot.com/story/2024/05/30/sports/vikings-track-and-field-finish-strong-at-state/14098.html" aria-label="Story: Vikings track and field finish strong at State"><img src="/IMG/Llmg3sBxdrqJqlrPwyjEn13b-3Mrp/XPATH/home/cms_data/dfault/photos/stories/id/9/8/14098/s_topXEXT1520x35536is.jpg" width="190" height="154" alt=""></a></div><div class="carouselsection"><p>SPORTS</p></div><h4 class=""><a href='HTTPS://www.petersburgpilot.com/story/2024/05/30/sports/vikings-track-and-field-finish-strong-at-state/14098.html' aria-label='Story: Vikings track and field finish strong at State'>Vikings track and field finish strong at State</a></h4><p></p></div></div><div class="bottom_banner_ad" aria-hidden="true"></div></div>
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.petersburgpilot.com/section/news' aria-label="Section link">News</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/opinion' aria-label="Section link">Opinion</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/about_town' aria-label="Section link">About Town</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/dockside' aria-label="Section link">Dockside</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='HTTPS://www.petersburgpilot.com/section/police' aria-label="Section link">Police</a></li><li>Legals</li><li>Classifieds</li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/contact" >Contact</a></li><li><a href="HTTPS://www.petersburgpilot.com/subscribe/start" >Subscribe</a></li><li><a href="HTTPS://www.petersburgpilot.com/about" >About</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.petersburgpilot.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.petersburgpilot.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.petersburgpilot.com/?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/advertise" >Advertise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.petersburgpilot.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.petersburgpilot.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="https://www.facebook.com/petersburgpilot/"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='30' alt='FaceBook'></a><a  href="HTTPS://www.petersburgpilot.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Petersburg Pilot</h4>
+        <p>
+          P.O. Box 930<br />Petersburg, AK 99833<br />Ph: (907) 772-9393<br />
+       </p>
+        <p>
+          &copy; 2024 Pilot Publishing, Inc.<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+   <script>
+    function mycarousel_initCallback(carousel) {
+         jQuery('.jcarousel-control a').bind('click', function() {
+           carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+           return false;
+         });
+         jQuery('.jcarousel-scroll select').bind('change', function() {
+           carousel.options.scroll = jQuery.jcarousel.intval(this.options[this.selectedIndex].value);
+           return false;
+         });
+         jQuery('#mycarousel-white-next').bind('click', function() {
+           carousel.next();
+           return false;
+         });
+         jQuery('#mycarousel-white-prev').bind('click', function() {
+           carousel.prev();
+           return false;
+         });
+        };
+
+        // Ride the carousel...
+//        jQuery(document).ready(function() {
+//         jQuery("#mycarousel_white").jcarousel({
+//           scroll: 1,
+//           initCallback: mycarousel_initCallback,
+//           // This tells jCarousel NOT to autobuild prev/next buttons
+//           buttonNextHTML: null,
+//           buttonPrevHTML: null
+//         });
+//        });
+        jQuery(document).ready(function() {
+         jQuery(".more_stories_list").hide();
+         jQuery(".more_stories_toggle").click(function(){
+           jQuery(this).next(".more_stories_list").slideToggle(300);
+         });
+        });
+   </script>
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <small style="padding-top:10px;display:block;">Rendered 05/30/2024 14:13</small><!-- (DESKTOP|PAYWALLERROR|ERROR) (desktop|paywallerror|error) Cached by Usernum:002344 -->
+ </body>
+
+</html>

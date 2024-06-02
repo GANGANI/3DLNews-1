@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();</script>
+	
+	<title>Dunwoody Crier | Serving the Dunwoody community since 1976</title><style id="wpr-usedcss">:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}:where(.wp-block-calendar table:not(.has-background) th){background:#ddd}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}:where(.wp-block-post-comments input[type=submit]){border:none}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:where(.wp-block-file){margin-bottom:1.5em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):is(a):active,:where(.wp-block-file__button):is(a):focus,:where(.wp-block-file__button):is(a):hover,:where(.wp-block-file__button):is(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}ul{box-sizing:border-box}:where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation.has-background .wp-block-navigation-submenu a:not(.wp-element-button)){padding:.5em 1em}:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content){padding:.5em 1em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}:where(.wp-block-post-excerpt){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}:where(.wp-block-pullquote){margin:0 0 1em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:0}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-social-links{background:0 0;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0}.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none}.wp-block-social-links .wp-social-link a{padding:.25em}.wp-block-social-links .wp-social-link svg{height:1em;width:1em}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){font-size:.65em;margin-left:.5em;margin-right:.5em}.wp-block-social-links{font-size:24px}.wp-block-social-links.aligncenter{display:flex;justify-content:center}.wp-block-social-link{border-radius:9999px;display:block;height:auto;transition:transform .1s ease}@media (prefers-reduced-motion:reduce){.wp-block-social-link{transition-delay:0s;transition-duration:0s}}.wp-block-social-link a{align-items:center;display:flex;line-height:0;transition:transform .1s ease}.wp-block-social-link:hover{transform:scale(1.1)}.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0}.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:active,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:hover,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:visited{color:currentColor;fill:currentColor}.wp-block-social-links:not(.is-style-logos-only) .wp-social-link{background-color:#f0f0f0;color:#444}.wp-block-social-links:not(.is-style-logos-only) .wp-social-link-facebook{background-color:#1778f2;color:#fff}.wp-block-social-links:not(.is-style-logos-only) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}.wp-block-social-links.is-style-logos-only .wp-social-link{background:0 0}.wp-block-social-links.is-style-logos-only .wp-social-link a{padding:0}.wp-block-social-links.is-style-logos-only .wp-social-link svg{height:1.25em;width:1.25em}.wp-block-social-links.is-style-logos-only .wp-social-link-facebook{color:#1778f2}.wp-block-social-links.is-style-logos-only .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-term-description){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(pre.wp-block-verse){font-family:inherit}.entry-content{counter-reset:footnotes}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.aligncenter{clear:both}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip:auto!important;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}body{--wp--preset--color--black:#000000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--white:#ffffff;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--color--contrast:var(--contrast);--wp--preset--color--contrast-2:var(--contrast-2);--wp--preset--color--contrast-3:var(--contrast-3);--wp--preset--color--base:var(--base);--wp--preset--color--base-2:var(--base-2);--wp--preset--color--base-3:var(--base-3);--wp--preset--color--accent:var(--accent);--wp--preset--color--accent-2:var(--accent-2);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6, 147, 227, 1) 0%,rgb(155, 81, 224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,rgb(122, 220, 180) 0%,rgb(0, 208, 130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252, 185, 0, 1) 0%,rgba(255, 105, 0, 1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255, 105, 0, 1) 0%,rgb(207, 46, 46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,rgb(238, 238, 238) 0%,rgb(169, 184, 195) 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,rgb(74, 234, 220) 0%,rgb(151, 120, 209) 20%,rgb(207, 42, 186) 40%,rgb(238, 44, 130) 60%,rgb(251, 105, 98) 80%,rgb(254, 248, 76) 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,rgb(255, 206, 236) 0%,rgb(152, 150, 240) 100%);--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,rgb(254, 205, 165) 0%,rgb(254, 45, 45) 50%,rgb(107, 0, 62) 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,rgb(255, 203, 112) 0%,rgb(199, 81, 192) 50%,rgb(65, 88, 208) 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,rgb(255, 245, 203) 0%,rgb(182, 227, 212) 50%,rgb(51, 167, 181) 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,rgb(202, 248, 128) 0%,rgb(113, 206, 126) 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,rgb(2, 3, 129) 0%,rgb(40, 116, 252) 100%);--wp--preset--font-size--small:13px;--wp--preset--font-size--medium:20px;--wp--preset--font-size--large:36px;--wp--preset--font-size--x-large:42px;--wp--preset--spacing--20:0.44rem;--wp--preset--spacing--30:0.67rem;--wp--preset--spacing--40:1rem;--wp--preset--spacing--50:1.5rem;--wp--preset--spacing--60:2.25rem;--wp--preset--spacing--70:3.38rem;--wp--preset--spacing--80:5.06rem;--wp--preset--shadow--natural:6px 6px 9px rgba(0, 0, 0, .2);--wp--preset--shadow--deep:12px 12px 50px rgba(0, 0, 0, .4);--wp--preset--shadow--sharp:6px 6px 0px rgba(0, 0, 0, .2);--wp--preset--shadow--outlined:6px 6px 0px -3px rgba(255, 255, 255, 1),6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp:6px 6px 0px rgba(0, 0, 0, 1)}:where(.is-layout-flex){gap:.5em}:where(.is-layout-grid){gap:.5em}body .is-layout-flex{display:flex}body .is-layout-flex{flex-wrap:wrap;align-items:center}body .is-layout-flex>*{margin:0}:where(.wp-block-post-template.is-layout-flex){gap:1.25em}:where(.wp-block-post-template.is-layout-grid){gap:1.25em}:where(.wp-block-columns.is-layout-flex){gap:2em}:where(.wp-block-columns.is-layout-grid){gap:2em}body,dl,dt,figure,h3,h4,h6,html,iframe,li,p,textarea,ul{margin:0;padding:0;border:0}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}main{display:block}progress{vertical-align:baseline}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-moz-focus-inner{border-style:none;padding:0}body,button,input,select,textarea{font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-weight:400;text-transform:none;font-size:17px;line-height:1.5}p{margin-bottom:1.5em}h3,h4,h6{font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit}h3{font-size:29px;margin-bottom:20px;line-height:1.2em;font-weight:400;text-transform:none}h4{font-size:24px}h4,h6{margin-bottom:20px}ul{margin:0 0 1.5em 3em}ul{list-style:disc}li>ul{margin-bottom:0;margin-left:1.5em}dt{font-weight:700}strong{font-weight:700}em{font-style:italic}address{margin:0 0 1.5em}code,tt,var{font:15px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace}ins{text-decoration:none}figure{margin:0}img{height:auto;max-width:100%}button,input[type=button],input[type=reset],input[type=submit]{background:#55555e;color:#fff;border:1px solid transparent;cursor:pointer;-webkit-appearance:button;padding:10px 20px}input[type=email],input[type=number],input[type=password],input[type=search],input[type=text],select,textarea{border:1px solid;border-radius:0;padding:10px 15px;max-width:100%}textarea{width:100%}a,button,input{transition:color .1s ease-in-out,background-color .1s ease-in-out}a{text-decoration:none}.button{padding:10px 20px;display:inline-block}.using-mouse :focus{outline:0}.using-mouse ::-moz-focus-inner{border:0}.aligncenter{clear:both;display:block;margin:0 auto}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;-webkit-clip-path:none;clip-path:none;color:#21759b;display:block;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}#primary[tabindex="-1"]:focus{outline:0}.main-navigation{z-index:100;padding:0;clear:both;display:block}.main-navigation a{display:block;text-decoration:none;font-weight:400;text-transform:none;font-size:15px}.main-navigation ul{list-style:none;margin:0;padding-left:0}.main-navigation .main-nav ul li a{padding-left:20px;padding-right:20px;line-height:60px}.inside-navigation{position:relative}.main-navigation .inside-navigation{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between}.main-navigation .main-nav>ul{display:flex;flex-wrap:wrap;align-items:center}.main-navigation li{position:relative}.main-navigation .menu-bar-items{display:flex;align-items:center;font-size:15px}.main-navigation .menu-bar-items a{color:inherit}.main-navigation .menu-bar-item{position:relative}.main-navigation .menu-bar-item.search-item{z-index:20}.main-navigation .menu-bar-item>a{padding-left:20px;padding-right:20px;line-height:60px}.main-navigation ul ul{display:block;box-shadow:1px 1px 0 rgba(0,0,0,.1);float:left;position:absolute;left:-99999px;opacity:0;z-index:99999;width:200px;text-align:left;top:auto;transition:opacity 80ms linear;transition-delay:0s;pointer-events:none;height:0;overflow:hidden}.main-navigation ul ul a{display:block}.main-navigation ul ul li{width:100%}.main-navigation .main-nav ul ul li a{line-height:normal;padding:10px 20px;font-size:14px}.main-navigation .main-nav ul li.menu-item-has-children>a{padding-right:0;position:relative}.main-navigation.sub-menu-left ul ul{box-shadow:-1px 1px 0 rgba(0,0,0,.1)}.main-navigation.sub-menu-left .sub-menu{right:0}.main-navigation:not(.toggled) ul li.sfHover>ul,.main-navigation:not(.toggled) ul li:hover>ul{left:auto;opacity:1;transition-delay:150ms;pointer-events:auto;height:auto;overflow:visible}.main-navigation:not(.toggled) ul ul li.sfHover>ul,.main-navigation:not(.toggled) ul ul li:hover>ul{left:100%;top:0}.main-navigation.sub-menu-left:not(.toggled) ul ul li.sfHover>ul,.main-navigation.sub-menu-left:not(.toggled) ul ul li:hover>ul{right:100%;left:auto}.nav-float-right .main-navigation ul ul ul{top:0}.menu-item-has-children .dropdown-menu-toggle{display:inline-block;height:100%;clear:both;padding-right:20px;padding-left:10px}.menu-item-has-children ul .dropdown-menu-toggle{padding-top:10px;padding-bottom:10px;margin-top:-10px}nav ul ul .menu-item-has-children .dropdown-menu-toggle{float:right}.site-header{position:relative}.inside-header{padding:20px 40px}.site-logo{display:inline-block;max-width:100%}.site-header .header-image{vertical-align:middle}.inside-header{display:flex;align-items:center}.nav-float-right #site-navigation{margin-left:auto}.entry-content:not(:first-child){margin-top:2em}.site-content{word-wrap:break-word}.entry-content>p:last-child{margin-bottom:0}embed,iframe,object{max-width:100%}.site-content{display:flex}.grid-container{margin-left:auto;margin-right:auto;max-width:1200px}.site-main>*{margin-bottom:20px}.one-container .site-content{padding:40px}.one-container .site-main>:last-child{margin-bottom:0}.gp-icon{display:inline-flex;align-self:center}.gp-icon svg{height:1em;width:1em;top:.125em;position:relative;fill:currentColor}.close-search .icon-search svg:first-child,.icon-menu-bars svg:nth-child(2),.icon-search svg:nth-child(2),.toggled .icon-menu-bars svg:first-child{display:none}.close-search .icon-search svg:nth-child(2),.toggled .icon-menu-bars svg:nth-child(2){display:block}nav.toggled .sfHover>a>.dropdown-menu-toggle .gp-icon svg{transform:rotate(180deg)}.container.grid-container{width:auto}.menu-toggle{display:none}.menu-toggle{padding:0 20px;line-height:60px;margin:0;font-weight:400;text-transform:none;font-size:15px;cursor:pointer}.menu-toggle .mobile-menu{padding-left:3px}.menu-toggle .gp-icon+.mobile-menu{padding-left:9px}.menu-toggle .mobile-menu:empty{display:none}button.menu-toggle{background-color:transparent;flex-grow:1;border:0;text-align:center}button.menu-toggle:active,button.menu-toggle:focus,button.menu-toggle:hover{background-color:transparent}.has-menu-bar-items button.menu-toggle{flex-grow:0}nav.toggled ul ul.sub-menu{width:100%}.toggled .menu-item-has-children .dropdown-menu-toggle{padding-left:20px}.main-navigation.toggled .main-nav{flex-basis:100%;order:3}.main-navigation.toggled .main-nav>ul{display:block}.main-navigation.toggled .main-nav li{width:100%;text-align:left}.main-navigation.toggled .main-nav ul ul{transition:0s;visibility:hidden;box-shadow:none;border-bottom:1px solid rgba(0,0,0,.05)}.main-navigation.toggled .main-nav ul ul li:last-child>ul{border-bottom:0}.main-navigation.toggled .main-nav ul ul.toggled-on{position:relative;top:0;left:auto!important;right:auto!important;width:100%;pointer-events:auto;height:auto;opacity:1;display:block;visibility:visible;float:none}.main-navigation.toggled .menu-item-has-children .dropdown-menu-toggle{float:right}.mobile-menu-control-wrapper{display:none;margin-left:auto;align-items:center}.has-inline-mobile-toggle #site-navigation.toggled{margin-top:1.5em}.has-inline-mobile-toggle #site-navigation.has-active-search{margin-top:1.5em}@media (max-width:768px){a,body,button,input,select,textarea{transition:all 0s ease-in-out}.inside-header{flex-direction:column;text-align:center}.site-content{flex-direction:column}.container .site-content .content-area{width:auto}#main{margin-left:0;margin-right:0}body:not(.no-sidebar) #main{margin-bottom:0}}body{background-color:var(--base-3);color:var(--contrast)}a{color:var(--accent)}a:focus,a:hover{text-decoration:underline}.main-navigation a,a.button{text-decoration:none}a:active,a:focus,a:hover{color:var(--contrast)}.grid-container{max-width:1280px}.site-header .header-image{width:30px}:root{--contrast:#222222;--contrast-2:#575760;--contrast-3:#b2b2be;--base:#f0f0f0;--base-2:#f7f8f9;--base-3:#ffffff;--accent:#0C4767;--accent-2:#566E3D}.gp-modal:not(.gp-modal--open):not(.gp-modal--transition){display:none}.gp-modal--transition:not(.gp-modal--open){pointer-events:none}.gp-modal__overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.2);display:flex;justify-content:center;align-items:center;z-index:10000;backdrop-filter:blur(3px);transition:opacity .5s ease;opacity:0}.gp-modal--open:not(.gp-modal--transition) .gp-modal__overlay{opacity:1}.gp-modal__container{max-width:100%;max-height:100vh;transform:scale(.9);transition:transform .5s ease;padding:0 10px}.gp-modal--open:not(.gp-modal--transition) .gp-modal__container{transform:scale(1)}.search-modal-fields{display:flex}.gp-search-modal .gp-modal__overlay{align-items:flex-start;padding-top:25vh;background:var(--gp-search-modal-overlay-bg-color)}.search-modal-form{width:500px;max-width:100%;background-color:var(--gp-search-modal-bg-color);color:var(--gp-search-modal-text-color)}.search-modal-form .search-field,.search-modal-form .search-field:focus{width:100%;height:60px;background-color:transparent;border:0;appearance:none;color:currentColor}.search-modal-fields button,.search-modal-fields button:active,.search-modal-fields button:focus,.search-modal-fields button:hover{background-color:transparent;border:0;color:currentColor;width:60px}body,button,input,select,textarea{font-family:Helvetica}h3{font-weight:500;text-transform:capitalize;font-size:30px}h6{font-weight:400;text-transform:capitalize;font-size:13px;letter-spacing:1px;line-height:1em;margin-bottom:13px}h4{font-weight:600;text-transform:capitalize;font-size:19px;letter-spacing:1px;line-height:1.4em;margin-bottom:0}.main-navigation .menu-bar-items,.main-navigation .menu-toggle,.main-navigation a{font-family:Arial;font-weight:600;text-transform:uppercase;font-size:17px}.site-header{background-color:#5089fd;color:#000}.site-header a{color:#181818}.site-header a:hover{color:#537ed3}.main-navigation,.main-navigation ul ul{background-color:rgba(156,104,104,0)}.main-navigation .main-nav ul li a,.main-navigation .menu-bar-items,.main-navigation .menu-toggle{color:#f1f1f1}.main-navigation .main-nav ul li.sfHover:not([class*=current-menu-])>a,.main-navigation .main-nav ul li:not([class*=current-menu-]):focus>a,.main-navigation .main-nav ul li:not([class*=current-menu-]):hover>a,.main-navigation .menu-bar-item.sfHover>a,.main-navigation .menu-bar-item:hover>a{color:#073184}button.menu-toggle:focus,button.menu-toggle:hover{color:#f1f1f1}.main-navigation .main-nav ul li[class*=current-menu-]>a{color:#073184}.main-navigation .main-nav ul li.search-item.active>a,.main-navigation .menu-bar-items .search-item.active>a,.navigation-search input[type=search],.navigation-search input[type=search]:active,.navigation-search input[type=search]:focus{color:#073184}.main-navigation ul ul{background-color:var(--base)}.one-container .container{background-color:#fff}input[type=email],input[type=number],input[type=password],input[type=search],input[type=text],select,textarea{color:var(--contrast);background-color:var(--base-2);border-color:var(--base)}input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=search]:focus,input[type=text]:focus,select:focus,textarea:focus{color:var(--contrast);background-color:var(--base-2);border-color:var(--contrast-3)}a.button,button,html input[type=button],input[type=reset],input[type=submit]{color:#fff;background-color:#55555e}a.button:focus,a.button:hover,button:focus,button:hover,html input[type=button]:focus,html input[type=button]:hover,input[type=reset]:focus,input[type=reset]:hover,input[type=submit]:focus,input[type=submit]:hover{color:#fff;background-color:#3f4047}:root{--gp-search-modal-bg-color:var(--base-3);--gp-search-modal-text-color:var(--contrast);--gp-search-modal-overlay-bg-color:rgba(0, 0, 0, .2)}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px}.rtl .main-navigation .main-nav ul li.menu-item-has-children>a{padding-right:20px}.site-content .content-area{width:100%}@media (max-width:768px){.main-navigation .menu-bar-item.sfHover>a,.main-navigation .menu-bar-item:hover>a{background:0 0;color:#f1f1f1}.one-container .site-content{padding:30px}.inside-header{padding-right:30px;padding-left:30px}.main-navigation .menu-toggle{display:block}.has-inline-mobile-toggle #site-navigation .inside-navigation>:not(.navigation-search):not(.main-nav),.main-navigation ul,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul{display:none}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap}.has-inline-mobile-toggle #site-navigation{flex-basis:100%}}.gb-container-6e85cd0d{padding-bottom:20px}.gb-container-f18cd594{height:100%;display:flex;background-image:url("");background-repeat:no-repeat;background-position:center center;background-size:cover}.gb-grid-wrapper>.gb-grid-column-f18cd594{width:50%}.gb-container-3388e468{height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:20px;border-radius:10px;background-color:var(--contrast);color:var(--base-3)}.gb-container-3388e468::before{content:"";background-image:var(--background-image);background-repeat:no-repeat;background-position:center center;background-size:cover;z-index:0;position:absolute;inset:0px;transition:inherit;border-radius:10px;pointer-events:none;opacity:.4}.gb-container-3388e468 a{color:var(--base-3)}.gb-grid-wrapper>.gb-grid-column-3388e468{width:100%}.gb-container-b8272b8f{position:relative}.gb-container-85bb5d2e{height:100%;display:flex;flex-direction:column;justify-content:flex-end}.gb-grid-wrapper>.gb-grid-column-85bb5d2e{width:50%}.gb-container-e1e8bef5{height:100%;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:20px 20px 20px 21px;border-radius:10px;background-color:var(--contrast);color:var(--base-3)}.gb-container-e1e8bef5::before{content:"";background-image:var(--background-image);background-repeat:no-repeat;background-position:center center;background-size:cover;z-index:0;position:absolute;inset:0px;transition:inherit;border-radius:10px;pointer-events:none;opacity:.4}.gb-container-e1e8bef5 a{color:var(--base-3)}.gb-grid-wrapper>.gb-grid-column-e1e8bef5{width:50%}.gb-container-c5a206d6{padding-top:20px;padding-bottom:20px}.gb-container-c5a206d6 a{color:var(--contrast)}.gb-container-c5a206d6 a:hover{color:var(--contrast)}.gb-container-3092ebb6{height:100%}.gb-grid-wrapper>.gb-grid-column-3092ebb6{width:75%}.gb-container-13482eec{display:flex;flex-wrap:wrap;align-items:center;column-gap:20px}.gb-container-c3e8a8f7{width:60%;flex:1 1 0px;text-align:center;border-top:3px solid var(--accent)}.gb-container-c8964c1b{padding-top:20px;padding-bottom:20px}.gb-container-85af8d8c{height:100%}.gb-grid-wrapper>.gb-grid-column-85af8d8c{width:50%}.gb-container-a3f42311{height:100%}.gb-grid-wrapper>.gb-grid-column-a3f42311{width:100%}.gb-container-9d6b6a1b{height:100%}.gb-grid-wrapper>.gb-grid-column-9d6b6a1b{width:50%}.gb-container-8cd5e2bd{height:100%}.gb-grid-wrapper>.gb-grid-column-8cd5e2bd{width:100%}.gb-grid-wrapper>.gb-grid-column-8b3b2841{width:25%}.gb-grid-wrapper>.gb-grid-column-8b3b2841>.gb-container{display:flex;flex-direction:column;height:100%}.gb-grid-wrapper>.gb-grid-column-8f436855{width:75%}.gb-grid-wrapper>.gb-grid-column-8f436855>.gb-container{justify-content:center;display:flex;flex-direction:column;height:100%}.gb-container-81609930{width:100%;display:flex;flex-wrap:wrap;align-items:center;column-gap:20px}.gb-container-d0426b62{flex:1 1 0px;text-align:center;border-top:3px solid var(--accent-2)}.gb-container-d4d57ae5{padding-top:20px;padding-bottom:20px}.gb-container-d3a5d53a{height:100%;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:20px;border-radius:10px;background-color:var(--contrast);color:var(--base-3)}.gb-container-d3a5d53a::before{content:"";background-image:var(--background-image);background-repeat:no-repeat;background-position:center center;background-size:cover;z-index:0;position:absolute;inset:0px;transition:inherit;border-radius:10px;pointer-events:none;opacity:.5}.gb-container-d3a5d53a a{color:var(--base-3)}.gb-grid-wrapper>.gb-grid-column-d3a5d53a{width:33.33%}.gb-container-9a464e94{padding-top:20px;padding-bottom:20px}.gb-container-63a7591b{height:100%;min-height:300px;display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden;text-align:center;padding:100px 20px 20px;background-color:var(--contrast);color:var(--base-3)}.gb-container-63a7591b::before{content:"";background-image:var(--background-image);background-repeat:no-repeat;background-position:center center;background-size:cover;z-index:0;position:absolute;inset:0px;transition:inherit;pointer-events:none;opacity:.5}.gb-container-63a7591b a{color:var(--base-3)}.gb-grid-wrapper>.gb-grid-column-63a7591b{width:25%}.gb-container-c6cf194b{padding-top:20px;padding-bottom:20px}.gb-container-c6cf194b a{color:var(--contrast)}.gb-container-c6cf194b a:hover{color:var(--contrast)}.gb-grid-wrapper>.gb-grid-column-3771c47e{width:66.66%}.gb-grid-wrapper>.gb-grid-column-3771c47e>.gb-container{display:flex;flex-direction:column;height:100%}.gb-container-0bbc93b7{display:flex;flex-wrap:wrap;align-items:center;column-gap:20px}.gb-container-703221a1{width:60%;flex:1 1 0px;text-align:center;border-top:3px solid var(--accent)}.gb-container-1e20c17b{padding-top:20px;padding-bottom:20px}.gb-container-41e9886c{height:100%}.gb-grid-wrapper>.gb-grid-column-41e9886c{width:100%}.gb-container-077353f5{height:100%}.gb-grid-wrapper>.gb-grid-column-077353f5{width:33.33%}.gb-container-277ca434{height:100%;flex-direction:column;justify-content:center}.gb-grid-wrapper>.gb-grid-column-277ca434{width:66.66%}.gb-container-e224c1dd{text-align:center;background-color:#222}.gb-container-33435c22{max-width:1280px;padding:40px 20px;margin-right:auto;margin-left:auto}.gb-container-738a1dec{display:flex;align-items:center;justify-content:center;column-gap:40px;text-align:left;padding:60px 20px;margin-top:60px;margin-bottom:60px;border-top:1px solid var(--base-3);border-bottom:1px solid var(--base-3)}.gb-container-13e76207{display:flex;justify-content:space-between;padding-right:40px;padding-left:40px}.gb-grid-wrapper-c4a35da7{display:flex;flex-wrap:wrap;margin-left:-10px}.gb-grid-wrapper-c4a35da7>.gb-grid-column{box-sizing:border-box;padding-left:10px;padding-bottom:0}.gb-grid-wrapper-f960c789{display:flex;flex-wrap:wrap}.gb-grid-wrapper-f960c789>.gb-grid-column{box-sizing:border-box;padding-bottom:10px}.gb-grid-wrapper-1fb3fb36{display:flex;flex-wrap:wrap;margin-left:-10px}.gb-grid-wrapper-1fb3fb36>.gb-grid-column{box-sizing:border-box;padding-left:10px;padding-bottom:10px}.gb-grid-wrapper-a395fb04{display:flex;flex-wrap:wrap;margin-left:-40px}.gb-grid-wrapper-a395fb04>.gb-grid-column{box-sizing:border-box;padding-left:40px}.gb-grid-wrapper-f11ffbc6{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-f11ffbc6>.gb-grid-column{box-sizing:border-box;padding-left:20px}.gb-grid-wrapper-1ee239c9{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-1ee239c9>.gb-grid-column{box-sizing:border-box;padding-left:20px;padding-bottom:20px}.gb-grid-wrapper-e9563013{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-e9563013>.gb-grid-column{box-sizing:border-box;padding-left:20px;padding-bottom:20px}.gb-grid-wrapper-63d48d78{display:flex;flex-wrap:wrap;margin-left:-10px}.gb-grid-wrapper-63d48d78>.gb-grid-column{box-sizing:border-box;padding-left:10px}.gb-grid-wrapper-f1030637{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-f1030637>.gb-grid-column{box-sizing:border-box;padding-left:20px;padding-bottom:20px}.gb-grid-wrapper-2aec3765{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-2aec3765>.gb-grid-column{box-sizing:border-box;padding-left:20px;padding-bottom:20px}.gb-grid-wrapper-798e2fae{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-798e2fae>.gb-grid-column{box-sizing:border-box;padding-left:20px}.gb-grid-wrapper-2d83fe74{display:flex;flex-wrap:wrap}.gb-grid-wrapper-2d83fe74>.gb-grid-column{box-sizing:border-box;padding-bottom:10px}.gb-grid-wrapper-6976bfa4{display:flex;flex-wrap:wrap;margin-left:-20px}.gb-grid-wrapper-6976bfa4>.gb-grid-column{box-sizing:border-box;padding-left:20px;padding-bottom:10px}h6.gb-headline-1c78bfc1{position:relative;font-size:13px;text-transform:uppercase}h3.gb-headline-ec7c0224{position:relative;margin-bottom:13px}div.gb-headline-93d318ca{display:inline-block;font-size:13px;text-transform:capitalize}div.gb-headline-b711c1fd{display:inline-block;font-size:13px;text-transform:lowercase;padding-left:1em}div.gb-headline-e9cec236{display:inline-block;font-size:13px;text-transform:capitalize}h6.gb-headline-73ac9432{position:relative;font-size:13px;text-transform:uppercase}h3.gb-headline-19674ae8{position:relative;font-size:18px;margin-bottom:13px}h4.gb-headline-3649ab25{flex-basis:100%}h6.gb-headline-17f228ad{font-size:13px;text-transform:uppercase}h3.gb-headline-f683a07e{margin-bottom:13px}p.gb-headline-a229a970{font-size:14px;margin-bottom:13px}h3.gb-headline-b49c8028{font-size:15px;margin-bottom:5px}p.gb-headline-6b3e375e{font-size:14px;margin-bottom:0}h4.gb-headline-24fda559{flex-basis:100%}h6.gb-headline-ce6e96bc{position:relative;font-size:13px;text-transform:uppercase}h3.gb-headline-4408eeed{position:relative;font-size:18px;margin-bottom:13px}h6.gb-headline-7f8fced6{position:relative;font-size:13px;text-transform:uppercase}h3.gb-headline-ede71420{position:relative;font-size:18px;margin-bottom:13px}h4.gb-headline-4942375c{flex-basis:100%}h3.gb-headline-a69df127{font-size:18px;margin-bottom:5px}div.gb-headline-b32d9b4f{display:inline-block;font-size:13px;text-transform:capitalize}div.gb-headline-ee9a486f{display:inline-block;font-size:13px;text-transform:capitalize;padding-left:8px}p.gb-headline-969bd5ab{font-size:15px;margin-bottom:0}p.gb-headline-1ea11eb8{flex:1 1 0px;font-size:13px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;text-align:center;padding-right:30px;padding-left:30px;margin-bottom:0;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;color:var(--base-2)}p.gb-headline-18cafecf{font-size:12px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;text-align:left;margin-right:auto;margin-bottom:0;color:var(--base-2)}a.gb-button-1eafb82f{display:inline-flex;align-items:center;justify-content:center;font-size:14px;text-align:center;color:var(--accent);text-decoration:none}a.gb-button-1eafb82f:active,a.gb-button-1eafb82f:focus,a.gb-button-1eafb82f:hover{color:var(--contrast)}a.gb-button-1eafb82f .gb-icon{line-height:0;padding-left:.5em}a.gb-button-1eafb82f .gb-icon svg{width:1em;height:1em;fill:currentcolor}a.gb-button-6b5e9acd{display:inline-flex;align-items:center;justify-content:center;font-size:14px;text-align:center;color:var(--accent-2);text-decoration:none}a.gb-button-6b5e9acd:active,a.gb-button-6b5e9acd:focus,a.gb-button-6b5e9acd:hover{color:var(--accent-2)}a.gb-button-6b5e9acd .gb-icon{line-height:0;padding-left:.5em}a.gb-button-6b5e9acd .gb-icon svg{width:1em;height:1em;fill:currentcolor}a.gb-button-c19f45bf{display:inline-flex;align-items:center;justify-content:center;font-size:14px;text-align:center;color:var(--accent);text-decoration:none}a.gb-button-c19f45bf:active,a.gb-button-c19f45bf:focus,a.gb-button-c19f45bf:hover{color:var(--contrast)}a.gb-button-c19f45bf .gb-icon{line-height:0;padding-left:.5em}a.gb-button-c19f45bf .gb-icon svg{width:1em;height:1em;fill:currentcolor}.gb-button-e994ac59{display:inline-flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;text-align:center;margin-right:30px;text-decoration:none}a.gb-button-a39792f6{display:inline-flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;text-align:center;margin-right:30px;color:var(--base-2);text-decoration:none}a.gb-button-c1c1221a{display:inline-flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;text-align:center;margin-right:30px;color:var(--base-2);text-decoration:none}a.gb-button-9eed64e8{display:inline-flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;text-align:center;margin-right:30px;color:var(--base-2);text-decoration:none}.gb-block-image-83844dda{margin-bottom:30px}.gb-image-83844dda{border-radius:10px;width:100%;vertical-align:middle}.gb-image-65748d05{border-radius:10px;vertical-align:middle}.gb-image-743f9534{border-radius:10px;object-fit:cover;vertical-align:middle}@media (min-width:1025px){.gb-grid-wrapper>div.gb-grid-column-f18cd594{padding-bottom:0}.gb-grid-wrapper>div.gb-grid-column-85bb5d2e{padding-bottom:0}}@media (max-width:1024px){.gb-container-e1e8bef5{justify-content:flex-start}.gb-container-738a1dec{column-gap:40px}.gb-grid-wrapper-6976bfa4{align-items:center}a.gb-button-a39792f6{margin-right:0}a.gb-button-c1c1221a{margin-right:0}a.gb-button-9eed64e8{margin-right:0}}@media (max-width:767px){.gb-grid-wrapper>.gb-grid-column-f18cd594{width:100%}.gb-grid-wrapper>div.gb-grid-column-f18cd594{padding-bottom:0}.gb-container-3388e468{min-height:200px;justify-content:flex-end}.gb-grid-wrapper>.gb-grid-column-3388e468{width:100%;flex-grow:1}.gb-grid-wrapper>.gb-grid-column-85bb5d2e{width:100%}.gb-container-e1e8bef5{justify-content:flex-end}.gb-grid-wrapper>.gb-grid-column-e1e8bef5{width:100%}.gb-grid-wrapper>.gb-grid-column-3092ebb6{width:100%}.gb-container-c3e8a8f7{width:100%}.gb-grid-wrapper>.gb-grid-column-85af8d8c{width:100%}.gb-grid-wrapper>.gb-grid-column-a3f42311{width:100%}.gb-grid-wrapper>.gb-grid-column-9d6b6a1b{width:100%}.gb-grid-wrapper>.gb-grid-column-8b3b2841{width:50%}.gb-grid-wrapper>.gb-grid-column-8f436855{width:50%}.gb-container-d0426b62{width:100%}.gb-grid-wrapper>.gb-grid-column-d3a5d53a{width:100%}.gb-grid-wrapper>.gb-grid-column-63a7591b{width:100%}.gb-grid-wrapper>.gb-grid-column-3771c47e{width:100%}.gb-container-703221a1{width:100%}.gb-grid-wrapper>.gb-grid-column-077353f5{width:100%}.gb-grid-wrapper>.gb-grid-column-277ca434{width:100%}.gb-container-738a1dec{flex-direction:column;row-gap:40px}.gb-container-13e76207{flex-direction:column;align-items:center;justify-content:center;row-gap:10px}h3.gb-headline-ec7c0224{font-size:18px}h3.gb-headline-f683a07e{font-size:18px}p.gb-headline-1ea11eb8{border-right-width:0;border-right-style:solid;border-left-width:0;border-left-style:solid}p.gb-headline-18cafecf{text-align:center;margin-right:20px;margin-left:20px}.gb-button-e994ac59{margin-right:0}a.gb-button-a39792f6{margin-right:0}a.gb-button-c1c1221a{margin-right:0}a.gb-button-9eed64e8{margin-right:0}.gb-image-743f9534{width:100%}}.auto-width.gb-query-loop-wrapper{flex:1}.site-footer li a{color:#f7f8f9!important}</style><link rel="preload" as="image" href="https://www.thecrier.net/" fetchpriority="high">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="dc.title" content="Dunwoody Crier | Serving the Dunwoody community since 1976">
+<meta name="dc.description" content="| Serving the community since 1976">
+<meta name="dc.relation" content="https://www.thecrier.net">
+<meta name="dc.source" content="https://www.thecrier.net">
+<meta name="dc.language" content="en_US">
+<meta name="description" content="| Serving the community since 1976">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.thecrier.net/">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","name":"Dunwoody Crier | Serving the Dunwoody community since 1976","alternateName":"Dunwoody Crier","description":"| Serving the community since 1976","url":"https:\/\/www.thecrier.net","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.thecrier.net\/?s={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<meta property="og:url" content="https://www.thecrier.net">
+<meta property="og:site_name" content="Dunwoody Crier">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dunwoody Crier | Serving the Dunwoody community since 1976">
+<meta property="og:description" content="| Serving the community since 1976">
+<meta property="fb:pages" content="">
+<meta property="fb:admins" content="">
+<meta property="fb:app_id" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="">
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="Dunwoody Crier | Serving the Dunwoody community since 1976">
+<meta name="twitter:description" content="| Serving the community since 1976">
+
+<link rel="alternate" type="application/rss+xml" title="Dunwoody Crier &raquo; Feed" href="https://www.thecrier.net/feed" />
+<link rel="alternate" type="application/rss+xml" title="Dunwoody Crier &raquo; Comments Feed" href="https://www.thecrier.net/comments/feed" />
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","name":"Dunwoody Crier","url":"https:\/\/www.thecrier.net","alternateName":"Dunwoody Crier","description":"Dunwoody Crier"}</script>
+<!-- thecrier.net is managing ads with Advanced Ads 1.52.3 – https://wpadvancedads.com/ --><!--noptimize--><script id="thecr-ready">
+			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
+		<!--/noptimize-->
+<style id='wpseopress-local-business-style-inline-css'></style>
+<style id='classic-theme-styles-inline-css'></style>
+<style id='global-styles-inline-css'></style>
+
+<style id='generate-style-inline-css'></style>
+
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.thecrier.net/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<link rel="https://api.w.org/" href="https://www.thecrier.net/wp-json/" /><link rel="alternate" type="application/json" href="https://www.thecrier.net/wp-json/wp/v2/pages/154" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.thecrier.net/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.thecrier.net/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.thecrier.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thecrier.net%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.thecrier.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thecrier.net%2F&#038;format=xml" />
+<!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-XY0FLJ6060"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XY0FLJ6060');
+</script>
+<script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448" crossorigin="anonymous"></script><link rel="icon" href="https://www.thecrier.net/wp-content/uploads/2024/04/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.thecrier.net/wp-content/uploads/2024/04/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.thecrier.net/wp-content/uploads/2024/04/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.thecrier.net/wp-content/uploads/2024/04/cropped-favicon-270x270.png" />
+		<style id="wp-custom-css"></style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body class="home page-template-default page page-id-154 wp-custom-logo wp-embed-responsive no-sidebar nav-float-right one-container header-aligned-left dropdown-hover aa-prefix-thecr-" itemtype="https://schema.org/WebPage" itemscope>
+
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site"  itemtype="https://schema.org/WPHeader" itemscope>
+			<div class="inside-header grid-container">
+				<div class="site-logo">
+					<a href="https://www.thecrier.net/" rel="home">
+						<picture class="header-image is-logo-image">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/cropped-cropped-cropped-7925a660-8f72-11e8-aed2-53abba15c037.png.avif"/>
+<img alt="Dunwoody Crier" src="https://www.thecrier.net/wp-content/uploads/2024/04/cropped-cropped-cropped-7925a660-8f72-11e8-aed2-53abba15c037.png" width="300" height="118"/>
+</picture>
+
+					</a>
+				</div>	<nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle">
+		<div class="menu-bar-items">	<span class="menu-bar-item">
+		<a href="#" role="button" aria-label="Open search" data-gpmodal-trigger="gp-search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span></a>
+	</span>
+	</div>		<button data-nav="site-navigation" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>		</button>
+	</nav>
+			<nav class="main-navigation has-menu-bar-items sub-menu-right" id="site-navigation" aria-label="Primary"  itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="mobile-menu">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-msw-primary-menu-creative-agency" class=" menu sf-menu"><li id="menu-item-29017" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29017"><a href="https://www.thecrier.net/category/news">News</a></li>
+<li id="menu-item-29102" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29102"><a href="https://www.thecrier.net/category/sports">Sports</a></li>
+<li id="menu-item-29015" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29015"><a href="https://www.thecrier.net/category/arts_and_entertainment">A&amp;E</a></li>
+<li id="menu-item-29016" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29016"><a href="https://www.thecrier.net/category/business">Business</a></li>
+<li id="menu-item-29019" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29019"><a href="https://www.thecrier.net/category/weather">Weather</a></li>
+<li id="menu-item-43913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43913"><a href="https://www.thecrier.net/about">About Us</a></li>
+</ul></div><div class="menu-bar-items">	<span class="menu-bar-item">
+		<a href="#" role="button" aria-label="Open search" data-gpmodal-trigger="gp-search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span></a>
+	</span>
+	</div>			</div>
+		</nav>
+					</div>
+		</header>
+		
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+			
+<article id="post-154" class="post-154 page type-page status-publish" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+		
+		<div class="entry-content" itemprop="text">
+			<div class="gb-container gb-container-6e85cd0d">
+<div class="gb-grid-wrapper gb-grid-wrapper-c4a35da7">
+<div class="gb-grid-column gb-grid-column-f18cd594"><div class="gb-container gb-container-f18cd594">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-f960c789 auto-width gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-3388e468 gb-query-loop-item post-43815 post type-post status-publish format-standard has-post-thumbnail hentry category-news"><div class="gb-container gb-container-3388e468" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/6mcvaognz1w-768x513.jpg);">
+<h6 class="gb-headline gb-headline-1c78bfc1 gb-headline-text"><span class="post-term-item term-news"><a href="https://www.thecrier.net/category/news">News</a></span></h6>
+
+<h3 class="gb-headline gb-headline-ec7c0224 gb-headline-text"><a href="https://www.thecrier.net/news/how-much-does-it-cost-to-buy-a-bus.html">How much does it cost to buy a bus ?</a></h3>
+
+<div class="gb-container gb-container-b8272b8f">
+<div class="gb-headline gb-headline-93d318ca gb-headline-text"><time class="entry-date published" datetime="2024-05-24T06:46:05-05:00">05/24/2024</time></div>
+
+
+<div class="gb-headline gb-headline-b711c1fd gb-headline-text">BY </div>
+
+
+<div class="gb-headline gb-headline-e9cec236 gb-headline-text">Joe Parker</div>
+</div>
+</div></div>
+</div>
+
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-85bb5d2e"><div class="gb-container gb-container-85bb5d2e">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-1fb3fb36 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-e1e8bef5 gb-query-loop-item post-43804 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-gardening"><div class="gb-container gb-container-e1e8bef5" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/swlxcwedzzs-300x181.jpg);">
+<h6 class="gb-headline gb-headline-73ac9432 gb-headline-text"><span class="post-term-item term-news"><a href="https://www.thecrier.net/category/news">News</a></span></h6>
+
+<h3 class="gb-headline gb-headline-19674ae8 gb-headline-text"><a href="https://www.thecrier.net/news/what-plants-are-sensitive-to-rubbing-alcohol.html">What plants are sensitive to rubbing alcohol ?</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-e1e8bef5 gb-query-loop-item post-43764 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-gardening"><div class="gb-container gb-container-e1e8bef5" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/ron42jeukyc-300x200.jpg);">
+<h6 class="gb-headline gb-headline-73ac9432 gb-headline-text"><span class="post-term-item term-news"><a href="https://www.thecrier.net/category/news">News</a></span></h6>
+
+<h3 class="gb-headline gb-headline-19674ae8 gb-headline-text"><a href="https://www.thecrier.net/news/do-ranunculus-bulbs-multiply.html">Do Ranunculus Bulbs Multiply?</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-e1e8bef5 gb-query-loop-item post-43758 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-home"><div class="gb-container gb-container-e1e8bef5" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/o6eebbvy05w-300x200.jpg);">
+<h6 class="gb-headline gb-headline-73ac9432 gb-headline-text"><span class="post-term-item term-news"><a href="https://www.thecrier.net/category/news">News</a></span></h6>
+
+<h3 class="gb-headline gb-headline-19674ae8 gb-headline-text"><a href="https://www.thecrier.net/news/how-often-to-clean-carpet.html">How often to clean carpet ?</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-e1e8bef5 gb-query-loop-item post-43753 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-gardening"><div class="gb-container gb-container-e1e8bef5" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/dk7msqoz9fi-300x200.jpg);">
+<h6 class="gb-headline gb-headline-73ac9432 gb-headline-text"><span class="post-term-item term-news"><a href="https://www.thecrier.net/category/news">News</a></span></h6>
+
+<h3 class="gb-headline gb-headline-19674ae8 gb-headline-text"><a href="https://www.thecrier.net/news/are-wildflowers-perennials.html">Are wildflowers perennials ?</a></h3>
+</div></div>
+</div>
+
+</div></div>
+</div>
+</div>
+
+<div class="gb-container gb-container-c5a206d6">
+<div class="gb-grid-wrapper gb-grid-wrapper-a395fb04">
+<div class="gb-grid-column gb-grid-column-3092ebb6"><div class="gb-container gb-container-3092ebb6">
+<div class="gb-container gb-container-13482eec">
+
+<h4 class="gb-headline gb-headline-3649ab25 gb-headline-text">Arts &amp; Entertainment</h4>
+
+
+<div class="gb-container gb-container-c3e8a8f7"></div>
+
+
+<a class="gb-button gb-button-1eafb82f" href="#"><span class="gb-button-text">More</span><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span></a>
+
+</div>
+
+<div class="gb-container gb-container-c8964c1b">
+<div class="gb-grid-wrapper gb-grid-wrapper-f11ffbc6">
+<div class="gb-grid-column gb-grid-column-85af8d8c"><div class="gb-container gb-container-85af8d8c">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-1ee239c9 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-a3f42311 gb-query-loop-item post-43703 post type-post status-publish format-standard has-post-thumbnail hentry category-arts_and_entertainment tag-paris tag-taylor-swift"><div class="gb-container gb-container-a3f42311">
+<figure class="gb-block-image gb-block-image-83844dda"><img fetchpriority="high" decoding="async" width="300" height="169" src="https://www.thecrier.net/wp-content/uploads/2024/05/swifties-paris-300x169.webp" class="gb-image-83844dda" alt="swifties paris" srcset="https://www.thecrier.net/wp-content/uploads/2024/05/swifties-paris-300x169.webp 300w, https://www.thecrier.net/wp-content/uploads/2024/05/swifties-paris-1024x576.webp 1024w, https://www.thecrier.net/wp-content/uploads/2024/05/swifties-paris-768x432.webp 768w, https://www.thecrier.net/wp-content/uploads/2024/05/swifties-paris.webp 1200w" sizes="(max-width: 300px) 100vw, 300px" /></figure>
+
+<h6 class="gb-headline gb-headline-17f228ad gb-headline-text"><span class="post-term-item term-arts_and_entertainment"><a href="https://www.thecrier.net/category/arts_and_entertainment">A&amp;E</a></span></h6>
+
+<h3 class="gb-headline gb-headline-f683a07e gb-headline-text"><a href="https://www.thecrier.net/arts_and_entertainment/irresponsible-theyve-lost-their-minds-scandal-at-taylor-swift-concert-in-paris-a-baby-was-on-the-ground-in-the-pit.html">&#8216;Irresponsible&#8230; they&#8217;ve lost their minds&#8217; : scandal at Taylor Swift concert in Paris, a baby was on the ground in the pit</a></h3>
+
+<p class="gb-headline gb-headline-a229a970 gb-headline-text"><time class="entry-date published" datetime="2024-05-15T07:22:00-05:00">05/15/2024</time></p>
+
+<div class="gb-headline gb-headline-12a64ebb gb-headline-text">During the superstar&#8217;s 2nd Paris concert, a baby was spotted sleeping on the concert hall floor on Friday, May 10. &#8230;</div>
+</div></div>
+</div>
+
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-9d6b6a1b"><div class="gb-container gb-container-9d6b6a1b">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-e9563013 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-8cd5e2bd gb-query-loop-item post-42555 post type-post status-publish format-standard has-post-thumbnail hentry category-arts_and_entertainment tag-camila-cabello"><div class="gb-container gb-container-8cd5e2bd">
+<div class="gb-grid-wrapper gb-grid-wrapper-63d48d78">
+<div class="gb-grid-column gb-grid-column-8b3b2841"><div class="gb-container gb-container-8b3b2841"><div class="gb-inside-container">
+<figure class="gb-block-image gb-block-image-65748d05"><picture decoding="async" class="gb-image-65748d05">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-07t141648.523-150x150.jpg.avif"/>
+<img decoding="async" width="150" height="150" src="https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-07t141648.523-150x150.jpg" alt="12343 2024 05 07t141648.523"/>
+</picture>
+</figure>
+</div></div></div>
+
+<div class="gb-grid-column gb-grid-column-8f436855"><div class="gb-container gb-container-8f436855"><div class="gb-inside-container">
+<h3 class="gb-headline gb-headline-b49c8028 gb-headline-text"><a href="https://www.thecrier.net/arts_and_entertainment/camila-cabello-gears-up-for-a-new-musical-chapter-with-c-xoxo.html">Camila Cabello gears up for a new musical chapter with &#8216;C, XOXO&#8217;</a></h3>
+
+<p class="gb-headline gb-headline-6b3e375e gb-headline-text"><time class="entry-date published" datetime="2024-05-08T10:13:00-05:00">05/08/2024</time></p><div class="thecr-display-adsense-2" id="thecr-1831670215"><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script>
+<!-- Thecrier -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7994036760405448"
+     data-ad-slot="1785073897"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div></div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-8cd5e2bd gb-query-loop-item post-41380 post type-post status-publish format-standard has-post-thumbnail hentry category-arts_and_entertainment tag-zendaya"><div class="gb-container gb-container-8cd5e2bd">
+<div class="gb-grid-wrapper gb-grid-wrapper-63d48d78">
+<div class="gb-grid-column gb-grid-column-8b3b2841"><div class="gb-container gb-container-8b3b2841"><div class="gb-inside-container">
+<figure class="gb-block-image gb-block-image-65748d05"><picture decoding="async" class="gb-image-65748d05">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-30t093955.055-150x150.jpg.avif"/>
+<img decoding="async" width="150" height="150" src="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-30t093955.055-150x150.jpg" alt="12343 2024 04 30t093955.055"/>
+</picture>
+</figure>
+</div></div></div>
+
+<div class="gb-grid-column gb-grid-column-8f436855"><div class="gb-container gb-container-8f436855"><div class="gb-inside-container">
+<h3 class="gb-headline gb-headline-b49c8028 gb-headline-text"><a href="https://www.thecrier.net/arts_and_entertainment/zendaya-reflecting-on-the-past-and-eyeing-a-future-comeback.html">Zendaya Reflecting on the Past and Eyeing a Future Comeback</a></h3>
+
+<p class="gb-headline gb-headline-6b3e375e gb-headline-text"><time class="entry-date published" datetime="2024-04-30T16:37:00-05:00">04/30/2024</time></p>
+</div></div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-8cd5e2bd gb-query-loop-item post-40847 post type-post status-publish format-standard has-post-thumbnail hentry category-arts_and_entertainment tag-rihanna"><div class="gb-container gb-container-8cd5e2bd">
+<div class="gb-grid-wrapper gb-grid-wrapper-63d48d78">
+<div class="gb-grid-column gb-grid-column-8b3b2841"><div class="gb-container gb-container-8b3b2841"><div class="gb-inside-container">
+<figure class="gb-block-image gb-block-image-65748d05"><picture decoding="async" class="gb-image-65748d05">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-29t115153.575-150x150.jpg.avif"/>
+<img decoding="async" width="150" height="150" src="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-29t115153.575-150x150.jpg" alt="12343 2024 04 29t115153.575"/>
+</picture>
+</figure>
+</div></div></div>
+
+<div class="gb-grid-column gb-grid-column-8f436855"><div class="gb-container gb-container-8f436855"><div class="gb-inside-container">
+<h3 class="gb-headline gb-headline-b49c8028 gb-headline-text"><a href="https://www.thecrier.net/arts_and_entertainment/rihannas-teases-her-new-album-r9.html">Rihanna&#8217;s Teases Her New Album &#8216;R9&#8217;</a></h3>
+
+<p class="gb-headline gb-headline-6b3e375e gb-headline-text"><time class="entry-date published" datetime="2024-04-29T12:50:00-05:00">04/29/2024</time></p><div class="thecr-in-content" id="thecr-2110749661"><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script>
+<!-- Thecrier -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7994036760405448"
+     data-ad-slot="1785073897"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div class="thecr-ads3" id="thecr-2016498131"><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script>
+<!-- Thecrier -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7994036760405448"
+     data-ad-slot="1785073897"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div></div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-8cd5e2bd gb-query-loop-item post-37690 post type-post status-publish format-standard has-post-thumbnail hentry category-arts_and_entertainment tag-drake"><div class="gb-container gb-container-8cd5e2bd">
+<div class="gb-grid-wrapper gb-grid-wrapper-63d48d78">
+<div class="gb-grid-column gb-grid-column-8b3b2841"><div class="gb-container gb-container-8b3b2841"><div class="gb-inside-container">
+<figure class="gb-block-image gb-block-image-65748d05"><picture decoding="async" class="gb-image-65748d05">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-26t102457.269-150x150.jpg.avif"/>
+<img decoding="async" width="150" height="150" src="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-26t102457.269-150x150.jpg" alt="12343 2024 04 26t102457.269"/>
+</picture>
+</figure>
+</div></div></div>
+
+<div class="gb-grid-column gb-grid-column-8f436855"><div class="gb-container gb-container-8f436855"><div class="gb-inside-container">
+<h3 class="gb-headline gb-headline-b49c8028 gb-headline-text"><a href="https://www.thecrier.net/arts_and_entertainment/why-drake-discontinued-taylor-made-post-tupacs-estates-lawsuit-threat-on-ai-voice-imitation.html">Why Drake Discontinued &#8216;Taylor Made&#8217; Post Tupac’s Estate&#8217;s Lawsuit Threat on AI Voice Imitation</a></h3>
+
+<p class="gb-headline gb-headline-6b3e375e gb-headline-text"><time class="entry-date published" datetime="2024-04-27T19:25:00-05:00">04/27/2024</time></p><div class="thecr-display-adsense" id="thecr-316849632"><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script>
+<!-- Thecrier -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7994036760405448"
+     data-ad-slot="1785073897"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div></div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-8cd5e2bd gb-query-loop-item post-37711 post type-post status-publish format-standard has-post-thumbnail hentry category-arts_and_entertainment"><div class="gb-container gb-container-8cd5e2bd">
+<div class="gb-grid-wrapper gb-grid-wrapper-63d48d78">
+<div class="gb-grid-column gb-grid-column-8b3b2841"><div class="gb-container gb-container-8b3b2841"><div class="gb-inside-container">
+<figure class="gb-block-image gb-block-image-65748d05"><img decoding="async" width="150" height="150" src="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-26t105514.780-150x150.jpg" class="gb-image-65748d05" alt="12343 2024 04 26t105514.780" /></figure>
+</div></div></div>
+
+<div class="gb-grid-column gb-grid-column-8f436855"><div class="gb-container gb-container-8f436855"><div class="gb-inside-container">
+<h3 class="gb-headline gb-headline-b49c8028 gb-headline-text"><a href="https://www.thecrier.net/arts_and_entertainment/simpsons-fans-mourn-the-loss-of-a-beloved-character.html">&#8216;Simpsons&#8217; Fans Mourn the Loss of a Beloved Character</a></h3>
+
+<p class="gb-headline gb-headline-6b3e375e gb-headline-text"><time class="entry-date published" datetime="2024-04-27T10:55:00-05:00">04/27/2024</time></p>
+</div></div></div>
+</div>
+</div></div>
+</div>
+
+</div></div>
+</div>
+</div>
+
+<div class="gb-container gb-container-b7497bd3">
+<div class="gb-container gb-container-81609930">
+
+<h4 class="gb-headline gb-headline-24fda559 gb-headline-text">Business</h4>
+
+
+<div class="gb-container gb-container-d0426b62"></div>
+
+
+<a class="gb-button gb-button-6b5e9acd" href="#"><span class="gb-button-text">More</span><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span></a>
+
+</div>
+
+<div class="gb-container gb-container-d4d57ae5">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-f1030637 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-d3a5d53a gb-query-loop-item post-43810 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-hair"><div class="gb-container gb-container-d3a5d53a" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/fkazqqjtbxm-300x200.jpg);">
+<h6 class="gb-headline gb-headline-ce6e96bc gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-4408eeed gb-headline-text"><a href="https://www.thecrier.net/business/how-much-does-a-brazilian-blowout-cost.html">How Much Does a Brazilian Blowout Cost ?</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-d3a5d53a gb-query-loop-item post-43570 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-cars tag-vehicle"><div class="gb-container gb-container-d3a5d53a" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/t_d-vzju5su-300x200.jpg);">
+<h6 class="gb-headline gb-headline-ce6e96bc gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-4408eeed gb-headline-text"><a href="https://www.thecrier.net/business/hybrid-vehicles-navigating-the-rise-in-consumer-popularity.html">Hybrid Vehicles: Navigating the Rise in Consumer Popularity</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-d3a5d53a gb-query-loop-item post-42349 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-tesla"><div class="gb-container gb-container-d3a5d53a" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-06t094710.669-300x200.jpg);">
+<h6 class="gb-headline gb-headline-ce6e96bc gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-4408eeed gb-headline-text"><a href="https://www.thecrier.net/business/how-to-cancel-tesla-insurance.html">How To Cancel Tesla Insurance ?</a></h3>
+</div></div>
+</div>
+
+</div>
+</div>
+</div></div>
+</div>
+</div>
+
+<div class="gb-container gb-container-9a464e94">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-2aec3765 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-63a7591b gb-query-loop-item post-41861 post type-post status-publish format-standard has-post-thumbnail hentry category-business"><div class="gb-container gb-container-63a7591b" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-02t115858.147-300x200.jpg);">
+<h6 class="gb-headline gb-headline-7f8fced6 gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-ede71420 gb-headline-text"><a href="https://www.thecrier.net/business/heres-the-amount-of-money-americans-think-one-hour-of-their-time-is-worth-according-to-a-study.html">Here&#8217;s The Amount Of Money Americans Think One Hour Of their Time is Worth, According To a Study</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-63a7591b gb-query-loop-item post-33936 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-housing"><div class="gb-container gb-container-63a7591b" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-22t115931.439-300x200.jpg);">
+<h6 class="gb-headline gb-headline-7f8fced6 gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-ede71420 gb-headline-text"><a href="https://www.thecrier.net/business/homebuyers-embrace-rising-mortgage-rates.html">Homebuyers Embrace Rising Mortgage Rates</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-63a7591b gb-query-loop-item post-31760 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-tax"><div class="gb-container gb-container-63a7591b" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-19t094536.521-300x200.jpg);">
+<h6 class="gb-headline gb-headline-7f8fced6 gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-ede71420 gb-headline-text"><a href="https://www.thecrier.net/business/heres-why-your-3000-tax-refund-can-do-more-7-great-uses.html">Here’s Why Your $3,000 Tax Refund Can Do More, 7 Great Uses</a></h3>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-63a7591b gb-query-loop-item post-31701 post type-post status-publish format-standard has-post-thumbnail hentry category-business tag-netflix"><div class="gb-container gb-container-63a7591b" style="--background-image: url(https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-19t090040.391-300x200.jpg);">
+<h6 class="gb-headline gb-headline-7f8fced6 gb-headline-text"><span class="post-term-item term-business"><a href="https://www.thecrier.net/category/business">Business</a></span></h6>
+
+<h3 class="gb-headline gb-headline-ede71420 gb-headline-text"><a href="https://www.thecrier.net/business/netflixs-multifaceted-growth-strategies-boost-membership-numbers.html">Netflix&#8217;s Multifaceted Growth Strategies Boost Membership Numbers</a></h3>
+</div></div>
+</div>
+
+</div>
+
+<div class="gb-container gb-container-c6cf194b">
+<div class="gb-grid-wrapper gb-grid-wrapper-798e2fae">
+<div class="gb-grid-column gb-grid-column-3771c47e"><div class="gb-container gb-container-3771c47e"><div class="gb-inside-container">
+<div class="gb-container gb-container-0bbc93b7">
+
+<h4 class="gb-headline gb-headline-4942375c gb-headline-text">Sports</h4>
+
+
+<div class="gb-container gb-container-703221a1"></div>
+
+
+<a class="gb-button gb-button-c19f45bf" href="#"><span class="gb-button-text">More</span><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></span></a>
+
+</div>
+
+<div class="gb-container gb-container-1e20c17b">
+
+<div class="gb-grid-wrapper gb-grid-wrapper-2d83fe74 gb-query-loop-wrapper">
+<div class="gb-grid-column gb-grid-column-41e9886c gb-query-loop-item post-43729 post type-post status-publish format-standard has-post-thumbnail hentry category-sports tag-home tag-tips"><div class="gb-container gb-container-41e9886c">
+<div class="gb-grid-wrapper gb-grid-wrapper-6976bfa4">
+<div class="gb-grid-column gb-grid-column-077353f5"><div class="gb-container gb-container-077353f5">
+<figure class="gb-block-image gb-block-image-743f9534"><picture decoding="async" class="gb-image-743f9534">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-300x200.jpg.avif 300w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-1024x683.jpg.avif 1024w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-768x512.jpg.avif 768w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-1536x1024.jpg.avif 1536w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq.jpg.avif 1600w" sizes="(max-width: 300px) 100vw, 300px"/>
+<img decoding="async" width="300" height="200" src="https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-300x200.jpg" alt="woman exercising indoors" srcset="https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-300x200.jpg 300w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-1024x683.jpg 1024w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-768x512.jpg 768w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq-1536x1024.jpg 1536w, https://www.thecrier.net/wp-content/uploads/2024/05/lrqptqs7nqq.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px"/>
+</picture>
+</figure>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-277ca434"><div class="gb-container gb-container-277ca434">
+<h3 class="gb-headline gb-headline-a69df127 gb-headline-text"><a href="https://www.thecrier.net/sports/how-to-get-smell-out-of-workout-clothes.html">How to get smell out of workout clothes ?</a></h3>
+
+<div class="gb-headline gb-headline-b32d9b4f gb-headline-text">Joe Parker</div>
+
+<div class="gb-headline gb-headline-ee9a486f gb-headline-text"><time class="entry-date published" datetime="2024-05-15T08:27:00-05:00">05/15/2024</time></div>
+
+<p class="gb-headline gb-headline-969bd5ab gb-headline-text">Getting smelly workout clothes fresh and odor-free again is an ongoing battle for fitness enthusiasts. &#8230;</p><div class="thecr-ads4" id="thecr-741156939"><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script>
+<!-- Thecrier -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7994036760405448"
+     data-ad-slot="1785073897"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-41e9886c gb-query-loop-item post-41992 post type-post status-publish format-standard has-post-thumbnail hentry category-sports tag-nutrition"><div class="gb-container gb-container-41e9886c">
+<div class="gb-grid-wrapper gb-grid-wrapper-6976bfa4">
+<div class="gb-grid-column gb-grid-column-077353f5"><div class="gb-container gb-container-077353f5">
+<figure class="gb-block-image gb-block-image-743f9534"><img decoding="async" width="300" height="200" src="https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-03t110114.426-300x200.jpg" class="gb-image-743f9534" alt="12343 2024 05 03t110114.426" srcset="https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-03t110114.426-300x200.jpg 300w, https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-03t110114.426-1024x683.jpg 1024w, https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-03t110114.426-768x512.jpg 768w, https://www.thecrier.net/wp-content/uploads/2024/05/12343-2024-05-03t110114.426.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px" /></figure>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-277ca434"><div class="gb-container gb-container-277ca434">
+<h3 class="gb-headline gb-headline-a69df127 gb-headline-text"><a href="https://www.thecrier.net/sports/you-must-do-your-sport-on-an-empty-stomach-according-to-these-experts-study-shows-astonishing-results.html">You Must Do your Sport On An Empty Stomach According To These Experts &#8211; Study Shows Astonishing Results</a></h3>
+
+<div class="gb-headline gb-headline-b32d9b4f gb-headline-text">Joe Parker</div>
+
+<div class="gb-headline gb-headline-ee9a486f gb-headline-text"><time class="entry-date published" datetime="2024-05-05T07:58:00-05:00">05/05/2024</time></div>
+
+<p class="gb-headline gb-headline-969bd5ab gb-headline-text">You may get better results if you don&#8217;t eat before your sports session, according to &#8230;</p>
+</div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-41e9886c gb-query-loop-item post-29431 post type-post status-publish format-standard has-post-thumbnail hentry category-sports tag-baseball"><div class="gb-container gb-container-41e9886c">
+<div class="gb-grid-wrapper gb-grid-wrapper-6976bfa4">
+<div class="gb-grid-column gb-grid-column-077353f5"><div class="gb-container gb-container-077353f5">
+<figure class="gb-block-image gb-block-image-743f9534"><picture decoding="async" class="gb-image-743f9534">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-300x200.jpg.avif 300w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-1024x683.jpg.avif 1024w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-768x512.jpg.avif 768w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058.jpg.avif 1200w" sizes="(max-width: 300px) 100vw, 300px"/>
+<img decoding="async" width="300" height="200" src="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-300x200.jpg" alt="12343 2024 04 17t165314.058" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-300x200.jpg 300w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-1024x683.jpg 1024w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058-768x512.jpg 768w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165314.058.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px"/>
+</picture>
+</figure>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-277ca434"><div class="gb-container gb-container-277ca434">
+<h3 class="gb-headline gb-headline-a69df127 gb-headline-text"><a href="https://www.thecrier.net/sports/braves-ozzie-albies-sidelined-by-fractured-toe-yuli-gurriel-steps-in-as-replacement.html">Braves&#8217; Ozzie Albies Sidelined by Fractured Toe, Yuli Gurriel Steps in as Replacement</a></h3>
+
+<div class="gb-headline gb-headline-b32d9b4f gb-headline-text">Joe Parker</div>
+
+<div class="gb-headline gb-headline-ee9a486f gb-headline-text"><time class="entry-date published" datetime="2024-04-17T09:53:39-05:00">04/17/2024</time></div>
+
+<p class="gb-headline gb-headline-969bd5ab gb-headline-text">The Atlanta Braves have placed second baseman Ozzie Albies on the 10-day injured list due &#8230;</p>
+</div></div>
+</div>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-41e9886c gb-query-loop-item post-29424 post type-post status-publish format-standard has-post-thumbnail hentry category-sports"><div class="gb-container gb-container-41e9886c">
+<div class="gb-grid-wrapper gb-grid-wrapper-6976bfa4">
+<div class="gb-grid-column gb-grid-column-077353f5"><div class="gb-container gb-container-077353f5">
+<figure class="gb-block-image gb-block-image-743f9534"><picture decoding="async" class="gb-image-743f9534">
+<source type="image/avif" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-300x200.jpg.avif 300w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-1024x683.jpg.avif 1024w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-768x512.jpg.avif 768w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1.jpg.avif 1200w" sizes="(max-width: 300px) 100vw, 300px"/>
+<img decoding="async" width="300" height="200" src="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-300x200.jpg" alt="12343 2024 04 17t165109.645" srcset="https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-300x200.jpg 300w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-1024x683.jpg 1024w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1-768x512.jpg 768w, https://www.thecrier.net/wp-content/uploads/2024/04/12343-2024-04-17t165109.645-1.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px"/>
+</picture>
+</figure>
+</div></div>
+
+<div class="gb-grid-column gb-grid-column-277ca434"><div class="gb-container gb-container-277ca434">
+<h3 class="gb-headline gb-headline-a69df127 gb-headline-text"><a href="https://www.thecrier.net/sports/travis-kelce-takes-the-game-show-world-by-storm-with-are-you-smarter-than-a-celebrity.html">Travis Kelce Takes the Game Show World by Storm with &#8220;Are You Smarter than a Celebrity?&#8221;</a></h3>
+
+<div class="gb-headline gb-headline-b32d9b4f gb-headline-text">Joe Parker</div>
+
+<div class="gb-headline gb-headline-ee9a486f gb-headline-text"><time class="entry-date published" datetime="2024-04-17T09:51:34-05:00">04/17/2024</time></div>
+
+<p class="gb-headline gb-headline-969bd5ab gb-headline-text">From Gridiron to Game Shows: Kelce&#8217;s New Gig Eight-time Pro Bowler and sports podcast co-host &#8230;</p>
+</div></div>
+</div>
+</div></div>
+</div>
+
+</div>
+</div></div></div>
+</div>
+</div><div class="thecr-aftercontent" id="thecr-432295034"><script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7994036760405448"
+     crossorigin="anonymous"></script>
+<!-- Thecrier -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7994036760405448"
+     data-ad-slot="1785073897"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>		</div>
+
+			</div>
+</article>
+		</main>
+	</div>
+
+	
+	</div>
+</div>
+
+
+<div class="site-footer">
+	<div class="gb-container gb-container-e224c1dd">
+<div class="gb-container gb-container-33435c22">
+<div class="gb-container gb-container-738a1dec">
+
+<ul>
+<li><a href="https://www.thecrier.net/category/news" data-type="link" data-id="https://www.thecrier.net/category/news">News</a></li>
+
+
+
+<li><a href="https://www.thecrier.net/category/sports" data-type="link" data-id="https://www.thecrier.net/category/sports">Sports</a></li>
+
+
+
+<li><a href="https://www.thecrier.net/category/our_columnists" data-type="link" data-id="https://www.thecrier.net/category/our_columnists">Our Columnists</a></li>
+
+
+
+<li><a href="https://www.thecrier.net/category/business" data-type="link" data-id="https://www.thecrier.net/category/business">Business</a></li>
+
+
+
+<li><a href="https://www.thecrier.net/category/arts_and_entertainment" data-type="link" data-id="https://www.thecrier.net/category/arts_and_entertainment">A&amp;E</a></li>
+
+
+
+<li><a href="https://www.thecrier.net/category/talk_back_to_the_crier" data-type="link" data-id="https://www.thecrier.net/category/talk_back_to_the_crier">Talk Back to the Crier</a></li>
+
+
+
+<li><a href="https://www.thecrier.net/category/weather" data-type="link" data-id="https://www.thecrier.net/category/weather">Weather</a></li>
+</ul>
+
+
+
+<p class="gb-headline gb-headline-1ea11eb8 gb-headline-text">For any contact inquiries : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e88b87869c898b9ca89c808d8b9a818d9ac6868d9c">[email&#160;protected]</a></p>
+
+
+
+<ul class="wp-block-social-links aligncenter is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex"><li class="wp-social-link wp-social-link-twitter  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://twitter.com/dunwoodycrier" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a></li>
+
+<li class="wp-social-link wp-social-link-facebook  wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/DunwoodyCrier/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li></ul>
+
+</div>
+
+<div class="gb-container gb-container-13e76207">
+
+<p class="gb-headline gb-headline-18cafecf gb-headline-text">© Copyright 2024 thecrier.net, 319 north main street alpharetta, GA</p>
+
+
+
+<span class="gb-button gb-button-e994ac59 gb-button-text"><strong>PRIVACY POLICY</strong></span>
+
+
+
+<a class="gb-button gb-button-a39792f6 gb-button-text" href="https://www.thecrier.net/privacy-policy" target="_blank" rel="noopener noreferrer"><strong>Privacy Policy</strong></a>
+
+
+
+<a class="gb-button gb-button-c1c1221a gb-button-text" href="https://www.thecrier.net/contact-2" target="_blank" rel="noopener noreferrer"><strong>Contact</strong>  </a>
+
+
+
+<a class="gb-button gb-button-9eed64e8 gb-button-text" href="https://www.thecrier.net/about" target="_blank" rel="noopener noreferrer">ABOUT US</a>
+
+
+
+<a class="gb-button gb-button-f218b8b4 gb-button-text" href="https://lemiroirdunord.fr/" target="_blank" rel="noopener noreferrer">Our Websites</a>
+
+
+<div class="gb-container gb-container-e56f8f19"></div>
+</div>
+</div>
+</div></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="rocketlazyloadscript" id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script>	<div class="gp-modal gp-search-modal" id="gp-search">
+		<div class="gp-modal__overlay" tabindex="-1" data-gpmodal-close>
+			<div class="gp-modal__container">
+					<form role="search" method="get" class="search-modal-form" action="https://www.thecrier.net/">
+		<label for="search-modal-input" class="screen-reader-text">Search for:</label>
+		<div class="search-modal-fields">
+			<input id="search-modal-input" type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+			<button aria-label="Search"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill-rule="evenodd" clip-rule="evenodd" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" /></svg></span></button>
+		</div>
+			</form>
+				</div>
+		</div>
+	</div>
+	<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.thecrier.net","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<!--[if lte IE 11]>
+<script src="https://www.thecrier.net/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.4.0" id="generate-classlist-js"></script>
+<![endif]-->
+<script id="generate-menu-js-extra">
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://www.thecrier.net/wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.4.0" id="generate-menu-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.thecrier.net/wp-content/cache/min/1/wp-content/themes/generatepress/assets/dist/modal.js?ver=1715765965" id="generate-modal-js" defer></script>
+<!--noptimize--><script type="rocketlazyloadscript">!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script><!--/noptimize--><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.thecrier.net/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1717123734 -->

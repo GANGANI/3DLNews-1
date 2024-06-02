@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Alva Review-Courier" />
+  <META NAME="description" CONTENT="May 31, 2024 edition of Alva Review-Courier, a semi-weekly newspaper." />
+  <META NAME="keywords" CONTENT="" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="1 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Alva Review-Courier Homepage">
+<META PROPERTY="og:description" CONTENT="Alva Review-Courier">
+<META PROPERTY="og:url" CONTENT="https://www.alvareviewcourier.com">
+<META PROPERTY="og:site_name" CONTENT="Alva Review-Courier">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.alvareviewcourier.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Alva Review-Courier Homepage</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28271/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1789x43887/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" href="https://www.alvareviewcourier.com/">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.alvareviewcourier.com/?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>    <link rel="stylesheet" type="text/css" href="/app/js/homepage_overlay_ad/facebox.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20360/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21166/XPATH/app/website_specifics/nonresponsive.js"></script>
+    <script src="HTTPS://www.alvareviewcourier.com/apps/clear/clear.js"></script>
+
+    <script>
+
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+
+     debug=false;
+
+
+     function expiredAJAX() {
+      // noop
+     }
+    </script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85670049-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+<!-- Version 5.020 of ROAR -->
+
+<div class="top_full_banner_ad" aria-hidden="true"><div class="top_full_banner_advert_text"><!--ad_init_ctr:1JDHP9XFHYA7KLNOGZDdTgMbJXZSSRTFfcYvibiab--><a href="http://www.starrlumber.net/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'28%7Chttp%3A%2F%2Fwww%2Estarrlumber%2Enet%2F');"><img src="/IMG/1JxQANNGxNJKEbDr9uJPJ6LBFseVS/XPATH/home/cms_data/dfault/web_ads/horiz/1563-starrlumber10202023.jpgXEXT1842x38126.jpeg" width="726" height="90" alt=""></a></div></div>
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.alvareviewcourier.com/directory" >Directory</a><a  href="HTTPS://www.alvareviewcourier.com/about" >About</a><a  href="HTTPS://www.alvareviewcourier.com/contact" >Contact</a><a  href="HTTPS://www.alvareviewcourier.com/advertise" >Advertise</a><a  href="https://alvareviewcouriernewsgram.zenfolio.com"  target="_blank">More Photos</a><a  href="https://www.alvareviewcourier.com/home/cms_data/dfault/photos/stories/id/3/5/88235/3259078.pdf"  target="_blank">Newsgram</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="https://www.facebook.com/alva.newsgram/?fref=ts"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='21' alt='FaceBook'></a><a  href="https://www.twitter.com/AlvaReviewCouri"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/twitter_white.png'  height='19' alt='Twitter'></a><a  href="HTTPS://www.alvareviewcourier.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.alvareviewcourier.com/trial" >Free Trial</a><a  href="HTTPS://www.alvareviewcourier.com/subscribe" >Subscribe</a><a  href="HTTPS://www.alvareviewcourier.com/login?r=%2F" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Alva Review-Courier - </h1>
+    <a href="HTTPS://www.alvareviewcourier.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:JdXbjRrZbsUPefhiatXxn0gvdrt2mpnZzIsr2v2uv--><a href="http://edigersdiamonds.com/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'82%7Chttp%3A%2F%2Fedigersdiamonds%2Ecom%2F');"><img src="/IMG/8QBWV-aRGSLSP6I5IzgnScMxZKFQc/XPATH/home/cms_data/dfault/web_ads/horiz_small/2189-edigersbuttons.jpgXEXT1208x39747is.jpeg" width="260" height="90" alt=""></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_2">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class=" active" href="HTTPS://www.alvareviewcourier.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/local">Local</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/local">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/local/arts%5F%26%5Fentertainment">Arts & Entertainment</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/local/lifestyles">Lifestyles</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/local/news">News</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/local/opinion">Opinion</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/regional">Regional</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/business%5F%26%5Feconomy">Business & Economy</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/crime">Crime</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/education">Education</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/health">Health</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/human%5Finterest">Human Interest</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/nature">Nature</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/regional/politics">Politics</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/sports">Sports</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items">Interesting Items</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items/business%5F%26%5Feconomy">Business & Economy</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items/national%5Fsecurity">National Security</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items/politics">Politics</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items/science%5F%26%5Ftechnology">Science & Technology</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items/trending">Trending</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/interesting_items/wacky">Wacky</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/community">Community</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/announcements">Announcements</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements/anniversaries">Anniversaries</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements/birthdays">Birthdays</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements/divorces">Divorces</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements/engagements">Engagements</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements/marriages">Marriages</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/announcements/obituaries">Obituaries</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/legal">Legal</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/legal">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/legal/city%5Fof%5Falva%5Ffines">City of Alva Fines</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/legal/legal%5Fnotices">Legal Notices</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/legal/news">News</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/info">Info</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/alva%5Fchurches">Alva Churches</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/city%5Fof%5Falva%5Fcontacts">City of Alva Contacts</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/county%5Fofficers">County Officers</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/emergency">Emergency</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/legal">Legal</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/lottery">Lottery</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/school%5Fwebsites">School Websites</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.alvareviewcourier.com/section/info/travel">Travel</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.alvareviewcourier.com/section/videos">Videos</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" action="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <div>
+          <div class="slideshow hidehead">
+  <script>
+   "undefined"==typeof addLoadEvent&&(addLoadEvent=function(o){var n=window.onload;"function"!=typeof window.onload?window.onload=o:window.onload=function(){n&&n(),o()}});
+   
+   home_top = {};
+   home_top.divs_to_fade = new Array('box_home_top_1', 'box_home_top_2');
+   home_top.iAd = 0;
+   home_top.iOl = 0;
+   
+   home_top.swapFade = function(i) {
+    home_top.iOl;
+    home_top.iOl = home_top.iAd;
+    home_top.iAd = home_top.iAd + i;
+    if (home_top.iAd == home_top.divs_to_fade.length){home_top.iAd = 0;}
+    if (home_top.iAd < 0){home_top.iAd = home_top.divs_to_fade.length-1;}
+    document.getElementById(home_top.divs_to_fade[home_top.iOl]).className='aslide fadeOutLeft home_top animated zbottom';
+    document.getElementById('dot_home_top_'+home_top.iOl).src=document.getElementById('dot_home_top_'+home_top.iOl).src.replace('doton','dotoff');
+    document.getElementById('dot_home_top_'+home_top.iAd).src=document.getElementById('dot_home_top_'+home_top.iAd).src.replace('dotoff','doton');
+    setTimeout(function(){
+     document.getElementById(home_top.divs_to_fade[home_top.iAd]).className='aslide fadeInLeft home_top animated ztop';
+    },200);
+   }
+   home_top.prev = function(){
+    
+    home_top.swapFade(-1);
+    
+   }
+   home_top.next = function(){
+    
+    home_top.swapFade(1);
+    
+   }
+   home_top.goto = function(x){
+    
+    var c='dot_home_top_'+home_top.iAd;
+    var n='dot_home_top_'+x;
+    document.getElementById(c).src=document.getElementById(c).src.replace('doton','dotoff');
+    document.getElementById(home_top.divs_to_fade[home_top.iAd]).className='aslide fadeOutLeft home_top animated zbottom';
+    document.getElementById(n).src=document.getElementById(n).src.replace('dotoff','doton');
+    document.getElementById(home_top.divs_to_fade[x]).className='aslide fadeInLeft home_top animated ztop';
+    home_top.iAd=x;
+    
+   }
+  </script>
+ 
+           <div class="slideshow_slides" id="slides_home_top">
+            <a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/first-load-of-wheat-dumps-at-wheeler-bros/88283.html" aria-label="Top slideshow story: First load of wheat dumps at Wheeler Bros." id="box_home_top_2" class="aslide home_top slide_hidden zbottom" style="background-image: url('/IMG/d3f3u770f7zw3pxZrE3S4N4bzWMD_/XPATH/home/cms_data/dfault/photos/stories/id/8/3/88283/s_topXEXT1605x35280is.jpg'); background-size: contain"><span>First load of wheat dumps at Wheeler Bros.</span></a>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/giving-the-ultimate-sacrifice/88285.html" aria-label="Top slideshow story: Giving the ultimate sacrifice" id="box_home_top_1" class="aslide home_top fadeInLeft animated zbottom" style="background-image: url('/IMG/Vvs5HzTp09ldrzwprx6Z7B7ZF_Pvy/XPATH/home/cms_data/dfault/photos/stories/id/8/5/88285/s_topXEXT1605x35247is.jpg'); background-size: contain"><span>Giving the ultimate sacrifice</span></a>
+
+           </div>
+           <div class="slideshow_dots" id="dots_home_top">
+            <div>
+             <a href="javascript:home_top.goto(0);" onmouseover="home_top.goto(0);"><img src="/cms/slideshow/images/doton.png" width="16" height="16" id="dot_home_top_0" alt=""></a><a href="javascript:home_top.goto(1);" onmouseover="home_top.goto(1);"><img src="/cms/slideshow/images/dotoff.png" width="16" height="16" id="dot_home_top_1" alt=""></a>
+            </div>
+           </div>
+
+           <div class="slideshow_prev" id="prev_home_top">
+            <div>
+             <a href="javascript:home_top.prev();" aria-label="Previous Item"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            </div>
+           </div>
+           <div class="slideshow_next" id="next_home_top">
+            <div>
+             <a href="javascript:home_top.next();" aria-label="Next Item"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+           </div>
+
+
+
+          </div>
+</div>
+  <div class='sections_display'>
+  <div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.alvareviewcourier.com/section/local">Local</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/fun-family-activities-scheduled-for-nescatunga-arts-festival-at-alva-recreation-complex/88289.html"><h3>Fun family activities scheduled for Nescatunga Arts Festival at Alva Recreation Complex</h3></a><div class='blurb_byline'></div><p>Several fun and free activities are scheduled to entertain and delight those attending the 53rd Nescatunga Arts Festival besides the traditional fine arts and crafter booths set up for the event. The two-day event will take place at the Alva...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/miss-northwestern-megan-spray-to-compete-at-miss-oklahoma-june-4-8-in-tulsa/88288.html" aria-label="Story Thumbnail: Miss Northwestern Megan Spray to compete at Miss Oklahoma June 4-8 in Tulsa"><img src="/IMG/MgOlbM1gWMXIgGc6dmuyaxnWm/XPATH/home/cms_data/dfault/photos/stories/id/8/8/88288/s_topXEXT1605x35361is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/miss-northwestern-megan-spray-to-compete-at-miss-oklahoma-june-4-8-in-tulsa/88288.html"><h3>Miss Northwestern Megan Spray to compete at Miss Oklahoma June 4-8 in Tulsa</h3></a><div class='blurb_byline'></div><p>Miss Northwestern Oklahoma State University 2024 Megan Spray, a junior majoring in mass communication from Sharon, Oklahoma, will represent the university and northwest Oklahoma in the 2024 Miss...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/training-pays-off-when-multiple-injured-arrive-at-er/88287.html"><h3>Training pays off when multiple injured arrive at ER</h3></a><div class='blurb_byline'>By Marione Martin</div><p>“We got put to the test Saturday night after the Capron storm,” Share Medical Center CEO Kandice Allen said Tuesday. She was speaking to the Alva Hospital Authority trustees during their regular meeting. On April 11, Share Medical Center...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/dusty-roads-to-digital-highways-federal-programs-roll-out-13-billion-for-broadband-infrastructure/88286.html"><h3>Dusty roads to digital highways: Federal programs roll out $1.3 billion for broadband infrastructure</h3></a><div class='blurb_byline'></div><p>In 2020, people were confined to their homes, expected to keep the world turning despite a global pandemic. As Zoom calls became the new normal, lack of connectivity posed a large issue for Americans living in rural communities without high-speed...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/giving-the-ultimate-sacrifice/88285.html" aria-label="Story Thumbnail: Giving the ultimate sacrifice"><img src="/IMG/CWTgua6QbMMISaXQfUu0iowQp/XPATH/home/cms_data/dfault/photos/stories/id/8/5/88285/s_topXEXT1605x35247is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/giving-the-ultimate-sacrifice/88285.html"><h3>Giving the ultimate sacrifice</h3></a><div class='blurb_byline'>By Marione Martin</div><p>Following a stormy weekend, Memorial Day 2024 dawned with perfect weather. A sizeable crowd gathered under the trees May 27 for the annual observance at the Alva Municipal Cemetery. Scout Troop 392...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/two-alva-schools-and-one-in-cherokee-receive-technology-grants/88284.html"><h3>Two Alva schools and one in Cherokee receive technology grants</h3></a><div class='blurb_byline'></div><p>Established to provide the latest technologies and teacher training to Oklahoma schools, OETT, administered by Communities Foundation of Oklahoma, is awarding each of the 21 schools with $40,000 to purchase new technology equipment. Additionally,...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/first-load-of-wheat-dumps-at-wheeler-bros/88283.html" aria-label="Story Thumbnail: First load of wheat dumps at Wheeler Bros."><img src="/IMG/KeGeViibGKabeQYAfnrtf0tSX/XPATH/home/cms_data/dfault/photos/stories/id/8/3/88283/s_topXEXT1605x35280is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/first-load-of-wheat-dumps-at-wheeler-bros/88283.html"><h3>First load of wheat dumps at Wheeler Bros.</h3></a><div class='blurb_byline'></div><p></p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/northwestern-recognizes-honor-roll-students-for-spring-2024/88281.html"><h3>Northwestern recognizes honor roll students for spring 2024</h3></a><div class='blurb_byline'></div><p>Spring semester honor rolls at Northwestern Oklahoma State University have been announced by the office of the Vice President for Academic Affairs. Those on the President’s Honor Roll earned all As, or a 4.0 grade point average (GPA), in a...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/pinball/88280.html" aria-label="Story Thumbnail: Pinball"><img src="/IMG/FZPXod7YcOdOOGTMnqhej6xWo/XPATH/home/cms_data/dfault/photos/author_photos/arden_chaffeeXEXT1809x37442is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/pinball/88280.html"><h3>Pinball</h3></a><div class='blurb_byline'>By Arden Chaffee</div><p>“Ever since I was a young boy, I played the silver ball.” –The Who, 1969. Pinball’s popularity began in the 1930s. “Baffle Ball” featured a maze of pins, spawning the name. Pinball’s...</p>
+</div>
+<div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/lone-wolf-larry-lived-a-lie/88279.html" aria-label="Story Thumbnail: Lone wolf Larry lived a lie"><img src="/IMG/PjGTVU3WcMIbgZPLZqbvSmzjr/XPATH/home/cms_data/dfault/photos/author_photos/andy_and_renie_bowmanXEXT1240x40305is.jpg" width="110" height="110" alt=""></a></div>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/lone-wolf-larry-lived-a-lie/88279.html"><h3>Lone wolf Larry lived a lie</h3></a><div class='blurb_byline'>By Andy and Renie Bowman</div><p>A heavy angry fist slammed down on the desk. To say the least, anyone near that room would have definitely understood that things were not going well with the owner of that fist. Wouldn’t have to...</p>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/life-lessons-from-a-wayward-cow-part-2/88278.html"><h3>Life lessons from a wayward cow, part 2</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/who-do-you-call-a-patriot/88277.html"><h3>Who do you call a patriot?</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/tall-orders-part-5/88276.html"><h3>Tall orders, part 5</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/get-out-and-enjoy-the-arts-festival-this-weekend/88275.html"><h3>Get out and enjoy the arts festival this weekend</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/menus-for-week-of-june-37/88274.html"><h3>Menus for week of June 3–7</h3></a>
+</div>
+<div class='more_stories'><div class='more_stories_toggle'>+ More Stories </div>
+<div class='more_stories_list'><ul>
+<li><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/create-in-me-a-pure-heart/88270.html">Create in me a pure heart</a></li>
+<li><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/you-are-more-than/88269.html">You are more than</a></li>
+<li><a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/religious-services-and-events/88268.html">Religious services and events</a></li>
+</ul></div></div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.alvareviewcourier.com/section/regional">Regional</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/page/kansas-school-district-to-make-changes-after-lgbtq-dispute/73058.html"><h3>Kansas school district to make changes after LGBTQ dispute</h3></a><div class='blurb_byline'></div><p>AMERICUS, Kan. (AP) — A Kansas school district plans to offer anti-discrimination training to staff and teachers in response to complaints about how an eighth-grade student was treated after she said she was a lesbian. North Lyon County officials...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/regional/legislature-could-nix-mandate-that-struggling-oklahoma-readers-repeat-3rd-grade/88282.html"><h3>Legislature could nix mandate that struggling Oklahoma readers repeat 3rd grade</h3></a><div class='blurb_byline'>By Nuria Martinez-Keel, Oklahoma Voice</div><p>OKLAHOMA CITY — Oklahoma third graders would no longer be required to repeat a grade if they struggle with reading, but students would have to take at least three literacy screenings a year from kindergarten through third grade under a series of...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.alvareviewcourier.com/section/interesting_items">Interesting Items</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/interesting-items/biden-is-said-to-be-finalizing-plans-for-migrant-limits-as-part-of-a-us-mexico-border-clampdown/88292.html"><h3>Biden is said to be finalizing plans for migrant limits as part of a US-Mexico border clampdown</h3></a><div class='blurb_byline'></div><p>WASHINGTON (AP) — The White House is finalizing plans for a U.S.-Mexico border clampdown that would shut off asylum requests and automatically deny entrance to migrants once the number of people encountered by American border officials exceeded a...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/interesting-items/boeing-tells-federal-regulators-how-it-plans-to-fix-aircraft-safety-and-quality-problems/88291.html"><h3>Boeing tells federal regulators how it plans to fix aircraft safety and quality problems</h3></a><div class='blurb_byline'></div><p>Boeing officials explained their plan to improve manufacturing quality and safety during a three-hour meeting Thursday with federal officials, who will continue restrictions they placed on the company after one of its jetliners suffered a blowout...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/interesting-items/heres-what-you-should-know-about-donald-trumps-conviction-in-his-hush-money-trial/88290.html"><h3>Here's what you should know about Donald Trump's conviction in his hush money trial</h3></a><div class='blurb_byline'>By MICHAEL R. SISAK and JILL COLVIN</div><p>NEW YORK (AP) — Donald Trump's conviction on 34 felony counts marks the end of the former president's historic hush money trial but the fight over the case is far from over. Now comes the sentencing and the prospect of a prison sentence. A...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.alvareviewcourier.com/section/legal">Legal</a></h2></div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="https://www.alvareviewcourier.com/home/customer_files/images/n_alvacouncil_cityofalvafines.pdf" target="_blank" ONMOUSEDOWN="return offsiteLink(this,'25008');"><h3>City of Alva Fines</h3></a><div class='blurb_byline'></div><p>&nbsp;<a href="https://www.alvareviewcourier.com/home/customer_files/images/n_alvacouncil_cityofalvafines.pdf" aria-label='External website' target="_blank" ONMOUSEDOWN="return offsiteLink(this,'25008');"><img class='link-icon' src='/cms/images/external_link_icon_12x12.gif' alt=''>&nbsp;Website</a></p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href='http://www.oklahomanotices.com/'  target="_blank" ONMOUSEDOWN="return offsiteLink(this,'158');"><h3>Legal Notices</h3></a><div class='blurb_byline'></div><p>&nbsp;<a href='http://www.oklahomanotices.com/' aria-label='External website'  target="_blank" ONMOUSEDOWN="return offsiteLink(this,'158');"><img class='link-icon' src='/cms/images/external_link_icon_12x12.gif' alt=''>&nbsp;Website</a></p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/legal/woods-county-communication-logs/88273.html"><h3>Woods County Communication logs</h3></a><div class='blurb_byline'></div><p>Thursday, May 23, 2024 During this day were seven traffic stops, two controlled burns and five reports of cattle out. 12:30 a.m. – Report of a DUI. 12:54 a.m. – Report of a noise complaint. 3:34 a.m. – Medic needed on NE 2nd Street for a...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/legal/woods-county-court-filings/88272.html"><h3>Woods County court filings</h3></a><div class='blurb_byline'></div><p>According to the affidavits and petitions on file, the following individuals have been charged. An individual is innocent of any charges listed below until proven guilty in a court of law. All information is a matter of public record and may be...</p>
+</div>
+<div class='hmfunction_blurb_nopic'>
+
+<a href="HTTPS://www.alvareviewcourier.com/story/2024/05/31/legal/woods-county-real-estate-transactions/88271.html"><h3>Woods County real estate transactions</h3></a><div class='blurb_byline'></div><p>Real Estate Transfers Book 1362, block 652: Jacklyn Gayle Condreay conveys unto David Lee Burkart and Debra Kay Burkart. Section 5, Township 23N, Range 13W, SE4. Warranty deed. Book 1362, page 698: Dewayne Rose and Kathey Rose convey unto Mary...</p>
+</div>
+</div>
+<div class='hmfunction_sectioncontainer'>
+<div class='hmfunction_sectionlabel'><h2><a href="HTTPS://www.alvareviewcourier.com/section/info">Info</a></h2></div>
+<div class='hmfunction_headlineonly'>
+<a href="https://www.alvareviewcourier.com/home/customer_files/misc/53f62d7407d4d.image.jpg" ONMOUSEDOWN="return offsiteLink(this,'149');"><h3>Alva Churches</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/page/school-information/150.html"><h3>School Information</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/page/legal/143.html"><h3>Legal</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/page/emergency/145.html"><h3>Emergency</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href='http://ltap.okstate.edu/woods.htm'  target="_blank" ONMOUSEDOWN="return offsiteLink(this,'147');"><h3>County Officers</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href='http://alvaok.org/govt.htm'  target="_blank" ONMOUSEDOWN="return offsiteLink(this,'152');"><h3>City of Alva Contact Information</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/page/travel/141.html"><h3>Travel</h3></a>
+</div>
+<div class='hmfunction_headlineonly'>
+<a href="HTTPS://www.alvareviewcourier.com/page/lottery/144.html"><h3>Lottery</h3></a>
+</div>
+</div></div> 
+  <div class='sections_display'>
+  </div><div style="clear: both;"></div><!-- Homepage, code 90 -->
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div class='customer_area'><script type="text/javascript">document.write(unescape("%3Cscript src='http" +  (document.location.protocol == 'https:' ? 's' : '') + '://www.coffeecup.com/api/sdrive/stream/stream.js?id=159436%26uri=' + encodeURIComponent(location.href) + "' type='text/javascript'%3E%3C/script%3E"));</script></div><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/fun-family-activities-scheduled-for-nescatunga-arts-festival-at-alva-recreation-complex/88289.html' aria-label='Story Thumbnail: Fun family activities...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/fun-family-activities-scheduled-for-nescatunga-arts-festival-at-alva-recreation-complex/88289.html' aria-label='Story Thumbnail: Fun family activities...'>Fun family activities...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/get-out-and-enjoy-the-arts-festival-this-weekend/88275.html' aria-label='Story Thumbnail: Get out and enjoy the...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/get-out-and-enjoy-the-arts-festival-this-weekend/88275.html' aria-label='Story Thumbnail: Get out and enjoy the...'>Get out and enjoy the...<span class='mp_author'>Jim Scribner</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/training-pays-off-when-multiple-injured-arrive-at-er/88287.html' aria-label='Story Thumbnail: Training pays off when...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/training-pays-off-when-multiple-injured-arrive-at-er/88287.html' aria-label='Story Thumbnail: Training pays off when...'>Training pays off when...<span class='mp_author'>Marione Martin</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/legal/woods-county-court-filings/88272.html' aria-label='Story Thumbnail: Woods County court fil...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/legal/woods-county-court-filings/88272.html' aria-label='Story Thumbnail: Woods County court fil...'>Woods County court fil...<span class='mp_author'></span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/lone-wolf-larry-lived-a-lie/88279.html' aria-label='Story Thumbnail: Lone wolf Larry lived...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.alvareviewcourier.com/story/2024/05/31/local/lone-wolf-larry-lived-a-lie/88279.html' aria-label='Story Thumbnail: Lone wolf Larry lived...'>Lone wolf Larry lived...<span class='mp_author'>Andy and Renie Bowman</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div style="width: 300px; margin: 0 auto 0"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=55215" width="300" height="64" frameborder="0" scrolling="no"></iframe><a style="text-indent: -9999em;position: relative;height: 64px;width: 20px;z-index: 1;display: block;float: right;margin: -64px 0 0 0" href="https://www.willyweather.com/ok/woods-county/alva.html">Alva Weather</a></div><div class="side_separator"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:KeYckSsactVQfgijbuYyo1hwesuHnuoa0B6kn--><span class="ad_local_square"><a href="http://visionsource-alvavisionclinic.com/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'6%7Chttp%3A%2F%2Fvisionsource%2Dalvavisionclinic%2Ecom%2F');"><img src="/IMG/xkYrqnvkPZLThZmDT-r7bKWdZud1Au2nt/XPATH/home/cms_data/dfault/web_ads/square/5818-alvavision_2023.jpgXEXT1794x37246.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class='sidebar_split_ad'><div class='split_left'><a href='HTTPS://www.alvareviewcourier.com/subscribe' aria-label='Subscribe'><img src="/home/cms_data/dfault/images/.TEMP/cover_graphic_staticTEMP140x280-8578.png" width="140" height="175" alt=""></a></div><div class='split_right'><p class='sidebar_split_ad_title'><strong><a href='subscribe' TAG='subscribe'>Subscribe</a> & receive:</strong></p>
+
+<p>
+- Full online access<br>
+- Comment on articles<br>
+- Access the archives<br>
+- And much more<br>
+</p><a href='HTTPS://www.alvareviewcourier.com/subscribe' aria-label='Subscribe'><img src="/home/cms_data/dfault/images/.TEMP/subscribelogoTEMP150x100-5574.png" width="150" height="40" alt=""></a></div></div><div class="side_separator"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:Rrlpxf5np6idstvwo7l%5F1Cu9r9740%5F1nBW6BE9E89--><span class="ad_local_square"><a href="http://www.gandghomefurnishings.com/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'84%7Chttp%3A%2F%2Fwww%2Egandghomefurnishings%2Ecom%2F');"><img src="/IMG/xkeiyX-TPTVebjU_kDmvmzuFsdfF9smsm/XPATH/home/cms_data/dfault/web_ads/square/3180-g_gsquarebutton2018.jpgXEXT1682x38897is.jpeg" width="300" height="259" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:9RLPXFfNPgIDSTVWOhLlboUjRjhmapbNnggjqjqij--><span class="ad_local_square"><a href="http://www.starrlumber.net/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'13%7Chttp%3A%2F%2Fwww%2Estarrlumber%2Enet%2F');"><img src="/IMG/2pFlcT4gedaRTgeUg_hrbKmbxfzz3qmwx/XPATH/home/cms_data/dfault/web_ads/square/9222-starrlumber10202023.jpgXEXT1193x37898.jpeg" width="300" height="249" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:Uuos0i8qs9lgvwyzr%2DoC4FxA7I%2DP7e0eR5603--><span class="ad_local_square"><a href="http://www.croftchevrolet.com/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'9%7Chttp%3A%2F%2Fwww%2Ecroftchevrolet%2Ecom%2F');"><img src="/IMG/kXFcud_TLmjbTgOVR-VtrGtPojhG6yrzs/XPATH/home/cms_data/dfault/web_ads/square/5402-croftchevy.jpgXEXT1820x36277.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:1JDHP9XFHYA7KLNOGZDdTgMbJbZySpTFf0Ybibiab--><span class="ad_local_square"><a href="https://www.edigersdiamonds.com/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'83%7Chttps%3A%2F%2Fwww%2Eedigersdiamonds%2Ecom%2F');"><img src="/IMG/obUagk3jYmZLTieTkvkriCgYs0rJyyije/XPATH/home/cms_data/dfault/web_ads/square/5171-edigerssquarebutton2018.jpgXEXT1231x41108is.jpeg" width="300" height="259" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:p4y2%2DsG02Hvq56891IyMCP7K4OIBBcC0OfHaRKRJK--><span class="ad_local_square"><a href="https://www.beadlesnursinghome.com/" target="blank" ONMOUSEDOWN="return offsiteAdLink(this,'77%7Chttps%3A%2F%2Fwww%2Ebeadlesnursinghome%2Ecom%2F');"><img src="/IMG/kXLSkj1lPVehgRi9prmrZFpYjqj3_rys1/XPATH/home/cms_data/dfault/web_ads/square/2880-beadlesnh.jpgXEXT1177x36288is.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:d3x19rFz1Gup45780HxLBO6J3NHQA3BzNiGdQJQIJ--><span class="ad_local_square"><a href="https://www.alvareviewcourier.com/home/customer_files/advertising/corebank_08232023.jpg" ONMOUSEDOWN="return offsiteAdLink(this,'88%7Chttps%3A%2F%2Fwww%2Ealvareviewcourier%2Ecom%2Fhome%2Fcustomer%5Ffiles%2Fadvertising%2Fcorebank%5F08232023%2Ejpg');"><img src="/IMG/xkdkgknlJmNNgekHgzZ-lGlXndhI6xyhv/XPATH/home/cms_data/dfault/web_ads/square/2462-corebankbanner05192022_300x250.jpgXEXT1554x40655.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.alvareviewcourier.com/section/local' aria-label="Section link">Local</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/regional' aria-label="Section link">Regional</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/interesting_items' aria-label="Section link">Interesting Items</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/community' aria-label="Section link">Community</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/announcements' aria-label="Section link">Announcements</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/legal' aria-label="Section link">Legal</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/info' aria-label="Section link">Info</a></li><li><a href='HTTPS://www.alvareviewcourier.com/section/videos' aria-label="Section link">Videos</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.alvareviewcourier.com/contact" >Contact</a></li><li><a href="HTTPS://www.alvareviewcourier.com/subscribe" >Subscribe</a></li><li><a href="HTTPS://www.alvareviewcourier.com/about" >About</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.alvareviewcourier.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.alvareviewcourier.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.alvareviewcourier.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.alvareviewcourier.com/?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.alvareviewcourier.com/advertise" >Advertise</a></li><li><a href="HTTPS://www.alvareviewcourier.com/directory" >Advertiser Directory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.alvareviewcourier.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.alvareviewcourier.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="https://www.facebook.com/alva.newsgram/?fref=ts"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/facebook.png'  height='30' alt='FaceBook'></a><a  href="https://www.twitter.com/AlvaReviewCouri"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/twitter.png'  height='28' alt='Twitter'></a><a  href="HTTPS://www.alvareviewcourier.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Alva Review-Courier</h4>
+        <p>
+          620 Choctaw Street<br />Alva, Oklahoma 73717<br />Ph: (580) 327-2200<br />
+       </p>
+        <p>
+          &copy; 2024 Martin Broadcasting<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+   <div class="outer_other_companies outer">
+    <div class="other_companies widen_vertical_padding inner skel">
+
+      <h3>Our Family of Publications Includes:</h3>
+
+      <div class="slickcarousel_pubfamily">
+<div><a  href="HTTPS://www.alvareviewcourier.com" ><img class='footer_icon hover-img' src='/home/customer_files/images/publication_family/arc.png'  height='58' alt='Arc'></a></div><div><a  href="HTTPS://www.alvareviewcourier.com" ><img class='footer_icon hover-img' src='/home/customer_files/images/publication_family/newsgram.png'  height='58' alt='Newsgram'></a></div>
+      </div>
+
+    </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+   <script>
+    function mycarousel_initCallback(carousel) {
+         jQuery('.jcarousel-control a').bind('click', function() {
+           carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+           return false;
+         });
+         jQuery('.jcarousel-scroll select').bind('change', function() {
+           carousel.options.scroll = jQuery.jcarousel.intval(this.options[this.selectedIndex].value);
+           return false;
+         });
+         jQuery('#mycarousel-white-next').bind('click', function() {
+           carousel.next();
+           return false;
+         });
+         jQuery('#mycarousel-white-prev').bind('click', function() {
+           carousel.prev();
+           return false;
+         });
+        };
+
+        // Ride the carousel...
+//        jQuery(document).ready(function() {
+//         jQuery("#mycarousel_white").jcarousel({
+//           scroll: 1,
+//           initCallback: mycarousel_initCallback,
+//           // This tells jCarousel NOT to autobuild prev/next buttons
+//           buttonNextHTML: null,
+//           buttonPrevHTML: null
+//         });
+//        });
+        jQuery(document).ready(function() {
+         jQuery(".more_stories_list").hide();
+         jQuery(".more_stories_toggle").click(function(){
+           jQuery(this).next(".more_stories_list").slideToggle(300);
+         });
+        });
+   </script>
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <small style="padding-top:10px;display:block;">Rendered 05/31/2024 01:39</small><!-- (DESKTOP|PAYWALLERROR|ERROR) (desktop|paywallerror|error) Cached by Usernum:005836 -->
+ <script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'88c511ea3e4f5134',t:'MTcxNzEzODY0OS45MzgwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+</html>

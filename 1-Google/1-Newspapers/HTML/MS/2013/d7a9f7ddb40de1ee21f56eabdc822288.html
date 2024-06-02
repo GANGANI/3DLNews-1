@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://www.greenecountyheraldonline.com/xmlrpc.php" />
+<link rel="stylesheet" href="https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme-child/news01.css" />
+<!--[if lt IE 9]>
+	<script src="https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme/js/html5shiv.js"></script>
+	<script src="https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme/js/respond.min.js"></script>
+<![endif]-->
+<title>Engagement Form &#8211; Greene County Herald</title>
+    <script>
+      var bwg_admin_ajax = 'https://www.greenecountyheraldonline.com/wp-admin/admin-ajax.php?action=shortcode_bwg';
+      var bwg_ajax_url = 'https://www.greenecountyheraldonline.com/wp-admin/admin-ajax.php?action';
+      var bwg_plugin_url = 'https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery';
+      document.addEventListener('DOMContentLoaded', function(){ // Analog of $(document).ready(function(){
+        bwg_check_ready = function () {}
+        document.onkeyup = function(e){
+          if ( e.key == 'Escape' ) {
+            bwg_remove_loading_block();
+          }
+        };
+      });
+
+      // Set shortcode popup dimensions.
+      function bwg_set_shortcode_popup_dimensions() {
+        var H = jQuery(window).height(), W = jQuery(window).width();
+        jQuery("#TB_title").hide().first().show();
+        // New
+        var tbWindow = jQuery('#TB_window');
+        if (tbWindow.size()) {
+          tbWindow.width(W).height(H);
+          jQuery('#TB_iframeContent').width(W).height(H);
+          tbWindow.attr('style',
+            'top:'+ '0px !important;' +
+            'left:' + '0px !important;' +
+            'margin-left:' + '0;' +
+            'z-index:' + '1000500;' +
+            'max-width:' + 'none;' +
+            'max-height:' + 'none;' +
+            '-moz-transform:' + 'none;' +
+            '-webkit-transform:' + 'none'
+          );
+        }
+        // Edit
+        var tbWindow = jQuery('.mce-window[aria-label="Photo Gallery"]');
+        if (tbWindow.length) {
+          // To prevent wp centering window with old sizes.
+          setTimeout(function() {
+            tbWindow.width(W).height(H);
+            tbWindow.css({'top': 0, 'left': 0, 'margin-left': '0', 'z-index': '1000500'});
+            tbWindow.find('.mce-window-body').width(W).height(H);
+          }, 10);
+        }
+      }
+      // Create loading block.
+      function bwg_create_loading_block() {
+        jQuery('body').append('<div class="loading_div" style="display:block; width: 100%; height: 100%; opacity: 0.6; position: fixed; background-color: #000000; background-image: url('+ bwg_plugin_url +'/images/spinner.gif); background-position: center; background-repeat: no-repeat; background-size: 50px; z-index: 1001000; top: 0; left: 0;"></div>');
+      }
+      // Remove loading block.
+      function bwg_remove_loading_block() {
+        jQuery(".loading_div", window.parent.document).remove();
+        jQuery('.loading_div').remove();
+      }
+	  </script>
+    <script type="text/javascript" >            function apbct_attach_event_handler__backend(elem, event, callback){                if(typeof window.addEventListener === "function") elem.addEventListener(event, callback);                else                                              elem.attachEvent(event, callback);            }            apbct_attach_event_handler__backend(window, 'load', function(){                ctSetCookie('ct_checkjs', '1444311775' );            });</script><link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Greene County Herald &raquo; Feed" href="https://www.greenecountyheraldonline.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Greene County Herald &raquo; Comments Feed" href="https://www.greenecountyheraldonline.com/comments/feed/" />
+<meta property="og:title" content="Engagement Form"/><meta property="og:type" content="article"/><meta property="og:url" content="https://www.greenecountyheraldonline.com/engagement-form/"/><meta property="og:site_name" content="Greene County Herald"/><meta property="og:image" content="http://media.iadsnetwork.com/facebookthumbnail/facebook.jpg"/><link rel='stylesheet' id='formidable-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/formidable/css/formidableforms.css?ver=910634' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.greenecountyheraldonline.com/wp-includes/css/dist/block-library/style.min.css?ver=84c973c085f6feba33b42e8c91cddad1' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://www.greenecountyheraldonline.com/wp-includes/css/dist/block-library/theme.min.css?ver=84c973c085f6feba33b42e8c91cddad1' media='all' />
+<link rel='stylesheet' id='bwg_fonts-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/css/bwg-fonts/fonts.css?ver=0.0.1' media='all' />
+<link rel='stylesheet' id='sumoselect-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/css/sumoselect.min.css?ver=3.0.3' media='all' />
+<link rel='stylesheet' id='mCustomScrollbar-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.min.css?ver=2.5.75' media='all' />
+<link rel='stylesheet' id='bwg_frontend-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/css/styles.min.css?ver=2.5.75' media='all' />
+<link rel='stylesheet' id='webads-admin-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-admin/public/css/webads-admin-public.css?ver=1.5.5' media='all' />
+<link rel='stylesheet' id='webads-adrotate-legacy-widget-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-adrotate-legacy-widget/public/css/webads-adrotate-legacy-widget-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-adrotate-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-adrotate/css/webads-adrotate.css?ver=5.7.02' media='all' />
+<link rel='stylesheet' id='webads-church-directory-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-church-directory/public/css/webads-church-directory-public.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='webads-crosswords-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-crosswords/public/css/webads-crosswords-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-display-ads-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-display-ads/public/css/webads-display-ads-public.css?ver=1.1.5' media='all' />
+<link rel='stylesheet' id='webads-elasticpress-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-elasticpress/public/css/webads-elasticpress-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-event-calendar-wd-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-event-calendar-wd/public/css/webads-event-calendar-wd-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-htm-classifieds-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-htm-classifieds/public/css/webads-htm-classifieds-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-news-ticker-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-news-ticker/public/css/webads-news-ticker-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-online-edition-v1-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-online-edition-v1/public/css/webads-online-edition-v1-public.css?ver=1.0.3' media='all' />
+<link rel='stylesheet' id='webads-paperboy-signup-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-paperboy-signup/public/css/webads-paperboy-signup-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-password-protect-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-password-protect/public/css/webads-password-protect-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-photo-gallery-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-photo-gallery/public/css/webads-photo-gallery-public.css?ver=2.5.40.03' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-polls/polls-css.css?ver=2.72' media='all' />
+<style id='wp-polls-inline-css'>
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('https://www.greenecountyheraldonline.com/wp-content/plugins/webads-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel='stylesheet' id='webads-rss-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-rss/public/css/webads-rss-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-social-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-social/public/css/webads-social-public.css?ver=84c973c085f6feba33b42e8c91cddad1' media='all' />
+<link rel='stylesheet' id='webads-stats-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-stats/public/css/webads-stats-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-syndicated-stories-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-syndicated-stories/public/css/webads-syndicated-stories-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='webads-weather-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-weather-v2/public/css/webads-weather-public.css?ver=2.0.7' media='all' />
+<link rel='stylesheet' id='ecwd-popup-style-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/event-calendar-wd/css/ecwd_popup.css?ver=5.1.32_5956d7e18cbe4' media='all' />
+<link rel='stylesheet' id='ecwd_font-awesome-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/event-calendar-wd/css/font-awesome/font-awesome.css?ver=5.1.32_5956d7e18cbe4' media='all' />
+<link rel='stylesheet' id='ecwd-public-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/event-calendar-wd/css/style.css?ver=5.1.32_5956d7e18cbe4' media='all' />
+<link rel='stylesheet' id='sc_form-add_event_public-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/ecwd-frontend-event-management/css/style.css?ver=1.0.13' media='all' />
+<link rel='stylesheet' id='addtoany-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16' media='all' />
+<link rel='stylesheet' id='jquery-magnificpopup-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.4.2.2' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme/css/bootstrap.min.css?ver=1.7.9' media='all' />
+<link rel='stylesheet' id='fl-automator-skin-css'  href='https://www.greenecountyheraldonline.com/wp-content/uploads/bb-theme/skin-61439fb4c3316.css?ver=1.7.9' media='all' />
+<link rel='stylesheet' id='fl-builder-google-fonts-3f19d897d5677fab9c7f938fa02ecdad-css'  href='//fonts.googleapis.com/css?family=Oswald%3A400&#038;ver=84c973c085f6feba33b42e8c91cddad1' media='all' />
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4' id='jquery-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/event-calendar-wd/js/gmap/gmap3.js?ver=5.1.32_5956d7e18cbe4' id='ecwd-gmap-public-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/event-calendar-wd/js/ecwd_popup.js?ver=5.1.32_5956d7e18cbe4' id='ecwd-popup-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.12.1' id='jquery-ui-mouse-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.12.1' id='jquery-ui-draggable-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-includes/js/imagesloaded.min.js?ver=84c973c085f6feba33b42e8c91cddad1' id='imagesloaded-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-includes/js/masonry.min.js?ver=4.2.2' id='masonry-js'></script>
+<script id='ecwd-public-js-extra'>
+var ecwd = {"ajaxurl":"https:\/\/www.greenecountyheraldonline.com\/wp-admin\/admin-ajax.php","ajaxnonce":"eeb50b341f","loadingText":"Loading...","event_popup_title_text":"Event Details","plugin_url":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/event-calendar-wd","gmap_type":"ROADMAP","gmap_redirect":"","gmap_key":"AIzaSyCaa0RtTxnqA-JnjHxBpIGMd3YpYmbJm8g","gmap_style":""};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/event-calendar-wd/js/scripts.js?ver=5.1.32_5956d7e18cbe4' id='ecwd-public-js'></script>
+<script id='addtoany-core-js-before'>
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+</script>
+<script async src='https://static.addtoany.com/menu/page.js' id='addtoany-core-js'></script>
+<script async src='https://www.greenecountyheraldonline.com/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1' id='addtoany-jquery-js'></script>
+<script id='ct_public-js-extra'>
+var ctPublic = {"_ajax_nonce":"76a18d6821","_rest_nonce":"b339e89d8f","_ajax_url":"\/wp-admin\/admin-ajax.php","_rest_url":"https:\/\/www.greenecountyheraldonline.com\/wp-json\/","_apbct_ajax_url":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/cleantalk-spam-protect\/lib\/Cleantalk\/ApbctWP\/Ajax.php","data__set_cookies":"1","data__set_cookies__alt_sessions_type":"0","pixel__setting":"0","pixel__enabled":"","pixel__url":null,"data__email_check_before_post":"1"};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/cleantalk-spam-protect/js/apbct-public.min.js?apbct_ver=5.159.5&#038;ver=5.159.5' id='ct_public-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/cleantalk-spam-protect/js/cleantalk-modal.min.js?ver=5.159.5' id='cleantalk-modal-js'></script>
+<script id='ct_nocache-js-extra'>
+var ctNocache = {"ajaxurl":"\/wp-admin\/admin-ajax.php","info_flag":"","set_cookies_flag":"1","blog_home":"https:\/\/www.greenecountyheraldonline.com\/"};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/cleantalk-spam-protect/js/cleantalk_nocache.min.js?ver=5.159.5' id='ct_nocache-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/js/jquery.sumoselect.min.js?ver=3.0.3' id='sumoselect-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/js/jquery.mobile.min.js?ver=1.4.5' id='jquery-mobile-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=2.5.75' id='mCustomScrollbar-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.min.js?ver=0.4.1' id='jquery-fullscreen-js'></script>
+<script id='bwg_frontend-js-extra'>
+var bwg_objectsL10n = {"bwg_field_required":"field is required.","bwg_mail_validation":"This is not a valid email address.","bwg_search_result":"There are no images matching your search.","bwg_select_tag":"Select Tag","bwg_order_by":"Order By","bwg_search":"Search","bwg_show_ecommerce":"Show Ecommerce","bwg_hide_ecommerce":"Hide Ecommerce","bwg_show_comments":"Show Comments","bwg_hide_comments":"Hide Comments","bwg_restore":"Restore","bwg_maximize":"Maximize","bwg_fullscreen":"Fullscreen","bwg_exit_fullscreen":"Exit Fullscreen","bwg_search_tag":"SEARCH...","bwg_tag_no_match":"No tags found","bwg_all_tags_selected":"All tags selected","bwg_tags_selected":"tags selected","play":"Play","pause":"Pause","is_pro":"1","bwg_play":"Play","bwg_pause":"Pause","bwg_hide_info":"Hide info","bwg_show_info":"Show info","bwg_hide_rating":"Hide rating","bwg_show_rating":"Show rating","ok":"Ok","cancel":"Cancel","select_all":"Select all","lazy_load":"0","lazy_loader":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/photo-gallery\/images\/ajax_loader.png","front_ajax":"0","bwg_tag_see_all":"see all tags","bwg_tag_see_less":"see less tags"};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/photo-gallery/js/scripts.min.js?ver=2.5.75' id='bwg_frontend-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-admin/public/js/webads-admin-public.js?ver=1.5.5' id='webads-admin-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-adrotate-legacy-widget/public/js/webads-adrotate-legacy-widget-public.js?ver=1.0.0' id='webads-adrotate-legacy-widget-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-church-directory/public/js/webads-church-directory-public.js?ver=1.0' id='webads-church-directory-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-crosswords/public/js/webads-crosswords-public.js?ver=1.0.0' id='webads-crosswords-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-display-ads/public/js/jquery.sudoSlider.js?ver=1.0.0' id='webads-display-ads-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-elasticpress/public/js/webads-elasticpress-public.js?ver=1.0.0' id='webads-elasticpress-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-event-calendar-wd/public/js/webads-event-calendar-wd-public.js?ver=1.0.0' id='webads-event-calendar-wd-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-htm-classifieds/public/js/webads-htm-classifieds-public.js?ver=1.0.0' id='webads-htm-classifieds-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-news-ticker/public/js/webads-news-ticker-public.js?ver=23' id='webads-news-ticker-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-online-edition-v1/public/js/webads-online-edition-v1-public.js?ver=1.0.3' id='webads-online-edition-v1-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-paperboy-signup/public/js/webads-paperboy-signup-public.js?ver=1.0.0' id='webads-paperboy-signup-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-password-protect/public/js/webads-password-protect-public.js?ver=1.0.0' id='webads-password-protect-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-password-protect/public/js/js.cookie.min.js?ver=84c973c085f6feba33b42e8c91cddad1' id='jquery-cookie-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-photo-gallery/public/js/webads-photo-gallery-public.js?ver=2.5.40.03' id='webads-photo-gallery-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-rss/public/js/webads-rss-public.js?ver=1.0.0' id='webads-rss-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-social/public/js/webads-social-public.js?ver=0.0.1' id='webads-social-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-stats/public/js/webads-stats-public.js?ver=1.0.0' id='webads-stats-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-syndicated-stories/public/js/webads-syndicated-stories-public.js?ver=1.0.1' id='webads-syndicated-stories-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-weather-v2/public/js/webads-weather-public.js?ver=2.0.8' id='webads-weather-js'></script>
+<link rel="https://api.w.org/" href="https://www.greenecountyheraldonline.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.greenecountyheraldonline.com/wp-json/wp/v2/pages/6406" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.greenecountyheraldonline.com/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://www.greenecountyheraldonline.com/engagement-form/" />
+<link rel='shortlink' href='https://www.greenecountyheraldonline.com/?p=6406' />
+<link rel="alternate" type="application/json+oembed" href="https://www.greenecountyheraldonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenecountyheraldonline.com%2Fengagement-form%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.greenecountyheraldonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenecountyheraldonline.com%2Fengagement-form%2F&#038;format=xml" />
+
+<!-- This site is using AdRotate v5.8.3 Professional to display their advertisements - https://ajdg.solutions/ -->
+<!-- AdRotate CSS -->
+<style type="text/css" media="screen">
+	.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }
+	.g img { height:auto; }
+	.g-col { position:relative; float:left; }
+	.g-col:first-child { margin-left: 0; }
+	.g-col:last-child { margin-right: 0; }
+	.g-1 { margin:0px 0px 0px 0px; width:100%; max-width:300px; height:100%; max-height:300px; }
+	@media only screen and (max-width: 480px) {
+		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
+	}
+</style>
+<!-- /AdRotate CSS -->
+
+<!-- Matomo -->
+<script>
+var _paq = window._paq = window._paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+	var u="//stats.iadsnetwork.com/";
+	_paq.push(['setTrackerUrl', u+'matomo.php']);
+	_paq.push(['setSiteId', '84']);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<!-- End Matomo Code -->	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBXBZSHBX3"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-RBXBZSHBX3');
+	</script><script type="text/javascript">document.documentElement.className += " js";</script>
+<link rel="shortcut icon" href="https://www.greenecountyheraldonline.com/wp-content/uploads/2021/03/favicon-16x16-1.png"/>
+<link rel="stylesheet" href="https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme-child/style.css" /></head>
+
+<body class="page-template-default page page-id-6406 ecwd-theme-parent-bb-theme ecwd-theme-child-bb-theme-child fl-framework-bootstrap fl-preset-color01 fl-fixed-width" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a><div>
+	<div class="fl-page-bar">
+	<div class="fl-page-bar-container container">
+		<div class="fl-page-bar-row row">
+			<div class="col-md-8 hidden-sm text-left clearfix"><div class="fl-page-bar-text fl-page-bar-text-1"></div></div>			<div class="col-md-4 col-sm-12 text-right clearfix"><ul id="menu-top-bar-menu" class="fl-page-bar-nav nav navbar-nav menu"><li id="menu-item-284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284 nav-item"><a href="https://www.greenecountyheraldonline.com/contact-us/" class="nav-link">Contact Us</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3" class="nav-link">E-Edition</a></li>
+<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3&#038;view=subscribe" class="nav-link">Subscribe</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3&#038;view=archives" class="nav-link">Archives</a></li>
+<li id="menu-item-7648" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7648 nav-item"><a href="https://www.greenecountyheraldonline.com/category/opinions/" class="nav-link">Opinions</a></li>
+</ul>	<div class="fl-social-icons">
+	<a href="https://www.facebook.com/greenecoherald/" target="_blank" rel="noopener noreferrer"><span class="sr-only">Facebook</span><i aria-hidden="true" class="fab fa-facebook-f mono"></i></a><a href="https://twitter.com/greenecoherald" target="_blank" rel="noopener noreferrer"><span class="sr-only">Twitter</span><i aria-hidden="true" class="fab fa-twitter mono"></i></a><a href="mailto:herald@tds.net" rel="noopener noreferrer"><span class="sr-only">Email</span><i aria-hidden="true" class="fas fa-envelope mono"></i></a></div>
+</div>		</div>
+	</div>
+</div><!-- .fl-page-bar -->
+</div>
+<div class="fl-page">
+	<header class="fl-page-header fl-page-header-primary fl-page-nav-bottom fl-page-nav-toggle-button fl-page-nav-toggle-visible-mobile" itemscope="itemscope"
+        itemtype="http://schema.org/WPHeader">
+    <div class="fl-page-header-wrap">
+
+                    <div class="fl-page-header-container container">
+                <div class="fl-page-header-row row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="fl-page-header-logo" itemscope="itemscope"
+                             itemtype="http://schema.org/Organization">
+                            <a href="https://www.greenecountyheraldonline.com" itemprop="url"><img loading="false" data-no-lazy="1" class="fl-logo-img" itemscope itemtype="https://schema.org/ImageObject" src="http://www.greenecountyheraldonline.com/wp-content/uploads/2016/05/HEADER.png" data-retina="" title="" alt="Greene County Herald" /><meta itemprop="name" content="Greene County Herald" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="fl-page-header-content">
+                            <div id="webads_weather_widget-2" class="widget widget_webads_weather_widget pull-right">
+        <script>
+            jQuery(document).ready(function() {
+                loadWeather('39451', 'transparent', 'Leakesville', '39451');
+            });
+        </script>
+
+        <div id="webads-weather-39451" class="widget widget-webads-weather">
+            <a id="webads-weather-39451-link" href="https://www.greenecountyheraldonline.com">
+                <div class="awe-mini">
+                    <div>
+                        <div class="col visual">
+                            <span id="webads-weather-39451-temperature" class="temperature"></span>
+                            <i id="webads-weather-39451-image" class="weather-forecast-icon" style="background-size:contain"></i>
+                        </div>
+                        <div class="col info">
+                            <span id="webads-weather-39451-location" class="location"></span>
+                            <span id="webads-weather-39451-conditions" class="forecast"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <script>
+            function loadWeather(zipcode, background, location, instanceid) {
+                if (zipcode !== undefined) {
+                    var location = String(location);
+                    var instanceid = String(instanceid);
+                    jQuery.ajax({
+                        url: "https://ws.iadsnetwork.com/weather.svc/GetCurrentConditions",
+                        data: { "zipcode": zipcode },
+                        dataType: "json",
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            if (data.d != null) {
+                                var dtCC = data.d;
+                                for (i = 0; i < dtCC.length; i++) {
+                                    jQuery("#webads-weather-" + instanceid + "-temperature").append(dtCC[i].temperature);
+                                    jQuery("#webads-weather-" + instanceid + "-location").append(location);
+                                    jQuery("#webads-weather-" + instanceid + "-conditions").append(dtCC[i].conditions);
+                                    jQuery("#webads-weather-" + instanceid + "-image").css('background-image', 'url(' + dtCC[i].image + ')');
+                                    $link = jQuery("#webads-weather-" + instanceid + "-link").attr("href");
+                                    jQuery("#webads-weather-" + instanceid + "-link").attr("href", $link + '/weather/?zipcode=' + dtCC[i].zipcode + '&location=' + encodeURIComponent(location));
+                                    jQuery("#webads-weather-" + instanceid).css('background-color', background);
+                                }
+                            }
+                        },
+                        error: function (d) {
+                            //alert("Error");
+                        }
+                    });
+                }
+            }
+        </script>
+
+        </div><div id="search-2" class="widget widget_search pull-right"><form aria-label="Search" method="get" role="search" action="https://www.greenecountyheraldonline.com/" title="Type and press Enter to search.">
+	<input aria-label="Search" type="search" class="fl-search-input form-control" name="s" placeholder="Search"  value="" onfocus="if (this.value === 'Search') { this.value = ''; }" onblur="if (this.value === '') this.value='Search';" />
+</form>
+</div>                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    <div class="fl-page-nav-wrap">
+        <div class="fl-page-nav-container container">
+            <nav class="fl-page-nav navbar navbar-default" role="navigation" itemscope="itemscope"
+                 itemtype="http://schema.org/SiteNavigationElement">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".fl-page-nav-collapse">
+                    <span>Menu</span>
+                </button>
+                <div class="fl-page-nav-collapse collapse navbar-collapse">
+                    <ul id="menu-main-menu" class="nav navbar-nav menu"><li id="menu-item-1076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1076 nav-item"><a href="https://www.greenecountyheraldonline.com/" class="nav-link">Home</a></li>
+<li id="menu-item-296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-296 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3" class="nav-link">E-Edition</a>
+<ul class="sub-menu">
+	<li id="menu-item-6109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6109 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=6eea8af9-f1d2-4c2f-95c3-e0fd3a15555e&#038;view=archives" class="nav-link">Special Sections</a></li>
+	<li id="menu-item-297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-297 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3&#038;view=subscribe" class="nav-link">Subscribe</a></li>
+</ul>
+</li>
+<li id="menu-item-300051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300051 nav-item"><a href="https://www.greenecountyheraldonline.com/public-notice/" class="nav-link">Public Notice</a></li>
+<li id="menu-item-299135" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-299135 nav-item"><a href="https://www.greenecountyheraldonline.com/category/archived-stories/" class="nav-link">Archived Stories</a></li>
+<li id="menu-item-6103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6103 nav-item"><a href="https://www.greenecountyheraldonline.com/advertise-with-us/" class="nav-link">Advertise With Us</a></li>
+<li id="menu-item-6814" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6814 nav-item"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=53b00742-47c9-4ccc-b535-6fd9dfbb4d91" class="nav-link">Printing Services</a></li>
+<li id="menu-item-6247" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-6247 nav-item"><a href="#" class="nav-link">Forms</a>
+<ul class="sub-menu">
+	<li id="menu-item-6420" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6406 current_page_item menu-item-6420 nav-item"><a href="https://www.greenecountyheraldonline.com/engagement-form/" aria-current="page" class="nav-link">Engagement Form</a></li>
+	<li id="menu-item-6100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6100 nav-item"><a href="https://www.greenecountyheraldonline.com/wedding-form/" class="nav-link">Wedding Form</a></li>
+	<li id="menu-item-6425" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6425 nav-item"><a href="https://www.greenecountyheraldonline.com/birth-announcement-form/" class="nav-link">Birth Announcement Form</a></li>
+	<li id="menu-item-299611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299611 nav-item"><a href="https://www.greenecountyheraldonline.com/graduation-signs/" class="nav-link">Graduation Signs</a></li>
+</ul>
+</li>
+<li id="menu-item-6246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6246 nav-item"><a href="#" class="nav-link">Connect</a>
+<ul class="sub-menu">
+	<li id="menu-item-7647" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7647 nav-item"><a href="https://www.greenecountyheraldonline.com/category/opinions/" class="nav-link">Opinions</a></li>
+	<li id="menu-item-289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289 nav-item"><a href="https://www.greenecountyheraldonline.com/crossword/" class="nav-link">Crossword</a></li>
+	<li id="menu-item-9107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9107 nav-item"><a href="https://www.greenecountyheraldonline.com/event-calendar/" class="nav-link">Events</a></li>
+	<li id="menu-item-299432" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-299432 nav-item"><a href="https://www.greenecountyheraldonline.com/church-directory/" class="nav-link">Church Directory</a></li>
+</ul>
+</li>
+<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293 nav-item"><a href="https://www.greenecountyheraldonline.com/photos/" class="nav-link">Photos</a></li>
+</ul>                </div>
+            </nav>
+        </div>
+    </div>
+</header><!-- .fl-page-header -->	<div class="fl-page-content" itemprop="mainContentOfPage">
+        <div class="webads-userbar-wrapper" style="display: none;"><span class="webads-userbar"><span class="webads-userbar-name"></span><span class="fl-sep"> | </span><a href="https://www.greenecountyheraldonline.com/wp-admin/admin-post.php?action=webads_logout&webads_logout_nonce=DS9URN7DtQcxre6U"><span>logout</span></a></span></div>        <script>
+            $(document).ready(function(){
+                if (Cookies.get('webads-auth-1535')) {
+                    $(".webads-userbar-wrapper").show();
+                    $(".webads-userbar-name").text(decodeURIComponent(Cookies.get('webads-username-1535')));
+                } else {
+                    $(".webads-userbar-wrapper").hide();
+                }
+            });
+        </script>
+
+		
+<div class="container">
+	<div class="row">
+		
+				
+		<div class="fl-content fl-content-left col-md-9">
+							<article class="fl-post post-6406 page type-page status-publish hentry" id="fl-post-6406" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+
+		<header class="fl-post-header">
+		<h1 class="fl-post-title" itemprop="headline">Engagement Form</h1>
+			</header><!-- .fl-post-header -->
+			<div class="fl-post-content clearfix" itemprop="text">
+		<div class="frm_forms  with_frm_style frm_style_formidable-style" id="frm_form_9_container" >
+<form enctype="multipart/form-data" method="post" class="frm-show-form  frm_pro_form " id="form_928aj"  >
+<div class="frm_form_fields ">
+<fieldset>
+<legend class="frm_hidden">Engagement</legend>
+
+<div class="frm_description"><p>If you run into any problems for listings in relation to divorce, remarriage, widow or widowers, please do not hesitate to contact our office, or simply notate that you need assistance in those fields. We will be more than happy to assist you in getting the wording exactly the way you want it. </p>
+<p>Deadline: Thursday, 5 P.M., For next publication.</p>
+</div><div class="frm_fields_container">
+<input type="hidden" name="frm_action" value="create" />
+<input type="hidden" name="form_id" value="9" />
+<input type="hidden" name="frm_hide_fields_9" id="frm_hide_fields_9" value="" />
+<input type="hidden" name="form_key" value="928aj" />
+<input type="hidden" name="item_meta[0]" value="" />
+<input type="hidden" id="frm_submit_entry_9" name="frm_submit_entry_9" value="c53dfa1b19" /><input type="hidden" name="_wp_http_referer" value="/engagement-form/" /><label for="frm_verify_9" class="frm_screen_reader frm_hidden">If you are human, leave this field blank.</label>
+<input type="text" class="frm_hidden frm_verify" id="frm_verify_9" name="frm_verify" value=""  />
+<div id="frm_field_148_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_k412f" class="frm_primary_label">Bride's Full Name
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_k412f" name="item_meta[148]" value=""  data-invmsg="Bride&#039;s Full Name is invalid"  />
+    
+    
+</div>
+<div id="frm_field_149_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_3jfbx" class="frm_primary_label">Bride's Address
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_3jfbx" name="item_meta[149]" value=""  data-invmsg="Bride&#039;s Address is invalid"  />
+    
+    
+</div>
+<div id="frm_field_150_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_l62nb" class="frm_primary_label">Bride's Parents Names
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_l62nb" name="item_meta[150]" value=""  data-invmsg="Bride&#039;s Parents Names is invalid"  />
+    
+    
+</div>
+<div id="frm_field_151_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_i83hz" class="frm_primary_label">City(ies) Parents Are From
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_i83hz" name="item_meta[151]" value=""  data-invmsg="City(ies) Parents Are From is invalid"  />
+    
+    
+</div>
+<div id="frm_field_152_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_i96sk" class="frm_primary_label">Bride's Maternal Grandparents
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_i96sk" name="item_meta[152]" value=""  data-invmsg="Bride&#039;s Maternal Grandparents is invalid"  />
+    
+    
+</div>
+<div id="frm_field_153_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_7cokl" class="frm_primary_label">Bride's Maternal Grandparents Residence
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_7cokl" name="item_meta[153]" value=""  data-invmsg="Bride&#039;s Maternal Grandparents Residence is invalid"  />
+    
+    
+</div>
+<div id="frm_field_155_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_3spmw" class="frm_primary_label">Bride's Paternal Grandparents
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_3spmw" name="item_meta[155]" value=""  data-invmsg="Bride&#039;s Paternal Grandparents is invalid"  />
+    
+    
+</div>
+<div id="frm_field_156_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_n3o70" class="frm_primary_label">Bride's Paternal Grandparents Residence
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_n3o70" name="item_meta[156]" value=""  data-invmsg="Bride&#039;s Paternal Grandparents Residence is invalid"  />
+    
+    
+</div>
+<div id="frm_field_159_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_5898p" class="frm_primary_label">Bride's School(s), College(s), and Degree(s)
+        <span class="frm_required"></span>
+    </label>
+    <textarea name="item_meta[159]" id="field_5898p" rows="5"  data-invmsg="Bride&#039;s School(s), College(s), and Degree(s) is invalid"  ></textarea>
+    
+    
+</div>
+<div id="frm_field_160_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_th61j" class="frm_primary_label">Bride's Honors, Societies, Etc.
+        <span class="frm_required"></span>
+    </label>
+    <textarea name="item_meta[160]" id="field_th61j" rows="5"  data-invmsg="Bride&#039;s Honors, Societies, Etc. is invalid"  ></textarea>
+    
+    
+</div>
+<div id="frm_field_161_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_fecuq" class="frm_primary_label">Bride's Occupation
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_fecuq" name="item_meta[161]" value=""  data-invmsg="Bride&#039;s Occupation is invalid"  />
+    
+    
+</div>
+<div id="frm_field_162_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_wq2is" class="frm_primary_label">Groom's Full Name
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_wq2is" name="item_meta[162]" value=""  data-invmsg="Groom&#039;s Full Name is invalid"  />
+    
+    
+</div>
+<div id="frm_field_163_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_m64us" class="frm_primary_label">Groom's Address
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_m64us" name="item_meta[163]" value=""  data-invmsg="Groom&#039;s Address is invalid"  />
+    
+    
+</div>
+<div id="frm_field_164_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_me5s8" class="frm_primary_label">Groom's Parents Names
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_me5s8" name="item_meta[164]" value=""  data-invmsg="Groom&#039;s Parents Names is invalid"  />
+    
+    
+</div>
+<div id="frm_field_165_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_dbpgz" class="frm_primary_label">City(ies) Parents Are From
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_dbpgz" name="item_meta[165]" value=""  data-invmsg="City(ies) Parents Are From is invalid"  />
+    
+    
+</div>
+<div id="frm_field_166_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_k2px8" class="frm_primary_label">Groom's Maternal Grandparents
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_k2px8" name="item_meta[166]" value=""  data-invmsg="Groom&#039;s Maternal Grandparents is invalid"  />
+    
+    
+</div>
+<div id="frm_field_167_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_pjlgv" class="frm_primary_label">Groom's Maternal Grandparents Residence
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_pjlgv" name="item_meta[167]" value=""  data-invmsg="Groom&#039;s Maternal Grandparents Residence is invalid"  />
+    
+    
+</div>
+<div id="frm_field_168_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_arvtl" class="frm_primary_label">Groom's Paternal Grandparents
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_arvtl" name="item_meta[168]" value=""  data-invmsg="Groom&#039;s Paternal Grandparents is invalid"  />
+    
+    
+</div>
+<div id="frm_field_169_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_lr96s" class="frm_primary_label">Groom's Paternal Grandparents Residence
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_lr96s" name="item_meta[169]" value=""  data-invmsg="Groom&#039;s Paternal Grandparents Residence is invalid"  />
+    
+    
+</div>
+<div id="frm_field_170_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_161p5" class="frm_primary_label">Groom's School(s), College(s) and Degree(s)
+        <span class="frm_required"></span>
+    </label>
+    <textarea name="item_meta[170]" id="field_161p5" rows="5"  data-invmsg="Groom&#039;s School(s), College(s) and Degree(s) is invalid"  ></textarea>
+    
+    
+</div>
+<div id="frm_field_172_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_nwhp6" class="frm_primary_label">Groom's Honors, Societies, Etc.
+        <span class="frm_required"></span>
+    </label>
+    <textarea name="item_meta[172]" id="field_nwhp6" rows="5"  data-invmsg="Groom&#039;s Honors, Societies, Etc. is invalid"  ></textarea>
+    
+    
+</div>
+<div id="frm_field_173_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_scou6" class="frm_primary_label">Groom's Occupation
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_scou6" name="item_meta[173]" value=""  data-invmsg="Groom&#039;s Occupation is invalid"  />
+    
+    
+</div>
+<div id="frm_field_174_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_25956a" class="frm_primary_label">Wedding Date
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_25956a" name="item_meta[174]" value=""  data-invmsg="Wedding Date is invalid"  />
+    
+    
+</div>
+<div id="frm_field_175_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_gzpf1" class="frm_primary_label">Wedding Location
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_gzpf1" name="item_meta[175]" value=""  data-invmsg="Wedding Location is invalid"  />
+    
+    
+</div>
+<div id="frm_field_176_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_k75nb" class="frm_primary_label">Wedding Time
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_k75nb" name="item_meta[176]" value=""  data-invmsg="Wedding Time is invalid"  />
+    
+    
+</div>
+<div id="frm_field_177_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_s8p8n" class="frm_primary_label">Other Information
+        <span class="frm_required"></span>
+    </label>
+    <textarea name="item_meta[177]" id="field_s8p8n" rows="5"  data-invmsg="Other Information is invalid"  ></textarea>
+    
+    
+</div>
+<div id="frm_field_178_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_lnz0k" class="frm_primary_label">Contact Name
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_lnz0k" name="item_meta[178]" value=""  data-invmsg="Contact Name is invalid"  />
+    
+    
+</div>
+<div id="frm_field_179_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_zuds9" class="frm_primary_label">Contact Phone #
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_zuds9" name="item_meta[179]" value=""  data-invmsg="Contact Phone # is invalid"  />
+    
+    
+</div>
+<div id="frm_field_180_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_g7ug5" class="frm_primary_label">Contact Email Address
+        <span class="frm_required"></span>
+    </label>
+    <input type="text" id="field_g7ug5" name="item_meta[180]" value=""  data-invmsg="Contact Email Address is invalid"  />
+    
+    
+</div>
+<div id="frm_field_182_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_30v9j" class="frm_primary_label">Payment Options
+        <span class="frm_required"></span>
+    </label>
+    		<select name="item_meta[182]" id="field_30v9j"  data-placeholder="Select an option"  data-frmval="Without Photo ($22.00)" data-invmsg="Payment Options is invalid"  >
+				<option value="With Photo ($27.00)"  class="">
+			With Photo ($27.00)		</option>
+			<option value="Without Photo ($22.00)"  selected="selected" class="">
+			Without Photo ($22.00)		</option>
+		</select>
+	
+    
+    
+</div>
+<div id="frm_field_183_container" class="frm_form_field form-field  frm_top_container">
+    <label for="field_fe42i" class="frm_primary_label">Attach Photo
+        <span class="frm_required"></span>
+    </label>
+    <input type="hidden" name="item_meta[183]" value="" data-frmfile="183" />
+
+<div class="frm_dropzone frm_single_upload frm_clearfix" id="file183_dropzone" aria-labelledby="field_fe42i_label" role="group">
+	<div class="fallback">
+		<input type="file" name="file183" id="field_fe42i"  data-invmsg="Attach Photo is invalid"   />
+				<div class="frm_clearfix "></div>
+	</div>
+	<div class="dz-message needsclick">
+		<span class="frm_icon_font frm_upload_icon"></span>
+		<span class="frm_upload_text">Drop a file here or click to upload</span>
+		<span class="frm_compact_text">Choose File</span>
+		<div class="frm_small_text">
+			Maximum upload size: 516MB		</div>
+	</div>
+</div>
+
+    
+    
+</div>
+<input type="hidden" name="item_key" value="" />
+	<div class="frm_submit">
+
+<input type="submit" value="Submit"  class="frm_final_submit" />
+<img class="frm_ajax_loading" src="https://www.greenecountyheraldonline.com/wp-content/plugins/formidable/images/ajax_loader.gif" alt="Sending"/>
+
+</div></div>
+</fieldset>
+</div>
+<script type="text/javascript">var input = document.createElement('input');
+    input.setAttribute('type', 'hidden');
+    input.setAttribute('name', 'ct_checkjs_frm');
+    input.setAttribute('value', '1444311775');
+    for (i = 0; i < document.forms.length; i++) {
+        if (typeof document.forms[i].id == 'string'){
+			if(document.forms[i].id.search('form_928aj') != -1) {
+            document.forms[i].appendChild(input);
+			}
+        }
+    }</script>
+</form>
+</div>
+
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.greenecountyheraldonline.com/engagement-form/" data-a2a-title="Engagement Form"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.greenecountyheraldonline.com%2Fengagement-form%2F&amp;linkname=Engagement%20Form" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.greenecountyheraldonline.com%2Fengagement-form%2F&amp;linkname=Engagement%20Form" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div>	</div><!-- .fl-post-content -->
+	
+</article>
+
+<!-- .fl-post -->
+					</div>
+		
+		<div class="fl-sidebar  fl-sidebar-right fl-sidebar-display-always col-md-3" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+		<aside id="adrotate_widgets-2" class="fl-widget widget_adrotate_widgets"><h4 class="fl-widget-title">Business Spotlight</h4><!-- Either there are no banners, they are disabled or none qualified for this location! --></aside><aside id="5e3b5ea724d4b-2" class="fl-widget 5e3b5ea724d4b"><div class="a-single a-11"><a onClick="_paq.push(['trackEvent', 'Adverts', 'Click', 'Farm Bureau']);" href="http://www.msfbins.com" target="_blank"><img onload="_paq.push(['trackEvent', 'Adverts', 'Impression', 'Farm Bureau']);" src="http://www.greenecountyheraldonline.com/wp-content/uploads/2016/05/22253.jpg" /></a></div></aside><aside id="adrotate_widgets-3" class="fl-widget widget_adrotate_widgets"><div class="a-single a-10"><a onClick="_paq.push(['trackEvent', 'Adverts', 'Click', 'Breaking News Signup']);" href="http://www.greenecountyheraldonline.com/breaking-news-signup/"><img onload="_paq.push(['trackEvent', 'Adverts', 'Impression', 'Breaking News Signup']);" src="http://www.greenecountyheraldonline.com/wp-content/uploads/2016/04/breakingNewsHeader.png" /></a></div></aside><aside id="5e3b5ea724d4b-3" class="fl-widget 5e3b5ea724d4b"><!-- Error, Ad (22) is not available at this time due to schedule/budgeting/geolocation/mobile restrictions! --></aside><aside id="webads_facebook_widget-3" class="fl-widget widget_webads_facebook_widget"><h4 class="fl-widget-title">Like Us On Facebook</h4>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"></script>
+
+
+        <div class="fb-page" data-href="https://www.facebook.com/greenecoherald/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+        
+
+        </aside><aside id="webads_displayads_widget-2" class="fl-widget widget_webads_displayads_widget"><h4 class="fl-widget-title">Our Advertisers</h4>
+
+                <style>
+                    #displayAds img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                                        #displayAdsWrapper {
+                        height: 1500px;
+                        overflow: hidden;
+                    }
+                    
+
+                </style>
+
+                <div id="displayAdsWrapper">
+                    <div id="displayAds">
+                        <ul id="displayAdsUL">
+                        </ul>
+                    </div>
+                </div>
+
+                <script>
+                    (function( $ ) {
+                        $(document).ready(function () {
+                            $("#displayAdsWrapper").hide();
+                            loadDisplayAds(1535, 100, 1);
+                        });
+
+                        function loadDisplayAds(memberid, count, thumbtype) {
+
+                            if (memberid !== undefined) {
+                                var memberid = String(memberid);
+                                var count = String(count);
+                                var thumbtype = String(thumbtype);
+                                if (memberid.length == 4) {
+                                    $.ajax({
+                                        url: "https://ws.iadsnetwork.com/displayads.svc/GetDisplayAds",
+                                        data: { "memberid": memberid, "count": count, "thumbtype": thumbtype },
+                                        dataType: "json",
+                                        type: "GET",
+                                        contentType: "application/json; charset=utf-8",
+                                        success: function (data) {
+
+                                            if (data.d != null) {
+                                                $("#displayAdsUL").empty();
+                                                var dtDisplayAd = data.d;
+
+                                                for (i = 0; i < dtDisplayAd.length; i++) {
+                                                    switch (dtDisplayAd[i].statsVersion) {
+                                                    case "1":
+                                                        // Matomo
+                                                        if (typeof _paq !== "undefined") {
+                                                            $("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a onClick=\"_paq.push(['trackEvent', 'Adverts', 'Click', '" + dtDisplayAd[i].name + "']);\" href='" + dtDisplayAd[i].url + "' target='_blank'><img onload=\"_paq.push(['trackEvent', 'Adverts', 'Impression', '" + dtDisplayAd[i].name + "']);\" src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+                                                        } else {
+                                                            $("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a href='" + dtDisplayAd[i].url + "' target='_blank'><img src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+}                                                       break;                                                    
+                                                    case "2":
+                                                        // Google Analytics
+                                                        gtag('event', 'impression', {'event_category': 'Adverts', 'event_label': dtDisplayAd[i].name, 'value': 1.00, 'non_interaction': true});
+                                                        $("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a onClick=\"gtag('event', 'click', {'event_category': 'Adverts', 'event_label': '" + dtDisplayAd[i].name + "', 'value': 1.00, 'non_interaction': true});\" href='" + dtDisplayAd[i].url + "' target='_blank'><img src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+                                                        break;   
+                                                    }
+                                                    //if (typeof ga !== "undefined") {
+                                                        // safe to use the function
+                                                        //ga('send','event','Adverts','impression',dtDisplayAd[i].name,2,{'nonInteraction':1});
+                                                        //gtag('event', 'click', {'event_category': 'Adverts', 'event_label': dtDisplayAd[i].name, 'value': 1.00, 'non_interaction': true});
+                                                        // $("#displayAdsUL").append('<li style="padding-bottom: 5px;"><a onClick="ga(\'send\',\'event\',\'Adverts\',\'click\',\'' + dtDisplayAd[i].name + '\',1,{\'nonInteraction\':1});" href="' + dtDisplayAd[i].url + '" target="_blank"><img src="' + dtDisplayAd[i].img + '" alt=" " /></a></li>');
+                                                        //$("#displayAdsUL").append("<li style='padding-bottom: 5px;'><a onClick=\"gtag('event', 'click', {'event_category': 'Adverts', 'event_label': '" + dtDisplayAd[i].name + "', 'value': 1.00, 'non_interaction': true});\" href='" + dtDisplayAd[i].url + "' target='_blank'><img src='" + dtDisplayAd[i].img + "' alt=' ' /></a></li>");
+                                                    //} else {
+                                                        //$("#displayAdsUL").append('<li style="padding-bottom: 5px;"><a href="' + dtDisplayAd[i].url + '" target="_blank"><img src="' + dtDisplayAd[i].img + '" alt=" " /></a></li>');
+                                                    //}
+                                                }
+                                                setTimeout(function(){ startSlider(i) }, 1000);
+                                            }
+                                        },
+                                        error: function (d) {
+                                            //alert("Error");
+                                        }
+                                    });
+                                } else {
+                                    $("#displayAdsWrapper").empty();
+                                }
+                            }
+                        }
+
+                        function startSlider(count) {
+                            var isAuto = true;
+                            var pauseLen = '5000';
+
+                            $("#displayAds").sudoSlider({
+                                vertical: true,
+                                continuous: true,
+                                                                slideCount: count+1,
+                                auto: isAuto,
+                                                                autoHeight: false,
+                                                                pause:  pauseLen,
+                                prevNext: false,
+                                useCSS: false,
+                                autoWidth: true
+                            });
+                            $("#displayAdsWrapper").show();
+                        }
+                    })( jQuery );
+
+                </script>
+
+                </aside><aside id="webads_twitter_widget-2" class="fl-widget widget_webads_twitter_widget"><h4 class="fl-widget-title">Follow Us On Twitter</h4>
+
+                        <a class="twitter-timeline" href="https://twitter.com/greenecoherald" data-widget-id="731140005083648000">Tweets by @greenecoherald</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                                
+        </aside>	</div>
+		
+	</div>
+</div>
+
+			
+	</div><!-- .fl-page-content -->
+				</div><!-- .fl-page -->
+		<footer class="fl-page-footer-wrap" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+		<div class="fl-page-footer-widgets">
+	<div class="fl-page-footer-widgets-container container">
+		<div class="fl-page-footer-widgets-row row">
+		<div class="col-sm-4 col-md-4 fl-page-footer-widget-col fl-page-footer-widget-col-1"><aside id="nav_menu-3" class="fl-widget widget_nav_menu"><h4 class="fl-widget-title">Greene County Herald</h4><div class="menu-footer-menu-1-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-228"><a href="http://www.greenecountyheraldonline.com/">Home</a></li>
+<li id="menu-item-229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-229"><a href="https://www.greenecountyheraldonline.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-230" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-230"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3">E-Edition</a></li>
+<li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3&#038;view=subscribe">Subscribe</a></li>
+<li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a target="_blank" rel="noopener" href="http://1535.newstogo.us/editionviewer/default.aspx?Publication=66e55166-57c4-4e07-adb6-9ee0529756c3&#038;view=archives">Archives</a></li>
+</ul></div></aside></div><div class="col-sm-4 col-md-4 fl-page-footer-widget-col fl-page-footer-widget-col-2"><aside id="webads_syndicated_stories_menu_widget-2" class="fl-widget widget_webads_syndicated_stories_menu_widget"><h4 class="fl-widget-title">US &#038; World News</h4> 
+   
+   <div><ul class="menu">
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/united-states/">US</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/sports/">Sports</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/entertainment/">Entertainment</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/technology/">Technology</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/political/">Politics</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/world/">World</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/business/">Business</a></li>
+   <li class="menu-item menu-item-type-taxonomy"><a href="https://www.greenecountyheraldonline.com/syndicated_category/health/">Health</a></li>
+   </ul></div>   
+   
+   </aside></div><div class="col-sm-4 col-md-4 fl-page-footer-widget-col fl-page-footer-widget-col-3"><aside id="nav_menu-5" class="fl-widget widget_nav_menu"><h4 class="fl-widget-title">Odds &#038; Ends</h4><div class="menu-footer-menu-3-container"><ul id="menu-footer-menu-3" class="menu"><li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="https://www.greenecountyheraldonline.com/crossword/">Crossword Puzzle</a></li>
+<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217"><a href="https://www.greenecountyheraldonline.com/event-calendar/">Event Calendar</a></li>
+<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="https://www.greenecountyheraldonline.com/photos/">Photo Galleries</a></li>
+</ul></div></aside></div>		</div>
+	</div>
+</div><!-- .fl-page-footer-widgets -->
+<div class="fl-page-footer">
+	<div class="fl-page-footer-container container">
+		<div class="fl-page-footer-row row">
+			<div class="col-md-12 text-center clearfix"><div class="fl-page-footer-text fl-page-footer-text-1">This website is powered by <a href="http://www.websitesfornewspapers.com" target="_blank"><i><strong>WebsitesForNewspapers.com</strong></i></a></div></div>					</div>
+	</div>
+</div><!-- .fl-page-footer -->
+	</footer>
+	
+<script type="text/javascript" >				
+				window.addEventListener('DOMContentLoaded', function () {
+					setTimeout(function(){
+						if( document.querySelectorAll('[name^=ct_checkjs]').length > 0 ) {
+			                apbct_public_sendAJAX(
+			                    { action: 'apbct_js_keys__get' },
+			                    { callback: apbct_js_keys__set_input_value, apbct_ajax: 1 }
+			                );
+			            }
+					},0);					    
+				});				
+			</script><link rel='stylesheet' id='font-awesome-5-css'  href='https://www.greenecountyheraldonline.com/wp-content/plugins/bb-plugin/fonts/fontawesome/5.15.1/css/all.min.css?ver=2.4.2.2' media='all' />
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/adrotate-pro/library/jquery.adrotate.dyngroup.js' id='adrotate-dyngroup-js'></script>
+<script src='https://www.google.com/recaptcha/api.js?ver=84c973c085f6feba33b42e8c91cddad1' id='recaptcha-scripts-js'></script>
+<script id='wp-polls-js-extra'>
+var pollsL10n = {"ajax_url":"https:\/\/www.greenecountyheraldonline.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/webads-polls/polls-js.js?ver=2.72' id='wp-polls-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/ecwd-frontend-event-management/js/autocomplete.js?ver=1.0.13' id='sc_form-autocomplete-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/bb-plugin/js/jquery.ba-throttle-debounce.min.js?ver=2.4.2.2' id='jquery-throttle-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/bb-plugin/js/jquery.magnificpopup.min.js?ver=2.4.2.2' id='jquery-magnificpopup-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js?ver=1.2' id='jquery-fitvids-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme/js/bootstrap.min.js?ver=1.7.9' id='bootstrap-js'></script>
+<script id='fl-automator-js-extra'>
+var themeopts = {"medium_breakpoint":"992","mobile_breakpoint":"768"};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.9' id='fl-automator-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-includes/js/wp-embed.min.js?ver=84c973c085f6feba33b42e8c91cddad1' id='wp-embed-js'></script>
+<script id='formidable-js-extra'>
+var frm_js = {"ajax_url":"https:\/\/www.greenecountyheraldonline.com\/wp-admin\/admin-ajax.php","images_url":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/formidable\/images","loading":"Loading\u2026","remove":"Remove","offset":"4","nonce":"78169d34c1","id":"ID","no_results":"No results match","file_spam":"That file looks like Spam.","calc_error":"There is an error in the calculation in the field with key","empty_fields":"Please complete the preceding required fields before uploading a file."};
+var frm_js = {"ajax_url":"https:\/\/www.greenecountyheraldonline.com\/wp-admin\/admin-ajax.php","images_url":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/formidable\/images","loading":"Loading\u2026","remove":"Remove","offset":"4","nonce":"78169d34c1","id":"ID","no_results":"No results match","file_spam":"That file looks like Spam.","calc_error":"There is an error in the calculation in the field with key","empty_fields":"Please complete the preceding required fields before uploading a file."};
+var frm_js = {"ajax_url":"https:\/\/www.greenecountyheraldonline.com\/wp-admin\/admin-ajax.php","images_url":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/formidable\/images","loading":"Loading\u2026","remove":"Remove","offset":"4","nonce":"78169d34c1","id":"ID","no_results":"No results match","file_spam":"That file looks like Spam.","calc_error":"There is an error in the calculation in the field with key","empty_fields":"Please complete the preceding required fields before uploading a file."};
+var frm_js = {"ajax_url":"https:\/\/www.greenecountyheraldonline.com\/wp-admin\/admin-ajax.php","images_url":"https:\/\/www.greenecountyheraldonline.com\/wp-content\/plugins\/formidable\/images","loading":"Loading\u2026","remove":"Remove","offset":"4","nonce":"78169d34c1","id":"ID","no_results":"No results match","file_spam":"That file looks like Spam.","calc_error":"There is an error in the calculation in the field with key","empty_fields":"Please complete the preceding required fields before uploading a file."};
+</script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/formidable/js/formidable.min.js?ver=4.02.03' id='formidable-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/formidable-pro/js/formidablepro.min.js?ver=4.02.03' id='formidablepro-js'></script>
+<script src='https://www.greenecountyheraldonline.com/wp-content/plugins/formidable-pro/js/dropzone.min.js?ver=5.5.0' id='dropzone-js'></script>
+
+<script>
+/*<![CDATA[*/
+var frmrules={"182":{"fieldId":"182","fieldKey":"30v9j","fieldType":"select","inputType":"select","isMultiSelect":false,"formId":"9","inSection":"0","inEmbedForm":"0","isRepeating":false,"dependents":["183"],"showHide":"show","anyAll":"any","conditions":[]},"183":{"fieldId":"183","fieldKey":"fe42i","fieldType":"file","inputType":"file","isMultiSelect":false,"formId":"9","inSection":"0","inEmbedForm":"0","isRepeating":false,"dependents":[],"showHide":"show","anyAll":"any","conditions":[{"fieldId":"182","operator":"==","value":"With Photo ($27.00)"}],"status":"complete"}};
+if(typeof __FRMRULES == 'undefined'){__FRMRULES=frmrules;}
+else{__FRMRULES=jQuery.extend({},__FRMRULES,frmrules);}var frmHide=["183"];if(typeof __frmHideOrShowFields == "undefined"){__frmHideOrShowFields=frmHide;}else{__frmHideOrShowFields=jQuery.extend(__frmHideOrShowFields,frmHide);}__frmDropzone=[{"maxFilesize":516,"maxFiles":1,"htmlID":"file183","uploadMultiple":false,"fieldID":"183","formID":"9","parentFormID":"9","fieldName":"item_meta[183]","mockFiles":[],"defaultMessage":"Drop files here to upload","fallbackMessage":"Your browser does not support drag and drop file uploads.","fallbackText":"Please use the fallback form below to upload your files like in the olden days.","fileTooBig":"That file is too big. It must be less than {{maxFilesize}}MB.","invalidFileType":"Sorry, this file type is not permitted.","responseError":"Server responded with {{statusCode}} code.","cancel":"Cancel upload","cancelConfirm":"Are you sure you want to cancel this upload?","remove":"Remove file","maxFilesExceeded":"You have uploaded more than 1 file(s).","resizeHeight":null,"resizeWidth":null,"timeout":30000}];/*]]>*/
+</script>
+<!-- AdRotate JS -->
+<script type="text/javascript">
+jQuery(document).ready(function(){if(jQuery.fn.gslider) {
+	jQuery('.g-1').gslider({groupid:1,speed:6000,repeat_impressions:'Y'});
+}});
+</script>
+<!-- /AdRotate JS -->
+
+</body>
+</html>

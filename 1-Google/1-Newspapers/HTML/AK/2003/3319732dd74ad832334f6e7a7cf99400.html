@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.4",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let r=e.getAttribute("data-rocket-src");if(r&&0!==r.indexOf("data:")){0===r.indexOf("//")&&(r=location.protocol+r);try{let i=new URL(r).origin;i!==location.origin&&t.push({src:i,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(n){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){if(await this._littleBreath(),!0===t.noModule&&"noModule"in HTMLScriptElement.prototype){t.setAttribute("data-rocket-status","skipped");return}return new Promise(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(){let t={};function e(e,r){!function e(r){!t[r]&&(t[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),t[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),t[r].originalFunctions.remove.apply(r,arguments)});function i(e){return t[r].eventsToRewrite.indexOf(e)>=0?"rocket-"+e:e}}(e),t[e].eventsToRewrite.push(r)}function r(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}e(document,"DOMContentLoaded"),e(window,"DOMContentLoaded"),e(window,"load"),e(window,"pageshow"),e(document,"readystatechange"),r(document,"onreadystatechange"),r(window,"onload"),r(window,"onpageshow")}_delayJQueryReady(t){let e;function r(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}function i(i){if(i&&i.fn&&!t.allJQueries.includes(i)){i.fn.ready=i.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(i):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(i)),i([])};let n=i.fn.on;i.fn.on=i.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=r(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{let e=arguments[0][t];delete arguments[0][t],arguments[0][r(t)]=e})),n.apply(this,arguments),this},t.allJQueries.push(i)}e=i}i(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){i(t)}})}async _pendingWebpackRequests(t){let e=document.querySelector("script[data-webpack]");async function r(){return new Promise(t=>{e.addEventListener("load",t),e.addEventListener("error",t)})}e&&(await r(),await t._requestAnimFrame(),await t._pendingWebpackRequests(t))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<title>The Seward Phoenix Log — Breaking News, Latest News Headlines, Business and Celebrity News</title>
+<meta name="description" content="Breaking News, Latest News Headlines, Business and Celebrity News." />
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" id="rb-preload-gfonts" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A%2C600%2C400%2C700%7COutfit%3A700%2C900%7CAlexandria%3A700%2C400%2C500%2C900%2C600%7COxygen%3A400%2C700%7CEncode+Sans+Condensed%3A400%2C500%2C600%2C700%2C800%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap" crossorigin><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A%2C600%2C400%2C700%7COutfit%3A700%2C900%7CAlexandria%3A700%2C400%2C500%2C900%2C600%7COxygen%3A400%2C700%7CEncode+Sans+Condensed%3A400%2C500%2C600%2C700%2C800%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap"></noscript><link rel="canonical" href="https://www.thesewardphoenixlog.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home" />
+<meta property="og:description" content="Breaking News, Latest News Headlines, Business and Celebrity News." />
+<meta property="og:url" content="https://www.thesewardphoenixlog.com/" />
+<meta property="og:site_name" content="The Seward Phoenix Log" />
+<meta property="article:publisher" content="https://www.facebook.com/SewardPhxLog" />
+<meta property="article:modified_time" content="2023-10-27T05:23:30+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@SewardPhxLog" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.thesewardphoenixlog.com/","url":"https://www.thesewardphoenixlog.com/","name":"The Seward Phoenix Log — Breaking News, Latest News Headlines, Business and Celebrity News","isPartOf":{"@id":"https://www.thesewardphoenixlog.com/#website"},"about":{"@id":"https://www.thesewardphoenixlog.com/#organization"},"datePublished":"2022-11-26T07:09:23+00:00","dateModified":"2023-10-27T05:23:30+00:00","description":"Breaking News, Latest News Headlines, Business and Celebrity News.","breadcrumb":{"@id":"https://www.thesewardphoenixlog.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.thesewardphoenixlog.com/"]}]},{"@type":"BreadcrumbList","@id":"https://www.thesewardphoenixlog.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.thesewardphoenixlog.com/#website","url":"https://www.thesewardphoenixlog.com/","name":"The Seward Phoenix Log","description":"Breaking News, Latest News Headlines, Business and Celebrity News","publisher":{"@id":"https://www.thesewardphoenixlog.com/#organization"},"alternateName":"The Seward Phoenix Log","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.thesewardphoenixlog.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.thesewardphoenixlog.com/#organization","name":"The Seward Phoenix Log","url":"https://www.thesewardphoenixlog.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.thesewardphoenixlog.com/#/schema/logo/image/","url":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/favicon.png","contentUrl":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/favicon.png","width":500,"height":500,"caption":"The Seward Phoenix Log"},"image":{"@id":"https://www.thesewardphoenixlog.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/SewardPhxLog","https://twitter.com/SewardPhxLog","https://mastodon.social/@thesewardphoenixlog"]}]}</script>
+<link rel="me" href="https://mastodon.social/@thesewardphoenixlog" />
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+<link rel="dns-prefetch" href="//fundingchoicesmessages.google.com" />
+<link rel="alternate" type="application/rss+xml" title="The Seward Phoenix Log &raquo; Feed" href="https://www.thesewardphoenixlog.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Seward Phoenix Log &raquo; Comments Feed" href="https://www.thesewardphoenixlog.com/comments/feed/" />
+<meta name="description" content="Breaking News, Latest News Headlines, Business and Celebrity News"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","legalName":"The Seward Phoenix Log","url":"https://www.thesewardphoenixlog.com/","sameAs":["https://www.facebook.com/SewardPhxLog","https://www.twitter.com/SewardPhxLog"]}</script>
+<script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.thesewardphoenixlog.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="cf-frontend-style-inline-css">
+@font-face {
+	font-family: 'Main-Bold';
+	font-weight: 400;
+	src: url('https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/MAIN-Ultrabold.otf') format('OpenType');
+}
+@font-face {
+	font-family: 'Main-Regular';
+	font-weight: 400;
+	src: url('https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/MAIN-Regular.otf') format('OpenType');
+}
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id="safe-svg-svg-icon-style-inline-css">
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1709184939" media="all" />
+<link data-minify="1" rel="stylesheet" id="foxiz-elements-css" href="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/plugins/foxiz-core/lib/foxiz-elements/public/style.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="elementor-frontend-css" href="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.19.4" media="all" />
+<link data-minify="1" rel="stylesheet" id="swiper-css" href="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="elementor-post-159-css" href="https://www.thesewardphoenixlog.com/wp-content/uploads/elementor/css/post-159.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="elementor-pro-css" href="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.16.2" media="all" />
+<link rel="stylesheet" id="elementor-post-3022-css" href="https://www.thesewardphoenixlog.com/wp-content/uploads/elementor/css/post-3022.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="elementor-post-3028-css" href="https://www.thesewardphoenixlog.com/wp-content/uploads/elementor/css/post-3028.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="elementor-post-2261-css" href="https://www.thesewardphoenixlog.com/wp-content/uploads/elementor/css/post-2261.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="elementor-post-4200-css" href="https://www.thesewardphoenixlog.com/wp-content/uploads/elementor/css/post-4200.css?ver=1709184939" media="all" />
+<link data-minify="1" rel="stylesheet" id="foxiz-main-css" href="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/themes/TSPL/assets/css/main.css?ver=1709184939" media="all" />
+<link data-minify="1" rel="stylesheet" id="foxiz-print-css" href="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/themes/TSPL/assets/css/print.css?ver=1709184939" media="all" />
+<link rel="stylesheet" id="foxiz-style-css" href="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/style.css?ver=2.2.3" media="all" />
+<style id="foxiz-style-inline-css">
+:root {--body-family:Source Sans Pro, Arial, Helvetica, sans-serif;--body-fweight:400;--body-fcolor:#04102f;--body-fsize:18px;--h1-family:Outfit;--h1-fweight:700;--h1-fsize:48px;--h2-family:Outfit;--h2-fweight:700;--h2-fsize:38px;--h3-family:Outfit;--h3-fweight:700;--h3-fsize:26px;--h4-family:Outfit;--h4-fweight:700;--h4-fsize:22px;--h5-family:Outfit;--h5-fweight:700;--h5-fsize:18px;--h6-family:Outfit;--h6-fweight:700;--h6-fsize:16px;--cat-family:Alexandria;--cat-fweight:700;--cat-transform:uppercase;--cat-fsize:12px;--meta-family:Alexandria;--meta-fweight:400;--meta-transform:uppercase;--meta-fsize:11px;--meta-b-family:Alexandria;--meta-b-fweight:500;--meta-b-transform:uppercase;--meta-b-fcolor:#333333;--input-family:Source Sans Pro;--input-fweight:400;--btn-family:Alexandria;--btn-fweight:700;--menu-family:Alexandria;--menu-fweight:700;--submenu-family:Alexandria;--submenu-fweight:600;--dwidgets-family:Alexandria;--dwidgets-fweight:700;--dwidgets-fsize:14px;--headline-family:Outfit;--headline-fweight:900;--headline-fsize:52px;--tagline-family:Alexandria;--tagline-fweight:500;--tagline-fsize:17px;--heading-family:Alexandria;--heading-fweight:700;--subheading-family:Source Sans Pro;--subheading-fweight:700;--subheading-fsize:18px;--quote-family:Alexandria;--quote-fweight:900;--excerpt-family:Source Sans Pro;--excerpt-fweight:600;--bcrumb-family:Alexandria;--bcrumb-fweight:500;--excerpt-fsize : 15px;--headline-s-fsize : 48px;--tagline-s-fsize : 17px;}@media (max-width: 1024px) {body {--body-fsize : 17px;--h1-fsize : 38px;--h2-fsize : 27px;--h3-fsize : 24px;--h4-fsize : 20px;--h5-fsize : 16px;--h6-fsize : 14px;--excerpt-fsize : 14px;--headline-fsize : 38px;--headline-s-fsize : 38px;--tagline-fsize : 14px;--tagline-s-fsize : 14px;}}@media (max-width: 767px) {body {--body-fsize : 16px;--h1-fsize : 32px;--h2-fsize : 24px;--h3-fsize : 22px;--h4-fsize : 18px;--h5-fsize : 16px;--h6-fsize : 14px;--excerpt-fsize : 13px;--headline-fsize : 32px;--headline-s-fsize : 32px;--tagline-fsize : 14px;--tagline-s-fsize : 14px;}}:root {--g-color :#1e73be;--g-color-90 :#1e73bee6;--dark-accent :#001839;--dark-accent-90 :#001839e6;--dark-accent-0 :#00183900;--indicator-bg-from :#ff9c00;--indicator-bg-to :#fde042;--indicator-height :2px;}[data-theme="dark"], .light-scheme {--solid-white :#0f131c;--dark-accent :#04102f;--dark-accent-90 :#04102fe6;--dark-accent-0 :#04102f00;--meta-b-fcolor :#ffffff;}[data-theme="dark"].is-hd-4 {--nav-bg: #191c20;--nav-bg-from: #191c20;--nav-bg-to: #191c20;}[data-theme="dark"].is-hd-5, [data-theme="dark"].is-hd-5:not(.sticky-on) {--nav-bg: #191c20;--nav-bg-from: #191c20;--nav-bg-to: #191c20;}:root {--mbnav-bg: #2563eb;--mbnav-bg-from: #2563eb;--mbnav-bg-to: #001839;--submbnav-bg: #001839;--submbnav-bg-from: #001839;--submbnav-bg-to: #001839;--mbnav-color :#ffffff;--submbnav-color :#ffffff;--submbnav-color-10 :#ffffff1a;}[data-theme="dark"] {--mbnav-color :#ffffff;--submbnav-color :#ffffff;}:root {--round-3 :7px;--round-5 :10px;--round-7 :15px;--hyperlink-weight :700;--hyperlink-style :italic;--slideup-bg :rgba(0,0,0,0.07);--max-width-wo-sb : 840px;--s10-feat-ratio :45%;--s11-feat-ratio :45%;}.p-readmore { font-family:Alexandria;font-weight:700;}.mobile-menu > li > a  { font-family:Alexandria;font-weight:600;font-size:14px;}.mobile-menu .sub-menu a, .logged-mobile-menu a { font-family:Alexandria;font-weight:700;font-size:17px;}.mobile-qview a { font-family:Alexandria;font-weight:700;}.search-header:before { background-color : #001839;background-repeat : no-repeat;background-size : cover;background-attachment : scroll;background-position : center center;}[data-theme="dark"] .search-header:before { background-repeat : no-repeat;background-size : cover;background-attachment : scroll;background-position : center center;}.footer-has-bg { background-color : #0000000a;}[data-theme="dark"] .footer-has-bg { background-color : #16181c;}#amp-mobile-version-switcher { display: none; }.search-icon-svg { -webkit-mask-image: url(https://foxiz.themeruby.com/enterprise/wp-content/uploads/sites/2/2022/12/search.svg);mask-image: url(https://foxiz.themeruby.com/enterprise/wp-content/uploads/sites/2/2022/12/search.svg); }@media (min-width: 1025px) { .grid-container > .sidebar-wrap { flex: 0 0 15%; width: 15%; } .grid-container > .s-ct { flex: 0 0 84.9%; width: 84.9%; }  }
+</style>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+
+<script type="rocketlazyloadscript" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-KDZTDGN" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.thesewardphoenixlog.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-KDZTDGN");
+</script>
+
+<script data-minify="1" src="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/themes/TSPL/assets/js/highlight-share.js?ver=1700325075" id="highlight-share-js"></script>
+<link rel="preload" href="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/assets/fonts/icons.woff2" as="font" type="font/woff2" crossorigin="anonymous"> <link rel="https://api.w.org/" href="https://www.thesewardphoenixlog.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.thesewardphoenixlog.com/wp-json/wp/v2/pages/3022" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.thesewardphoenixlog.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.3" />
+<link rel="shortlink" href="https://www.thesewardphoenixlog.com/" />
+<link rel="alternate" type="application/json+oembed" href="https://www.thesewardphoenixlog.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thesewardphoenixlog.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.thesewardphoenixlog.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thesewardphoenixlog.com%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.127.0" /><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Home">
+<meta name="twitter:description" content="Home">
+<meta name="twitter:image" content>
+<meta property="og:url" content="https://www.thesewardphoenixlog.com?p=3022" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content />
+<meta property="og:description" content />
+<meta property="og:image" content />
+<meta property="og:image:width" content="620" />
+<meta property="og:image:height" content="541" />
+<style>
+
+    /* for unique landing page accent color values,  put any new css added here inside tcb-bridge/js/editor */
+
+    /* accent color */
+    #thrive-comments .tcm-color-ac,
+    #thrive-comments .tcm-color-ac span {
+        color: #001839;
+    }
+
+    /* accent color background */
+    #thrive-comments .tcm-background-color-ac,
+    #thrive-comments .tcm-background-color-ac-h:hover span,
+    #thrive-comments .tcm-background-color-ac-active:active {
+        background-color: #001839    }
+
+    /* accent color border */
+    #thrive-comments .tcm-border-color-ac {
+        border-color: #001839;
+        outline: none;
+    }
+
+    #thrive-comments .tcm-border-color-ac-h:hover {
+        border-color: #001839;
+    }
+
+    #thrive-comments .tcm-border-bottom-color-ac {
+        border-bottom-color: #001839;
+    }
+
+    /* accent color fill*/
+    #thrive-comments .tcm-svg-fill-ac {
+        fill: #001839;
+    }
+
+    /* accent color for general elements */
+
+    /* inputs */
+    #thrive-comments textarea:focus,
+    #thrive-comments input:focus {
+        border-color: #001839;
+        box-shadow: inset 0 0 3px#001839;
+    }
+
+    /* links */
+    #thrive-comments a {
+        color: #001839;
+    }
+
+    /*
+	* buttons and login links
+	* using id to override the default css border-bottom
+	*/
+    #thrive-comments button,
+    #thrive-comments #tcm-login-up,
+    #thrive-comments #tcm-login-down {
+        color: #001839;
+        border-color: #001839;
+    }
+
+    /* general buttons hover and active functionality */
+    #thrive-comments button:hover,
+    #thrive-comments button:focus,
+    #thrive-comments button:active {
+        background-color: #001839    }
+
+</style>
+
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+
+<meta name="generator" content="Elementor 3.19.4; features: e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.thesewardphoenixlog.com/#website","url":"https://www.thesewardphoenixlog.com/","name":"The Seward Phoenix Log","potentialAction":{"@type":"SearchAction","target":"https://www.thesewardphoenixlog.com/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1717436065940888&amp;host=ca-host-pub-2644536267352236" crossorigin="anonymous"></script>
+
+
+<script type="rocketlazyloadscript" async data-rocket-src="https://fundingchoicesmessages.google.com/i/pub-1717436065940888?ers=1" nonce="CEII3hoYJpglPH_B3RTrbw"></script><script type="rocketlazyloadscript" nonce="CEII3hoYJpglPH_B3RTrbw">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+
+
+<script type="rocketlazyloadscript">(function(){'use strict';function aa(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}var ba="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a};
+function ea(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");}var fa=ea(this);function ha(a,b){if(b)a:{var c=fa;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&null!=b&&ba(c,a,{configurable:!0,writable:!0,value:b})}}
+var ia="function"==typeof Object.create?Object.create:function(a){function b(){}b.prototype=a;return new b},l;if("function"==typeof Object.setPrototypeOf)l=Object.setPrototypeOf;else{var m;a:{var ja={a:!0},ka={};try{ka.__proto__=ja;m=ka.a;break a}catch(a){}m=!1}l=m?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}var la=l;
+function n(a,b){a.prototype=ia(b.prototype);a.prototype.constructor=a;if(la)la(a,b);else for(var c in b)if("prototype"!=c)if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.A=b.prototype}function ma(){for(var a=Number(this),b=[],c=a;c<arguments.length;c++)b[c-a]=arguments[c];return b}
+var na="function"==typeof Object.assign?Object.assign:function(a,b){for(var c=1;c<arguments.length;c++){var d=arguments[c];if(d)for(var e in d)Object.prototype.hasOwnProperty.call(d,e)&&(a[e]=d[e])}return a};ha("Object.assign",function(a){return a||na});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+var p=this||self;function q(a){return a};var t,u;a:{for(var oa=["CLOSURE_FLAGS"],v=p,x=0;x<oa.length;x++)if(v=v[oa[x]],null==v){u=null;break a}u=v}var pa=u&&u[610401301];t=null!=pa?pa:!1;var z,qa=p.navigator;z=qa?qa.userAgentData||null:null;function A(a){return t?z?z.brands.some(function(b){return(b=b.brand)&&-1!=b.indexOf(a)}):!1:!1}function B(a){var b;a:{if(b=p.navigator)if(b=b.userAgent)break a;b=""}return-1!=b.indexOf(a)};function C(){return t?!!z&&0<z.brands.length:!1}function D(){return C()?A("Chromium"):(B("Chrome")||B("CriOS"))&&!(C()?0:B("Edge"))||B("Silk")};var ra=C()?!1:B("Trident")||B("MSIE");!B("Android")||D();D();B("Safari")&&(D()||(C()?0:B("Coast"))||(C()?0:B("Opera"))||(C()?0:B("Edge"))||(C()?A("Microsoft Edge"):B("Edg/"))||C()&&A("Opera"));var sa={},E=null;var ta="undefined"!==typeof Uint8Array,ua=!ra&&"function"===typeof btoa;var F="function"===typeof Symbol&&"symbol"===typeof Symbol()?Symbol():void 0,G=F?function(a,b){a[F]|=b}:function(a,b){void 0!==a.g?a.g|=b:Object.defineProperties(a,{g:{value:b,configurable:!0,writable:!0,enumerable:!1}})};function va(a){var b=H(a);1!==(b&1)&&(Object.isFrozen(a)&&(a=Array.prototype.slice.call(a)),I(a,b|1))}
+var H=F?function(a){return a[F]|0}:function(a){return a.g|0},J=F?function(a){return a[F]}:function(a){return a.g},I=F?function(a,b){a[F]=b}:function(a,b){void 0!==a.g?a.g=b:Object.defineProperties(a,{g:{value:b,configurable:!0,writable:!0,enumerable:!1}})};function wa(){var a=[];G(a,1);return a}function xa(a,b){I(b,(a|0)&-99)}function K(a,b){I(b,(a|34)&-73)}function L(a){a=a>>11&1023;return 0===a?536870912:a};var M={};function N(a){return null!==a&&"object"===typeof a&&!Array.isArray(a)&&a.constructor===Object}var O,ya=[];I(ya,39);O=Object.freeze(ya);var P;function Q(a,b){P=b;a=new a(b);P=void 0;return a}
+function R(a,b,c){null==a&&(a=P);P=void 0;if(null==a){var d=96;c?(a=[c],d|=512):a=[];b&&(d=d&-2095105|(b&1023)<<11)}else{if(!Array.isArray(a))throw Error();d=H(a);if(d&64)return a;d|=64;if(c&&(d|=512,c!==a[0]))throw Error();a:{c=a;var e=c.length;if(e){var f=e-1,g=c[f];if(N(g)){d|=256;b=(d>>9&1)-1;e=f-b;1024<=e&&(za(c,b,g),e=1023);d=d&-2095105|(e&1023)<<11;break a}}b&&(g=(d>>9&1)-1,b=Math.max(b,e-g),1024<b&&(za(c,g,{}),d|=256,b=1023),d=d&-2095105|(b&1023)<<11)}}I(a,d);return a}
+function za(a,b,c){for(var d=1023+b,e=a.length,f=d;f<e;f++){var g=a[f];null!=g&&g!==c&&(c[f-b]=g)}a.length=d+1;a[d]=c};function Aa(a){switch(typeof a){case "number":return isFinite(a)?a:String(a);case "boolean":return a?1:0;case "object":if(a&&!Array.isArray(a)&&ta&&null!=a&&a instanceof Uint8Array){if(ua){for(var b="",c=0,d=a.length-10240;c<d;)b+=String.fromCharCode.apply(null,a.subarray(c,c+=10240));b+=String.fromCharCode.apply(null,c?a.subarray(c):a);a=btoa(b)}else{void 0===b&&(b=0);if(!E){E={};c="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split("");d=["+/=","+/","-_=","-_.","-_"];for(var e=
+0;5>e;e++){var f=c.concat(d[e].split(""));sa[e]=f;for(var g=0;g<f.length;g++){var h=f[g];void 0===E[h]&&(E[h]=g)}}}b=sa[b];c=Array(Math.floor(a.length/3));d=b[64]||"";for(e=f=0;f<a.length-2;f+=3){var k=a[f],w=a[f+1];h=a[f+2];g=b[k>>2];k=b[(k&3)<<4|w>>4];w=b[(w&15)<<2|h>>6];h=b[h&63];c[e++]=g+k+w+h}g=0;h=d;switch(a.length-f){case 2:g=a[f+1],h=b[(g&15)<<2]||d;case 1:a=a[f],c[e]=b[a>>2]+b[(a&3)<<4|g>>4]+h+d}a=c.join("")}return a}}return a};function Ba(a,b,c){a=Array.prototype.slice.call(a);var d=a.length,e=b&256?a[d-1]:void 0;d+=e?-1:0;for(b=b&512?1:0;b<d;b++)a[b]=c(a[b]);if(e){b=a[b]={};for(var f in e)Object.prototype.hasOwnProperty.call(e,f)&&(b[f]=c(e[f]))}return a}function Da(a,b,c,d,e,f){if(null!=a){if(Array.isArray(a))a=e&&0==a.length&&H(a)&1?void 0:f&&H(a)&2?a:Ea(a,b,c,void 0!==d,e,f);else if(N(a)){var g={},h;for(h in a)Object.prototype.hasOwnProperty.call(a,h)&&(g[h]=Da(a[h],b,c,d,e,f));a=g}else a=b(a,d);return a}}
+function Ea(a,b,c,d,e,f){var g=d||c?H(a):0;d=d?!!(g&32):void 0;a=Array.prototype.slice.call(a);for(var h=0;h<a.length;h++)a[h]=Da(a[h],b,c,d,e,f);c&&c(g,a);return a}function Fa(a){return a.s===M?a.toJSON():Aa(a)};function Ga(a,b,c){c=void 0===c?K:c;if(null!=a){if(ta&&a instanceof Uint8Array)return b?a:new Uint8Array(a);if(Array.isArray(a)){var d=H(a);if(d&2)return a;if(b&&!(d&64)&&(d&32||0===d))return I(a,d|34),a;a=Ea(a,Ga,d&4?K:c,!0,!1,!0);b=H(a);b&4&&b&2&&Object.freeze(a);return a}a.s===M&&(b=a.h,c=J(b),a=c&2?a:Q(a.constructor,Ha(b,c,!0)));return a}}function Ha(a,b,c){var d=c||b&2?K:xa,e=!!(b&32);a=Ba(a,b,function(f){return Ga(f,e,d)});G(a,32|(c?2:0));return a};function Ia(a,b){a=a.h;return Ja(a,J(a),b)}function Ja(a,b,c,d){if(-1===c)return null;if(c>=L(b)){if(b&256)return a[a.length-1][c]}else{var e=a.length;if(d&&b&256&&(d=a[e-1][c],null!=d))return d;b=c+((b>>9&1)-1);if(b<e)return a[b]}}function Ka(a,b,c,d,e){var f=L(b);if(c>=f||e){e=b;if(b&256)f=a[a.length-1];else{if(null==d)return;f=a[f+((b>>9&1)-1)]={};e|=256}f[c]=d;e&=-1025;e!==b&&I(a,e)}else a[c+((b>>9&1)-1)]=d,b&256&&(d=a[a.length-1],c in d&&delete d[c]),b&1024&&I(a,b&-1025)}
+function La(a,b){var c=Ma;var d=void 0===d?!1:d;var e=a.h;var f=J(e),g=Ja(e,f,b,d);var h=!1;if(null==g||"object"!==typeof g||(h=Array.isArray(g))||g.s!==M)if(h){var k=h=H(g);0===k&&(k|=f&32);k|=f&2;k!==h&&I(g,k);c=new c(g)}else c=void 0;else c=g;c!==g&&null!=c&&Ka(e,f,b,c,d);e=c;if(null==e)return e;a=a.h;f=J(a);f&2||(g=e,c=g.h,h=J(c),g=h&2?Q(g.constructor,Ha(c,h,!1)):g,g!==e&&(e=g,Ka(a,f,b,e,d)));return e}function Na(a,b){a=Ia(a,b);return null==a||"string"===typeof a?a:void 0}
+function Oa(a,b){a=Ia(a,b);return null!=a?a:0}function S(a,b){a=Na(a,b);return null!=a?a:""};function T(a,b,c){this.h=R(a,b,c)}T.prototype.toJSON=function(){var a=Ea(this.h,Fa,void 0,void 0,!1,!1);return Pa(this,a,!0)};T.prototype.s=M;T.prototype.toString=function(){return Pa(this,this.h,!1).toString()};
+function Pa(a,b,c){var d=a.constructor.v,e=L(J(c?a.h:b)),f=!1;if(d){if(!c){b=Array.prototype.slice.call(b);var g;if(b.length&&N(g=b[b.length-1]))for(f=0;f<d.length;f++)if(d[f]>=e){Object.assign(b[b.length-1]={},g);break}f=!0}e=b;c=!c;g=J(a.h);a=L(g);g=(g>>9&1)-1;for(var h,k,w=0;w<d.length;w++)if(k=d[w],k<a){k+=g;var r=e[k];null==r?e[k]=c?O:wa():c&&r!==O&&va(r)}else h||(r=void 0,e.length&&N(r=e[e.length-1])?h=r:e.push(h={})),r=h[k],null==h[k]?h[k]=c?O:wa():c&&r!==O&&va(r)}d=b.length;if(!d)return b;
+var Ca;if(N(h=b[d-1])){a:{var y=h;e={};c=!1;for(var ca in y)Object.prototype.hasOwnProperty.call(y,ca)&&(a=y[ca],Array.isArray(a)&&a!=a&&(c=!0),null!=a?e[ca]=a:c=!0);if(c){for(var rb in e){y=e;break a}y=null}}y!=h&&(Ca=!0);d--}for(;0<d;d--){h=b[d-1];if(null!=h)break;var cb=!0}if(!Ca&&!cb)return b;var da;f?da=b:da=Array.prototype.slice.call(b,0,d);b=da;f&&(b.length=d);y&&b.push(y);return b};function Qa(a){return function(b){if(null==b||""==b)b=new a;else{b=JSON.parse(b);if(!Array.isArray(b))throw Error(void 0);G(b,32);b=Q(a,b)}return b}};function Ra(a){this.h=R(a)}n(Ra,T);var Sa=Qa(Ra);var U;function V(a){this.g=a}V.prototype.toString=function(){return this.g+""};var Ta={};function Ua(){return Math.floor(2147483648*Math.random()).toString(36)+Math.abs(Math.floor(2147483648*Math.random())^Date.now()).toString(36)};function Va(a,b){b=String(b);"application/xhtml+xml"===a.contentType&&(b=b.toLowerCase());return a.createElement(b)}function Wa(a){this.g=a||p.document||document}Wa.prototype.appendChild=function(a,b){a.appendChild(b)};/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+function Xa(a,b){a.src=b instanceof V&&b.constructor===V?b.g:"type_error:TrustedResourceUrl";var c,d;(c=(b=null==(d=(c=(a.ownerDocument&&a.ownerDocument.defaultView||window).document).querySelector)?void 0:d.call(c,"script[nonce]"))?b.nonce||b.getAttribute("nonce")||"":"")&&a.setAttribute("nonce",c)};function Ya(a){a=void 0===a?document:a;return a.createElement("script")};function Za(a,b,c,d,e,f){try{var g=a.g,h=Ya(g);h.async=!0;Xa(h,b);g.head.appendChild(h);h.addEventListener("load",function(){e();d&&g.head.removeChild(h)});h.addEventListener("error",function(){0<c?Za(a,b,c-1,d,e,f):(d&&g.head.removeChild(h),f())})}catch(k){f()}};var $a=p.atob("aHR0cHM6Ly93d3cuZ3N0YXRpYy5jb20vaW1hZ2VzL2ljb25zL21hdGVyaWFsL3N5c3RlbS8xeC93YXJuaW5nX2FtYmVyXzI0ZHAucG5n"),ab=p.atob("WW91IGFyZSBzZWVpbmcgdGhpcyBtZXNzYWdlIGJlY2F1c2UgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlIGlzIGludGVyZmVyaW5nIHdpdGggdGhpcyBwYWdlLg=="),bb=p.atob("RGlzYWJsZSBhbnkgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlLCB0aGVuIHJlbG9hZCB0aGlzIHBhZ2Uu");function db(a,b,c){this.i=a;this.l=new Wa(this.i);this.g=null;this.j=[];this.m=!1;this.u=b;this.o=c}
+function eb(a){if(a.i.body&&!a.m){var b=function(){fb(a);p.setTimeout(function(){return gb(a,3)},50)};Za(a.l,a.u,2,!0,function(){p[a.o]||b()},b);a.m=!0}}
+function fb(a){for(var b=W(1,5),c=0;c<b;c++){var d=X(a);a.i.body.appendChild(d);a.j.push(d)}b=X(a);b.style.bottom="0";b.style.left="0";b.style.position="fixed";b.style.width=W(100,110).toString()+"%";b.style.zIndex=W(2147483544,2147483644).toString();b.style["background-color"]=hb(249,259,242,252,219,229);b.style["box-shadow"]="0 0 12px #888";b.style.color=hb(0,10,0,10,0,10);b.style.display="flex";b.style["justify-content"]="center";b.style["font-family"]="Roboto, Arial";c=X(a);c.style.width=W(80,
+85).toString()+"%";c.style.maxWidth=W(750,775).toString()+"px";c.style.margin="24px";c.style.display="flex";c.style["align-items"]="flex-start";c.style["justify-content"]="center";d=Va(a.l.g,"IMG");d.className=Ua();d.src=$a;d.alt="Warning icon";d.style.height="24px";d.style.width="24px";d.style["padding-right"]="16px";var e=X(a),f=X(a);f.style["font-weight"]="bold";f.textContent=ab;var g=X(a);g.textContent=bb;Y(a,e,f);Y(a,e,g);Y(a,c,d);Y(a,c,e);Y(a,b,c);a.g=b;a.i.body.appendChild(a.g);b=W(1,5);for(c=
+0;c<b;c++)d=X(a),a.i.body.appendChild(d),a.j.push(d)}function Y(a,b,c){for(var d=W(1,5),e=0;e<d;e++){var f=X(a);b.appendChild(f)}b.appendChild(c);c=W(1,5);for(d=0;d<c;d++)e=X(a),b.appendChild(e)}function W(a,b){return Math.floor(a+Math.random()*(b-a))}function hb(a,b,c,d,e,f){return"rgb("+W(Math.max(a,0),Math.min(b,255)).toString()+","+W(Math.max(c,0),Math.min(d,255)).toString()+","+W(Math.max(e,0),Math.min(f,255)).toString()+")"}function X(a){a=Va(a.l.g,"DIV");a.className=Ua();return a}
+function gb(a,b){0>=b||null!=a.g&&0!=a.g.offsetHeight&&0!=a.g.offsetWidth||(ib(a),fb(a),p.setTimeout(function(){return gb(a,b-1)},50))}
+function ib(a){var b=a.j;var c="undefined"!=typeof Symbol&&Symbol.iterator&&b[Symbol.iterator];if(c)b=c.call(b);else if("number"==typeof b.length)b={next:aa(b)};else throw Error(String(b)+" is not an iterable or ArrayLike");for(c=b.next();!c.done;c=b.next())(c=c.value)&&c.parentNode&&c.parentNode.removeChild(c);a.j=[];(b=a.g)&&b.parentNode&&b.parentNode.removeChild(b);a.g=null};function jb(a,b,c,d,e){function f(k){document.body?g(document.body):0<k?p.setTimeout(function(){f(k-1)},e):b()}function g(k){k.appendChild(h);p.setTimeout(function(){h?(0!==h.offsetHeight&&0!==h.offsetWidth?b():a(),h.parentNode&&h.parentNode.removeChild(h)):a()},d)}var h=kb(c);f(3)}function kb(a){var b=document.createElement("div");b.className=a;b.style.width="1px";b.style.height="1px";b.style.position="absolute";b.style.left="-10000px";b.style.top="-10000px";b.style.zIndex="-10000";return b};function Ma(a){this.h=R(a)}n(Ma,T);function lb(a){this.h=R(a)}n(lb,T);var mb=Qa(lb);function nb(a){a=Na(a,4)||"";if(void 0===U){var b=null;var c=p.trustedTypes;if(c&&c.createPolicy){try{b=c.createPolicy("goog#html",{createHTML:q,createScript:q,createScriptURL:q})}catch(d){p.console&&p.console.error(d.message)}U=b}else U=b}a=(b=U)?b.createScriptURL(a):a;return new V(a,Ta)};function ob(a,b){this.m=a;this.o=new Wa(a.document);this.g=b;this.j=S(this.g,1);this.u=nb(La(this.g,2));this.i=!1;b=nb(La(this.g,13));this.l=new db(a.document,b,S(this.g,12))}ob.prototype.start=function(){pb(this)};
+function pb(a){qb(a);Za(a.o,a.u,3,!1,function(){a:{var b=a.j;var c=p.btoa(b);if(c=p[c]){try{var d=Sa(p.atob(c))}catch(e){b=!1;break a}b=b===Na(d,1)}else b=!1}b?Z(a,S(a.g,14)):(Z(a,S(a.g,8)),eb(a.l))},function(){jb(function(){Z(a,S(a.g,7));eb(a.l)},function(){return Z(a,S(a.g,6))},S(a.g,9),Oa(a.g,10),Oa(a.g,11))})}function Z(a,b){a.i||(a.i=!0,a=new a.m.XMLHttpRequest,a.open("GET",b,!0),a.send())}function qb(a){var b=p.btoa(a.j);a.m[b]&&Z(a,S(a.g,5))};(function(a,b){p[a]=function(){var c=ma.apply(0,arguments);p[a]=function(){};b.apply(null,c)}})("__h82AlnkH6D91__",function(a){"function"===typeof window.atob&&(new ob(window,mb(window.atob(a)))).start()});}).call(this);
+
+window.__h82AlnkH6D91__("WyJwdWItMTcxNzQzNjA2NTk0MDg4OCIsW251bGwsbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9iL3B1Yi0xNzE3NDM2MDY1OTQwODg4Il0sbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9lbC9BR1NLV3hYQ2ttYWJzclZoN0x2bmtra01FNkMxeTFrT0FwVWZiY0lIVFFmLXZlNVZsY3E4TFM0T01MQmg3WjZwSE1vVzZxa1ZSQVRrckx1SGx5QjBxZUF1bVRDNHlRXHUwMDNkXHUwMDNkP3RlXHUwMDNkVE9LRU5fRVhQT1NFRCIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFY4aGhXUWVwQk1tdzUyNm5PdU5rUnA0RjNTS3N6YTc4WmJsLVNOLTJUYW9UaE5BcWxqV3hYak04MVBjemxjMTJPZkZMeG54dmt1cVhHT2NudWRKdFBpdlFcdTAwM2RcdTAwM2Q/YWJcdTAwM2QxXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFZXaEtXZHItRFEwSGV4RzJ6LUh3dy05ZnZQNFkxZU1pQXlRUzN0M2ZROFlqd2ZpSGltcGRUYXN2TzZWRnQ5d290NTU5Q2NUQjhhbWx4T214a1NxV3JueHdcdTAwM2RcdTAwM2Q/YWJcdTAwM2QyXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFdBeXQyUTRLRUt0bzlVMEREcTk4NkRoQThBWkFhVXQ1UHNQWjJjVkJFRjBjNGVKRnRTUGd4Y09sYlFDbnEwNEMzMHVRYWZ5dTFpLWIxWHhybTR6SlNZTWdcdTAwM2RcdTAwM2Q/c2JmXHUwMDNkMiIsImRpdi1ncHQtYWQiLDIwLDEwMCwiY0hWaUxURTNNVGMwTXpZd05qVTVOREE0T0RnXHUwMDNkIixbbnVsbCxudWxsLG51bGwsImh0dHBzOi8vd3d3LmdzdGF0aWMuY29tLzBlbW4vZi9wL3B1Yi0xNzE3NDM2MDY1OTQwODg4LmpzP3VzcXBcdTAwM2RDQUkiXSwiaHR0cHM6Ly9mdW5kaW5nY2hvaWNlc21lc3NhZ2VzLmdvb2dsZS5jb20vZWwvQUdTS1d4VUZPdG5IaXpWNENuTkR0UU40VHlQTVpMNUZVVjBwNTRQT3RLZ1ZJT2VhU3lnc3RWVHkyXzRmRWFuamkwazFhbjNUWnFNRnVERlNmQy1XbUpja1RUYlNDZ1x1MDAzZFx1MDAzZCJd");</script>
+
+<meta property="og:title" content="Home" />
+<meta property="og:url" content="https://www.thesewardphoenixlog.com/" />
+<meta property="og:site_name" content="The Seward Phoenix Log" />
+<meta property="og:description" content />
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.thesewardphoenixlog.com/","name":"Home"}}]}</script>
+<link rel="icon" href="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/favicon-32x32-2.png" sizes="32x32" />
+<link rel="icon" href="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/favicon-32x32-2.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/favicon-32x32-2.png" />
+<meta name="msapplication-TileImage" content="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/favicon-32x32-2.png" />
+<style id="wp-custom-css">
+			/* scrollbar starts on line 31 */
+
+/* fonts and basic setup */
+.bio-description div {
+    font-weight: bold;
+}
+
+.container {
+  background-color: #fdfdfd;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 28px rgba(123,151,158,.25);
+  border: 1px solid #d6dee1;
+  padding: 1rem;
+  overflow: scroll;
+}
+
+body, html {
+    overflow: auto; /* or overflow-y: auto; for vertical scrolling */
+}
+
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+.e-shared-header{
+	font-size: medium !important;
+}
+
+.s-title:not(.fw-headline) {
+    font-size: 38px !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .s-title:not(.fw-headline) {
+        font-size: 23px !important;
+    }
+}
+
+.comment-box-header > * {
+    display: flex;
+    align-items: center;
+    font-size: medium;
+}
+
+#thrive-comments .tcm-comments-filters {
+    font-size: medium !important;
+    color: #393939;
+}
+
+#thrive-comments .tcm-comments-filters label {
+	font-size: medium !important;
+}
+
+.right #tcm-sort-by.tcm-dropdown .tcm-toggle-button.current-sorting {
+	font-size: medium !important;
+}
+
+#thrive-comments .tcm-comment-additional-fields .inner .tcm-guest input {
+	font-size: medium !important;
+}
+
+#thrive-comments p { 
+	font-size: medium !important;
+}
+
+#thrive-comments textarea {
+	font-size: large !important;
+}
+
+.collapse-activated .mobile-collapse {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.header-search-form .h5 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.collapse-footer {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+.collapse-inner > *:last-child {
+    padding-bottom: 100% !important;
+}
+.mobile-login {
+	display: none;
+}
+
+.mobile-social-title, .privacy-content {
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.collapse-activated .mobile-collapse {
+    visibility: visible;
+    flex-grow: 1;
+    height: 1000px !important;
+    opacity: 1;
+    margin-bottom: 0;
+   	overflow-y: hidden; 
+	  align-items: center;
+}
+
+i.rbi.rbi-youtube  {
+    display: none;
+}
+
+a.social-link-youtube {
+	displaY: none;
+}
+
+@media screen and (min-width: 768px) { /* 768px is a common breakpoint for tablets and above */
+    .elementor-2261 .elementor-element.elementor-element-aa6a002 {
+        width: 100% !important;
+    }
+}
+
+.bio-avatar {
+    padding: 0px !important;
+}
+
+.bio-title {
+ text-decoration-line: none;
+}
+
+.collapse-holder {
+    padding-bottom: 100% !important;
+}
+
+.collapse-inner {
+    position: absolute !important;
+}
+
+.meta-separate:after {
+    opacity: var(--meta-style-o, 10) !important;
+}
+
+.e-shared-header h4 {
+  font-size: small !important;
+		text-transform: uppercase !important;
+}
+
+.e-shared-header {
+  font-size: small !important;
+		text-transform: uppercase !important;
+}		</style>
+</head>
+<body class="home page-template-default page page-id-3022 wp-custom-logo wp-embed-responsive elementor-default elementor-kit-159 elementor-page elementor-page-3022 menu-ani-3 hover-ani-3 btn-ani-1 is-rm-1 lmeta-dot loader-1 is-hd-rb_template is-backtop none-m-backtop  is-jscount" data-theme="default">
+<div class="site-outer">
+<div id="site-header" class="header-wrap rb-section header-template">
+<div class="navbar-outer navbar-template-outer">
+<div id="header-template-holder"><div class="header-template-inner"> <div data-elementor-type="wp-post" data-elementor-id="3028" class="elementor elementor-3028" data-elementor-post-type="rb-etemplate">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-ac26f8f elementor-section-content-middle e-section-sticky elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ac26f8f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;header_sticky&quot;:&quot;section-sticky&quot;,&quot;background_motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;}">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-0cb8589" data-id="0cb8589" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-22f2855 elementor-widget elementor-widget-foxiz-logo" data-id="22f2855" data-element_type="widget" data-widget_type="foxiz-logo.default">
+<div class="elementor-widget-container">
+<div class="the-logo">
+<a href="https://www.thesewardphoenixlog.com/">
+<img fetchpriority="high" loading="eager" decoding="async" width="3000" height="595" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2022/11/The-Seward-Phoenix-Log-White.png" alt="the-seward-phoenix-log-white" />
+</a>
+<h1 class="logo-title hidden">The Seward Phoenix Log</h1>
+<p class="site-description hidden">Breaking News, Latest News Headlines, Business and Celebrity News</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-f3c036c" data-id="f3c036c" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-84afe52 is-divider-pipe elementor-widget__width-initial elementor-widget elementor-widget-foxiz-navigation" data-id="84afe52" data-element_type="widget" data-widget_type="foxiz-navigation.default">
+<div class="elementor-widget-container">
+<nav id="site-navigation" class="main-menu-wrap template-menu" aria-label="main menu">
+<ul id="menu-header" class="main-menu rb-menu large-menu" itemscope itemtype="https://www.schema.org/SiteNavigationElement"><li id="menu-item-4309" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4309"><a href="https://www.thesewardphoenixlog.com/category/news/"><span>Latest</span></a></li>
+<li id="menu-item-4311" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4311"><a href="https://www.thesewardphoenixlog.com/category/entertainment/"><span>Entertainment</span></a></li>
+<li id="menu-item-4310" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4310"><a href="https://www.thesewardphoenixlog.com/category/world/"><span>World</span></a></li>
+<li id="menu-item-4312" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4312"><a href="https://www.thesewardphoenixlog.com/category/business/"><span>Business</span></a></li>
+<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-161"><a href="https://www.thesewardphoenixlog.com/about/"><span>About</span></a>
+<ul class="sub-menu">
+<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="https://www.thesewardphoenixlog.com/editorial-policy/"><span>Editorial Policy</span></a></li>
+<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="https://www.thesewardphoenixlog.com/terms-of-use/"><span>Terms of Use</span></a></li>
+<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-165"><a href="https://www.thesewardphoenixlog.com/privacy-policy/"><span>Privacy Policy</span></a></li>
+<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="https://www.thesewardphoenixlog.com/fact-checking-policy/"><span>Fact-Checking Policy</span></a></li>
+<li id="menu-item-4569" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4569"><a href="https://www.thesewardphoenixlog.com/disclaimer/"><span>Disclaimer</span></a></li>
+</ul>
+</li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="https://www.thesewardphoenixlog.com/contact/"><span>Contact</span></a></li>
+</ul> </nav>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-0c416b8" data-id="0c416b8" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-e27a7d4 elementor-widget__width-initial elementor-widget elementor-widget-foxiz-search-icon" data-id="e27a7d4" data-element_type="widget" data-widget_type="foxiz-search-icon.default">
+<div class="elementor-widget-container">
+<div class="wnav-holder w-header-search header-dropdown-outer">
+<a href="#" data-title="Search" class="icon-holder header-element search-btn search-trigger" aria-label="search">
+<span class="search-icon-svg"></span> </a>
+<div class="header-dropdown">
+<div class="header-search-form is-icon-layout">
+<form method="get" action="https://www.thesewardphoenixlog.com/" class="rb-search-form live-search-form" data-search="post" data-limit="2" data-follow="0">
+<div class="search-form-inner">
+<span class="search-icon"><span class="search-icon-svg"></span></span>
+<span class="search-text"><input type="text" class="field" placeholder="Search …" value name="s" /></span>
+<span class="rb-search-submit"><input type="submit" value="Search" /><i class="rbi rbi-cright" aria-hidden="true"></i></span>
+<span class="live-search-animation rb-loader"></span>
+</div>
+<div class="live-search-response light-scheme"></div> </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div> <div id="header-mobile" class="header-mobile">
+<div class="header-mobile-wrap">
+<div data-elementor-type="wp-post" data-elementor-id="4200" class="elementor elementor-4200" data-elementor-post-type="rb-etemplate">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-f5ab970 elementor-section-content-middle e-section-sticky elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="f5ab970" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;header_sticky&quot;:&quot;section-sticky&quot;,&quot;background_motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;}">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2d14575" data-id="2d14575" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-a477b6e elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-foxiz-logo" data-id="a477b6e" data-element_type="widget" data-widget_type="foxiz-logo.default">
+<div class="elementor-widget-container">
+<div class="the-logo">
+<a href="https://www.thesewardphoenixlog.com/">
+<img fetchpriority="high" loading="eager" decoding="async" width="3000" height="595" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2022/11/The-Seward-Phoenix-Log-White.png" alt="the-seward-phoenix-log-white" />
+</a>
+<h1 class="logo-title hidden">The Seward Phoenix Log</h1>
+<p class="site-description hidden">Breaking News, Latest News Headlines, Business and Celebrity News</p>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-ea5fb57 elementor-absolute elementor-widget-mobile__width-initial elementor-widget elementor-widget-foxiz-collapse-toggle" data-id="ea5fb57" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="foxiz-collapse-toggle.default">
+<div class="elementor-widget-container">
+<div class="mobile-toggle-wrap">
+<a href="#" class="mobile-menu-trigger" aria-label="mobile trigger"> <span class="burger-icon"><span></span><span></span><span></span></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="mobile-collapse">
+<div class="collapse-holder">
+<div class="collapse-inner">
+<div class="mobile-search-form edge-padding"> <div class="header-search-form is-form-layout">
+<span class="h5">Search</span>
+<form method="get" action="https://www.thesewardphoenixlog.com/" class="rb-search-form" data-search="post" data-limit="0" data-follow="0">
+<div class="search-form-inner">
+<span class="search-icon"><span class="search-icon-svg"></span></span>
+<span class="search-text"><input type="text" class="field" placeholder="Search Headlines, News..." value name="s" /></span>
+<span class="rb-search-submit"><input type="submit" value="Search" /><i class="rbi rbi-cright" aria-hidden="true"></i></span>
+</div>
+</form>
+</div>
+</div>
+<nav class="mobile-menu-wrap edge-padding">
+<ul id="mobile-menu" class="mobile-menu"><li id="menu-item-4434" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4434"><a href="https://www.thesewardphoenixlog.com/category/news/"><span>Latest</span></a></li>
+<li id="menu-item-4435" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4435"><a href="https://www.thesewardphoenixlog.com/category/world/"><span>World</span></a></li>
+<li id="menu-item-4436" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4436"><a href="https://www.thesewardphoenixlog.com/category/business/"><span>Business</span></a></li>
+<li id="menu-item-4437" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4437"><a href="https://www.thesewardphoenixlog.com/category/entertainment/"><span>Entertainment</span></a></li>
+</ul> </nav>
+<div class="collapse-sections">
+<div class="mobile-socials">
+<span class="mobile-social-title h6">Follow US</span>
+<a class="social-link-facebook" aria-label="Facebook" data-title="Facebook" href="https://www.facebook.com/SewardPhxLog" target="_blank" rel="noopener"><i class="rbi rbi-facebook" aria-hidden="true"></i></a><a class="social-link-twitter" aria-label="Twitter" data-title="Twitter" href="https://www.twitter.com/SewardPhxLog" target="_blank" rel="noopener"><i class="rbi rbi-twitter" aria-hidden="true"></i></a><a class="social-link-youtube" aria-label="YouTube" data-title="YouTube" href="#" target="_blank" rel="noopener"><i class="rbi rbi-youtube" aria-hidden="true"></i></a> </div>
+</div>
+<div class="collapse-footer">
+<div class="collapse-copyright">Copyright © 2023 The Seward Phoenix Log. All Rights Reserved.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="site-wrap"> <div data-elementor-type="wp-page" data-elementor-id="3022" class="elementor elementor-3022" data-elementor-post-type="page">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-f4565d9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f4565d9" data-element_type="section">
+<div class="elementor-container elementor-column-gap-custom">
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-0705fa9" data-id="0705fa9" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-d726edd elementor-widget elementor-widget-foxiz-heading" data-id="d726edd" data-element_type="widget" data-widget_type="foxiz-heading.default">
+<div class="elementor-widget-container">
+<div id="uid_d726edd" class="block-h heading-layout-2"><div class="heading-inner"><h4 class="heading-title"><span>Breaking News</span></h4></div></div> </div>
+</div>
+<div class="elementor-element elementor-element-457b117 elementor-widget elementor-widget-foxiz-grid-2" data-id="457b117" data-element_type="widget" data-widget_type="foxiz-grid-2.default">
+<div class="elementor-widget-container">
+<div id="uid_457b117" class="block-wrap block-grid block-grid-2 rb-columns rb-col-1 rb-tcol-1 rb-mcol-2 is-gap-custom meta-s-dot"><div class="block-inner"> <div class="p-wrap p-grid p-grid-2" data-pid="100">
+<div class="feat-holder"> <div class="p-featured">
+<a class="p-flink" href="https://www.thesewardphoenixlog.com/torrent-pharma-q2-profit-rises-by-24-sees-varied-global-revenues-100/" title="Torrent Pharma Q2 profit rises by 24%; Sees Varied Global Revenues">
+<img loading="lazy" decoding="async" width="330" height="176" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/Torrent-Pharma.png" class="featured-img wp-post-image" alt="torrent-pharma" loading="lazy" /> </a>
+</div>
+</div>
+<h4 class="entry-title"> <a class="p-url" href="https://www.thesewardphoenixlog.com/torrent-pharma-q2-profit-rises-by-24-sees-varied-global-revenues-100/" rel="bookmark">Torrent Pharma Q2 profit rises by 24%; Sees Varied Global Revenues</a></h4> </div>
+<div class="p-wrap p-grid p-grid-2" data-pid="4859">
+<div class="feat-holder"> <div class="p-featured">
+<a class="p-flink" href="https://www.thesewardphoenixlog.com/chinas-didi-posts-first-quarterly-profit-since-2021-plans-1-billion-share-buyback-4859/" title="China&#8217;s Didi Posts First Quarterly Profit Since 2021, Plans $1 Billion Share Buyback">
+<img loading="lazy" decoding="async" width="330" height="220" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/11/DiDi-App-330x220.jpg" class="featured-img wp-post-image" alt="didi-app" loading="lazy" /> </a>
+</div>
+</div>
+<h4 class="entry-title"> <a class="p-url" href="https://www.thesewardphoenixlog.com/chinas-didi-posts-first-quarterly-profit-since-2021-plans-1-billion-share-buyback-4859/" rel="bookmark">China&#8217;s Didi Posts First Quarterly Profit Since 2021, Plans $1 Billion Share Buyback</a></h4> </div>
+</div></div> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1136b4a" data-id="1136b4a" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-4a6fe63 elementor-widget elementor-widget-foxiz-grid-2" data-id="4a6fe63" data-element_type="widget" data-widget_type="foxiz-grid-2.default">
+<div class="elementor-widget-container">
+<div id="uid_4a6fe63" class="block-wrap block-grid block-grid-2 rb-columns rb-col-1 rb-tcol-1 rb-mcol-1 is-gap-20 ecat-text ecat-size-big meta-s-dot"><div class="block-inner"> <div class="p-wrap p-grid p-grid-2" data-pid="124">
+<div class="feat-holder"> <div class="p-featured">
+<a class="p-flink" href="https://www.thesewardphoenixlog.com/elon-musks-spacex-to-launch-europes-navigation-and-communication-satellites-124/" title="Elon Musk&#8217;s SpaceX to Launch Europe&#8217;s Navigation and Communication Satellites">
+<img loading="lazy" decoding="async" width="860" height="573" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/Spacex.jpg" class="featured-img wp-post-image" alt="spacex" loading="lazy" /> </a>
+</div>
+</div>
+<div class="p-categories p-top"><a class="p-category category-id-10" href="https://www.thesewardphoenixlog.com/category/business/" rel="category">Business</a><a class="p-category category-id-9" href="https://www.thesewardphoenixlog.com/category/world/" rel="category">World</a></div><h2 class="entry-title"> <a class="p-url" href="https://www.thesewardphoenixlog.com/elon-musks-spacex-to-launch-europes-navigation-and-communication-satellites-124/" rel="bookmark">Elon Musk&#8217;s SpaceX to Launch Europe&#8217;s Navigation and Communication Satellites</a></h2><p class="entry-summary mobile-hide">SpaceX has inked an agreement with the European Space Agency (ESA) to send up to four of Europe's pivotal navigation and secure communication satellites into&hellip;</p>
+</div>
+</div></div> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5eef460" data-id="5eef460" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-acb699b elementor-widget__width-auto elementor-absolute elementor-view-default elementor-widget elementor-widget-icon" data-id="acb699b" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<div class="elementor-icon">
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-27a4126 elementor-widget elementor-widget-foxiz-heading" data-id="27a4126" data-element_type="widget" data-widget_type="foxiz-heading.default">
+<div class="elementor-widget-container">
+<div id="uid_27a4126" class="block-h heading-layout-c5"><div class="heading-inner"><h5 class="heading-title"><span>Most Read</span></h5></div></div> </div>
+</div>
+<div class="elementor-element elementor-element-1d4f50c elementor-widget elementor-widget-foxiz-list-small-1" data-id="1d4f50c" data-element_type="widget" data-widget_type="foxiz-list-small-1.default">
+<div class="elementor-widget-container">
+<div id="uid_1d4f50c" class="block-wrap block-small block-list block-list-small-1 rb-columns rb-col-1 rb-tcol-4 rb-mcol-1 is-gap-custom ecat-border is-counter-inline meta-s-dot"><div class="block-inner"> <div class="p-wrap p-small p-list-small-1" data-pid="67">
+<div class="p-content">
+<div class="p-categories p-top"><a class="p-category category-id-1" href="https://www.thesewardphoenixlog.com/category/news/" rel="category">News</a><a class="p-category category-id-9" href="https://www.thesewardphoenixlog.com/category/world/" rel="category">World</a></div><h4 class="entry-title counter-el"> <a class="p-url" href="https://www.thesewardphoenixlog.com/where-to-watch-astros-vs-rangers-today-live-stream-and-preview-67/" rel="bookmark">Where to Watch Astros vs. Rangers Today? Live Stream and Preview</a></h4> </div>
+</div>
+<div class="p-wrap p-small p-list-small-1" data-pid="14">
+<div class="p-content">
+<div class="p-categories p-top"><a class="p-category category-id-8" href="https://www.thesewardphoenixlog.com/category/entertainment/" rel="category">Entertainment</a><a class="p-category category-id-1" href="https://www.thesewardphoenixlog.com/category/news/" rel="category">News</a><a class="p-category category-id-9" href="https://www.thesewardphoenixlog.com/category/world/" rel="category">World</a></div><h4 class="entry-title counter-el"> <a class="p-url" href="https://www.thesewardphoenixlog.com/jawan-defies-expectations-with-rs-635-crore-in-sixth-week-14/" rel="bookmark">&#8220;Jawan&#8221; Defies Expectations with Rs 635 Crore in Sixth Week</a></h4> </div>
+</div>
+<div class="p-wrap p-small p-list-small-1" data-pid="128">
+<div class="p-content">
+<div class="p-categories p-top"><a class="p-category category-id-1" href="https://www.thesewardphoenixlog.com/category/news/" rel="category">News</a><a class="p-category category-id-9" href="https://www.thesewardphoenixlog.com/category/world/" rel="category">World</a></div><h4 class="entry-title counter-el"> <a class="p-url" href="https://www.thesewardphoenixlog.com/international-snow-leopard-day-5-interesting-facts-about-the-mountain-ghost-128/" rel="bookmark">International Snow Leopard Day: 5 Interesting Facts About the Mountain Ghost</a></h4> </div>
+</div>
+</div></div> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-d020a00 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d020a00" data-element_type="section">
+<div class="elementor-container elementor-column-gap-custom">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a922adf" data-id="a922adf" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-143d169 elementor-widget elementor-widget-foxiz-heading" data-id="143d169" data-element_type="widget" data-widget_type="foxiz-heading.default">
+<div class="elementor-widget-container">
+<div id="uid_143d169" class="block-h heading-layout-4"><div class="heading-inner"><h4 class="heading-title"><span>Latest</span></h4></div></div> </div>
+</div>
+<div class="elementor-element elementor-element-7e72df6 elementor-widget__width-auto elementor-absolute elementor-view-default elementor-widget elementor-widget-icon" data-id="7e72df6" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<div class="elementor-icon">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-4f13224 e-flex e-con-boxed e-con e-parent" data-id="4f13224" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+<div class="e-con-inner">
+<div class="elementor-element elementor-element-8d7c936 elementor-widget elementor-widget-foxiz-list-box-2" data-id="8d7c936" data-element_type="widget" data-widget_type="foxiz-list-box-2.default">
+<div class="elementor-widget-container">
+<div id="uid_8d7c936" class="block-wrap block-big block-list block-list-box-2 ecat-text ecat-size-big is-feat-left meta-s-dot"><div class="block-inner"> <div class="p-wrap p-list p-box p-list-2 p-list-box-2 box-bg" data-pid="5057">
+<div class="list-box">
+<div class="list-holder">
+<div class="list-feat-holder">
+<div class="feat-holder"> <div class="p-featured">
+<a class="p-flink" href="https://www.thesewardphoenixlog.com/massachusetts-teen-died-after-participating-in-one-chip-challenge-autopsy-reveals-5057/" title="Massachusetts Teen Died After Participating in &#8216;One Chip Challenge&#8217;, Autopsy Reveals">
+<img loading="lazy" decoding="async" width="330" height="220" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2024/05/Harris-Wolobah-330x220.jpg" class="featured-img wp-post-image" alt="harris-wolobah" loading="lazy" /> </a>
+</div>
+</div>
+</div>
+<div class="p-content">
+<div class="p-categories p-top"><a class="p-category category-id-9" href="https://www.thesewardphoenixlog.com/category/world/" rel="category">World</a></div><h3 class="entry-title"> <a class="p-url" href="https://www.thesewardphoenixlog.com/massachusetts-teen-died-after-participating-in-one-chip-challenge-autopsy-reveals-5057/" rel="bookmark">Massachusetts Teen Died After Participating in &#8216;One Chip Challenge&#8217;, Autopsy Reveals</a></h3><p class="entry-summary">A 14-year-old Massachusetts teenager, Harris Wolobah, died of cardiac arrest after attempting&hellip;</p>
+<div class="p-meta">
+<div class="meta-inner is-meta">
+<span class="meta-el meta-avatar meta-el multiple-avatar">
+<img decoding="async" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/mason.svg" width="63" height="62.999997" alt="Mason Carter" class="avatar avatar-44 wp-user-avatar wp-user-avatar-44 alignnone photo" /> </span>
+<span class="meta-el meta-author co-authors">
+<span class="meta-separate">
+<a href="https://www.thesewardphoenixlog.com/author/mason/">Mason Carter</a>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-wrap p-list p-box p-list-2 p-list-box-2 box-bg" data-pid="5050">
+<div class="list-box">
+<div class="list-holder">
+<div class="list-feat-holder">
+<div class="feat-holder"> <div class="p-featured">
+<a class="p-flink" href="https://www.thesewardphoenixlog.com/worldcoin-faces-legal-setback-in-spain-as-court-maintains-suspension-of-biometric-data-collection-5050/" title="Worldcoin Faces Legal Setback in Spain as Court Maintains Suspension of Biometric Data Collection">
+<img loading="lazy" decoding="async" width="330" height="220" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2024/03/worldcoin-330x220.png" class="featured-img wp-post-image" alt="worldcoin" loading="lazy" /> </a>
+</div>
+</div>
+</div>
+<div class="p-content">
+<div class="p-categories p-top"><a class="p-category category-id-10" href="https://www.thesewardphoenixlog.com/category/business/" rel="category">Business</a></div><h3 class="entry-title"> <a class="p-url" href="https://www.thesewardphoenixlog.com/worldcoin-faces-legal-setback-in-spain-as-court-maintains-suspension-of-biometric-data-collection-5050/" rel="bookmark">Worldcoin Faces Legal Setback in Spain as Court Maintains Suspension of Biometric Data Collection</a></h3><p class="entry-summary">The Spanish National Court (Audiencia Nacional) has maintained the suspension of Worldcoin's&hellip;</p>
+<div class="p-meta">
+<div class="meta-inner is-meta">
+<span class="meta-el meta-avatar meta-el multiple-avatar">
+<img decoding="async" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/riley.svg" width="63" height="62.999997" alt="Riley Stratton" class="avatar avatar-44 wp-user-avatar wp-user-avatar-44 alignnone photo" /> </span>
+<span class="meta-el meta-author co-authors">
+<span class="meta-separate">
+<a href="https://www.thesewardphoenixlog.com/author/riley/">Riley Stratton</a>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-wrap p-list p-box p-list-2 p-list-box-2 box-bg" data-pid="5026">
+<div class="list-box">
+<div class="list-holder">
+<div class="list-feat-holder">
+<div class="feat-holder"> <div class="p-featured">
+<a class="p-flink" href="https://www.thesewardphoenixlog.com/btc-usd-bitcoin-bullish-streak-may-hit-a-speed-bump-but-150k-still-in-sight-5026/" title="BTC/USD: Bitcoin’s Bullish Streak May Hit a Speed Bump, But $150K Still in Sight">
+<img loading="lazy" decoding="async" width="330" height="220" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2024/02/bitcoin-330x220.png" class="featured-img wp-post-image" alt="bitcoin" loading="lazy" /> </a>
+</div>
+</div>
+</div>
+<div class="p-content">
+<div class="p-categories p-top"><a class="p-category category-id-10" href="https://www.thesewardphoenixlog.com/category/business/" rel="category">Business</a></div><h3 class="entry-title"> <a class="p-url" href="https://www.thesewardphoenixlog.com/btc-usd-bitcoin-bullish-streak-may-hit-a-speed-bump-but-150k-still-in-sight-5026/" rel="bookmark">BTC/USD: Bitcoin’s Bullish Streak May Hit a Speed Bump, But $150K Still in Sight</a></h3> <p class="entry-summary">Bitcoin's recent price surge has sparked a debate among analysts, with some&hellip;</p>
+<div class="p-meta">
+<div class="meta-inner is-meta">
+<span class="meta-el meta-avatar meta-el multiple-avatar">
+<img decoding="async" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/riley.svg" width="63" height="62.999997" alt="Riley Stratton" class="avatar avatar-44 wp-user-avatar wp-user-avatar-44 alignnone photo" /> </span>
+<span class="meta-el meta-author co-authors">
+<span class="meta-separate">
+<a href="https://www.thesewardphoenixlog.com/author/riley/">Riley Stratton</a>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> <div class="pagination-wrap pagination-loadmore">
+<a href="#" class="loadmore-trigger"><span>Show More</span><i class="rb-loader" aria-hidden="true"></i></a>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-3fb7899 e-flex e-con-boxed e-con e-parent" data-id="3fb7899" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+<div class="e-con-inner">
+<div class="elementor-element elementor-element-f43e8ae elementor-widget elementor-widget-spacer" data-id="f43e8ae" data-element_type="widget" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.19.0 - 28-02-2024 */
+.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container{height:100%;width:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty,.e-con>.elementor-widget-spacer.elementor-widget-empty{position:relative;min-height:22px;min-width:22px}.e-con-inner>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon,.e-con>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;padding:0;width:22px;height:22px}</style> <div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<span class="tve-leads-two-step-trigger tl-2step-trigger-0"></span><span class="tve-leads-two-step-trigger tl-2step-trigger-0"></span></div>
+<footer class="footer-wrap rb-section footer-etemplate">
+<div data-elementor-type="wp-post" data-elementor-id="2261" class="elementor elementor-2261" data-elementor-post-type="rb-etemplate">
+<div class="elementor-element elementor-element-aa6a002 e-flex e-con-boxed e-con e-parent" data-id="aa6a002" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+<div class="e-con-inner">
+<div class="elementor-element elementor-element-c31cedd e-con-full e-flex e-con e-child" data-id="c31cedd" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+<div class="elementor-element elementor-element-8c85284 elementor-widget elementor-widget-text-editor" data-id="8c85284" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.19.0 - 28-02-2024 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style> <p style="color: white; margin: margin: -15px 0px -4px 16px;"><img class="alignnone wp-image-4068" style="font-family: inherit; font-style: inherit; font-weight: inherit; color: var(--body-fcolor); letter-spacing: var(--body-fspace); text-transform: var(--body-transform);" src="https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/The-Seward-Phoenix-Log-Small-Logo-1-300x300.png" alt="the-seward-phoenix-log-small-logo-2" width="60" height="60" /></p> </div>
+</div>
+<div class="elementor-element elementor-element-ce541d1 elementor-widget elementor-widget-text-editor" data-id="ce541d1" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="footer-links" style="font-family: 'Verdana', Sans-serif; font-size: 12px; font-weight: bold; text-transform: uppercase; text-decoration: none; line-height: 1px; letter-spacing: 1.8px; word-spacing: 0px; margin-top: 23px; color: #ffffff; text-align: center;">
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/about/">About</a>
+<div class="hide-on-mobile">|</div>
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/about/#authors">Authors</a>
+<div class="hide-on-mobile">|</div>
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/editorial-policy/">Editorial Policy</a>
+<div class="hide-on-mobile">|</div>
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/terms-of-use/">Terms of Use</a>
+<div class="hide-on-mobile">|</div>
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/fact-checking-policy/">Fact Checking Policy</a>
+<div class="hide-on-mobile">|</div>
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/disclaimer/">Disclaimer</a>
+<div class="hide-on-mobile">|</div>
+<a style="color: #fff; text-decoration: none;" href="https://www.thesewardphoenixlog.com/contact/">Contact</a>
+</div>
+<div class="textwidget custom-html-widget"></div>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+	if (window.location.hash=="#securedrop") {
+		$("details").open=true;
+$("details#securedrophowto").open=true;
+}
+
+</script>
+<div style="text-align: center; margin-top: 30px; border-top: 1px solid #fff; padding-top: 10px;">
+<div>
+<a name="securedrop"></a>
+<details><summary class="tips-accordion" style="color: white; text-align: left; font-size: small;">Need to share a confidential news tip with The Seward Phoenix Log?</summary><details id="securedrophowto" style="color: white; text-align: left;"><summary style="color: white; text-align: left; font-size: small;">Send us an email.</summary>
+<p style="color: white; text-align: left; font-size: small;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1c5d8c1c2f1c5d9d4c2d4c6d0c3d5c1d9ded4dfd8c9ddded69fd2dedc">[email&#160;protected]</a></p>
+</details><details><summary style="color: white; text-align: left; font-size: small;">Send us physical mail.</summary>
+<p style="color: white; text-align: left; font-size: small;">Sending us physical mail is also an option that can preserve your anonymity, especially if you use a public mailbox:</p>
+<p style="color: white; text-align: left; font-size: small;">The Seward Phoenix Log
+539 W. Commerce St #3560
+Dallas, TX 75208</p>
+</details></details></div>
+<div class="copyright-info" style="font-size: xsmall;"><span class="item">© 2024 Seward Phoenix Log.</span>
+<span class="item">All Rights Reserved.</span></div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="rocketlazyloadscript">
+            (function () {
+                let currentMode = null;
+                const darkModeID = 'RubyDarkMode';
+				                currentMode = navigator.cookieEnabled ? localStorage.getItem(darkModeID) || null : 'default';
+                if (!currentMode) {
+					                    currentMode = 'default';
+                    localStorage.setItem(darkModeID, 'default');
+					                }
+                document.body.setAttribute('data-theme', currentMode === 'dark' ? 'dark' : 'default');
+				            })();
+		</script>
+<script type="rocketlazyloadscript">
+            (function () {
+				                const darkModeID = 'RubyDarkMode';
+                const currentMode = navigator.cookieEnabled ? (localStorage.getItem(darkModeID) || 'default') : 'default';
+                const selector = currentMode === 'dark' ? '.mode-icon-dark' : '.mode-icon-default';
+                const icons = document.querySelectorAll(selector);
+                if (icons.length) {
+                    icons.forEach(icon => icon.classList.add('activated'));
+                }
+				
+				                const readingSize = navigator.cookieEnabled ? sessionStorage.getItem('rubyResizerStep') || '' : '1';
+                if (readingSize) {
+                    const body = document.querySelector('body');
+                    switch (readingSize) {
+                        case '2':
+                            body.classList.add('medium-entry-size');
+                            break;
+                        case '3':
+                            body.classList.add('big-entry-size');
+                            break;
+                    }
+                }
+            })();
+		</script>
+<div style="display: none;">
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+<defs>
+<symbol id="tcm-reply" viewBox="0 0 100 100">
+<g>
+<path d="M69.9,38.1L69.9,38.1c-1.5-3.7-4.7-6.4-7.4-9.2c-2.8-2.8-6.3-4.7-9.9-6.3c-3.7-1.6-7.7-2.4-11.7-2.4h-11
+					l4.7-4.8c3.4-3.4,3.4-9,0-12.4c-3.4-3.4-8.9-3.4-12.2,0L2.8,22.7c-3.4,3.4-3.4,9,0,12.4l19.4,19.7c1.7,1.7,3.9,2.6,6.1,2.6
+					c2.2,0,4.4-0.9,6.1-2.6c3.4-3.4,3.4-9,0-12.4l-4.6-4.6h10.9c3.4,0,6.6,1.4,9.1,3.8l4.8,4.8c1.2,2,3,3.4,5.1,4.1
+					c2.1,0.6,4.5,0.4,6.6-0.7C70.5,47.5,72,42.3,69.9,38.1z" />
+<ellipse cx="81.1" cy="60.8" rx="8.5" ry="8.6" />
+</g>
+</symbol>
+<symbol id="tcm-icon-thumb_down" viewBox="0 0 24 24">
+<g>
+<path d="M18.984 3h4.031v12h-4.031v-12zM15 3c1.078 0 2.016 0.938 2.016 2.016v9.984c0 0.563-0.234 1.031-0.609
+			1.406l-6.563 6.609-1.078-1.078c-0.281-0.281-0.422-0.609-0.422-1.031v-0.328l0.984-4.594h-6.328c-1.078 0-2.016-0.891-2.016-1.969l0.047-0.094h-0.047v-1.922c0-0.281
+			0.047-0.516 0.141-0.75l3.047-7.031c0.281-0.703 0.984-1.219 1.828-1.219h9z" />
+</g>
+</symbol>
+<symbol id="tcm-icon-thumb_up" viewBox="0 0 24 24">
+<g>
+<path d="M23.016 9.984l-0.047 0.094h0.047v1.922c0 0.281-0.047 0.516-0.141 0.75l-3.047 7.031c-0.281 0.703-0.984
+			1.219-1.828 1.219h-9c-1.078 0-2.016-0.938-2.016-2.016v-9.984c0-0.563 0.234-1.031 0.609-1.406l6.563-6.609 1.078
+			1.078c0.281 0.281 0.422 0.609 0.422 1.031v0.328l-0.984 4.594h6.328c1.078 0 2.016 0.891 2.016 1.969zM0.984 21v-12h4.031v12h-4.031z" />
+</g>>
+</symbol>
+<symbol id="tcm-add-comment" viewBox="0 0 267.3 245">
+<path style="fill:#FFFFFF;" class="st0" d="M265.7,61C259.6,27.5,230.3,2,195.1,2H72.5C33,2,0.8,34.2,0.8,73.8v77c0,0.1,0,0.1,0,0.2v81.6
+			c0,0-1.8,11.1,9.7,11.1c0,0,4.2,1,13.1-4.6l46.8-43.2h124.6c39.5,0,71.7-32.2,71.7-71.7V83.8L265.7,61z M78.4,114
+			c-8.1,0-14.6-6.5-14.6-14.6c0-8.1,6.5-14.6,14.6-14.6S93,91.4,93,99.5C93,107.5,86.5,114,78.4,114z M137.5,114
+			c-8.1,0-14.6-6.5-14.6-14.6c0-8.1,6.5-14.6,14.6-14.6c8.1,0,14.6,6.5,14.6,14.6C152.1,107.5,145.5,114,137.5,114z M196.5,114
+			c-8.1,0-14.6-6.5-14.6-14.6c0-8.1,6.5-14.6,14.6-14.6c8.1,0,14.6,6.5,14.6,14.6C211.1,107.5,204.6,114,196.5,114z" />
+</symbol>
+<symbol id="tcm-logo-footer" viewBox="0 0 130 100">
+<path style="fill:#434343;" class="st0" d="M108.8,26.5C106.7,14.9,96.5,6.1,84.4,6.1H41.9C28.2,6.1,17,17.2,17,30.9v26.7c0,0,0,0,0,0.1v28.2
+			c0,0-0.6,3.8,3.4,3.8c0,0,1.5,0.4,4.6-1.6l16.2-14.9h12.1c0.1-0.2,0.3-0.4,0.4-0.6l2.2-3.1c0.4-0.6,1.9-2.3,3.1-3.6H37.6
+			c-1.1,0-2.1,0.6-2.8,1.4l0,0L24.1,78.6V58.2c0-0.2,0.1-0.4,0.1-0.6V30.9c0-9.7,7.9-17.6,17.6-17.6h42.5c9.7,0,17.6,7.9,17.6,17.6
+			v16.9c2.6-0.4,5.3-0.6,7.2-0.7V34.4L108.8,26.5z" />
+<path style="fill:#57A245;" class="st1" d="M43.7,39.9c-3.3,0-6-2.7-6-6c0-3.3,2.7-6,6-6h38.9c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6H43.7z" />
+<path style="fill:#434343;" class="st0" d="M43.7,52.2h38.9c2.4,0,4.3-1.9,4.3-4.3s-1.9-4.3-4.3-4.3H43.7c-2.4,0-4.3,1.9-4.3,4.3S41.3,52.2,43.7,52.2" />
+<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#57A245;" class="st2" d="M118.2,52.4c-1.2,0-1.6,0.2-2.4,0.5c-0.9,0.3-1.9,1-2.6,1.7l-1.8,1.7c-0.2,0.2-0.2,0.2-0.3,0.4
+			c-3.4,4.2-4.1,4.9-6.8,10.2c-1.2,2.5-2.7,4.8-4.2,7.1c-1,1.6-2,3.2-3.2,4.6c-0.1,0.2-0.2,0.2-0.3,0.4c-0.7,0.9-1.7,1.7-2.5,2.5
+			c-0.6,0.5-1.3,1-1.9,1.5c-0.6,0.4-1.1,0.8-1.7,1.1l-0.9,0.5c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0-0.3,0.2-0.4,0.2
+			c-0.2,0.1-0.4,0.2-0.5,0.2c-3.7,1.8-8.5,3-12.7,3.4L72.7,89c-0.8,0.1-2.8,0.2-4.7,0.2c-1.6,0-3,0-3.5-0.2l0.3-0.7
+			c0.6-1.4,1.3-2.8,2.1-4.1c0.1-0.2,0.2-0.4,0.4-0.6l1.5-2.6l3.9-5.3l3.5-3.6l0.2-0.2c0.2-0.1,0.2-0.1,0.3-0.2l0.8-0.7
+			c0.1-0.1,0.2-0.1,0.3-0.2c0.2-0.2,0.3-0.3,0.5-0.4l3.7-2.5c1.3-0.8,2.6-1.6,3.8-2.3l4-2.1c1.5-0.8,4-2.1,5.5-2.7l4.1-1.9
+			c-0.6,0.1-1.4,0.4-1.9,0.6c-0.6,0.2-1.3,0.4-1.9,0.6l-3.8,1.3c-1.8,0.6-3.6,1.4-5.5,2.1l-3.5,1.5c-1.3,0.5-3.3,1.6-4.7,2.3
+			c-1.5,0.8-2.9,1.8-4.3,2.6l-4.8,3.4c-0.1,0.1-0.2,0.2-0.4,0.3l-2.7,2.3c-0.8,0.8-1.8,1.7-2.5,2.5c-0.2,0.2-0.2,0.2-0.3,0.4
+			c-0.7,0.7-1.3,1.6-1.9,2.4c-0.9,1.2-1.8,2.5-2.5,3.8l-1.3,2.5c-0.5,1-2.7,6-2.8,7.4h-0.2c0-0.2-0.5-2.5-0.7-4.4v-1.6
+			c0-0.1,0-0.1,0-0.2c0.2-1.1,0.1-1.8,0.3-3.1c0.6-3.6,2.2-7.4,4.2-10.4l2.1-3c0.6-0.8,2.8-3.4,3.5-3.8c0.6-0.5,1.2-1.3,1.9-1.8
+			c0.3-0.2,0.6-0.5,0.9-0.8c0.4-0.2,0.6-0.5,1-0.8l2-1.5c2-1.5,4.2-2.8,6.4-3.8c2.4-1.2,4.7-2.1,7.2-3.1c3.2-1.3,7.6-2.2,10.9-2.9
+			c3.5-0.7,12.3-2.3,16.6-2.3h0.9C114,51.2,117.4,51.2,118.2,52.4z" />
+<path style="fill:none;" class="st3" d="M99.5,58.5c0.4,0,0.2,0,0.2-0.1C99.4,58.4,99.6,58.4,99.5,58.5z M99.5,58.5c0.1-0.1-0.1-0.1,0.2-0.1
+			C99.7,58.5,99.9,58.5,99.5,58.5 M99.9,58.3l-0.1,0.1 M99.5,58.5c-0.6,0.1-1.4,0.4-1.9,0.6c-0.6,0.2-1.3,0.4-1.9,0.6l-3.8,1.3
+			c-1.8,0.6-3.6,1.4-5.5,2.1l-3.5,1.5c-1.3,0.5-3.3,1.6-4.7,2.3c-1.5,0.8-2.9,1.8-4.3,2.6l-4.8,3.4c-0.1,0.1-0.2,0.2-0.4,0.3l-2.7,2.3
+			c-0.8,0.8-1.8,1.7-2.5,2.5c-0.2,0.2-0.2,0.2-0.3,0.4c-0.7,0.7-1.3,1.6-1.9,2.4c-0.9,1.2-1.8,2.5-2.5,3.8l-1.3,2.5
+			c-0.5,1-2.7,6-2.8,7.4h-0.2c0-0.2-0.5-2.5-0.7-4.4v-1.6c0-0.1,0-0.1,0-0.2c0.2-1.1,0.1-1.8,0.3-3.1c0.6-3.6,2.2-7.4,4.2-10.4l2.1-3
+			c0.6-0.8,2.8-3.4,3.5-3.8c0.6-0.5,1.2-1.3,1.9-1.8c0.3-0.2,0.6-0.5,0.9-0.8c0.4-0.2,0.6-0.5,1-0.8l2-1.5c2-1.5,4.2-2.8,6.4-3.8
+			c2.4-1.2,4.7-2.1,7.2-3.1c3.2-1.3,7.6-2.2,10.9-2.9c3.5-0.7,12.3-2.3,16.6-2.3h0h0.2h0.6c2.2,0,5.6,0.1,6.4,1.3
+			c-1.2,0-1.6,0.2-2.4,0.5c-0.9,0.3-1.9,1-2.6,1.7l-1.8,1.7c-0.2,0.2-0.2,0.2-0.3,0.4c-3.4,4.2-4.1,4.9-6.8,10.2
+			c-1.2,2.5-2.7,4.8-4.2,7.1c-1,1.6-2,3.2-3.2,4.6c-0.1,0.2-0.2,0.2-0.3,0.4c-0.7,0.9-1.7,1.7-2.5,2.5c-0.6,0.5-1.3,1-1.9,1.5
+			c-0.6,0.4-1.1,0.8-1.7,1.1l-0.9,0.5c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0-0.3,0.2-0.4,0.2c-0.2,0.1-0.4,0.2-0.5,0.2
+			c-3.7,1.8-8.5,3-12.7,3.4L72.7,89c-0.8,0.1-2.8,0.2-4.7,0.2c-1.6,0-3,0-3.5-0.2l0.3-0.7c0.6-1.4,1.3-2.8,2.1-4.1
+			c0.1-0.2,0.2-0.4,0.4-0.6l1.5-2.6l3.9-5.3l3.5-3.6c0.1-0.1,0.2-0.2,0.2-0.2c0.2-0.1,0.2-0.1,0.3-0.2l0.8-0.7
+			c0.1-0.1,0.2-0.1,0.3-0.2c0.2-0.2,0.3-0.3,0.5-0.4l3.7-2.5c1.3-0.8,2.6-1.6,3.8-2.3l4-2.1c1.5-0.8,4-2.1,5.5-2.7L99.5,58.5" />
+</symbol>
+<symbol id="tcm-related-posts-arrow" viewBox="0 0 16 16">
+<path class="st0" d="M8,15.9c-4.4,0-7.9-3.5-7.9-7.9S3.6,0.1,8,0.1s7.9,3.5,7.9,7.9S12.4,15.9,8,15.9z M8,2.4C4.9,2.4,2.4,4.9,2.4,8
+			s2.5,5.6,5.6,5.6s5.6-2.5,5.6-5.6S11.1,2.4,8,2.4z M11.9,8.3l-3.3,3.3c-0.1,0.1-0.2,0.1-0.2,0.1c-0.2,0-0.3-0.2-0.3-0.3v-2H4.4
+			C4.2,9.3,4.1,9.2,4.1,9V7c0-0.2,0.2-0.3,0.3-0.3H8v-2c0-0.2,0.1-0.3,0.3-0.3c0.1,0,0.2,0,0.2,0.1l3.3,3.3C11.9,7.9,12,7.9,12,8
+			S11.9,8.2,11.9,8.3z" />
+</symbol>
+<symbol id="tcm-sort-by-dropdown" viewBox="0 0 12 7">
+<path style="fill:#6E767D;" class="st0" d="M0.3,1.5l5.2,5.2c0,0,0.5,0.5,1.1,0l5.2-5.2c0,0,0.4-0.4,0.2-0.9c0,0-0.1-0.4-0.7-0.4H0.8c0,0-0.5,0-0.7,0.4
+			C0.1,0.5-0.2,1,0.3,1.5z" />
+</symbol>
+<symbol id="tcm-author-icon" viewBox="0 0 1020 1080">
+<polygon style="fill:#474F57" class="st0" points="44.5,882.9 251.4,1081 251.4,889.8 " />
+<path style="fill:#6E767D" class="st1" d="M937.8,891.8H81.2c-44.3,0-80.6-36.3-80.6-80.6V82.7c0-44.3,36.3-80.6,80.6-80.6h856.6
+			c44.3,0,80.6,36.3,80.6,80.6v728.5C1018.4,855.5,982.1,891.8,937.8,891.8z" />
+<g>
+<path style="fill:#6E767D" class="st2" d="M732,688.3c-0.5,0.1-2.7,0.5-6.3,1.1c-142.4,25.4-168.6,29.8-171.6,30.1c-7,0.8-12.3,0.4-16-1.3
+				c-2.4-1-3.6-2.3-4-2.8c0.2-1,1.4-3.3,2.2-4.7c0.7-1.4,1.6-3,2.3-4.6c4.9-11.1,1.5-22.4-8.9-29.5c-7.8-5.3-18.1-7.4-30.6-6.3
+				c-7.5,0.6-138.9,22.6-211.1,34.7l-35.4,27.7c82.6-13.9,240.1-40.2,248.4-41c7.4-0.6,13.2,0.3,16.7,2.7c2,1.4,1.8,1.8,1.3,3.1
+				c-0.4,0.9-1,2-1.6,3.2c-2.4,4.4-5.6,10.5-4.5,18c1.2,8.2,7.3,15.3,16.7,19.4c5.3,2.3,11.4,3.5,18.4,3.5c2.8,0,5.7-0.2,8.8-0.5
+				c5.7-0.7,63.8-10.9,172.9-30.3c3.6-0.6,5.8-1,6.3-1.1c5.9-1,9.8-6.6,8.7-12.5C743.4,691.2,737.8,687.3,732,688.3L732,688.3z
+				 M732,688.3" />
+<path style="fill:#FFFFFF" class="st2" d="M349.8,583.9l-91.7,95.5c-10.1,10.5-17.2,23.5-20.6,37.7l130.2-102c40.8,18,73.3,23.7,98.3,23.7
+				c43.8,0,64.2-17.7,64.2-17.7c-40.8-21.2-46.6-60.6-46.6-60.6c31.3,13.2,96.4,28.7,96.4,28.7c86.5-57.5,131.7-181.9,131.7-181.9
+				c-9,2.5-17.5,3.5-25.6,3.5c-40.6,0-68.5-25.9-68.5-25.9l113-24.5c37.6-76.7,41.2-211.1,41.2-211.1L428.2,453.5
+				C389.2,487.9,361.9,533.4,349.8,583.9L349.8,583.9z M349.8,583.9" />
+</g>
+</symbol>
+<symbol id="tcm-bulk-action-arrow" viewBox="0 0 12 7">
+<path style="fill:#6E767D" class="st0" d="M0.3,1.5l5.2,5.2c0,0,0.5,0.5,1.1,0l5.2-5.2c0,0,0.4-0.4,0.2-0.9c0,0-0.1-0.4-0.7-0.4H0.8c0,0-0.5,0-0.7,0.4
+			C0.1,0.5-0.2,1,0.3,1.5z" />
+</symbol>
+</defs>
+</svg>
+</div><script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.thesewardphoenixlog.com/torrent-pharma-q2-profit-rises-by-24-sees-varied-global-revenues-100/","name":"Torrent Pharma Q2 profit rises by 24%; Sees Varied Global Revenues","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/Torrent-Pharma.png"},{"@type":"ListItem","position":2,"url":"https://www.thesewardphoenixlog.com/chinas-didi-posts-first-quarterly-profit-since-2021-plans-1-billion-share-buyback-4859/","name":"China&#8217;s Didi Posts First Quarterly Profit Since 2021, Plans $1 Billion Share Buyback","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/11/DiDi-App.jpg"},{"@type":"ListItem","position":3,"url":"https://www.thesewardphoenixlog.com/elon-musks-spacex-to-launch-europes-navigation-and-communication-satellites-124/","name":"Elon Musk&#8217;s SpaceX to Launch Europe&#8217;s Navigation and Communication Satellites","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/Spacex.jpg"},{"@type":"ListItem","position":4,"url":"https://www.thesewardphoenixlog.com/where-to-watch-astros-vs-rangers-today-live-stream-and-preview-67/","name":"Where to Watch Astros vs. Rangers Today? Live Stream and Preview","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/houston-astros.png"},{"@type":"ListItem","position":5,"url":"https://www.thesewardphoenixlog.com/jawan-defies-expectations-with-rs-635-crore-in-sixth-week-14/","name":"&#8220;Jawan&#8221; Defies Expectations with Rs 635 Crore in Sixth Week","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/103425463.webp"},{"@type":"ListItem","position":6,"url":"https://www.thesewardphoenixlog.com/international-snow-leopard-day-5-interesting-facts-about-the-mountain-ghost-128/","name":"International Snow Leopard Day: 5 Interesting Facts About the Mountain Ghost","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2023/10/Brown-and-Black-Leopard-on-Snow-Covered-Forest-scaled.jpg"},{"@type":"ListItem","position":7,"url":"https://www.thesewardphoenixlog.com/massachusetts-teen-died-after-participating-in-one-chip-challenge-autopsy-reveals-5057/","name":"Massachusetts Teen Died After Participating in &#8216;One Chip Challenge&#8217;, Autopsy Reveals","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2024/05/Harris-Wolobah.jpg"},{"@type":"ListItem","position":8,"url":"https://www.thesewardphoenixlog.com/worldcoin-faces-legal-setback-in-spain-as-court-maintains-suspension-of-biometric-data-collection-5050/","name":"Worldcoin Faces Legal Setback in Spain as Court Maintains Suspension of Biometric Data Collection","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2024/03/worldcoin.png"},{"@type":"ListItem","position":9,"url":"https://www.thesewardphoenixlog.com/btc-usd-bitcoin-bullish-streak-may-hit-a-speed-bump-but-150k-still-in-sight-5026/","name":"BTC/USD: Bitcoin\u2019s Bullish Streak May Hit a Speed Bump, But $150K Still in Sight","image":"https://www.thesewardphoenixlog.com/wp-content/uploads/2024/02/bitcoin.png"}]}</script>
+<div id="rb-user-popup-form" class="rb-user-popup-form mfp-animation mfp-hide">
+<div class="logo-popup-outer">
+<div class="logo-popup">
+<div class="login-popup-header">
+<span class="logo-popup-heading h3">Welcome Back!</span>
+<p class="logo-popup-description is-meta">Sign in to your account</p>
+</div>
+<div class="user-login-form"><form name="popup-form" id="popup-form" action="https://www.thesewardphoenixlog.com/wp-login.php" method="post"><p class="login-username">
+<label for="user_login">Username or Email Address</label>
+<input type="text" name="log" id="user_login" autocomplete="username" class="input" value size="20" />
+</p><p class="login-password">
+<label for="user_pass">Password</label>
+<input type="password" name="pwd" id="user_pass" autocomplete="current-password" spellcheck="false" class="input" value size="20" />
+</p><p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p><p class="login-submit">
+<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />
+<input type="hidden" name="redirect_to" value="https://www.thesewardphoenixlog.com" />
+</p></form> <div class="login-form-footer is-meta">
+<a href="https://www.thesewardphoenixlog.com/wp-login.php?action=lostpassword">Lost your password?</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script id="foxiz-core-js-extra">
+var foxizCoreParams = {"ajaxurl":"https:\/\/www.thesewardphoenixlog.com\/wp-admin\/admin-ajax.php","darkModeID":"RubyDarkMode","cookieDomain":"","cookiePath":"\/"};
+</script>
+<script data-minify="1" src="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/plugins/foxiz-core/assets/core.js?ver=1700325075" id="foxiz-core-js"></script>
+<script data-minify="1" src="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1700325075" id="swv-js"></script>
+<script id="contact-form-7-js-extra">
+var wpcf7 = {"api":{"root":"https:\/\/www.thesewardphoenixlog.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+</script>
+<script data-minify="1" src="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1700325075" id="contact-form-7-js"></script>
+<script id="tve-dash-frontend-js-extra">
+var tve_dash_front = {"ajaxurl":"https:\/\/www.thesewardphoenixlog.com\/wp-admin\/admin-ajax.php","force_ajax_send":"1","is_crawler":"","recaptcha":{"connection":{"version":"v2","browsing_history":"1","threshold":"0.5"},"site_key":"6LeiV9EoAAAAAOxSWuAhaeS2sAOhxYiQv60HWlMp"},"post_id":"3022"};
+</script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/thrive-comments/thrive-dashboard/js/dist/frontend.min.js?ver=3.38" id="tve-dash-frontend-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/assets/js/jquery.waypoints.min.js?ver=3.1.1" id="jquery-waypoints-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/assets/js/rbswiper.min.js?ver=6.5.8" id="rbswiper-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/assets/js/jquery.mp.min.js?ver=1.1.0" id="jquery-magnific-popup-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/assets/js/jquery.tipsy.min.js?ver=1.0" id="rb-tipsy-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/themes/TSPL/assets/js/jquery.ui.totop.min.js?ver=v1.2" id="jquery-uitotop-js"></script>
+<script id="foxiz-global-js-extra">
+var foxizParams = {"twitterName":"SewardPhxLog","sliderSpeed":"5000","sliderEffect":"slide","sliderFMode":"1"};
+var uid_8d7c936 = {"uuid":"uid_8d7c936","name":"list_box_2","order":"date_post","posts_per_page":"3","pagination":"load_more","unique":"1","entry_category":"text,big","entry_meta":["avatar","author"],"review":"replace","review_meta":"1","sponsor_meta":"1","entry_format":"center","excerpt_length":"12","excerpt_source":"tagline","box_style":"bg","post_not_in":"100,4859,124,67,14,128","paged":"1","page_max":"5"};
+</script>
+<script data-minify="1" src="https://www.thesewardphoenixlog.com/wp-content/cache/min/1/wp-content/themes/TSPL/assets/js/global.js?ver=1700325075" id="foxiz-global-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.16.2" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.19.4" id="elementor-webpack-runtime-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.19.4" id="elementor-frontend-modules-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.thesewardphoenixlog.com\/wp-admin\/admin-ajax.php","nonce":"e5d1a2d3d9","urls":{"assets":"https:\/\/www.thesewardphoenixlog.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.thesewardphoenixlog.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.thesewardphoenixlog.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.16.2" id="elementor-pro-frontend-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.19.4","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"theme_builder_v2":true,"block_editor_assets_optimize":true,"ai-layout":true,"landing-pages":true,"e_image_loading_optimization":true,"e_global_styleguide":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/www.thesewardphoenixlog.com\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":3022,"title":"The%20Seward%20Phoenix%20Log%20%E2%80%94%20Breaking%20News%2C%20Latest%20News%20Headlines%2C%20Business%20and%20Celebrity%20News","excerpt":"","featuredImage":false}};
+</script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.19.4" id="elementor-frontend-js"></script>
+<script src="https://www.thesewardphoenixlog.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.16.2" id="pro-elements-handlers-js"></script>
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>

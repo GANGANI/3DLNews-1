@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Wrangell Sentinel" />
+  <META NAME="description" CONTENT="Wrangell Sentinel archives search page" />
+  <META NAME="keywords" CONTENT="Wrangell Sentinel,archives,archives search,search,search tool,keyword,phrase,search results" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="7 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Wrangell Sentinel Archives">
+<META PROPERTY="og:description" CONTENT="">
+<META PROPERTY="og:url" CONTENT="https://www.wrangellsentinel.com/issue/05_13_2021/">
+<META PROPERTY="og:site_name" CONTENT="Wrangell Sentinel">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.wrangellsentinel.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Wrangell Sentinel Archives</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28257/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1732x44534/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" href="https://www.wrangellsentinel.com/issue/05_13_2021/">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.wrangellsentinel.com/issue/05_13_2021/?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20349/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21165/XPATH/app/website_specifics/nonresponsive.js"></script>
+
+    <script>
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+    </script>
+<script>
+function RemoveContent(d) {document.getElementById(d).style.display = "none";}
+function InsertContent(d) {document.getElementById(d).style.display = ""; swapdiv(d);}
+
+function expiredAJAX() {
+ // noop
+}
+
+     function swapdiv(a){
+      if (a=='div2'){
+       CLEAR.f.runOverlay('/ajax/popular/blogged');
+      } else {
+       CLEAR.f.runOverlay('/ajax/popular/viewed');
+      }
+     }
+</script><script src="HTTPS://www.wrangellsentinel.com/apps/clear/clear.js"></script>
+<script>
+ debug=false;
+</script>
+  
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0WVJS807P"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-K0WVJS807P'); </script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a><a  href="HTTPS://www.wrangellsentinel.com/about" >About</a><a  href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a><a  href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a><a  href="HTTPS://www.wrangellsentinel.com/login?r=%2Fissue%2F05%5F13%5F2021%2F" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Wrangell Sentinel - </h1>
+    <a href="HTTPS://www.wrangellsentinel.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:Xxrv3l%5FtvAojlH1qu9rR700LxDBS653JLsA79naCD--><a href="https://www.wrangellsentinel.com/home/customer_files/visitor_guides/2024-25_travel_wrangell_travel_guide.pdf"><img src="/IMG/5N__NQeJ8JLdO4TyEwXnQcEioZeWf/XPATH/home/cms_data/dfault/web_ads/horiz_small/7355-vg2024.jpgXEXT1362x35506.jpeg" width="260" height="90" alt="A link to the free Wrangell Visitor's Guide"></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_2">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class="" href="HTTPS://www.wrangellsentinel.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/news">News</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/state%5Fof%5Falaska">State of Alaska</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell">Wrangell</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell%5Fsentinel">Wrangell Sentinel</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/sports">Sports</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports/wrangell">Wrangell</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/about_town">About Town</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town/pastors%5Fchristmas%5Fmessages">Pastors Christmas messages</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/police">Police</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/opinion">Opinion</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/editorial">Editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/from%5Fa%5Fnew%5Farrival">FROM A NEW ARRIVAL</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/guest%5Fopinion">Guest opinion</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/letters%5Fto%5Fthe%5Feditor">Letters to the editor</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/publisher%27s%5Fcolumn">Publisher's column</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/reflections">Reflections</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorial">Sentinel editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorials">Sentinel editorials</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/dockside">Dockside</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/classifieds">Classifieds</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" action="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <h2 class="section_title_font">Articles from the May 13, 2021 edition</h2><p class='tagline'><strong>Sorted by date</strong>&nbsp;&nbsp;Results <strong>1 - 25</strong> of <strong>30</strong></p><br /><br /><div class='sections_display'><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/the_associated_press_and_sentinel_staff' aria-label="Author link">The Associated Press and Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/house-budget-restores-two-offices-in-wrangell/8646.html" aria-label="Story Thumbnail: House budget restores two offices in Wrangell"><img src="/IMG/MgAldQySdUeIQbeRpqhrSx4Ul/XPATH/home/cms_data/dfault/photos/stories/id/4/6/8646/s_topXEXT1546x35950is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/house-budget-restores-two-offices-in-wrangell/8646.html" aria-label="House budget restores two offices in Wrangell"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/house-budget-restores-two-offices-in-wrangell/8646.html" aria-label="House budget restores two offices in Wrangell"><h3>House budget restores two offices in Wrangell</h3></a>
+<p>The Alaska House passed a version of the state operating budget Monday that would bring back the Department Fish and Game and Office of Children's Services to Wrangell, but the spending plan still...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/caleb_vierkant' aria-label="Author link">Caleb Vierkant</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/travelers-cope-as-best-they-can-with-ferry-woes/8647.html" aria-label="Travelers cope as best they can with ferry woes"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/travelers-cope-as-best-they-can-with-ferry-woes/8647.html" aria-label="Travelers cope as best they can with ferry woes"><h3>Travelers cope as best they can with ferry woes</h3></a>
+<p>With frequent breakdowns of the Matanuska — the only state ferry scheduled to serve Wrangell through September — residents are adjusting to the uncertainty, although not always happily. Besides for canceled sailings, Mayor Steve Prysunka also is cri...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/peakaboo-bunny/8648.html" aria-label="Story Thumbnail: Peakaboo bunny"><img src="/IMG/CWZbtKqdZbWgOVLHzW1kS1lpg/XPATH/home/cms_data/dfault/photos/stories/id/4/8/8648/s_topXEXT1554x35864is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/peakaboo-bunny/8648.html" aria-label="Peakaboo bunny"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/peakaboo-bunny/8648.html" aria-label="Peakaboo bunny"><h3>Peakaboo bunny</h3></a>
+<p>CeAirra Glaser loves to carry her pet rabbit, Luna, all over town to enjoy the sights, but not when it's raining hard. "Rabbits aren't supposed to get super wet," the high school sophomore said....</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/larry_persily' aria-label="Author link">Larry Persily</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/ketchikan-wrestling-tournament-spread-covid-cases/8649.html" aria-label="Ketchikan wrestling tournament spread COVID cases"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/ketchikan-wrestling-tournament-spread-covid-cases/8649.html" aria-label="Ketchikan wrestling tournament spread COVID cases"><h3>Ketchikan wrestling tournament spread COVID cases</h3></a>
+<p>A COVID-19 outbreak at a high school wrestling tournament in Ketchikan last month is linked to 23 infections in five communities across Southeast Alaska, including one case in Wrangell, according to health officials. Ketchikan High School hosted the...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/the-way-we-were/8650.html" aria-label="The Way We Were"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/the-way-we-were/8650.html" aria-label="The Way We Were"><h3>The Way We Were</h3></a>
+<p>May 12, 1921 The opening of the Stikine River season, an event of great importance to the region, and especially to the residents of Telegraph Creek, British Columbia, and vicinity, will take place Saturday when about 25 passengers will leave Wrangel...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/high-school-grads-will-walk-the-dock-may-21/8651.html" aria-label="High school grads will walk the dock May 21"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/high-school-grads-will-walk-the-dock-may-21/8651.html" aria-label="High school grads will walk the dock May 21"><h3>High school grads will walk the dock May 21</h3></a>
+<p>The COVID-19 pandemic has made it an unusual last year for Wrangell High School seniors, and that will culminate with a unique graduation ceremony stretched out on the city dock May 21. That assumes decent weather. The backup plan is back to the...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/students-pitch-in-and-pick-up-too/8652.html" aria-label="Story Thumbnail: Students pitch in and pick up too"><img src="/IMG/IcYTkMxgIgOKbMiHsUuik0skf/XPATH/home/cms_data/dfault/photos/stories/id/5/2/8652/s_topXEXT1530x35908is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/students-pitch-in-and-pick-up-too/8652.html" aria-label="Students pitch in and pick up too"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/students-pitch-in-and-pick-up-too/8652.html" aria-label="Students pitch in and pick up too"><h3>Students pitch in and pick up too</h3></a>
+<p>Jennifer Davies leads her third-grade class down Front Street on Friday to pick up trash as part of the two-day Community Collaborations project, sponsored by Wrangell Parks and Recreation. In...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/volunteers-needed-for-fourth-royalty-kickoff-set-for-may-31/8653.html" aria-label="Story Thumbnail: Volunteers needed for Fourth; royalty kickoff set for May 31"><img src="/IMG/MgAldQySdUeIQbeSpqhrSx3Up/XPATH/home/cms_data/dfault/photos/stories/id/5/3/8653/s_topXEXT1534x35947is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/volunteers-needed-for-fourth-royalty-kickoff-set-for-may-31/8653.html" aria-label="Volunteers needed for Fourth; royalty kickoff set for May 31"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/volunteers-needed-for-fourth-royalty-kickoff-set-for-may-31/8653.html" aria-label="Volunteers needed for Fourth; royalty kickoff set for May 31"><h3>Volunteers needed for Fourth; royalty kickoff set for May 31</h3></a>
+<p>Plans are set for the Fourth of July royalty kickoff event May 31, while planning is underway for the four-day holiday celebration a month later - but volunteers are still needed. "The big one we real...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/larry_persily_publisher' aria-label="Author link">Larry Persily Publisher</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/opinion/from-the-publisher-follow-the-laws-but-fix-them-when-they-dont-work/8654.html" aria-label="From the publisher: Follow the laws, but fix them when they don&apos;t work"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/opinion/from-the-publisher-follow-the-laws-but-fix-them-when-they-dont-work/8654.html" aria-label="From the publisher: Follow the laws, but fix them when they don&apos;t work"><h3>From the publisher: Follow the laws, but fix them when they don't work</h3></a>
+<p>Consistency is a good thing, whether it’s parents applying rules to their children or elected officials following the law. Inconsistency can mean children misbehave because they know they will sometimes get away with it. And inconsistency can a...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/the_wrangell_sentinel' aria-label="Author link">The Wrangell Sentinel</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/opinion/editorial-keep-politics-out-of-fight-against-covid/8655.html" aria-label="Editorial: Keep politics out of fight against COVID"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/opinion/editorial-keep-politics-out-of-fight-against-covid/8655.html" aria-label="Editorial: Keep politics out of fight against COVID"><h3>Editorial: Keep politics out of fight against COVID</h3></a>
+<p>As if COVID-19 wasn’t destructive enough, politics has made it worse. It delayed vaccination drives and turned the needle into a political statement, dissuading millions from getting the shot. That needs to stop. If people choose not to get v...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/opinion/letter-to-the-editor/8656.html" aria-label="Letter to the Editor"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/opinion/letter-to-the-editor/8656.html" aria-label="Letter to the Editor"><h3>Letter to the Editor</h3></a>
+<p>Herring eggs much appreciated Wrangell Central Council Tlingit & Haida Indian Tribes of Alaska (CCTHITA) would like to thank Trixie Kalkins-Bennett of the Ketchikan Indian Community and fishermen from Ketchikan, Colleen James-Olson and Esther Reese,...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/caleb_vierkant' aria-label="Author link">Caleb Vierkant</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/students-learn-to-fly-without-leaving-the-ground/8657.html" aria-label="Story Thumbnail: Students learn to fly without leaving the ground"><img src="/IMG/AUCgbjxaGZMcaTeGxhocWzpfX/XPATH/home/cms_data/dfault/photos/stories/id/5/7/8657/s_topXEXT1550x35911is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/students-learn-to-fly-without-leaving-the-ground/8657.html" aria-label="Students learn to fly without leaving the ground"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/students-learn-to-fly-without-leaving-the-ground/8657.html" aria-label="Students learn to fly without leaving the ground"><h3>Students learn to fly without leaving the ground</h3></a>
+<p>High school students reached new heights with a university Upward Bound program. "We started out with some basic drones ... getting the basic mechanics down," said student Terra Hoyt. "Now we're doing...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/state-education-tax-not-graduating-this-year/8658.html" aria-label="State &apos;education tax&apos; not graduating this year"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/state-education-tax-not-graduating-this-year/8658.html" aria-label="State &apos;education tax&apos; not graduating this year"><h3>State 'education tax' not graduating this year</h3></a>
+<p>Legislation to bring back a state tax on individual Alaskans to help pay for schools — which was abolished in 1980 as the state got rich with oil — looks destined for more homework and returning to class in committee next year. The bill moved out...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/searhc-urges-children-get-vaccine/8659.html" aria-label="SEARHC urges children get vaccine"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/searhc-urges-children-get-vaccine/8659.html" aria-label="SEARHC urges children get vaccine"><h3>SEARHC urges children get vaccine</h3></a>
+<p>The SouthEast Alaska Regional Health Consortium is encouraging everyone over the age of 12 to register for their vaccination shots. The U.S. Food and Drug Administration on Monday approved the Pfizer COVID-19 vaccine for children 12 to 15 years old....</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/caleb_vierkant' aria-label="Author link">Caleb Vierkant</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/wrangell-profits-from-strong-stock-market/8660.html" aria-label="Wrangell profits from strong stock market"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/wrangell-profits-from-strong-stock-market/8660.html" aria-label="Wrangell profits from strong stock market"><h3>Wrangell profits from strong stock market</h3></a>
+<p>Wrangell, just like most other investors, profited from stock market gains of the past year, adding about $1.5 million to the value of the municipal permanent fund over the past 15 months as the Dow Jones Industrial Average reached record highs. The...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/larry_persily' aria-label="Author link">Larry Persily</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/motor-fuel-tax-hike-legislation-could-run-out-of-time/8661.html" aria-label="Motor fuel tax hike legislation could run out of time"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/motor-fuel-tax-hike-legislation-could-run-out-of-time/8661.html" aria-label="Motor fuel tax hike legislation could run out of time"><h3>Motor fuel tax hike legislation could run out of time</h3></a>
+<p>Legislation to increase Alaska’s state motor fuel tax rate for the first time since 1970 is in a calendar crunch. It was still in the House Finance Committee as of Tuesday, with lawmakers facing a May 19 adjournment deadline. The measure would d...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/larry_persily' aria-label="Author link">Larry Persily</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/governor-disputes-legislative-change-to-ferry-advisory-board/8666.html" aria-label="Governor disputes legislative change to ferry advisory board"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/governor-disputes-legislative-change-to-ferry-advisory-board/8666.html" aria-label="Governor disputes legislative change to ferry advisory board"><h3>Governor disputes legislative change to ferry advisory board</h3></a>
+<p>The state Senate is considering House legislation that would restructure the 18-year-old ferry system advisory board, taking away the governor’s authority to appoint all of the members. House Bill 63 passed that body unanimously May 5, moving next t...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/hungry-beaver-cuts-hours-until-it-can-hire-more-help/8662.html" aria-label="Hungry Beaver cuts hours until it can hire more help"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/hungry-beaver-cuts-hours-until-it-can-hire-more-help/8662.html" aria-label="Hungry Beaver cuts hours until it can hire more help"><h3>Hungry Beaver cuts hours until it can hire more help</h3></a>
+<p>Hungry Beaver Pizza, Wrangell’s longest-running pizza restaurant and part of the Marine Bar, is operating at reduced hours until the owner, Patty Kautz, 78, can hire some help. Kautz said she can’t maintain her usual pace of work. For the for...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/obituaries/former-parks-director-ron-koch-dies-at-72/8663.html" aria-label="Story Thumbnail: Former parks director Ron Koch dies at 72"><img src="/IMG/AUGdfjwgEObdiWh-oUq0U4nSk/XPATH/home/cms_data/dfault/photos/stories/id/6/3/8663/s_topXEXT1534x35867is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/obituaries/former-parks-director-ron-koch-dies-at-72/8663.html" aria-label="Former parks director Ron Koch dies at 72"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/obituaries/former-parks-director-ron-koch-dies-at-72/8663.html" aria-label="Former parks director Ron Koch dies at 72"><h3>Former parks director Ron Koch dies at 72</h3></a>
+<p>Ronald Grant "Papa" Koch, 72, who served as Wrangell Parks and Recreation director 1986-1997, died May 4 at the University of Iowa Hospitals and Clinics, Iowa City. In addition to his time in...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/obituaries/former-parks-director-ron-koch-dies-at-72/8663.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/batters-up-for-the-next-four-weeks/8664.html" aria-label="Story Thumbnail: Batters up for the next four weeks"><img src="/IMG/FZUbtZvIKXQXOTcHtSzkWyppf/XPATH/home/cms_data/dfault/photos/stories/id/6/4/8664/s_topXEXT1538x35950is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/batters-up-for-the-next-four-weeks/8664.html" aria-label="Batters up for the next four weeks"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/about-town/batters-up-for-the-next-four-weeks/8664.html" aria-label="Batters up for the next four weeks"><h3>Batters up for the next four weeks</h3></a>
+<p>Sophie Andrews, of the Sharks, takes a swing during the Little League game last Thursday. Wrangell Little League teams will play every Wednesday and Thursday until June 10. Games begin at 6 p.m....</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/petition-drive-underway-in-juneau-to-limit-cruise-ships/8665.html" aria-label="Petition drive underway in Juneau to limit cruise ships"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/petition-drive-underway-in-juneau-to-limit-cruise-ships/8665.html" aria-label="Petition drive underway in Juneau to limit cruise ships"><h3>Petition drive underway in Juneau to limit cruise ships</h3></a>
+<p>Advocates of restricting cruise ship traffic to Juneau have started gathering petition signatures to put three questions on the municipal election ballot Oct. 5. The initiatives would make the ballot if supporters can gather signatures of nearly...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/dockside/fish-factor-copper-river-first-of-the-season-opener-for-reds-kings-on-monday/8667.html" aria-label="Fish Factor: Copper River &apos;first of the season&apos; opener for reds, kings on Monday"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/dockside/fish-factor-copper-river-first-of-the-season-opener-for-reds-kings-on-monday/8667.html" aria-label="Fish Factor: Copper River &apos;first of the season&apos; opener for reds, kings on Monday"><h3>Fish Factor: Copper River 'first of the season' opener for reds, kings on Monday</h3></a>
+<p>Alaska’s 2021 salmon season officially starts on Monday with a 12-hour opener for reds and kings at the Copper River. All eyes will be on early Cordova dock prices for Alaska’s famous “first fresh salmon of the season” as an indicator of wild salmon...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sentinel_staff' aria-label="Author link">Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/golf-tournaments-most-every-weekend-to-september/8668.html" aria-label="Golf tournaments most every weekend to September"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/golf-tournaments-most-every-weekend-to-september/8668.html" aria-label="Golf tournaments most every weekend to September"><h3>Golf tournaments most every weekend to September</h3></a>
+<p>The loss of most cruise ship traffic to town will hurt Muskeg Meadows again this summer, but the golf course is open and it’s already on its third tournament of the season this weekend. Back in 2019, before the pandemic shut down cruise ship t...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/police' aria-label="Section link">Police</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/police/police-report/8669.html" aria-label="Police report"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/police/police-report/8669.html" aria-label="Police report"><h3>Police report</h3></a>
+<p>Monday, May 3 Traffic stop: Verbal warning for no tabs displayed. Agency assist. Agency assist: Chimney fire. Criminal mischief. Tuesday, May 4 Citizen assist. Subpoena service. Agency assist: Ambulance. Citizen assist. Intoxicated person. Agency...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/caleb_vierkant' aria-label="Author link">Caleb Vierkant</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/'>May 13, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/seafood-processor-wants-to-take-over-wrangell-location/8670.html" aria-label="Seafood processor wants to take over Wrangell location"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/05/13/news/seafood-processor-wants-to-take-over-wrangell-location/8670.html" aria-label="Seafood processor wants to take over Wrangell location"><h3>Seafood processor wants to take over Wrangell location</h3></a>
+<p>Tacoma-based Alaska Ice Seafoods, which specializes in geoducks, also markets crab under the Fathom Seafoods name, and it’s the crab and other seafood that is bringing the company to Wrangell. Alaska Ice Seafoods has asked the city to approve an a...</p>
+</div>&nbsp;</div></div><p><a class='page-down' href='HTTPS://www.wrangellsentinel.com/issue/05_13_2021/26'>Page Down</a></p>
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'>New state task force w...<span class='mp_author'>Yereth Rosen</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'><img src="/IMG/l_c614OvyC4JuQqHwz7DK39qD/XPATH/home/cms_data/dfault/photos/stories/id/6/8/13268/s_topXEXT762x35742is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'>Canoes start 150-mile...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'><img src="/IMG/OottCzVkx60MukyO1x18Iy4w4/XPATH/home/cms_data/dfault/photos/stories/id/7/7/13277/s_topXEXT762x35728is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'>Forest Service will ra...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'>Legislature approves m...<span class='mp_author'>Claire Stremple</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html' aria-label='Story Thumbnail: Lawmakers leave fiscal...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html' aria-label='Story Thumbnail: Lawmakers leave fiscal...'>Lawmakers leave fiscal...<span class='mp_author'>James Brooks</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:FZTXfNnVXoQLNvdSWlT5jcczZrpeidf1zU1Hyryqr--><span class="ad_local_square"><img src="/IMG/reagye0NPkVYTYhMmrrxbDgenzb5_w1t2/XPATH/home/cms_data/dfault/web_ads/square/2412-sentinel_info_copy.jpgXEXT1716x39744is.jpeg" width="300" height="247" alt=""></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:JdXbjRrZbsUPRzhWapX9ngg3dv62mxnZz0sv2v2uv--><span class="ad_local_square"><a href="https://www.wrangellsentinel.com/subscribe"><img src="/IMG/uhdYpR2kNtTLgRhMqtmvpGjenzq-qh1nt/XPATH/home/cms_data/dfault/web_ads/square/5483-sentinel_online_subscribe_300x250.jpgXEXT1397x44008is.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!-- LL Network Ad --></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/police' aria-label="Section link">Police</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/classifieds' aria-label="Section link">Classifieds</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a></li><li><a href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a></li><li><a href="HTTPS://www.wrangellsentinel.com/about" >About</a></li><li><a href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.wrangellsentinel.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.wrangellsentinel.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.wrangellsentinel.com/issue/05_13_2021/?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.wrangellsentinel.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Wrangell Sentinel</h4>
+        <p>
+          P.O. Box 798<br />Wrangell, AK 99929<br />Ph: (907) 874-2301<br />
+       </p>
+        <p>
+          &copy; 2024 Good Journalism, LLC<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <small style="padding-top:10px;display:block;">Rendered 05/30/2024 03:23</small><!-- (DESKTOP|PAYWALLERROR|ERROR) (desktop|paywallerror|error) Cached by Usernum:004030 -->
+ </body>
+
+</html>

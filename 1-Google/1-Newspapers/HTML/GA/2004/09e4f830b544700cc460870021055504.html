@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"faae95e2ff",applicationID:"61347132"};;/*! For license information please see nr-loader-rum-1.260.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},S={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},R={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]={...(0,i.D)(t,S),...D};const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.260.1",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>l,Tt:()=>c,_A:()=>a,iS:()=>s,il:()=>i,sK:()=>f,ux:()=>u,v6:()=>o,w1:()=>d});var n=r(7894);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(i&&window.document.documentMode)),l=!!a.navigator?.sendBeacon,f=Date.now()-(0,n.z)()},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:S,runtime:R={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,S=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,S||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),R.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],R.ptid=e.agentIdentifier,(0,i.sU)(e.agentIdentifier,R),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),S(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=S(w,e,!0,"api")})),p.addPageAction=S(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,S(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=()=>{try{(0,o.p)(l.xS,["API/start/called"],void 0,n.D.metrics,b),b.emit("manual-start-all")}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function S(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function R(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((e=>{(0,d.Z)("Downloading runtime APIs failed...",e),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=S(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?S(_,"routeName",void 0,n.D.softNav):S(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>R()),!0):R(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.260.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.260.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-WLWoh5UWJ/3XNXjYcJoBc8bSPHGDdu86FTMTgY1yxRTQeEmWWEBFFVPIfCRSbxd8K297eHg86RaJPD+UJxG1+w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.260.1.PROD"]=self["webpackChunk:NRBA-1.260.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402),n=i(8325);class o{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e,this.ee=n.ee.get(e)}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var a=i(3325),s=i(234);const c=Object.values(a.D);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(2758);var l=i(8e3),f=i(5938),g=i(3960),p=i(385);const h=e=>p.il&&!0===(0,s.Mt)(e,"privacy.cookies_enabled");function v(e){return!!s.Yu.MO&&h(e)&&!0===(0,s.Mt)(e,"session_trace.enabled")}var m=i(7872);class b extends f.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,s.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,l.RP)(e,r):this.ee.on("manual-start-all",(0,m.Z)((()=>{(0,l.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===a.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,l.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,l.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};p.il?(0,g.b2)((()=>n()),!0):n()}#t(e,t){return e!==a.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!v(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var y=i(7633);class A extends b{static featureName=y.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,y.t,r),this.importAggregator()}}var w=i(1117),_=i(1284);class E extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,_.D)(e,(function(e,r){t[e]=x(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,_.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=x(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=D(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=x(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=D(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function D(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var S=i(8632),R=i(4351);var k=i(5546),N=i(7956),P=i(3239),j=i(9251),T=i(7894);class I extends b{static featureName=j.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,j.t,r),p.il&&((0,N.N)((()=>(0,k.p)("docHidden",[(0,T.z)()],void 0,j.t,this.ee)),!0),(0,P.bP)("pagehide",(()=>(0,k.p)("winPagehide",[(0,T.z)()],void 0,j.t,this.ee))),this.importAggregator())}}var O=i(3081);class M extends b{static featureName=O.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,O.t9,r),this.importAggregator()}}new class extends o{constructor(t,r){super(r),p._A?(this.sharedAggregator=new E({agentIdentifier:this.agentIdentifier}),this.features={},(0,S.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(A),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.D.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.p[e.featureName]-a.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.D.softNav)return;const n=function(e){switch(e){case a.D.ajax:return[a.D.jserrors];case a.D.sessionTrace:return[a.D.ajax,a.D.pageViewEvent];case a.D.sessionReplay:return[a.D.sessionTrace];case a.D.pageViewTiming:return[a.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,S.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[A,I,M],loaderType:"lite"})})()})();</script>
+<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+<meta name="google-site-verification" content="4GG7aREoigsKnvahal4-UsfLAQcjAW8WiSg5hEDe7F0" /> <!-- Google Search  --> 
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v22.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>UGA Today - Today’s top news from the University of Georgia</title>
+	<meta name="description" content="The official News Center for the University of Georgia, the birthplace of public higher education in America." />
+	<link rel="canonical" href="https://news.uga.edu/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="UGA Today - Today’s top news from the University of Georgia" />
+	<meta property="og:description" content="The official News Center for the University of Georgia, the birthplace of public higher education in America." />
+	<meta property="og:url" content="https://news.uga.edu/" />
+	<meta property="og:site_name" content="UGA Today" />
+	<meta property="article:publisher" content="https://www.facebook.com/universityofga" />
+	<meta property="article:modified_time" content="2024-05-30T18:00:15+00:00" />
+	<meta property="og:image" content="https://news.uga.edu/wp-content/uploads/2017/09/the-arch.jpg" />
+	<meta property="og:image:width" content="800" />
+	<meta property="og:image:height" content="533" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://news.uga.edu/wp-content/uploads/2017/09/the-arch.jpg" />
+	<meta name="twitter:site" content="@universityofga" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://news.uga.edu/","url":"https://news.uga.edu/","name":"UGA Today - Today’s top news from the University of Georgia","isPartOf":{"@id":"https://news.uga.edu/#website"},"about":{"@id":"https://news.uga.edu/#organization"},"datePublished":"2017-08-25T13:20:40+00:00","dateModified":"2024-05-30T18:00:15+00:00","description":"The official News Center for the University of Georgia, the birthplace of public higher education in America.","breadcrumb":{"@id":"https://news.uga.edu/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://news.uga.edu/"]}]},{"@type":"BreadcrumbList","@id":"https://news.uga.edu/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://news.uga.edu/#website","url":"https://news.uga.edu/","name":"UGA Today","description":"Today’s top news from the University of Georgia","publisher":{"@id":"https://news.uga.edu/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://news.uga.edu/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://news.uga.edu/#organization","name":"University of Georgia","url":"https://news.uga.edu/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://news.uga.edu/#/schema/logo/image/","url":"https://news.uga.edu/wp-content/uploads/2017/09/RGB-GEORGIA-FS-FC.png","contentUrl":"https://news.uga.edu/wp-content/uploads/2017/09/RGB-GEORGIA-FS-FC.png","width":2574,"height":843,"caption":"University of Georgia"},"image":{"@id":"https://news.uga.edu/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/universityofga","https://x.com/universityofga","https://www.instagram.com/universityofga/","https://www.linkedin.com/school/166638/","https://www.youtube.com/channel/UCmNT8A6kDI_-Xxjlhcm9VRg"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//news.uga.edu' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="UGA Today &raquo; Feed" href="https://news.uga.edu/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/news.uga.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://news.uga.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.5.3' type='text/css' media='all' />
+<style id='co-authors-plus-coauthors-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-coauthors.is-layout-flow [class*=wp-block-co-authors-plus]{display:inline}
+
+</style>
+<style id='co-authors-plus-avatar-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-avatar :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-avatar :where(img){vertical-align:middle}.wp-block-co-authors-plus-avatar:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-avatar.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<style id='co-authors-plus-image-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-image{margin-bottom:0}.wp-block-co-authors-plus-image :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-image :where(img){vertical-align:middle}.wp-block-co-authors-plus-image:is(.alignfull,.alignwide) :where(img){width:100%}.wp-block-co-authors-plus-image:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-image.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--vce-acc: #ba0c2f;--wp--preset--color--vce-meta: #9b9b9b;--wp--preset--color--vce-txt: #444444;--wp--preset--color--vce-bg: #ffffff;--wp--preset--color--vce-cat-0: ;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 21px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--huge: 28px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='mks_shortcodes_simple_line_icons-css' href='https://news.uga.edu/wp-content/plugins/meks-flexible-shortcodes/css/simple-line/simple-line-icons.css?ver=1.3.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='mks_shortcodes_css-css' href='https://news.uga.edu/wp-content/plugins/meks-flexible-shortcodes/css/style.css?ver=1.3.6' type='text/css' media='screen' />
+<link crossorigin="anonymous" rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css2?family=Oswald%3Awght%40200%3B300%3B400%3B500%3B700&#038;display=swap&#038;ver=6.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='vce-style-css' href='https://news.uga.edu/wp-content/themes/voice/assets/css/min.css?ver=3.0.1' type='text/css' media='all' />
+<style id='vce-style-inline-css' type='text/css'>
+body, button, input, select, textarea {font-size: 1.6rem;}.vce-single .entry-headline p{font-size: 2.2rem;}.main-navigation a{font-size: 1.6rem;}.sidebar .widget-title{font-size: 1.8rem;}.sidebar .widget, .vce-lay-c .entry-content, .vce-lay-h .entry-content {font-size: 1.4rem;}.vce-featured-link-article{font-size: 5.2rem;}.vce-featured-grid-big.vce-featured-grid .vce-featured-link-article{font-size: 3.4rem;}.vce-featured-grid .vce-featured-link-article{font-size: 2.2rem;}h1 { font-size: 4.8rem; }h2 { font-size: 3.0rem; }h3 { font-size: 2.5rem; }h4 { font-size: 1.5rem; }h5 { font-size: 1.5rem; }h6 { font-size: 1.2rem; }.comment-reply-title, .main-box-title{font-size: 2.2rem;}h1.entry-title{font-size: 4.8rem;}.vce-lay-a .entry-title a{font-size: 3.4rem;}.vce-lay-b .entry-title{font-size: 2.4rem;}.vce-lay-c .entry-title, .vce-sid-none .vce-lay-c .entry-title{font-size: 2.2rem;}.vce-lay-d .entry-title{font-size: 1.5rem;}.vce-lay-e .entry-title{font-size: 1.4rem;}.vce-lay-f .entry-title{font-size: 1.4rem;}.vce-lay-g .entry-title a, .vce-lay-g .entry-title a:hover{font-size: 3.0rem;}.vce-lay-h .entry-title{font-size: 2.4rem;}.entry-meta div,.entry-meta div a,.vce-lay-g .meta-item,.vce-lay-c .meta-item{font-size: 1.4rem;}.vce-lay-d .meta-category a,.vce-lay-d .entry-meta div,.vce-lay-d .entry-meta div a,.vce-lay-e .entry-meta div,.vce-lay-e .entry-meta div a,.vce-lay-e .fn,.vce-lay-e .meta-item{font-size: 1.3rem;}body {background-color:#fcfbfa;}body,.mks_author_widget h3,.site-description,.meta-category a,textarea {font-family: 'Merriweather Sans';font-weight: 300;}h1,h2,h3,h4,h5,h6,blockquote,.vce-post-link,.site-title,.site-title a,.main-box-title,.comment-reply-title,.entry-title a,.vce-single .entry-headline p,.vce-prev-next-link,.author-title,.mks_pullquote,.widget_rss ul li .rsswidget,#bbpress-forums .bbp-forum-title,#bbpress-forums .bbp-topic-permalink {font-family: 'Merriweather';font-weight: 400;}.main-navigation a,.sidr a{font-family: 'Oswald';font-weight: 300;}.vce-single .entry-content,.vce-single .entry-headline,.vce-single .entry-footer,.vce-share-bar {width: 600px;}.vce-lay-a .lay-a-content{width: 600px;max-width: 600px;}.vce-page .entry-content,.vce-page .entry-title-page {width: 600px;}.vce-sid-none .vce-single .entry-content,.vce-sid-none .vce-single .entry-headline,.vce-sid-none .vce-single .entry-footer {width: 870px;}.vce-sid-none .vce-page .entry-content,.vce-sid-none .vce-page .entry-title-page,.error404 .entry-content {width: 600px;max-width: 600px;}body, button, input, select, textarea{color: #444444;}h1,h2,h3,h4,h5,h6,.entry-title a,.prev-next-nav a,#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-topic-permalink,.woocommerce ul.products li.product .price .amount{color: #232323;}a,.entry-title a:hover,.vce-prev-next-link:hover,.vce-author-links a:hover,.required,.error404 h4,.prev-next-nav a:hover,#bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover,.woocommerce ul.products li.product h3:hover,.woocommerce ul.products li.product h3:hover mark,.main-box-title a:hover{color: #ba0c2f;}.vce-square,.vce-main-content .mejs-controls .mejs-time-rail .mejs-time-current,button,input[type="button"],input[type="reset"],input[type="submit"],.vce-button,.pagination-wapper a,#vce-pagination .next.page-numbers,#vce-pagination .prev.page-numbers,#vce-pagination .page-numbers,#vce-pagination .page-numbers.current,.vce-link-pages a,#vce-pagination a,.vce-load-more a,.vce-slider-pagination .owl-nav > div,.vce-mega-menu-posts-wrap .owl-nav > div,.comment-reply-link:hover,.vce-featured-section a,.vce-lay-g .vce-featured-info .meta-category a,.vce-404-menu a,.vce-post.sticky .meta-image:before,#vce-pagination .page-numbers:hover,#bbpress-forums .bbp-pagination .current,#bbpress-forums .bbp-pagination a:hover,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce ul.products li.product .added_to_cart,.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover,.woocommerce ul.products li.product .added_to_cart:hover,.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.comments-holder .navigation .page-numbers.current,.vce-lay-a .vce-read-more:hover,.vce-lay-c .vce-read-more:hover,body div.wpforms-container-full .wpforms-form input[type=submit], body div.wpforms-container-full .wpforms-form button[type=submit], body div.wpforms-container-full .wpforms-form .wpforms-page-button,body div.wpforms-container-full .wpforms-form input[type=submit]:hover, body div.wpforms-container-full .wpforms-form button[type=submit]:hover, body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {background-color: #ba0c2f;}#vce-pagination .page-numbers,.comments-holder .navigation .page-numbers{background: transparent;color: #ba0c2f;border: 1px solid #ba0c2f;}.comments-holder .navigation .page-numbers:hover{background: #ba0c2f;border: 1px solid #ba0c2f;}.bbp-pagination-links a{background: transparent;color: #ba0c2f;border: 1px solid #ba0c2f !important;}#vce-pagination .page-numbers.current,.bbp-pagination-links span.current,.comments-holder .navigation .page-numbers.current{border: 1px solid #ba0c2f;}.widget_categories .cat-item:before,.widget_categories .cat-item .count{background: #ba0c2f;}.comment-reply-link,.vce-lay-a .vce-read-more,.vce-lay-c .vce-read-more{border: 1px solid #ba0c2f;}.entry-meta div,.entry-meta-count,.entry-meta div a,.comment-metadata a,.meta-category span,.meta-author-wrapped,.wp-caption .wp-caption-text,.widget_rss .rss-date,.sidebar cite,.site-footer cite,.sidebar .vce-post-list .entry-meta div,.sidebar .vce-post-list .entry-meta div a,.sidebar .vce-post-list .fn,.sidebar .vce-post-list .fn a,.site-footer .vce-post-list .entry-meta div,.site-footer .vce-post-list .entry-meta div a,.site-footer .vce-post-list .fn,.site-footer .vce-post-list .fn a,#bbpress-forums .bbp-topic-started-by,#bbpress-forums .bbp-topic-started-in,#bbpress-forums .bbp-forum-info .bbp-forum-content,#bbpress-forums p.bbp-topic-meta,span.bbp-admin-links a,.bbp-reply-post-date,#bbpress-forums li.bbp-header,#bbpress-forums li.bbp-footer,.woocommerce .woocommerce-result-count,.woocommerce .product_meta{color: #9b9b9b;}.main-box-title, .comment-reply-title, .main-box-head{background: #ffffff;color: #232323;}.main-box-title a{color: #232323;}.sidebar .widget .widget-title a{color: #232323;}.main-box,.comment-respond,.prev-next-nav{background: #f9f9f9;}.vce-post,ul.comment-list > li.comment,.main-box-single,.ie8 .vce-single,#disqus_thread,.vce-author-card,.vce-author-card .vce-content-outside,.mks-bredcrumbs-container,ul.comment-list > li.pingback{background: #ffffff;}.mks_tabs.horizontal .mks_tab_nav_item.active{border-bottom: 1px solid #ffffff;}.mks_tabs.horizontal .mks_tab_item,.mks_tabs.vertical .mks_tab_nav_item.active,.mks_tabs.horizontal .mks_tab_nav_item.active{background: #ffffff;}.mks_tabs.vertical .mks_tab_nav_item.active{border-right: 1px solid #ffffff;}#vce-pagination,.vce-slider-pagination .owl-controls,.vce-content-outside,.comments-holder .navigation{background: #f3f3f3;}.sidebar .widget-title{background: #ffffff;color: #232323;}.sidebar .widget{background: #f9f9f9;}.sidebar .widget,.sidebar .widget li a,.sidebar .mks_author_widget h3 a,.sidebar .mks_author_widget h3,.sidebar .vce-search-form .vce-search-input,.sidebar .vce-search-form .vce-search-input:focus{color: #444444;}.sidebar .widget li a:hover,.sidebar .widget a,.widget_nav_menu li.menu-item-has-children:hover:after,.widget_pages li.page_item_has_children:hover:after{color: #e4002b;}.sidebar .tagcloud a {border: 1px solid #e4002b;}.sidebar .mks_author_link,.sidebar .tagcloud a:hover,.sidebar .mks_themeforest_widget .more,.sidebar button,.sidebar input[type="button"],.sidebar input[type="reset"],.sidebar input[type="submit"],.sidebar .vce-button,.sidebar .bbp_widget_login .button{background-color: #e4002b;}.sidebar .mks_author_widget .mks_autor_link_wrap,.sidebar .mks_themeforest_widget .mks_read_more,.widget .meks-instagram-follow-link {background: #f3f3f3;}.sidebar #wp-calendar caption,.sidebar .recentcomments,.sidebar .post-date,.sidebar #wp-calendar tbody{color: rgba(68,68,68,0.7);}.site-footer{background: #373941;}.site-footer .widget-title{color: #ffffff;}.site-footer,.site-footer .widget,.site-footer .widget li a,.site-footer .mks_author_widget h3 a,.site-footer .mks_author_widget h3,.site-footer .vce-search-form .vce-search-input,.site-footer .vce-search-form .vce-search-input:focus{color: #f9f9f9;}.site-footer .widget li a:hover,.site-footer .widget a,.site-info a{color: #e4002b;}.site-footer .tagcloud a {border: 1px solid #e4002b;}.site-footer .mks_author_link,.site-footer .mks_themeforest_widget .more,.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.site-footer .vce-button,.site-footer .tagcloud a:hover{background-color: #e4002b;}.site-footer #wp-calendar caption,.site-footer .recentcomments,.site-footer .post-date,.site-footer #wp-calendar tbody,.site-footer .site-info{color: rgba(249,249,249,0.7);}.top-header,.top-nav-menu li .sub-menu{background: #3a3a3a;}.top-header,.top-header a{color: #ffffff;}.top-header .vce-search-form .vce-search-input,.top-header .vce-search-input:focus,.top-header .vce-search-submit{color: #ffffff;}.top-header .vce-search-form .vce-search-input::-webkit-input-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input::-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-ms-input-placeholder { color: #ffffff;}.header-1-wrapper{height: 100px;padding-top: 20px;}.header-2-wrapper,.header-3-wrapper{height: 100px;}.header-2-wrapper .site-branding,.header-3-wrapper .site-branding{top: 20px;left: 0px;}.site-title a, .site-title a:hover{color: #232323;}.site-description{color: #aaaaaa;}.main-header{background-color: #ffffff;}.header-bottom-wrapper{background: #fcfcfc;}.vce-header-ads{margin: 5px 0;}.header-3-wrapper .nav-menu > li > a{padding: 40px 15px;}.header-sticky,.sidr{background: rgba(252,252,252,0.95);}.ie8 .header-sticky{background: #ffffff;}.main-navigation a,.nav-menu .vce-mega-menu > .sub-menu > li > a,.sidr li a,.vce-menu-parent{color: #222222;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul li:hover > a,.nav-menu ul .current-menu-item a,.nav-menu ul .current_page_item a,.vce-menu-parent:hover,.sidr li a:hover,.sidr li.sidr-class-current_page_item > a,.main-navigation li.current-menu-item.fa:before,.vce-responsive-nav{color: #ba0c2f;}#sidr-id-vce_main_navigation_menu .soc-nav-menu li a:hover {color: #ffffff;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul,.header-sticky .nav-menu > .current_page_item:hover > a,.header-sticky .nav-menu > .current-menu-item:hover > a,.header-sticky .nav-menu > .current-menu-ancestor:hover > a,.header-sticky .main-navigation a.vce-item-selected:hover{background-color: #ffffff;}.search-header-wrap ul {border-top: 2px solid #ba0c2f;}.vce-cart-icon a.vce-custom-cart span,.sidr-class-vce-custom-cart .sidr-class-vce-cart-count {background: #ba0c2f;font-family: 'Merriweather Sans';}.vce-border-top .main-box-title{border-top: 2px solid #ba0c2f;}.tagcloud a:hover,.sidebar .widget .mks_author_link,.sidebar .widget.mks_themeforest_widget .more,.site-footer .widget .mks_author_link,.site-footer .widget.mks_themeforest_widget .more,.vce-lay-g .entry-meta div,.vce-lay-g .fn,.vce-lay-g .fn a{color: #FFF;}.vce-featured-header .vce-featured-header-background{opacity: 0.5}.vce-featured-grid .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}.vce-featured-grid.vce-featured-grid-big .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid.vce-featured-grid-big .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}#back-top {background: #323232}.sidr input[type=text]{background: rgba(34,34,34,0.1);color: rgba(34,34,34,0.5);}.is-style-solid-color{background-color: #ba0c2f;color: #ffffff;}.wp-block-image figcaption{color: #9b9b9b;}.wp-block-cover .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, .wp-block-cover h2, .wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2,p.has-drop-cap:not(:focus)::first-letter,p.wp-block-subhead{font-family: 'Merriweather';font-weight: 400;}.wp-block-cover .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, .wp-block-cover h2, .wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2{font-size: 1.5rem;}p.wp-block-subhead{font-size: 2.2rem;}.wp-block-button__link{background: #ba0c2f}.wp-block-search .wp-block-search__button{color: #ffffff}.meta-image:hover a img,.vce-lay-h .img-wrap:hover .meta-image > img,.img-wrp:hover img,.vce-gallery-big:hover img,.vce-gallery .gallery-item:hover img,.wp-block-gallery .blocks-gallery-item:hover img,.vce_posts_widget .vce-post-big li:hover img,.vce-featured-grid .owl-item:hover img,.vce-post-img:hover img,.mega-menu-img:hover img{-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);-ms-transform: scale(1.1);transform: scale(1.1);}.has-small-font-size{ font-size: 1.2rem;}.has-large-font-size{ font-size: 1.9rem;}.has-huge-font-size{ font-size: 2.3rem;}@media(min-width: 671px){.has-small-font-size{ font-size: 1.3rem;}.has-normal-font-size{ font-size: 1.6rem;}.has-large-font-size{ font-size: 2.1rem;}.has-huge-font-size{ font-size: 2.8rem;}}.has-vce-acc-background-color{ background-color: #ba0c2f;}.has-vce-acc-color{ color: #ba0c2f;}.has-vce-meta-background-color{ background-color: #9b9b9b;}.has-vce-meta-color{ color: #9b9b9b;}.has-vce-txt-background-color{ background-color: #444444;}.has-vce-txt-color{ color: #444444;}.has-vce-bg-background-color{ background-color: #ffffff;}.has-vce-bg-color{ color: #ffffff;}.has-vce-cat-0-background-color{ background-color: ;}.has-vce-cat-0-color{ color: ;}
+</style>
+<link rel='stylesheet' id='mmenu-css' href='https://news.uga.edu/wp-content/themes/voice-child/mmenu/mmenu.css?ver=8.4.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='mhead-css' href='https://news.uga.edu/wp-content/themes/voice-child/mhead/dist/jquery.mhead.css?ver=1.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='uga_footer-css' href='https://news.uga.edu/wp-content/themes/voice-child/css/uga-footer.css?ver=1.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='custom-css' href='https://news.uga.edu/wp-content/themes/voice-child/css/custom.css?ver=1.1' type='text/css' media='screen' />
+<link crossorigin="anonymous" rel='stylesheet' id='vce-fonts-css' href='https://fonts.googleapis.com/css2?family=Merriweather%20Sans:wght@300&#038;family=Merriweather:wght@400&#038;family=Oswald:wght@300' type='text/css' media='all' />
+<link rel='stylesheet' id='vce_child_load_scripts-css' href='https://news.uga.edu/wp-content/themes/voice-child/style.css?ver=3.0.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='upw_theme_standard-css' href='https://news.uga.edu/wp-content/plugins/ultimate-posts-widget/css/upw-theme-standard.min.css?ver=6.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='meks_ess-main-css' href='https://news.uga.edu/wp-content/plugins/meks-easy-social-share/assets/css/main.css?ver=1.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://news.uga.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://news.uga.edu/wp-json/" /><link rel="alternate" type="application/json" href="https://news.uga.edu/wp-json/wp/v2/pages/2445" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://news.uga.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.3" />
+<link rel='shortlink' href='https://news.uga.edu/' />
+<link rel="alternate" type="application/json+oembed" href="https://news.uga.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.uga.edu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://news.uga.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.uga.edu%2F&#038;format=xml" />
+<meta name="generator" content="Redux 4.4.16" /><!-- Stream WordPress user activity plugin v4.0.0 -->
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pageTitle":"UGA Today - Today’s top news from the University of Georgia","pagePostType":"frontpage","pagePostType2":"single-page","pagePostDate":"August 25, 2017","pagePostDateYear":2017,"pagePostDateMonth":8,"pagePostDateDay":25,"pagePostDateDayName":"Friday","pagePostDateHour":9,"pagePostDateMinute":20,"pagePostDateIso":"2017-08-25T09:20:40-04:00","pagePostDateUnix":1503652840};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TD6SFGQ');
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WDVWJ6B');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><!-- There is no amphtml version available for this URL. --><link rel="icon" href="https://news.uga.edu/wp-content/uploads/2019/06/favicon-196x196-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://news.uga.edu/wp-content/uploads/2019/06/favicon-196x196-196x195.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://news.uga.edu/wp-content/uploads/2019/06/favicon-196x196-196x195.png" />
+<meta name="msapplication-TileImage" content="https://news.uga.edu/wp-content/uploads/2019/06/favicon-196x196.png" />
+		<style type="text/css" id="wp-custom-css">
+			#main-box-1 > .main-box-inside{
+	justify-content:center;
+}
+blockquote.blockquote-no-image::before {
+	content: "";
+}
+
+/*Hide icon overlay for slide-shows used as featured images */
+.vce-format-icon{display:none;}		</style>
+		</head>
+
+<body class="home page-template page-template-template-modules page-template-template-modules-php page page-id-2445 wp-embed-responsive vce-sid-right voice-v_3_0_1 voice-child">
+
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD6SFGQ" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDVWJ6B" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="site">
+	<div id="mobile-header" class="mobile-header mh-head mh-align-left">
+		<span class="mh-btns-left">
+			<a class="fa fa-bars" href="#site-navigation"></a>
+		</span>
+		<span class="mh-logo"><img src="https://news.uga.edu/wp-content/uploads/2017/12/uga-today-logo.png"></span>
+	</div>
+	<div id="vce-main">
+		<div id="desktop-header" class="main-header">
+			<header class="uga-header">
+				<div class="container">
+					<div class="row-flex">
+						<a href="http://www.uga.edu/"><img class="uga-logo" src="https://news.uga.edu/wp-content/themes/voice-child/images/GEORGIA-XH-CW.svg"></a>
+						<div class="top-links-container">
+															<ul id="vce_top_navigation_menu" class="top-nav-menu"><li id="menu-item-2655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2655"><a href="https://news.uga.edu/for-the-media/">For the Media</a></li>
+<li id="menu-item-2654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2654"><a href="https://news.uga.edu/open-records/">Open Records</a></li>
+<li id="menu-item-2492" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2492"><a href="https://mc.uga.edu/">Division of Marketing &#038; Communications</a></li>
+</ul>							
+							<div class="search-box">
+								<a href="" class="search-toggle"><i class="fa fa-search fa-flip-horizontal"></i></a>
+								<form class="search-header-form" action="https://news.uga.edu/" method="get">
+											<input id="search" name="s" class="search-input" size="20" type="text" value="Type here to search..." onfocus="(this.value == 'Type here to search...') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Type here to search...')" placeholder="Type here to search..." />
+										</form>							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+						<div class="container header-1-wrapper header-main-area">	
+		<div class="vce-res-nav">
+	<a class="vce-responsive-nav" href="#sidr-main"><i class="fa fa-bars"></i></a>
+</div>
+<div class="site-branding">
+	<h1 class="site-title"><a href="https://news.uga.edu/" rel="home" class="has-logo"><picture class="vce-logo"><source media="(min-width: 1024px)" srcset="https://news.uga.edu/wp-content/uploads/2017/12/uga-today-logo.png, https://news.uga.edu/wp-content/uploads/2017/12/uga-today-logo.png 2x"><source srcset="https://news.uga.edu/wp-content/uploads/2017/12/uga-today-logo.png"><img src="https://news.uga.edu/wp-content/uploads/2017/12/uga-today-logo.png" alt="UGA Today"></picture></a></h1><span class="site-description">Today’s top news from the University of Georgia</span></div></div>
+
+<div class="header-bottom-wrapper">
+	<div class="container">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+	<ul id="vce_main_navigation_menu" class="nav-menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13 vce-cat-9"><a href="https://news.uga.edu/topics/campus/">Campus News</a><li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8 vce-cat-4"><a href="https://news.uga.edu/topics/business-economy/">Business &amp; Economy</a><li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11 vce-cat-6"><a href="https://news.uga.edu/topics/science-technology/">Science &amp; Technology</a><li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7 vce-cat-3"><a href="https://news.uga.edu/topics/arts/">Arts &amp; Humanities</a><li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10 vce-cat-5"><a href="https://news.uga.edu/topics/health-wellness/">Health &amp; Wellness</a><li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12 vce-cat-7"><a href="https://news.uga.edu/topics/society-culture/">Society &amp; Culture</a><li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9 vce-cat-8"><a href="https://news.uga.edu/topics/georgia-impact/">Georgia Impact</a></ul></nav>	</div>
+</div>
+					</div>
+
+		<div id="main-wrapper">
+
+
+	
+
+	
+
+	
+	
+	
+	<div id="content" class="container site-content">
+
+		
+		
+		<div id="primary" class="vce-main-content">
+
+			
+			
+				
+												
+						
+
+	<div id="main-box-1" class="main-box vce-border-top  ">
+			<h3 class="main-box-title ">Top Campus Stories</h3>
+			<div class="main-box-inside ">
+
+	
+					
+			<div class="vce-loop-wrap" >			
+			<article class="vce-post vce-lay-c post-95600 post type-post status-publish format-standard has-post-thumbnail hentry category-health-wellness category-science-technology tag-columns tag-odum tag-research tag-savannah-river-ecology-laboratory">
+
+		 	<div class="meta-image">
+			<a href="https://news.uga.edu/people-are-altering-decomposition-rates-in-waterways/" title="People are altering decomposition rates in waterways">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/38777-155-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="A heron flys over a body of water on a pretty day." />							</a>
+		</div>
+	
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/science-technology/" class="category-6">Science &amp; Technology</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/people-are-altering-decomposition-rates-in-waterways/" title="People are altering decomposition rates in waterways">People are altering decomposition rates in waterways</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>Faster decomposition rates may make climate change worse.</p>
+		</div>
+	
+	</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-c post-95671 post type-post status-publish format-standard has-post-thumbnail hentry category-science-technology tag-columns tag-franklin-college">
+
+		 	<div class="meta-image">
+			<a href="https://news.uga.edu/shepherd-to-serve-as-panelist-at-nas-state-of-the-science-event/" title="Shepherd to serve as panelist at NAS &#8216;State of the Science&#8217; event">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/Marshall_Shepherd-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="" />							</a>
+		</div>
+	
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/science-technology/" class="category-6">Science &amp; Technology</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/shepherd-to-serve-as-panelist-at-nas-state-of-the-science-event/" title="Shepherd to serve as panelist at NAS &#8216;State of the Science&#8217; event">Shepherd to serve as panelist at NAS &#8216;State of the…</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>The inaugural address will take place on June 26 in Washington, D.C.</p>
+		</div>
+	
+	</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-c post-95662 post type-post status-publish format-standard has-post-thumbnail hentry category-campus tag-vetmed tag-columns tag-office-of-research tag-office-of-the-senior-vice-president-for-academic-affairs-and-provost">
+
+		 	<div class="meta-image">
+			<a href="https://news.uga.edu/chris-king-to-serve-as-interim-vp-for-research/" title="Chris King to serve as interim VP for research">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/Chris_King-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="" />							</a>
+		</div>
+	
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/campus/" class="category-9">Campus News</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/chris-king-to-serve-as-interim-vp-for-research/" title="Chris King to serve as interim VP for research">Chris King to serve as interim VP for research</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>Since 2013, he has served as an associate vice president for research.</p>
+		</div>
+	
+	</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-c post-95570 post type-post status-publish format-standard has-post-thumbnail hentry category-georgia-impact category-stories-in-the-media-with-uga-connections category-science-technology category-society-culture tag-franklin-college tag-georgia-magazine tag-research">
+
+		 	<div class="meta-image">
+			<a href="https://news.uga.edu/fading-accents/" title="Say Goodbye to the Drawl, Y&#8217;all">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/Accents-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="" />							</a>
+		</div>
+	
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/society-culture/" class="category-7">Society &amp; Culture</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/fading-accents/" title="Say Goodbye to the Drawl, Y&#8217;all">Say Goodbye to the Drawl, Y&#8217;all</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>Bye, y'all?</p>
+		</div>
+	
+	</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-c post-95636 post type-post status-publish format-standard has-post-thumbnail hentry category-campus tag-columns tag-division-of-development-and-alumni-relations tag-office-of-instruction tag-university-health-center tag-washington-semester-program">
+
+		 	<div class="meta-image">
+			<a href="https://news.uga.edu/over-1-2m-raised-for-student-programs/" title="Over $1.2M raised for student programs">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/20210930_RAMPAL_ADT_MARCM_047-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="" />							</a>
+		</div>
+	
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/campus/" class="category-9">Campus News</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/over-1-2m-raised-for-student-programs/" title="Over $1.2M raised for student programs">Over $1.2M raised for student programs</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>The Parents Leadership Council will help fund an array of units and organizations.</p>
+		</div>
+	
+	</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-c post-95592 post type-post status-publish format-standard has-post-thumbnail hentry category-business-economy category-society-culture tag-columns tag-research tag-terry">
+
+		 	<div class="meta-image">
+			<a href="https://news.uga.edu/stress-bragging-may-make-you-seem-less-competent-less-likable-at-work/" title="Stress bragging may make you seem less competent, less likable at work">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/Stress_bragging-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="" />							</a>
+		</div>
+	
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/business-economy/" class="category-4">Business &amp; Economy</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/stress-bragging-may-make-you-seem-less-competent-less-likable-at-work/" title="Stress bragging may make you seem less competent, less likable at work">Stress bragging may make you seem less competent, less likable…</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>Complaining about how stressed you are can also cause burnout in co-workers.</p>
+		</div>
+	
+	</article>			
+							</div>
+			
+				
+		
+	
+	
+		</div>
+	</div>
+
+				
+												
+							<div id="main-box-2" class="main-box vce-border-top vce-blank-module  ">
+					
+			<div class="main-box-inside ">
+				<p><a href="https://news.uga.edu/ugatoday/"><img src="https://news.uga.edu/wp-content/uploads/2019/03/Digital-Ads-UGAToday-16.png"></a></p>
+			</div>
+	</div>
+
+				
+												
+						
+
+	<div id="main-box-3" class="main-box vce-border-top  ">
+			<h3 class="main-box-title ">Campus Profiles</h3>
+			<div class="main-box-inside ">
+
+	
+					
+			<div class="vce-loop-wrap" >			
+			<article class="vce-post vce-lay-b post-95527 post type-post status-publish format-standard has-post-thumbnail hentry category-alumni-spotlight category-society-culture tag-alumni tag-alumni-association tag-department-of-political-science tag-georgia-magazine tag-spia">
+
+ 		 	<div class="meta-image">			
+			<a href="https://news.uga.edu/the-red-nose-knows/" title="Alison Moore: The Red Nose Knows">
+				<img width="375" height="195" src="https://news.uga.edu/wp-content/uploads/2024/05/AlisonMoore-375x195.jpg" class="attachment-vce-lay-b size-vce-lay-b wp-post-image" alt="" />							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/profiles/alumni-spotlight/" class="category-2433">Alumni Spotlight</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/the-red-nose-knows/" title="Alison Moore: The Red Nose Knows">Alison Moore: The Red Nose Knows</a></h2>
+			</header>
+
+			<div class="entry-content">
+			<p>Comic relief</p>
+		</div>
+	
+</article>			
+							</div>
+			
+				
+		
+	
+	
+		</div>
+	</div>
+
+				
+												
+						
+
+	<div id="main-box-4" class="main-box vce-border-top  ">
+			<h3 class="main-box-title ">Around the Campus</h3>
+			<div class="main-box-inside ">
+
+	
+					
+			<div class="vce-loop-wrap" >			
+			<article class="vce-post vce-lay-d post-95448 post type-post status-publish format-standard has-post-thumbnail hentry category-science-technology tag-caes tag-columns tag-department-of-entomology">
+	
+ 		 	<div class="meta-image">			
+			<a href="https://newswire.caes.uga.edu/story/10419/2024-cicada-emergence.html" title="Georgia&#8217;s Brood 19 has arrived">
+				<img width="145" height="100" src="https://news.uga.edu/wp-content/uploads/2024/05/PeriodicalCicada_BroodXIX_2011-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="" srcset="https://news.uga.edu/wp-content/uploads/2024/05/PeriodicalCicada_BroodXIX_2011-145x100.jpg 145w, https://news.uga.edu/wp-content/uploads/2024/05/PeriodicalCicada_BroodXIX_2011-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" />							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/science-technology/" class="category-6">Science &amp; Technology</a></span>
+				<h2 class="entry-title"><a href="https://newswire.caes.uga.edu/story/10419/2024-cicada-emergence.html" title="Georgia&#8217;s Brood 19 has arrived">Georgia&#8217;s Brood 19 has arrived</a></h2>
+			</header>
+
+</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-d post-95395 post type-post status-publish format-standard has-post-thumbnail hentry category-campus category-georgia-impact tag-columns tag-office-of-the-president">
+	
+ 		 	<div class="meta-image">			
+			<a href="https://news.uga.edu/uga-receives-significant-funding-boost-in-state-budgets/" title="UGA receives significant funding boost in state budgets">
+				<img width="145" height="100" src="https://news.uga.edu/wp-content/uploads/2021/03/arch_hh_building_sun-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="The UGA Arch on North Campus" srcset="https://news.uga.edu/wp-content/uploads/2021/03/arch_hh_building_sun-145x100.jpg 145w, https://news.uga.edu/wp-content/uploads/2021/03/arch_hh_building_sun-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" />							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/campus/" class="category-9">Campus News</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/uga-receives-significant-funding-boost-in-state-budgets/" title="UGA receives significant funding boost in state budgets">UGA receives significant funding boost in state budgets</a></h2>
+			</header>
+
+</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-d post-95350 post type-post status-publish format-standard has-post-thumbnail hentry category-health-wellness tag-college-of-public-health tag-columns tag-department-of-infectious-diseases tag-research">
+	
+ 		 	<div class="meta-image">			
+			<a href="https://news.uga.edu/researchers-to-develop-tool-to-predict-measles-outbreaks/" title="Researchers to develop tool to predict measles outbreaks">
+				<img width="145" height="100" src="https://news.uga.edu/wp-content/uploads/2024/05/GettyImages_Measles-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="" srcset="https://news.uga.edu/wp-content/uploads/2024/05/GettyImages_Measles-145x100.jpg 145w, https://news.uga.edu/wp-content/uploads/2024/05/GettyImages_Measles-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" />							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/health-wellness/" class="category-5">Health &amp; Wellness</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/researchers-to-develop-tool-to-predict-measles-outbreaks/" title="Researchers to develop tool to predict measles outbreaks">Researchers to develop tool to predict measles…</a></h2>
+			</header>
+
+</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-d post-95357 post type-post status-publish format-gallery has-post-thumbnail hentry category-campus tag-columns tag-commencement tag-office-of-the-president tag-office-of-the-senior-vice-president-for-academic-affairs-and-provost post_format-post-format-gallery">
+	
+ 		 	<div class="meta-image">			
+			<a href="https://news.uga.edu/graduates-celebrate-challenges-and-look-to-the-future/" title="Graduates celebrate challenges and look to the future">
+				<img width="145" height="100" src="https://news.uga.edu/wp-content/uploads/2024/05/01-Grad-Drone-Fireworks-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="" srcset="https://news.uga.edu/wp-content/uploads/2024/05/01-Grad-Drone-Fireworks-145x100.jpg 145w, https://news.uga.edu/wp-content/uploads/2024/05/01-Grad-Drone-Fireworks-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" />									<span class="vce-format-icon">
+					<i class="fa fa-picture-o"></i>
+					</span>
+							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/campus/" class="category-9">Campus News</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/graduates-celebrate-challenges-and-look-to-the-future/" title="Graduates celebrate challenges and look to the future">Graduates celebrate challenges and look to the future</a></h2>
+			</header>
+
+</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-d post-95292 post type-post status-publish format-standard has-post-thumbnail hentry category-georgia-impact tag-caes tag-columns tag-office-of-the-senior-vice-president-for-academic-affairs-and-provost tag-public-service-and-outreach tag-rural-georgia tag-uga-cooperative-extension">
+	
+ 		 	<div class="meta-image">			
+			<a href="https://news.uga.edu/program-increases-collaboration-for-rural-engagement/" title="Program increases collaboration for rural engagement">
+				<img width="145" height="100" src="https://news.uga.edu/wp-content/uploads/2024/05/REW-5-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="" srcset="https://news.uga.edu/wp-content/uploads/2024/05/REW-5-145x100.jpg 145w, https://news.uga.edu/wp-content/uploads/2024/05/REW-5-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" />							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/georgia-impact/" class="category-8">Georgia Impact</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/program-increases-collaboration-for-rural-engagement/" title="Program increases collaboration for rural engagement">Program increases collaboration for rural engagement</a></h2>
+			</header>
+
+</article>			
+			
+					
+						
+			<article class="vce-post vce-lay-d post-95171 post type-post status-publish format-standard has-post-thumbnail hentry category-campus category-society-culture tag-columns tag-franklin-college tag-honors-awards tag-morehead-honors-college tag-office-of-global-engagement tag-spia">
+	
+ 		 	<div class="meta-image">			
+			<a href="https://news.uga.edu/uga-second-in-the-nation-for-boren-awards-in-2024/" title="UGA second in the nation for Boren Awards in 2024">
+				<img width="145" height="100" src="https://news.uga.edu/wp-content/uploads/2024/04/20240430_Boren2024_sws_HONR_3694-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="" srcset="https://news.uga.edu/wp-content/uploads/2024/04/20240430_Boren2024_sws_HONR_3694-145x100.jpg 145w, https://news.uga.edu/wp-content/uploads/2024/04/20240430_Boren2024_sws_HONR_3694-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" />							</a>
+		</div>
+		
+
+	<header class="entry-header">
+					<span class="meta-category"><a href="https://news.uga.edu/topics/campus/" class="category-9">Campus News</a></span>
+				<h2 class="entry-title"><a href="https://news.uga.edu/uga-second-in-the-nation-for-boren-awards-in-2024/" title="UGA second in the nation for Boren Awards in 2024">UGA second in the nation for Boren Awards in 2024</a></h2>
+			</header>
+
+</article>			
+							</div>
+			
+				
+		
+	
+	
+		</div>
+	</div>
+
+				
+			
+		</div>
+
+			<aside id="sidebar" class="sidebar right">
+		<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://news.uga.edu/columns/" style="color: #000; text-decoration: none; display: block; text-align: center;">
+<img src="/wp-content/uploads/2017/12/columns-logo.png" alt="Columns" style="margin-bottom: 10px;" />
+<div>The online newspaper for the University of Georgia community</div>
+</a></div></div><div id="custom_html-7" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://news.uga.edu/georgia-magazine/" style="color: #000; text-decoration: none; display: block; text-align: center;">
+<img src="/wp-content/uploads/2019/03/georgia-magazine-notext.png" alt="Georgia Magazine" />
+<div>The magazine of the University&nbsp;of&nbsp;Georgia</div>
+</a></div></div><div id="custom_html-18" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://research.uga.edu/news/" style="color: #000; text-decoration: none; display: block; text-align: center;">
+<img src="/wp-content/uploads/2020/01/UGA-Research-logo.png" alt="UGA Research" style="margin-bottom: 10px;" />
+<div>Research news from across the University of Georgia</div>
+</a></div></div><div id="custom_html-23" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Forget what we’ve already done.<br><br>We’re the ones pushing even further.<br>That’s us reaching even higher,<br>Working like Dawgs,<br>Reimagining what’s truly possible.<br><br>Because we’re not finished yet.<br>This is the University of Georgia,<br>And we’re just getting started. <a href="https://t.co/5oUbwGWLbV">pic.twitter.com/5oUbwGWLbV</a></p>&mdash; UGA (@universityofga) <a href="https://twitter.com/universityofga/status/1698010395787526205?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div></div><div id="custom_html-6" class="widget_text widget widget_custom_html"><h4 class="widget-title">Events</h4><div class="textwidget custom-html-widget"><script src="//calendar.uga.edu/widget/view?schools=uga&days=31&num=10&&exclude_types=112936%2C110990"></script>
+<style>
+#lw {
+	max-height: 400px;
+	overflow-y: scroll;
+	margin-bottom: 1.5rem;
+}
+</style>
+<div style="text-align: center;"><a class="vce-button" href="https://calendar.uga.edu/" style="color: #fff;">More Events</a></div></div></div><div id="archives-3" class="widget widget_archive"><h4 class="widget-title">Archives</h4>		<label class="screen-reader-text" for="archives-dropdown-3">Archives</label>
+		<select id="archives-dropdown-3" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://news.uga.edu/2024/05/'> May 2024 </option>
+	<option value='https://news.uga.edu/2024/04/'> April 2024 </option>
+	<option value='https://news.uga.edu/2024/03/'> March 2024 </option>
+	<option value='https://news.uga.edu/2024/02/'> February 2024 </option>
+	<option value='https://news.uga.edu/2024/01/'> January 2024 </option>
+	<option value='https://news.uga.edu/2023/12/'> December 2023 </option>
+	<option value='https://news.uga.edu/2023/11/'> November 2023 </option>
+	<option value='https://news.uga.edu/2023/10/'> October 2023 </option>
+	<option value='https://news.uga.edu/2023/09/'> September 2023 </option>
+	<option value='https://news.uga.edu/2023/08/'> August 2023 </option>
+	<option value='https://news.uga.edu/2023/07/'> July 2023 </option>
+	<option value='https://news.uga.edu/2023/06/'> June 2023 </option>
+	<option value='https://news.uga.edu/2023/05/'> May 2023 </option>
+	<option value='https://news.uga.edu/2023/04/'> April 2023 </option>
+	<option value='https://news.uga.edu/2023/03/'> March 2023 </option>
+	<option value='https://news.uga.edu/2023/02/'> February 2023 </option>
+	<option value='https://news.uga.edu/2023/01/'> January 2023 </option>
+	<option value='https://news.uga.edu/2022/12/'> December 2022 </option>
+	<option value='https://news.uga.edu/2022/11/'> November 2022 </option>
+	<option value='https://news.uga.edu/2022/10/'> October 2022 </option>
+	<option value='https://news.uga.edu/2022/09/'> September 2022 </option>
+	<option value='https://news.uga.edu/2022/08/'> August 2022 </option>
+	<option value='https://news.uga.edu/2022/07/'> July 2022 </option>
+	<option value='https://news.uga.edu/2022/06/'> June 2022 </option>
+	<option value='https://news.uga.edu/2022/05/'> May 2022 </option>
+	<option value='https://news.uga.edu/2022/04/'> April 2022 </option>
+	<option value='https://news.uga.edu/2022/03/'> March 2022 </option>
+	<option value='https://news.uga.edu/2022/02/'> February 2022 </option>
+	<option value='https://news.uga.edu/2022/01/'> January 2022 </option>
+	<option value='https://news.uga.edu/2021/12/'> December 2021 </option>
+	<option value='https://news.uga.edu/2021/11/'> November 2021 </option>
+	<option value='https://news.uga.edu/2021/10/'> October 2021 </option>
+	<option value='https://news.uga.edu/2021/09/'> September 2021 </option>
+	<option value='https://news.uga.edu/2021/08/'> August 2021 </option>
+	<option value='https://news.uga.edu/2021/07/'> July 2021 </option>
+	<option value='https://news.uga.edu/2021/06/'> June 2021 </option>
+	<option value='https://news.uga.edu/2021/05/'> May 2021 </option>
+	<option value='https://news.uga.edu/2021/04/'> April 2021 </option>
+	<option value='https://news.uga.edu/2021/03/'> March 2021 </option>
+	<option value='https://news.uga.edu/2021/02/'> February 2021 </option>
+	<option value='https://news.uga.edu/2021/01/'> January 2021 </option>
+	<option value='https://news.uga.edu/2020/12/'> December 2020 </option>
+	<option value='https://news.uga.edu/2020/11/'> November 2020 </option>
+	<option value='https://news.uga.edu/2020/10/'> October 2020 </option>
+	<option value='https://news.uga.edu/2020/09/'> September 2020 </option>
+	<option value='https://news.uga.edu/2020/08/'> August 2020 </option>
+	<option value='https://news.uga.edu/2020/07/'> July 2020 </option>
+	<option value='https://news.uga.edu/2020/06/'> June 2020 </option>
+	<option value='https://news.uga.edu/2020/05/'> May 2020 </option>
+	<option value='https://news.uga.edu/2020/04/'> April 2020 </option>
+	<option value='https://news.uga.edu/2020/03/'> March 2020 </option>
+	<option value='https://news.uga.edu/2020/02/'> February 2020 </option>
+	<option value='https://news.uga.edu/2020/01/'> January 2020 </option>
+	<option value='https://news.uga.edu/2019/12/'> December 2019 </option>
+	<option value='https://news.uga.edu/2019/11/'> November 2019 </option>
+	<option value='https://news.uga.edu/2019/10/'> October 2019 </option>
+	<option value='https://news.uga.edu/2019/09/'> September 2019 </option>
+	<option value='https://news.uga.edu/2019/08/'> August 2019 </option>
+	<option value='https://news.uga.edu/2019/07/'> July 2019 </option>
+	<option value='https://news.uga.edu/2019/06/'> June 2019 </option>
+	<option value='https://news.uga.edu/2019/05/'> May 2019 </option>
+	<option value='https://news.uga.edu/2019/04/'> April 2019 </option>
+	<option value='https://news.uga.edu/2019/03/'> March 2019 </option>
+	<option value='https://news.uga.edu/2019/02/'> February 2019 </option>
+	<option value='https://news.uga.edu/2019/01/'> January 2019 </option>
+	<option value='https://news.uga.edu/2018/12/'> December 2018 </option>
+	<option value='https://news.uga.edu/2018/11/'> November 2018 </option>
+	<option value='https://news.uga.edu/2018/10/'> October 2018 </option>
+	<option value='https://news.uga.edu/2018/09/'> September 2018 </option>
+	<option value='https://news.uga.edu/2018/08/'> August 2018 </option>
+	<option value='https://news.uga.edu/2018/07/'> July 2018 </option>
+	<option value='https://news.uga.edu/2018/06/'> June 2018 </option>
+	<option value='https://news.uga.edu/2018/05/'> May 2018 </option>
+	<option value='https://news.uga.edu/2018/04/'> April 2018 </option>
+	<option value='https://news.uga.edu/2018/03/'> March 2018 </option>
+	<option value='https://news.uga.edu/2018/02/'> February 2018 </option>
+	<option value='https://news.uga.edu/2018/01/'> January 2018 </option>
+	<option value='https://news.uga.edu/2017/12/'> December 2017 </option>
+	<option value='https://news.uga.edu/2017/11/'> November 2017 </option>
+	<option value='https://news.uga.edu/2017/10/'> October 2017 </option>
+	<option value='https://news.uga.edu/2017/09/'> September 2017 </option>
+	<option value='https://news.uga.edu/2017/08/'> August 2017 </option>
+	<option value='https://news.uga.edu/2017/07/'> July 2017 </option>
+	<option value='https://news.uga.edu/2017/06/'> June 2017 </option>
+	<option value='https://news.uga.edu/2017/05/'> May 2017 </option>
+	<option value='https://news.uga.edu/2017/04/'> April 2017 </option>
+	<option value='https://news.uga.edu/2017/03/'> March 2017 </option>
+	<option value='https://news.uga.edu/2017/02/'> February 2017 </option>
+	<option value='https://news.uga.edu/2017/01/'> January 2017 </option>
+	<option value='https://news.uga.edu/2016/12/'> December 2016 </option>
+	<option value='https://news.uga.edu/2016/11/'> November 2016 </option>
+	<option value='https://news.uga.edu/2016/10/'> October 2016 </option>
+	<option value='https://news.uga.edu/2016/09/'> September 2016 </option>
+	<option value='https://news.uga.edu/2016/08/'> August 2016 </option>
+	<option value='https://news.uga.edu/2016/07/'> July 2016 </option>
+	<option value='https://news.uga.edu/2016/06/'> June 2016 </option>
+	<option value='https://news.uga.edu/2016/05/'> May 2016 </option>
+	<option value='https://news.uga.edu/2016/04/'> April 2016 </option>
+	<option value='https://news.uga.edu/2016/03/'> March 2016 </option>
+	<option value='https://news.uga.edu/2016/02/'> February 2016 </option>
+	<option value='https://news.uga.edu/2016/01/'> January 2016 </option>
+	<option value='https://news.uga.edu/2015/12/'> December 2015 </option>
+	<option value='https://news.uga.edu/2015/11/'> November 2015 </option>
+	<option value='https://news.uga.edu/2015/10/'> October 2015 </option>
+	<option value='https://news.uga.edu/2015/09/'> September 2015 </option>
+	<option value='https://news.uga.edu/2015/08/'> August 2015 </option>
+	<option value='https://news.uga.edu/2015/07/'> July 2015 </option>
+	<option value='https://news.uga.edu/2015/06/'> June 2015 </option>
+	<option value='https://news.uga.edu/2015/05/'> May 2015 </option>
+	<option value='https://news.uga.edu/2015/04/'> April 2015 </option>
+	<option value='https://news.uga.edu/2015/03/'> March 2015 </option>
+	<option value='https://news.uga.edu/2015/02/'> February 2015 </option>
+	<option value='https://news.uga.edu/2015/01/'> January 2015 </option>
+	<option value='https://news.uga.edu/2014/12/'> December 2014 </option>
+	<option value='https://news.uga.edu/2014/11/'> November 2014 </option>
+	<option value='https://news.uga.edu/2014/10/'> October 2014 </option>
+	<option value='https://news.uga.edu/2014/09/'> September 2014 </option>
+	<option value='https://news.uga.edu/2014/08/'> August 2014 </option>
+	<option value='https://news.uga.edu/2014/07/'> July 2014 </option>
+	<option value='https://news.uga.edu/2014/06/'> June 2014 </option>
+	<option value='https://news.uga.edu/2014/05/'> May 2014 </option>
+	<option value='https://news.uga.edu/2014/04/'> April 2014 </option>
+	<option value='https://news.uga.edu/2014/03/'> March 2014 </option>
+	<option value='https://news.uga.edu/2014/02/'> February 2014 </option>
+	<option value='https://news.uga.edu/2014/01/'> January 2014 </option>
+	<option value='https://news.uga.edu/2013/12/'> December 2013 </option>
+	<option value='https://news.uga.edu/2013/11/'> November 2013 </option>
+	<option value='https://news.uga.edu/2013/10/'> October 2013 </option>
+	<option value='https://news.uga.edu/2013/09/'> September 2013 </option>
+	<option value='https://news.uga.edu/2013/08/'> August 2013 </option>
+	<option value='https://news.uga.edu/2013/07/'> July 2013 </option>
+	<option value='https://news.uga.edu/2013/06/'> June 2013 </option>
+	<option value='https://news.uga.edu/2013/05/'> May 2013 </option>
+	<option value='https://news.uga.edu/2013/04/'> April 2013 </option>
+	<option value='https://news.uga.edu/2013/03/'> March 2013 </option>
+	<option value='https://news.uga.edu/2013/02/'> February 2013 </option>
+	<option value='https://news.uga.edu/2013/01/'> January 2013 </option>
+	<option value='https://news.uga.edu/2012/12/'> December 2012 </option>
+	<option value='https://news.uga.edu/2012/11/'> November 2012 </option>
+	<option value='https://news.uga.edu/2012/10/'> October 2012 </option>
+	<option value='https://news.uga.edu/2012/09/'> September 2012 </option>
+	<option value='https://news.uga.edu/2012/08/'> August 2012 </option>
+	<option value='https://news.uga.edu/2012/07/'> July 2012 </option>
+	<option value='https://news.uga.edu/2012/06/'> June 2012 </option>
+	<option value='https://news.uga.edu/2012/05/'> May 2012 </option>
+	<option value='https://news.uga.edu/2012/04/'> April 2012 </option>
+	<option value='https://news.uga.edu/2012/03/'> March 2012 </option>
+	<option value='https://news.uga.edu/2012/02/'> February 2012 </option>
+	<option value='https://news.uga.edu/2012/01/'> January 2012 </option>
+	<option value='https://news.uga.edu/2011/12/'> December 2011 </option>
+	<option value='https://news.uga.edu/2011/11/'> November 2011 </option>
+	<option value='https://news.uga.edu/2011/10/'> October 2011 </option>
+	<option value='https://news.uga.edu/2011/09/'> September 2011 </option>
+	<option value='https://news.uga.edu/2011/08/'> August 2011 </option>
+	<option value='https://news.uga.edu/2011/07/'> July 2011 </option>
+	<option value='https://news.uga.edu/2011/06/'> June 2011 </option>
+	<option value='https://news.uga.edu/2011/05/'> May 2011 </option>
+	<option value='https://news.uga.edu/2011/04/'> April 2011 </option>
+	<option value='https://news.uga.edu/2011/03/'> March 2011 </option>
+	<option value='https://news.uga.edu/2011/02/'> February 2011 </option>
+	<option value='https://news.uga.edu/2011/01/'> January 2011 </option>
+	<option value='https://news.uga.edu/2010/12/'> December 2010 </option>
+	<option value='https://news.uga.edu/2010/11/'> November 2010 </option>
+	<option value='https://news.uga.edu/2010/10/'> October 2010 </option>
+	<option value='https://news.uga.edu/2010/09/'> September 2010 </option>
+	<option value='https://news.uga.edu/2010/08/'> August 2010 </option>
+	<option value='https://news.uga.edu/2010/07/'> July 2010 </option>
+	<option value='https://news.uga.edu/2010/06/'> June 2010 </option>
+	<option value='https://news.uga.edu/2010/05/'> May 2010 </option>
+	<option value='https://news.uga.edu/2010/04/'> April 2010 </option>
+	<option value='https://news.uga.edu/2010/03/'> March 2010 </option>
+	<option value='https://news.uga.edu/2010/02/'> February 2010 </option>
+	<option value='https://news.uga.edu/2010/01/'> January 2010 </option>
+	<option value='https://news.uga.edu/2009/12/'> December 2009 </option>
+	<option value='https://news.uga.edu/2009/11/'> November 2009 </option>
+	<option value='https://news.uga.edu/2009/10/'> October 2009 </option>
+	<option value='https://news.uga.edu/2009/09/'> September 2009 </option>
+	<option value='https://news.uga.edu/2009/08/'> August 2009 </option>
+	<option value='https://news.uga.edu/2009/07/'> July 2009 </option>
+	<option value='https://news.uga.edu/2009/06/'> June 2009 </option>
+	<option value='https://news.uga.edu/2009/05/'> May 2009 </option>
+	<option value='https://news.uga.edu/2009/04/'> April 2009 </option>
+	<option value='https://news.uga.edu/2009/03/'> March 2009 </option>
+	<option value='https://news.uga.edu/2009/02/'> February 2009 </option>
+	<option value='https://news.uga.edu/2009/01/'> January 2009 </option>
+	<option value='https://news.uga.edu/2008/12/'> December 2008 </option>
+	<option value='https://news.uga.edu/2008/11/'> November 2008 </option>
+	<option value='https://news.uga.edu/2008/10/'> October 2008 </option>
+	<option value='https://news.uga.edu/2008/09/'> September 2008 </option>
+	<option value='https://news.uga.edu/2008/08/'> August 2008 </option>
+	<option value='https://news.uga.edu/2008/07/'> July 2008 </option>
+	<option value='https://news.uga.edu/2008/06/'> June 2008 </option>
+	<option value='https://news.uga.edu/2008/05/'> May 2008 </option>
+	<option value='https://news.uga.edu/2008/04/'> April 2008 </option>
+	<option value='https://news.uga.edu/2008/03/'> March 2008 </option>
+	<option value='https://news.uga.edu/2008/02/'> February 2008 </option>
+	<option value='https://news.uga.edu/2008/01/'> January 2008 </option>
+	<option value='https://news.uga.edu/2007/12/'> December 2007 </option>
+	<option value='https://news.uga.edu/2007/11/'> November 2007 </option>
+	<option value='https://news.uga.edu/2007/10/'> October 2007 </option>
+	<option value='https://news.uga.edu/2007/09/'> September 2007 </option>
+	<option value='https://news.uga.edu/2007/08/'> August 2007 </option>
+	<option value='https://news.uga.edu/2007/07/'> July 2007 </option>
+	<option value='https://news.uga.edu/2007/06/'> June 2007 </option>
+	<option value='https://news.uga.edu/2007/05/'> May 2007 </option>
+	<option value='https://news.uga.edu/2007/04/'> April 2007 </option>
+	<option value='https://news.uga.edu/2007/03/'> March 2007 </option>
+	<option value='https://news.uga.edu/2007/02/'> February 2007 </option>
+	<option value='https://news.uga.edu/2007/01/'> January 2007 </option>
+	<option value='https://news.uga.edu/2006/12/'> December 2006 </option>
+	<option value='https://news.uga.edu/2006/11/'> November 2006 </option>
+	<option value='https://news.uga.edu/2006/10/'> October 2006 </option>
+	<option value='https://news.uga.edu/2006/09/'> September 2006 </option>
+	<option value='https://news.uga.edu/2006/08/'> August 2006 </option>
+	<option value='https://news.uga.edu/2006/07/'> July 2006 </option>
+	<option value='https://news.uga.edu/2006/06/'> June 2006 </option>
+	<option value='https://news.uga.edu/2006/05/'> May 2006 </option>
+	<option value='https://news.uga.edu/2006/04/'> April 2006 </option>
+	<option value='https://news.uga.edu/2006/03/'> March 2006 </option>
+	<option value='https://news.uga.edu/2006/02/'> February 2006 </option>
+	<option value='https://news.uga.edu/2006/01/'> January 2006 </option>
+	<option value='https://news.uga.edu/2005/12/'> December 2005 </option>
+	<option value='https://news.uga.edu/2005/11/'> November 2005 </option>
+	<option value='https://news.uga.edu/2005/10/'> October 2005 </option>
+	<option value='https://news.uga.edu/2005/09/'> September 2005 </option>
+	<option value='https://news.uga.edu/2005/08/'> August 2005 </option>
+	<option value='https://news.uga.edu/2005/07/'> July 2005 </option>
+	<option value='https://news.uga.edu/2005/06/'> June 2005 </option>
+	<option value='https://news.uga.edu/2005/05/'> May 2005 </option>
+	<option value='https://news.uga.edu/2005/04/'> April 2005 </option>
+	<option value='https://news.uga.edu/2005/03/'> March 2005 </option>
+	<option value='https://news.uga.edu/2005/02/'> February 2005 </option>
+	<option value='https://news.uga.edu/2005/01/'> January 2005 </option>
+	<option value='https://news.uga.edu/2004/12/'> December 2004 </option>
+	<option value='https://news.uga.edu/2004/11/'> November 2004 </option>
+	<option value='https://news.uga.edu/2004/10/'> October 2004 </option>
+	<option value='https://news.uga.edu/2004/09/'> September 2004 </option>
+	<option value='https://news.uga.edu/2004/08/'> August 2004 </option>
+	<option value='https://news.uga.edu/2004/07/'> July 2004 </option>
+	<option value='https://news.uga.edu/2004/06/'> June 2004 </option>
+	<option value='https://news.uga.edu/2004/05/'> May 2004 </option>
+	<option value='https://news.uga.edu/2004/04/'> April 2004 </option>
+	<option value='https://news.uga.edu/2004/03/'> March 2004 </option>
+	<option value='https://news.uga.edu/2004/02/'> February 2004 </option>
+	<option value='https://news.uga.edu/2004/01/'> January 2004 </option>
+	<option value='https://news.uga.edu/2003/12/'> December 2003 </option>
+	<option value='https://news.uga.edu/2003/11/'> November 2003 </option>
+	<option value='https://news.uga.edu/2003/10/'> October 2003 </option>
+	<option value='https://news.uga.edu/2003/09/'> September 2003 </option>
+	<option value='https://news.uga.edu/2003/08/'> August 2003 </option>
+	<option value='https://news.uga.edu/2003/07/'> July 2003 </option>
+	<option value='https://news.uga.edu/2003/06/'> June 2003 </option>
+	<option value='https://news.uga.edu/2003/05/'> May 2003 </option>
+	<option value='https://news.uga.edu/2003/04/'> April 2003 </option>
+	<option value='https://news.uga.edu/2003/03/'> March 2003 </option>
+	<option value='https://news.uga.edu/2003/02/'> February 2003 </option>
+	<option value='https://news.uga.edu/2003/01/'> January 2003 </option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-3" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+
+/* ]]> */
+</script>
+</div><div id="calendar-2" class="widget widget_calendar"><h4 class="widget-title">Posts by Date</h4><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+	<caption>May 2024</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="3" class="pad">&nbsp;</td><td><a href="https://news.uga.edu/2024/05/01/" aria-label="Posts published on May 1, 2024">1</a></td><td><a href="https://news.uga.edu/2024/05/02/" aria-label="Posts published on May 2, 2024">2</a></td><td><a href="https://news.uga.edu/2024/05/03/" aria-label="Posts published on May 3, 2024">3</a></td><td>4</td>
+	</tr>
+	<tr>
+		<td>5</td><td><a href="https://news.uga.edu/2024/05/06/" aria-label="Posts published on May 6, 2024">6</a></td><td><a href="https://news.uga.edu/2024/05/07/" aria-label="Posts published on May 7, 2024">7</a></td><td><a href="https://news.uga.edu/2024/05/08/" aria-label="Posts published on May 8, 2024">8</a></td><td><a href="https://news.uga.edu/2024/05/09/" aria-label="Posts published on May 9, 2024">9</a></td><td><a href="https://news.uga.edu/2024/05/10/" aria-label="Posts published on May 10, 2024">10</a></td><td><a href="https://news.uga.edu/2024/05/11/" aria-label="Posts published on May 11, 2024">11</a></td>
+	</tr>
+	<tr>
+		<td>12</td><td><a href="https://news.uga.edu/2024/05/13/" aria-label="Posts published on May 13, 2024">13</a></td><td><a href="https://news.uga.edu/2024/05/14/" aria-label="Posts published on May 14, 2024">14</a></td><td><a href="https://news.uga.edu/2024/05/15/" aria-label="Posts published on May 15, 2024">15</a></td><td><a href="https://news.uga.edu/2024/05/16/" aria-label="Posts published on May 16, 2024">16</a></td><td>17</td><td>18</td>
+	</tr>
+	<tr>
+		<td><a href="https://news.uga.edu/2024/05/19/" aria-label="Posts published on May 19, 2024">19</a></td><td><a href="https://news.uga.edu/2024/05/20/" aria-label="Posts published on May 20, 2024">20</a></td><td><a href="https://news.uga.edu/2024/05/21/" aria-label="Posts published on May 21, 2024">21</a></td><td><a href="https://news.uga.edu/2024/05/22/" aria-label="Posts published on May 22, 2024">22</a></td><td><a href="https://news.uga.edu/2024/05/23/" aria-label="Posts published on May 23, 2024">23</a></td><td><a href="https://news.uga.edu/2024/05/24/" aria-label="Posts published on May 24, 2024">24</a></td><td>25</td>
+	</tr>
+	<tr>
+		<td>26</td><td>27</td><td>28</td><td><a href="https://news.uga.edu/2024/05/29/" aria-label="Posts published on May 29, 2024">29</a></td><td id="today"><a href="https://news.uga.edu/2024/05/30/" aria-label="Posts published on May 30, 2024">30</a></td><td>31</td>
+		<td class="pad" colspan="1">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table><nav aria-label="Previous and next months" class="wp-calendar-nav">
+		<span class="wp-calendar-nav-prev"><a href="https://news.uga.edu/2024/04/">&laquo; Apr</a></span>
+		<span class="pad">&nbsp;</span>
+		<span class="wp-calendar-nav-next">&nbsp;</span>
+	</nav></div></div>	</aside>
+
+	</div>
+
+	
+
+
+
+	<footer id="footer" class="site-footer">
+
+		
+		
+
+	</footer>
+
+
+</div>
+</div>
+
+
+<footer class="ugafooter">
+	<div class="ugafooter__container">
+		<div class="ugafooter__row ugafooter__row--primary">                    
+			<div class="ugafooter__logo">
+			   <a class="ugafooter__logo-link" href="https://www.uga.edu/">University of Georgia</a>
+			</div>
+			<nav class="ugafooter__links">
+				<ul class="ugafooter__links-list">
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="https://www.uga.edu/a-z/schools/">Schools and Colleges</a>
+					</li>
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="https://peoplesearch.uga.edu/">Directory</a>
+					</li>
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="https://my.uga.edu/">MyUGA</a>
+					</li>
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="http://hr.uga.edu/applicants/">Employment Opportunities</a>
+					</li>
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="https://mc.uga.edu/policy/trademark">Copyright and Trademarks</a>
+					</li>
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="https://eits.uga.edu/access_and_security/infosec/pols_regs/policies/privacy/">Privacy</a>
+					</li>
+					<li class="ugafooter__links-list-item">
+						<a class="ugafooter__links-list-link" href="mailto:webmaster@uga.edu">Website Feedback</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="ugafooter__row ugafooter__row--secondary">
+			<nav class="ugafooter__social">
+				<span class="ugafooter__social-label">#UGA on</span>
+				<a class="ugafooter__social-link" aria-label="UGA on Facebook" href="https://www.facebook.com/universityofga/">
+					<i class="fab fa-fw fa-facebook-f" title="Facebook" aria-hidden></i>
+				</a>
+				<a class="ugafooter__social-link" aria-label="UGA on Twitter" href="https://twitter.com/universityofga">
+					<i class="fab fa-fw fa-twitter" title="Twitter" aria-hidden></i>
+				</a>
+				<a class="ugafooter__social-link" aria-label="UGA on Instagram" href="https://www.instagram.com/universityofga/">
+					<i class="fab fa-fw fa-instagram" title="Instagram" aria-hidden></i>
+				</a>
+				<a class="ugafooter__social-link" aria-label="UGA on Snapchat" href="https://www.snapchat.com/add/university-ga">
+					<i class="fab fa-fw fa-snapchat-ghost" title="Snapchat" aria-hidden></i>
+				</a>
+				<a class="ugafooter__social-link" aria-label="UGA on YouTube" href="https://www.youtube.com/user/UniversityOfGeorgia">
+					<i class="fab fa-fw fa-youtube" title="YouTube" aria-hidden></i>
+				</a>
+				<a class="ugafooter__social-link" aria-label="UGA on LinkedIn" href="https://www.linkedin.com/school/university-of-georgia/">
+					<i class="fab fa-fw fa-linkedin-in" title="LinkedIn" aria-hidden></i>
+				</a>
+			</nav>
+			<div class="ugafooter__address">
+				&copy; University of Georgia, Athens, GA 30602<br>
+				706&#8209;542&#8209;3000
+			</div>
+		</div>
+	</div>
+</footer><script type="text/javascript" src="https://news.uga.edu/wp-content/plugins/meks-flexible-shortcodes/js/main.js?ver=1" id="mks_shortcodes_js-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice-child/mmenu/mmenu.js?ver=8.4.0" id="mmenu-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice-child/mmenu/mmenu.polyfills.js?ver=8.4.0" id="mmenu-polyfills-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice-child/mhead/dist/jquery.mhead.js?ver=1.1" id="mhead-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice-child/js/uga-footer.js?ver=1.1" id="uga-footer-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice-child/js/jquery.validate.min.js?ver=1.1" id="jquery-validate-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice-child/js/custom.js?ver=1.1" id="custom-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script type="text/javascript" id="vce-main-js-extra">
+/* <![CDATA[ */
+var vce_js_settings = {"sticky_header":"","sticky_header_offset":"700","sticky_header_logo":"","logo":"https:\/\/news.uga.edu\/wp-content\/uploads\/2017\/12\/uga-today-logo.png","logo_retina":"https:\/\/news.uga.edu\/wp-content\/uploads\/2017\/12\/uga-today-logo.png","logo_mobile":"","logo_mobile_retina":"","rtl_mode":"0","ajax_url":"https:\/\/news.uga.edu\/wp-admin\/admin-ajax.php","ajax_wpml_current_lang":null,"ajax_mega_menu":"1","mega_menu_slider":"","mega_menu_subcats":"","lay_fa_grid_center":"","full_slider_autoplay":"5000","grid_slider_autoplay":"","grid_big_slider_autoplay":"","fa_big_opacity":{"1":"0.5","2":"0.7"},"top_bar_mobile":"0","top_bar_mobile_group":"","top_bar_more_link":"More"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/themes/voice/assets/js/min.js?ver=3.0.1" id="vce-main-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/plugins/meks-easy-social-share/assets/js/main.js?ver=1.3" id="meks_ess-main-js"></script>
+<script type="text/javascript" src="https://news.uga.edu/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.7" id="page-links-to-js"></script>
+</div><!-- .page -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"faae95e2ff","applicationID":"61347132","transactionName":"YgQHYEJTXEUCVRJQDltOJFdEW11YTEIDVBFZABFRHV9dUhZaA0o=","queueTime":0,"applicationTime":293,"atts":"TkMEFgpJT0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<!-- plugin=object-cache-pro client=phpredis metric#hits=3226 metric#misses=130 metric#hit-ratio=96.1 metric#bytes=2179047 metric#prefetches=245 metric#store-reads=44 metric#store-writes=3 metric#store-hits=254 metric#store-misses=37 metric#sql-queries=8 metric#ms-total=293.62 metric#ms-cache=37.14 metric#ms-cache-avg=0.8073 metric#ms-cache-ratio=12.7 -->

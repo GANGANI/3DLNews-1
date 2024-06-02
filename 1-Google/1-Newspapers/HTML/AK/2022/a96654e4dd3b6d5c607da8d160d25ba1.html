@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Wrangell Sentinel" />
+  <META NAME="description" CONTENT="Wrangell Sentinel archives search page" />
+  <META NAME="keywords" CONTENT="Wrangell Sentinel,archives,archives search,search,search tool,keyword,phrase,search results" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="7 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Wrangell Sentinel Dockside">
+<META PROPERTY="og:description" CONTENT="">
+<META PROPERTY="og:url" CONTENT="https://www.wrangellsentinel.com/section/dockside">
+<META PROPERTY="og:site_name" CONTENT="Wrangell Sentinel">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.wrangellsentinel.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Wrangell Sentinel Dockside</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28257/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1732x44534/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" href="https://www.wrangellsentinel.com/section/dockside">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.wrangellsentinel.com/section/dockside?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20349/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21165/XPATH/app/website_specifics/nonresponsive.js"></script>
+
+    <script>
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+    </script>
+<script>
+function RemoveContent(d) {document.getElementById(d).style.display = "none";}
+function InsertContent(d) {document.getElementById(d).style.display = ""; swapdiv(d);}
+
+function expiredAJAX() {
+ // noop
+}
+
+     function swapdiv(a){
+      if (a=='div2'){
+       CLEAR.f.runOverlay('/ajax/popular/blogged');
+      } else {
+       CLEAR.f.runOverlay('/ajax/popular/viewed');
+      }
+     }
+</script><script src="HTTPS://www.wrangellsentinel.com/apps/clear/clear.js"></script>
+<script>
+ debug=false;
+</script>
+  
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0WVJS807P"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-K0WVJS807P'); </script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a><a  href="HTTPS://www.wrangellsentinel.com/about" >About</a><a  href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a><a  href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a><a  href="HTTPS://www.wrangellsentinel.com/login?r=%2Fsection%2Fdockside" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Wrangell Sentinel - </h1>
+    <a href="HTTPS://www.wrangellsentinel.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:HbVZhPpXZqSNPxfUYnVjl2exbBrgkfhz1WqlnREst--><a href="https://www.wrangellsentinel.com/home/customer_files/visitor_guides/2024-25_travel_wrangell_travel_guide.pdf"><img src="/IMG/5N__NQeJ8JLdO4TyEwXnQcEioZeWf/XPATH/home/cms_data/dfault/web_ads/horiz_small/7355-vg2024.jpgXEXT1362x35506.jpeg" width="260" height="90" alt="A link to the free Wrangell Visitor's Guide"></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_2">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class="" href="HTTPS://www.wrangellsentinel.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/news">News</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/state%5Fof%5Falaska">State of Alaska</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell">Wrangell</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell%5Fsentinel">Wrangell Sentinel</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/sports">Sports</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports/wrangell">Wrangell</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/about_town">About Town</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town/pastors%5Fchristmas%5Fmessages">Pastors Christmas messages</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/police">Police</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/opinion">Opinion</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/editorial">Editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/from%5Fa%5Fnew%5Farrival">FROM A NEW ARRIVAL</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/guest%5Fopinion">Guest opinion</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/letters%5Fto%5Fthe%5Feditor">Letters to the editor</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/publisher%27s%5Fcolumn">Publisher's column</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/reflections">Reflections</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorial">Sentinel editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorials">Sentinel editorials</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a class="active" href="HTTPS://www.wrangellsentinel.com/section/dockside">Dockside</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/classifieds">Classifieds</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" action="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <h2 class="section_title_font">Dockside</h2><p class='tagline'><strong>Sorted by date</strong>&nbsp;&nbsp;Results <strong>1 - 25</strong> of <strong>587</strong></p><br /><br /><div class='sections_display'><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/03_13_2024/'>March 13, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2024/03/13/dockside/dont-get-too-close/12971.html" aria-label="Story Thumbnail: Don&apos;t get too close"><img src="/IMG/LfPfXdocWTbWgVW4fjlrWvyfl/XPATH/home/cms_data/dfault/photos/stories/id/7/1/12971/s_topXEXT758x35645is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/03/13/dockside/dont-get-too-close/12971.html" aria-label="Don&apos;t get too close"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/03/13/dockside/dont-get-too-close/12971.html" aria-label="Don&apos;t get too close"><h3>Don't get too close</h3></a>
+<p></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/03_30_2022/'>March 30, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/30/dockside/japanese-market-has-collapsed-for-alaska-herring-catch/10121.html" aria-label="Japanese market has collapsed for Alaska herring catch"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/30/dockside/japanese-market-has-collapsed-for-alaska-herring-catch/10121.html" aria-label="Japanese market has collapsed for Alaska herring catch"><h3>Japanese market has collapsed for Alaska herring catch</h3></a>
+<p>The arrival of herring signals the start of Alaska’s spring fisheries and this year’s commercial catch limits from each of the three main areas are record breakers. But much of the catch will go unharvested — there is no market. Combined harvests fro...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/03_23_2022/'>March 23, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/23/dockside/hatchery-salmon-provided-a-third-of-last-years-statewide-catch/10090.html" aria-label="Hatchery salmon provided a third of last year&apos;s statewide catch"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/23/dockside/hatchery-salmon-provided-a-third-of-last-years-statewide-catch/10090.html" aria-label="Hatchery salmon provided a third of last year&apos;s statewide catch"><h3>Hatchery salmon provided a third of last year's statewide catch</h3></a>
+<p>The 64 million salmon returning home to Alaska hatcheries accounted for nearly one-third of the 2021 statewide commercial harvest. It was the eighth-largest hatchery homecoming since 1977. At a payout of $142 million, the salmon produced 25% of the...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/03_09_2022/'>March 9, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/09/dockside/halibut-black-cod-fisheries-open-with-hopes-of-high-prices/10016.html" aria-label="Halibut, black cod fisheries open with hopes of high prices"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/09/dockside/halibut-black-cod-fisheries-open-with-hopes-of-high-prices/10016.html" aria-label="Halibut, black cod fisheries open with hopes of high prices"><h3>Halibut, black cod fisheries open with hopes of high prices</h3></a>
+<p>March means more fishing boats are out on the water with the start of the Pacific halibut and sablefish (black cod) fisheries this past Sunday, followed by Alaska’s first big herring fishery at Sitka Sound. For halibut, the coastwide catch from w...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/03_02_2022/'>March 2, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/02/dockside/wrangells-waterbody-bath-soak-wins-grand-prize-in-juneau/9980.html" aria-label="Wrangell&apos;s Waterbody bath soak wins grand prize in Juneau"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/03/02/dockside/wrangells-waterbody-bath-soak-wins-grand-prize-in-juneau/9980.html" aria-label="Wrangell&apos;s Waterbody bath soak wins grand prize in Juneau"><h3>Wrangell's Waterbody bath soak wins grand prize in Juneau</h3></a>
+<p>Waterbody, operated by Angie Flickinger, of Wrangell, won the grand prize for its Deep Blue Sea Bath Soak at the Alaska Symphony of Seafood awards ceremony on Feb. 24 in Juneau. Made with bull kelp and sea salts, the soak is described as “smelling l...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/02_16_2022/'>February 16, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/02/16/dockside/report-looks-at-alaskas-potential-to-grow-in-seaweed-business/9909.html" aria-label="Report looks at Alaska&apos;s potential to grow in seaweed business"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/02/16/dockside/report-looks-at-alaskas-potential-to-grow-in-seaweed-business/9909.html" aria-label="Report looks at Alaska&apos;s potential to grow in seaweed business"><h3>Report looks at Alaska's potential to grow in seaweed business</h3></a>
+<p>The U.S. grows less than one-100th of 1% of the world’s $6 billion seaweed market, but Alaska has the goods to grow into a major contributor. A new report assesses the pros and cons of six communities as locations for seaweed processing facilities t...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/02_09_2022/'>February 9, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/02/09/dockside/tanner-crab-season-opens-to-high-expectations/9874.html" aria-label="Tanner crab season opens to high expectations"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/02/09/dockside/tanner-crab-season-opens-to-high-expectations/9874.html" aria-label="Tanner crab season opens to high expectations"><h3>Tanner crab season opens to high expectations</h3></a>
+<p>Frigid February fishing in Alaska features crabbing from the Panhandle to the Bering Sea, followed in March by halibut, black cod and herring. Southeast crabbers will drop pots for Tanners on Friday, and they’re expecting one of the best seasons ever...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/02_02_2022/'>February 2, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/02/02/dockside/legislators-want-federal-help-with-seafood-exports-to-china-and-russia/9844.html" aria-label="Legislators want federal help with seafood exports to China and Russia"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/02/02/dockside/legislators-want-federal-help-with-seafood-exports-to-china-and-russia/9844.html" aria-label="Legislators want federal help with seafood exports to China and Russia"><h3>Legislators want federal help with seafood exports to China and Russia</h3></a>
+<p>Seafood is Alaska’s biggest export by far, and state legislators want the federal government to get tougher on trade policies that they say unfairly hurt global sales. Two resolutions (Senate Joint Resolution 16 and SJR17) were advanced last week b...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_27_2022/'>January 27, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/27/dockside/seafood-marketing-agency-counts-fish-and-fishermen/9810.html" aria-label="Seafood marketing agency counts fish and fishermen"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/27/dockside/seafood-marketing-agency-counts-fish-and-fishermen/9810.html" aria-label="Seafood marketing agency counts fish and fishermen"><h3>Seafood marketing agency counts fish and fishermen</h3></a>
+<p>Where do most Alaska fishermen live? Which Alaska region is home to the most fishing boats? The answers are in an economic report by the Alaska Seafood Marketing Institute for 2019/2020 that includes all regions from Ketchikan to Kotzebue. Nearly...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_20_2022/'>January 20, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/20/dockside/kodiak-tanner-crabbers-getting-810-per-pound-to-start/9778.html" aria-label="Kodiak Tanner crabbers getting $8.10 per pound to start"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/20/dockside/kodiak-tanner-crabbers-getting-810-per-pound-to-start/9778.html" aria-label="Kodiak Tanner crabbers getting $8.10 per pound to start"><h3>Kodiak Tanner crabbers getting $8.10 per pound to start</h3></a>
+<p>Kodiak fishermen are getting an advance price of $8.10 per pound for Tanner crab in the fishery that opened Jan. 15. High crab prices have led all other seafoods during the COVID-19 pandemic as buyers grab all they can to fill demand at buffet tables...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_13_2022/'>January 13, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/13/dockside/pacific-halibut-commission-will-set-catch-later-this-month/9750.html" aria-label="Pacific Halibut Commission will set catch later this month"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/13/dockside/pacific-halibut-commission-will-set-catch-later-this-month/9750.html" aria-label="Pacific Halibut Commission will set catch later this month"><h3>Pacific Halibut Commission will set catch later this month</h3></a>
+<p>Pacific halibut catches for 2022 will be announced at the annual International Pacific Halibut Commission meeting held online Jan. 24-28, and fishermen are hoping for another year of increased catches when the fishery opens in early March. Last...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/01_06_2022/'>January 6, 2022</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/06/dockside/alaska-senators-introduce-salmon-research-legislation/9712.html" aria-label="Alaska senators introduce salmon research legislation"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2022/01/06/dockside/alaska-senators-introduce-salmon-research-legislation/9712.html" aria-label="Alaska senators introduce salmon research legislation"><h3>Alaska senators introduce salmon research legislation</h3></a>
+<p>Legislation titled the Alaska Salmon Research Task Force Act was introduced in Congress last month by Alaska senators Lisa Murkowski and Dan Sullivan that, if passed, could help scientists and fisheries managers gain a better understanding about the...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/12_23_2021/'>December 23, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/23/dockside/processors-boost-prices-paid-for-sockeye-salmon/9674.html" aria-label="Processors boost prices paid for sockeye salmon"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/23/dockside/processors-boost-prices-paid-for-sockeye-salmon/9674.html" aria-label="Processors boost prices paid for sockeye salmon"><h3>Processors boost prices paid for sockeye salmon</h3></a>
+<p>Strong global and U.S. demand for sockeye salmon has 2021 pushed prices to near record highs and boosted fishermen’s paychecks. Both Silver Bay and Peter Pan Seafoods a few weeks ago increased their base prices to fishermen to $1.45 per pound, a 2...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/12_16_2021/'>December 16, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/16/dockside/led-lights-help-guide-salmon-to-openings-in-trawl-nets/9647.html" aria-label="LED lights help guide salmon to openings in trawl nets"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/16/dockside/led-lights-help-guide-salmon-to-openings-in-trawl-nets/9647.html" aria-label="LED lights help guide salmon to openings in trawl nets"><h3>LED lights help guide salmon to openings in trawl nets</h3></a>
+<p>Low-cost LED lights can help Chinook salmon escape trawl nets. A 2020 study by the Pacific States Marine Fisheries Commission and NOAA’s Northwest Fisheries Science Center showed that LEDs are very effective in directing Chinook salmon to escape o...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/12_09_2021/'>December 9, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/09/dockside/summer-survey-shows-strength-in-pacific-halibut-resource/9612.html" aria-label="Summer survey shows strength in Pacific halibut resource"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/09/dockside/summer-survey-shows-strength-in-pacific-halibut-resource/9612.html" aria-label="Summer survey shows strength in Pacific halibut resource"><h3>Summer survey shows strength in Pacific halibut resource</h3></a>
+<p>Pacific halibut stock appears to be on an upswing and could result in increased catches for most regions in 2022. At the interim meeting of the International Pacific Halibut Commission last week, scientists gave an overview of the summer setline...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/12_02_2021/'>December 2, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/02/dockside/fishing-gear-recycling-company-nets-1-million-pounds/9580.html" aria-label="Fishing gear recycling company nets 1 million pounds"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/12/02/dockside/fishing-gear-recycling-company-nets-1-million-pounds/9580.html" aria-label="Fishing gear recycling company nets 1 million pounds"><h3>Fishing gear recycling company nets 1 million pounds</h3></a>
+<p>More than one million pounds of old fishing nets and lines from Alaska have made it to recycling markets, where they are remade into plastic pellets and fibers. The milestone was reached with a recent haul of nets from Unalaska, and more are already...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_24_2021/'>November 24, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/11/24/dockside/legislative-hearing-questions-state-position-on-bycatch/9527.html" aria-label="Legislative hearing questions state position on bycatch"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/11/24/dockside/legislative-hearing-questions-state-position-on-bycatch/9527.html" aria-label="Legislative hearing questions state position on bycatch"><h3>Legislative hearing questions state position on bycatch</h3></a>
+<p>A hearing on seafood bycatch didn’t satisfy a bipartisan group of Alaska legislators at a meeting of the House Fisheries Committee on Nov. 15. The bycatch issue came up again this summer when all Yukon River salmon fisheries were canceled due to s...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/11_10_2021/'>November 10, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/11/10/dockside/salmon-catch-third-largest-third-most-valuable-since-1975/9482.html" aria-label="Salmon catch third largest, third most valuable since 1975"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/11/10/dockside/salmon-catch-third-largest-third-most-valuable-since-1975/9482.html" aria-label="Salmon catch third largest, third most valuable since 1975"><h3>Salmon catch third largest, third most valuable since 1975</h3></a>
+<p>It’s a fish trifecta for Alaska’s 2021 salmon season. The fishery produced the third-highest catch, fish poundage and value on record dating back to 1975. According to preliminary harvests and values by region from the Alaska Department of Fish and...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/10_28_2021/'>October 28, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/10/28/dockside/judging-next-month-in-annual-seafood-competition/9422.html" aria-label="Judging next month in annual seafood competition"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/10/28/dockside/judging-next-month-in-annual-seafood-competition/9422.html" aria-label="Judging next month in annual seafood competition"><h3>Judging next month in annual seafood competition</h3></a>
+<p>Pollock protein noodles, southern-style Alaska wild wings, candied salmon ice cream, fish oils for pets, fish and chips meal kits and finfish earrings are just a small sample of past winners of Alaska’s biggest seafood competition — the Alaska Sym...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/10_21_2021/'>October 21, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/10/21/dockside/salmon-permit-prices-on-the-rebound-including-southeast-power-troll/9389.html" aria-label="Salmon permit prices on the rebound, including Southeast power troll"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/10/21/dockside/salmon-permit-prices-on-the-rebound-including-southeast-power-troll/9389.html" aria-label="Salmon permit prices on the rebound, including Southeast power troll"><h3>Salmon permit prices on the rebound, including Southeast power troll</h3></a>
+<p>Optimism is the word that best sums up the attitude among most Alaska salmon fishermen after a good season, according to people in the business of buying and selling permits and boats. Most fishermen in major regions ended up with good catches and...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/10_07_2021/'>October 7, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/10/07/dockside/much-of-bristol-bays-salmon-wealth-goes-to-non-resident-permit-holders/9314.html" aria-label="Much of Bristol Bay&apos;s salmon wealth goes to non-resident permit holders"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/10/07/dockside/much-of-bristol-bays-salmon-wealth-goes-to-non-resident-permit-holders/9314.html" aria-label="Much of Bristol Bay&apos;s salmon wealth goes to non-resident permit holders"><h3>Much of Bristol Bay's salmon wealth goes to non-resident permit holders</h3></a>
+<p>The preliminary value to fishermen of the nearly 41 million salmon caught this summer at Alaska’s largest fishery at Bristol Bay is nearly $248 million, 64% above the 20-year average. That figure will be much higher when bonuses and other price a...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_30_2021/'>September 30, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/30/dockside/smart-buoys-help-track-fishing-gear-so-it-doesnt-get-lost/9256.html" aria-label="&apos;Smart buoys&apos; help track fishing gear so it doesn&apos;t get lost"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/30/dockside/smart-buoys-help-track-fishing-gear-so-it-doesnt-get-lost/9256.html" aria-label="&apos;Smart buoys&apos; help track fishing gear so it doesn&apos;t get lost"><h3>'Smart buoys' help track fishing gear so it doesn't get lost</h3></a>
+<p>Lost fishing gear — be it nets, lines or pots — continues “ghost fishing” forever, causing a slow death to countless marine creatures and financial losses to fishermen. Now, new “smart buoys” can track and monitor all types of deployed gear and re...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_23_2021/'>September 23, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/23/dockside/salmon-catch-tops-219-million-fish-15-percent-above-forecast/9235.html" aria-label="Salmon catch tops 219 million fish; 15% above forecast"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/23/dockside/salmon-catch-tops-219-million-fish-15-percent-above-forecast/9235.html" aria-label="Salmon catch tops 219 million fish; 15% above forecast"><h3>Salmon catch tops 219 million fish; 15% above forecast</h3></a>
+<p>Alaska’s 2021 salmon catch has topped 219 million fish, which is 15% higher than the preseason forecast of 190 million. The two biggest money makers exceeded expectations the most. The sockeye haul came in at 54 million compared to the predicted 4...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_16_2021/'>September 16, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/16/dockside/bering-sea-crabbers-get-bad-news-about-red-king-snow-crab-stocks/9202.html" aria-label="Bering Sea crabbers get bad news about red king, snow crab stocks"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/16/dockside/bering-sea-crabbers-get-bad-news-about-red-king-snow-crab-stocks/9202.html" aria-label="Bering Sea crabbers get bad news about red king, snow crab stocks"><h3>Bering Sea crabbers get bad news about red king, snow crab stocks</h3></a>
+<p>Alaska’s Bering Sea crabbers are reeling from the devastating news that all major crab stocks are down substantially, based on summer survey results, and the Bristol Bay red king crab fishery will be closed for the first time in more than 25 y...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/laine_welch' aria-label="Author link">Laine Welch</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/09_09_2021/'>September 9, 2021</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/09/dockside/fish-factor-entries-due-oct-4-in-statewide-seafood-competition/9175.html" aria-label="Fish Factor: Entries due Oct. 4 in statewide seafood competition"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2021/09/09/dockside/fish-factor-entries-due-oct-4-in-statewide-seafood-competition/9175.html" aria-label="Fish Factor: Entries due Oct. 4 in statewide seafood competition"><h3>Fish Factor: Entries due Oct. 4 in statewide seafood competition</h3></a>
+<p>The Alaska Symphony of Seafood competition is back and the call is out for entries. The contest has showcased new products since 1994 but was canceled last year due to the COVID-19 pandemic. “It encourages value-added seafood production and p...</p>
+</div>&nbsp;</div></div><p><a class='page-down' href='HTTPS://www.wrangellsentinel.com/section/dockside/26'>Page Down</a></p>
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'>New state task force w...<span class='mp_author'>Yereth Rosen</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'><img src="/IMG/l_c614OvyC4JuQqHwz7DK39qD/XPATH/home/cms_data/dfault/photos/stories/id/6/8/13268/s_topXEXT762x35742is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'>Canoes start 150-mile...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'><img src="/IMG/OottCzVkx60MukyO1x18Iy4w4/XPATH/home/cms_data/dfault/photos/stories/id/7/7/13277/s_topXEXT762x35728is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'>Forest Service will ra...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'>Legislature approves m...<span class='mp_author'>Claire Stremple</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html' aria-label='Story Thumbnail: Lawmakers leave fiscal...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html' aria-label='Story Thumbnail: Lawmakers leave fiscal...'>Lawmakers leave fiscal...<span class='mp_author'>James Brooks</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:b1vz7pDxzEsnpL5uyBv9%5FQ4L1bF6%2DZ7RPwEHBTeGH--><span class="ad_local_square"><a href="https://www.wrangellsentinel.com/subscribe"><img src="/IMG/uhdYpR2kNtTLgRhMqtmvpGjenzq-qh1nt/XPATH/home/cms_data/dfault/web_ads/square/5483-sentinel_online_subscribe_300x250.jpgXEXT1397x44008is.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:%5FTNRZHhPRiKFHpXMQfNbduWpT5jccfZztOilfl8kl--><span class="ad_local_square"><img src="/IMG/reagye0NPkVYTYhMmrrxbDgenzb5_w1t2/XPATH/home/cms_data/dfault/web_ads/square/2412-sentinel_info_copy.jpgXEXT1716x39744is.jpeg" width="300" height="247" alt=""></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!-- LL Network Ad --></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/police' aria-label="Section link">Police</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/classifieds' aria-label="Section link">Classifieds</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a></li><li><a href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a></li><li><a href="HTTPS://www.wrangellsentinel.com/about" >About</a></li><li><a href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.wrangellsentinel.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.wrangellsentinel.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.wrangellsentinel.com/section/dockside?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.wrangellsentinel.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Wrangell Sentinel</h4>
+        <p>
+          P.O. Box 798<br />Wrangell, AK 99929<br />Ph: (907) 874-2301<br />
+       </p>
+        <p>
+          &copy; 2024 Good Journalism, LLC<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <small style="padding-top:10px;display:block;">Rendered 05/30/2024 01:52</small><!-- (DESKTOP|PAYWALLERROR|ERROR) (desktop|paywallerror|error) Cached by Usernum:00260 -->
+ </body>
+
+</html>

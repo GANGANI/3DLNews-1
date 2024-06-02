@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Legal in La Salle - News Tribune">
+    <link rel="apple-touch-icon" href="/directory-favicon.ico" />
+    <!-- Primary Meta Tags -->
+    <title>Legal in La Salle - News Tribune</title>
+    <meta name="title" content="Legal in La Salle - News Tribune">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/directory-favicon.ico" />
+    <meta itemprop="image" content="">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:url" content="https://local.newstrib.com/categories/legal">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Legal in La Salle - News Tribune">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://local.newstrib.com/categories/legal">
+    <meta property="twitter:title" content="Legal in La Salle - News Tribune">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" media="screen" href="/assets/directory/materialdesignicons.min-08c23d1ae452481e6620e258910fe052b72d4cc1fb93eefec2a7ae844153e784.css" />
+
+    <!-- Google Search Console -->
+      <meta name="google-site-verification" content="WP3BLyr5KAjNeEAhmVtS9rIrK-rjmC7Fk60zknLTrCI" />
+
+
+    <!-- Other Assets -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+    <link rel="stylesheet" media="screen" href="/assets/directory/index-d09adf4d41af960a995415ce774d9458c962b2499c2ffd0f8778d1fcffe26813.css" />
+    <script src="/assets/directory/resources/jquery.min-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js"></script>
+  </head>
+
+  <body class="preload" data-theme="">
+    <style>
+      :root {
+        --color-link-alt:  !important;
+      }
+    </style>
+
+    <div class="blocker-banner" id="blocker-banner" style="display: none;">
+      <div class="blocker-banner-interior">
+        <span class="icon mdi mdi-alert"></span>
+        <div class="blocker-banner-title">We notice you're using an ad blocker.</div>
+        <div class="blocker-banner-text">Since the purpose of this site is to display digital ads, please disable your ad blocker to prevent content from breaking.</div>
+        <span class="close mdi mdi-close"></span>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="header">
+  <div class="header-main">
+    <div class="container">
+      <a class="logo" href=/ aria-label="Business logo clickable to go to the home page">
+    <img src="https://assets.secure.ownlocal.com/img/logos/5219/original_logos.png?1614177639" alt="News Tribune">
+</a>
+<a class="mdi main-nav-item mdi-menu" aria-label="hamburger menu" aria-expanded="false" href="."></span>
+<a class="mdi main-nav-item mdi-magnify" href="." aria-label="search business collapsed" ></a>
+<ul class="nav">
+  <li><a href="/" aria-label="directory home"><span class="mdi mdi-home"></span><span>Directory Home</span></a></li>
+  <li><a href="/shop-local" aria-label="shop local"><span class="mdi mdi-storefront"></span><span>Shop Local</span></a></li>
+  <li>
+    <li><a href="/offers" aria-label="offers"><span class="mdi mdi-picture-in-picture-top-right"></span><span>Offers</span></a></li>
+    <li><a href="/ads" aria-label="printed ads"><span class="mdi mdi-newspaper"></span><span>Print Ads</span></a></li>
+  <li><a href="/categories" aria-label="categories"><span class="mdi mdi-layers-outline"></span><span>Categories</span></a></li>
+  <li>
+    <a href="http://www.newstrib.com/"  aria-label="newspaper name">
+      <span class="mdi mdi-home-outline"></span><span>News Tribune</span>
+    </a>
+  </li>
+</ul>
+<div class="header-search">
+    <form action="/businesses" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input class="search-box" autocomplete="off" type="text" placeholder="Search for businesses" name="q" value="" />
+</form></div>
+
+    </div>
+  </div>
+</div>
+
+
+      <div class="page-hero">
+  <div class="page-hero-inner">
+    <h1><span class="highlight"><span>Legal</span></h1>
+  </div>
+  <div id="map" class="page-map"></div>
+</div>
+<div class="subheader page-dropdowns">
+  <ul>
+    <li>
+      <label><span>Legal</span></label>
+      <select name="category" id="category"><option data-link="/categories/agriculture" value="agriculture">Agriculture</option>
+<option data-link="/categories/arts-and-entertainment" value="arts-and-entertainment">Arts &amp; Entertainment</option>
+<option data-link="/categories/auto" value="auto">Auto</option>
+<option data-link="/categories/beauty-and-wellness" value="beauty-and-wellness">Beauty &amp; Wellness</option>
+<option data-link="/categories/communication" value="communication">Communication</option>
+<option data-link="/categories/community" value="community">Community</option>
+<option data-link="/categories/construction" value="construction">Construction</option>
+<option data-link="/categories/education" value="education">Education</option>
+<option data-link="/categories/finance" value="finance">Finance</option>
+<option data-link="/categories/food-and-beverage" value="food-and-beverage">Food and Beverage</option>
+<option data-link="/categories/house-and-home" value="house-and-home">House &amp; Home</option>
+<option data-link="/categories/insurance" value="insurance">Insurance</option>
+<option data-link="/categories/legal" selected="selected" value="legal">Legal</option>
+<option data-link="/categories/manufacturing" value="manufacturing">Manufacturing</option>
+<option data-link="/categories/medical" value="medical">Medical</option>
+<option data-link="/categories/nightlife" value="nightlife">Nightlife</option>
+<option data-link="/categories/pets-and-animals" value="pets-and-animals">Pets &amp; Animals</option>
+<option data-link="/categories/philanthropy" value="philanthropy">Philanthropy</option>
+<option data-link="/categories/photo-and-video" value="photo-and-video">Photo &amp; Video</option>
+<option data-link="/categories/public-services" value="public-services">Public Services</option>
+<option data-link="/categories/real-estate" value="real-estate">Real Estate</option>
+<option data-link="/categories/recreation" value="recreation">Recreation</option>
+<option data-link="/categories/religion" value="religion">Religion</option>
+<option data-link="/categories/services" value="services">Services</option>
+<option data-link="/categories/shop-local" value="shop-local">Shop Local</option>
+<option data-link="/categories/shopping" value="shopping">Shopping</option>
+<option data-link="/categories/technical" value="technical">Technical</option>
+<option data-link="/categories/transportation" value="transportation">Transportation</option>
+<option data-link="/categories/travel" value="travel">Travel</option>
+<option data-link="/categories/utilities" value="utilities">Utilities</option></select>
+    </li>
+    <li>
+      <label><span>All Businesses</span></label>
+      <select name="sub_category" id="sub_category"><option data-link="/categories/legal" value="All Businesses">All Businesses</option>
+<option disabled="disabled" value="0">----</option>
+<option data-link="/categories/legal/attorneys" value="attorneys">Attorneys</option>
+<option data-link="/categories/legal/court-reporting" value="court-reporting">Court Reporting</option>
+<option data-link="/categories/legal/legal-notices" value="legal-notices">Legal Notices</option>
+<option data-link="/categories/legal/notaries" value="notaries">Notaries</option>
+<option data-link="/categories/legal/trusts" value="trusts">Trusts</option>
+<option data-link="/categories/legal/wills" value="wills">Wills</option></select>
+    </li>
+  </ul>
+</div>
+<section class="standalone">
+  <div class="container">
+    <ul class="cards">
+      
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/peoria-il/the-janssen-law-center-309-676-2341" title="The Janssen Law Center" aria-label="The Janssen Law Center 333 Main St, Peoria, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://images.unsplash.com/photo-1498872270484-7ffbfa6951ed?ixid=Mnw4MTQ0MXwwfDF8c2VhcmNofDE0fHxzZW5pb3IlMjBzYWR8ZW58MHx8fHwxNjY1Nzg4NTAw&amp;ixlib=rb-1.2.1&amp;utm_source=api_app&amp;utm_medium=referral&amp;utm_campaign=api-credit');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">The Janssen Law Center</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">333 Main St, Peoria, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/education/colleges-and-universities">
+  Colleges and Universities
+</a>
+
+<a class="tag" href="/categories/community/senior-housing">
+  Senior Housing
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/aurora-il/illini-legal-services-aurora-630-585-3164" title="Illini Legal Services - Aurora" aria-label="Illini Legal Services - Aurora 610 N Broadway, Aurora, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/de2dd782-330d-4e3b-a897-20cee1b43f06.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">Illini Legal Services - Aurora</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">610 N Broadway, Aurora, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/ottawa-il/the-law-offices-of-peter-f-ferracuti-pc-815-434-3535" title="The Law Offices of Peter F. Ferracuti, P.C." aria-label="The Law Offices of Peter F. Ferracuti, P.C. 110 E Main St, Ottawa, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/475b33a1-47ee-4cc6-80ed-8cec9351670f.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">The Law Offices of Peter F. Ferracuti, P.C.</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">110 E Main St, Ottawa, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/peru-il/schweickert-ganassin-krzak-rundio-llp-peru-815-605-5047" title="Schweickert Ganassin Krzak Rundio, LLP - Peru" aria-label="Schweickert Ganassin Krzak Rundio, LLP - Peru 2101 Marquette Rd, Peru, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-images-db/640/photo-1620662831351-9f68f76d0b9a');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">Schweickert Ganassin Krzak Rundio, LLP - Peru</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">2101 Marquette Rd, Peru, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+<a class="tag" href="/categories/shop-local/essential-business">
+  Essential Business
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/peru-il/meyers-flowers-bruno-mcphedran-and-herrmann-llc-630-491-6277" title="Meyers, Flowers, Bruno, McPhedran &amp; Herrmann LLC" aria-label="Meyers, Flowers, Bruno, McPhedran &amp; Herrmann LLC 1200 Maple Dr, Peru, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/8778af27-705e-414c-9786-fd22acd80518.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">Meyers, Flowers, Bruno, McPhedran &amp; Herrmann LLC</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">1200 Maple Dr, Peru, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/ottawa-il/the-cantlin-law-firm-ottawa-815-433-4712" title="The Cantlin Law Firm - Ottawa" aria-label="The Cantlin Law Firm - Ottawa 760 E Etna Rd, Ottawa, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/918c61c2-abc3-4ec6-a0e3-152418f03a80.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">The Cantlin Law Firm - Ottawa</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">760 E Etna Rd, Ottawa, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+<a class="tag" href="/categories/shop-local/essential-business">
+  Essential Business
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/peru-il/schweickert-ganassin-krzak-rundio-llp-peru-815-223-0177" title="Schweickert Ganassin Krzak Rundio, LLP - Peru" aria-label="Schweickert Ganassin Krzak Rundio, LLP - Peru 2101 Marquette Rd, Peru, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/6e19b14c-bedb-46a2-a256-58193e859d9c.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">Schweickert Ganassin Krzak Rundio, LLP - Peru</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">2101 Marquette Rd, Peru, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/peru-il/leynaud-law-group-llc-815-410-4227" title="Leynaud Law Group, LLC" aria-label="Leynaud Law Group, LLC 1200 38th St, Peru, IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/bed76691-3796-4929-92e6-08b6bbb94ca3.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">Leynaud Law Group, LLC</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">1200 38th St, Peru, IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+  </div>
+</li>
+
+<li class="">
+  <a itemscope itemtype="http://schema.org/LocalBusiness" class="card-top" href="/mendota-il/guilfoyle-and-stevenson-llp-815-539-6711" title="Guilfoyle &amp; Stevenson LLP" aria-label="Guilfoyle &amp; Stevenson LLP 1316 Meriden St, Mendota , IL" >
+    <div
+      class="image "
+        style= "background-image: url('https://storage.googleapis.com/ownlocal-platform-production/public/images/categories/1500/08d9b0a1-505f-489d-b422-f383709d03a6.jpeg');"
+    >
+    </div>
+    <div class="card-info">
+      <div itemprop="name" class="name">Guilfoyle &amp; Stevenson LLP</div>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <div itemprop="streetAddress" class="details">1316 Meriden St, Mendota , IL</div>
+      </span>
+    </div>
+  </a>
+  <div class="card-bottom">
+
+    
+<a class="tag" href="/categories/legal/attorneys">
+  Attorneys
+</a>
+
+  </div>
+</li>
+
+    </ul>
+      <button class="load-more load-more-hover">
+        <span class="mdi mdi-chevron-down"></span><span>Load more</span>
+      </button>
+  </div>
+</section>
+
+<script>let coordinates = [41.3288, -89.0994];</script>
+<script src="//unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="/assets/directory/categories-c6fdd805c5b5e42cee4a4b0471f3a59ff2fd0bc77e166234b3d941484e64561a.js"></script>
+
+      <div class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="links categories">
+        <p>Categories</p>
+        <ul>
+          
+<li>
+  <a href="/categories/agriculture" aria-label='category Agriculture' >
+    <span>
+      Agriculture
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/arts-and-entertainment" aria-label='category Arts &amp; Entertainment' >
+    <span>
+      Arts &amp; Entertainment
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/auto" aria-label='category Auto' >
+    <span>
+      Auto
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/beauty-and-wellness" aria-label='category Beauty &amp; Wellness' >
+    <span>
+      Beauty &amp; Wellness
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/communication" aria-label='category Communication' >
+    <span>
+      Communication
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/community" aria-label='category Community' >
+    <span>
+      Community
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/construction" aria-label='category Construction' >
+    <span>
+      Construction
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/education" aria-label='category Education' >
+    <span>
+      Education
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/finance" aria-label='category Finance' >
+    <span>
+      Finance
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/food-and-beverage" aria-label='category Food and Beverage' >
+    <span>
+      Food and Beverage
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/house-and-home" aria-label='category House &amp; Home' >
+    <span>
+      House &amp; Home
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/insurance" aria-label='category Insurance' >
+    <span>
+      Insurance
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/legal" aria-label='category Legal' >
+    <span>
+      Legal
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/manufacturing" aria-label='category Manufacturing' >
+    <span>
+      Manufacturing
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/medical" aria-label='category Medical' >
+    <span>
+      Medical
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/nightlife" aria-label='category Nightlife' >
+    <span>
+      Nightlife
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/pets-and-animals" aria-label='category Pets &amp; Animals' >
+    <span>
+      Pets &amp; Animals
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/philanthropy" aria-label='category Philanthropy' >
+    <span>
+      Philanthropy
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/photo-and-video" aria-label='category Photo &amp; Video' >
+    <span>
+      Photo &amp; Video
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/public-services" aria-label='category Public Services' >
+    <span>
+      Public Services
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/real-estate" aria-label='category Real Estate' >
+    <span>
+      Real Estate
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/recreation" aria-label='category Recreation' >
+    <span>
+      Recreation
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/religion" aria-label='category Religion' >
+    <span>
+      Religion
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/services" aria-label='category Services' >
+    <span>
+      Services
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/shop-local" aria-label='category Shop Local' >
+    <span>
+      Shop Local
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/shopping" aria-label='category Shopping' >
+    <span>
+      Shopping
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/technical" aria-label='category Technical' >
+    <span>
+      Technical
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/transportation" aria-label='category Transportation' >
+    <span>
+      Transportation
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/travel" aria-label='category Travel' >
+    <span>
+      Travel
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="/categories/utilities" aria-label='category Utilities' >
+    <span>
+      Utilities
+    </span>
+  </a>
+</li>
+
+        </ul>
+      </div>
+      <div class="links">
+        <p>Directory</p>
+        <ul>
+          <li>
+            <a href="https://admin.austin.ownlocal.com/login?p=5219" >
+              <span><span class="translation_missing" title="translation missing: en.login">Login</span></span>
+            </a>
+          </li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/got-to-top" class="back-to-top">Go To Top</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="copyright">
+      <div class="container">
+        © 2024 
+        <a href="http://www.newstrib.com/" >
+          News Tribune
+          </a>. Powered by <a href="http://ownlocal.com" target="_blank" class="bold-link">OwnLocal</a><span> – helping local media with innovative <a href="https://ownlocal.com/products" target="_blank">print to web</a> and directory software</span>.
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="/assets/directory/index-6df394749f0d08ae826ae2d23c62f1c1944baaa5ddebcbcbe2f4562f6d2834f5.js" defer="defer"></script>
+
+
+      <script>
+      // AdBlock detection
+      $.get("https://admin.ownlocal.com/api/adblock").error(
+        function(jqXHR, textStatus, errorThrown) {
+          $("#blocker-banner").toggle();
+        }
+      );
+      </script>
+  </body>
+</html>
+
+<!-- RENDERED TIME: Thursday, 30 May 2024 17:53:26 Central Time (US & Canada) -->

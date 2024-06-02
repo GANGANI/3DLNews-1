@@ -1,0 +1,3331 @@
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+
+
+<script>
+    var jsPageName = "Events List"; // pass strPageName to JavaScript, used in function setPageName() [accessibility.js]
+    var jsAjaxRequest = ('0' === '1') ? true : false;
+</script>
+
+ <!-- AX != 1 -->
+
+    <script>
+        var url = new URL(location.href);
+        history.replaceState({type: "events"} , '', url.pathname + url.search);
+    </script>
+    
+    
+
+    <head>
+        <!-- META TAGS -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+        <meta name="apple-itunes-app" content="app-id=1538527470, affiliate-data=myAffiliateData, app-argument=myURL">
+
+        <title>Events List</title>
+        <meta name="description" content="The campus engagement platform for Columbia College Chicago - Powered by CampusGroups.">
+        <meta name="title" content="Columbia College Chicago">
+
+        
+
+        <!-- Google Tag Manager -->
+        <script>
+        dataLayer = [{
+            'signedIn': false
+        }];
+        </script>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-548G27F');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- CSS IMPORT -->
+        
+
+            <!-- FONT FOR DEV -->
+            <link href="css/fonts/open-sans.css" rel="stylesheet" type="text/css" >
+
+            <!-- FAVICON -->
+            <link rel="icon" type="images/x-icon" href="/upload/colum/2020/s1_image_upload_34747_columfavicons_52251321.png">
+            <link rel="shortcut icon" type="images/x-icon" href="/upload/colum/2020/s1_image_upload_34747_columfavicons_52251321.png">
+
+            <!-- JQUERY UI -->
+            <link rel="stylesheet" type="text/css" href="/bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+
+            <!-- AUTOCOMPLETE -->
+            <link rel="stylesheet" type="text/css" href="/js/jquery/jquery.autocomplete.css">
+
+            <!-- BOOTSTRAP & GLYPHICONS -->
+            <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="/static/plugins/bootstrap-multiselect/dist/css/bootstrap-multiselect.css">
+            <link rel="stylesheet" type="text/css" href="/glyphicons-pro/css/glyphicons-filetypes.css">
+
+            <!-- THICKBOX -->
+            <link rel="stylesheet" type="text/css" href="/js/thickbox/thickbox.css">
+        
+
+        <!-- JQUERY & FONT -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+        <!-- BOOTSTRAP -->
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/static/plugins/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+
+        <script type="text/javascript" src="/js/accessibility.js?v=20240514.1"></script>
+        
+        <script type="text/javascript" src="/js/scripts.js?v=20230316.1"></script>
+
+        <link rel="stylesheet" type="text/css" href="/bower_components/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/materialdesigniconscustom.css">
+        
+        <link rel="stylesheet" type="text/css" href="/static/css/header.css?v=20220425.1">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-customV.css?v=20231116.1">
+        
+        
+    </head>
+
+    <body class="body-background " data-menu="">
+
+        <!-- SKIP links - skip to top of main content -->
+        <div id="div-skip-links" class="skip-link-container-mobile">
+                
+            <span style="padding: 5px"><a id="a-skip-to-main-content" href="javascript:" class="skip-link" onclick="setFocusToContent(true);" aria-label="Skip to Main Content">Skip to Main Content</a></span>
+
+            <span id="span-skip-to-left-navigation" style="padding: 5px; display: none;"><a id="a-skip-to-left-navigation" href="javascript:" class="skip-link" onclick="setFocusToSidebar();" aria-label="Skip to Navigation">Skip to Navigation</a></span>
+
+            <!-- ACCESSIBILITY -->
+            
+
+            <script>
+                // if we're on mobile we will not enable the skip links
+                const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+                // console.log('> isMobileDevice=' + isMobileDevice);
+
+                $(window).on('load', function () {
+                    if (!isMobileDevice) {
+                        var elem = document.getElementById('div-skip-links');
+                        if (typeof elem !== undefined) {
+                            elem.classList.remove('skip-link-container-mobile');
+                            elem.classList.add('skip-link-container');
+                        }
+                    }
+                });
+            </script>
+        </div>
+
+        <!-- School custom code -->
+        
+        <!-- End school custom code -->
+
+        <!-- Google Tag Manager (noscript) -->
+        <!--
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-548G27F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+         -->
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- Modal -->
+        <div id="primary-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <p class="loader">
+                        <img alt="Loading" src="/images/loader-big.gif">
+                        <br> Loading...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="secondary-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <p class="loader">
+                        <img alt="Loading" src="/images/loader-big.gif">
+                        <br> Loading...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $("#primary-modal").on("hide.bs.modal", function (e) {
+                $("#primary-modal .modal-content").html(writeLoading("Loading"));
+            });
+            $("#secondary-modal").on("hide.bs.modal", function (e) {
+                $("#secondary-modal .modal-content").html(writeLoading("Loading"));
+            });
+        </script>
+        <!-- End Modal -->
+
+        
+
+        <script src="/static/js/modernizr.min.js"></script>
+        
+            <script src="/js/jquery-validate/jquery.validate.js"></script>
+        
+        <script src="/static/js/polyfill.js"></script>
+
+        
+
+        <!-- HEADER -->
+        
+            <style>
+                .btn--school { background-color: #000000; color: #fff; }
+                .btn--school:hover { background-color: #000000; color: #fff; }
+                .btn--school:focus { background-color: #000000; color: #fff; }
+
+                .topbar { background: #000000; border-color: #000000; }
+                .topbar ul.nav > li > a:hover, .topbar ul.nav > li > button:hover  { background-color: #ffffff !important; }
+                .topbar ul.nav > li > a:focus, .topbar ul.nav > li > button:focus  { background-color: #ffffff !important; outline: none; }
+                .topbar .topbar__sidebar-toggle:hover  { background-color: #ffffff !important; }
+                .topbar .topbar__sidebar-toggle:focus  { background-color: #ffffff !important; outline: none; }
+                
+                .topbar .open:not(.topbar__left) > a, 
+                .topbar .open:not(.topbar__left) > a:focus, 
+                .topbar > .open:not(.topbar__left) > a:hover,
+                .topbar .open:not(.topbar__left) > button, 
+                .topbar .open:not(.topbar__left) > button:focus, 
+                .topbar > .open:not(.topbar__left) > button:hover { background-color: #ffffff !important; }
+                .topbar li:focus-within > button.mdi-menu { background-color: #ffffff !important; }
+                .topbar li.active > a, .topbar li.active > button { background-color: #ffffff !important; }
+            </style>
+
+            <div id="generic">Loading</div>
+
+            
+            <div id="outer-shell" class="outer-shell  ">
+
+                <!-- Impersonate -->
+                
+                <!-- /.Impersonate -->
+
+                <!-- Message / Maintenance -->
+                
+                <!-- /.Message -->
+
+                
+                <div id="topbar" class="topbar topbar-events  topbar--reverse" role="navigation" aria-label="Topbar">
+
+                    <div class="topbar__left">
+                        
+                                <div role="banner">
+                                    <a id="a-top-bar-logo" aria-label="Columbia College Chicago Logo. Opens the members homepage." role="button" class="logo" href="/groups">
+                                        <img class="topbar__icon-large" src="/upload/colum/2020/image_upload_34747_columbiacollegechicagowordmark_52251514.png" alt="Columbia College Chicago Logo Image." aria-label="Columbia College Chicago Logo Image. Clicking opens the members home page." style="max-height: 50px; max-width: 165px;">
+                                        <img class="topbar__icon-small" src="/upload/colum/2020/image_upload_1661802_ColumbiaFavicon_Color_1024jpg_116102555.jpeg" alt="Columbia College Chicago Logo Image." aria-label="Columbia College Chicago Logo Image. Clicking opens the members home page." style="max-height: 35px; max-width: 35px; margin: 0 5px;">
+                                    </a>
+                                </div>
+                            
+                    </div>
+
+                    
+
+<div class="topbar__center">
+    <nav aria-label="Topbar">
+        <ul class="nav">
+            
+                <!-- Not Logged Buttons -->
+                
+                    <!-- Home Website Buttons -->
+                    
+                        <li class="hidden-xs ">
+                            <a class="topbar__menu topbar__menu--large" href="/home_login" aria-label="Home Section" role="button">Home</a>
+                        </li>
+                                    <li class="hidden-xs dropdown  hasNoSubMenu">
+                <a class="topbar__menu topbar__menu--large" href="/home/events/" style="max-width: inherit">
+                    Events
+                </a>
+                
+                <ul class="dropdown-menu dropdown-menu-left arrow-dropdown-menu arrow-menu-right user-list notify-list" style="overflow-y: auto;max-height: 80vh;">
+
+                </ul>
+            </li>            <li class="hidden-xs dropdown  hasNoSubMenu">
+                <a class="topbar__menu topbar__menu--large" href="/home/news/" style="max-width: inherit">
+                    News
+                </a>
+                
+                <ul class="dropdown-menu dropdown-menu-left arrow-dropdown-menu arrow-menu-right user-list notify-list" style="overflow-y: auto;max-height: 80vh;">
+
+                </ul>
+            </li>            <li class="hidden-xs dropdown  hasNoSubMenu">
+                <a class="topbar__menu topbar__menu--large" href="/home/groups/" style="max-width: inherit">
+                    Groups
+                </a>
+                
+                <ul class="dropdown-menu dropdown-menu-left arrow-dropdown-menu arrow-menu-right user-list notify-list" style="overflow-y: auto;max-height: 80vh;">
+
+                </ul>
+            </li>            <li class="hidden-xs dropdown  hasSubMenu">
+                <a class="topbar__menu topbar__menu--large" href="/home/college-advising-center/" style="max-width: inherit">
+                    Academic Resources
+                </a>
+                
+                <ul class="dropdown-menu dropdown-menu-left arrow-dropdown-menu arrow-menu-right user-list notify-list" style="overflow-y: auto;max-height: 80vh;">
+<li>
+                        <a href="/home/college-advising-center/">
+                            College Advising Center
+                        </a>
+                    </li><li>
+                        <a href="/home/test/">
+                            Academic Center for Tutoring
+                        </a>
+                    </li><li>
+                        <a href="/home/career-center/">
+                            Career Center
+                        </a>
+                    </li><li>
+                        <a href="/home/information-technology/">
+                            Information Technology
+                        </a>
+                    </li><li>
+                        <a href="/home/library/">
+                            Library
+                        </a>
+                    </li><li>
+                        <a href="/home/study-abroad/">
+                            Study Abroad
+                        </a>
+                    </li><li>
+                        <a href="/home/publishing-lab/">
+                            Publishing Lab
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                        <li class="hidden-lg hidden-md hidden-sm dropdown hasSubMenu">
+                            <button class="topbar__menu mdi mdi-menu" aria-label="Top Menu. Expanded. Press tab to enter the menu dropdown." tabindex="0"></button>
+                            <ul class="dropdown-menu dropdown-menu-left" style="overflow-y: auto;max-height: 80vh;min-width:220px;">
+                                <li style="display: block;"><a href="/home_login" aria-label="Home Section" role="button">Home</a></li>
+                                
+                                <li style="display: block;"><a href="/home/events/" aria-label="Events Section" role="button" tabindex="0">Events</a></li>
+                                
+                                <li style="display: block;"><a href="/home/news/" aria-label="News Section" role="button" tabindex="0">News</a></li>
+                                
+                                <li style="display: block;"><a href="/home/groups/" aria-label="Groups Section" role="button" tabindex="0">Groups</a></li>
+                                
+                                <li style="display: block;"><a href="/home/college-advising-center/" aria-label="College Advising Center Section" role="button" tabindex="0">College Advising Center</a></li>
+                                
+                                <li style="display: block;"><a href="/home/test/" aria-label="Academic Center for Tutoring Section" role="button" tabindex="0">Academic Center for Tutoring</a></li>
+                                
+                                <li style="display: block;"><a href="/home/career-center/" aria-label="Career Center Section" role="button" tabindex="0">Career Center</a></li>
+                                
+                                <li style="display: block;"><a href="/home/information-technology/" aria-label="Information Technology Section" role="button" tabindex="0">Information Technology</a></li>
+                                
+                                <li style="display: block;"><a href="/home/library/" aria-label="Library Section" role="button" tabindex="0">Library</a></li>
+                                
+                                <li style="display: block;"><a href="/home/study-abroad/" aria-label="Study Abroad Section" role="button" tabindex="0">Study Abroad</a></li>
+                                
+                                <li style="display: block;"><a href="/home/publishing-lab/" aria-label="Publishing Lab Section" role="button" tabindex="0">Publishing Lab</a></li>
+                                
+                            </ul>
+                        </li>
+                        <style>
+                            .hasSubMenu:hover > ul, .hasSubMenu:focus-within > ul {
+                                display:block;
+                            }
+                        </style>
+                    <!-- /.Home Website Buttons -->
+
+                    <!-- Group & Event Buttons -->
+                    
+                    <!-- /.Group & Event Buttons -->
+                
+                <!-- /.Not Logged Buttons -->
+
+                <!-- Home Button -->
+                
+                <!-- /.Home Button -->
+
+                <!-- Group Button -->
+                
+                <!-- /.Group Button -->
+
+                <!-- Manage Button -->
+                
+
+                <!-- Event Button -->
+                
+                <!-- /.Event Button -->
+               
+                <!-- Chat Button -->
+                
+                <!-- /.Chat Button -->
+                
+                <!-- Admin / Setup Button -->
+                
+                <!-- /.Admin Button -->
+            
+
+            <li  class="spacer" role="presentation"></li>
+
+            
+				<!-- Login Button -->
+				<li class="">
+					<a class="topbar__menu topbar__menu--row" href="/login_only" aria-label="Sign In Section" role="button">
+                        <span class="mdi mdi-login-variant mdi-24px"></span> 
+                        <span class="hidden-xs hidden-sm topbar__menu-text" style="overflow: initial;"> Sign In </span>
+					</a>
+				</li>
+				<!-- /.Login Button -->
+            
+
+        	<style>
+        		#a-top-bar-logo:focus > i { outline: 2px solid #ffffff; }
+        	</style>
+        </ul>
+    </nav>
+
+
+</div><!-- /.navbar-collapse -->
+                    
+                </div><!-- /.topbar -->
+
+                <div id="inner-shell" class="inner-shell">
+
+                     
+
+        <!-- END HEADER -->
+
+        
+            <div id="content-cont" class="content-cont container">
+        
+            <div id="page-cont" class="content" role="main" aria-label="Main Content.">
+                <div style="position: relative;"><span id="span-top-of-main-content--0" class="content__top-element" tabindex="0" aria-label="Top of Main Content." style="display: none;">Top of Main Content</span></div>
+
+
+                
+                <!-- Used in email_form -->
+                
+<!-- END AX != 1 -->
+
+                
+
+
+<style>
+	.event_display0 {display:none;}
+
+    @media (max-width: 992px) {
+      .listing-element__preimg-block { margin-bottom: 5px !important; }
+      .list-group-item { margin-bottom: 5px !important; }
+    } 
+
+	div.page__header--title:focus-within h2 {
+		border: none;
+		border-radius: 5px;
+		outline: none;
+		background-color: #dddddd !important;
+		background: #dddddd !important;
+	}
+
+</style>
+
+<script type="text/javascript" src="/js/thickbox/thickbox.js"></script>
+
+<script type="text/javascript">
+    function createCustomICSLink() {
+        var filters = window.location.search;
+        if (filters != null && filters.length > 1) {
+            return "https://engage.colum.edu/ics" + filters + "&school=colum";
+        } else {
+            return "https://engage.colum.edu/ical/ical_colum.ics";
+        }
+    }
+
+</script>
+
+<div id="card_template" style="display:none">
+    <!--IF[:all_results_hidden]='True'-->
+        <script>$("#lnkLoadMore").click();</script>
+    <!--E-->
+    <!--IF[:date_separator]='true'-->
+	    <li class="list-group__separator">
+	    	<h2 class="header-cg--h4" role="region" aria-label="Events [date_text]">[date_text]</h2>
+		</li>
+    <!--E-->
+	<!--IF[:displayType]='separator'--> 
+        <li  class="list-group-item" style="display: none;">
+	<!--E-->
+	<!--IF[:displayType]!='separator'--> 
+    	<li  class="list-group-item" id="event_[eventId]">
+    <!--E-->
+        <div class="listing-element">
+            <div class="row">
+            	<!--IF[:displayType]='event'-->
+	            	<div class="listing-element__preimg-block col-md-2">
+	            		<a href="[eventUrl]" aria-label="Event banner. [ariaEventDetailsWithLocation] Opens the event page.">
+            				<img src="/images/listing-default.png" onError="this.onerror=null;this.src='/images/listing-default.png';" data-src="[eventPicture]" alt="Event Banner for [eventName]"/>
+        				</a>
+            			<div class="img-label">[eventPriceRange]</div>
+	            	</div>
+	            <!--E-->
+                <!--IF[:displayType]='zoom'-->
+	            	<div class="listing-element__preimg-block col-md-2">
+	            		<a href="[eventUrl]" target="_blank" aria-label="Event banner. [ariaEventDetailsWithLocation] Opens the event page.">
+            				<img src="/images/listing-default.png" onError="this.onerror=null;this.src='/images/listing-default.png';" data-src="[eventPicture]" alt="Event Banner for [eventName]"/>
+        				</a>
+                        <div class="img-label">[eventPriceRange]</div>
+	            	</div>
+	            <!--E-->
+                <div class="listing-element__title-block col-md-8">
+                    <div class="media">
+                        <div class="media-body">
+	                        <h3 class="media-heading header-cg--h4">
+                                <!--IF[:displayType]='zoom'-->
+                                    <a href="[eventUrl]" target="_blank" aria-label="Video conferencing link, new tab. [ariaEventDetailsWithLocation]">[eventName]</a> [eventBadges] 
+                                <!--E-->
+                                <!--IF[:displayType]!='zoom'-->
+                                    <a href="[eventUrl]" aria-label="Event link. [ariaEventDetailsWithLocation] Opens the event page.">[eventName]</a> [eventBadges] 
+                                <!--E-->
+                                <!--IF[:hybrid]='hybrid'-->
+                                    <span class="badge badge-info" style="text-transform: uppercase;">Hybrid</span>
+                                <!--E-->
+                                <!--IF[:registered]='registered'-->
+                                    <span class="badge badge-success" style="text-transform: uppercase;">Registered</span>
+                                <!--E-->
+                                <!--IF[:waiting_list]='waiting_list'-->
+                                    <span class="badge badge-warning" style="text-transform: uppercase;">Waiting List</span>
+                                <!--E-->
+                                <!--IF[:checkin]='1'-->
+                                    <span style="padding-top: 5px; padding-bottom: 5px;" class="badge badge-success"><span class="mdi mdi-checkbox-marked-circle" aria-hidden="true"> </span></span><span style="font-size:13px" class="color-cg--event"> CHECKED IN</span>
+                                <!--E-->
+                                <!--IF[:checkin]='2'-->
+                                    <span style="padding-top: 5px; padding-bottom: 5px;" class="badge badge-danger"><span class="mdi mdi-exit-to-app" aria-hidden="true"> </span></span> <span style="font-size:13px" class="color-cg--admin"> CHECKED OUT</span>
+                                <!--E-->
+                                <!--IF[:checkin]='3'-->
+                                    <span style="padding-top: 5px; padding-bottom: 5px;" class="badge badge-warning"><span class="mdi mdi mdi-eye-off" aria-hidden="true"> </span></span> <span style="font-size:13px;color:#D0470C"> NO SHOW</span>
+                                <!--E-->
+	                        </h3>
+                            <div class="row" style="margin-top: 10px;">
+                            	<div class="col-md-5 col-lg-5">
+									<!--IF[:eventDates]!=''-->
+		                            <div class="media-heading" style="display: inline-block; vertical-align: top;" aria-label="Event date"><span class="grey-element mdi mdi-clock" aria-hidden="true"></span></div>
+									<div class="media-heading" style="display:inline-block;width: calc(100% - 25px);">
+                                        <div style="display: inline-block;">[eventDates] [eventTimezone]</div>
+                                        <!--IF[:custom_time_instruction]!='null'-->
+                                                <div>([custom_time_instruction])</div>
+                                        <!--E-->
+                                    </div>
+									<!--E-->
+                            	</div>
+                            	<div class="col-md-4 col-lg-4">
+                            		<!--IF[:displayType]='event'-->
+                            		    <!--IF[:eventLocation]!='null'-->
+                            		        <!--IF[:eventLocation]!=''-->
+	    								        <p class="h5 media-heading" style="line-height: 1.4;"><div style="display: inline-block; vertical-align: top;" aria-label="Event location"><span class="grey-element mdi mdi-map-marker" aria-hidden="true"></span></div> [eventLocation]</p>
+    								        <!--E-->   								
+                                        <!--E-->  								
+                                    <!--E-->
+                                    <!--IF[:displayType]='zoom'-->
+	    								<p class="h5 media-heading" style="line-height: 1.4;"><span class="grey-element mdi mdi-message-video" aria-hidden="true"></span> <a href="[eventUrl]" target="_blank" aria-label="Video conferencing link, new tab. [ariaEventDetailsWithLocation]">Video conferencing link</a></p>
+    								<!--E-->
+    							</div>
+    							<div class="col-md-3 col-lg-3">
+    								<p style="margin-bottom:5px" class="h5 media-heading event_display[displayAttendees]"><span class="grey-element mdi mdi-account" aria-hidden="true"></span> [eventAttendees] going</p>
+                                    
+                                    [registrationStatus]
+    							</div>
+    						</div>
+                            <!--IF[:parentEventIds]!='null'--><div class="h6 media-heading grey-element">Parent: [parentEventIds]</div><!--E-->
+                            <div role="group" aria-label="Event Tags. Click on or select a tag to reload the page and filter on the associated tag type">
+                                [eventTags]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing-element__btn-block col-md-2" data-z="events.cp01">
+                	<!--IF[:displayType]='event'-->
+						<a class="btn btn-cg--event"  href="[eventUrl]" role="button" aria-label="[eventButtonLabel] button. [ariaEventDetailsWithLocation] Opens the event page.">
+							<span class="mdi mdi-open-in-new" aria-hidden="true"></span> [eventButtonLabel]
+						</a>
+						<p class="h6 grey-element">[clubName]</p>
+                        <!--IF[:coHostId]!='0'--><p class="h6 media-heading grey-element">Co-hosted with [coHostId]</p><!--E-->
+					<!--E-->
+                	<!--IF[:displayType]='zoom'-->
+                        <a class="btn btn-cg--event" href="[eventUrl]" target="_blank" role="button" aria-label="[eventButtonLabel] button. Open video conferencing page in a new tab. [ariaEventDetailsWithLocation]">
+							<span class="mdi mdi-camcorder" aria-hidden="true"></span> [eventButtonLabel]
+						</a>
+						<p class="h6 grey-element">[clubName]</p>
+					<!--E-->
+                    <!--IF[:printTicket]!=''-->
+                        <a class="btn btn-grey" href="[printTicket]" role="button" target="_blank" aria-label="Print Ticket. [ariaEventDetails] Opens in a new tab.">
+                            <span class="mdi mdi-ticket"></span> Print Ticket
+                        </a>
+                    <!--E-->
+			     </div>
+            </div>
+        </div>
+    </li>
+</div>
+
+
+
+
+<div id="listing__header-cont" class="page__header row">
+	<div class="page__header--title col-xs-12 col-lg-4">
+		<h1 class="header-cg--h2">
+			<span id="listing__header--icon" class="mdi mdi-calendar color-cg--event"></span>
+			<span id="listing__header--title">Events</span>
+			<small id="counter_listing"></small>
+		</h1>
+	</div>
+	<div class="page__header--btns col-xs-12 col-lg-8">
+		<a class="btn btn-grey hidden-xs hidden-sm thickbox btn--margin-left" style="border-top-left-radius: 35px;border-bottom-left-radius: 35px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;" href="/ics_helper?modal=true&embed=1&mode=set&width=850&height=550&TB_iframe=true" role="button" aria-label="Subscribe to Calendars, dialog."><span class="mdi mdi-access-point"></span> Subscribe</a><a class="btn btn-grey hidden-xs hidden-sm" style="margin-left:1px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;" href="/calendar_sync" role="button" aria-label="Synchronize my events"><span class="mdi mdi-sync"></span> Sync</a><a class="btn btn-grey hidden-xs hidden-sm" style="margin-left:1px; border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 35px;border-bottom-right-radius: 35px;" href="javascript:jPrompt('This is the calendar ICS feed based on the current filtering selection. Use this link to bring all these events into your personal calendar. \n\n Copy this link (CTRL+C):',createCustomICSLink(), 'Custom ICS Link', function (r) {if (r) {}});" role="button" aria-label="Calendar ICS/iCalendar Feed, dialog."><span class="mdi mdi-download"></span></a><a id="btn-cg--calendar" class="btn btn-cg--event btn--margin-left hidden-xs hidden-sm" href="/calendar#week" role="button" aria-label="Events Calendar"><span class="mdi mdi-calendar"></span> Calendar</a>
+		
+		<div class="btn-group" role="group" id="selectView"></div>
+		<script type="text/javascript">
+			var nbrView = 0
+			if (document.getElementById("card_template")) { nbrView += 1 }
+			if (document.getElementById("vignette_template")) { nbrView += 1 }
+			if (document.getElementById("list_template")) { nbrView += 1 }
+			if (document.getElementById("row_template")) { nbrView += 1 }
+
+			if (nbrView > 1) {
+				var htmlBtnSelectView = "";
+				if (document.getElementById("card_template")) {
+					htmlBtnSelectView += "<a href='#card' id='listing__template-btn--card' role='button' class='btn btn-default active' title='Card'>"
+					+ "    <span class='mdi mdi-view-sequential'></span>"
+					+ "</a>";
+				}
+				if (document.getElementById("vignette_template")) {
+					htmlBtnSelectView += "<a href='#vignette' id='listing__template-btn--vignette' role='button' class='btn btn-default ' title='Vignette'>"
+					+ "    <span class='mdi mdi-view-grid'></span>"
+					+ "</a>";
+				}
+				if (document.getElementById("list_template")){
+					htmlBtnSelectView += "<a href='#list' id='listing__template-btn--list' role='button' class='btn btn-default ' title='List'>"
+					+ "    <span class='mdi mdi-view-list'></span>"
+					+ "</a>";
+				}
+				if (document.getElementById("row_template")){
+					htmlBtnSelectView += "<a href='#row' id='listing__template-btn--row' role='button' class='btn btn-default ' title='Row'>"
+					+ "    <span class='mdi mdi-view-module'></span>"
+					+ "</a>";
+				}
+				$('#selectView').append(htmlBtnSelectView);
+			}
+			else {
+				$('#selectView').remove();
+			}
+		</script>
+
+		
+	</div>
+</div>
+
+
+	<div class="page__border page__border--no-margin border-cg--event"></div>
+	<div id="listing__filters-cont">
+		<div class="row">
+			<div id="listing__filters--search-cont" class="col-xs-12 col-sm-3_5 col-md-2_5">
+				<div class="input-group" role="presentation">
+				
+					<input id="search_word" type="text" class="form-control" placeholder="Search Events" value="" aria-label="Search Events">
+					<span class="input-group-btn">
+						<button id="btnListingSearch" type="button" class="btn btn-default" aria-label="Submit your search text to Search Events.">
+							<span class="mdi mdi-magnify" aria-hidden="true"></span>
+						</button>
+						<button id="btnListingFilterToggle" type="button" class="btn btn-default hidden-sm hidden-md hidden-lg" aria-label="Filter search results, press enter to expand or collapse the filter options.">
+							<span class="mdi mdi-filter-outline" role="presentation" aria-hidden="true"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+			<div id="listing__filters--filters-cont" class="col-xs-12 col-sm-5 col-md-7">
+				
+				<div class="select-group-justified" role="presentation">
+					
+						<div class="select-group">
+							<select id="select_filter1" class="form-control" data-z="xm.102" aria-label="Select upcoming or past events"><option value="" aria-label="Filter by Upcoming Events">Upcoming</option><option value="past" aria-label="Filter by Past Events">Past Events</option> </select>
+							
+									<script type="text/javascript">
+										var selectFilterElem = $("#select_filter1");
+										if (selectFilterElem !== null && selectFilterElem.length === 1) {
+											var selectFilterAriaLabel = $(selectFilterElem).attr('aria-label');
+											if (selectFilterAriaLabel === undefined || selectFilterAriaLabel === null || selectFilterAriaLabel.trim().length < 1) {
+												selectFilterElem.attr("aria-label", "Select show.");
+											}
+										}
+									</script>
+							
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('show') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('show', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter1").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<select data-z="stype.08" id="select_filter2" class="form-control" multiple="multiple" name="filter2"  style="" aria-label="Select filter2. "><option value="66859">2023 Scholarship Fundraiser</option>
+<option value="66239">Academic Affairs</option>
+<option value="69666">Academic DEI</option>
+<option value="42676">Academic Life Coaching</option>
+<option value="66257">Academic Services</option>
+<option value="69543">Acoustic Kitchen</option>
+<option value="39339">Acoustical Society of America</option>
+<option value="39341">Ad Club Columbia College Chicago</option>
+<option value="66172">Admissions</option>
+<option value="65258">AEMMP Records</option>
+<option value="39181">AIGA Columbia College Chicago</option>
+<option value="67073">Aikido Club</option>
+<option value="53503">All Things Commencement</option>
+<option value="70013">All Things Registration</option>
+<option value="38786">Alumni Relations</option>
+<option value="39934">American Sign Language</option>
+<option value="69668">Anti-racism Transformation Team</option>
+<option value="39926">Art and Art History</option>
+<option value="38671">Asian Student Organization</option>
+<option value="42468">ASL Club</option>
+<option value="71036">Aspiring Authors of Columbia</option>
+<option value="39938">Audio Arts and Acoustics</option>
+<option value="39352">Audio Drama Club</option>
+<option value="52459">Black Arts Festival</option>
+<option value="39349">Black Student Union</option>
+<option value="59843">Body Haven</option>
+<option value="68954">Brotherhood Initiative (BI)</option>
+<option value="39927">Business and Entrepreneurship</option>
+<option value="71299">CADRE</option>
+<option value="39182">Call of the Cauldron</option>
+<option value="38809">Campus Bookstore</option>
+<option value="42552">Campus Safety and Security</option>
+<option value="38699">Campus Traditions | Student Activities</option>
+<option value="38787">Career Center</option>
+<option value="66740">CCC DJ Club</option>
+<option value="47677">CCC Engage Leaders</option>
+<option value="64246">Center for Black Music Research </option>
+<option value="39939">Cinema and Television Arts</option>
+<option value="71277">Civic Activism, Participation and Engagement </option>
+<option value="55302">Collective Impact</option>
+<option value="38788">College Advising Center</option>
+<option value="64176">Columbia Cares</option>
+<option value="38789">Columbia Central</option>
+<option value="44408">Columbia College Chicago Animation Association</option>
+<option value="66240">Columbia College Chicago Assembly</option>
+<option value="71035">Columbia College Chicago Audio Engineering Society (AES)</option>
+<option value="43945">Columbia College Chicago Comedy Club (5C)</option>
+<option value="44074">Columbia College Chicago Hillel</option>
+<option value="71285">Columbia College Chicago: Hip-Hop Club </option>
+<option value="68682">Columbia College Fashion Association </option>
+<option value="70642">Columbia Darkroom Club</option>
+<option value="71305">Columbia Design Collective</option>
+<option value="67409">Columbia Experience Class</option>
+<option value="71283">Columbia Game Forge</option>
+<option value="47751">Columbia Horror Picture Show</option>
+<option value="66600">Columbia Laughs</option>
+<option value="42482">Columbia Renegades Dance Team</option>
+<option value="42483">Columbia Renegades En Pointe</option>
+<option value="42486">Columbia Renegades Galahad Medieval Combat Society</option>
+<option value="42488">Columbia Renegades Soccer</option>
+<option value="64756">Columbia Renegades Trading Card League</option>
+<option value="56742">Columbia Votes</option>
+<option value="71293">Columbia Weekend</option>
+<option value="39343">Columbia XA</option>
+<option value="68940">Columbiagency</option>
+<option value="69672">Columbiagency</option>
+<option value="39940">Communication</option>
+<option value="66243">Community Education</option>
+<option value="69350">Commuter Students</option>
+<option value="69572">Concierge Desk</option>
+<option value="38790">Counseling Services</option>
+<option value="71304">Created to Achieve Success</option>
+<option value="59609">Creative Leaders of Columbia</option>
+<option value="71301">Creators Set Trends</option>
+<option value="71288">Crochet and Knitting Club</option>
+<option value="39342">Cru</option>
+<option value="69786">CTVA Hub</option>
+<option value="39344">Cult Cinema Club</option>
+<option value="39928">Dance</option>
+<option value="38791">DEPS &amp; ShopColumbia</option>
+<option value="39929">Design</option>
+<option value="38807">Digital Print Center</option>
+<option value="67408">DocYourWorld</option>
+<option value="68658">Dungeons and Dragons Club</option>
+<option value="39338">Editors Guild of Columbia</option>
+<option value="47924">Engage 101</option>
+<option value="62653">Engage 2.0 (Sophomore Social Group)</option>
+<option value="71290">Engage Homeroom</option>
+<option value="52116">Engage Officers and Administrators</option>
+<option value="39935">English and Creative Writing</option>
+<option value="44193">Experimental Film Society</option>
+<option value="39930">Fashion Studies</option>
+<option value="67296">First Generation Fan Club</option>
+<option value="66252">First Semester Experience</option>
+<option value="71312">For Women, By Women Gallery  </option>
+<option value="71273">Frannie&#39;s @ the Student Center</option>
+<option value="38792">Frequency TV</option>
+<option value="71296">FT and PT Faculty</option>
+<option value="66241">Global Education</option>
+<option value="67441">Good Karma Brands</option>
+<option value="67311">Hayes Talent Agency</option>
+<option value="54552">Herff Jones</option>
+<option value="36360">Home Page</option>
+<option value="56128">Honors Program</option>
+<option value="66258">Housing and Residential Experience</option>
+<option value="39936">Humanities, History, and Social Sciences</option>
+<option value="39340">Illustration Student Group</option>
+<option value="59830">Improv Club</option>
+<option value="69674">Improv Club</option>
+<option value="51919">In The Loop</option>
+<option value="54550">Information Technology</option>
+<option value="39941">Interactive Arts and Media</option>
+<option value="71281">International Buddy Program </option>
+<option value="55187">International Students</option>
+<option value="39337">J.A.M Japanese Anime and Manga</option>
+<option value="71294">K-Pop Club</option>
+<option value="71313">Karaoke Club</option>
+<option value="38808">Kinema Fitness</option>
+<option value="71308">Korean Student Association</option>
+<option value="39350">Latino Alliance</option>
+<option value="68662">Leaders &amp; Innovators for Tomorrow (LIfT)</option>
+<option value="59994">LGBTQIA Life at Columbia</option>
+<option value="38793">Library</option>
+<option value="38794">Makerspace</option>
+<option value="71272">Manifest 2023: Unlock</option>
+<option value="71300">Manifest 2024: Breakthrough</option>
+<option value="71307">ManiFresh</option>
+<option value="71034">Masterpiece Arts Columbia</option>
+<option value="71278">Mentorship @ Columbia</option>
+<option value="71267">Mentorship!</option>
+<option value="71306">Mi Gente Renegades Latin Dance</option>
+<option value="71297">Multimedia Club</option>
+<option value="66244">Museum of Contemporary Photography</option>
+<option value="39931">Music</option>
+<option value="66248">Music Center</option>
+<option value="59844">Muslim Student Association</option>
+<option value="43967">National Association of Black Journalists (NABJ)</option>
+<option value="71270">National Society of Leadership &amp; Success</option>
+<option value="39710">New Student Programs</option>
+<option value="59842">Nuestra Gente Theatre of Columbia College Chicago</option>
+<option value="66249">Office of the Dean, School of Fine and Performing Arts</option>
+<option value="66253">Office of the Dean, School of Liberal Arts and Sciences</option>
+<option value="66255">Office of the Dean, School of Media Arts</option>
+<option value="66245">Office of the President</option>
+<option value="66242">Office of the Provost</option>
+<option value="71276">On the Outside Films</option>
+<option value="71280">Photo Social Practice</option>
+<option value="39932">Photography</option>
+<option value="39351">Picture Perfect Modeling Troupe</option>
+<option value="68941">Playwrights Aloud</option>
+<option value="71269">PP Refund</option>
+<option value="71314">Proud Artists of Native/Indigenous Communities</option>
+<option value="39353">PRSSA</option>
+<option value="42480">Renegades Badminton</option>
+<option value="42481">Renegades Basketball</option>
+<option value="42484">Renegades E-Sports</option>
+<option value="46862">Renegades Flag Football</option>
+<option value="42492">Renegades Hip Hop</option>
+<option value="42487">Renegades Outdoor Collective</option>
+<option value="46863">Renegades Quadball</option>
+<option value="62841">Renegades Skateboarding Club</option>
+<option value="71295">Renegades Stunt Club</option>
+<option value="42489">Renegades Ultimate Frisbee</option>
+<option value="42490">Renegades Volleyball</option>
+<option value="71275">Rock and Roll Productions</option>
+<option value="60068">Scholars Project</option>
+<option value="66246">School of Fine and Performing Arts</option>
+<option value="54551">School of Graduate Studies</option>
+<option value="66251">School of Liberal Arts and Sciences</option>
+<option value="66254">School of Media Arts</option>
+<option value="39937">Science and Mathematics</option>
+<option value="59682">Semester in LA (SiLA)</option>
+<option value="38795">Services for Students with Disabilities</option>
+<option value="43941">Sexual Assault Awareness Education Committee</option>
+<option value="54722">ShopColumbia</option>
+<option value="71274">SID (Student Information Desk)</option>
+<option value="54850">Social Justice Dialog</option>
+<option value="52112">Soul Sisters</option>
+<option value="66256">Strategic Communications and External Relations</option>
+<option value="66259">Student Activities</option>
+<option value="40034">Student Athletic Association (SAA)</option>
+<option value="38796">Student Center</option>
+<option value="38799">Student Diversity &amp; Inclusion</option>
+<option value="37446">Student Government Association (SGA)</option>
+<option value="38800">Student Health Center</option>
+<option value="71268">Student Life</option>
+<option value="39357">Student Organization Council (SOC)</option>
+<option value="42464">Student Organizations and Leadership</option>
+<option value="38693">Student Programming Board (SPB)</option>
+<option value="38802">Student Relations</option>
+<option value="64901">Student Veteran Association</option>
+<option value="51825">Student Veterans @ Columbia</option>
+<option value="54499">Students</option>
+<option value="71287">Students for Justice in Palestine</option>
+<option value="56751">Summer Orientation - Parents</option>
+<option value="39336">Table Write</option>
+<option value="52482">Team Manifest</option>
+<option value="70761">TEDx Columbia College Chicago</option>
+<option value="38803">The Academic Center for Tutoring</option>
+<option value="71309">The Center Galleries</option>
+<option value="38804">The Columbia Chronicle</option>
+<option value="64155">The Fresh Connect</option>
+<option value="66765">The Hokin Gallery </option>
+<option value="71266">The Photo Community</option>
+<option value="52113">The Social Network</option>
+<option value="39933">Theatre</option>
+<option value="71279">Trans Fam</option>
+<option value="51962">Transfer Student Network</option>
+<option value="38805">TRIO Student Support Services</option>
+<option value="70032">Undocumented Student Group</option>
+<option value="68927">Varying Visions</option>
+<option value="38806">WCRX-FM</option>
+<option value="67966">Wellness @ Columbia: Your Healing Space</option>
+<option value="42546">Wellness, Athletics, and Recreation</option>
+<option value="71292">Wicked Week</option>
+<option value="59846">Women in Audio</option>
+</select>
+							
+								<script type="text/javascript">
+									// console.log('> CHECKPOINT {a00} filter.multiPlaceholder=Group');
+									// console.log('> CHECKPOINT {a00} filter.multiSearch=False');
+									$("#select_filter2").multiselect({
+										
+											buttonWidth: '100%',
+										
+										enableHTML: false,
+										
+										maxHeight: 400,
+										nonSelectedText: ' - Group - '
+									});
+									
+
+									$("#select_filter2").attr("tabindex", "-1");
+
+									
+											$("#select_filter2").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("role","listbox");
+											$("#select_filter2").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("aria-label","Filter by Group. Multi select list.");
+										
+
+									// $("#select_filter2").attr("aria-label", "Multi-Select Filter Group");
+
+								</script>
+								
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('group_ids') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('group_ids', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter2").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<select data-z="stype.08" id="select_filter3" class="form-control" multiple="multiple" name="filter3"  style="" aria-label="Select filter3. "><option value="47525">Academic Departments</option>
+<option value="83178">Department</option>
+<option value="47524">Academic Resources and Support</option>
+<option value="47526">Campus Resources and Services</option>
+<option value="45660">Everyone</option>
+<option value="47523">Student Organizations</option>
+</select>
+							
+								<script type="text/javascript">
+									// console.log('> CHECKPOINT {a00} filter.multiPlaceholder=Group Type');
+									// console.log('> CHECKPOINT {a00} filter.multiSearch=False');
+									$("#select_filter3").multiselect({
+										
+											buttonWidth: '100%',
+										
+										enableHTML: false,
+										
+										maxHeight: 400,
+										nonSelectedText: ' - Group Type - '
+									});
+									
+
+									$("#select_filter3").attr("tabindex", "-1");
+
+									
+											$("#select_filter3").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("role","listbox");
+											$("#select_filter3").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("aria-label","Filter by Group Type. Multi select list.");
+										
+
+									// $("#select_filter3").attr("aria-label", "Multi-Select Filter Group Type");
+
+								</script>
+								
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('group_type') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('group_type', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter3").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<select data-z="stype.10" id="select_filter4" multiple="multiple" name="filter4"  style="" class="form-control" aria-label="Select filter4. "><optgroup class="optgroup_contains" label="Contains"><option value="4309401"  >(Pre) Professional</option><option value="10760019"  >CODE</option><option value="6736247"  >Department</option><option value="4309402"  >Faith Based</option><option value="4309396"  >Fine and Performing Arts</option><option value="4309399"  >Identity Based</option><option value="4651340"  >Liberal Arts and Sciences</option><option value="4309403"  >Media Arts</option><option value="4309404"  >Recreation / Athletics</option><option value="4309395"  >Special Interest</option><option value="4309405"  >Student Life Advisory Board (SLAB)</option></optgroup><optgroup class="optgroup_does_not_contain" label="Does Not Contain"><option value="-4309401"  >(Pre) Professional</option><option value="-10760019"  >CODE</option><option value="-6736247"  >Department</option><option value="-4309402"  >Faith Based</option><option value="-4309396"  >Fine and Performing Arts</option><option value="-4309399"  >Identity Based</option><option value="-4651340"  >Liberal Arts and Sciences</option><option value="-4309403"  >Media Arts</option><option value="-4309404"  >Recreation / Athletics</option><option value="-4309395"  >Special Interest</option><option value="-4309405"  >Student Life Advisory Board (SLAB)</option></optgroup></select>
+							
+								<script type="text/javascript">
+									// console.log('> CHECKPOINT {a00} filter.multiPlaceholder=Category Tags');
+									// console.log('> CHECKPOINT {a00} filter.multiSearch=False');
+									$("#select_filter4").multiselect({
+										
+											buttonWidth: '100%',
+										
+										enableHTML: false,
+										
+										maxHeight: 400,
+										nonSelectedText: ' - Category Tags - '
+									});
+									
+
+									$("#select_filter4").attr("tabindex", "-1");
+
+									
+											// NOTE assigning role=listbox here but it may be something else (but not a combobox); research hasn't provided an answer
+											$("#select_filter4").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("role","listbox");
+											$("#select_filter4").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("aria-label","Filter by Category Tags. Multi select list with conditional logic.");
+										
+
+									// $("#select_filter4").attr("aria-label", "Multi-Select Filter Category Tags");
+
+								</script>
+								
+									<script>
+											$("#select_filter4").siblings(".btn-group").find(" .multiselect-container.dropdown-menu .multiselect-item.multiselect-group.optgroup_contains").after("<li style='margin-top:5px;padding-left:10px;'><div class='radio radio-inline'><input id='radio_containslogic__or__4' type='radio' name='filter4_containslogic' value='OR' checked><label for='radio_containslogic__or__4'> OR </label></div><div class='radio radio-inline'><input id='radio_containslogic__and__4' type='radio' name='filter4_containslogic' value='AND'><label for='radio_containslogic__and__4'> AND </label></div></li><li class='multiselect-item divider'></li>");
+											$("#select_filter4").siblings(".btn-group").find(" .multiselect-container.dropdown-menu .multiselect-item.multiselect-group.optgroup_does_not_contain").after("<li style='margin-top:5px;padding-left:10px;'><div class='radio radio-inline'><input id='radio_notcontainslogic__or__4' type='radio' name='filter4_notcontainslogic' value='OR' checked><label for='radio_notcontainslogic__or__4'> OR </label></div><div class='radio radio-inline'><input id='radio_notcontainslogic__and__4' type='radio' name='filter4_notcontainslogic' value='AND'><label for='radio_notcontainslogic__and__4'> AND </label></div></li><li class='multiselect-item divider'></li>");
+
+											var url = new URL(location.href);
+											if (url.searchParams.get("category_containslogic") == "AND") {
+												$("input[name='filter4_containslogic'][value='AND']").prop("checked", true);
+											}
+											if (url.searchParams.get("category_notcontainslogic") == "AND") {
+												$("input[name='filter4_notcontainslogic'][value='AND']").prop("checked", true);
+											}
+
+											$("#select_filter4").siblings(".btn-group").find(" .multiselect-container.dropdown-menu .radio").bind("change", function() {
+												setURLParametersFromFilters();
+												getDataFromWebService();
+												toggleClearButton();
+												//Keep dropdown open hack.
+												$("#select_filter4").siblings(".btn-group").find("button").click();
+											});
+									</script>
+								
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('category') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('category', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter4").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<select data-z="stype.09" id="select_filter5" multiple="multiple" name="filter5"  style="" class="form-control" aria-label="Select filter5. "><option value="0"  >Important Dates</option><optgroup label="Event Types"><option value="41989"  >Engage: Academic Resources</option><option value="11037244"  >Community </option><option value="11036261"  >Academic Support</option><option value="11036260"  >Health and Wellness</option><option value="7124620"  >Diversity, Equity, and Inclusion</option><option value="51996"  >Engage: Financial Literacy</option><option value="41990"  >Engage: Community and Leadership</option><option value="41991"  >Engage: Career Planning</option><option value="41993"  >Engage: Health, Wellness, and Safety</option><option value="41995"  >Engage: Diversity, Equity, and Inclusion</option><option value="5429688"  >Admitted Student Day</option><option value="5429695"  >Artist-in-Residence</option><option value="5429696"  >Athletics</option><option value="5429697"  >Engage: Career Planning</option><option value="5429698"  >Class</option><option value="5429714"  >Concert</option><option value="5429699"  >Conference</option><option value="5429715"  >Dance</option><option value="5429700"  >Deadline</option><option value="5429703"  >Discussion</option><option value="5429705"  >Exhibit</option><option value="5429704"  >Exhibition</option><option value="5429707"  >Faculty/Staff Only</option><option value="5429708"  >Festival/Fair</option><option value="5429716"  >Film</option><option value="5429706"  >Gallery Opening</option><option value="5429701"  >Holiday</option><option value="5429702"  >Important Date</option><option value="5429709"  >Lecture</option><option value="5429710"  >Manifest</option><option value="5429711"  >Meeting</option><option value="5429717"  >Music</option><option value="5429712"  >Networking</option><option value="5429691"  >On Location</option><option value="5429692"  >Open House</option><option value="5429693"  >Orientation</option><option value="5429713"  >Performance</option><option value="5429718"  >Play</option><option value="5429722"  >Presentation</option><option value="5429719"  >Reading</option><option value="5429723"  >Reception</option><option value="5429720"  >Recital</option><option value="5429724"  >Screening</option><option value="5429725"  >Semester in LA</option><option value="5429726"  >Seminar</option><option value="5429694"  >Session</option><option value="5429727"  >SFS Event</option><option value="5429728"  >Social</option><option value="5429729"  >Symposium</option><option value="5429730"  >Talk</option><option value="5429721"  >Theatre</option><option value="5429731"  >Wabash Arts Corridor</option><option value="5429732"  >WAC Crawl</option><option value="5429733"  >Workshop</option></optgroup></select>
+							
+								<script type="text/javascript">
+									// console.log('> CHECKPOINT {a00} filter.multiPlaceholder=Event Type');
+									// console.log('> CHECKPOINT {a00} filter.multiSearch=False');
+									$("#select_filter5").multiselect({
+										
+											buttonWidth: '100%',
+										
+										enableHTML: false,
+										
+										maxHeight: 400,
+										nonSelectedText: ' - Event Type - '
+									});
+									
+
+									$("#select_filter5").attr("tabindex", "-1");
+
+									
+											$("#select_filter5").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("role","listbox");
+											$("#select_filter5").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("aria-label","Filter by Event Type. Multi select list.");
+										
+
+									// $("#select_filter5").attr("aria-label", "Multi-Select Filter Event Type");
+
+								</script>
+								
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('event_type') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('event_type', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter5").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+								</div>
+								<div class="select-group-justified">
+								
+						<div class="select-group">
+							<select data-z="stype.08" id="select_filter6" class="form-control" multiple="multiple" name="filter6"  style="" aria-label="Select filter6. "><option value="8997933">Academic Advising</option>
+<option value="8997931">Admissions</option>
+<option value="8997648">American Sign Language</option>
+<option value="12745084">Anti-racism</option>
+<option value="8997649">Art &amp; Art History</option>
+<option value="13296654">Athletics</option>
+<option value="8997647">Audio Arts &amp; Acoustics</option>
+<option value="8997650">Business &amp; Entrepreneurship</option>
+<option value="8997930">Career</option>
+<option value="8997651">Cinema &amp; Television Arts</option>
+<option value="8997415">Columbia Weekend</option>
+<option value="8997424">Commencement/Graduation</option>
+<option value="8997652">Communication</option>
+<option value="13183754">Community</option>
+<option value="8115589">Connections</option>
+<option value="8997653">Dance</option>
+<option value="10880796">Dance Center</option>
+<option value="13258736">De-Stress Fest</option>
+<option value="8997654">Design</option>
+<option value="10513488">Diversity and Inclusion</option>
+<option value="8997655">English &amp; Creative Writing</option>
+<option value="4336669">Everyone</option>
+<option value="8997935">Exhibition</option>
+<option value="8997656">Fashion</option>
+<option value="13258737">Grad Expo</option>
+<option value="8997934">Graduate Students</option>
+<option value="13045261">Health and Wellness</option>
+<option value="13259437">Info Session</option>
+<option value="8997657">Interactive Arts &amp; Media</option>
+<option value="4336687">International Students</option>
+<option value="8997936">Library</option>
+<option value="10141108">Makerspace</option>
+<option value="8997382">Manifest</option>
+<option value="13263564">Masters</option>
+<option value="13296652">Meeting</option>
+<option value="8997937">Museum</option>
+<option value="8997658">Music</option>
+<option value="12411815">New Student Programs</option>
+<option value="8997373">Orientation</option>
+<option value="4335294">Parents/Guests Only</option>
+<option value="13296655">Performance</option>
+<option value="8997659">Photography</option>
+<option value="13296656">Reading</option>
+<option value="8997938">Residence Life</option>
+<option value="8997932">Safety &amp; Security</option>
+<option value="8997660">Science &amp; Math</option>
+<option value="10141113">Semester in LA</option>
+<option value="13259456">Street Safety</option>
+<option value="8997939">Student Life</option>
+<option value="4336678">Students Only</option>
+<option value="8997646">Theatre</option>
+<option value="10880797">Theatre Center</option>
+<option value="8997929">Tutoring</option>
+<option value="13257887">Uplift: Women&#39;s Month</option>
+<option value="8997360">Wicked Week</option>
+<option value="13296653">Workshop</option>
+</select>
+							
+								<script type="text/javascript">
+									// console.log('> CHECKPOINT {a00} filter.multiPlaceholder=Event Tags');
+									// console.log('> CHECKPOINT {a00} filter.multiSearch=False');
+									$("#select_filter6").multiselect({
+										
+											buttonWidth: '100%',
+										
+										enableHTML: false,
+										
+										maxHeight: 400,
+										nonSelectedText: ' - Event Tags - '
+									});
+									
+
+									$("#select_filter6").attr("tabindex", "-1");
+
+									
+											$("#select_filter6").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("role","listbox");
+											$("#select_filter6").siblings(".btn-group").find(" .multiselect.dropdown-toggle").attr("aria-label","Filter by Event Tags. Multi select list.");
+										
+
+									// $("#select_filter6").attr("aria-label", "Multi-Select Filter Event Tags");
+
+								</script>
+								
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('topic_tags') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('topic_tags', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter6").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<select id="select_filter7" class="form-control" aria-label="Select Location Type" title="- Location Type -"><option value="" aria-label="Filter by All Formats">- Location Type -</option><option value="on_campus" aria-label="Filter by On Campus">On-Campus</option><option value="off_campus" aria-label="Filter by Off Campus">Off-Campus</option><option value="online_only" aria-label="Filter by Online Only">Online Only</option><option value="hybrid" aria-label="Filter by Hybrid Events">Hybrid</option></select>
+							
+									<script type="text/javascript">
+										var selectFilterElem = $("#select_filter7");
+										if (selectFilterElem !== null && selectFilterElem.length === 1) {
+											var selectFilterAriaLabel = $(selectFilterElem).attr('aria-label');
+											if (selectFilterAriaLabel === undefined || selectFilterAriaLabel === null || selectFilterAriaLabel.trim().length < 1) {
+												selectFilterElem.attr("aria-label", "Select format.");
+											}
+										}
+									</script>
+							
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('format') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('format', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter7").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<div class="datePickerSkipForwardContainer"><span id="keyboard-above-select_filter8" class="spanAboveBelowDatePickerInTableCell" aria-label="This tab stop facilitates keyboard navigation before the date slash time input labelled From Date, press CTRL to skip forward over the From Date input." tabindex="0" onkeydown="aboveDatePickerOnKeyDown(event, 'keyboard-below-select_filter8');">Press CTRL to skip forward over the From Date input.</span></div><input id="select_filter8" type="text" placeholder="From Date"/><div class="datePickerSkipBackwardsContainer"><span id="keyboard-below-select_filter8" class="spanAboveBelowDatePickerInTableCell" aria-label="This tab stop facilitates keyboard navigation after the date/time input labelled From Date, press CTRL to skip backwards over the From Date input." tabindex="0" onkeydown="belowDatePickerOnKeyDown(event, 'keyboard-above-select_filter8');">Press CTRL to skip backwards over the From Date input.</span></div>
+							
+									<script type="text/javascript">
+										var selectFilterElem = $("#select_filter8");
+										if (selectFilterElem !== null && selectFilterElem.length === 1) {
+											var selectFilterAriaLabel = $(selectFilterElem).attr('aria-label');
+											if (selectFilterAriaLabel === undefined || selectFilterAriaLabel === null || selectFilterAriaLabel.trim().length < 1) {
+												selectFilterElem.attr("aria-label", "Select from date.");
+											}
+										}
+									</script>
+							
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('from_date') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('from_date', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter8").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+						<div class="select-group">
+							<div class="datePickerSkipForwardContainer"><span id="keyboard-above-select_filter9" class="spanAboveBelowDatePickerInTableCell" aria-label="This tab stop facilitates keyboard navigation before the date slash time input labelled To Date, press CTRL to skip forward over the To Date input." tabindex="0" onkeydown="aboveDatePickerOnKeyDown(event, 'keyboard-below-select_filter9');">Press CTRL to skip forward over the To Date input.</span></div><input id="select_filter9" type="text" placeholder="To Date"/><div class="datePickerSkipBackwardsContainer"><span id="keyboard-below-select_filter9" class="spanAboveBelowDatePickerInTableCell" aria-label="This tab stop facilitates keyboard navigation after the date/time input labelled To Date, press CTRL to skip backwards over the To Date input." tabindex="0" onkeydown="belowDatePickerOnKeyDown(event, 'keyboard-above-select_filter9');">Press CTRL to skip backwards over the To Date input.</span></div>
+							
+									<script type="text/javascript">
+										var selectFilterElem = $("#select_filter9");
+										if (selectFilterElem !== null && selectFilterElem.length === 1) {
+											var selectFilterAriaLabel = $(selectFilterElem).attr('aria-label');
+											if (selectFilterAriaLabel === undefined || selectFilterAriaLabel === null || selectFilterAriaLabel.trim().length < 1) {
+												selectFilterElem.attr("aria-label", "Select to date.");
+											}
+										}
+									</script>
+							
+							<script type="text/javascript">
+								// console.log('> CHECKPOINT {a04}');
+								if ('' != '' && url.searchParams.get('to_date') == null) {
+									var url = new URL(location.href);
+									url.searchParams.set('to_date', '');
+									history.replaceState(history.state , '', url.pathname + url.search);
+								}
+
+								$("#select_filter9").bind("change", function() {
+									setURLParametersFromFilters();
+									getDataFromWebService();
+									toggleClearButton();
+									shouldDisableSortable();
+								});
+							</script>
+						</div>
+					
+				</div>
+			</div>
+			<div id="listing__filters--order-cont" class="col-xs-12 col-sm-3_5 col-md-2_5">
+				
+			</div>
+			<button id="listing__clear-btn" class="btn" onClick="GetDataOnClear();" aria-label="Clear Filters. Reloads the list results with default filters.">
+				<span class="mdi mdi-close-circle"></span>
+			</button>
+		</div>
+	</div>
+
+
+<div id="listing-cont">
+	
+	
+
+	<div id="listing__elements-cont" style="overflow:visible;">
+		
+			<ul id="divAllItems" class="list-group">
+			</ul>
+		
+	</div>
+	<div id="listing__loading-cont">
+		
+			<p id="LoadingEvents" class="loader" style="color:#6c6c6c;font-size:16px;text-align:center; margin-top: 10px;"><img src="/images/loader-big.gif" alt="Loading" /><br/>Events</p>
+		
+		<p><button id="lnkLoadMore" type="button" class="btn btn-default btn-block" style="display: none;">More</button></p>
+	</div>
+
+	<input type="hidden" name="form_select_all" id="form_select_all" value="0"/>
+	<input type="hidden" id="h_Range" value="0" />
+	<input type="hidden" id="h_Limit" value="40" />
+	<input type="hidden" id="h_searchWords"  />
+	<input type="hidden" id="listing_checkbox_count" value="0" />
+	<input type="hidden" id="h_SearchWords" value="" />
+	
+	<input type="hidden" id="h_firstRequest" value="1" />
+
+</div>
+
+
+
+<script type="text/javascript">
+//Global Variable to hold ajax request state.
+var xhr;
+//Global Variable to block ajax request state for Load More so it does not skip results
+var blockXhr = false;
+
+var strNumber = 1;
+var intPos = 1;
+var needToLoadMoreRecords = false;
+var actionParam;
+
+// Trigger action when changing the view
+var hash;
+$(window).bind("hashchange", function () {
+	hash = location.hash.replace("#", "");
+	if (hash == "card" ||  hash == "list" || hash == "vignette" || hash == "row") {
+		changeTemplate(hash);
+	}
+	else {
+		return;
+	}
+});
+
+//Set template from settings (+ security)
+var selectTemplate = "";
+if (document.getElementById("card_template")) {
+	selectTemplate = "card";
+}
+else if (document.getElementById("card_template")) {
+	selectTemplate = "card";
+}
+
+
+$(document).ready(function () {
+	setFiltersFromURLParameters();
+	getDataFromWebService();
+	setResponsivePageHeaderButtons();
+
+	/** BINDING onLoadMoreFunction TO BUTTON CLICK **/
+	$("#lnkLoadMore").bind('click', function () {
+		if(!blockXhr) {
+			onLoadMoreFunction();
+		}
+	});
+	/** BINDING onLoadMoreFunction TO SCROLL **/
+	$(window).scroll(function () {
+		if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) {
+			if (needToLoadMoreRecords && !blockXhr && $("#lnkLoadMore").is(":visible")) {
+				$("#lnkLoadMore").hide();
+				onLoadMoreFunction();
+			}
+		}
+	});
+
+	$("#btnListingSearch").bind('click', function () {
+		setURLParametersFromFilters();
+		getDataFromWebService();
+		toggleClearButton();
+		shouldDisableSortable();
+	});
+
+	$("#btnListingFilterToggle").bind('click', function () {
+		if ( $("#listing__filters-cont .select-group-justified").is(":visible") ) {
+			$("#listing__filters-cont .select-group-justified").slideUp('fast', 'swing');
+		}
+		else {
+			$("#listing__filters-cont .select-group-justified").slideDown('fast', 'swing');
+		}
+	});
+
+	$("#search_word").bind('keyup', function (e) {
+		if (e.keyCode == 13) {
+			setURLParametersFromFilters(); 
+			getDataFromWebService();
+			toggleClearButton();
+			shouldDisableSortable();
+		}
+	});
+	$("#select_order").bind('change', function() {
+		setURLParametersFromFilters();
+		getDataFromWebService();
+		toggleClearButton();
+		shouldDisableSortable();
+	});
+
+	/** LISTING DRAG & DROP ITEMS ORDERING **/
+	
+
+});
+
+function shouldDisableSortable(){
+	let boolDisable = false
+	if($("#search_word").val() != "" && $("#search_word").val() != null) boolDisable = true;
+	if($("#select_order").val() != "" && $("#select_order").val() != null) boolDisable = true;
+	
+		if($("#select_filter1").val() != null && $("#select_filter1").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter2").val() != null && $("#select_filter2").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter3").val() != null && $("#select_filter3").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter4").val() != null && $("#select_filter4").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter5").val() != null && $("#select_filter5").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter6").val() != null && $("#select_filter6").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter7").val() != null && $("#select_filter7").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter8").val() != null && $("#select_filter8").val() != "") {
+			boolDisable = true;
+		};
+	
+		if($("#select_filter9").val() != null && $("#select_filter9").val() != "") {
+			boolDisable = true;
+		};
+	
+	if (xhr) {
+		xhr.then(function(){ 
+			disableSortable(boolDisable); 
+		});
+	} else disableSortable(boolDisable); 
+
+}
+
+function disableSortable(boolDisable){
+	$("#divAllItems").sortable( boolDisable ? "disable" : "enable" );
+	$(".handle").each(function(i,e){
+		$(e).css("cursor", boolDisable ? "not-allowed" : "move");
+		if (boolDisable) $(e).bind("mousedown", disableSortableAlert);
+		else $(e).unbind("mousedown", disableSortableAlert);
+	})
+}
+
+function disableSortableAlert(){
+	jAlert("Re-ordering is disabled while the list is filtered or sorted. Please remove any selections in the search bar, filter dropdowns, or sorting dropdown if applicable.", "Re-ordering Disabled")
+}
+
+function getListingDataJSON(url, callback, noResultCallback) {
+	if (xhr && xhr.readyState != 4 && $("#h_firstRequest").val() == 0) {
+		xhr.abort();
+	}
+	
+	if (url.indexOf('?') > 0) { url = url + '&' + timestamp(); } else { url = url + '?' + timestamp(); }
+	xhr = $.getJSON(url, function (data) {
+		if (data.length > 0) {
+			
+			$("#lnkLoadMore").hide();
+
+			var dataLength = data.length
+			for (var i = 0; i < dataLength; i++) {
+				callback(data[i]);
+			}
+			var resultDisplayed = strNumber - 1;
+
+			cmsgMsg = "";
+
+			if (data[dataLength - 1]["counter"] != null && 
+				data[dataLength - 1]["fields"].split(",").indexOf("action_download_report") == -1 && 
+				data[dataLength - 1]["fields"].split(",").indexOf("action_send_emails")     == -1 &&
+				data[dataLength - 1]["fields"].split(",").indexOf("action_redirect_url")     == -1 && 
+				data[dataLength - 1]["fields"].split(",").indexOf("action_generate_html")   == -1 ) {
+
+				if ( document.getElementById("counter_listing") ) {
+					document.getElementById("counter_listing").textContent = "(" + parseInt(data[dataLength - 1]["counter"]) + ")";
+				}
+				if ( $("#counter_listing_select").length ) {
+					document.getElementById("counter_listing_select").textContent = parseInt(data[dataLength - 1]["counter"]);
+				}
+
+				if (parseInt(data[dataLength - 1]["counter"]) > resultDisplayed) {
+					$("#lnkLoadMore").show();
+					needToLoadMoreRecords = true;
+				}
+				else {
+					needToLoadMoreRecords = false;
+				}
+				if (resultDisplayed > 1) { 
+					cmsgMsg = resultDisplayed + " results to your search";
+				}
+				else {
+					cmsgMsg = resultDisplayed + " result to your search";
+				}
+			}
+
+			
+			if (parseInt($("#h_firstRequest").val()) == 0) {
+				cmsg(cmsgMsg, 1,0);
+			}
+
+			tb_init('a.ltb');
+			$('[data-toggle="tooltip"]').tooltip();
+			$(".table-responsive__scroll-bar").width($(".table-responsive table").width());
+			
+			blockXhr = false;
+
+            const ajaxLoadMoreEvent = new CustomEvent('ajaxLoadMore', {detail: { 'parentContainerId': 'divAllItems' }});
+			document.dispatchEvent(ajaxLoadMoreEvent);
+		}
+		else {
+			noResultCallback();
+			blockXhr = false;
+		}
+		$(document).trigger('listing-bootstrap-done', [(data.length > 0) ? data[dataLength - 1] : undefined]);
+	});
+}
+
+
+function getWebServiceUrl(mobileFileName, range, limit, search) {
+	if (isEmpty(search)) {
+		// console.log('NOTE getWebServiceUrl() search is empty.');
+		// avoid error below on search.replace() when search is null or undefined
+		search = '';
+	}
+	result = "/mobile_ws/v17/" + mobileFileName + "?"
+			+ "range=" + range
+			+ "&limit=" + limit
+			
+				if($("#select_filter1").val() != null && $("#select_filter1").val() != "") {
+					result += "&filter1=" + $("#select_filter1").val()
+				}
+				
+				if($("#select_filter2").val() != null && $("#select_filter2").val() != "") {
+					result += "&filter2=" + $("#select_filter2").val()
+				}
+				
+				if($("#select_filter3").val() != null && $("#select_filter3").val() != "") {
+					result += "&filter3=" + $("#select_filter3").val()
+				}
+				
+				if($("#select_filter4").val() != null && $("#select_filter4").val() != "") {
+					result += "&filter4=" + $("#select_filter4").val()
+				}
+				
+					result += "&filter4_contains=" + $("input[name='filter4_containslogic']:checked" ).val();
+					result += "&filter4_notcontains=" + $("input[name='filter4_notcontainslogic']:checked" ).val(); 
+				
+				if($("#select_filter5").val() != null && $("#select_filter5").val() != "") {
+					result += "&filter5=" + $("#select_filter5").val()
+				}
+				
+				if($("#select_filter6").val() != null && $("#select_filter6").val() != "") {
+					result += "&filter6=" + $("#select_filter6").val()
+				}
+				
+				if($("#select_filter7").val() != null && $("#select_filter7").val() != "") {
+					result += "&filter7=" + $("#select_filter7").val()
+				}
+				
+				if($("#select_filter8").val() != null && $("#select_filter8").val() != "") {
+					result += "&filter8=" + $("#select_filter8").val()
+				}
+				
+				if($("#select_filter9").val() != null && $("#select_filter9").val() != "") {
+					result += "&filter9=" + $("#select_filter9").val()
+				}
+				
+	result += "&order=" + $("#select_order").val()
+			+ "&search_word=" + search.replace("#", "")
+			+ "&" + ""
+
+	return result;
+};
+
+function deleteView(uid) {
+	var signedUid = $('#listing_views').find('option[value="' + uid + '"]').attr('data-signedUid');
+	deleteContentWithCallback('xxx', 'AEnlYwgRprlhI2sRGvgUOg==-StQuI9czj2l8uGiuNtSf6g==-d729dd05087140c1830a98106ede77f0', uid, signedUid, function () {
+		$('#select_listing_views_container').find('input[value="' + uid + '"]').parents('li').remove();
+	});
+}
+
+function saveView(name, uid) {
+	if (!name && !uid) return;
+	if (name) {
+        loadButton($('#select_listing_views_container .btn.btn-default'));
+    }
+	var data = {
+		name: name,
+		view_url: location.pathname + location.search,
+		listing: 'mobile_events_list-',
+		uid: uid
+	}
+
+	$.ajax({
+		url : "save_view_endpoint",
+		type: "POST",
+		data : data,
+		success: function(data, textStatus, jqXHR) {
+			if (!uid) {
+				location.reload();
+			}
+		}
+	});
+}
+
+function onCreateView() {
+	location.reload();
+}
+
+function displayView(viewUrl, uid) {
+	saveView('', uid);
+	history.pushState(history.state, "", viewUrl);
+	setFiltersFromURLParameters();
+	getDataFromWebService();
+}
+
+function setFiltersFromURLParameters() {
+	searchParams = new URL(location.href).searchParams;
+	var elementsToFlash = [];
+	var shouldToggleClear = false;
+
+	//Set the Search
+	if ($("#search_word").length > 0 && $("#search_word").val() != (searchParams.get("search_word") == null ? '' : searchParams.get("search_word"))) {
+		$("#search_word").val(searchParams.get("search_word"));
+		elementsToFlash.push($("#search_word"));
+		shouldToggleClear = true;
+	}
+
+	//Set the Filters
+	
+		var filterElement =  $("#select_filter1");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("show") == null ? '' : searchParams.get("show");
+
+			
+				if (filterElement.val() != param) {
+					elementsToFlash.push(filterElement);
+					shouldToggleClear = true;
+				}
+				filterElement.val(param);
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter2");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("group_ids") == null ? '' : searchParams.get("group_ids");
+
+			
+				if (filterElement.val().join(',') != param) {
+					elementsToFlash.push(filterElement.parent().find(".multiselect[type='button']"));
+					shouldToggleClear = true;
+				}
+				filterElement.multiselect("deselectAll", false);
+				filterElement.multiselect('updateButtonText');
+				var filterValues = param.split(",");
+				for (var i = 0; i < filterValues.length; i++) {
+					filterElement.multiselect("select", filterValues[i]);
+				}
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter3");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("group_type") == null ? '' : searchParams.get("group_type");
+
+			
+				if (filterElement.val().join(',') != param) {
+					elementsToFlash.push(filterElement.parent().find(".multiselect[type='button']"));
+					shouldToggleClear = true;
+				}
+				filterElement.multiselect("deselectAll", false);
+				filterElement.multiselect('updateButtonText');
+				var filterValues = param.split(",");
+				for (var i = 0; i < filterValues.length; i++) {
+					filterElement.multiselect("select", filterValues[i]);
+				}
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter4");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("category") == null ? '' : searchParams.get("category");
+
+			
+				if (filterElement.val().join(',') != param) {
+					elementsToFlash.push(filterElement.parent().find(".multiselect[type='button']"));
+					shouldToggleClear = true;
+				}
+				filterElement.multiselect("deselectAll", false);
+				filterElement.multiselect('updateButtonText');
+				var filterValues = param.split(",");
+				for (var i = 0; i < filterValues.length; i++) {
+					filterElement.multiselect("select", filterValues[i]);
+				}
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter5");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("event_type") == null ? '' : searchParams.get("event_type");
+
+			
+				if (filterElement.val().join(',') != param) {
+					elementsToFlash.push(filterElement.parent().find(".multiselect[type='button']"));
+					shouldToggleClear = true;
+				}
+				filterElement.multiselect("deselectAll", false);
+				filterElement.multiselect('updateButtonText');
+				var filterValues = param.split(",");
+				for (var i = 0; i < filterValues.length; i++) {
+					filterElement.multiselect("select", filterValues[i]);
+				}
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter6");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("topic_tags") == null ? '' : searchParams.get("topic_tags");
+
+			
+				if (filterElement.val().join(',') != param) {
+					elementsToFlash.push(filterElement.parent().find(".multiselect[type='button']"));
+					shouldToggleClear = true;
+				}
+				filterElement.multiselect("deselectAll", false);
+				filterElement.multiselect('updateButtonText');
+				var filterValues = param.split(",");
+				for (var i = 0; i < filterValues.length; i++) {
+					filterElement.multiselect("select", filterValues[i]);
+				}
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter7");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("format") == null ? '' : searchParams.get("format");
+
+			
+				if (filterElement.val() != param) {
+					elementsToFlash.push(filterElement);
+					shouldToggleClear = true;
+				}
+				filterElement.val(param);
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter8");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("from_date") == null ? '' : searchParams.get("from_date");
+
+			
+				if (filterElement.val() != param) {
+					elementsToFlash.push(filterElement);
+					shouldToggleClear = true;
+				}
+				filterElement.val(param);
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+		var filterElement =  $("#select_filter9");
+
+		if (filterElement.length > 0) {
+			var param = searchParams.get("to_date") == null ? '' : searchParams.get("to_date");
+
+			
+				if (filterElement.val() != param) {
+					elementsToFlash.push(filterElement);
+					shouldToggleClear = true;
+				}
+				filterElement.val(param);
+			
+			//Hide filters if set to be hidden
+			
+		}
+	
+
+	//Set the Order
+	if ($("#select_order").length > 0 && $("#select_order").val() != (searchParams.get("order") == null ? '' : searchParams.get("order"))) {
+		$("#select_order").val(searchParams.get("order"));
+		elementsToFlash.push($("#select_order"));
+	}
+
+	if (shouldToggleClear) toggleClearButton();
+	flashElements(elementsToFlash, 1000);
+}
+
+function setURLParametersFromFilters() {
+	var url = new URL(location.href);
+
+	if ($("#search_word").val() != null && $("#search_word").val() != "") {
+		url.searchParams.set('search_word', $("#search_word").val());
+	} else {
+		url.searchParams.delete('search_word');
+	}
+
+	
+		if ($("#select_filter1").val() != '') {
+			url.searchParams.set('show', $("#select_filter1").val());
+		} else if (url.searchParams.get('show') != null) {
+			url.searchParams.set('show', '');
+			url.searchParams.delete('show');
+		}
+		
+		if ($("#select_filter2").val() != '') {
+			url.searchParams.set('group_ids', $("#select_filter2").val());
+		} else if (url.searchParams.get('group_ids') != null) {
+			url.searchParams.set('group_ids', '');
+			url.searchParams.delete('group_ids');
+		}
+		
+		if ($("#select_filter3").val() != '') {
+			url.searchParams.set('group_type', $("#select_filter3").val());
+		} else if (url.searchParams.get('group_type') != null) {
+			url.searchParams.set('group_type', '');
+			url.searchParams.delete('group_type');
+		}
+		
+		if ($("#select_filter4").val() != '') {
+			url.searchParams.set('category', $("#select_filter4").val());
+		} else if (url.searchParams.get('category') != null) {
+			url.searchParams.set('category', '');
+			url.searchParams.delete('category');
+		}
+		
+			if ($("input[name='filter4_containslogic']:checked" ).val() == "AND") {
+				url.searchParams.set("category_containslogic", "AND");
+			} else if (url.searchParams.get("category_containslogic") != null) {
+				url.searchParams.set("category_containslogic", '');
+				url.searchParams.delete("category_containslogic");
+			}
+			if ($("input[name='filter4_notcontainslogic']:checked" ).val() == "AND") {
+				url.searchParams.set("category_notcontainslogic", "AND");
+			} else if (url.searchParams.get("category_notcontainslogic") != null) {
+				url.searchParams.set("category_notcontainslogic", '');
+				url.searchParams.delete("category_notcontainslogic");
+			}
+		
+		if ($("#select_filter5").val() != '') {
+			url.searchParams.set('event_type', $("#select_filter5").val());
+		} else if (url.searchParams.get('event_type') != null) {
+			url.searchParams.set('event_type', '');
+			url.searchParams.delete('event_type');
+		}
+		
+		if ($("#select_filter6").val() != '') {
+			url.searchParams.set('topic_tags', $("#select_filter6").val());
+		} else if (url.searchParams.get('topic_tags') != null) {
+			url.searchParams.set('topic_tags', '');
+			url.searchParams.delete('topic_tags');
+		}
+		
+		if ($("#select_filter7").val() != '') {
+			url.searchParams.set('format', $("#select_filter7").val());
+		} else if (url.searchParams.get('format') != null) {
+			url.searchParams.set('format', '');
+			url.searchParams.delete('format');
+		}
+		
+		if ($("#select_filter8").val() != '') {
+			url.searchParams.set('from_date', $("#select_filter8").val());
+		} else if (url.searchParams.get('from_date') != null) {
+			url.searchParams.set('from_date', '');
+			url.searchParams.delete('from_date');
+		}
+		
+		if ($("#select_filter9").val() != '') {
+			url.searchParams.set('to_date', $("#select_filter9").val());
+		} else if (url.searchParams.get('to_date') != null) {
+			url.searchParams.set('to_date', '');
+			url.searchParams.delete('to_date');
+		}
+		
+	
+	if ($("#select_order").val() != null && $("#select_order").val() != "") {
+		url.searchParams.set('order', $("#select_order").val());
+	} else {
+		url.searchParams.delete('order');
+	}
+
+	history.pushState(history.state, "", url.pathname + url.search);
+}
+
+function getDataFromWebService() {
+	strNumber = 1;
+	intPos = 1;
+	$("#h_Range").val("0");
+	$("#lnkLoadMore").hide();
+	$("#h_SearchWords").val($("#search_word").val());
+	$("#divAllItems").text('');
+	
+	cmsg('Loading ' + "Events" + '...', 2, 0);
+	var webServiceUrl = getWebServiceUrl("mobile_events_list", $("#h_Range").val(), $("#h_Limit").val(), $("#h_SearchWords").val());
+	getListingDataJSON(webServiceUrl, BindSubmitted, NoResultFound);
+	$("#h_firstRequest").val('0');
+	$("#Loading" + "Events").show();
+};
+
+function onLoadMoreFunction() {
+	//Block Xhr to avoid skipping ranges
+	blockXhr = true;
+	$("#h_Range").val(parseInt($("#h_Range").val()) + parseInt($("#h_Limit").val()));
+	$("#Loading" + "Events").show();
+	cmsg('Loading ' + "Events" + '...', 2, 0);
+	var webServiceUrl = getWebServiceUrl("mobile_events_list", $("#h_Range").val(), $("#h_Limit").val(), $("#h_SearchWords").val());
+	getListingDataJSON(webServiceUrl, BindSubmitted, NoResultFoundAfterLoadMore);
+	$("#h_firstRequest").val('0');
+};
+
+function changeTemplate(template) {
+	selectTemplate = template;
+
+	$("[id^='listing__template-btn--']").removeClass("active");
+	$("#listing__template-btn--" + template).addClass("active");
+
+	if (template === "card") {
+		$("#listing__elements-cont").html("<ul id='divAllItems' class='list-group'></ul>");
+	}
+	else if (template === "vignette") {
+		$("#listing__elements-cont").html("<div id='divAllItems'></div>");
+	}
+	else if (template === "list") {
+		$("#listing__elements-cont").html("<div class='table-responsive'><table class='table table-bordered'><thead id='listingTableHead'></thead><thead id='floatableTh' style='z-index:2;display:none;position:fixed;left:198px;background-color: white;'></thead><tbody id='divAllItems'></tbody></table>");
+	}
+	else if (template === "row") {
+		$("#listing__elements-cont").html("<div id='divAllItems' class='row row row-margin--10'></div>");
+	}
+
+	strNumber = 1;
+	intPos = 1;
+
+	$("#h_Range").val("0");
+	$("#lnkLoadMore").hide();
+	$("#h_SearchWords").val($("#search_word").val());
+	$("#divAllItems").text('');
+	cmsg('Loading ' + "Events" + '...', 2, 0);
+	var webServiceUrl = getWebServiceUrl("mobile_events_list", $("#h_Range").val(), $("#h_Limit").val(), $("#h_SearchWords").val());
+	getListingDataJSON(webServiceUrl + "&list_view_setting_name=events_list&list_view=" + hash, BindSubmitted, NoResultFound);
+	$("#h_firstRequest").val('0');
+	$("#Loading" + "Events").show();
+}
+
+function resetListingFilters() {
+	$("#search_word").val('');
+	
+			$("#select_filter1").val('');
+		
+			$("#select_filter2").multiselect('deselectAll', false);
+			$("#select_filter2").multiselect('updateButtonText');
+		
+			$("#select_filter3").multiselect('deselectAll', false);
+			$("#select_filter3").multiselect('updateButtonText');
+		
+			$("#select_filter4").multiselect('deselectAll', false);
+			$("#select_filter4").multiselect('updateButtonText');
+		
+			$("#select_filter5").multiselect('deselectAll', false);
+			$("#select_filter5").multiselect('updateButtonText');
+		
+			$("#select_filter6").multiselect('deselectAll', false);
+			$("#select_filter6").multiselect('updateButtonText');
+		
+			$("#select_filter7").val('');
+		
+			$("#select_filter8").val('');
+		
+			$("#select_filter9").val('');
+		
+	$("#select_order").val('');
+	$("#listing__clear-btn").hide();
+}
+
+function GetDataOnClear() {
+	resetListingFilters();
+	setURLParametersFromFilters();
+	getDataFromWebService();
+}
+
+function toggleClearButton() {
+	var boolShow = false;
+	if ($("#search_word").val !== "") { boolShow = true; }
+	
+			if ($("#select_filter1").val !== "") { boolShow = true; };
+		
+			if ($("#select_filter2").val() != []) { boolShow = true; };
+		
+			if ($("#select_filter3").val() != []) { boolShow = true; };
+		
+			if ($("#select_filter4").val() != []) { boolShow = true; };
+		
+			if ($("#select_filter5").val() != []) { boolShow = true; };
+		
+			if ($("#select_filter6").val() != []) { boolShow = true; };
+		
+			if ($("#select_filter7").val !== "") { boolShow = true; };
+		
+			if ($("#select_filter8").val !== "") { boolShow = true; };
+		
+			if ($("#select_filter9").val !== "") { boolShow = true; };
+		
+
+	if (boolShow) {
+		$("#listing__clear-btn").show();
+	}
+	else {
+		$("#listing__clear-btn").hide();
+	}
+}
+
+function changeListingFilter(intFilterNumber, value) {
+	$("#select_filter" + intFilterNumber).val(value);
+	$("#select_filter" + intFilterNumber).change();
+}
+
+function changeListingOrder(value) {
+	$("#select_order").val(value);
+	$("#select_order").change();
+}
+
+function NoResultFound() {
+	$("#h_firstRequest").val('0');
+	$("#Loading" + "Events").hide();
+	
+	$("#counter_listing").html("(0)");
+	$("#counter_listing_select").html("0");
+
+	cmsg("No result found.", 5);
+
+	if(selectTemplate === "list") {
+		$('#divAllItems').html("<td colspan='99'>" + '<div id="no_result_img" style="height: 80px;width: 80px;margin: 0px auto;margin-top:30px;margin-bottom:25px; background:url(/images/listing-noresult.png) no-repeat;"></div><div id="no_result_txt" style="text-align:center;line-height:0px;margin-bottom:40px;font-size:16px;color:#4c728d;">No result found</div>'
+			+ "</td>");
+	}
+	else {
+		$('#divAllItems').html('<li style="display: block;"><div id="no_result_img" style="height: 80px;width: 80px;margin: 0px auto;margin-top:30px;margin-bottom:25px; background:url(/images/listing-noresult.png) no-repeat;"></div><div id="no_result_txt" style="text-align:center;line-height:0px;margin-bottom:40px;font-size:16px;color:#4c728d;">No result found</div></li>');
+	}
+	
+	$("#lnkLoadMore").hide();
+}
+
+function NoResultFoundAfterLoadMore() {
+	$("#h_firstRequest").val('0');
+	$("#Loading" + "Events").hide();
+	
+	
+	$("#lnkLoadMore").hide();
+}
+
+function setResponsivePageHeaderButtons() {
+	let $divButtonCont = $(".page__header--btns");
+	let $headerButtons = $divButtonCont.find("a");
+
+	if($headerButtons[0] !== undefined) { 
+		if ($divButtonCont[0].offsetHeight > 1.95 * $headerButtons[0].offsetHeight) {
+			$headerButtons.each(function() { 
+				$(this).find(".badge").hide();
+				this.style.fontSize = "0px";
+				this.setAttribute("data-toggle", "tooltip");
+				this.setAttribute("data-placement", "bottom");
+				this.setAttribute("title", this.innerText);
+
+				$(this).tooltip();
+			})
+		}
+	}
+	
+}
+
+
+function ActionDownloadReport(res, data) {
+	$("#h_firstRequest").val('0');
+	$("#Loading" + "Events").hide();
+	$("#lnkLoadMore").hide();
+	
+	var downloadType;
+	if (data["p" + res.indexOf("download_div_url")].indexOf("save_as_pdf=1") > 0) {
+		downloadType = "file";
+	} 
+	else {
+		downloadType = "report";
+	}
+
+	if(selectTemplate === "list") {
+		$("#divAllItems").html("<td colspan='99'>" + data["p" + res.indexOf("download_div_logo")] +
+			"<div style='text-align:center;margin-bottom:40px;font-size:14px;color:#bbb;'>Your " + downloadType + " has been generated successfully, click the button below to download it: <br /><br />"
+			+ data["p" + res.indexOf("download_div_url")]
+			+ "<a style='margin-left: 5px;' href='javascript:void(0);' onclick='getDataFromWebService();' class='btn btn-grey'>Cancel</a></div>" 
+			+ "</td>");
+	}
+	else {
+		$("#divAllItems").html(data["p" + res.indexOf("download_div_logo")] +
+			"<div style='text-align:center;margin-bottom:40px;font-size:14px;color:#bbb;'>Your " + downloadType + " has been generated successfully, click the button below to download it: <br /><br />"
+			+ data["p" + res.indexOf("download_div_url")]
+			+ "<a style='margin-left: 5px;' href='javascript:void(0);' onclick='getDataFromWebService();' class='btn btn-grey'>Cancel</a></div>");      
+	}
+
+	//Unbind scoll event
+	$(window).unbind('scroll');
+}
+
+
+function ActionSendEmail(res, data) {
+	$("#divAllItems").html(data["p" + res.indexOf("send_email_div_logo")] +
+				"<div style='text-align:center;margin-bottom:40px;font-size:14px;color:#bbb;'>Loading emails...</div>");
+
+	if(res.indexOf("session_recipients_ids") != -1) {
+		document.location.href= data["p" + res.indexOf("redirect_url")] + data["p" + res.indexOf("session_recipients_ids")];
+	}
+	else {
+		document.location.href= data["p" + res.indexOf("redirect_url")];
+	}
+}
+
+
+function ActionGenerateHTML(res, data) {
+	$("#h_firstRequest").val('0');
+	$("#Loading" + "Events").hide();
+	$("#lnkLoadMore").hide();
+	
+}
+
+
+function ActionRedirectUrl(res, data) {
+	$("#divAllItems").html(data["p" + res.indexOf("redirect_url_div_logo")] +
+				"<div style='text-align:center;margin-bottom:40px;font-size:14px;color:#bbb;'>Loading...</div>");
+
+	document.location.href= data["p" + res.indexOf("redirect_url")];
+}
+
+
+function BindSubmitted(data) {
+	$("#Loading" + "Events").hide();
+	var html = "";
+	
+	var str = data.fields;
+	var res = str.split(",");
+	var htmlFields = (data.htmlFields === null ? res : data.htmlFields);
+	
+	//Specific actions (Download, Send Emails and Generate HTML)
+	if(res.indexOf("action_download_report") != -1) {
+		ActionDownloadReport(res, data);
+	}
+	else if (res.indexOf("action_send_emails") != -1) {
+		ActionSendEmail(res, data);
+	}
+	else if (res.indexOf("action_generate_html") != -1) {
+		ActionGenerateHTML(res, data);
+	}
+	else if (res.indexOf("action_redirect_url") != -1) {
+		ActionRedirectUrl(res, data);
+	}
+	else {
+		
+		html = $("#" + selectTemplate + "_template").html();
+
+		
+		if (html && html != "") {
+
+			// Replace Number
+			if (html.indexOf("[strNumber") > -1) {
+				html = html.replace("[strNumber]", strNumber + "");
+			}
+			if (data["listingSeparator"] != "true") { strNumber++; }
+
+			// Replace Checkbox
+			
+
+			for (i = 0; i < res.length; i++) {
+				// To remove regex $& that create an infinity loop
+				var joinString = "@___@"
+				var dataPI = (typeof data["p" + i] !== "undefined" && data["p" + i] !== null) ? data["p" + i].split("$").join(joinString) : null;
+
+				var preprocessString = (htmlFields.indexOf(res[i]) > -1 ? function(s) { return s } : escapeHtml);
+				
+				// Normal Interpolation 
+				do {
+					html = html.replace("[" + res[i] + "]", preprocessString(dataPI));
+				}
+				while (html.indexOf("[" + res[i] + "]") > -1);
+				// URI Encode Interpolation 
+				do {
+					html = html.replace("[%" + res[i] + "]", preprocessString(encodeURIComponent(dataPI)));
+				}
+				while (html.indexOf("[%" + res[i] + "]") > -1);
+				// Double URI Encode Interpolation use with officer_login_redirect only
+				do {
+					html = html.replace("[%%" + res[i] + "]", preprocessString(encodeURIComponent(encodeURIComponent(dataPI))));
+				}
+				while (html.indexOf("[%%" + res[i] + "]") > -1);
+
+
+				if (html.indexOf("[:" + res[i] + "]='") > -1) {
+					//Si égal STAY
+					do
+						html = html.replace("IF[:" + res[i] + "]='" + dataPI + "'", "S");
+					while (html.indexOf("[:" + res[i] + "]='" + dataPI + "'-->") > -1);
+					//remplacer tout les autre tags du type [:  ]=' par DELETE
+					do
+						html = html.replace("IF[:" + res[i] + "]='", "D");
+					while (html.indexOf("[:" + res[i] + "]='") > -1);
+				}
+
+				if (html.indexOf("[:" + res[i] + "]!='") > -1) {
+					//Si différent DELETE
+					do
+						html = html.replace("IF[:" + res[i] + "]!='" + dataPI + "'", "D");
+					while (html.indexOf("[:" + res[i] + "]!='" + dataPI + "'") > -1);
+
+					do
+						html = html.replace("IF[:" + res[i] + "]!='", "S");
+					while (html.indexOf("[:" + res[i] + "]!='") > -1);
+				}
+			}
+
+			html = html.split(joinString).join("$");
+
+			function letter1(text){
+				return text.charAt(0);
+			}
+
+			function letter4(text) {
+				var val = text.charAt(0) + text.charAt(1) + text.charAt(2) + text.charAt(3);
+				return val;
+			}
+			var result;
+			var result1;
+			var result2;
+			var interm;
+			var j;
+			var i;
+			//séparation du code et mise en tableau
+			result = html.split("<!--");
+			var i = 0;
+			//Premier nettoyage des boucles simples
+			while (i < result.length) {
+
+				if (letter1(result[i]) == "D") {
+					if (letter1(result[i + 1]) == "E") {
+						result[i] = "";
+						i++;
+						result[i] = result[i].replace("E-->", "");
+					}
+					else {
+						result[i] = "<--" + result[i];
+					}
+				}
+				else if (letter1(result[i]) == "S") {
+					if (letter1(result[i + 1]) == "E") {
+						interm = result[i].split("-->");
+						result[i] = interm[1];
+						i++;
+						result[i] = result[i].replace("E-->", "");
+					}
+					else {
+						result[i] = "<--" + result[i];
+					}
+				}
+				i++;
+			}
+
+			//suppression des valeurs de tableau vide
+			result1 = [];
+			j = 0;
+			for (i = 0; i < result.length; i++) {
+				if (result[i] != "") {
+					result1[j] = result[i];
+					j++;
+				}
+			}
+			//reformage du code pour avoir <--D ou <--S ou <--E en début de tableau
+			result2 = [];
+			result2[0] = "";
+			j = 0;
+			for (i = 0; i < result1.length; i++) {
+				if ((letter4(result1[i]) != "<--D")&&(letter4(result1[i]) != "<--S")&&(letter4(result1[i]) != "E-->")) {
+					result2[j] += result1[i];
+				}
+				else {
+					j++;
+					result2[j] = result1[i];
+				}
+			}
+			var limiteCounter = 0;
+			while ((result2.length != 1) && (limiteCounter<10)){
+				limiteCounter++;
+				//Deuxième nettoyage du code
+				i = 0;
+				while (i < result2.length) {
+
+					if (letter4(result2[i]) == "<--D") {
+						if (letter1(result2[i + 1]) == "E") {
+							result2[i] = "";
+							i++;
+							result2[i] = result2[i].replace("E-->", "");
+						}
+						else {
+							result[i] = "<--" + result[i];
+						}
+					}
+					else if (letter4(result2[i]) == "<--S") {
+						if (letter1(result2[i + 1]) == "E") {
+							interm = result2[i].split("-->");
+							result2[i] = interm[1];
+							i++;
+							result2[i] = result2[i].replace("E-->", "");
+						}
+					}
+					i++;
+				}
+				//suppression des valeurs de tableau vide
+				result1 = [];
+				var j = 0;
+				for (i = 0; i < result2.length; i++) {
+					if (result2[i] != "") {
+						result1[j] = result2[i];
+						j++;
+					}
+				}
+				//reformage du code pour avoir <--D ou <--S ou <--E en début de tableau
+				result2 = [];
+				result2[0] = "";
+				j = 0;
+				for (i = 0; i < result1.length; i++) {
+					if ((letter4(result1[i]) != "<--D") && (letter4(result1[i]) != "<--S") && (letter4(result1[i]) != "E-->")) {
+						result2[j] += result1[i];
+					}
+					else {
+						j++;
+						result2[j] = result1[i];
+					}
+				}
+			}
+			html = result2[0];
+		}
+		
+		else{
+			if (intPos == 1){
+				html ="<tr>";
+				for (i = 0; i < res.length; i++){
+					html += "<th>" + res[i] + "</th>";
+				}
+				html += "</tr>";
+				intPos = 2
+			}
+
+			html += "<tr class='table_padding'>";
+				for (i = 0; i < res.length; i++) {
+					var preprocessString = (htmlFields.indexOf(res[i]) > -1 ? function(s) { return s } : escapeHtml);
+					html += "<td>" + preprocessString(data["p" + i]) + "</td>";
+				}
+				html += "</tr>";
+		}
+
+		// Append HTML
+		$('#divAllItems').append(html);
+
+		// Replace src for img
+		$("#divAllItems").find('img').each(function(){
+			if($(this).attr('data-src') != '') {
+				$(this).attr({src: $(this).attr('data-src')}).removeAttr('data-src');
+			}
+		});
+		
+	}
+
+}
+
+
+var entityMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+  '/': '&#x2F;',
+  '`': '&#x60;',
+  '=': '&#x3D;'
+};
+function escapeHtml(string) {
+  return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+    return entityMap[s];
+  });
+}
+
+var selectCheckboxes = function() {
+	var arrCheckboxes = $('[name=checkbox_listing]')
+	let selectedCheckboxesAccLabel = arrCheckboxes.length + " items on this page are selected.";
+	$("#selected_checkboxes").html(selectedCheckboxesAccLabel).show();
+	if (needToLoadMoreRecords){
+		$("#select_checkboxes").attr('aria-label', selectedCheckboxesAccLabel);
+		$("#select_all_checkboxes").show();
+		let selectAllCheckboxesAccLabel = selectedCheckboxesAccLabel + ' Click to ' + $('#select_all_checkboxes_link').text().trim().toLowerCase();
+		$("#select_all_checkboxes_link").attr('aria-label', selectAllCheckboxesAccLabel);
+		setTimeout(function() {
+			// give the DOM time to apply the new accessibility label before we focus, otherwise the screen reader won't pick-up on time
+			$("#select_all_checkboxes_link").focus();
+		}, 100);
+	}
+	for (var j = 0; j <= arrCheckboxes.length - 1; j++) {
+		arrCheckboxes[j].checked = true;
+	}
+	cmsg(arrCheckboxes.length + " Events" + ' items on this page are selected.', 2, 0);
+}
+
+function unselectCheckboxes() {
+	$("#selected_checkboxes").hide();
+	$("#select_all_checkboxes").hide();
+	var arrCheckboxes = $('[name=checkbox_listing]')
+	for (var j = 0; j <= arrCheckboxes.length - 1; j++) {
+		arrCheckboxes[j].checked = false;
+	}
+	if ($("#form_select_all").val() == 1) {
+		$("#form_select_all").val("0");
+	}
+	$("#select_checkboxes").attr('aria-label', 'Select all');
+}
+
+var selectAllCheckboxes = function() {
+	var arrCheckboxes = $('[name=checkbox_listing]')
+	for (var j = 0; j <= arrCheckboxes.length - 1; j++) {
+		arrCheckboxes[j].checked = true;
+	}
+	$("#form_select_all").val("1");
+	$("#select_all_checkboxes").hide();
+	let accLabel = $("#counter_listing_select").html() + " items on this page are selected.";
+	$("#selected_checkboxes").html(accLabel).show();
+	$("#select_checkboxes").attr('aria-label', accLabel);
+	setTimeout(function() {
+		$("#select_checkboxes").focus();
+	}, 100);
+	cmsg('All ' + $("#counter_listing_select").html() + ' items on this page are selected.', 2, 0);
+};
+
+var unselectAllCheckboxes = function() {
+	var arrCheckboxes = $('[name=checkbox_listing]')
+	for (var j = 0; j <= arrCheckboxes.length - 1; j++) {
+		arrCheckboxes[j].checked = false;
+	}
+	$("#form_select_all").val("0");
+};
+
+function checkOneCheckbox() {
+	if ($("#selected_checkboxes").is(":visible")) {
+		$("#selected_checkboxes").html(parseInt($("#selected_checkboxes").html()) + 1 + " items on this page are selected.").show();
+	}
+	else {
+		$("#selected_checkboxes").html("1 item selected").show();
+	}
+}
+
+function uncheckOneCheckbox() {
+	if (parseInt($("#selected_checkboxes").html()) == 1) {
+		$("#selected_checkboxes").html("0 items selected").hide();
+	}
+	else if ($("#form_select_all").val() == 1) { 
+		$("#selected_checkboxes").html($('[name=checkbox_listing]').length - 1 + " items on this page are selected.").show();
+	}
+	else {
+		$("#selected_checkboxes").html(parseInt($("#selected_checkboxes").html()) - 1 + " items on this page are selected.").show();
+	}
+	$("#select_all_checkboxes").hide();
+	$("#select_checkboxes").prop( "checked", false );
+	$("#form_select_all").val("0");
+}
+
+function checkCheckboxByValue(value) {
+	$("input[name='checkbox_listing'][value='" + value + "']").click();
+}
+
+function downloadListingReport(intUpdate) {
+	strNumber = 1;
+	intPos = 1;
+	$("#h_Range").val("0");
+	$("#lnkLoadMore").hide();
+	$("#h_SearchWords").val($("#search_word").val());
+	var select_all = $("#form_select_all").val();
+
+	var checkbox_ids = "";
+	if (select_all != 1){
+		checkbox_ids = concaCheckValue();
+	}
+	if (select_all == 0 && checkbox_ids == ""){
+		alert("Please select at least one checkbox or select all");
+	}
+	else{
+		$("#divAllItems").text('');
+		cmsg('Loading ' + "Events" + '...', 2, 0);
+		$("#form_select_all").val("0");
+		$("#Loading" + "Events").show();
+		let fileName, prevButtonhtml = $("#action_" + intUpdate).html();
+		var webServiceUrl = getWebServiceUrl("mobile_events_list", $("#h_Range").val(), $("#h_Limit").val(), $("#h_SearchWords").val());
+		
+		fetch(webServiceUrl + '&update=' + intUpdate + '&select_all=' + select_all + '&checkbox_ids=' + checkbox_ids + '&actionParam=' + actionParam)
+		.then( response => {
+			fileName = response.headers.get("content-disposition").split("filename=")[1];			
+			return response.blob();
+		})
+		.then( blob => {
+			const href = URL.createObjectURL(blob);
+			const a = Object.assign(document.createElement("a"), {
+				href,
+				style: "display:none",
+				download: fileName
+			});
+			document.body.appendChild(a);
+			a.click();
+			URL.revokeObjectURL(href);
+			a.remove();
+			
+			//this resets the listing results back to what they were before
+			getDataFromWebService();
+		});
+		
+		$("#h_firstRequest").val('0');
+		
+	}
+}
+
+function submitAction(intUpdate) {
+	strNumber = 1;
+	intPos = 1;
+	$("#h_Range").val("0");
+	$("#lnkLoadMore").hide();
+	$("#h_SearchWords").val($("#search_word").val());
+	var select_all = $("#form_select_all").val();
+
+	var checkbox_ids = "";
+	if (select_all != 1){
+		checkbox_ids = concaCheckValue();
+	}
+	if (select_all == 0 && checkbox_ids == ""){
+		alert("Please select at least one checkbox or select all");
+	}
+	else{
+		$("#divAllItems").text('');
+		cmsg('Loading ' + "Events" + '...', 2, 0);
+		$("#form_select_all").val("0");
+		$("#Loading" + "Events").show();
+		var webServiceUrl = getWebServiceUrl("mobile_events_list", $("#h_Range").val(), $("#h_Limit").val(), $("#h_SearchWords").val());
+		getListingDataJSON(webServiceUrl + '&update=' + intUpdate + '&select_all=' + select_all + '&checkbox_ids=' + checkbox_ids + '&actionParam=' + actionParam, BindSubmitted, NoResultFound);
+		$("#h_firstRequest").val('0');
+		
+	}
+}
+
+function concaCheckValue(){
+	var nb = $('#listing_checkbox_count').val();
+	var concatIds = "";
+	if (nb == 1) {
+		if ($("#listing-cont [name=checkbox_listing]").prop("checked")){
+			concatIds = $("#listing-cont [name=checkbox_listing]").val();
+		}
+	}
+	else {
+		for (i = 0; i < nb; i++) {
+			if ($("#listing-cont [name=checkbox_listing]")[i].checked){
+				concatIds += $("#listing-cont [name=checkbox_listing]")[i].value + ',';
+			}
+		}
+		concatIds = concatIds.substring(0,concatIds.length-1);
+	}
+	return concatIds;
+}
+
+function toggleListingElementHidden(self, elementID) {
+	var _self = self;
+	var _element = $('#' + elementID + ' .listing-element__hidden')
+	if( !$(_element).is(":visible") ) {
+		$(_element).slideDown();
+		$(_self).html('<span class="mdi mdi-chevron-double-up"></span> Less');
+	}
+	else {
+		$(_element).slideUp();
+		$(_self).html('<span class="mdi mdi-chevron-double-down"></span> More');
+	}
+}
+
+insertDescriptionElement();
+function insertDescriptionElement() {
+	var descElement = $('#listing_desc_element:hidden').clone();
+	if ($('[id="listing_desc_element"]:visible').length == 0) {
+		$('#listing__header-cont').after(descElement);
+		descElement.show();
+	}
+}
+
+
+setFixedFiltersLogic();
+
+function setFixedFiltersLogic() {
+	var scrollTimeout;
+	var throttle = 20
+
+	$(window).on('scroll', function () {
+		if (!scrollTimeout) {
+			scrollTimeout = setTimeout(function () {
+				var container;
+				if ($('#page-cont')[0]) {
+					container = $('#page-cont')[0];
+				} else if ($('#content-container')[0]) {
+					container = $('#content-container')[0];
+				} else if ($('#website-cont')[0]) {
+					container = $('#website-cont')[0];
+				} else if ($('#page-cont')[0]) {
+					container = $('#account-cont')[0];
+				} else if ($('#page-cont')[0]) {
+					container = $('#page-cont')[0];
+				} else {
+					return;
+				}
+				var navBarHeight = container.offsetTop;
+				var filtersContainer = $('#listing__filters-cont');
+				
+				if ($(window).width() > 1200 && filtersContainer.css('position') == 'relative' && filtersContainer[0].getBoundingClientRect().top < navBarHeight) {
+					setFiltersFixed(true, navBarHeight);
+				} else if (filtersContainer.css('position') == 'fixed' && filtersContainer[0].getBoundingClientRect().top + filtersContainer[0].offsetHeight < filtersContainer.next()[0].getBoundingClientRect().top) {
+					setFiltersFixed(false, navBarHeight);
+				}
+
+				
+
+				scrollTimeout = null;
+			}, throttle);
+		}
+	});
+
+	$(window).on('resize', function () {
+		if (!scrollTimeout) {
+			scrollTimeout = setTimeout(function () {
+				if ($(window).width() < 1200) {
+					setFiltersFixed(false, 0);
+				} else {
+					var width = $('#listing__filters-cont').parent().width();
+					$('#listing__filters-cont').css('width', width + 'px');
+				}
+				scrollTimeout = null;
+			}, throttle);
+		}
+	});
+
+	function setFiltersFixed(fixed, height) {
+		var filtersContainer = $('#listing__filters-cont');
+		if (fixed) {
+			var width = filtersContainer.parent().width()
+			filtersContainer.next().css('margin-top', filtersContainer[0].offsetHeight + 'px');
+			filtersContainer.css('position', 'fixed');
+			filtersContainer.css('width', width + 'px');
+			filtersContainer.css('top', height + 'px');
+ 		} else {
+			filtersContainer.next().css('margin-top', '0px');
+			filtersContainer.css('position', 'relative');
+			filtersContainer.css('width', '100%');
+			filtersContainer.css('top', '0px');
+		}
+	}
+}
+
+
+function changeListingIcon(strIconClass) {
+	$("#listing__header--icon").removeClass().addClass(strIconClass);
+}
+
+function changeListingTitle(strTitle) {
+	$("#listing__header--title").html(strTitle);
+}
+
+function writeWebServiceData(data) {
+	strNumber = 1
+	$("#divAllItems").empty();
+	$("#lnkLoadMore").hide();
+	var dataLength = data.length
+	for (var i = 0; i < dataLength; i++) {
+		BindSubmitted(data[i]);
+	}
+	var resultDisplayed = strNumber - 1;
+
+	cmsgMsg = "";
+
+	if (data[dataLength - 1]["counter"] != null && 
+		data[dataLength - 1]["fields"].split(",").indexOf("action_download_report") == -1 && 
+		data[dataLength - 1]["fields"].split(",").indexOf("action_send_emails")     == -1 && 
+		data[dataLength - 1]["fields"].split(",").indexOf("action_redirect_url")     == -1 &&
+		data[dataLength - 1]["fields"].split(",").indexOf("action_generate_html")   == -1 ) {
+
+		document.getElementById("counter_listing").innerHTML = "(" + parseInt(data[dataLength - 1]["counter"]) + ")";
+		if ( $("#counter_listing_select").length ) {
+			document.getElementById("counter_listing_select").innerHTML = parseInt(data[dataLength - 1]["counter"]);
+		}
+		if (parseInt(data[dataLength - 1]["counter"]) > resultDisplayed) {
+			$("#lnkLoadMore").show();
+			needToLoadMoreRecords = true;
+		}
+		else {
+			needToLoadMoreRecords = false;
+		}
+		if (resultDisplayed > 1) { 
+			cmsgMsg = resultDisplayed + " results to your search";
+		}
+		else {
+			cmsgMsg = resultDisplayed + " result to your search";
+		}
+	}
+
+	
+	cmsg(cmsgMsg, 1,0);
+
+	tb_init('a.ltb');
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	blockXhr = false;
+}
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.datepicker.regional['en-US'] = { dateFormat: 'dd M yy' }; $.datepicker.setDefaults($.datepicker.regional['en-US']);
+        $('#select_filter8').datepicker({
+            beforeShow: function () {
+                var inputId = "#select_filter8";
+                var inputValue = $(inputId).attr("value")
+                monitorDatePicker(inputId, inputValue);
+            },
+            onClose: function (dateText, inst) {
+                var inputId = "#select_filter8";
+                var focusTargetId = "#keyboard-below-select_filter8";
+                datePickerOnClose(inputId, dateText, focusTargetId);
+            }
+        });
+        $('#select_filter9').datepicker({
+            beforeShow: function () {
+                var inputId = "#select_filter9";
+                var inputValue = $(inputId).attr("value")
+                monitorDatePicker(inputId, inputValue);
+            },
+            onClose: function (dateText, inst) {
+                var inputId = "#select_filter9";
+                var focusTargetId = "#keyboard-below-select_filter9";
+                datePickerOnClose(inputId, dateText, focusTargetId);
+            }
+        });
+    });
+</script>
+
+
+
+<!-- LL - 10/03/2017: Moved up here so ckeditor can work in popups -->
+
+
+<script>
+	//YT Viewer
+	if (typeof arrYoutubePlayerObjects != "undefined") { 
+
+		$("#youtubeScript").remove();
+		$("#www-widgetapi-script").remove();
+		if (window['YT'] != undefined) { window.YT.loading = 0; window.YT.loaded = 0; }
+				
+ 		var youtubeTag   = document.createElement('script');
+		youtubeTag.id    = "youtubeScript";
+		youtubeTag.src   = "https://www.youtube.com/iframe_api";
+		youtubeTag.async = false;
+
+		// Get First Script Tag & Insert Vimeo Script before that.
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+      	firstScriptTag.parentNode.insertBefore(youtubeTag, firstScriptTag);
+
+      	// Array of Players
+      	var arrYoutubePlayers = [];
+
+      	// Functions to work on Youtube Players
+      	function onYoutubePlayerReady(event) {
+			var player = event.target;
+			$(window).blur(function() { player.pauseVideo(); });
+			$(window).scroll(function() { 
+				if ( !isInViewport(document.getElementById("player--" + player.youtubeObject.cgID))) { 
+					player.pauseVideo(); 
+				} 
+			});
+
+			var startTime = new Date(player.youtubeObject.startTime * 1000).toISOString();
+			var totalTime = new Date(player.getDuration() * 1000).toISOString();
+			if (player.getDuration() >= 3600) {
+				startTime = startTime.substr(11, 8);
+				totalTime = totalTime.substr(11, 8);
+			}
+			else {
+				startTime = startTime.substr(14, 5);
+				totalTime = totalTime.substr(14, 5);
+			}
+			$("#player-btn--" + player.youtubeObject.cgID + " div.timer").html("<span id='player-time--" + player.youtubeObject.cgID + "'>" + startTime + "</span> / " + totalTime);
+      	}
+
+      	function onYoutubePlayerStateChange(event) {
+      		var player = event.target;
+
+      		if (event.data == YT.PlayerState.PLAYING) {
+				// Change Buttons
+				$("#player-btn--" + player.youtubeObject.cgID + " button.playpause").attr("data-status", "pause").attr("aria-label", "Pause");
+				$("#player-btn--" + player.youtubeObject.cgID + " button.playpause span.mdi").removeClass("mdi-play").addClass("mdi-pause");
+      		}
+
+      		if (event.data == YT.PlayerState.PLAYING && player.intervalFunction == null) {
+	            // HACK For Window BLUR
+	            window.focus();
+
+	            // AJAX Recurring Call
+	            player.intervalFunction = setInterval(function() {
+	                postVideoViews(player.youtubeObject.cgUID, player.youtubeObject.cgUID_s, player.getCurrentTime());
+	            }, 10000);
+
+	            // Timer
+	            player.intervalTimerFunction = setInterval(function() { 
+	            	var currentTime = new Date(player.getCurrentTime() * 1000).toISOString();
+	            	if (player.getDuration() >= 3600) {
+	            		currentTime = currentTime.substr(11, 8);
+	            	}
+	            	else {
+	            		currentTime = currentTime.substr(14, 5);
+	            	}
+	            	$("#player-time--" + player.youtubeObject.cgID).html(currentTime);
+	            }, 1000) 
+	        }
+	        else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+				// Change Buttons
+				$("#player-btn--" + player.youtubeObject.cgID + " button.playpause").attr("data-status", "play").attr("aria-label", "Play");
+				$("#player-btn--" + player.youtubeObject.cgID + " button.playpause span.mdi").removeClass("mdi-pause").addClass("mdi-play");
+
+	            clearInterval(player.intervalFunction);
+	            clearInterval(player.intervalTimerFunction);
+				player.intervalFunction = null;
+				player.intervalTimerFunction = null;
+				postVideoViews(player.youtubeObject.cgUID, player.youtubeObject.cgUID_s, player.getCurrentTime(), (event.data == YT.PlayerState.ENDED ? 'true' : ''));
+				//if (event.data == YT.PlayerState.ENDED) { 
+				    //if (typeof refreshTrackChecklist !== "undefined") { refreshTrackChecklist(); }
+					//else if (typeof parent.refreshTrackChecklist !== "undefined") { parent.refreshTrackChecklist(); }
+				//}
+	        }
+      	}
+
+		function youtubePlayerPlayPause(player) {
+			var currentStatus = $("#player-btn--" + player.youtubeObject.cgID + " button.playpause").attr("data-status");
+			if (currentStatus == "play") { player.playVideo(); }
+			else if (currentStatus == "pause") { player.pauseVideo(); }
+		}
+
+        /* Function that checks localStorage for the Vimeo/YouTube closed captions load policy. Returns number values:
+         *   0 - closed captions should be be disabled (do not load closed captions)
+         *   1 - closed captions should be loaded when video loads
+         * If the local storage key is not defined we return 0 (as a number).
+         */
+        function getVideoPlayerCCLoadPolicy() {
+            try {
+                const lsKey = 'cg-video-player-cc-load-policy';
+                const ccLoadPolicy = localStorage.getItem(lsKey);
+                return (ccLoadPolicy === '1') ? 1 : 0;
+            } catch(e) {
+                return 0;
+            }
+        }
+
+        /* Function that toggles the video player CC load policy stored in local storage. Toggled values are (strings values):
+         *   '0' - closed captions should be be disabled (do not load closed captions)
+         *   '1' - closed captions should be loaded when video loads
+         * If the local storage key is not defined it is treated as though the value were '0' and toggles to '1'.
+         * */
+        function toggleVideoPlayerCCLoadPolicy() {
+            try {
+                const lsKey = 'cg-video-player-cc-load-policy';
+                const ccLoadPolicy = localStorage.getItem(lsKey);
+                if (ccLoadPolicy === '1') {
+                    localStorage.setItem(lsKey, '0');
+                } else {
+                    localStorage.setItem(lsKey, '1');
+                }
+            } catch(e) {
+                return;
+            }
+        }
+
+        /* Function that prompts the user for confirmation before toggling the video player closed caption load policy.
+         * - If closed captions are currently turned off, the user will be prompted to confirm before turning them on (and vice versa)
+         * - Video player CC load policy setting is stored in local storage (see above functions)
+         * - Vimeo and YouTube video players require reload of the associated IFrames to change the setting, 
+         *   if user confirms yes to reload, the page will be reloaded.
+         */
+        function toggleClosedCaptionsAndReloadVideoIframes() {
+            const turnClosedCaptionsOnOff = (typeof getVideoPlayerCCLoadPolicy !== 'undefined' && getVideoPlayerCCLoadPolicy() === 1) ? 'off' : 'on';
+            const message = 'Turning ' + turnClosedCaptionsOnOff + ' closed captions will reload this page, please save any outstanding changes before you choose to turn closed captions ' + turnClosedCaptionsOnOff + '. Are you sure you want to turn closed captions ' + turnClosedCaptionsOnOff + '?';
+            if (confirm(message)) {
+                toggleVideoPlayerCCLoadPolicy();
+                location.reload();
+            } else {
+                return false;
+            }
+        }
+
+      	// Called when the script is fully loaded.
+      	function onYouTubeIframeAPIReady() {
+
+      		// Loop through players
+	  		arrYoutubePlayerObjects.forEach(function (youtubeObject, index) {
+	  			arrYoutubePlayers[index] = new YT.Player("player--" + youtubeObject.cgID, {
+                                                        	height: youtubeObject.height,
+                                                        	width:  youtubeObject.width,
+                                                        	videoId: youtubeObject.videoID,
+                                                        	playerVars: {
+	                                                            modestbranding: 1,
+	                                                            rel: 0,
+	                                                            disablekb: 1,
+	                                                            playsinline: 1,
+	                                                            controls: 0,
+	                                                            start: youtubeObject.startTime,
+                                                                cc_load_policy: (typeof getVideoPlayerCCLoadPolicy !== 'undefined') ? getVideoPlayerCCLoadPolicy() : 0
+                                                        	},
+	                                                        events: {
+	                                                            'onStateChange': onYoutubePlayerStateChange,
+	                                                            'onReady': onYoutubePlayerReady
+	                                                        }
+                                                    	});
+	  			arrYoutubePlayers[index].youtubeObject = youtubeObject;
+	  			arrYoutubePlayers[index].intervalFunction = null;
+
+				$("#player-btn--" + youtubeObject.cgID + " button.playpause").on('click', function() { 
+					youtubePlayerPlayPause(arrYoutubePlayers[index]); 
+				});
+				$("#player-btn--" + youtubeObject.cgID + " button.replay").on('click', function() { 
+					arrYoutubePlayers[index].seekTo(0); 
+				});
+				$("#player-btn--" + youtubeObject.cgID + " button.rewind").on('click', function() { 
+					arrYoutubePlayers[index].seekTo(arrYoutubePlayers[index].getCurrentTime() - 10);
+				});
+                const turnClosedCaptionsOnOff = (typeof getVideoPlayerCCLoadPolicy !== 'undefined' && getVideoPlayerCCLoadPolicy() === 1) ? 'off' : 'on';
+                $("#player-btn--" + youtubeObject.cgID + " button.closedcaption").attr('aria-label', 'Turn ' + turnClosedCaptionsOnOff + ' closed captions. Note, this requires a reload of the current page.');
+				$("#player-btn--" + youtubeObject.cgID + " button.closedcaption").on('click', function() { 
+                    toggleClosedCaptionsAndReloadVideoIframes();
+				});
+				$("#player-btn--" + youtubeObject.cgID + " button.fullscreen").on('click', function() {
+					arrYoutubePlayers[index].pauseVideo();
+					tb_show("", "/video_player?embed=1&uid=" + youtubeObject.cgUID + "&width=995&height=680&modal=true&TB_iframe=1", "");
+				});
+
+  			});
+
+  			arrYoutubePlayerObjects = undefined;
+  		}
+	} 
+
+
+	//Vimeo Viewer
+	if (typeof arrVimeoPlayerObjects != "undefined") {
+
+        $("#vimeoScript").remove();
+
+		var vimeoTag   = document.createElement('script');
+		vimeoTag.id    = "vimeoScript";
+		vimeoTag.src   = "https://player.vimeo.com/api/player.js";
+		vimeoTag.async = false;
+
+		// Get First Script Tag & Insert Vimeo Script before that.
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+      	firstScriptTag.parentNode.insertBefore(vimeoTag, firstScriptTag);
+
+      	// Array of Players
+      	var arrVimeoPlayers = [];
+
+      	// Functions to work on Vimeo Players
+		function vimeoPlayerPlay(player) {
+			// Change Buttons
+			$("#player-btn--" + player.vimeoObject.cgID + " button.playpause").attr("data-status", "pause").attr("aria-label", "Pause");
+			$("#player-btn--" + player.vimeoObject.cgID + " button.playpause span.mdi").removeClass("mdi-play").addClass("mdi-pause");
+
+			// AJAX Recurring Call
+			player.intervalFunction  = setInterval( function() { 
+				player.getCurrentTime().then( function(seconds) {
+					postVideoViews(player.vimeoObject.cgUID, player.vimeoObject.cgUID_s, seconds);
+				}) 
+			}, 10000)
+
+			// Timer
+            player.intervalTimerFunction = setInterval(function() { 
+            	player.getCurrentTime().then( function(seconds) {
+	            	var currentTime = new Date(seconds * 1000).toISOString();
+	            	if (player.totalDuration >= 3600) {
+	            		currentTime = currentTime.substr(11, 8);
+	            	}
+	            	else {
+	            		currentTime = currentTime.substr(14, 5);
+	            	}
+	            	$("#player-time--" + player.vimeoObject.cgID).html(currentTime);
+				}) 
+            }, 1000) 
+		}
+
+		function vimeoPlayerPause(player) { 
+			// Change Buttons
+			$("#player-btn--" + player.vimeoObject.cgID + " button.playpause").attr("data-status", "play").attr("aria-label", "Play");
+			$("#player-btn--" + player.vimeoObject.cgID + " button.playpause span.mdi").removeClass("mdi-pause").addClass("mdi-play");
+
+			// Clear AJAX Recurring Call
+			clearInterval(player.intervalFunction);
+			clearInterval(player.intervalTimerFunction);
+			player.intervalFunction = null;
+			player.intervalTimerFunction = null;
+			
+			player.getCurrentTime().then( function(seconds) {
+				postVideoViews(player.vimeoObject.cgUID, player.vimeoObject.cgUID_s, seconds);
+			});		
+		}
+
+		function vimeoPlayerEnded(player) {
+			// Change Buttons
+			$("#player-btn--" + player.vimeoObject.cgID + " button.playpause").attr("data-status", "play").attr("aria-label", "Play");
+			$("#player-btn--" + player.vimeoObject.cgID + " button.playpause span.mdi").removeClass("mdi-pause").addClass("mdi-play");
+
+			// Clear AJAX Recurring Call
+			clearInterval(player.intervalFunction);
+			clearInterval(player.intervalTimerFunction);
+			player.intervalFunction = null;
+			player.intervalTimerFunction = null;
+
+			player.getCurrentTime().then( function(seconds) {
+				postVideoViews(player.vimeoObject.cgUID, player.vimeoObject.cgUID_s, seconds, 'true');
+			});
+
+			//if (typeof refreshTrackChecklist !== "undefined") { refreshTrackChecklist(); }
+			//else if (typeof parent.refreshTrackChecklist !== "undefined") { parent.refreshTrackChecklist(); }
+		}
+
+		function vimeoPlayerPlayPause(player) {
+			var currentStatus = $("#player-btn--" + player.vimeoObject.cgID + " button.playpause").attr("data-status");
+			if (currentStatus == "play") {
+				player.play();
+			}
+			else if (currentStatus == "pause") {
+				player.pause();
+			}
+		}
+
+      	// We wait until the script is fully loaded.
+      	$("#vimeoScript").on('load', function() {
+		  	
+		  	// Loop through players
+	  		arrVimeoPlayerObjects.forEach(function (vimeoObject, index) {
+
+                if (typeof getVideoPlayerCCLoadPolicy !== 'undefined' && getVideoPlayerCCLoadPolicy() === 1) {
+                    // load with closed captions enabled (set texttrack to 'en')
+	      			arrVimeoPlayers[index] = new Vimeo.Player("player--" + vimeoObject.cgID, { url: vimeoObject.URL , height: vimeoObject.height, width: vimeoObject.width, controls: false, texttrack: 'en' });
+                } else {
+    	  			arrVimeoPlayers[index] = new Vimeo.Player("player--" + vimeoObject.cgID, { url: vimeoObject.URL , height: vimeoObject.height, width: vimeoObject.width, controls: false });
+                }
+	  			arrVimeoPlayers[index].vimeoObject = vimeoObject;
+	  			arrVimeoPlayers[index].intervalFunction = null;
+
+	  			if (vimeoObject.startTime != 0) {
+	  				arrVimeoPlayers[index].setCurrentTime(vimeoObject.startTime);
+	  			}
+
+				arrVimeoPlayers[index].on('play',  function() { vimeoPlayerPlay(this)  } );
+				arrVimeoPlayers[index].on('pause', function() { vimeoPlayerPause(this) } );
+				arrVimeoPlayers[index].on('ended', function() { vimeoPlayerEnded(this) } );
+
+				$("#player-btn--" + vimeoObject.cgID + " button.playpause").on('click', function() { 
+					vimeoPlayerPlayPause(arrVimeoPlayers[index]); 
+				});
+				$("#player-btn--" + vimeoObject.cgID + " button.replay").on('click', function() { 
+					arrVimeoPlayers[index].setCurrentTime(0) 
+				});
+				$("#player-btn--" + vimeoObject.cgID + " button.rewind").on('click', function() { 
+					arrVimeoPlayers[index].getCurrentTime().then(function(seconds) {
+						arrVimeoPlayers[index].setCurrentTime(Math.max(0, seconds - 10));
+					})
+				});
+                const turnClosedCaptionsOnOff = (typeof getVideoPlayerCCLoadPolicy !== 'undefined' && getVideoPlayerCCLoadPolicy() === 1) ? 'off' : 'on';
+                $("#player-btn--" + vimeoObject.cgID + " button.closedcaption").attr('aria-label', 'Turn ' + turnClosedCaptionsOnOff + ' closed captions. Note, this requires a reload of the current page.');
+				$("#player-btn--" + vimeoObject.cgID + " button.closedcaption").on('click', function() {
+                    toggleClosedCaptionsAndReloadVideoIframes();
+				});
+				$("#player-btn--" + vimeoObject.cgID + " button.fullscreen").on('click', function() {
+					arrVimeoPlayers[index].pause();
+					tb_show("", "/video_player?embed=1&uid=" + vimeoObject.cgUID + "&width=995&height=680&modal=true&TB_iframe=1", "");
+				});
+
+				$(window).blur(function() { 
+					arrVimeoPlayers[index].pause(); 
+				});
+				$(window).scroll(function() { 
+					if ( !isInViewport(document.getElementById("player--" + vimeoObject.cgID))) { 
+						arrVimeoPlayers[index].pause(); 
+					} 
+				});
+
+
+				var startTime = new Date(vimeoObject.startTime * 1000).toISOString();
+				var totalTime = 0;
+				arrVimeoPlayers[index].getDuration().then(function(seconds) { 
+					arrVimeoPlayers[index].totalDuration = seconds;
+
+					totalTime = new Date(seconds * 1000).toISOString();
+					if (seconds >= 3600) {
+						startTime = startTime.substr(11, 8);
+						totalTime = totalTime.substr(11, 8);
+					}
+					else {
+						startTime = startTime.substr(14, 5);
+						totalTime = totalTime.substr(14, 5);
+					}
+					$("#player-btn--" + vimeoObject.cgID + " div.timer").html("<span id='player-time--" + vimeoObject.cgID + "'>" + startTime + "</span> / " + totalTime);
+				});
+			});
+
+			arrVimeoPlayerObjects = undefined;
+
+		});
+
+	}
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("[data-toggle='tooltip']").tooltip(); 	
+		$(".btn--loader").click(function() {
+			loadButton($(this));
+		});
+		tb_init('a.thickbox, area.thickbox, input.thickbox');
+
+         // fix for the non editable input in ckeditor (ex: URL...)
+         $(".modal").removeAttr("tabindex");
+
+         setupAjaxAccessibility();
+	});
+</script>
+
+ <!-- AX != 1 -->
+
+			
+
+			</div><!--/.content -->
+		</div><!--/.content-page -->
+	</div><!--/.inner-shell -->
+
+	
+
+	<script type="text/javascript" src="/js/jquery-migrate-1.2.1.js"></script>
+
+	<!-- THICKBOX -->
+	<script src="/js/thickbox/thickbox.js"></script>
+
+    <script type="text/javascript" src="/static/js/metisMenuCustom.js?v=1"></script>
+    <script type="text/javascript" src="/static/js/jquery.slimscroll.js"></script> 
+    <!--<link href="/static/css/scrollbar.css" rel="stylesheet">
+    <script type="text/javascript" src="/static/js/scrollbar.js"></script>-->
+
+	<script type="text/javascript">function $$(strId) { return document.getElementById(strId); }</script>
+	<script type="text/javascript" src="/static/plugins/clamp/clamp.min.js"></script>
+    <script type="text/javascript" src="/static/js/core.js"></script>
+    <script type="text/javascript" src="/static/js/menu.js"></script>
+    <script type="text/javascript" src="/static/js/routing.js"></script>
+
+
+	
+		<script type="text/javascript">$.ajaxSetup({cache:true})</script>
+	
+
+	<!-- @TODO: This is for jPrompt. We might to see if an update is available or give it a better style -->
+	
+	    <link href="/js/jquery-alerts/jquery.alerts.css" rel="stylesheet" type="text/css">
+	    <script src="/js/jquery-alerts/jquery.alerts.js" type="text/javascript"></script>
+	
+
+	<!-- @TODO: Check if used : put directly on /r and student_password-->
+	
+	    <script>
+	        
+	    </script>
+	
+
+	<!-- Google Analytics -->
+	<script>
+	<!--TODO Remove function(i,s,o,g,r,a,m) after End of Life 01 July 2023-->
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	var _customTask = function() {
+	  return function(model){
+	    var piiRegex = [
+	    	{ name: 'Email', regex: /.{4}@.{4}/g},
+	       	{ name: 'Phone_Number', regex: /^(\+|\d)[0-9]{7,16}$/g},
+	       	{ name: 'SSN', regex: /^\d{3}-\d{2}-\d{4}$}/g},
+	       	{ name: 'Address', regex: /^\d+\s[A-z]+\s[A-z]+/g}];
+
+	    var globalSendTaskName = '_' + model.get('trackingId') + '_sendHitTask';
+
+	    // Fetch reference to the original sendHitTask
+	    var originalSendTask = window[globalSendTaskName] = window[globalSendTaskName] || model.get('sendHitTask');
+	    var i, hitPayload, parts, val;
+
+	    // Overwrite sendHitTask with PII purger
+	    model.set('sendHitTask', function(sendModel) {
+
+	      hitPayload = sendModel.get('hitPayload').split('&');
+
+	      for (i = 0; i < hitPayload.length; i++) {
+	        parts = hitPayload[i].split('=');
+
+	        // Double-decode, to account for web server encode + analytics.js encode
+	        try {
+	          val = decodeURIComponent(decodeURIComponent(parts[1]));
+	        } catch(e) {
+	          val = decodeURIComponent(parts[1]);
+	        }
+
+	        piiRegex.forEach(function(pii) {
+	          val = val.replace(pii.regex, '[REDACTED ' + pii.name + ']');
+	        });
+
+	        parts[1] = encodeURIComponent(val);
+	        hitPayload[i] = parts.join('=');
+	      }
+
+	      sendModel.set('hitPayload', hitPayload.join('&'), true);
+	      originalSendTask(sendModel);
+	    });
+	  };
+	}
+	</script>
+
+	
+	<!-- End Google Analytics -->
+
+	
+
+    <!-- Help -->
+	
+    <!-- End Help -->
+
+</body>
+
+ <!-- END AX != 1 -->
+
+	<style>
+
+		/* Accessibility Mode OFF - Default outline on :focus (none) */
+		:focus { outline: none; }
+		a:focus { outline: none; }
+
+        button.close:focus { outline: none; }
+
+		.button:focus { outline: none; }
+		.button.focus { outline: none; }
+
+		.btn.active.focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn:active:focus,
+        .btn:focus { outline: none; }
+
+		.dropdown-toggle:focus { outline: none; }
+		#header__btn-cont--manage:focus, #header__btn-cont--manage:focus-within { outline: none; }
+
+		/* no outline/focus on the following (various reasons including hover style on focus, other focus styles applied, etc.) */
+		h2:focus { outline: none; outline-offset: 0px; border: none; }
+		/* .page__header--btns .btn:focus { outline: none !important; outline-offset: 0px !important; } */
+		/* a.btn--rounded:focus { outline: none !important; outline-offset: 0px !important; } */
+
+	</style>
+
+    <!-- should always be last stylesheet loaded, version=yyyymmddx -->
+    <link href="/static/css/accessibility.css?v=20220717.1" rel="stylesheet" />
+
+</html>
+

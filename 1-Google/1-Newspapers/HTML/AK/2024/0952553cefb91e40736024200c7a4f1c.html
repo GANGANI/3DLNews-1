@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <META NAME="author" content="Wrangell Sentinel" />
+  <META NAME="description" CONTENT="Wrangell Sentinel archives search page" />
+  <META NAME="keywords" CONTENT="Wrangell Sentinel,archives,archives search,search,search tool,keyword,phrase,search results" />
+  <META NAME="robots" CONTENT="index,follow" />
+  <META HTTP-EQUIV="cache-control" CONTENT="private, no-store, no-cache, must-revalidate" />
+  
+  <META NAME="revisit-after" CONTENT="7 days" />
+  
+  <META PROPERTY="og:title" CONTENT="Wrangell Sentinel News">
+<META PROPERTY="og:description" CONTENT="">
+<META PROPERTY="og:url" CONTENT="https://www.wrangellsentinel.com/section/news/state_of_alaska">
+<META PROPERTY="og:site_name" CONTENT="Wrangell Sentinel">
+<META PROPERTY="og:type" CONTENT="website">
+<META PROPERTY="og:image" CONTENT="https://www.wrangellsentinel.com/home/cms_data/dfault/images/companylogo_facebook.png">
+  <title>Wrangell Sentinel News</title>
+  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1784x28257/XPATH/app/website_specifics/css_themes/white-3col/white-3col.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/pdf_click_menu_small.css" />
+
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick.css" />      
+      <link rel="stylesheet" type="text/css" media="screen" href="/app/website_specifics/slick/slick-theme.css" />
+         <link rel="stylesheet" type="text/css" media="screen" href="/ASSET/1732x44534/XPATH/home/cms_data/dfault/configuration_files/css_customizations/white/white.css" />
+         <link rel="stylesheet" type="text/css" media="print" href="/app/website_specifics/print.css" />
+
+<!-- Desktop/canonical vs. mobile/alternate URLs -->
+<link rel="canonical" href="https://www.wrangellsentinel.com/section/news/state_of_alaska">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.wrangellsentinel.com/section/news/state_of_alaska?m=true" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://repo.lionslight.com/files/font_awesome/font-awesome-6.5.1-pro-ll-kit/css/all-ll-min.css"/>
+   <script src="/app/website_specifics/jquery-2-2-2.min.js"></script>
+ <script src="/app/website_specifics/slick.js"></script>
+   <script src="/ASSET/1497x20349/XPATH/app/website_specifics/lionslight.js"></script>
+ <script src="/ASSET/1590x21165/XPATH/app/website_specifics/nonresponsive.js"></script>
+
+    <script>
+     function offsiteLink(a,b){
+      a.href='/ajax/selectit?storyId='+b;
+      return false;
+     }
+     function offsiteAdLink(a,b){
+      a.href='/ajax/adselectit?adid='+b;
+      return false;
+     }
+    </script>
+<script>
+function RemoveContent(d) {document.getElementById(d).style.display = "none";}
+function InsertContent(d) {document.getElementById(d).style.display = ""; swapdiv(d);}
+
+function expiredAJAX() {
+ // noop
+}
+
+     function swapdiv(a){
+      if (a=='div2'){
+       CLEAR.f.runOverlay('/ajax/popular/blogged');
+      } else {
+       CLEAR.f.runOverlay('/ajax/popular/viewed');
+      }
+     }
+</script><script src="HTTPS://www.wrangellsentinel.com/apps/clear/clear.js"></script>
+<script>
+ debug=false;
+</script>
+  
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0WVJS807P"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-K0WVJS807P'); </script>
+  
+<script>$(function() {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+        if (isOpen == false) {
+            searchBox.addClass('searchbox-open');
+            inputBox.focus();
+            isOpen = true;
+        } else {
+            searchBox.removeClass('searchbox-open');
+            inputBox.focusout();
+            isOpen = false;
+        }
+    });
+    submitIcon.mouseup(function () {
+        return false;
+    });
+    searchBox.mouseup(function () {
+        return false;
+    });
+    $(document).mouseup(function () {
+        if (isOpen == true) {
+            $('.searchbox-icon').css('display', 'block');
+            submitIcon.click();
+        }
+    });
+
+ runIf($('.menu').length,'jQuery.sticky','/app/website_specifics/sticky.js',function(){
+  $(".menu").sticky({ topSpacing: 0, center:true, className:"stickynow" });
+ });
+
+});
+function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+        $('.searchbox-icon').css('display', 'none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display', 'block');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+runIf=function(condition,name,url,callback){
+ if(condition){
+  runSafe(name,url,callback);
+ }
+}
+
+
+
+
+
+
+
+runSafe=function(name,url,callback){
+ if(typeof window[name] != 'undefined'){
+  callback();
+ } else {
+  if(typeof runsafe != 'object'){runsafe={};}
+  if(runsafe[url] && runsafe[url].constructor === Array){var loadit=false;} else {runsafe[url]=[];var loadit=true;}
+  runsafe[url].push(callback);
+  // START001 UI stuff not necessary
+  // if (document.body){document.body.style.borderTop="10px solid red";}
+  // END001 UI stuff not necessary
+  if (loadit){
+   var js = document.createElement('script');
+   js.async = true;
+   js.src = url;
+   js.onload = js.onreadystatechange = (function(){return function(){
+    while(runsafe[url].length){
+     var f=runsafe[url].shift();
+     f();
+    }
+    delete runsafe[url];
+    var count = 0; for (var k in runsafe) if (runsafe.hasOwnProperty(k)) count++;
+    if(count==0){
+     // START002 UI stuff not necessary
+     if (document.body){document.body.style.borderTop="none";}
+     // END002 UI stuff not necessary
+    }
+   }})();
+   var first = document.getElementsByTagName('script')[0];
+   first.parentNode.insertBefore(js, first);
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style>
+  
+  .preLoadImg {
+    display: none;
+  }
+
+#undefined-sticky-wrapper:before {
+ height:50px;
+ background-color: #B6BD98;
+}
+
+
+</style>
+
+<!-- CSS for print_sub_alert -->
+<style>
+
+.print_sub_container {
+    width:auto;
+}
+.print_sub_container div {
+    width:auto;
+}
+.print_sub_container .print_sub_header {
+    background-color:#c7edfc;
+    padding: 12px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.print_sub_container .print_sub_content {
+    display: none;
+    padding : 5px;
+}
+
+</style>
+
+
+
+
+ </head>
+ <body id="mobile_false">
+
+
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-icon.png" width="1" height="1" alt="" />
+<img class="preLoadImg" src="/home/cms_data/dfault/images/home-menu-active-icon.png" width="1" height="1" alt="" />
+
+
+
+
+  <div class="container container_3">
+   <div class="outer_standard_links outer">
+   <div class="standard_links inner widen_vertical_padding skel">
+    <div class="standard_links_left">
+     <p class="wide_spacing small align_left">
+      <a  href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a><a  href="HTTPS://www.wrangellsentinel.com/about" >About</a><a  href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a><a  href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a>
+     </p>
+    </div>
+    <div class="standard_links_middle">
+     <p class="wide_spacing small align_center">
+      <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='21' alt='RSS'></a>
+     </p>
+    </div>
+    <div class="standard_links_right">
+     <p class="wide_spacing small align_right">
+      <a  href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a><a  href="HTTPS://www.wrangellsentinel.com/login?r=%2Fsection%2Fnews%2Fstate%5Fof%5Falaska" >Sign In</a>
+     </p>
+    </div>
+   </div>
+   </div>
+   
+
+   <!--/// Header ///-->
+   <div class="outer_header widen_vertical_width outer">
+   <div class="header hedclass_header_home_logo widen_vertical_padding inner skel">
+    <h1>Wrangell Sentinel - </h1>
+    <a href="HTTPS://www.wrangellsentinel.com/" aria-label="Home">
+     <div class="header_home_logo">
+ <!--<img src='/home/cms_data/dfault/images/masthead_728x100.png' alt="">-->
+     </div>
+    </a>
+ 
+    <div class="header_home_ad" aria-hidden="true"><!--ad_init_ctr:v%2D48EyM68N1wyUC37K4KI9BU%2DMOTHKEWY5NIK0nPQ--><a href="https://www.wrangellsentinel.com/home/customer_files/visitor_guides/2024-25_travel_wrangell_travel_guide.pdf"><img src="/IMG/5N__NQeJ8JLdO4TyEwXnQcEioZeWf/XPATH/home/cms_data/dfault/web_ads/horiz_small/7355-vg2024.jpgXEXT1362x35506.jpeg" width="260" height="90" alt="A link to the free Wrangell Visitor's Guide"></a></div>
+ 
+   </div>
+   </div>
+ 
+   <div class="outer_search_bar outer">
+   <div class="search_bar widen_vertical_padding inner skel">
+    <div class="grid_2">
+     <p class="small a2a_padding">
+      
+     </p>
+    </div>
+   </div>
+   </div>
+   <div class="outer_navigation outer">
+    <div class="navigation inner skel">
+
+
+
+
+<div class="menu widen_vertical_padding">
+ <ul>
+  <li class="home-menu-icon">
+   <a class="" href="HTTPS://www.wrangellsentinel.com/" data-tag="home" aria-label="Home"><span>Home</span></a>
+  </li>
+  <li class="menu_right_border">
+   <a class="active" href="HTTPS://www.wrangellsentinel.com/section/news">News</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/state%5Fof%5Falaska">State of Alaska</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell">Wrangell</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/news/wrangell%5Fsentinel">Wrangell Sentinel</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/sports">Sports</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/sports/wrangell">Wrangell</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/about_town">About Town</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/about_town/pastors%5Fchristmas%5Fmessages">Pastors Christmas messages</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/obituaries">Obituaries</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/police">Police</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/opinion">Opinion</a>
+   <!--[if lte IE 7]><a href='#'>the_section<table><tr><td><![endif]-->
+   <ul>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion">All</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/editorial">Editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/from%5Fa%5Fnew%5Farrival">FROM A NEW ARRIVAL</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/guest%5Fopinion">Guest opinion</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/letters%5Fto%5Fthe%5Feditor">Letters to the editor</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/publisher%27s%5Fcolumn">Publisher's column</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/reflections">Reflections</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorial">Sentinel editorial</a>
+    </li>
+    <li>
+     <a href="HTTPS://www.wrangellsentinel.com/section/opinion/sentinel%5Feditorials">Sentinel editorials</a>
+    </li>
+   </ul>
+   <!--[if lte IE 7]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/dockside">Dockside</a>
+  </li>
+  <li class="menu_right_border">
+   <a href="HTTPS://www.wrangellsentinel.com/section/classifieds">Classifieds</a>
+  </li>
+  <li id="new-search-white">
+   <form method="GET" class="searchbox" autocomplete="on" action="/findit" NAME="findit">
+    <input class="searchbox-input" type="search" onkeyup="buttonUp();" placeholder="Search" name="mysearch" required="" value="" title="search">
+    <input type="image" src="/app/images/search-img-icon-sm.png" name="mybutton" data-value="Search" class="searchbox-submit" alt="search">
+    <span class="searchbox-icon"><img src="/app/images/search-img-icon-sm.png" class="searchbox-img" alt=""></span>
+   </form>
+  </li>
+</ul>
+ </div>
+    </div>
+    </div>
+   <div class="outer_maincontent outer">
+   <div class="maincontent widen_vertical_padding inner skel">
+    <div class="maincontent skel">
+     <div class="grid_2">
+      <h2 class="section_title_font">News / State Of Alaska</h2><p class='tagline'><strong>Sorted by date</strong>&nbsp;&nbsp;Results <strong>1 - 25</strong> of <strong>1515</strong></p><br /><br /><div class='sections_display'><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/james_brooks' aria-label="Author link">James Brooks</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/southeast-fisherman-pleads-guilty-for-ordering-crew-to-shoot-whale/13279.html" aria-label="Southeast fisherman pleads guilty for ordering crew to shoot whale"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/southeast-fisherman-pleads-guilty-for-ordering-crew-to-shoot-whale/13279.html" aria-label="Southeast fisherman pleads guilty for ordering crew to shoot whale"><h3>Southeast fisherman pleads guilty for ordering crew to shoot whale</h3></a>
+<p>A Southeast Alaska fisherman has agreed to plead guilty to a federal misdemeanor after admitting that he directed a crew member to shoot a sperm whale northwest of Sitka in March 2020. According to federal court filings, Dugan Daniels, 54, also...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/southeast-fisherman-pleads-guilty-for-ordering-crew-to-shoot-whale/13279.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/james_brooks' aria-label="Author link">James Brooks</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/full-us-embargo-on-russian-seafood-now-in-effect/13284.html" aria-label="Full U.S. embargo on Russian seafood now in effect"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/full-us-embargo-on-russian-seafood-now-in-effect/13284.html" aria-label="Full U.S. embargo on Russian seafood now in effect"><h3>Full U.S. embargo on Russian seafood now in effect</h3></a>
+<p>A full-fledged embargo of Russia-sourced seafood took effect in the United States on May 22, with importers prohibited from buying Russian products, even if they were processed in another country. The next day, a delegation of Alaska businessmen and...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/full-us-embargo-on-russian-seafood-now-in-effect/13284.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/james_brooks' aria-label="Author link">James Brooks</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html" aria-label="Lawmakers leave fiscal plan, other issues for another year"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html" aria-label="Lawmakers leave fiscal plan, other issues for another year"><h3>Lawmakers leave fiscal plan, other issues for another year</h3></a>
+<p>Though legislators passed dozens of bills during the two-year legislative session that ended May 15, they left behind multiple big issues for future consideration. Lawmakers were not able to finalize any part of a plan intended to bring the...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/yereth_rosen' aria-label="Author link">Yereth Rosen</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislators-approve-phase-out-of-firefighting-foams-with-forever-chemicals/13286.html" aria-label="Legislators approve phase-out of firefighting foams with &apos;forever chemicals&apos;"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislators-approve-phase-out-of-firefighting-foams-with-forever-chemicals/13286.html" aria-label="Legislators approve phase-out of firefighting foams with &apos;forever chemicals&apos;"><h3>Legislators approve phase-out of firefighting foams with 'forever chemicals'</h3></a>
+<p>For the second time in two years, the Alaska Legislature has passed a bill requiring a phase-out of firefighting foams with contaminants called “forever chemicals.” The chemicals, per- and polyfluoroalkyl substances that are commonly known as PFAS, h...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislators-approve-phase-out-of-firefighting-foams-with-forever-chemicals/13286.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/claire_stremple' aria-label="Author link">Claire Stremple</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/alaska-lawmakers-support-federal-investigation-into-native-boarding-schools/13287.html" aria-label="Alaska lawmakers support federal investigation into Native boarding schools"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/alaska-lawmakers-support-federal-investigation-into-native-boarding-schools/13287.html" aria-label="Alaska lawmakers support federal investigation into Native boarding schools"><h3>Alaska lawmakers support federal investigation into Native boarding schools</h3></a>
+<p>Alaska lawmakers have overwhelmingly voted to support a federal proposal that would investigate and document the forced assimilation of American Indian, Alaska Native and Native Hawaiian children in government-funded boarding schools. The...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/alaska-lawmakers-support-federal-investigation-into-native-boarding-schools/13287.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/yereth_rosen' aria-label="Author link">Yereth Rosen</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/cancer-prevention-measures-win-legislative-approval/13288.html" aria-label="Cancer-prevention measures win legislative approval"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/cancer-prevention-measures-win-legislative-approval/13288.html" aria-label="Cancer-prevention measures win legislative approval"><h3>Cancer-prevention measures win legislative approval</h3></a>
+<p>Alaska bar patrons will see new signs warning about the link between alcohol and cancer, and women at elevated risk for breast cancer will no longer have to pay extra money for more detailed examinations that go beyond routine mammograms, if bills...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/cancer-prevention-measures-win-legislative-approval/13288.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/claire_stremple' aria-label="Author link">Claire Stremple</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/alaska-legislation-would-eliminate-co-pay-for-birth-control/13290.html" aria-label="Alaska legislation would eliminate co-pay for birth control"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/alaska-legislation-would-eliminate-co-pay-for-birth-control/13290.html" aria-label="Alaska legislation would eliminate co-pay for birth control"><h3>Alaska legislation would eliminate co-pay for birth control</h3></a>
+<p>Lawmakers have sent to the governor legislation that would increase insurance coverage for birth control. A large bipartisan majority of the Senate approved the measure on May 9. Alaskans may access up to 12 months of contraceptives at a time and wit...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/alaska-legislation-would-eliminate-co-pay-for-birth-control/13290.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/claire_stremple' aria-label="Author link">Claire Stremple</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html" aria-label="Legislature approves more support for missing and murdered Indigenous cases"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html" aria-label="Legislature approves more support for missing and murdered Indigenous cases"><h3>Legislature approves more support for missing and murdered Indigenous cases</h3></a>
+<p>State lawmakers have added protections to address the crisis of missing and murdered Indigenous people in Alaska, a move celebrated by activists who have devoted years to a campaign for equity. Senate Bill 151 passed with a combined 57-1 vote...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/yereth_rosen' aria-label="Author link">Yereth Rosen</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/'>May 29, 2024</a>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_29_2024/' class='new-story-link'><div class='new-story-icon'></div></a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html" aria-label="New state task force will look at psychedelic medicines"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html" aria-label="New state task force will look at psychedelic medicines"><h3>New state task force will look at psychedelic medicines</h3></a>
+<p>The Alaska Legislature passed a couple of bills aimed at improving health care services. The measures are now headed to Gov. Mike Dunleavy for his consideration. House Bill 228 would set up a state task force to recommend regulations for use of psych...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/james_brooks' aria-label="Author link">James Brooks</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/fall-payment-to-alaskans-will-total-about-1655/13238.html" aria-label="Fall payment to Alaskans will total about $1,655"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/fall-payment-to-alaskans-will-total-about-1655/13238.html" aria-label="Fall payment to Alaskans will total about $1,655"><h3>Fall payment to Alaskans will total about $1,655</h3></a>
+<p>The Alaska Legislature has approved the state budget with a Permanent Fund dividend and bonus of about $1,655 per recipient. The exact figure this fall will depend on the number of approved applicants. The Legislature finished work and adjourned May...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/fall-payment-to-alaskans-will-total-about-1655/13238.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/alaska_beacon' aria-label="Author link">Alaska Beacon</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislature-passes-budget-with-one-year-school-funding-increase/13252.html" aria-label="Legislature passes budget with one-year school funding increase"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislature-passes-budget-with-one-year-school-funding-increase/13252.html" aria-label="Legislature passes budget with one-year school funding increase"><h3>Legislature passes budget with one-year school funding increase</h3></a>
+<p>The 33rd Alaska Legislature came to a shuddering but active end early Thursday morning, May 16, as lawmakers passed the state’s annual budget and several high-profile bills. While legislators met their short-term goals, they didn’t hit some law...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislature-passes-budget-with-one-year-school-funding-increase/13252.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/garland_kennedy' aria-label="Author link">Garland Kennedy</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/coast-guard-says-deck-flooding-likely-caused-deadly-2023-capsize-near-sitka/13254.html" aria-label="Coast Guard says deck flooding likely caused deadly 2023 capsize near Sitka"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/coast-guard-says-deck-flooding-likely-caused-deadly-2023-capsize-near-sitka/13254.html" aria-label="Coast Guard says deck flooding likely caused deadly 2023 capsize near Sitka"><h3>Coast Guard says deck flooding likely caused deadly 2023 capsize near Sitka</h3></a>
+<p>A U.S. Coast Guard marine casualty investigation into the capsizing of a charter fishing boat and the death of all five aboard on May 28, 2023, near Sitka has determined that the Awakin likely capsized after its well deck flooded in rough seas. The...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/alaska_beacon' aria-label="Author link">Alaska Beacon</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/new-law-tells-state-board-to-follow-court-ruling-on-correspondence-student-spending/13255.html" aria-label="New law tells state board to follow court ruling on correspondence student spending"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/new-law-tells-state-board-to-follow-court-ruling-on-correspondence-student-spending/13255.html" aria-label="New law tells state board to follow court ruling on correspondence student spending"><h3>New law tells state board to follow court ruling on correspondence student spending</h3></a>
+<p>Families who use Alaska’s homeschool program will soon have clarity on how they may spend their annual allotments of state money. Lawmakers directed the Alaska Board of Education to write temporary regulations for the state’s correspondence sch...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/new-law-tells-state-board-to-follow-court-ruling-on-correspondence-student-spending/13255.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/anchorage_daily_news_and_wrangell_sentinel' aria-label="Author link">Anchorage Daily News and Wrangell Sentinel</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/alaska-airlines-plans-60-million-in-terminal-cargo-improvements-statewide/13259.html" aria-label="Alaska Airlines plans $60 million in terminal, cargo improvements statewide"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/alaska-airlines-plans-60-million-in-terminal-cargo-improvements-statewide/13259.html" aria-label="Alaska Airlines plans $60 million in terminal, cargo improvements statewide"><h3>Alaska Airlines plans $60 million in terminal, cargo improvements statewide</h3></a>
+<p>Alaska Airlines has launched a $60 million plan to improve its terminals and other facilities around the state over the next few years. The airline is also expanding its cargo capacity to serve Alaska, company officials said May 16. The projects...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/amy_bushatz' aria-label="Author link">Amy Bushatz</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/mat-su-borough-will-pay-for-firearms-training-for-residents/13261.html" aria-label="Mat-Su Borough will pay for firearms training for residents"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/mat-su-borough-will-pay-for-firearms-training-for-residents/13261.html" aria-label="Mat-Su Borough will pay for firearms training for residents"><h3>Mat-Su Borough will pay for firearms training for residents</h3></a>
+<p>Matanuska-Susitna Borough residents will have access to free or low-cost weapons training under a new borough grant program targeted at compensating for limited local law enforcement. Officials estimate that the $75,000 grant could pay for private...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/claire_stremple' aria-label="Author link">Claire Stremple</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislature-votes-to-raise-income-limit-for-food-stamps/13264.html" aria-label="Legislature votes to raise income limit for food stamps"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislature-votes-to-raise-income-limit-for-food-stamps/13264.html" aria-label="Legislature votes to raise income limit for food stamps"><h3>Legislature votes to raise income limit for food stamps</h3></a>
+<p>More Alaskans will be able to access food stamps following lawmakers’ vote to raise the income limit to qualify for the Supplemental Nutrition Assistance Program. The change comes after more than a year of extreme delays in food stamp distribution a...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislature-votes-to-raise-income-limit-for-food-stamps/13264.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/yereth_rosen' aria-label="Author link">Yereth Rosen</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_22_2024/'>May 22, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislation-allows-stashing-climate-harming-carbon-gases-underground/13265.html" aria-label="Legislation allows stashing climate-harming carbon gases underground"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislation-allows-stashing-climate-harming-carbon-gases-underground/13265.html" aria-label="Legislation allows stashing climate-harming carbon gases underground"><h3>Legislation allows stashing climate-harming carbon gases underground</h3></a>
+<p>The Alaska Legislature has passed a bill that combines underground storage of carbon dioxide, new regulation of underground storage of natural gas, state financing for new Cook Inlet natural gas development and an expansion of the state’s g...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/22/news/legislation-allows-stashing-climate-harming-carbon-gases-underground/13265.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/ketchikan_daily_news_and_sentinel_staff' aria-label="Author link">Ketchikan Daily News and Sentinel staff</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/first-cruise-ship-calls-on-klawock-community-promotes-destination/13225.html" aria-label="First cruise ship calls on Klawock; community promotes destination"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/first-cruise-ship-calls-on-klawock-community-promotes-destination/13225.html" aria-label="First cruise ship calls on Klawock; community promotes destination"><h3>First cruise ship calls on Klawock; community promotes destination</h3></a>
+<p>The 649-foot Seabourn Odyssey dropped anchor just off Klawock on May 6, marking a new era of cruise ship tourism on Prince of Wales Island. About 3,700 people could visit Klawock and Craig this summer by way of three different cruise ships making a...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/scott_bowlen' aria-label="Author link">Scott Bowlen</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/ketchikan-borough-loses-625000-to-fake-vendor-account/13228.html" aria-label="Ketchikan Borough loses $625,000 to fake vendor account"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/ketchikan-borough-loses-625000-to-fake-vendor-account/13228.html" aria-label="Ketchikan Borough loses $625,000 to fake vendor account"><h3>Ketchikan Borough loses $625,000 to fake vendor account</h3></a>
+<p>The Ketchikan Gateway Borough is working to recover a $625,125 electronic payment that was sent to a fake vendor account on May 3, according to Borough Manager Ruben Duran. The case is under investigation by the FBI, and a claim has been filed with t...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/claire_stremple' aria-label="Author link">Claire Stremple</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislators-bolster-alaska-native-languages-council/13230.html" aria-label="Legislators bolster Alaska Native languages council"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislators-bolster-alaska-native-languages-council/13230.html" aria-label="Legislators bolster Alaska Native languages council"><h3>Legislators bolster Alaska Native languages council</h3></a>
+<p>Lawmakers have added four Alaska Native languages to the state’s official language tally and renamed the council that advocates for their survival and revitalization. Members of the Senate approved their version of House Bill 26 with a unanimous v...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislators-bolster-alaska-native-languages-council/13230.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/amy_bushatz' aria-label="Author link">Amy Bushatz</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/state-calls-off-pilot-plan-to-give-tribal-police-officers-more-authority/13231.html" aria-label="State calls off pilot plan to give tribal police officers more authority"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/state-calls-off-pilot-plan-to-give-tribal-police-officers-more-authority/13231.html" aria-label="State calls off pilot plan to give tribal police officers more authority"><h3>State calls off pilot plan to give tribal police officers more authority</h3></a>
+<p>A plan to grant special law enforcement powers to Chickaloon tribal police officers has been put on indefinite hold because state public safety officials feared it could lead to altercations between tribal officers and nontribal members, officials...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/sean_maguire' aria-label="Author link">Sean Maguire</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislature-approves-commercial-fishing-task-force/13232.html" aria-label="Legislature approves commercial fishing task force"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislature-approves-commercial-fishing-task-force/13232.html" aria-label="Legislature approves commercial fishing task force"><h3>Legislature approves commercial fishing task force</h3></a>
+<p>The Alaska Legislature has approved creating a task force to make policy recommendations to help the beleaguered commercial fishing industry. The Senate unanimously approved the resolution on Sunday, May 12, to establish the task force. There was...</p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/yereth_rosen' aria-label="Author link">Yereth Rosen</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/state-launches-new-campaign-to-reduce-fentanyl-deaths/13234.html" aria-label="State launches new campaign to reduce fentanyl deaths"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/state-launches-new-campaign-to-reduce-fentanyl-deaths/13234.html" aria-label="State launches new campaign to reduce fentanyl deaths"><h3>State launches new campaign to reduce fentanyl deaths</h3></a>
+<p>With Alaska’s drug overdose deaths surging, state leaders on May 6 kicked off a new campaign to raise awareness about the dangers of the drug that caused most of them: fentanyl. The new campaign, called “One Pill Can Kill,” is national and spear...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/state-launches-new-campaign-to-reduce-fentanyl-deaths/13234.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/james_brooks' aria-label="Author link">James Brooks</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_15_2024/'>May 15, 2024</a></div><div class='hmfunction_blurb_nopic'>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislature-rejects-governors-nominees-to-school-board-fisheries-commission/13236.html" aria-label="Legislature rejects governor&apos;s nominees to school board, fisheries commission"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislature-rejects-governors-nominees-to-school-board-fisheries-commission/13236.html" aria-label="Legislature rejects governor&apos;s nominees to school board, fisheries commission"><h3>Legislature rejects governor's nominees to school board, fisheries commission</h3></a>
+<p>The Alaska Legislature voted May 7 to remove Bob Griffin from the state school board amid bipartisan unhappiness over his perceived political actions as a board member. The vote came amid the Legislature’s annual vote on gubernatorial nominees. Legis...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/15/news/legislature-rejects-governors-nominees-to-school-board-fisheries-commission/13236.html">Full story</a></p>
+</div>&nbsp;</div><div class='hmfunction_sectioncontainer'><div class="archive_info"><img src='/cms/images/author_icon.gif' alt='' loading='lazy'>&nbsp;By&nbsp;<a href='HTTPS://www.wrangellsentinel.com/author/claire_stremple' aria-label="Author link">Claire Stremple</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/section_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a>&nbsp;&nbsp;&nbsp;<img src='/cms/images/date_icon.gif' alt=''>&nbsp;<a href='HTTPS://www.wrangellsentinel.com/issue/05_08_2024/'>May 8, 2024</a></div><div class='hmfunction_blurb'>
+<div class='section_photo'><a href="HTTPS://www.wrangellsentinel.com/story/2024/05/08/news/advisory-council-report-warns-native-languages-at-risk/13188.html" aria-label="Story Thumbnail: Advisory council report warns Native languages at risk"><img src="/IMG/4MYVbashSeGQdbhIxYqef4jpZ/XPATH/home/cms_data/dfault/photos/stories/id/8/8/13188/s_topXEXT762x35715is.jpg" width="110" height="110" class="hover-img" alt="" loading="lazy"></a></div>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/08/news/advisory-council-report-warns-native-languages-at-risk/13188.html" aria-label="Advisory council report warns Native languages at risk"></a>
+<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/08/news/advisory-council-report-warns-native-languages-at-risk/13188.html" aria-label="Advisory council report warns Native languages at risk"><h3>Advisory council report warns Native languages at risk</h3></a>
+<p>Before an advanced Tlingít language class, Raven Svenson and her classmate discussed how to conjugate the verb "boil" in the context of cooking. The University of Alaska Southeast class in Juneau...&nbsp;<a href="HTTPS://www.wrangellsentinel.com/story/2024/05/08/news/advisory-council-report-warns-native-languages-at-risk/13188.html">Full story</a></p>
+</div>&nbsp;</div></div><p><a class='page-down' href='HTTPS://www.wrangellsentinel.com/section/news/state_of_alaska/26'>Page Down</a></p>
+     </div>
+     
+     <!--BEGIN SIDEBAR CONTENT AREA-->
+     <div class="sidebar_grid align_center"><div id="most_popular"><table style="width:100%;"><tr><th colspan="2" scope="colgroup">Most Popular</th></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/new-state-task-force-will-look-at-psychedelic-medicines/13292.html' aria-label='Story Thumbnail: New state task force w...'>New state task force w...<span class='mp_author'>Yereth Rosen</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'><img src="/IMG/l_c614OvyC4JuQqHwz7DK39qD/XPATH/home/cms_data/dfault/photos/stories/id/6/8/13268/s_topXEXT762x35742is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/canoes-start-150-mile-journey-to-native-celebration-in-juneau/13268.html' aria-label='Story Thumbnail: Canoes start 150-mile...'>Canoes start 150-mile...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'><img src="/IMG/OottCzVkx60MukyO1x18Iy4w4/XPATH/home/cms_data/dfault/photos/stories/id/7/7/13277/s_topXEXT762x35728is.jpg" width="67" height="50" alt=""></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/forest-service-will-raise-anan-fees-starting-next-year/13277.html' aria-label='Story Thumbnail: Forest Service will ra...'>Forest Service will ra...<span class='mp_author'>Becca Clark</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/legislature-approves-more-support-for-missing-and-murdered-indigenous-cases/13291.html' aria-label='Story Thumbnail: Legislature approves m...'>Legislature approves m...<span class='mp_author'>Claire Stremple</span></a></td></tr>
+<tr><td class='mp_photo' style="width:25%;"><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html' aria-label='Story Thumbnail: Lawmakers leave fiscal...'><img src='/home/cms_data/dfault/images/mostpopular_default_photo_67x50.jpg' width='67' height='50' alt=''></a></td><td class='mp_article' style='width:75%;'><a href='HTTPS://www.wrangellsentinel.com/story/2024/05/29/news/lawmakers-leave-fiscal-plan-other-issues-for-another-year/13285.html' aria-label='Story Thumbnail: Lawmakers leave fiscal...'>Lawmakers leave fiscal...<span class='mp_author'>James Brooks</span></a></td></tr>
+</table></div><div class="side_separator ss_invisible"></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:b1vz7pDxzEsnpL5uyBvB%5F04L1DFO%2D17RPwEHBTeGH--><span class="ad_local_square"><a href="https://www.wrangellsentinel.com/subscribe"><img src="/IMG/uhdYpR2kNtTLgRhMqtmvpGjenzq-qh1nt/XPATH/home/cms_data/dfault/web_ads/square/5483-sentinel_online_subscribe_300x250.jpgXEXT1397x44008is.jpeg" width="300" height="250" alt=""></a></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!--ad_init_ctr:9RLPXFfNPgIDFnVKOdLdbQUnRfhqahXxrMtzqjqij--><span class="ad_local_square"><img src="/IMG/reagye0NPkVYTYhMmrrxbDgenzb5_w1t2/XPATH/home/cms_data/dfault/web_ads/square/2412-sentinel_info_copy.jpgXEXT1716x39744is.jpeg" width="300" height="247" alt=""></span></div><div class="side_separator"></div></div><div class="squaread_insertpoint"><div style="text-align:center;" aria-hidden="true" class="ad_type_square"><!-- LL Network Ad --></div><div class="side_separator"></div></div>
+     </div>
+     <!--END SIDEBAR CONTENT AREA-->
+    </div>
+   </div>
+   </div>
+
+
+
+
+   
+
+
+
+   <div class="outer_footer outer">
+   <div class="footer widen_vertical_padding inner skel">
+
+      <div class="footer_column_1">
+        <h3>Sections</h3>
+        <ul><li><a href='HTTPS://www.wrangellsentinel.com/section/news' aria-label="Section link">News</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/sports' aria-label="Section link">Sports</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/about_town' aria-label="Section link">About Town</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/obituaries' aria-label="Section link">Obituaries</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/police' aria-label="Section link">Police</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/opinion' aria-label="Section link">Opinion</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/dockside' aria-label="Section link">Dockside</a></li><li><a href='HTTPS://www.wrangellsentinel.com/section/classifieds' aria-label="Section link">Classifieds</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_2">
+        <h3>Newspaper</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Contact</a></li><li><a href="HTTPS://www.wrangellsentinel.com/subscribe" >Subscribe</a></li><li><a href="HTTPS://www.wrangellsentinel.com/about" >About</a></li><li><a href="HTTPS://www.wrangellsentinel.com/photos" >Photos</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer_column_3">
+        <h3>Website</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/terms" >Terms of Use</a></li><li><a href="HTTPS://www.wrangellsentinel.com/privacy" >Privacy Policy</a></li><li><a href="HTTPS://www.wrangellsentinel.com/sitemap_index.xml"  target="_blank">Sitemap</a></li><li><a href="HTTPS://www.wrangellsentinel.com/section/news/state_of_alaska?m=true" >Mobile Browser</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_4">
+        <h3>Advertise</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/advertise" >Advertise</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_5">
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="HTTPS://www.wrangellsentinel.com/contact" >Submit Content</a></li><li><a href="HTTPS://www.wrangellsentinel.com/contact" >Letter to the Editor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_column_6">
+        <h3>Connect With Us</h3>
+          <a  href="HTTPS://www.wrangellsentinel.com/rss"  target="_blank"><img class='footer_icon hover-img' src='/cms/images/social_media_icons/rss.png'  height='30' alt='RSS'></a>
+        <h4>Wrangell Sentinel</h4>
+        <p>
+          P.O. Box 798<br />Wrangell, AK 99929<br />Ph: (907) 874-2301<br />
+       </p>
+        <p>
+          &copy; 2024 Good Journalism, LLC<br />
+       </p>
+      </div>
+
+
+   </div>
+   </div>
+
+ <div class="outer_footer2 outer">
+   <div class="footer2 widen_vertical_width inner skel">
+
+
+    <div class="roar_pub">
+     <p>Powered by <strong><a href="http://www.lionslight.com" target="_blank">ROAR Online Publication Software</a></strong> from Lions Light Corporation<br />
+     © Copyright 2024</p>
+    </div>
+
+
+   </div>
+ </div>
+
+
+  </div>
+  
+
+<script>
+
+$('.slickcarousel_white').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1
+});
+
+$('.slickcarousel_pubfamily').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+
+
+$(".more_stories_toggle").click(function () {
+    this.style.margin = "0";
+    $more_stories_toggle = $(this);
+    $more_stories_list = $more_stories_toggle.next(); 							  //getting the next element
+
+//    $more_stories_list.slideToggle("slow", function () {						  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+
+        $more_stories_toggle.text(function () {								  //execute this after slideToggle is done; change text of header based on visibility of content div
+
+            return $more_stories_list.is(":visible") ? "+ More Stories" : "- More Stories";               //change text based on condition
+        });
+//    });
+});
+
+
+
+
+</script>
+
+
+
+<script>
+
+//$(".more_stories_toggle").click(function () {
+//
+//    $more_stories_toggle = $(this);
+//
+//    //getting the next element
+//    $more_stories_list = $more_stories_toggle.next();
+//
+//    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+//    $more_stories_list.slideToggle(200, function () {
+//
+//        //execute this after slideToggle is done
+//        //change text of header based on visibility of content div
+//        $more_stories_toggle.text(function () {
+//
+//            //change text based on condition
+//            return $more_stories_list.is(":visible") ? "- More Stories" : "+ More Stories";
+//        });
+//    });
+//
+//});
+
+</script>
+
+<script>
+
+$( ".print_sub_container" ).click(function() {
+  $( ".print_sub_content" ).slideToggle( 500, function() {
+    // Animation complete.
+  });
+});
+
+</script>
+
+ <small style="padding-top:10px;display:block;">Rendered 05/30/2024 01:57</small><!-- (DESKTOP|PAYWALLERROR|ERROR) (desktop|paywallerror|error) Cached by Usernum:00354 -->
+ </body>
+
+</html>
